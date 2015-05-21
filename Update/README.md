@@ -1,6 +1,6 @@
 To-do list:
 -----------------------------------------------------------------------------------------
-- [ ] Find the missing voice file for onik_015_03.txt, [line 68}(https://github.com/higurashi-mod/scripts/blob/master/Update/onik_015_03.txt#L68)
+- [ ] Find the missing voice file for onik_015_03.txt, [line 68](https://github.com/higurashi-mod/scripts/blob/master/Update/onik_015_03.txt#L68)
 - [ ] Unify sound files for onik_015_02.txt
   - [ ] S01/02/120200482|S01/03/120300213	「「あはははははははははははははははははははははははははははははははは…」」 [line 996/997](https://github.com/higurashi-mod/scripts/blob/master/Update/onik_015_02.txt#L996)
   - [ ] S01/02/120200483|S01/03/120300214	「「あははははははははははははははははははははははは」」 [line 1019/1020](https://github.com/higurashi-mod/scripts/blob/master/Update/onik_015_02.txt#L1019)
