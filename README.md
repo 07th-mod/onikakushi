@@ -55,11 +55,10 @@ Known Issues:
 - Generic -
 *Sometimes the lines don't last long enough for a voice file to play fully. 
 This is most evident when auto is left on.
-*BGM is too loud / BGM volume mutes BGM and Voices
+*BGM volume mutes BGM and Voices
 Unavoidable, since the voices aren't their own thing
 *More than one sound effect cannot be played at the same time.
-So if a voice and sound effect is supposed to play at the same time, only one of them will play.
-This is why combine.ogg was made (originally 5 voices were supposed to play at the same time).
+Fixable by moving them to a different sound layer.
 
 - Chapter 1 - 
 Voices not properly aligned during the talk about Keichii's dick scene. 
@@ -67,37 +66,37 @@ There are too many voice files for Keichii for this scene,
 probably the scene is extended in the ps3 version.
 Since I don't know japanese, I can't tell which voices are actually used.
 
-- Chapter 2 - 
-Missing Voice for Satako during the picnic scene,
-when she says ""Aaah! The last meatbaaaaaaaaall!!!"
-Following the numbers of her voice files, 
-it should be 990400040.ogg but this seems to be missing.
-
-- Chapter 4 - 
-Sound effects in the zombie scene stop some voices from playing.
-
 Changelog:
 -----------------------------------------------------------------------------------------
 v. 0.0
-Test patch of prologue and chapter 1
+- Test patch of prologue and chapter 1
 
 v. 0.1
-Chapter 1 finished
-Combined all edits of ps3 graphics patch and voice patch
+- Chapter 1 finished
+- Combined all edits of ps3 graphics patch and voice patch
 
 v. 0.2
-Chapter 2 finished
-Fixed folder structure of patch archive
-Added in Extras folder with watermark-less window
+- Chapter 2 finished
+- Fixed folder structure of patch archive
+- Added in Extras folder with watermark-less window
 
 v 0.3
-Chapter 3 finished
-Fixed an error in Mion's dialogue in which PlaySE showed up
-Changed bg_045 to bg_044 in scene when Keichii mentions Tomitake while he walks to the dump site
+- Chapter 3 finished
+- Fixed an error in Mion's dialogue in which PlaySE showed up
+- Changed bg_045 to bg_044 in scene when Keichii mentions Tomitake while he walks to the dump site
 
 v 0.4
-Chapter 4 finished
-Fixed Satako's voice during the Old Bachelor Scene in Chapter 3
+- Chapter 4 finished
+- Fixed Satako's voice during the Old Bachelor Scene in Chapter 3
+
+v 0.5
+- Chapter 5, finished
+- Chapter 15, 15_2, 15_3 finished, but need testing
+- Created combine2.ogg for Naay! part in Ch. 5
+- Found missing Satako in Ch. 2 picnic scene (S19/04/990400040.ogg)
+- Found missing ps2 voice (S01/19/123100003.ogg)
+- Moved sound effects to 4 layer as fix for sound effects and voice playing at same time
+- Bumped up the volume of the voices so the bgm doesn't drown them out.
 
 Credits:
 -----------------------------------------------------------------------------------------
@@ -106,3 +105,4 @@ Credits:
 - Anon - For providing the PS3 voices and patch.
 
 - Another Anon - For providing the watermark-less window.
+
