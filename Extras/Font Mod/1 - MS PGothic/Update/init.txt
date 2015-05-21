@@ -1,0 +1,14 @@
+﻿
+void main()
+{
+	SetFontId(1); //0 is MS Gothic (default japanese), 1 is MS PGothic (default english), 2 is dejavu sans, 3 is source han sans chinese simplified (for chinese)
+	SetCharSpacing(0); //use negative values to make characters appear closer together
+	SetLineSpacing(1);
+	SetFontSize(42);
+
+	SetWindowPos(-4, 0);
+	SetWindowSize(1024, 768);
+	SetWindowMargins(60, 30, 50, 30);
+
+	CallScript( "flow" );
+}
