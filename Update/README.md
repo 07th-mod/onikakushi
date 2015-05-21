@@ -1,6 +1,7 @@
 To-do list:
+-----------------------------------------------------------------------------------------
 
-To-do
+Chapters
 -----------------------------------------------------------------------------------------
 - [ ] onik_009.txt
 - [ ] onik_009_02.txt
@@ -12,7 +13,7 @@ To-do
 - [ ] onik_014_02.txt
 - [ ] Test onik-015 -> onik_015_03
 
-Done
+Other
 -----------------------------------------------------------------------------------------
 - [x] Find the missing voice file for onik_015_03.txt, [line 68](https://github.com/higurashi-mod/scripts/blob/master/Update/onik_015_03.txt#L68)
 - [x] Unify sound files for onik_015_02.txt
