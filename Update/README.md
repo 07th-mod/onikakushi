@@ -3,6 +3,16 @@ To-do list:
 
 Chapters
 -----------------------------------------------------------------------------------------
+- [x] onik_op.txt
+- [X] onik_000.txt
+- [x] onik_001.txt
+- [x] onik_002.txt
+- [x] onik_003.txt
+- [x] onik_004.txt
+- [ ] onik_005.txt
+- [ ] onik_006.txt
+- [ ] onik_007.txt
+- [ ] onik_008.txt
 - [ ] onik_009.txt
 - [ ] onik_009_02.txt
 - [ ] onik_010.txt
@@ -11,10 +21,10 @@ Chapters
 - [ ] onik_013.txt
 - [ ] onik_014.txt
 - [ ] onik_014_02.txt
-- [ ] Test onik-015 -> onik_015_03
-  - [ ] onik_015
-  - [x] onik_015_02
-  - [x] onik_015_03
+- [ ] Test onik_015.txt -> onik_015_03.txt
+  - [ ] onik_015.txt
+  - [x] onik_015_02.txt
+  - [x] onik_015_03.txt
 
 Other
 -----------------------------------------------------------------------------------------
