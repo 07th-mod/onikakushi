@@ -100,7 +100,6 @@ v 0.5
 
 v 0.6
 - Chapter 6, finished
-- Chapter 15, 15_2, 15_3 finished, but need testing
 - For whatever reason, some sound effects had an extra underscore in them. Fixed that.
 
 Credits:
