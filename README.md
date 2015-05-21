@@ -98,6 +98,11 @@ v 0.5
 - Moved sound effects to 4 layer as fix for sound effects and voice playing at same time
 - Bumped up the volume of the voices so the bgm doesn't drown them out.
 
+v 0.6
+- Chapter 6, finished
+- Chapter 15, 15_2, 15_3 finished, but need testing
+- For whatever reason, some sound effects had an extra underscore in them. Fixed that.
+
 Credits:
 -----------------------------------------------------------------------------------------
 - TheGuraGuraMan - For making the Sprite/BGM Patch.
