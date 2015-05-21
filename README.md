@@ -2,6 +2,13 @@ PS3 Voice and Graphics Patch
 -----------------------------------------------------------------------------------------
 For Higurashi No Naku Koro Ni - Chapter 1 Onikakushi, Steam Version
 
+This patch aims to combine the efforts of the ps3 voice patch and the ps3 sprites/background patch,
+and fill in missing voice files not covered by the original voice patch.
+
+Releases
+-----------------------------------------------------------------------------------------
+https://github.com/higurashi-mod/scripts/releases/
+
 Installation:
 -----------------------------------------------------------------------------------------
 
