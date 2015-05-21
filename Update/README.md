@@ -9,7 +9,7 @@ Chapters
 - [x] onik_002.txt
 - [x] onik_003.txt
 - [x] onik_004.txt
-- [ ] onik_005.txt
+- [x] onik_005.txt
 - [ ] onik_006.txt
 - [ ] onik_007.txt
 - [ ] onik_008.txt
