@@ -2872,13 +2872,17 @@ void main()
 	DrawBustshotWithFiltering( 3, "me_se_him_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //"... ......さぁてね。...おじさんにわからないことはないからね...。"
+
 	PlaySE(3, "S01/03/120300113", 256, 64);
+
 	OutputLine(NULL, "“………さぁてね。”",
 		   NULL, "\"...There's nothing", Line_WaitForInput);	
 
-	PlaySE(3, "S01/03/120300114", 256, 64);		   	   
+	PlaySE(3, "S01/03/120300114", 256, 64);		   
+		   
 	OutputLine(NULL, "“………さぁてね。…おじさんにわからないことはないからね…。”",
 		   NULL, " this old man doesn't know.\"", Line_Normal);
+
 
 	ClearMessage();
 	DisableWindow();
