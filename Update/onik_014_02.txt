@@ -1462,6 +1462,7 @@ void main()
 	DrawSceneWithMask( "bg_210", "left", 0, 0, 1300 );
 
 //「もしもし、前原です。＠
+	PlaySE(3, "S01/01/120100484", 256, 64);
 	OutputLine(NULL, "「もしもし、前原です。」",
 		   NULL, "\"Hello, this is the Maebara residence.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -1874,6 +1875,7 @@ void main()
 	PlaySE(3, "S01/01/120100496", 256, 64);
 	OutputLine(NULL, "「レナと魅音です。",
 		   NULL, "\"Rena and Mion.", Line_WaitForInput);
+	PlaySE(3, "S01/01/120100497", 256, 64)
 	OutputLine(NULL, "…そしてそこで、大石さんと一緒に昼飯を食ったことを正されました。」",
 		   NULL, " They started asking about how I had lunch with you.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -2173,6 +2175,7 @@ void main()
 	PlaySE(3, "S01/11/120700364", 256, 64);
 	OutputLine(NULL, "「その車のナンバープレートは見ましたか？",
 		   NULL, "\"Did you see the license plate?", Line_WaitForInput);
+	PlaySE(3, "S01/11/120700365", 256, 64);
 	OutputLine(NULL, "　こちらでも探して見ます。」",
 		   NULL, " I can search for it from here.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -2335,6 +2338,7 @@ void main()
 	PlaySE(3, "S01/11/120700371", 256, 64);
 	OutputLine(NULL, "「運命、ですか。",
 		   NULL, "\"'Fate,' you say...", Line_WaitForInput);
+	PlaySE(3, "S01/11/120700372", 256, 64);
 	OutputLine(NULL, "…具体的にどんな「運命」を辿るか言及しましたか？」",
 		   NULL, " Exactly what kind of 'fate' did she say would befall you?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -2372,6 +2376,7 @@ void main()
 	ClearMessage();
 
 //「...............前原さん、それはおそらく...何かの脅迫!w1000...もしくは警告ですねぇ。＠
+	PlaySE(3, "S01/11/120700374", 256, 64);
 	OutputLine(NULL, "「……………前原さん、それはおそらく…何かの脅迫",
 		   NULL, "\"...Maebara-san, that was probably some sort of threat...", Line_ContinueAfterTyping);
 
@@ -2867,6 +2872,7 @@ void main()
 	DrawBustshotWithFiltering( 3, "me_se_him_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //"... ......さぁてね。...おじさんにわからないことはないからね...。"
+	PlaySE(3, "S01/03/120300113-120300114", 256, 64);
 	OutputLine(NULL, "“………さぁてね。…おじさんにわからないことはないからね…。”",
 		   NULL, "\"...There's nothing this old man doesn't know.\"", Line_Normal);
 	ClearMessage();
@@ -2909,6 +2915,7 @@ void main()
 	DrawBustshot( 2, "night/re_si_na_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「.........ねぇ圭一くん、ちゃんとドアを開けてお話したいな...＠レナは玄関に入っちゃ、だめなのかな？　...かな？＠
+	PlaySE(3, "S01/02/120200261", 256, 64);
 	OutputLine(NULL, "「………ねぇ圭一くん、ちゃんとドアを開けてお話したいな…。",
 		   NULL, "\"...Hey, Keiichi-kun, I'd like you to open the door so we can talk...", Line_WaitForInput);
 	PlaySE(3, "S01/02/120200262", 256, 64);
@@ -2942,6 +2949,7 @@ void main()
 
 	OutputLine(NULL, "「……………………",
 		   NULL, "\"...", Line_WaitForInput);
+	PlaySE(3, "S01/02/120200263", 256, 64);
 	OutputLine(NULL, "なら、…仕方ないかな。」",
 		   NULL, " Then... it can't be helped, I guess.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3057,6 +3065,7 @@ void main()
 	ClearMessage();
 
 //「お、お台所とか貸してくれればお味噌汁も温めてあげられるよ☆＠
+	PlaySE(3, "S01/02/120200268", 256, 64);
 	OutputLine(NULL, "「お、お台所とか貸してくれればお味噌汁も暖めてあげられるよ☆」",
 		   NULL, "\"I-If I could use your kitchen, I can heat up the miso soup and other stuff☆\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3102,6 +3111,7 @@ void main()
 	ClearMessage();
 
 //「ご飯も持ってきてあげたから、レンジで温めればすぐ食べられるし☆＠
+	PlaySE(3, "S01/02/120200271", 256, 64);
 	OutputLine(NULL, "「ご飯も持ってきてあげたから、レンジで暖めればすぐ食べられるし☆」",
 		   NULL, "\"I also brought rice, so if you microwave it, you can eat it really quickly☆\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3619,6 +3629,7 @@ void main()
 	PlaySE(3, "S01/01/120100544", 256, 64);
 	OutputLine(NULL, "　うちのお袋のスペシャルなディナーを見くびるなってんだ…！！",
 		   NULL, " I can't believe you'd belittle my mom's extravagant dinner like that...!!", Line_WaitForInput);
+	PlaySE(3, "S01/01/120100545", 256, 64);
 	OutputLine(NULL, "　そりゃあもー満貫全席状態で……すごいのなんの…、」",
 		   NULL, " Tickets sold out, full capacity already... It's that amazing...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
@@ -3645,7 +3656,9 @@ void main()
 
 //「......圭一く＠。......本当にお母さん、ご飯作ってってくれたの...？＠
 	OutputLine(NULL, "「……圭一くん",
+	PlaySE(3, "S01/02/120200289", 256, 64);
 		   NULL, "\"...Keiichi-kun...", Line_WaitForInput);
+	PlaySE(3, "S01/02/120200290", 256, 64);
 	OutputLine(NULL, "。……本当にお母さん、ご飯作ってってくれたの…？」",
 		   NULL, " Did your mother... really leave you dinner...?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3691,6 +3704,7 @@ void main()
 	PlayBGM( 2, "lsys13", 128, 0 );
 
 //「お母さん、お家にいるのかな？!s500............!sdかな？￥
+	PlaySE(3, "S01/02/120200292", 256, 64);
 	OutputLine(NULL, "「お母さん、お家にいるのかな？",
 		   NULL, "\"Is your mom... home, I wonder?", Line_ContinueAfterTyping);
 	SetSpeedOfMessage( TRUE, 0, );
@@ -3805,6 +3819,7 @@ void main()
 
 
 //「...う、!w600......嘘なんか.........、＠
+	PlaySE(3, "S01/01/120100550", 256, 64);
 	OutputLine(NULL, "「…う、",
 		   NULL, "\"I...", Line_ContinueAfterTyping);
 
@@ -3917,6 +3932,7 @@ void main()
 
 
 //「カップラーメン。!w2000........................当たりでしょ。＠
+	PlaySE(3, "S01/02/120200298", 256, 64);
 	OutputLine(NULL, "「カップラーメン。",
 		   NULL, "\"Cup noodles...", Line_ContinueAfterTyping);
 
@@ -4038,6 +4054,7 @@ void main()
 
 
 //「うぅん、...!s200＊＊＊＊＊＊＊!sd。＠
+	PlaySE(3, "S01/02/120200302", 256, 64);
 	OutputLine(NULL, "「うぅん、…",
 		   NULL, "\"No...", Line_ContinueAfterTyping);
 	SetSpeedOfMessage( TRUE, 0, );
@@ -4073,6 +4090,7 @@ void main()
 
 
 //「え？!w1000　何が？＠
+	PlaySE(3, "S01/02/120200303", 256, 64);
 	OutputLine(NULL, "「え？",
 		   NULL, "\"Huh?", Line_ContinueAfterTyping);
 
@@ -4319,6 +4337,7 @@ void main()
 	ClearMessage();
 
 //「圭一くんがいろんなラーメン選んでるとこ、後ろからずっと見てたの＠
+	PlaySE(3, "S01/02/120200317", 256, 64);
 	OutputLine(NULL, "「圭一くんがいろんなラーメン選んでるとこ、後ろからずっと見てたの。",
 		   NULL, "\"When Keiichi was picking out the noodles, I was watching the entire time.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -4326,11 +4345,13 @@ void main()
 
 
 //　いろんな種類を選んでたんだよね＠それでお母さんに怒られたの＠高いラーメンばっかり選ぶから一種類にしなさいって＠
+	PlaySE(3, "S01/02/120200318", 256, 64);
 	OutputLine(NULL, "　いろんな種類を選んでたんだよね。",
 		   NULL, "You picked out so many different flavors, didn't you?", Line_WaitForInput);
 	PlaySE(3, "S01/02/120200319", 256, 64);
 	OutputLine(NULL, "それでお母さんに怒られたの。",
 		   NULL, " Then your mom got angry...", Line_WaitForInput);
+	PlaySE(3, "S01/02/120200320", 256, 64);
 	OutputLine(NULL, "高いラーメンばっかり選ぶから一種類にしなさいって。",
 		   NULL, " If you were going to pick the expensive ones, then you should just pick one type, she said.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -4338,6 +4359,7 @@ void main()
 
 
 //　それで圭一くん、大好きな大きいカップの豚骨ショウガ味を選んだんだよね＠　レナも好きだよ＠豚骨ラーメン＠でも、大きいカップは全部食べきれないけどね。￥
+	PlaySE(3, "S01/02/120200321", 256, 64);
 	OutputLine(NULL, "　それで圭一くん、大好きな大きいカップの豚骨ショウガ味を選んだんだよね☆",
 		   NULL, "Then Keiichi-kun picked out that big box of Pork-bone & Ginger flavor that he loves so much, didn't he☆?", Line_WaitForInput);
 	PlaySE(3, "S01/02/120200322", 256, 64);
@@ -4482,6 +4504,7 @@ void main()
 
 
 //「............どうしてそんないじわるを言うのかな...？!w500　......かな？￥
+	PlaySE(3, "S01/02/120200331", 256, 64);
 	OutputLine(NULL, "「…………どうしてそんないじわるを言うのかな…？",
 		   NULL, "\"...How can you say something so mean, I wonder...?", Line_ContinueAfterTyping);
 
@@ -4585,6 +4608,7 @@ void main()
 	ClearMessage();
 
 //「............痛い!w500......痛いよ圭一くん!w500............痛い!w500.........ぅ、＠
+	PlaySE(3, "S01/02/120200332", 256, 64);
 	OutputLine(NULL, "「…………痛い",
 		   NULL, "\"It hurts...", Line_ContinueAfterTyping);
 
@@ -4641,6 +4665,7 @@ void main()
 	PlaySE(3, "S01/02/120200333", 256, 64);
 	OutputLine(NULL, "「………本当に痛いの圭一くん。",
 		   NULL, "\"...It really hurts, Keiichi-kun...", Line_WaitForInput);
+	PlaySE(3, "S01/02/120200334", 256, 64);
 	OutputLine(NULL, "………悪ふざけが過ぎたなら謝るよ",
 		   NULL, " I'm sorry if I was messing around too much...", Line_ContinueAfterTyping);
 
@@ -4669,6 +4694,7 @@ void main()
 	ClearMessage();
 
 //「......痛いの!w500......痛いの!w500......、ごめんなさい!w500......ごめんなさい!w500...ごめんなさい...。＠
+	PlaySE(3, "S01/02/120200335", 256, 64);
 	OutputLine(NULL, "「……痛いの",
 		   NULL, "\"It huurts...", Line_ContinueAfterTyping);
 
@@ -4704,6 +4730,7 @@ void main()
 
 
 //「帰れ帰れ！！!w500　!s100帰れぇええぇえぇええッ！！!sd＠
+	PlaySE(3, "S01/01/120100572", 256, 64);
 	OutputLine(NULL, "「帰れ帰れ！！",
 		   NULL, "\"Go away, go away!!", Line_ContinueAfterTyping);
 
@@ -4756,6 +4783,7 @@ void main()
 
 
 //「ごめんなさい、!w500ごめんなさい、!w500ごめんなさい、!w500ごめんなさい、!w500ごめんなさい、＠
+	PlaySE(3, "S01/02/120200339", 256, 64);
 	OutputLine(NULL, "「ごめんなさい、",
 		   NULL, "\"I'm sorry,", Line_ContinueAfterTyping);
 
@@ -4853,6 +4881,7 @@ void main()
 	ClearMessage();
 
 //「ごめんなさい、!w500ごめんなさい、!w500ごめんなさい、!w500ごめんなさい＠......圭一君＠ごめんなさい...＠ここを開けて......圭一くん......。＠
+	PlaySE(3, "S01/02/120200340", 256, 64);
 	OutputLine(NULL, "「ごめんなさい、",
 		   NULL, "\"I'm sorry,", Line_ContinueAfterTyping);
 
@@ -5259,6 +5288,7 @@ void main()
 
 
 //　過去の事件がたとえオヤシロさまの祟りによるものだったにせよ、!w500...竜宮レナは関わっています。＠
+	PlaySE(3, "S01/01/120100581", 256, 64);
 	OutputLine(NULL, "　過去の事件がたとえオヤシロさまの祟りによるものだったにせよ、",
 		   NULL, "Even if the past incidents were from Oyashiro-sama's curse...", Line_ContinueAfterTyping);
 
@@ -5438,6 +5468,7 @@ void main()
 	PlaySE(3, "S01/01/120100589", 256, 64);
 	OutputLine(NULL, "…多分、俺もそれほど遠くない将来、レナの言う“転校”をするでしょう。",
 		   NULL, " Not too far in the future, I'll probably also do what Rena called 'transferring out' as well.", Line_WaitForInput);
+	PlaySE(3, "S01/01/120100590", 256, 64);
 	OutputLine(NULL, "…ですが大石さんには俺の死体を見つけることもできないでしょうね。",
 		   NULL, " But you won't be able to find my corpse...", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -5445,6 +5476,7 @@ void main()
 
 
 //　......現に悟史の死体だってまだ見つけられてない！！＠
+	PlaySE(3, "S01/01/120100591", 256, 64);
 	OutputLine(NULL, "　……現に悟史の死体だってまだ見つけられてない！！」",
 		   NULL, "You haven't even been able to find Satoshi's body yet!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -5529,7 +5561,7 @@ void main()
 
 
 //「他言無用でお願いします＠
-	PlaySE(3, "S01/11/120700429", 256, 64);
+	PlaySE(3, "S01/11/120700394", 256, 64);
 	OutputLine(NULL, "「他言無用でお願いします。",
 		   NULL, "\"Please keep this confidential.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -5537,10 +5569,10 @@ void main()
 
 
 //　また、内容には一部憶測も含まれているかもしれません＠......全てが真実ではないかもしれないということです。!d1000......よろしいですね？＠
-	PlaySE(3, "S01/11/120700430", 256, 64);
+	PlaySE(3, "S01/11/120700395", 256, 64);
 	OutputLine(NULL, "　また、内容には一部憶測も含まれているかもしれません。",
 		   NULL, "Also, part of this may be speculation.", Line_WaitForInput);
-	PlaySE(3, "S01/11/120700431", 256, 64);
+	PlaySE(3, "S01/11/120700396", 256, 64);
 	OutputLine(NULL, "……全てが真実ではないかもしれないということです。",
 		   NULL, " Not all of it may be true...", Line_ContinueAfterTyping);
 
@@ -5574,6 +5606,7 @@ void main()
 
 
 //　ですから竜宮レナが捜査線に浮上したことは一度もないのです＠......つまりですね、￥
+	PlaySE(3, "S01/11/120700399", 256, 64);
 	OutputLine(NULL, "　ですから竜宮レナが捜査線に浮上したことは一度もないのです。",
 		   NULL, "Thus, Rena Ryuugu has never been linked to any of the investigations.", Line_WaitForInput);
 	PlaySE(3, "S01/11/120700400", 256, 64);
@@ -5596,9 +5629,11 @@ void main()
 	PlaySE(3, "S01/11/120700401", 256, 64);
 	OutputLine(NULL, "「…ご理解いただけて助かります。",
 		   NULL, "\"...This'll make things a lot quicker since you understand...", Line_WaitForInput);
+	PlaySE(3, "S01/11/120700402", 256, 64);
 	OutputLine(NULL, "…話のほとんどは電話、もしくは会って聞かせてもらったものばかりです。",
 		   NULL, " All of it is from either phone calls or meetings and interviews.", Line_WaitForInput);
-	OutputLine(NULL, "ですからウラが取れていません。",
+	PlaySE(3, "S01/11/120700403", 256, 64);O
+	utputLine(NULL, "ですからウラが取れていません。",
 		   NULL, " So they aren't corroborated.", Line_WaitForInput);
 	PlaySE(3, "S01/11/120700404", 256, 64);
 	OutputLine(NULL, "鵜呑みにしないでほしい、……………ということなんですよ。",
@@ -5769,6 +5804,7 @@ void main()
 	ClearMessage();
 
 //「レナが起こした事件と、...その後の医者での告白、!w500...ですね？＠
+	PlaySE(3, "S01/01/120100605", 256, 64);
 	OutputLine(NULL, "「レナが起こした事件と、…その後の医者での告白、",
 		   NULL, "\"The incident Rena was responsible for... and what she divulged to the doctor afterwards...", Line_ContinueAfterTyping);
 
@@ -5821,6 +5857,7 @@ void main()
 
 
 //「あ、いえ.........疑うとはそう意味ではないんです。￥
+	PlaySE(3, "S01/11/120700413", 256, 64);
 	OutputLine(NULL, "「あ、いえ………疑うとはそう意味ではないんです。」",
 		   NULL, "\"Ah, no... That's not what I meant by suspect them.\"", Line_Normal);
 	ClearMessage();
