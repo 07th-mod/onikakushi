@@ -17,7 +17,7 @@ Chapters
 - [ ] onik_012.txt
 - [ ] onik_013.txt
 - [ ] onik_014.txt
-- [ ] onik_014_02.txt
+- [x] onik_014_02.txt
 - [ ] Test onik_015.txt -> onik_015_03.txt
   - [ ] onik_015.txt
   - [x] onik_015_02.txt
