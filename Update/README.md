@@ -24,6 +24,7 @@ Chapters
 
 Other
 -----------------------------------------------------------------------------------------
+- [ ] Fix Keiichi's scene in onik_001.txt [after line 934](https://github.com/higurashi-mod/scripts/blob/master/Update/onik_001.txt#L934) (Dialog in the PS3 version is different, may be uncut in the PS2 version)
 - [x] Find the missing voice file for onik_015_03.txt, [line 68](https://github.com/higurashi-mod/scripts/blob/master/Update/onik_015_03.txt#L68)
 - [x] Unify sound files for onik_015_02.txt
   - [x] S01/02/120200482|S01/03/120300213	「「あはははははははははははははははははははははははははははははははは…」」 [line 996/997](https://github.com/higurashi-mod/scripts/blob/master/Update/onik_015_02.txt#L996)
