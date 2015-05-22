@@ -1523,6 +1523,7 @@
 
 
 //「健康に気を使うのはとても良いことだと思いますです。￥
+	PlaySE(3, "S01/05/120500034", 256, 64);	
 	OutputLine(NULL, "「健康に気を使うのはとても良いことだと思いますです。」",
 		   NULL, "\"I think it's wonderful you're taking care of your health.\"", Line_Normal);
 	ClearMessage();
@@ -1715,6 +1716,7 @@
 
 
 //「わ、圭一くん、…野球部だよ＠　野球部だよ？？＠
+	PlaySE(3, "S01/02/120200200", 256, 64);	
 	OutputLine(NULL, "「わ、圭一くん、…野球部だよ？",
 		   NULL, "\"Whoa, Keiichi-kun... are you on the baseball team?", Line_WaitForInput);
 	OutputLine(NULL, "　野球部だよ？？」",
@@ -1808,6 +1810,7 @@
 	DrawBustshot( 3, "re_se_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「…県立大島が強いらしいよ＠左腕の亀田くんがすごいんだって＠…頑張ってね！＠
+	PlaySE(3, "S01/03/120300138", 256, 64);
 	OutputLine(NULL, "「…県立大島が強いらしいよ。",
 		   NULL, "\"...Regionally speaking, it seems that Oshima High is pretty strong.", Line_WaitForInput);
 	OutputLine(NULL, "左腕の亀田くんがすごいんだって。",
@@ -2845,6 +2848,7 @@
 	PlaySE(3, "S01/02/120200214", 256, 64);
 	OutputLine(NULL, "「い、行くから！",
 		   NULL, "\"I-I'm going!", Line_WaitForInput);
+	PlaySE(3, "S01/02/120200215", 256, 64);	
 	OutputLine(NULL, "　そのバットをやめてよ…！！",
 		   NULL, " So please stop with the bat...!!", Line_WaitForInput);
 	PlaySE(3, "S01/02/120200216", 256, 64);
@@ -3058,7 +3062,7 @@
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-
+	PlaySE(3, "S01/02/120200218", 256, 64);
 	OutputLine(NULL, "そのごめんね！",
 		   NULL, " Well, excuse me, but...!", Line_WaitForInput);
 	PlaySE(3, "S01/02/120200219", 256, 64);
@@ -3084,6 +3088,7 @@
 
 
 //「あ、!w500…あのね、!w500あのね＠　ど、どうしてバットなんか持ってるのかな。!w800…かなッ！＠
+	PlaySE(3, "S01/02/120200220", 256, 64);	
 	OutputLine(NULL, "「あ、",
 		   NULL, "\"Uh...", Line_ContinueAfterTyping);
 
@@ -3106,7 +3111,7 @@
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-
+	PlaySE(3, "S01/02/120200221", 256, 64);	
 	OutputLine(NULL, "　ど、どうしてバットなんか持ってるのかな。",
 		   NULL, " Wh-Why do you have a bat, I wonder...", Line_ContinueAfterTyping);
 	Wait(800);
@@ -3368,6 +3373,7 @@
 
 
 //「悟史…って!s100……………え…!sd？＠
+	PlaySE(3, "S01/01/120100458", 256, 64);
 	OutputLine(NULL, "「悟史…って",
 		   NULL, "\"Satoshi... being...", Line_ContinueAfterTyping);
 
@@ -3505,6 +3511,7 @@
 	ClearMessage();
 
 //「…悟史くんの時と…!w1000どうして……!w1000どうしてそんなにまで同じなのッ？！＠
+	PlaySE(3, "S01/02/120200239", 256, 64);
 	OutputLine(NULL, "「…悟史くんの時と…",
 		   NULL, "\"...Why is it...", Line_ContinueAfterTyping);
 
@@ -3587,6 +3594,7 @@
 	PlaySE(3, "S01/02/120200244", 256, 64);
 	OutputLine(NULL, "「悟史くんもね、…ある日突然、ひとりで登校するようになったの。",
 		   NULL, "\"Satoshi-kun also... one day came to school all by himself all of a sudden.", Line_WaitForInput);
+	PlaySE(3, "S01/02/120200245", 256, 64);	
 	OutputLine(NULL, "圭一くんみたいに！！！",
 		   NULL, " Just like Keiichi-kun!!!", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3594,8 +3602,10 @@
 
 
 //　そしてね、ある日突然、素振りの練習を始めたの＠圭一くんみたいに！！＠
+	PlaySE(3, "S01/02/120200246", 256, 64);	
 	OutputLine(NULL, "　そしてね、ある日突然、素振りの練習を始めたの。",
 		   NULL, "Then one day, he suddenly started practicing his swing.", Line_WaitForInput);
+	PlaySE(3, "S01/02/120200247", 256, 64);	
 	OutputLine(NULL, "圭一くんみたいに！！！",
 		   NULL, " Just like Keiichi-kun!!!", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3603,8 +3613,10 @@
 
 
 //　そしてね、ある日突然、バットを持ち歩くようになったの＠圭一くんみたいにッ！！！＠
+	PlaySE(3, "S01/02/120200248", 256, 64);	
 	OutputLine(NULL, "　そしてね、ある日突然、バットを持ち歩くようになったの。",
 		   NULL, "Then one day, he suddenly began carrying the bat around with him.", Line_WaitForInput);
+	PlaySE(3, "S01/02/120200249", 256, 64);		
 	OutputLine(NULL, "圭一くんみたいにッ！！！！",
 		   NULL, " Just like Keiichi-kun!!!", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3612,6 +3624,7 @@
 
 
 //　そしてね、ある日突然!w1000…………ッ、………………。￥
+	PlaySE(3, "S01/02/120200250", 256, 64);		
 	OutputLine(NULL, "　そしてね、ある日突然",
 		   NULL, "Then one day, he suddenly...", Line_ContinueAfterTyping);
 
@@ -3837,7 +3850,7 @@
 	PlaySE(3, "S01/02/120200254", 256, 64);
 	OutputLine(NULL, "「言ったよね。",
 		   NULL, "\"I told you.", Line_WaitForInput);
-	PlaySE(3, "S01/02/120200253", 256, 64);
+	PlaySE(3, "S01/02/120200255", 256, 64);
 	OutputLine(NULL, "圭一くん。」",
 		   NULL, " Keiichi-kun.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3850,6 +3863,7 @@
 	ClearMessage();
 
 //「悟史くんはね、…/
+	PlaySE(3, "S01/02/120200256", 256, 64);
 	OutputLine(NULL, "「悟史くんはね、…",
 		   NULL, "\"Satoshi-kun, you see...", Line_ContinueAfterTyping);
 
@@ -3865,7 +3879,7 @@
 		   NULL, "", Line_ContinueAfterTyping);
 
 	SetSpeedOfMessage( FALSE, 0, );
-
+	PlaySE(3, "S01/02/120200257", 256, 64);
 	OutputLine(NULL, "”しちゃったの。」",
 		   NULL, "' out.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
