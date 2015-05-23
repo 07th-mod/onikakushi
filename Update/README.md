@@ -3,9 +3,18 @@ To-do list:
 
 Tips (With Voices)
 -----------------------------------------------------------------------------------------
-- [ ] onik_tips_01-20
-- [ ] onik_tips_01-20
-- [ ] onik_tips_01-20
+- [x] onik_tips_01
+- [x] onik_tips_02
+- [x] onik_tips_03
+- [x] onik_tips_07
+- [x] onik_tips_12
+- [ ] onik_tips_13
+- [ ] onik_tips_16
+- [ ] onik_tips_17
+- [ ] onik_tips_18
+- [ ] onik_tips_19
+- [ ] onik_tips_20
+
 
 Chapters
 -----------------------------------------------------------------------------------------
