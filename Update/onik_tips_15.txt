@@ -1,0 +1,375 @@
+﻿void main()
+{
+
+//■本部長通達
+
+//*Sub_Tips_015
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	PlayBGM( 1, "msys12", 128, 0 );
+
+//!s50
+
+	SetSpeedOfMessage( TRUE, 100, );
+
+//locate 13,0
+
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+	SetStyleOfMessageSwinging( 2 );
+
+//昭和５７年７月１日
+	OutputLine(NULL, "昭和５７年７月１日",
+		   NULL, "July 1, 1982", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+//locate 13,1
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//総総管イ１－１２号
+	OutputLine(NULL, "総総管イ１−１２号",
+		   NULL, "To departments 1 through 12,", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+	SetStyleOfMessageSwinging( 0 );
+
+//ＸＸ県警察本部
+	OutputLine(NULL, "ＸＸ県警察本部",
+		   NULL, "XX Prefectural Police headquarters.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//本部長　ＸＸＸ
+	OutputLine(NULL, "本部長　ＸＸＸ",
+		   NULL, "Director-General XXX", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+//locate 10,5
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+	SetStyleOfMessageSwinging( 2 );
+
+//各警察署長・施設管理者殿
+	OutputLine(NULL, "各警察署長・施設管理者殿",
+		   NULL, "To the chief constable and all facility managers.", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//locate 3,7
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+	SetStyleOfMessageSwinging( 1 );
+
+//雛見沢村における事件について（通達）
+	OutputLine(NULL, "雛見沢村における事件について（通達）",
+		   NULL, "Regarding cases situated in the Hinamizawa village. (Notice)", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 4000 );
+	SetValidityOfInput( TRUE );
+	ClearMessage();
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+	SetStyleOfMessageSwinging( 0 );
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+//　鹿骨市雛見沢村の近年の事件は、すでに一部マスコミでも報道されるように、/
+	OutputLine(NULL, "　鹿骨市雛見沢村の近年の事件は、すでに一部マスコミでも報道されるように、",
+		   NULL, "As cases in Shishibone city, Hinamizawa village have been reported by certain sections of mass media,", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//世間の好奇の目を引き地域住民の穏便な生活に重大な影響を及ぼしつつある、大変憂慮すべき事態となっている。
+	OutputLine(NULL, "世間の好奇の目を引き地域住民の穏便な生活に重大な影響を及ぼしつつある、大変憂慮すべき事態となっている。",
+		   NULL, "it has drawn global attention, which is causing serious repercussions for the local residents. This has become a very serious situation.", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　地域住民の生活と財産を保護するため、以下の遵守を通達する。
+	OutputLine(NULL, "　地域住民の生活と財産を保護するため、以下の遵守を通達する。",
+		   NULL, "To protect the livelihood and prosperity of the residents, the following notice has been issued.", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 4000 );
+	SetValidityOfInput( TRUE );
+	ClearMessage();
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//（１） 秘匿捜査指定
+	OutputLine(NULL, "（１）秘匿捜査指定",
+		   NULL, "1. Designate the following criminal investigations as classified.", Line_ContinueAfterTyping);
+
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　興宮署昭和５７年第Ｘ号
+	OutputLine(NULL, "　興宮署昭和５７年第Ｘ号",
+		   NULL, "Okinomiya station 1982 case number X:", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　雛見沢村主婦殺人事件（６月ＸＸ日発生）
+	OutputLine(NULL, "　　雛見沢村主婦殺人事件（６月ＸＸ日発生）",
+		   NULL, "Hinamizawa village housewife murder (Dated June XX)", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　興宮署昭和５７年第Ｘ号
+	OutputLine(NULL, "　興宮署昭和５７年第Ｘ号",
+		   NULL, "Okinomiya station 1982 case number X:", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　雛見沢村生徒失踪事件（６月ＸＸ日発生）
+	OutputLine(NULL, "　　雛見沢村生徒失踪事件（６月ＸＸ日発生）",
+		   NULL, "Hinamizawa village student disappearance (Dated June XX)", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 4000 );
+	SetValidityOfInput( TRUE );
+	ClearMessage();
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//（２） 情報の非開示
+	OutputLine(NULL, "（２）情報の非開示",
+		   NULL, "2. Non-disclosure of information.", Line_ContinueAfterTyping);
+
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　興宮署昭和５４年第Ｘ号
+	OutputLine(NULL, "　興宮署昭和５４年第Ｘ号",
+		   NULL, "Okinomiya station 1979 case number X:", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　雛見沢村現場監督殺人事件（６月ＸＸ日発生）
+	OutputLine(NULL, "　　雛見沢村現場監督殺人事件（６月ＸＸ日発生）",
+		   NULL, "Hinamizawa village site foreman murder (Dated June XX)", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　白川署昭和５５年第Ｘ号
+	OutputLine(NULL, "　白川署昭和５５年第Ｘ号",
+		   NULL, "Shira station 1980 case number X:", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　白川自然公園転落事故（６月ＸＸ日発生）
+	OutputLine(NULL, "　　白川自然公園転落事故（６月ＸＸ日発生）",
+		   NULL, "Shira natural park falling incident (Dated June XX)", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　興宮署昭和５６年第Ｘ号
+	OutputLine(NULL, "　興宮署昭和５６年第Ｘ号",
+		   NULL, "Okinomiya station 1981 case number X:", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　　雛見沢村神主妻失踪事件（６月ＸＸ日発生）
+	OutputLine(NULL, "　　雛見沢村神主妻失踪事件（６月ＸＸ日発生）",
+		   NULL, "Hinamizawa village Shinto priest's wife's disappearance (Dated June XX)", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 4000 );
+	SetValidityOfInput( TRUE );
+	ClearMessage();
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//（３） 関係各機関への報道自粛要請
+	OutputLine(NULL, "（３）関係各機関への報道自粛要請",
+		   NULL, "3. Requesting self-restraint from each organization concerning the release of sensitive information.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+
+//　別添資料１・２・３参照
+	OutputLine(NULL, "　別添資料１・２・３参照",
+		   NULL, "Please see attached reference materials 1, 2, and 3.", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+//locate 12,8
+
+	SetStyleOfMessageSwinging( 2 );
+
+//担当　ＸＸ県警察本部
+	OutputLine(NULL, "担当　ＸＸ県警察本部",
+		   NULL, "Management: XX Prefecture Police headquarters", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+//locate 16,9
+
+	SetStyleOfMessageSwinging( 2 );
+
+//内線ＸＸＸＸ
+	OutputLine(NULL, "内線ＸＸＸＸ",
+		   NULL, "Internal line: XXXX", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	PlayBGM( 2, "lsys24", 128, 0 );
+//locate 14,10
+
+//警務部ＸＸ・ＸＸ/
+	OutputLine(NULL, "警務部ＸＸ・ＸＸ",
+		   NULL, "Police Affairs department XX XX", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
+	ClearMessage();
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	SetSpeedOfMessage( FALSE, 0, );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+}

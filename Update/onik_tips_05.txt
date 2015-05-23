@@ -1,0 +1,162 @@
+﻿void main()
+{
+
+
+//■雛見沢ダム計画
+
+//*Sub_Tips_005
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	PlayBGM( 2, "lsys12", 128, 0 );
+
+
+//　昭和五十年十月＠
+	OutputLine(NULL, "　昭和五十年十月。",
+		   NULL, "October, 1975.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　総理府告示第ＸＸＸ号を以て、雛見沢発電所電源開発基本計画が発表された＠
+	OutputLine(NULL, "　総理府告示第ＸＸＸ号を以て、雛見沢発電所電源開発基本計画が発表された。",
+		   NULL, "In accordance with the Prime Minister's bulletin number XXX, Hinamizawa's electrical development master plan was announced.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+
+//　計画された「雛見沢ダム」の規模は甚大で、雛見沢村の受ける影響は余りに重大だった￥
+	OutputLine(NULL, "　計画された「雛見沢ダム」の規模は甚大で、雛見沢村の受ける影響は余りに重大だった。",
+		   NULL, "The vast scope of the projected Hinamizawa dam will have an incredibly heavy impact on the village of Hinamizawa.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene( "bg_005", 1000 );
+
+//　雛見沢ダムにより水没する地域は雛見沢、高津戸、清津、松本、谷河内の五ヶ部落に及び＠
+	OutputLine(NULL, "　雛見沢ダムにより水没する地域は雛見沢、高津戸、清津、松本、谷河内の五ヶ部落に及び、",
+		   NULL, "The flooded area caused by the Hinamizawa dam would include the five areas of Hinamizawa, Takatsudo, Kiyotsu, Matsumoto, and Yagochi.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　水没世帯は二九一戸＠人口一二五一人＠小学校一＠中学校一＠郵便局一＠農協支所一＠営林署貯木場一＠神社五＠寺院二＠魚族増殖場一＠等多数の公共的文化的生産的施設と信仰の対象を永久に湖底に没するものである￥
+	OutputLine(NULL, "　水没世帯は二九一戸、",
+		   NULL, "The submerged area includes 291 houses.", Line_WaitForInput);
+	OutputLine(NULL, "人口一二五一人、",
+		   NULL, " Population: 1,251,", Line_WaitForInput);
+	OutputLine(NULL, "小学校一、",
+		   NULL, " 1 elementary school,", Line_WaitForInput);
+	OutputLine(NULL, "中学校一、",
+		   NULL, " 1 middle school,", Line_WaitForInput);
+	OutputLine(NULL, "郵便局一、",
+		   NULL, " 1 post office,", Line_WaitForInput);
+	OutputLine(NULL, "農協支所一、",
+		   NULL, " 1 agricultural cooperative,", Line_WaitForInput);
+	OutputLine(NULL, "営林署貯木場一、",
+		   NULL, " 1 forestry department lumber yard,", Line_WaitForInput);
+	OutputLine(NULL, "神社五、",
+		   NULL, " 5 shrines,", Line_WaitForInput);
+	OutputLine(NULL, "寺院二、",
+		   NULL, " 2 temples,", Line_WaitForInput);
+	OutputLine(NULL, "魚族増殖場一、",
+		   NULL, " and 1 fishery.", Line_WaitForInput);
+	OutputLine(NULL, "等多数の公共的文化的生産的施設と信仰の対象を永久に湖底に没するものである。",
+		   NULL, " All of these communal, cultural, agricultural areas, and places of worship will be indefinitely submerged at the bottom of the artificial lake basin.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene( "bg_002", 1000 );
+
+//　この天恵豊かで住みよい郷土を、血と汗をもって築いてくれた父祖幾百年の艱難辛苦を思えば余りに痛ましいことであり＠
+	OutputLine(NULL, "　この天恵豊かで住みよい郷土を、血と汗をもって築いてくれた父祖幾百年の艱難辛苦を思えば余りに痛ましいことであり、",
+		   NULL, "Forsaking the hundreds of years our ancestors poured their blood and sweat into this fertile, resource-rich land is just too painful to bear.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　水没地域はもとより全部落は郷土死守の決意を固め次々に決起、団結し鬼ケ淵死守同盟を結成＠
+	OutputLine(NULL, "　水没地域はもとより全部落は郷土死守の決意を固め次々に決起、団結し鬼ケ淵死守同盟を結成。",
+		   NULL, "All the residents having homes that were to be submerged banded together, and created the Onigafuchi Defense Alliance.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　ダム建設の中止、又は支流への計画変更を強力に要請し続けたのである￥
+	OutputLine(NULL, "　ダム建設の中止、又は支流への計画変更を強力に要請し続けたのである。",
+		   NULL, "The dam project was halted and petitions to alter the plan were circulated.", Line_Normal);
+	ClearMessage();
+
+//　平和的かつ民主的な話し合いを求めるも、政府とその傀儡である電源会社総裁ＸＸＸＸＸはこれを拒否＠
+	OutputLine(NULL, "　平和的かつ民主的な話し合いを求めるも、政府とその傀儡である電源会社総裁ＸＸＸＸＸはこれを拒否。",
+		   NULL, "The citizens sought peaceful negotiations, but the government and its puppet company XXXXX openly refused.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　筆舌に尽くし難い極悪非道を以て、村民の民主的運動と雛見沢の郷土を踏みにじったのである＠
+	OutputLine(NULL, "　筆舌に尽くし難い極悪非道を以て、村民の民主的運動と雛見沢の郷土を踏みにじったのである。",
+		   NULL, "Performing unspeakable, heinous acts, they quashed the democratic actions of the villagers.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　だが村民はこれに怯むことなく益々団結、郷土死守の決意をさらに強固にしていくのである￥
+	OutputLine(NULL, "　だが村民はこれに怯むことなく益々団結、郷土死守の決意をさらに強固にしていくのである。",
+		   NULL, "But the villagers did not falter. Instead, they banded together even more closely and steeled their resolve to protect their homes to the death.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene( "bg_092", 1000 );
+
+//　今日、恐るべき雛見沢ダム建設計画は、その再開が無期限に凍結されている＠
+	OutputLine(NULL, "　今日、恐るべき雛見沢ダム建設計画は、その再開が無期限に凍結されている。",
+		   NULL, "The continuation of that frightening Hinamizawa dam construction project is still stalled as of today.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　村民はこの凍結が自らの団結の祟高な力によってなされていることを理解しており＠そしてこの恐るべき計画が依然撤回されていないことも理解しているのである￥
+	OutputLine(NULL, "　村民はこの凍結が自らの団結の祟高な力によってなされていることを理解しており、",
+		   NULL, "The villagers understand that the stalling was caused by sublime power through unity", Line_WaitForInput);
+	OutputLine(NULL, "そしてこの恐るべき計画が依然撤回されていないことも理解しているのである。",
+		   NULL, " and they understand that this fearsome plan has not yet been fully withdrawn.", Line_Normal);
+	ClearMessage();
+
+//　すでに鬼ケ淵死守同盟はその役割を終え解散しているが、そこで育まれた団結の炎は消えていない＠
+	OutputLine(NULL, "　すでに鬼ケ淵死守同盟はその役割を終え解散しているが、そこで育まれた団結の炎は消えていない。",
+		   NULL, "The Onigafuchi Defense Alliance had been dissolved after it did its part, but the feelings of unity it garnered have not yet been extinguished.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　村民の心にこの炎が灯り続ける限り、再び郷土が湖底に沈む災厄に見舞われることは断じてあり得ないのである＠
+	OutputLine(NULL, "　村民の心にこの炎が灯り続ける限り、再び郷土が湖底に沈む災厄に見舞われることは断じてあり得ないのである。",
+		   NULL, "As long as that passion resides in the hearts of the residents, they'll be able to confront whomever next decides to sink their homes into a lake basin.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+
+
+//　　　　　鬼ケ淵死守同盟会長!w1000　公由喜一郎￥
+
+	OutputLine(NULL, "　　　　　鬼ケ淵死守同盟会長",
+		   NULL, "Onigafuchi Defense Alliance Committee Chairman,", Line_ContinueAfterTyping);
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "　公由喜一郎書",
+		   NULL, " Kiichirou Kimiyoshi", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+//gosub *tip_e
+//return
+
+
+
+
+}
