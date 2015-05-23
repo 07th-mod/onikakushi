@@ -52,19 +52,18 @@ And open output_log.txt ; This will tell you which script txt file has the synta
 
 Known Issues:
 -----------------------------------------------------------------------------------------
-- Generic -
-*Sometimes the lines don't last long enough for a voice file to play fully. 
-This is most evident when auto is left on.
-*BGM volume mutes BGM and Voices
-Unavoidable, since the voices aren't their own thing
-*More than one sound effect cannot be played at the same time.
-Fixable by moving them to a different sound layer.
+- Generic
+  - Sometimes the lines don't last long enough for a voice file to play fully. 
+    - This is most evident when auto is left on.
+  - BGM volume mutes BGM and Voices
+    - Unavoidable, since the voices aren't their own thing
+  -More than one sound effect cannot be played at the same time. 
+    - Fixable by moving them to a different sound layer.
 
 - Chapter 1 - 
-Voices not properly aligned during the talk about Keichii's dick scene. 
-There are too many voice files for Keichii for this scene, 
-probably the scene is extended in the ps3 version.
-Since I don't know japanese, I can't tell which voices are actually used.
+  - Voices not properly aligned during the talk about Keichii's dick scene. 
+    - There are too many voice files for Keichii for this scene, probably the scene is extended in the ps3 version.
+    - Since I don't know japanese, I can't tell which voices are actually used.
 
 - Tips 
   - Missing voices for Keichii's Mom in Tip 20 (At the Seventh Mart)
