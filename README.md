@@ -52,7 +52,7 @@ And open output_log.txt ; This will tell you which script txt file has the synta
 
 Known Issues:
 -----------------------------------------------------------------------------------------
-- Generic
+- Generic:
   - Sometimes the lines don't last long enough for a voice file to play fully. 
     - This is most evident when auto is left on.
   - BGM volume mutes BGM and Voices
@@ -60,12 +60,12 @@ Known Issues:
   -More than one sound effect cannot be played at the same time. 
     - Fixable by moving them to a different sound layer.
 
-- Chapter 1 - 
+- Chapter 1: 
   - Voices not properly aligned during the talk about Keichii's dick scene. 
     - There are too many voice files for Keichii for this scene, probably the scene is extended in the ps3 version.
     - Since I don't know japanese, I can't tell which voices are actually used.
 
-- Tips 
+- Tips: 
   - Missing voices for Keichii's Mom in Tip 20 (At the Seventh Mart)
   - Missing voices for lines 1472 to 1524 in Omake_1 (All-cast wrap up scene)
 
@@ -100,6 +100,10 @@ v 0.5
 - Found missing ps2 voice (S01/19/123100003.ogg)
 - Moved sound effects to 4 layer as fix for sound effects and voice playing at same time
 - Bumped up the volume of the voices so the bgm doesn't drown them out.
+
+v 0.6
+- Chapter 6, finished
+- For whatever reason, some sound effects had an extra underscore in them. Fixed that.
 
 v 1.0
 - All chapters finished and tested.
