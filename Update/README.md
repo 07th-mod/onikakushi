@@ -11,11 +11,10 @@ Tips (With Voices)
 - [ ] onik_tips_13
 - [ ] onik_tips_16
 - [ ] onik_tips_17
-- [ ] onik_tips_18
-- [ ] onik_tips_19
-- [ ] onik_tips_20
-- [ ] omake1
-- added voices but still needs fixing, starts in s20.txt line 4192, ends line 4445
+- [x] onik_tips_18
+- [x] onik_tips_19
+- [ ] onik_tips_20 (no voices in the script, needs fixing)
+- [ ] omake1 (added voices but still needs fixing, starts in s20.txt line 4192, ends line 4445)
 
 
 Chapters
