@@ -32,6 +32,7 @@
 	ClearMessage();
 
 //「遠回しですねぇ＠...では間接的にはあるってことですか？＠
+	PlaySE(3, "S20/11/440700019", 128, 64);	
 	OutputLine(NULL, "「遠回しですねぇ。",
 		   NULL, "\"That's quite a roundabout response.", Line_WaitForInput);
 	OutputLine(NULL, "…では間接的にはあるってことですか？」",
@@ -41,6 +42,7 @@
 
 
 //「自殺したくなる精神状態を誘発することはできる、!w1000っちゅうことだ。＠
+	PlaySE(3, "S20/00/443200021", 128, 64);	
 	OutputLine(NULL, "「自殺したくなる精神状態を誘発することはできる、",
 		   NULL, "\"Something that puts you into a suicidal mental state,", Line_ContinueAfterTyping);
 
@@ -57,6 +59,7 @@
 	DrawBustshot( 2, "oi_si_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「...難しい言い方になりましたねぇ＠何ですかその、自殺したくなる精神状態ってのは。＠
+	PlaySE(3, "S20/11/440700020", 128, 64);		
 	OutputLine(NULL, "「…難しい言い方になりましたねぇ。",
 		   NULL, "\"...That's hard to say.", Line_WaitForInput);
 	OutputLine(NULL, "何ですかその、自殺したくなる精神状態ってのは。」",
@@ -65,6 +68,7 @@
 
 
 //「例えば重度の躁鬱病患者だが＠一般に鬱状態から躁状態に転じる時にもっとも自殺が多いと言われちょる。￥
+	PlaySE(3, "S20/00/443200022", 128, 64);		
 	OutputLine(NULL, "「例えば重度の躁鬱病患者だが、",
 		   NULL, "\"Like a person with a serious bipolar disorder.", Line_WaitForInput);
 	OutputLine(NULL, "一般に鬱状態から躁状態に転じる時にもっとも自殺が多いと言われちょる。」",
@@ -94,6 +98,7 @@
 
 //「鬱状態の患者は自信を喪失し非常に悲観的だ＠だが自殺もせん＠自殺をする気力すらないからだ＠...躁の状態もまた自殺をせん＠
 //　今度は逆に、非常に自信過剰で行動的なので、自らを順風満帆と思う＠だから自殺などせんのだ。＠
+	PlaySE(3, "S20/00/443200023", 128, 64);	
 	OutputLine(NULL, "「鬱状態の患者は自信を喪失し非常に悲観的だ。",
 		   NULL, "\"Individuals with clinical depression suffer from low self-esteem and are quite pessimistic,", Line_WaitForInput);
 	OutputLine(NULL, "だが自殺もせん。",
@@ -101,8 +106,10 @@
 	PlaySE(3, "S20/00/443200024", 128, 64);
 	OutputLine(NULL, "自殺をする気力すらないからだ。",
 		   NULL, " They do not have the willpower to commit suicide.", Line_WaitForInput);
+	PlaySE(3, "S20/00/443200025", 128, 64);	
 	OutputLine(NULL, "…躁の状態もまた自殺をせん。",
 		   NULL, " Nor does mania on its own lead to suicide.", Line_WaitForInput);
+	PlaySE(3, "S20/00/443200026", 128, 64);	
 	OutputLine(NULL, "　今度は逆に、非常に自信過剰で行動的なので、自らを順風満帆と思う。",
 		   NULL, " That has an opposite effect, filling the person with confidence and making them feel as though they're walking on air.", Line_WaitForInput);
 	OutputLine(NULL, "だから自殺などせんのだ。」",
@@ -112,6 +119,7 @@
 
 
 //「...面白いですねぇ＠どっちの状態でも自殺をしないのに、状態が入れ替わる時に自殺するんですか。￥
+	PlaySE(3, "S20/11/440700021", 128, 64);		
 	OutputLine(NULL, "「…面白いですねぇ。",
 		   NULL, "\"...That's interesting.", Line_WaitForInput);
 	OutputLine(NULL, "どっちの状態でも自殺をしないのに、状態が入れ替わる時に自殺するんですか。」",
@@ -119,6 +127,7 @@
 	ClearMessage();
 
 //「鬱状態には自殺願望はあるが、自殺という大仕事をげる気力すらもない＠だが躁状態が始まると徐々に気力が充実し、体の自由が利くようになってくる。＠
+	PlaySE(3, "S20/00/443200027", 128, 64);	
 	OutputLine(NULL, "「鬱状態には自殺願望はあるが、自殺という大仕事を遂げる気力すらもない。",
 		   NULL, "\"There is a desire to commit suicide when in a state of depression, but they do not have the willpower to commit such a formidable act.", Line_WaitForInput);
 	OutputLine(NULL, "だが躁状態が始まると徐々に気力が充実し、体の自由が利くようになってくる。」",
@@ -126,6 +135,7 @@
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 //「なぁるほど＠　つまり自殺する気力が回復するわけですね。＠
+	PlaySE(3, "S20/11/440700022", 128, 64);		
 	OutputLine(NULL, "「なぁるほど！",
 		   NULL, "\"I see!", Line_WaitForInput);
 	OutputLine(NULL, "　つまり自殺する気力が回復するわけですね。」",
@@ -138,11 +148,13 @@
 	PlaySE(3, "S20/00/443200028", 128, 64);
 	OutputLine(NULL, "「そういうことじゃの。",
 		   NULL, "\"That's how it goes.", Line_WaitForInput);
+	PlaySE(3, "S20/00/443200028a", 128, 64);	
 	OutputLine(NULL, "だからこの時期に変な気を起こさんように、向精神薬をたっぷりと処方するわけじゃな。」",
 		   NULL, " That's why patients are given sedatives during that time to keep them from acting on their impulses.\"", Line_Normal);
 	ClearMessage();
 
 //「...では富竹氏はこの躁鬱病患者だったんですかねぇ？＠
+	PlaySE(3, "S20/11/440700023", 128, 64);		
 	OutputLine(NULL, "「…では富竹氏はこの躁鬱病患者だったんですかねぇ？」",
 		   NULL, "\"...Then was Tomitake bipolar?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -150,10 +162,12 @@
 
 
 //「躁鬱病患者の自殺はちゃんとした文化的な自殺だ＠飛び降りとか首吊りとか＠ヤクの禁断症状のような自虐行動とはまったく違うぞい！＠
+	PlaySE(3, "S20/00/443200029", 128, 64);	
 	OutputLine(NULL, "「躁鬱病患者の自殺はちゃんとした文化的な自殺だ。",
 		   NULL, "\"People who suffer from bipolar disorder generally commit suicide by more 'civilized' means.", Line_WaitForInput);
 	OutputLine(NULL, "飛び降りとか首吊りとか。",
 		   NULL, " Like, say hanging, or jumping off a building.", Line_WaitForInput);
+	PlaySE(3, "S20/00/443200030", 128, 64);		
 	OutputLine(NULL, "ヤクの禁断症状のような自虐行動とはまったく違うぞい！」",
 		   NULL, " Self-harm as though going through withdrawal is completely different!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -161,6 +175,7 @@
 
 
 //「富竹氏の自殺は文化的じゃないですよねぇ＠
+	PlaySE(3, "S20/11/440700024", 128, 64);	
 	OutputLine(NULL, "「富竹氏の自殺は文化的じゃないですよねぇ。",
 		   NULL, "\"Tomitake's death wasn't civilized...", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -168,6 +183,7 @@
 
 
 //　......ではやっぱり薬物中毒と考えるのが自然ですか＠最初に言った、自殺したくなる精神状態を起こす薬ってのを教えてください。￥
+	PlaySE(3, "S20/11/440700025", 128, 64);		
 	OutputLine(NULL, "　……ではやっぱり薬物中毒と考えるのが自然ですか。",
 		   NULL, "So one would think it was caused by some foreign substance.", Line_WaitForInput);
 	OutputLine(NULL, "最初に言った、自殺したくなる精神状態を起こす薬ってのを教えてください。」",
@@ -176,6 +192,7 @@
 
 
 //「メトアンフェタミン中毒は躁鬱病に近い症状を起こすと報告されとる＠覚醒剤のことだ＠
+	PlaySE(3, "S20/00/443200031", 128, 64);		
 	OutputLine(NULL, "「メトアンフェタミン中毒は躁鬱病に近い症状を起こすと報告されとる。",
 		   NULL, "\"There are reports that methamphetamine overdoses produce a condition that resembles bipolar disorder.", Line_WaitForInput);
 	OutputLine(NULL, "覚醒剤のことだ。",
@@ -185,6 +202,7 @@
 
 
 //　......それからバルビツール酸誘導体中毒にも異常行為が報告されとるがあまり一般的ではないのう＠こっちは睡眠薬のことだ。＠
+	PlaySE(3, "S20/00/443200032", 128, 64);		
 	OutputLine(NULL, "　……それからバルビツール酸誘導体中毒にも異常行為が報告されとるがあまり一般的ではないのう。",
 		   NULL, "...Barbiturate overdoses are also reported to cause erratic behavior.", Line_WaitForInput);
 	OutputLine(NULL, "こっちは睡眠薬のことだ。」",
@@ -194,6 +212,7 @@
 
 
 //「覚醒剤反応、出なかったんですよねぇ＠...他の可能性は？￥
+	PlaySE(3, "S20/11/440700026", 128, 64);	
 	OutputLine(NULL, "「覚醒剤反応、出なかったんですよねぇ。",
 		   NULL, "\"There were no signs of stimulants.", Line_WaitForInput);
 	OutputLine(NULL, "…他の可能性は？」",
@@ -210,6 +229,7 @@
 
 
 //　バセドー病等の甲状腺異常を引き起こす病気にしばしば躁鬱病に似た症状が報告されとる＠だがバセドー病は特徴的な症状が多い＠仏は違うの。＠
+	PlaySE(3, "S20/00/443200034", 128, 64);	
 	OutputLine(NULL, "　バセドー病等の甲状腺異常を引き起こす病気にしばしば躁鬱病に似た症状が報告されとる。",
 		   NULL, "Something like Graves' disease, which affects the thyroid, and is known to cause symptoms that resemble bipolar disorder.", Line_WaitForInput);
 	OutputLine(NULL, "だがバセドー病は特徴的な症状が多い。",
@@ -222,6 +242,7 @@
 
 
 //「もっと突発的に発生するものはありませんかねぇ＠今回のケースと合うような、突発性で自殺したくなるようなヤツです。￥
+	PlaySE(3, "S20/11/440700027", 128, 64);	
 	OutputLine(NULL, "「もっと突発的に発生するものはありませんかねぇ。",
 		   NULL, "\"I wonder, is there something that could happen more spontaneously?", Line_WaitForInput);
 	OutputLine(NULL, "今回のケースと合うような、突発性で自殺したくなるようなヤツです。」",
@@ -230,15 +251,17 @@
 
 
 //「急性器質性精神病、っちゅうのを知っとるかの＠
+	PlaySE(3, "S20/00/443200036", 128, 64);	
 	OutputLine(NULL, "「急性器質性精神病、っちゅうのを知っとるかの？",
 		   NULL, "\"Are you familiar with organic mental disorders?", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 
-//　早い話が、脳障害によって精神がとんちんかんになる状態じゃな＠これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。＠
+//　早い話が、脳障害によって精神がとんちんかんになる状態じゃな＠これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。＠	
 	OutputLine(NULL, "　早い話が、脳障害によって精神がとんちんかんになる状態じゃな。",
 		   NULL, "In short, it's a condition where the brain is out of whack due to physical injury or illness.", Line_WaitForInput);
+	PlaySE(3, "S20/00/443200037", 128, 64);		
 	OutputLine(NULL, "これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。」",
 		   NULL, " It can be caused by drugs, but it can also be caused by physical trauma, encephalitis, a stroke, or even tumors.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -276,6 +299,7 @@
 
 
 //「かっかっか＠　つまり、乱闘中に豆腐の角に頭ぶつけて、それでとんちんかんになったんじゃないかと言っとるんだ。＠
+	PlaySE(3, "S20/00/443200040", 128, 64);	
 	OutputLine(NULL, "「かっかっか！",
 		   NULL, "\"Bwah ha ha!", Line_WaitForInput);
 	OutputLine(NULL, "　つまり、乱闘中に豆腐の角に頭ぶつけて、それでとんちんかんになったんじゃないかと言っとるんだ。」",
@@ -285,10 +309,12 @@
 
 
 //「なっはっはっはっはっはっは！！＠　じゃあホシには殺意はなかったってことですかねぇ＠ちょいと小銭を巻き上げようと殴ったら、たまたま殴り所が悪かったと！￥
+	PlaySE(3, "S20/11/440700030", 128, 64);	
 	OutputLine(NULL, "「なっはっはっはっはっはっは！！！",
 		   NULL, "\"Nahahahahahahah!!!", Line_WaitForInput);
 	OutputLine(NULL, "　じゃあホシには殺意はなかったってことですかねぇ。",
 		   NULL, " Then his lady didn't have any intent to kill.", Line_WaitForInput);
+	PlaySE(3, "S20/11/440700031", 128, 64);		
 	OutputLine(NULL, "ちょいと小銭を巻き上げようと殴ったら、たまたま殴り所が悪かったと！」",
 		   NULL, " Just smacked him in a bad place when he nicked some change!\"", Line_Normal);
 	ClearMessage();
@@ -307,6 +333,7 @@
 
 
 //「こほん＠...いかにも。￥
+	PlaySE(3, "S20/00/443200041", 128, 64);		
 	OutputLine(NULL, "「こほん。",
 		   NULL, "\"Ahem.", Line_WaitForInput);
 	OutputLine(NULL, "…いかにも。」",
@@ -314,6 +341,7 @@
 	ClearMessage();
 
 //「薬物の常用にせよ、精神的なものにせよ、仏の身元がカギを握っとるぞい＠そっちはどうなっとるんじゃ？＠
+	PlaySE(3, "S20/00/443200042", 128, 64);			
 	OutputLine(NULL, "「薬物の常用にせよ、精神的なものにせよ、仏の身元がカギを握っとるぞい。",
 		   NULL, "\"If it was habitual drug use, if it was something mental, the deceased's body holds the key.", Line_WaitForInput);
 	OutputLine(NULL, "そっちはどうなっとるんじゃ？」",
@@ -323,6 +351,7 @@
 
 
 //「ありゃぁこんな時間＠　そろそろ戻らないと熊ちゃん、怒っちゃいますねぇ。＠
+	PlaySE(3, "S20/11/440700033", 128, 64);	
 	OutputLine(NULL, "「ありゃぁこんな時間！",
 		   NULL, "\"Oh my goodness, look at the time!", Line_WaitForInput);
 	OutputLine(NULL, "　そろそろ戻らないと熊ちゃん、怒っちゃいますねぇ。」",
@@ -332,6 +361,7 @@
 
 
 //「おう＠　頑張れよ＠　いいお年をの！＠
+	PlaySE(3, "S20/00/443200043", 128, 64);	
 	OutputLine(NULL, "「おう！",
 		   NULL, "\"Yeah!", Line_WaitForInput);
 	OutputLine(NULL, "　頑張れよ！",

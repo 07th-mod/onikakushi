@@ -19,6 +19,7 @@
 	DrawBustshotWithFiltering( 3, "re_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「最近、圭一くんの元気がないね＠機嫌が悪いのかな。＠
+	PlaySE(3, "S20/02/440200042", 256, 64);	
 	OutputLine(NULL, "「最近、圭一くんの元気がないね。",
 		   NULL, "\"Keiichi-kun's been feeling down lately.", Line_WaitForInput);
 	OutputLine(NULL, "機嫌が悪いのかな。」",
@@ -30,6 +31,7 @@
 	DrawBustshotWithFiltering( 1, "me_se_wi_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「さぁてどうしたんだろうね＠生理でも来てんじゃないのー？＠
+	PlaySE(3, "S20/03/440300032", 256, 64);		
 	OutputLine(NULL, "「さぁてどうしたんだろうね。",
 		   NULL, "\"I wonder.", Line_WaitForInput);
 	OutputLine(NULL, "生理でも来てんじゃないのー？」",
@@ -41,6 +43,7 @@
 	DrawBustshot( 3, "re_se_ha_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「みみ、魅ぃちゃんそれ下品...！＠
+	PlaySE(3, "S20/02/440200043", 256, 64);		
 	OutputLine(NULL, "「みみ、魅ぃちゃんそれ下品…！」",
 		   NULL, "\"M-M-Mii-chan, that's gross...!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -241,6 +244,8 @@
 
 
 //　...哄笑だった￥
+	PlaySE(3, "S20/02/440200054", 256, 64);
+	PlaySE(4, "S20/03/440300044", 256, 64);	
 	OutputLine(NULL, "　…哄笑だった。",
 		   NULL, "By loud laughter...", Line_Normal);
 	ClearMessage();
