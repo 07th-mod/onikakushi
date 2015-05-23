@@ -109,6 +109,10 @@ v 1.0
 - For whatever reason, some sound effects had an extra underscore in them. Fixed that.
 - Changed any instances of bg_045 to bg_044
 
+v 1.01
+- Fixed sound effects in tips (accidentally removed a underscore there)
+- Disabling some voices in Keichii's dick scene in Ch.1 until the voices are found or script is written
+
 Credits:
 -----------------------------------------------------------------------------------------
 - TheGuraGuraMan - For making the Sprite/BGM Patch.
