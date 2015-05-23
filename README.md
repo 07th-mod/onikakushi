@@ -57,7 +57,7 @@ Known Issues:
     - This is most evident when auto is left on.
   - BGM volume mutes BGM and Voices
     - Unavoidable, since the voices aren't their own thing
-  -More than one sound effect cannot be played at the same time. 
+  - More than one sound effect cannot be played at the same time. 
     - Fixable by moving them to a different sound layer.
 
 - Chapter 1: 
