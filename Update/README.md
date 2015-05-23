@@ -1,4 +1,4 @@
-To-do list:
+﻿To-do list:
 -----------------------------------------------------------------------------------------
 
 Tips (With Voices)
@@ -15,7 +15,7 @@ Tips (With Voices)
 - [ ] onik_tips_19
 - [ ] onik_tips_20
 - [ ] omake1
-- currently has no voices, starts in s20.txt line 4192, ends line 4445
+- added voices but still needs fixing, starts in s20.txt line 4192, ends line 4445
 
 
 Chapters
