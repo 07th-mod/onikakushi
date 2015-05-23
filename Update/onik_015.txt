@@ -998,7 +998,7 @@
 	DrawBustshot( 2, "me_se_th_a2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「...えっと!w800.........んー.........。＠
-	PlaySE(3, "S01/01/120300163", 256, 64);
+	PlaySE(3, "S01/03/120300163", 256, 64);
 	OutputLine(NULL, "「…えっと",
 		   NULL, "\"...Uhh!", Line_ContinueAfterTyping);
 
@@ -1070,7 +1070,7 @@
 
 
 //「え、あ！!w1000......まぁね......転校したし......。＠
-	PlaySE(3, "S01/01/120300166", 256, 64);
+	PlaySE(3, "S01/03/120300166", 256, 64);
 	OutputLine(NULL, "「え、あ！",
 		   NULL, "\"Huh? Ah!", Line_ContinueAfterTyping);
 
@@ -1349,6 +1349,7 @@
 	PlaySE(3, "S01/01/120100655", 256, 64);
 	OutputLine(NULL, "…魅音はないって言ったじゃないか！！！",
 		   NULL, " ...And you told me nothing happened!!", Line_WaitForInput);
+	PlaySE(3, "S01/01/120100656", 256, 64);	
 	OutputLine(NULL, "　バラバラ殺人があったのによ！！！",
 		   NULL, " When someone was dismembered and murdered!!", Line_WaitForInput);
 	PlaySE(3, "S01/01/120100657", 256, 64);
@@ -1392,8 +1393,8 @@
 
 	SetSpeedOfMessage( TRUE, 0, );
 
+	PlaySE(3, "S01/03/120300182", 256, 64);	
 	OutputLine(NULL, "「け…圭ちゃん……",
-	PlaySE(3, "S01/03/120300182", 256, 64);
 		   NULL, "\"K-Kei-chan...", Line_ContinueAfterTyping);
 //!sd
 	SetSpeedOfMessage( FALSE, 0, );
@@ -2919,7 +2920,7 @@
 		   NULL, "I cringed in fear. The only other thing I could do was increase my pace.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_045", "left", 0, 0, 300 );
+	DrawSceneWithMask( "bg_044", "left", 0, 0, 300 );
 
 //「お話しようよ圭一くん＠.........お話!w800お話。......!s200あはははははははははははははは!sd。＠
 	PlaySE(3, "S01/02/120200368", 256, 64);
