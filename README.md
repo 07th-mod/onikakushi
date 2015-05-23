@@ -66,10 +66,9 @@ There are too many voice files for Keichii for this scene,
 probably the scene is extended in the ps3 version.
 Since I don't know japanese, I can't tell which voices are actually used.
 
-- Tips -
-Missing voices for Keichii's Mom in Tip 20 (At the Seventh Mart)
-
-Missing voices for lines 1472 to 1524 in Omake_1 (All-cast wrap up scene)
+- Tips 
+  - Missing voices for Keichii's Mom in Tip 20 (At the Seventh Mart)
+  - Missing voices for lines 1472 to 1524 in Omake_1 (All-cast wrap up scene)
 
 Changelog:
 -----------------------------------------------------------------------------------------
