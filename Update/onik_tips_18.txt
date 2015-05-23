@@ -50,7 +50,7 @@
 	DrawBustshot( 1, "me_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「うっひゃっひゃっひゃっひゃ！！￥
-	PlaySE(3, "S20/03/440300033", 128, 64);
+	PlaySE(3, "S20/03/440300033", 256, 64);
 	OutputLine(NULL, "「うっひゃっひゃっひゃっひゃ！！」",
 		   NULL, "\"Uhyak hyak hyak hyak!!\"", Line_Normal);
 	ClearMessage();
@@ -58,7 +58,7 @@
 	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 400, TRUE );
 
 //「......どう思う？＠
-	PlaySE(3, "S20/02/440200044", 128, 64);
+	PlaySE(3, "S20/02/440200044", 256, 64);
 	OutputLine(NULL, "「……どう思う？」",
 		   NULL, "\"...What do you think?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -66,7 +66,7 @@
 
 
 //「さーね。＠
-	PlaySE(3, "S20/03/440300034", 128, 64);
+	PlaySE(3, "S20/03/440300034", 256, 64);
 	OutputLine(NULL, "「さーね。」",
 		   NULL, "\"Don't know.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -74,7 +74,7 @@
 
 
 //「.........。＠
-	PlaySE(3, "S20/02/440200045", 128, 64);
+	PlaySE(3, "S20/02/440200045", 256, 64);
 	OutputLine(NULL, "「………。」",
 		   NULL, "\"...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -82,6 +82,7 @@
 
 
 //「圭ちゃん、ひょっとして...＠.........かな？＠
+	PlaySE(3, "S20/03/440300035", 256, 64);
 	OutputLine(NULL, "「圭ちゃん、ひょっとして…。",
 		   NULL, "\"Could be that Kei-chan...", Line_WaitForInput);
 	OutputLine(NULL, "………かな？」",
@@ -91,13 +92,13 @@
 
 
 //「......わかんない。￥
-	PlaySE(3, "S20/02/440200046", 128, 64);
+	PlaySE(3, "S20/02/440200046", 256, 64);
 	OutputLine(NULL, "「……わかんない。」",
 		   NULL, "\"...I don't know.\"", Line_Normal);
 	ClearMessage();
 
 //「あの日、圭ちゃんと車で話してたの、中年のでっぷりした男だったんでしょ？＠
-	PlaySE(3, "S20/03/440300036", 128, 64);
+	PlaySE(3, "S20/03/440300036", 256, 64);
 	OutputLine(NULL, "「あの日、圭ちゃんと車で話してたの、中年のでっぷりした男だったんでしょ？」",
 		   NULL, "\"That day, Kei-chan was in that car talking to some tubby middle-aged guy, right?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -105,7 +106,7 @@
 
 
 //「うん＠間違いない。＠
-	PlaySE(3, "S20/02/440200047", 128, 64);
+	PlaySE(3, "S20/02/440200047", 256, 64);
 	OutputLine(NULL, "「うん。",
 		   NULL, "\"Yeah.", Line_WaitForInput);
 	OutputLine(NULL, "間違いない。」",
@@ -115,7 +116,7 @@
 
 
 //「大石のヤツ、圭ちゃんに何を吹き込んでるのかなぁ...。＠
-	PlaySE(3, "S20/03/440300037", 128, 64);
+	PlaySE(3, "S20/03/440300037", 256, 64);
 	OutputLine(NULL, "「大石のヤツ、圭ちゃんに何を吹き込んでるのかなぁ…。」",
 		   NULL, "\"That Ooishi, he probably fed him something fishy...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -123,6 +124,7 @@
 
 
 //「真剣そうだったよ＠圭一くんは顔面蒼白だった。￥
+	PlaySE(3, "S20/02/440200048", 256, 64);
 	OutputLine(NULL, "「真剣そうだったよ。",
 		   NULL, "\"He was so serious.", Line_WaitForInput);
 	OutputLine(NULL, "圭一くんは顔面蒼白だった。」",
@@ -130,15 +132,17 @@
 	ClearMessage();
 
 //「.........あのねぇ＠レナはよく知らないだろうけど＠/
+	PlaySE(3, "S20/03/440300038", 256, 64);
 	OutputLine(NULL, "「………あのねぇ、",
 		   NULL, "\"You see...", Line_WaitForInput);
 	OutputLine(NULL, "レナはよく知らないだろうけど、",
 		   NULL, " You might not know this...", Line_WaitForInput);
 
 
-	PlaySE( 3, "wa_024", 128, 64 );
+	PlaySE( 4, "wa_024", 128, 64 );
 
 //実はあいつ、オヤシロさまの使いなんだよ。＠
+	PlaySE(3, "S20/03/440300039", 256, 64);
 	OutputLine(NULL, "実はあいつ、オヤシロさまの使いなんだよ。」",
 		   NULL, " But he's actually the messenger of Oyashiro-sama.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -146,7 +150,7 @@
 
 
 //「え＠　何の話？＠
-	PlaySE(3, "S20/02/440200049", 128, 64);
+	PlaySE(3, "S20/02/440200049", 256, 64);
 	OutputLine(NULL, "「え？",
 		   NULL, "\"Huh?", Line_WaitForInput);
 	OutputLine(NULL, "　何の話？」",
@@ -156,7 +160,7 @@
 
 
 //「あいつが現れるとね、...必ず鬼隠しが起こるの＠......本当だよ。＠
-	PlaySE(3, "S20/03/440300040", 128, 64);
+	PlaySE(3, "S20/03/440300040", 256, 64);
 	OutputLine(NULL, "「あいつが現れるとね、…必ず鬼隠しが起こるの。",
 		   NULL, "\"Whenever he shows up... someone is demoned away.", Line_WaitForInput);
 	OutputLine(NULL, "……本当だよ。」",
@@ -166,7 +170,7 @@
 
 
 //「............あれ＠　そうなの？￥
-	PlaySE(3, "S20/02/440200050", 128, 64);
+	PlaySE(3, "S20/02/440200050", 256, 64);
 	OutputLine(NULL, "「…………あれ？",
 		   NULL, "\"...Oh?", Line_WaitForInput);
 	OutputLine(NULL, "　そうなの？」",
@@ -174,7 +178,7 @@
 	ClearMessage();
 
 //「......一昨年、梨花ちゃんのお母さんが入水したでしょ＠　その直前に大石が尋問してたんだよ。＠
-	PlaySE(3, "S20/03/440300041", 128, 64);
+	PlaySE(3, "S20/03/440300041", 256, 64);
 	OutputLine(NULL, "「……一昨年、梨花ちゃんのお母さんが入水したでしょ？",
 		   NULL, "\"...The year before last, when Rika-chan's mom drowned, right?", Line_WaitForInput);
 	OutputLine(NULL, "　その直前に大石が尋問してたんだよ。」",
@@ -184,7 +188,7 @@
 
 
 //「.........そう言えば、悟史くんが転校する前にもいたね。＠
-	PlaySE(3, "S20/02/440200051", 128, 64);
+	PlaySE(3, "S20/02/440200051", 256, 64);
 	OutputLine(NULL, "「………そう言えば、悟史くんが転校する前にもいたね。」",
 		   NULL, "\"...Now that you mention it, it happened before Satoshi-kun transferred out.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -192,7 +196,7 @@
 
 
 //「転校～＠　あはははははは、レナはいいヤツだよなぁ。￥
-	PlaySE(3, "S20/03/440300042", 128, 64);
+	PlaySE(3, "S20/03/440300042", 256, 64);
 	OutputLine(NULL, "「転校〜？",
 		   NULL, "\"Transferred~?", Line_WaitForInput);
 	OutputLine(NULL, "　あはははははは、レナはいいヤツだよなぁ。」",
@@ -200,7 +204,7 @@
 	ClearMessage();
 
 //「で、今度は圭一くんの前に現れたんだ＠......じゃあ圭一くんも鬼隠しになっちゃう？＠
-	PlaySE(3, "S20/02/440200052", 128, 64);
+	PlaySE(3, "S20/02/440200052", 256, 64);
 	OutputLine(NULL, "「で、今度は圭一くんの前に現れたんだ。",
 		   NULL, "\"So this time he's appeared before Keiichi-kun...", Line_WaitForInput);
 	OutputLine(NULL, "……じゃあ圭一くんも鬼隠しになっちゃう？」",
@@ -209,7 +213,7 @@
 
 
 //「........................。＠
-	PlaySE(3, "S20/03/440300043", 128, 64);
+	PlaySE(3, "S20/03/440300043", 256, 64);
 	OutputLine(NULL, "「……………………。」",
 		   NULL, "\"...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -217,7 +221,7 @@
 
 
 //「........................。￥
-	PlaySE(3, "S20/02/440200053", 128, 64);
+	PlaySE(3, "S20/02/440200053", 256, 64);
 	OutputLine(NULL, "「……………………。」",
 		   NULL, "\"...\"", Line_Normal);
 	ClearMessage();
