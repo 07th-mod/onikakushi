@@ -32,21 +32,18 @@ void main()
 	PlaySE(3, "S19/01/HR_KEI02890", 256, 64);
 	OutputLine(NULL, "「…レナが沙都子や梨花ちゃんをお持ち帰りしたくなるのは分かる。",
 		   NULL, "\"...I understand her wanting to take home Satoko and Rika-chan.", Line_WaitForInput);
-	PlaySE(3, "S19/01/HR_KEI02900", 256, 64);putLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
-
-//　レナが１枚カードを抜き、裏返しのまま車座の中央に置いた＠
-	OutputLine(NULL, "　レナが１枚カードを抜き、裏返しのまま車座の中央に置いた。",
-		   NULL, "Rena took out one card and left it face down on the table.", Line_WaitForInput);
+	PlaySE(3, "S19/01/HR_KEI02900", 256, 64);
+	OutputLine(NULL, "だが、ケンタくん人形だけは理解できないぞ！　あんな眼鏡親父のどこがいいんだ！」",
+		   NULL, " But I can't understand the Colonel Sanders! What's so good about that four-eyed geezer!?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 
-//　みんなそのカードをじっと凝視する＠
-	OutputLine(NULL, "　みんなそのカードをじっと凝視する。",
-		   NULL, "Everybody stared at the card intently.", Line_WaitForInput);
-	Outp, 256, 64);, 256, 64);
+	DisableWindow();
+	DrawBustshot( 1, "me_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「そりゃーレナに直接聞けばいいじゃん＠　どーせ「だってかぁいいんだもん☆」しか言わないだろうけどさ。￥
+	PlaySE(3, "S19/03/990300132", 256, 64);
 	OutputLine(NULL, "「そりゃーレナに直接聞けばいいじゃん？",
 		   NULL, "\"Probably better to hear it from Rena, don't you think?", Line_WaitForInput);
 	PlaySE(3, "S19/03/990300133", 256, 64);
@@ -457,7 +454,7 @@ void main()
 		   NULL, "\"Rule number two of our society!", Line_WaitForInput);
 	PlaySE(3, "S19/04/990400058", 256, 64);
 	OutputLine(NULL, "　そのためにはあらゆる努力することが義務付けられておりますのよ！」",
-		   NULL, " For that reason, you are obligated to do make all possible efforts!\"", Line_WaitForInput);
+		   NULL, " For that reason, you are obligated to make all possible efforts!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -4419,3 +4416,7 @@ void main()
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "black", "mask_1900", 7, 0, 300 );
+
+
+
+}
