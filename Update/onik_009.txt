@@ -1567,18 +1567,14 @@ void main()
 		   NULL, "\"This is probably the first time", Line_ContinueAfterTyping);
 
 	SetSpeedOfMessage( TRUE, 0, );
-
 	OutputLine(NULL, "……",
 		   NULL, "......", Line_WaitForInput);
 
 	SetSpeedOfMessage( FALSE, 0, );
-
 	OutputLine(NULL, "初めてだな。」",
 		   NULL, " We've gone head-to-head like this.\"", Line_Normal);
-
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
+	ClearMessage();
 
 	DisableWindow();
 	DrawBustshotWithFiltering( 2, "ri_mk_de_a1", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
@@ -1589,15 +1585,11 @@ void main()
 		   NULL, "\"...It will be the first.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
 //「梨花ちゃん…………アレで勝つつもりか。＠
 	PlaySE(3, "S19/01/HR_KEI33800", 256, 64);
 	OutputLine(NULL, "「梨花ちゃん…………アレで勝つつもりか。」",
 		   NULL, "\"Rika-chan... You expect to win with 'that,' huh?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 	DisableWindow();
 	DrawBustshot( 2, "ri_mk_ni_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
