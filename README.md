@@ -117,6 +117,17 @@ v 1.01
 - Fixed sound effects in tips (accidentally removed a underscore there)
 - Disabling some voices in Keichii's dick scene in Ch.1 until the voices are found or script is written
 
+v 1.02
+- Fixed script not compiling in chapter 3
+- Fixed a typo in onik_003.txt
+- Fixed misplaced text in onik_003.txt
+
+v 1.03
+- Fixed Rena's KYUTE game scene (onik_009.txt)
+- Fixed several typos
+- Fixed several script errors
+- Split some japanese lines
+
 Credits:
 -----------------------------------------------------------------------------------------
 - TheGuraGuraMan - For making the Sprite/BGM Patch.
