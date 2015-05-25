@@ -11,6 +11,9 @@ Releases
 -----------------------------------------------------------------------------------------
 https://github.com/higurashi-mod/scripts/releases/
 
+This repository is in constant change. Sometimes new releases might get on hold until there is enough content to push a new patch.
+If the latest patch have a bug that seems to be **already fixed** in the repository, try downloading the [master file](https://github.com/higurashi-mod/scripts/archive/master.zip). The master file will always have the latest files, regardless of the current release being outdated or not.
+
 Installation:
 -----------------------------------------------------------------------------------------
 
