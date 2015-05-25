@@ -335,7 +335,7 @@
 		   NULL, "\"I woke up early today... so I thought it would be a good change of pace.", Line_WaitForInput);
 	PlaySE(3, "S01/01/120100399", 256, 64);
 	OutputLine(NULL, "あまり気にしないで下さい。」",
-		   NULL, " That's all.", Line_WaitForInput);
+		   NULL, " That's all.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1440,7 +1440,7 @@
 //「…梨花ちゃんもレディーなら、着替えを見てるのはよくないと思うぞ。＠
 	PlaySE(3, "S01/01/120100408", 256, 64);
 	OutputLine(NULL, "「…梨花ちゃんもレディーなら、着替えを見てるのはよくないと思うぞ。」",
-		   NULL, "\"...If Rika-chan is a lady as well, then I don't think it wood be appropriate for you to be watching.\"", Line_WaitForInput);
+		   NULL, "\"...If Rika-chan is a lady as well, then I don't think it would be appropriate for you to be watching.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2030,7 +2030,7 @@
 
 //　肩で息をしながらようやく冷静さを取り戻したころ、始業の振鈴が聞こえてきた…￥
 	OutputLine(NULL, "　肩で息をしながらようやく冷静さを取り戻したころ、始業の振鈴が聞こえてきた…。",
-		   NULL, "My shoulders heaving up and down from my ragged breathing, I heard the first bell ring just as I calmed downed.", Line_Normal);
+		   NULL, "My shoulders heaving up and down from my ragged breathing, I heard the first bell ring just as I calmed down.", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -3876,7 +3876,7 @@
 	Wait(100);
 	SetSpeedOfMessage( TRUE, 0, );
 	OutputLine(NULL, "転校",
-		   NULL, "", Line_ContinueAfterTyping);
+		   NULL, "transferred", Line_ContinueAfterTyping);
 
 	SetSpeedOfMessage( FALSE, 0, );
 	PlaySE(3, "S01/02/120200257", 256, 64);

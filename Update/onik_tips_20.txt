@@ -16,7 +16,7 @@
 
 //　セブンスマートは市内にある、酒類食料品の安売量販店だ￥
 	OutputLine(NULL, "　セブンスマートは市内にある、酒類食料品の安売量販店だ。",
-		   NULL, "The Smart Seven was a bargain supermarket with food and alcohol.", Line_Normal);
+		   NULL, "The Seventh Mart was a bargain supermarket with food and alcohol.", Line_Normal);
 	ClearMessage();
 
 //「なぁに、圭一＠こんなにたくさん＠　全部違う種類にすることはないでしょ？！＠
@@ -38,7 +38,7 @@
 //「最近のカップめんは凝ってて種類も多いんだよ＠どれも一通りは食ってみたいし。＠
 	PlaySE(3, "S20/01/440100041", 256, 64);
 	OutputLine(NULL, "「最近のカップめんは凝ってて種類も多いんだよ。",
-		   NULL, "\"Cup noodles have gotten so elaborate recently, and there are a bunch of different types.", Line_ContinueAfterTyping);
+		   NULL, "\"Cup noodles have gotten so elaborate recently, and there are a bunch of different types.", Line_WaitForInput);
 	OutputLine(NULL, "どれも一通りは食ってみたいし。」",
 		   NULL, " I want to try each of them at least once.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -81,7 +81,7 @@
 //「それじゃ１種類しか食えないよ＠　飽きちゃうって！＠
 	PlaySE(3, "S20/01/440100042", 256, 64);
 	OutputLine(NULL, "「それじゃ１種類しか食えないよ！",
-		   NULL, "\"Then I'd only get to eat one kind!", Line_ContinueAfterTyping);
+		   NULL, "\"Then I'd only get to eat one kind!", Line_WaitForInput);
 	OutputLine(NULL, "　飽きちゃうって！」",
 		   NULL, " I'd get bored with it!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -135,7 +135,7 @@
 //「豚骨はうまいんだよ＠　大盛りだけど大味ってわけじゃないし...！！＠
 	PlaySE(3, "S20/01/440100043", 256, 64);
 	OutputLine(NULL, "「豚骨はうまいんだよ！",
-		   NULL, "\"Pork-bone is good!", Line_ContinueAfterTyping);
+		   NULL, "\"Pork-bone is good!", Line_WaitForInput);
 	OutputLine(NULL, "　大盛りだけど大味ってわけじゃないし…！！」",
 		   NULL, " I don't want a big bowl of tasteless stuff...!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
