@@ -131,6 +131,14 @@ v 1.03
 - Fixed several script errors
 - Split some japanese lines
 
+v 1.04
+- Adjusted all script files in order to match the voice files path (for Linux/OSX)
+**Optional for Windows users**
+
+v 1.05
+- Fixed line not displaying in onik_014_02.txt
+
+
 Credits:
 -----------------------------------------------------------------------------------------
 - TheGuraGuraMan - For making the Sprite/BGM Patch.
