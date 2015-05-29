@@ -26,7 +26,7 @@ Installation:
   - Double click on <b>StreamingAssets</b> folder
   - This will be your main folder in which the files will go into.
 
-[Screenshot here](https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/1_streamingassets%20folder.png)
+<img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/1_streamingassets%20folder.png" height="300" width="1185">
 
 2. Download the FULL voice pack files (Download [HigurashiPS3-Voices01.zip](https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A)) 
   - Extract the archive with an archive manager of your choice (7zip, winrar, etc)
