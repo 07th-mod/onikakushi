@@ -53,7 +53,7 @@ Installation:
 
 5. Run the game. Make sure the new sprites show up and voices play.
 
-[Screenshot of where everything goes](https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/5_where%20the%20folders%20go.png)
+<img src = "https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/5_where%20the%20folders%20go.png" height="600" width="600">
 
 Troubleshooting:
 -----------------------------------------------------------------------------------------
