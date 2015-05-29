@@ -28,7 +28,7 @@ Installation:
 
 2. Download the FULL voice pack files (Download [HigurashiPS3-Voices01.zip](https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A)) 
   - Extract the archive with an archive manager of your choice (7zip, winrar, etc)
-  - Either extract to a folder, or extract to (fill in your steam path here)\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE
+  - Either extract to a folder, or extract to<b> (fill in your steam path here)\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE </b>
   - Whatever you chose, make sure, the s01, s19, and s20 folders are in SE (sound effects) folder
 
 3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
