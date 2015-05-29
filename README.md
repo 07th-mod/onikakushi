@@ -33,7 +33,7 @@ Installation:
   - Either extract to a folder, or extract to<b> (fill in your steam path here)\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE </b>
   - Whatever you chose, make sure, the s01, s19, and s20 folders are in SE (sound effects) folder
 
-[Screenshot here](https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/2_voices%20go%20into%20se%20folder.png)
+<img src = "https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/2_voices%20go%20into%20se%20folder.png" height="400" width="900">
 
 3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
   - Extract the files with an archive manager to a folder.
