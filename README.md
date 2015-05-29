@@ -57,12 +57,12 @@ Installation:
 
 Troubleshooting:
 -----------------------------------------------------------------------------------------
-- "There's a missing voice in this scene!"
+> "There's a missing voice in this scene!"
 
 Check the Known Issues section of this readme.
 If it's not in there, report it. 
 
-- "Why aren't the voices playing?"
+> "Why aren't the voices playing?"
 
 Make sure the FULL voice pack is installed.
 Make sure your directory is as follows:
@@ -73,7 +73,7 @@ Make sure your directory is as follows:
 <b> ..SteamApps\common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\Update </b>
    - The Update folder should have script files in it such as onik_000.txt, at least 39 onik files, tips files, and an omake txt file
 
-- "It's still not playing/I'm not getting the afternoon/night backgrounds."
+> "It's still not playing/I'm not getting the afternoon/night backgrounds."
 
 Go to ..common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\CompiledScripts
 
