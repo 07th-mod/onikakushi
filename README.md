@@ -33,8 +33,8 @@ Installation:
 
 3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
   - Extract the files with an archive manager to a folder.
-  - Rename the <b>CgAlt Steam</b> folder to <b>CgAlt</b> folder
-  - Place the <b>CgAlt</b> folder and <b>Scripts</b> folder into the <b>StreamingAssets</b> folder
+  - Rename the <b>CGAlt Steam</b> folder to <b>CGAlt</b> folder
+  - Place the <b>CGAlt</b> folder and <b>Scripts</b> folder into the <b>StreamingAssets</b> folder
   - Let it rewrite any files
   - If you wish, rename the Scripts folder to Update folder so the original files are not overwritten
 
