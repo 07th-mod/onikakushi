@@ -42,14 +42,14 @@ Installation:
   - Let it rewrite any files
   - If you wish, rename the Scripts folder to Update folder so the original files are not overwritten
 
-[Screenshot here](https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/3_graphics%20go%20into%20cgalt%20folder.png)
+<img src = "https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/3_graphics%20go%20into%20cgalt%20folder.png" height="400" width="900">
 
 4. [Download the PS3 Voice and Graphics Patch](https://github.com/higurashi-mod/scripts/releases/)
   - Extract the files with an archive manager to a folder.
   - Move the <b>SE</b> and <b>Update</b> folders from the mod folder to the <b>StreamingAssets</b> folder
   - Let it rewrite any files
 
-[Screenshot here](https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/4_merge%20patch%20files%20go%20here.png)
+<img src = "https://github.com/higurashi-mod/onikakushi/blob/master/Screenshots/4_merge%20patch%20files%20go%20here.png" height="400" width="900">
 
 5. Run the game. Make sure the new sprites show up and voices play.
 
