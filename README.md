@@ -44,7 +44,7 @@ Installation:
 
 - 2. Download the FULL voice pack files (Download [HigurashiPS3-Voices01.zip](https://mega.co.nz/#!vgdQkIrK!6Ral1MRTC266DVg4SM-P01s3Gnflo2StDdF0RrgigrY)) 
   - Extract the archive with an archive manager of your choice (7zip, winrar, etc)
-  - Either extract to a folder, or extract to<b> (fill in your steam path here)\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE </b>
+  - Either extract to a folder, or extract to<b> (fill in your steam path here)\SteamApps\common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE </b>
   - Whatever you chose, make sure, the s01, s19, and s20 folders are in SE (sound effects) folder
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/2_voices%20go%20into%20se%20folder.png" height="400" width="900">
@@ -90,15 +90,13 @@ Make sure your directory is as follows:
 
 > "It's still not playing/I'm not getting the afternoon/night backgrounds."
 
-Go to ..common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\CompiledScripts
+- Go to <b>..SteamApps\common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\CompiledScripts </b> 
+- Make a copy of the <b>Complied Scripts</b> folder.
+- Delete <b>onik_000.mg -> onik_15_03.mg</b> and <b>onik_op.mg</b>
+- This will force the game to read the new files.
 
-Make a copy of the Complied Scripts folder.
-Delete onik_000.mg -> onik_15_03.mg and onik_op.mg
-This will force the game to read the new files.
-
-If this stops the game from working properly, go to
-..common\Higurashi When They Cry\HigurashiEp01_Data\
-And open output_log.txt ; This will tell you which script txt file has the syntax error.
+- If this stops the game from working properly, go to<b> ..SteamApps\common\Higurashi When They Cry\HigurashiEp01_Data\ </b>
+- And open <b>output_log.txt</b> ; This will tell you which script txt file has the syntax error.
 
 Known Issues:
 -----------------------------------------------------------------------------------------
