@@ -40,7 +40,7 @@ Installation:
   - Rename the <b>CGAlt Steam</b> folder to <b>CGAlt</b> folder
   - Place the <b>CGAlt</b> folder  into the <b>StreamingAssets</b> folder
   - Let it rewrite any files
-  - Ignore the Script files, they will be covered by this patch.
+  - Ignore the <b>Script</b> folder, they will be covered by this patch.
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/3_graphics%20go%20into%20cgalt%20folder.png" height="400" width="900">
 
