@@ -16,16 +16,34 @@ If the latest patch have a bug that seems to be **already fixed** in the reposit
 
 Installation:
 -----------------------------------------------------------------------------------------
+1. Locate your StreamingAssets folder: 
+  - Go to steam library
+  - Right click on the higurashi game 
+  - Go to <b>Properties</b>
+  - Click on the <b>Local Files</b> tag
+  - Click <b>Browse Local Files...</b>
+  - A window will open, double click on <b>HigurashiEp01_Data</b> folder
+  - Double click on <b>StreamingAssets</b> folder
+  - This will be your main folder in which the files will go into.
 
-Install both folders into streamingassets folder.
-If prompted to overwrite current files, overwrite them.
-You backed up your files, right?
+2. Download the FULL voice pack files (Download [HigurashiPS3-Voices01.zip](https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A)) 
+  - Extract the archive with an archive manager of your choice (7zip, winrar, etc)
+  - Either extract to a folder, or extract to (fill in your steam path here)\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE
+  - Whatever you chose, make sure, the s01, s19, and s20 folders are in SE (sound effects) folder
 
-Grab HigurashiPS3-Voices01.zip: https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A
+3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
+  - Extract the files with an archive manager to a folder.
+  - Rename the <b>CgAlt Steam</b> folder to <b>CgAlt</b> folder
+  - Place the <b>CgAlt</b> folder and <b>Scripts</b> folder into the <b>StreamingAssets</b> folder
+  - Let it rewrite any files
+  - If you wish, rename the Scripts folder to Update folder so the original files are not overwritten
 
-Place s01, s19, s20 folders into streamingassets/SE folder
+4. [Download the PS3 Voice and Graphics Patch](https://github.com/higurashi-mod/scripts/releases/)
+  - Extract the files with an archive manager to a folder.
+  - Move the <b>SE</b> and <b>Update</b> folders from the mod folder to the <b>StreamingAssets</b> folder
+  - Let it rewrite any files
 
-For the Graphics patch, pick your pack of choice from here: https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding
+5. Run the game. Make sure the new sprites show up and voices play.
 
 Troubleshooting:
 -----------------------------------------------------------------------------------------
@@ -39,9 +57,11 @@ If it's not in there, report it.
 Make sure the FULL voice pack is installed.
 Make sure your directory is as follows:
 
-..SteamApps\common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE\
+<b> ..SteamApps\common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE\ </b>
+   - The SE folder should have s01, s19, and s20 folders from the FULL voice pack
 
-..SteamApps\common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\Update
+<b> ..SteamApps\common\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\Update </b>
+   - The Update folder should have script files in it such as onik_000.txt, at least 39 onik files, tips files, and an omake txt file
 
 - "It's still not playing/I'm not getting the afternoon/night backgrounds."
 
