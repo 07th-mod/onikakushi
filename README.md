@@ -1,5 +1,8 @@
 PS3 Voice and Graphics Patch
 -----------------------------------------------------------------------------------------
+
+<img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/ps3%20graphics.jpg" height="384" width="512">
+
 For Higurashi No Naku Koro Ni - Chapter 1 Onikakushi, Steam Version
 
 This patch aims to combine the efforts of the ps3 voice patch and the ps3 sprites/background patch,
