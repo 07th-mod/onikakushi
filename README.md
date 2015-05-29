@@ -16,7 +16,7 @@ If the latest patch have a bug that seems to be **already fixed** in the reposit
 
 Installation:
 -----------------------------------------------------------------------------------------
-1. Locate your StreamingAssets folder: 
+- 1. Locate your StreamingAssets folder: 
   - Go to steam library
   - Right click on the higurashi game 
   - Go to <b>Properties</b>
@@ -28,14 +28,14 @@ Installation:
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/1_streamingassets%20folder.png" height="300" width="1185">
 
-2. Download the FULL voice pack files (Download [HigurashiPS3-Voices01.zip](https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A)) 
+- 2. Download the FULL voice pack files (Download [HigurashiPS3-Voices01.zip](https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A)) 
   - Extract the archive with an archive manager of your choice (7zip, winrar, etc)
   - Either extract to a folder, or extract to<b> (fill in your steam path here)\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE </b>
   - Whatever you chose, make sure, the s01, s19, and s20 folders are in SE (sound effects) folder
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/2_voices%20go%20into%20se%20folder.png" height="400" width="900">
 
-3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
+- 3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
   - Extract the files with an archive manager to a folder.
   - Rename the <b>CGAlt Steam</b> folder to <b>CGAlt</b> folder
   - Place the <b>CGAlt</b> folder  into the <b>StreamingAssets</b> folder
@@ -44,14 +44,14 @@ Installation:
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/3_graphics%20go%20into%20cgalt%20folder.png" height="400" width="900">
 
-4. [Download the PS3 Voice and Graphics Patch](https://github.com/higurashi-mod/scripts/releases/)
+- 4. [Download the PS3 Voice and Graphics Patch](https://github.com/higurashi-mod/scripts/releases/)
   - Extract the files with an archive manager to a folder.
   - Move the <b>SE</b> and <b>Update</b> folders from the mod folder to the <b>StreamingAssets</b> folder
   - Let it rewrite any files
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/4_merge%20patch%20files%20go%20here.png" height="400" width="900">
 
-5. Run the game. Make sure the new sprites show up and voices play.
+- 5. Run the game. Make sure the new sprites show up and voices play.
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/5_where%20the%20folders%20go.png" height="600" width="600">
 
