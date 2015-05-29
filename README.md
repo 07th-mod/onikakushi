@@ -50,6 +50,7 @@ Installation:
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/2_voices%20go%20into%20se%20folder.png" height="400" width="900">
 
 - 3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
+  - Tweaked Steam has Steam sprites, full ps2 replace the steam sprites.
   - Extract the files with an archive manager to a folder.
   - Rename the <b>CGAlt Steam</b> folder to <b>CGAlt</b> folder
   - Place the <b>CGAlt</b> folder  into the <b>StreamingAssets</b> folder
