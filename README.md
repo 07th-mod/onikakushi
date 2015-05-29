@@ -38,9 +38,9 @@ Installation:
 3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
   - Extract the files with an archive manager to a folder.
   - Rename the <b>CGAlt Steam</b> folder to <b>CGAlt</b> folder
-  - Place the <b>CGAlt</b> folder and <b>Scripts</b> folder into the <b>StreamingAssets</b> folder
+  - Place the <b>CGAlt</b> folder  into the <b>StreamingAssets</b> folder
   - Let it rewrite any files
-  - If you wish, rename the Scripts folder to Update folder so the original files are not overwritten
+  - Ignore the Script files, they will be covered by this patch.
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/3_graphics%20go%20into%20cgalt%20folder.png" height="400" width="900">
 
