@@ -19,6 +19,13 @@ If the latest patch have a bug that seems to be **already fixed** in the reposit
 
 Installation:
 -----------------------------------------------------------------------------------------
+ - 0. Required Resources:
+  - [Higurashi When They Cry - Ch.1 Onikakushi](http://store.steampowered.com/app/310360)
+  - [HigurashiPS3-Voices01.zip](https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A)) 
+  - [ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
+  - [PS3 Voice and Graphics Patch](https://github.com/higurashi-mod/scripts/releases/)
+
+
 - 1. Locate your StreamingAssets folder: 
   - Go to steam library
   - Right click on the higurashi game 
