@@ -25,7 +25,7 @@ Installation:
 -----------------------------------------------------------------------------------------
  - 0. Required Resources:
   - [Higurashi When They Cry - Ch.1 Onikakushi](http://store.steampowered.com/app/310360)
-  - [HigurashiPS3-Voices01.zip](https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A) 
+  - [HigurashiPS3-Voices01.zip](https://mega.co.nz/#!vgdQkIrK!6Ral1MRTC266DVg4SM-P01s3Gnflo2StDdF0RrgigrY) 
   - [ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
   - [PS3 Voice and Graphics Patch](https://github.com/higurashi-mod/scripts/releases/)
 
@@ -42,7 +42,7 @@ Installation:
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/1_streamingassets%20folder.png" height="300" width="1185">
 
-- 2. Download the FULL voice pack files (Download [HigurashiPS3-Voices01.zip](https://mega.co.nz/#F!SRt1DTKI!0vSWMtBLaa2VO0bDgfzb7A)) 
+- 2. Download the FULL voice pack files (Download [HigurashiPS3-Voices01.zip](https://mega.co.nz/#!vgdQkIrK!6Ral1MRTC266DVg4SM-P01s3Gnflo2StDdF0RrgigrY)) 
   - Extract the archive with an archive manager of your choice (7zip, winrar, etc)
   - Either extract to a folder, or extract to<b> (fill in your steam path here)\Higurashi When They Cry\HigurashiEp01_Data\StreamingAssets\SE </b>
   - Whatever you chose, make sure, the s01, s19, and s20 folders are in SE (sound effects) folder
