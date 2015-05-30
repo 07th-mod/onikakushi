@@ -110,8 +110,8 @@ Known Issues:
 
 - Chapter 1: 
   - That first scene between Mion and Keichii is different!
-   - It was changed to match the scene and voices in the ps2/ps3 version.
-   - It also makes more sense considering the furry seal fiasco later on.
+    - It was changed to match the scene and voices in the ps2/ps3 version.
+    - It also makes more sense considering the furry seal fiasco later on.
 
 - Tips: 
   - Missing voices for Keichii's Mom in Tip 20 (At the Seventh Mart)
