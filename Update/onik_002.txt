@@ -1275,7 +1275,8 @@ void main()
 		   NULL, "It didn't change how much there was, but the implication behind it was different.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot( 2, "sa_si_aw_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+//	DrawBustshot( 2, "sa_si_aw_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	DrawScene( "103", 1000 );
 
 
 //「そのハンバーグは渡しませんわぁぁあ！！」/
@@ -1302,8 +1303,8 @@ void main()
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-	DisableWindow();
-	DrawBustshot( 2, "sa_si_bi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+//	DisableWindow();
+//	DrawBustshot( 2, "sa_si_bi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「襟首を掴むのも反則でございますー！！！￥
 	PlaySE(3, "s19/04/990400039", 256, 64);
@@ -1312,7 +1313,9 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 200, TRUE );
+//	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 200, TRUE );
+	DrawScene( "bg_216", 1000 );
+
 //　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す＠
 	OutputLine(NULL, "　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す！",
 		   NULL, "It was a tough battle. Blocking with her full momentum and an elbow in the opening moves, Satoko appeared to have the upper hand. But the difference in our proficiency with chopsticks proved to be fatal and gave me the upper hand!", Line_WaitForInput);

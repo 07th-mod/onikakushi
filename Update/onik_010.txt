@@ -1,4 +1,4 @@
-﻿void main()
+void main()
 {
 
 
@@ -249,6 +249,7 @@
 	SetValidityOfInput( TRUE );
 
 	DrawSceneWithMask( "bg_109", "right", 0, 0, 1300 );
+	DrawBustshot( 3, "Tie_def", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 	PlayBGM( 1, "msys12", 128, 0 );
 //「みなさん、おはようございます＠昨日はお祭りでしたね＠最後まで後片付けに参加した人たちは本当にお疲れ様でした。＠
@@ -290,6 +291,11 @@
 	OutputLine(NULL, "　いつものお題目と思い聞き流していたが、少し先生の声色が変わったので意識が戻った。",
 		   NULL, "I thought it was the usual stuff so I was going to tune it out, but then I noticed the different tone in her voice and started paying attention.", Line_Normal);
 	ClearMessage();
+
+	DisableWindow();
+//	DrawBustshotWithFiltering( 3, "Tie_Niramu", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	DrawBustshot( 3, "Tie_Niramu", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
 
 
 //「皆さんが取材を受けることがあるかもしれませんが、曖昧なことやいい加減なことは言わないように＠……いいですね？＠
@@ -1528,6 +1534,9 @@
 	OutputLine(NULL, "　こいつぁ悪くないぜ！！",
 		   NULL, " Not bad at all!!", Line_Normal);
 	ClearMessage();
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 3, "Tie_def", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 
 	PlayBGM( 1, "msys12", 128, 0 );

@@ -3681,6 +3681,10 @@ void main()
 
 	PlaySE( 4, "wa_027", 128, 64 );
 
+	DrawScene( "bg_022b", 200 );
+
+
+
 //　その閉じかけた扉がぐいっ！と開けられ、俺の心臓がもう一度跳ね上がった＠
 	OutputLine(NULL, "　その閉じかけた扉がぐいっ！と開けられ、俺の心臓がもう一度跳ね上がった。",
 		   NULL, "Just as the door was just about closed, it opened again slightly with a sudden creak, sending my heart racing once again.", Line_WaitForInput);
@@ -3694,7 +3698,7 @@ void main()
 	OutputLine(NULL, "　扉の隙間から片目だけを覗かせて、再び魅音の鷹の目が俺を貫いた。",
 		   NULL, "A single eye peered in through that narrow slit, and Mion's hawkish gaze peered at me once again.", Line_Normal);
 	ClearMessage();
-	DisableWindow();
+//	DisableWindow();
 //	DrawBustshotWithFiltering( 2, "me_si_him_a1", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「じゃあね圭ちゃん。＠

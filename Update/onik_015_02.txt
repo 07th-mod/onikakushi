@@ -1,4 +1,4 @@
-﻿void main()
+void main()
 {
 
 //■圭一の家
@@ -1237,7 +1237,7 @@
 
 	DisableWindow();
 	DrawSceneWithMask( "bg_081", "right", 0, 0, 300 );
-	DrawBustshotWithFiltering( 3, "re_se_hi_a1", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	DrawBustshotWithFiltering( 3, "re_se_hi_a1_zoom", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 //print 1
 
 //　いつの間にかレナが俺の後ろにいた＠
@@ -1453,7 +1453,7 @@
 		   NULL, "...This thing that was pretending to be Rena... was this their real laugh...!?", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot( 2, "me_si_wa_a2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawBustshot( 2, "me_si_wa_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //　抵抗することもできない俺に...魅音が注射器を構えながら...迫ってくる！＠
 	OutputLine(NULL, "　抵抗することもできない俺に…魅音が注射器を構えながら…迫ってくる！！",
@@ -1543,7 +1543,7 @@
 		   NULL, "\"...You're going to have done to you what happened to Tomitake-san.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot( 2, "me_si_him_a2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawBustshot( 2, "me_si_him_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	DrawFilm( 2, 255, 34, 34, 255, 0, 0, TRUE );
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 1000, TRUE );
 
@@ -1734,7 +1734,8 @@
 	PlayBGM( 1, "msys16", 128, 0 );
 	DisableWindow();
 	FadeFilm( 1000, TRUE );
-	DrawScene( "bg_080", 1000 );
+//	DrawScene( "bg_080", 1000 );
+	DrawScene( "bg_ceiling", 1000 );
 //print 1
 
 //「け、警察は......富竹さんの遺体からは...薬物は検出できなかったって言ったぞ？！＠
@@ -1743,6 +1744,11 @@
 		   NULL, "\"Th-The police told me... they didn't find any drugs... in Tomitake-san's body!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
+	DisableWindow();
+	DrawBustshot( 1, "re_se_wa_a1_zoom", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawBustshot( 3, "me_si_wa_a1_zoom", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+
+//	DrawBustshotWithFiltering( 3, "me_si_wa_a1_zoom", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 
 //　げてげてげてげてげてげて...！！！！＠
@@ -1758,6 +1764,8 @@
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
+	DisableWindow();
+	DrawScene( "bg_080", 1000 );
 
 //　笑うのは当然だ＠
 	OutputLine(NULL, "　笑うのは当然だ。",
@@ -1828,7 +1836,7 @@
 		   NULL, "What kind of idiot, when he's trying to dodge a ball flying straight for his face, has time to think of a reason as to why it's flying at him?", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "me_si_de_a1", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "me_si_de_a1_zoom", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「......観念しなって。!w1000んじゃ、＠
 	PlaySE(3, "s01/03/120300233", 256, 64);
@@ -1933,7 +1941,7 @@
 //nega 1
 	DisableWindow();
 	Negative( 100, TRUE );
-	DrawScene( "bg_080", 400 );
+	DrawScene( "sunset/bg_080", 400 );
 	FadeFilm( 1000, TRUE );
 
 //nega 0
@@ -2165,7 +2173,7 @@
 	DisableWindow();
 	DrawScene( "black", 200 );
 	DrawFilm( 2, 255, 153, 153, 255, 0, 1000, TRUE );
-	DrawScene( "bg_081", 200 );
+	DrawScene( "sunset/bg_080", 200 );
 
 //　...そのレナは俺の足元でうずくまり、魅音と同じように血溜まりを作っていた￥
 	OutputLine(NULL, "　…そのレナは俺の足元でうずくまり、魅音と同じように血溜まりを作っていた。",
@@ -2483,7 +2491,7 @@
 
 	PlayBGM( 2, "lsys25", 128, 0 );
 	DrawFilm( 2, 136, 136, 136, 255, 0, 1000, TRUE );
-	DrawScene( "bg_081", 3000 );
+	DrawScene( "sunset/bg_080", 3000 );
 	DrawBustshotWithFiltering( 1, "re_se_hi_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, FALSE );
 	DrawBustshotWithFiltering( 3, "me_si_him_a1", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
@@ -2651,7 +2659,7 @@
 	FadeOutBGM( 2, 1000, TRUE );
 	FadeFilm( 1000, TRUE );
 	PlayBGM( 1, "msys11", 128, 0 );
-	DrawSceneWithMask( "bg_080", "up", 0, 0, 1300 );
+	DrawSceneWithMask( "sunset/bg_080", "up", 0, 0, 1300 );
 
 //　それと比べたにしたって...＠
 	OutputLine(NULL, "　それと比べたにしたって…。",
@@ -2858,7 +2866,7 @@
 	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	DrawScene( "bg_081", 1000 );
+	DrawScene( "sunset/bg_080", 1000 );
 
 	PlayBGM( 1, "msys07", 128, 0 );
 
@@ -2931,7 +2939,7 @@
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
-	DrawSceneWithMask( "bg_117", "left", 0, 0, 1300 );
+	DrawSceneWithMask( "sunset/bg_117", "left", 0, 0, 1300 );
 
 //　カーテンをほんの少しずらし、表を伺う＠
 	OutputLine(NULL, "　カーテンをほんの少しずらし、表を伺う。",
@@ -3045,7 +3053,7 @@
 		   NULL, "The rest of the men hid in the bushes and watched him.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_081", "right", 0, 0, 300 );
+	DrawSceneWithMask( "sunset/bg_080", "right", 0, 0, 300 );
 
 //　居留守を使っても恐らく無駄だ＠
 	OutputLine(NULL, "　居留守を使っても恐らく無駄だ。",
@@ -3561,7 +3569,7 @@
 		   NULL, " That is my only desire.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_080", 1000 );
+	DrawScene( "sunset/bg_080", 1000 );
 
 //　これで......俺の遺言はすべてだ＠
 	OutputLine(NULL, "　これで……俺の遺言はすべてだ。",
@@ -3613,7 +3621,7 @@
 		   NULL, "...If something happens to me... I leave the rest to you...!!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_082", "left", 0, 0, 300 );
+	DrawSceneWithMask( "sunset/bg_080", "left", 0, 0, 300 );
 
 //　それから、累々と横たわるレナと魅音を見下ろした＠
 	OutputLine(NULL, "　それから、累々と横たわるレナと魅音を見下ろした。",
@@ -4094,7 +4102,7 @@
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "white", "m1", 0, 0, 1300 );
-	DrawScene( "bg_119", 400 );
+	DrawScene( "sunset/bg_117", 400 );
 
 	PlaySE( 4, "wa_027", 128, 64 );
 
@@ -4132,7 +4140,7 @@
 	DisableWindow();
 	DrawSceneWithMask( "black", "left", 0, 0, 300 );
 
-	DrawSceneWithMask( "bg_142", "left", 0, 0, 300 );
+	DrawSceneWithMask( "sunset/bg_142", "left", 0, 0, 300 );
 
 //　頭から知性とか理性とか、そういうゆとりあるものが次々こぼれていった...￥
 	OutputLine(NULL, "　頭から知性とか理性とか、そういうゆとりあるものが次々こぼれていった…。",
@@ -4179,7 +4187,7 @@
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "black", "left", 0, 0, 300 );
-	DrawSceneWithMask( "bg_144", "left", 0, 0, 300 );
+	DrawSceneWithMask( "sunset/bg_144", "left", 0, 0, 300 );
 
 //　ただただ...走った＠
 	OutputLine(NULL, "　ただただ…走った。",
@@ -4272,7 +4280,7 @@
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawScene( "white", 3000 );
 	PlayBGM( 1, "msys11", 128, 0 );
-	DrawSceneWithMask( "bg_141", "left", 0, 0, 300 );
+	DrawSceneWithMask( "sunset/bg_141", "left", 0, 0, 300 );
 
 //　カナカナカナカナ......￥
 	OutputLine(NULL, "　カナカナカナカナ……。",
@@ -4314,7 +4322,7 @@
 		   NULL, "Kwakwakwakwakwa...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_143", 1000 );
+	DrawScene( "sunset/bg_143", 1000 );
 
 //　ひぐらしだけが知っている＠
 	OutputLine(NULL, "　ひぐらしだけが知っている。",
@@ -4336,7 +4344,7 @@
 	ClearMessage();
 
 	DisableWindow();
-	DrawScene( "bg_142", 1000 );
+	DrawScene( "sunset/bg_142", 1000 );
 
 //　だから、...たくさんひぐらしの鳴く声の聞こえる方へ走った＠
 	OutputLine(NULL, "　だから、…たくさんひぐらしの鳴く声の聞こえる方へ走った。",

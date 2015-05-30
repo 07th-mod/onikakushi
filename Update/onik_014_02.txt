@@ -4569,7 +4569,7 @@ void main()
 		   NULL, "I couldn't hesitate here...!!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_021", "right", 0, 0, 300 );
+	DrawSceneWithMask( "bg_022b", "right", 0, 0, 300 );
 	PlayBGM( 2, "lsys13", 128, 0 );
 	DrawScene( "bg_022", 200 );
 
@@ -6259,6 +6259,7 @@ void main()
 		   NULL, "Even in this torrential downpour... Rena was still apologizing...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
+	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 3000, TRUE );
 	FadeBustshotWithFiltering( 2, "left", 1, FALSE, 0, 0, 200, TRUE );
 	FadeFilm( 0, TRUE );
 

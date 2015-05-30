@@ -3150,7 +3150,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask( "bg_044", "right", 0, 0, 1300 );
+	DrawSceneWithMask( "bg_051", "right", 0, 0, 1300 );
 	PlayBGM( 2, "lsys19", 128, 0 );
 
 //　ひょっとすると富竹さんがいるかもしれない＠
@@ -3725,7 +3725,7 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask( "black", "down", 0, 0, 3000 );
-	DrawSceneWithMask( "bg_024", "down", 0, 0, 300 );
+	DrawSceneWithMask( "sunset/bg_024b", "down", 0, 0, 300 );
 
 //「さすがに…休憩……＠　こいつは…手ごわいぜ…！！＠
 	PlaySE(3, "s19/01/HR_KEI04850", 256, 64);
@@ -3743,7 +3743,8 @@ void main()
 		   NULL, "I sprawled on my back over the grassy slope.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "re_se_ko_a1", "right", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
+	DrawBustshotWithFiltering( 2, "sunset/re_se_ko_a1", "right", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
+
 
 //「ごめんねごめんね…＠すごい……汗だく……。＠
 	PlaySE(3, "s19/02/990200215", 256, 64);
@@ -3769,7 +3770,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot( 2, "re_se_de_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawBustshot( 2, "sunset/re_se_de_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「あ、あのさ、ちょっとここで休んでてね＠　私、家近いから＠麦茶とか持ってきてあげるね！＠
 	PlaySE(3, "s19/02/990200217", 256, 64);
@@ -4241,8 +4242,8 @@ void main()
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
 	DisableWindow();
-	DrawSceneWithMask( "bg_023", "mask1013", 1, 0, 300 );
-	DrawBustshot( 2, "re_se_bi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask( "sunset/bg_023", "mask1013", 1, 0, 300 );
+	DrawBustshot( 2, "sunset/re_se_bi_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 
 
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -4265,7 +4266,7 @@ void main()
 
 	PlayBGM( 1, "msys11", 128, 0 );
 	DisableWindow();
-	DrawBustshot( 2, "re_se_ko_a2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawBustshot( 2, "sunset/re_se_ko_a2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「圭一くんね、さっきほら、斧とかがあると便利だって言ったじゃない？＠　そ、それでねレナ、物置からちゃんと斧、持ってきたんだよ…！！＠
 	PlaySE(3, "s19/02/990200222", 256, 64);
@@ -4299,7 +4300,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshot( 2, "re_se_na_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawBustshot( 2, "sunset/re_se_na_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「う、うぅん、…こ、こっちこそごめんね！…ごめんね！￥
 	PlaySE(3, "s19/02/990200224", 256, 64);
@@ -4353,7 +4354,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawBustshot( 2, "sunset/re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「そうだよね。…あははは＠　早くケンタくんをお持ち帰りしたい～！￥
 	PlaySE(3, "s19/02/990200226", 256, 64);

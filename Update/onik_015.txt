@@ -1,4 +1,4 @@
-﻿void main()
+void main()
 {
 
 //■１５日目（土）
@@ -1773,6 +1773,11 @@
 		   NULL, "I inadvertently stopped and turned back towards her.", Line_Normal);
 	ClearMessage();
 
+	DrawScene( "bg_028", 1000 );
+	DrawBustshotWithFiltering( 2, "me_se_him_a1", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
+
+
+
 //「......圭ちゃんに...全部バラしたの!w800......あの野郎かぁ......。＠
 	PlaySE(3, "s01/03/120300188", 256, 64);
 	OutputLine(NULL, "「……圭ちゃんに…全部バラしたの",
@@ -2265,7 +2270,7 @@
 		   NULL, "I could tell that the fear that I had beaten back once was now waiting for another opening to come at me...", Line_Normal);
 	ClearMessage();
 
-	DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+//	DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 
 //　一体...誰だ...＠
 	OutputLine(NULL, "　一体…誰だ…？",
@@ -2279,7 +2284,10 @@
 		   NULL, "I peeked out from behind the tree at the person following me.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	FadeBustshotWithFiltering( 5, "left", 0, FALSE, 0, 0, 1300, TRUE );
+//	FadeBustshotWithFiltering( 5, "left", 0, FALSE, 0, 0, 1300, TRUE );
+	DrawSceneWithMask( "04_b", "left", 0, 0, 300 );
+
+
 
 //　......それは想像を裏切らず、レナだった￥
 	OutputLine(NULL, "　……それは想像を裏切らず、レナだった。",
@@ -2297,8 +2305,8 @@
 	OutputLine(NULL, "　…レナの…様子が違ったからだ。",
 		   NULL, "This wasn't the same Rena that I knew...", Line_Normal);
 	ClearMessage();
-	DisableWindow();
-	DrawBustshot( 2, "re_se_hi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+//	DisableWindow();
+//	DrawBustshot( 2, "re_se_hi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
@@ -2316,7 +2324,7 @@
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
-	DrawFilm( 2, 255, 34, 34, 255, 0, 100, TRUE );
+//	DrawFilm( 2, 255, 34, 34, 255, 0, 100, TRUE );
 	FadeOutBGM( 1, 100, FALSE );
 	FadeOutBGM( 2, 100, TRUE );
 
@@ -2324,6 +2332,10 @@
 //　......そして、その右腕には......
 	OutputLine(NULL, "　……そして、その右腕には……",
 		   NULL, "...And in her right hand...", Line_ContinueAfterTyping);
+
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "04_c", "left", 0, 0, 300 );
 
 	PlaySE( 4, "wa_027", 128, 64 );
 
@@ -2339,7 +2351,7 @@
 	ClearMessage();
 	DisableWindow();
 	DrawBustshotWithFiltering( 5, "black", "right", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 300, TRUE );
-	FadeFilm( 0, TRUE );
+//	FadeFilm( 0, TRUE );
 ////print 24
 
 //　再び木陰に身を隠し、今見た信じられない光景を思い出す￥
@@ -2464,7 +2476,7 @@
 		   NULL, "I adjusted my grip on the bat again... readied myself mentally, and stepped out from behind the tree.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot( 2, "re_se_hi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawBustshot( 2, "re_se_hi_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "bg_041", "left", 0, 0, 1300 );
 
 
@@ -2624,8 +2636,8 @@
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-	DisableWindow();
-	DrawBustshot( 2, "re_se_hi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+//	DisableWindow();
+//	DrawBustshot( 2, "re_se_hi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「ダム現場の宝の山にね、また新しいかぁいいのを見つけたの＠だからね、それを発掘するために、必要なの。＠
 	PlaySE(3, "s01/02/120200353", 256, 64);
@@ -2739,7 +2751,7 @@
 
 
 	DisableWindow();
-	DrawBustshot( 2, "re_se_hi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawBustshot( 2, "re_se_hi_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「それはできない相談だよ＠...レナの家もこっちだもん＠あはははははははははははは。￥
 	PlaySE(3, "s01/02/120200359", 256, 64);
@@ -2796,7 +2808,7 @@
 
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "re_se_hi_b1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 1, "re_se_hi_a1_zoom", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //　だがレナは俺のその様子をけたけたと笑いながら、ついてくるのだ...￥
 	OutputLine(NULL, "　だがレナは俺のその様子をけたけたを笑いながら、ついてくるのだ…！",
@@ -2841,8 +2853,8 @@
 		   NULL, "The tone of my voice was already tinged with terror.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawBustshot( 1, "re_se_hi_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+//	DisableWindow();
+//	DrawBustshot( 1, "re_se_hi_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「...圭一くんとお話したいから＠......圭一くんもレナとお話したいんじゃないかな？　かな？＠
 	PlaySE(3, "s01/02/120200362", 256, 64);
@@ -2898,16 +2910,24 @@
 	OutputLine(NULL, "「嘘じゃないよ…！」",
 		   NULL, "\"It's not a lie...!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	ClearMessage();
 
 
 	DisableWindow();
-	DrawBustshot( 1, "re_se_hii_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	Negative( 100, TRUE );
+
+	DrawBustshot( 1, "re_se_hii_a1_zoom", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	PlaySE( 4, "wa_027", 128, 64 );
+
 
 //「嘘だッ！！！！！！！￥
 	PlaySE(3, "s01/02/120200367", 256, 64);
 	OutputLine(NULL, "「嘘だッ！！！！！！！」",
 		   NULL, "\"LIES!!!!!!\"", Line_Normal);
 	ClearMessage();
+
+	FadeFilm( 100, TRUE );
+
 
 //　レナの叫びがこだまし、驚かせた鳥たちが羽ばたいていく＠
 	OutputLine(NULL, "　レナの叫びがこだまし、驚かせた鳥たちが羽ばたいていく。",
@@ -3448,14 +3468,14 @@
 
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "re_se_hi_a1", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "re_se_hi_a1_zoom", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //　疲労困憊で息も絶え絶えの俺に比べ...レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった￥
 	OutputLine(NULL, "　疲労困憊で息も絶え絶えの俺に比べ…レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった。",
 		   NULL, "Compared to me, out of breath and utterly exhausted... Rena was so cool and composed that she could have froze the air around her. She wasn't breathing hard at all, rather, I couldn't even sense if her heart was beating.", Line_Normal);
 	ClearMessage();
-	DisableWindow();
-	DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+//	DisableWindow();
+//	DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「何がこわいのかな...＠　怯えるなんて圭一くんらしくないよ？　!s200あははははははははははははははははははははは!sd。＠
 	PlaySE(3, "s01/02/120200403", 256, 64);
@@ -3490,7 +3510,11 @@
 
 
 	DisableWindow();
-	DrawScene( "oni_re_01", 1000 );
+//	DrawScene( "oni_re_01", 1000 );
+	DrawFilm( 2, 136, 136, 136, 255, 0, 1000, TRUE );
+//	DrawBustshotWithFiltering( 2, "re_se_wa_a1_zoom", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DrawBustshot( 2, "re_se_wa_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
 
 
 //　怯えるなと諭しながら、レナの両手はすぅーっと、頭上に差し上げられる＠
@@ -3505,7 +3529,9 @@
 		   NULL, "The blur of arms as they moved made me feel as if I was staring at the godliness of the thousand-armed Buddha.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "oni_re_02", 1000 );
+//	DrawScene( "oni_re_02", 1000 );
+	DrawFilm( 2, 255, 153, 153, 255, 0, 1000, TRUE );
+
 
 //　...そして頭上で両手が組まれた時、そこには斧が握られていた＠
 	OutputLine(NULL, "　…そして頭上で両手が組まれた時、そこには斧が握られていた。",
@@ -3547,8 +3573,8 @@
 	OutputLine(NULL, "　それはまるで、二度と会うことのない友人に告げる別れのような……そんな残酷さが宿っていた…。",
 		   NULL, "It was as if she was expressing a farewell to a friend she was never to see again... that cruel scenario resided somewhere in her actions...", Line_Normal);
 	ClearMessage();
-	DisableWindow();
-	DrawScene( "oni_re_03", 1000 );
+//	DisableWindow();
+//	DrawScene( "oni_re_03", 1000 );
 
 
 //「言ったよ＠...悟史くんは"!w500転校!sd"!w800したの。＠
@@ -3638,7 +3664,11 @@
 		   NULL, "I became frantic the more I screamed, but Rena did nothing but maintain the smile frozen on her face.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "oni_re_04", 1000 );
+//	DrawScene( "oni_re_04", 1000 );
+//	DrawBustshotWithFiltering( 2, "re_se_him_a1_zoom", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DrawBustshot( 2, "re_se_him_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+
 
 //「......圭一くんが何を言ってるか、わからないな。＠
 	PlaySE(3, "s01/02/120200409", 256, 64);
@@ -3659,8 +3689,7 @@
 
 
 
-	DrawScene( "oni_re_05", 1000 );
-
+//	DrawScene( "oni_re_05", 1000 );
 
 //「...............圭一くんは勘違いしてるよ。＠
 	PlaySE(3, "s01/02/120200410", 256, 64);
@@ -3725,7 +3754,9 @@
 		   NULL, " period.\"", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "oni_re_06", 1000 );
+//	DrawScene( "oni_re_06", 1000 );
+	DrawFilm( 2, 255, 34, 34, 255, 0, 0, TRUE );
+
 
 
 //　レナの眼差しがさらに冷え込む＠
@@ -3803,7 +3834,12 @@
 	ClearMessage();
 
 
-	DrawScene( "oni_re_07", 1000 );
+//	DrawScene( "oni_re_07", 1000 );
+	DrawScene( "black", 1000 );
+//	DrawBustshotWithFiltering( 2, "re_se_him_a1_zoom", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DrawBustshot( 2, "re_se_hi_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+
 
 //　世界から音が消え、レナの声だけがいやに大きく響いた￥
 	OutputLine(NULL, "　世界から音が消え、レナの声だけがいやに大きく響いた。",
@@ -3874,7 +3910,11 @@
 	ClearMessage();
 
 
-	DrawScene( "oni_re_08", 1000 );
+//	DrawScene( "oni_re_08", 1000 );
+//	DrawBustshotWithFiltering( 2, "re_se_hi_a1_zoom", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DrawBustshot( 2, "re_se_hi_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+
 
 //「圭一くんのところにも......オヤシロさま、来てるんじゃない＠　きっと相談に乗れるのは私だけ＠......圭一くんを"転校"なんかさせないから。!w1000...ね？￥
 	PlaySE(3, "s01/02/120200429", 256, 64);
@@ -3896,6 +3936,7 @@
 	ClearMessage();
 //	DrawBustshot( 2, "re_se_hi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene( "black", 1000 );
+	FadeFilm( 100, TRUE );
 
 //print 1
 

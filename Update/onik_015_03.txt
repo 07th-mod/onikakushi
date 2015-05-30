@@ -1,4 +1,4 @@
-﻿void main()
+void main()
 {
 
 //*Keiiti_Last
@@ -45,8 +45,11 @@
 		   NULL, "We were the most heavily-taxed members of this municipality, so I really wished they'd show us a little more respect...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
-	DrawSceneWithMask( "bg_112", "left", 0, 0, 1300 );
+//	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
+//	DrawSceneWithMask( "bg_112", "left", 0, 0, 1300 );
+
+	DrawBustshotWithFiltering( 3, "Kuma_def", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
 
 //「……うーん、どうしてこれが五萬切りなんすか＠　待ちが狭くなっちゃうっすよ？＠
 	PlaySE(3, "s01/19/123100001", 256, 64);
@@ -63,7 +66,7 @@
 		   NULL, "One of the younger detectives was having a staring contest with the Mahjong magazine called \"Next Turn.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshotWithFiltering( 3, "oi_si_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "oi_si_de_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「五萬切ってもテンパイ崩れませんから。＠
 	PlaySE(3, "s01/19/123100003", 256, 64);
@@ -81,7 +84,11 @@
 
 
 	DisableWindow();
-	DrawBustshot( 3, "oi_si_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+//	DrawSceneWithMask( "bg_112", "left", 0, 0, 1300 );
+//	DrawBustshot( 2, "oi_si_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	DrawBustshotWithFiltering( 2, "oi_si_wa_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//	DrawBustshot( 1, "Kuma_def", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「熊ちゃん、河を見て下さい＠五萬は全員切ってますから安牌なんですよ＠終盤で形テンに走った誰かがダマで待ってたら嫌でしょ。￥
 	PlaySE(3, "s01/11/120700516", 256, 64);
@@ -100,6 +107,11 @@
 		   NULL, "The kid let out another groan, put out his cigarette, then took out another one.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+//	DrawBustshot( 3, "Kuma_ikari", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	DrawBustshotWithFiltering( 3, "Kuma_ikari", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+
 //「…納得いかないっすねぇ…＠わざわざ自分で当たり牌減らすなんて。＠
 	PlaySE(3, "s01/19/123100005", 256, 64);
 	OutputLine(NULL, "「…納得いかないっすねぇ…。",
@@ -109,9 +121,10 @@
 		   NULL, " Why would you reduce your own options?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
+//	DisableWindow();
+//	DrawBustshot( 2, "oi_si_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
-	DisableWindow();
-	DrawBustshot( 3, "oi_si_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
 
 //「ちなみに、ハイテーで当たり牌出てもロンしちゃダメですよ。＠
 	PlaySE(3, "s01/11/120700519", 256, 64);
@@ -142,8 +155,8 @@
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-	DisableWindow();
-	DrawBustshot( 3, "oi_si_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+//	DisableWindow();
+//	DrawBustshot( 2, "oi_si_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「ありゃ、こりゃどうも。それじゃ、ちょいと失礼！￥
 	PlaySE(3, "s01/11/120700520", 256, 64);
@@ -535,6 +548,8 @@
 		   NULL, " Kuma-chan, bring the car around.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Kuma_def", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 
 //「了解っす！！！￥
@@ -542,6 +557,10 @@
 	OutputLine(NULL, "「了解っす！！！」",
 		   NULL, "\"Understood!!!\"", Line_Normal);
 	ClearMessage();
+
+	DisableWindow();
+	DrawSceneWithMask( "bg_192", "right", 0, 0, 300 );
+
 
 //「…もしもし＠　大石さん…＠　ごほっごぼッ！！＠
 	PlaySE(3, "s01/01/120100813", 256, 64);
@@ -1103,6 +1122,8 @@
 	ClearMessage();
 
 	DrawScene( "bg_192", 1000 );
+	DrawBustshot( 3, "Kuma_def", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
 
 //「大石さん、車はＯＫっす！！＠　大石さん…？！￥
 	PlaySE(3, "s01/19/123100011", 256, 64);
