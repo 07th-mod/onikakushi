@@ -109,9 +109,9 @@ Known Issues:
     - Fixable by moving them to a different sound layer.
 
 - Chapter 1: 
-  - Voices not properly aligned during the talk about Keichii's dick scene. 
-    - There are too many voice files for Keichii for this scene, probably the scene is extended in the ps3 version.
-    - Since I don't know japanese, I can't tell which voices are actually used.
+  - That first scene between Mion and Keichii is different!
+   - It was changed to match the scene and voices in the ps2/ps3 version.
+   - It also makes more sense considering the furry seal fiasco later on.
 
 - Tips: 
   - Missing voices for Keichii's Mom in Tip 20 (At the Seventh Mart)
