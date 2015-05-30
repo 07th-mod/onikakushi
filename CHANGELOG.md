@@ -61,3 +61,7 @@ v 1.04
 
 v 1.05
 - Fixed line not displaying in onik_014_02.txt
+
+v 1.1
+- Merged with GuraGura's 1.0 Patch
+- Added in missing voices for chapter 1
