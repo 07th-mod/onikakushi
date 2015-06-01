@@ -147,7 +147,7 @@ void main()
 	DrawBustshot( 3, "re_si_ha_b1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「…そ、そんな、!d300…大変じゃなかったから…気にしないでよ……!d400ね☆￥
-	PlaySE(3, "s19/02/990200077", 128, 64)
+	PlaySE(3, "s19/02/990200077", 256, 64);
 	OutputLine(NULL, "「…そ、そんな、",
 		   NULL, "\"...I-It was nothing...", Line_ContinueAfterTyping);
 
@@ -189,7 +189,7 @@ void main()
 
 
 //「……え、!d300……せ、せ…責任って…？！　何だろ！　何だろ！￥
-	PlaySE(3, "s19/02/990200078", 128, 64)
+	PlaySE(3, "s19/02/990200078", 256, 64);
 	OutputLine(NULL, "「……え、",
 		   NULL, "\"...Huh...?", Line_ContinueAfterTyping);
 
@@ -229,7 +229,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE(3, "s19/02/990200079", 128, 64)
+	PlaySE(3, "s19/02/990200079", 256, 64);
 	OutputLine(NULL, "…２ｋｇくらい…かな？」",
 		   NULL, " About two kilos... I guess?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
