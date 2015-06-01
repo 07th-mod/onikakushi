@@ -891,13 +891,13 @@ void main()
 	OutputLine(NULL, "　そうだっけか。",
 		   NULL, " You don't say.", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300006", 256, 64);
-	OutputLine(NULL, " 前に会った時はあんなに可愛かったのになぁ！」",
+	OutputLine(NULL, "　前に会った時はあんなに可愛かったのになぁ！」",
 		   NULL, " You were such a cute little tyke the last time I saw you!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 //魅音の手が地上1mくらいのところで揺れる。
-	OutputLine(NULL, "魅音の手が地上1mくらいのところで揺れる。",
-			NULL, ""Mion then lowered her hand to about 1 meter above the ground.", Line_WaitForInput);
+	OutputLine(NULL, "　魅音の手が地上1mくらいのところで揺れる。",
+			NULL, "Mion then lowered her hand to about 1 meter above the ground.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 //「俺は先月引っ越してきたばかりなんだが……？」
@@ -918,12 +918,12 @@ void main()
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 //ご丁寧にハンカチまで取り出して泣きまねをする。	
-	OutputLine(NULL, "ご丁寧にハンカチまで取り出して泣きまねをする。",
+	OutputLine(NULL, "　ご丁寧にハンカチまで取り出して泣きまねをする。",
 		   NULL, "She gently took out a handkerchief and pretended to weep into it.", Line_WaitForInput); 
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 //朝から土曜8時のノリかよ。	
-	OutputLine(NULL, "朝から土曜8時のノリかよ。",
+	OutputLine(NULL, "　朝から土曜8時のノリかよ。",
 		   NULL, "Just what is she trying to pull off at 8 o'clock in the morning...?", Line_Normal);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);	
 	
@@ -961,10 +961,10 @@ void main()
 	ClearMessage();		   
 		   
 //その問いに、魅音はちっちっち、と人差し指を目の前で振った。 	
-	OutputLine(NULL, "その問いに、魅音はちっちっち、と人差し指を目の前で振った。",
+	OutputLine(NULL, "　その問いに、魅音はちっちっち、と人差し指を目の前で振った。",
 		   NULL, "Mion sneered at the question, and then wagged her index finger right in my face.", Line_WaitForInput); 
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);		
-	OutputLine(NULL, "……何の真似だ。",
+	OutputLine(NULL, "　……何の真似だ。",
 		   NULL, "...Just what is she playing at?", Line_Normal);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);		
 
@@ -976,17 +976,18 @@ void main()
 	PlaySE(3, "s19/03/990300010", 256, 64);
 	OutputLine(NULL, "「あっはっはっは、魅音さんの情報収集能力を舐めちゃあいけないよ？",
 		   NULL, "\"Hahaha, NEVER underestimate Mion-san's intelligence gathering skills!", Line_WaitForInput);	
+
+		   
+	DisableWindow();
+	DrawBustshot( 3, "me_se_to_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );	
 	
 	PlaySE(3, "s19/03/990300011", 256, 64);	
 	OutputLine(NULL, " 圭ちゃんの昨日の夕食からレナのスリーサイズまで、すべておじさんはお見通しさ」",
 		   NULL, " From your last meal to Rena's measurements, this old man knows it all.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);		
 	
-	DisableWindow();
-	DrawBustshot( 3, "me_se_to_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );	
-	
 //そう言って、不敵に笑う魅音の肩を俺はポンと叩く	
-	OutputLine(NULL, "そう言って、不敵に笑う魅音の肩を俺はポンと叩く",
+	OutputLine(NULL, "　そう言って、不敵に笑う魅音の肩を俺はポンと叩く",
 		   NULL, "Picking my interest, I placed my hand on her shoulder while she was still smirking.", Line_WaitForInput); 
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);	
 	
@@ -1006,12 +1007,12 @@ void main()
 			
 //「……ちなみにレナのスリーサイズは？」	
 	PlaySE(3, "s19/03/990300013", 256, 64);	
-	OutputLine(NULL, " ちなみに高いよ～、いくら出す？」",
+	OutputLine(NULL, "　ちなみに高いよ～、いくら出す？」",
 		   NULL, " By the way, it's expensive~. How much would you pay?\"", Line_WaitForInput);
 	ClearMessage();			
 	
 //よからぬ交渉に感づいたのか、レナが慌てふためきながらまくし立てた。＠
-	OutputLine(NULL, "よからぬ交渉に感づいたのか、レナが慌てふためきながらまくし立てた。",
+	OutputLine(NULL, "　よからぬ交渉に感づいたのか、レナが慌てふためきながらまくし立てた。",
 		  NULL, "Catching on to our awful discussion, Rena became flustered and began to ramble in a near panic.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
