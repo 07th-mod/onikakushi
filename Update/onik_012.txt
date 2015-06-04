@@ -1934,7 +1934,7 @@ void main()
 
 	DisableWindow();
 	DrawScene( "bg_165", 400 );
-	DrawBustshot( 3, "oi_si_ma_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	DrawBustshot( 3, "oi_si_ma_a1_zoom", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 	PlaySE( 4, "wa_023", 128, 64 );
 //「被害者たちはなぜか、あなたのお友達グループに全てつながるのです。」!w2000
@@ -4583,6 +4583,10 @@ void main()
 	OutputLine(NULL, "　それが何かを頭が理解する前に、俺は食べかけのおはぎごと、それを力いっぱい投げ付けた！！！",
 		   NULL, "Before I could fully comprehend what it was, I threw away the rest of the mochi I was eating as fast as I could!", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawSceneWithMask( "bg_170b", "right", 0, 0, 300 );
 
 
 //　壁に叩きつけられ、餡が飛び散る＠

@@ -2786,10 +2786,12 @@ void main()
 		   NULL, " but we were all friends.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot( 1, "sa_se_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
-	DrawBustshot( 3, "re_se_wa_b1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+//	DrawBustshot( 1, "sa_se_wa_a1", -160-45, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	DrawBustshot( 1, "sa_se_wa_a1", -240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+//	DrawBustshot( 3, "re_se_wa_b1", 160+90, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	DrawBustshot( 3, "re_se_wa_b1", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
-//「いっただきま～す！！＠
+	//「いっただきま～す！！＠
 	PlaySE(3, "edit/combine", 256, 64);
 	OutputLine(NULL, "「いっただきま〜す！！」",
 		   NULL, "\"Let's eat!!\"", Line_WaitForInput);
