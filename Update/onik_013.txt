@@ -1383,8 +1383,9 @@ void main()
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 0, TRUE );
 
 //「嘘だよッ！！＠
-	OutputLine(NULL, "「嘘だよッ！！」",
-		   NULL, "'LIES!!'", Line_WaitForInput);
+	PlaySE(3, "s01/02/120200139", 256, 64);
+	OutputLine(NULL, "「嘘だッ！！！」",
+		   NULL, "'LIES!!!'", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
