@@ -2308,7 +2308,6 @@ void main()
 //	DisableWindow();
 //	DrawBustshot( 2, "re_se_hi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 //　光を失った死者の瞳＠
@@ -2331,7 +2330,7 @@ void main()
 
 //　......そして、その右腕には......
 	OutputLine(NULL, "　……そして、その右腕には……",
-		   NULL, "...And in her right hand...", Line_ContinueAfterTyping);
+		   NULL, "...And in her right hand...", Line_Normal);
 
 	ClearMessage();
 	DisableWindow();
@@ -2346,7 +2345,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 	DisableWindow();
@@ -3007,7 +3006,6 @@ void main()
 	SetSpeedOfMessage( TRUE, 0, );
 
 
-	PlaySE(3, "s01/02/120200376", 256, 64);
 	OutputLine(NULL, "あははははははははははははは。」",
 		   NULL, " Ahahahahahahahahahahahahaha.\"", Line_Normal);
 
@@ -3590,7 +3588,7 @@ void main()
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "転校”",
-		   NULL, " transferred...", Line_Normal);
+		   NULL, " transferred...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "したの。」",
 		   NULL, " out.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3874,7 +3872,7 @@ void main()
 	PlaySE(3, "s01/02/120200426", 256, 64);
 	OutputLine(NULL, "「レナのところへも、来たんだよ。",
 		   NULL, "\"It came to me, too.", Line_WaitForInput);
-	PlaySE(3, "s01/02/120200476", 256, 64);
+	PlaySE(3, "s01/02/120200427", 256, 64);
 	OutputLine(NULL, "オヤシロさま。",
 		   NULL, " Oyashiro-sama did...", Line_WaitForInput);
 	PlaySE(3, "s01/02/120200428", 256, 64);
@@ -4232,7 +4230,6 @@ void main()
 	DrawBustshotWithFiltering( 5, "black", "down", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
 	DrawBustshot( 2, "re_se_de_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 //　ある日の放課後＠
@@ -4970,7 +4967,7 @@ void main()
 
 
 //　オヤシロさまが来てしまった！！！￥
-	PlaySE(3, "s01/02/120200441", 256, 64);
+	PlaySE(3, "s01/02/120200442", 256, 64);
 	OutputLine(NULL, "　オヤシロさまが来てしまった！！！」",
 		   NULL, "Oyashiro-sama has come!!!\"", Line_Normal);
 	ClearMessage();
