@@ -72,6 +72,13 @@ Installation:
 
 Troubleshooting:
 -----------------------------------------------------------------------------------------
+> "My game suddenly stopped working. No textboxes, menu or sprites, only background and/or music."
+
+The game is probably checking for a specific sprite or background in one of the folders (CG or CGAlt).
+Since this patch was built and updated to play with PS3 graphics, you are likely to run into this issue if using any other combination of graphics. 
+The log file contains the missing asset, it's usually found in a line similar to "Could not find texture asset [...]" followed by the file path and file name.
+Make sure you are using the most recent graphics patch (PS3 sprites 1.5 with widescreen support), the latest patch and is running the game with sprites set to "Updated".
+
 > "There's a missing voice in this scene!"
 
 Check the Known Issues section of this readme.
