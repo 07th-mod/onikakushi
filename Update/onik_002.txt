@@ -1635,18 +1635,10 @@ void main()
 	OutputLine(NULL, "「あ、…あのね！",
 		   NULL, "\"Uh... Um, hey!", Line_WaitForInput);
 	PlaySE(3, "s19/04/990400046", 256, 64);
-	OutputLine(NULL, "　………レナお姉ちゃんのお弁当、",
-		   NULL, " ...So, Rena-oneechan's lunch?", Line_WaitForInput);
-
-	PlaySE( 4, "wa_029", 128, 64 );
-
-//沙都子もおいしかったよ…。＠
-	PlaySE(3, "s19/04/990400047", 256, 64);
-	OutputLine(NULL, "沙都子もおいしかったよ…。」",
-		   NULL, " Satoko thought it was yummy, too...\"", Line_WaitForInput);
+	PlaySE( 4, "wa_029", 64, 64 );
+	OutputLine(NULL, "　………レナお姉ちゃんのお弁当、沙都子もおいしかったよ…。",
+		   NULL, " ...So, Rena-oneechan's lunch? Satoko thought it was yummy, too...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //　沙都子は上目遣いに舌っ足らずな口調ではにかんで見せた￥
 	OutputLine(NULL, "　沙都子は上目遣いに舌っ足らずな口調ではにかんで見せた。",
