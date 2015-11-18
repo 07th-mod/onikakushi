@@ -114,7 +114,8 @@
 //「圭ちゃん家ってさ、すっごく大きいでしょ＠　だから建築中から雛見沢中で前原屋敷って呼ばれて注目の的だったんだよ。＠
 	PlaySE(3, "s20/03/440300018", 128, 64);	
 	OutputLine(NULL, "「圭ちゃん家ってさ、すっごく大きいでしょ？",
-		   NULL, "\"Kei-chan... your house, you know... It's pretty big, yeah?", Line_WaitForInput);
+		   NULL, "\"Kei-chan... your house, you know... It's pretty big, yeah?", Line_ContinueAfterTyping);
+	Wait( 1800 );
 	OutputLine(NULL, "　だから建築中から雛見沢中で前原屋敷って呼ばれて注目の的だったんだよ。」",
 		   NULL, " So the architecture has people all around Hinamizawa calling it the Maebara Manor, and it sorta stands out.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
