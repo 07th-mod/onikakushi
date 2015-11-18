@@ -779,8 +779,17 @@ void main()
 	OutputLine(NULL, "「…で、ね☆",
 		   NULL, "\"...So, now then.☆", Line_WaitForInput);
 	PlaySE(3, "s19/02/990200096", 256, 64);
-	OutputLine(NULL, "　そろそろお昼にしないかな？…かな？」",
-		   NULL, " About time to have lunch, maybe? ...Maybe?", Line_ContinueAfterTyping);
+	OutputLine(NULL, "　そろそろお昼にしないかな？",
+		   NULL, " About time to have lunch, maybe?", Line_ContinueAfterTyping);
+
+	Wait( 300 );
+
+	PlaySE(3, "s19/02/500200521", 256, 64);
+	OutputLine(NULL, "…かな？」",
+		   NULL, " ...Maybe?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
 
 //　レナが最高の笑顔と共に、魅音と二人して忘れようとしていた時間の訪れを告げた＠
 	OutputLine(NULL, "　レナが最高の笑顔と共に、魅音と二人して忘れようとしていた時間の訪れを告げた。",
