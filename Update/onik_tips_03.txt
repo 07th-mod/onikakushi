@@ -72,7 +72,8 @@
 //「......お弁当のおかずも普通ですよ＠お金持ちじゃないです。￥
 	PlaySE(3, "s20/05/440500001", 128, 64);		
 	OutputLine(NULL, "「……お弁当のおかずも普通ですよ。",
-		   NULL, "\"...His lunch is made up of normal stuff.", Line_WaitForInput);
+		   NULL, "\"...His lunch is made up of normal stuff.", Line_ContinueAfterTyping);
+	Wait( 1800 );
 	OutputLine(NULL, "お金持ちじゃないです。」",
 		   NULL, " He isn't rich.\"", Line_Normal);
 	ClearMessage();
