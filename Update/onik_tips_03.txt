@@ -197,7 +197,8 @@
 //「あれだけ大きな家は普通とは言わないって＠　しかも玄関は立派で、門は大型車も入れるようになってるし！＠　絶対、普通じゃないって！＠
 	PlaySE(3, "s20/03/440300019", 128, 64);	
 	OutputLine(NULL, "「あれだけ大きな家は普通とは言わないって！",
-		   NULL, "\"You can't call it normal with that huge house!", Line_WaitForInput);
+		   NULL, "\"You can't call it normal with that huge house!", Line_ContinueAfterTyping);
+	Wait( 2800 );
 	OutputLine(NULL, "　しかも玄関は立派で、門は大型車も入れるようになってるし！！",
 		   NULL, " The entranceway is all grand, and the gate is large enough for a large truck to get through!!", Line_WaitForInput);
 	PlaySE(3, "s20/03/440300020", 128, 64);
