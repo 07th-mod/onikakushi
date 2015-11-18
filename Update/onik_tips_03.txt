@@ -186,8 +186,9 @@
 //「あー、諸君らの楽しい想像をぶち壊すようで悪いが、うちは金持ちでも貧乏でもないぞ＠極めて平均的な普通の家庭だ。＠
 	PlaySE(3, "s20/01/440100025", 128, 64);	
 	OutputLine(NULL, "「あー、諸君らの楽しい想像をぶち壊すようで悪いが、うちは金持ちでも貧乏でもないぞ。",
-		   NULL, "\"Yeah, sorry for ruining your imagination, but we aren't millionaires or poor.", Line_WaitForInput);
-	OutputLine(NULL, "極めて平均的な普通の家庭だ。」",
+		   NULL, "\"Yeah, sorry for ruining your imagination, but we aren't millionaires or poor.", Line_ContinueAfterTyping);
+	Wait( 4200 );
+		   OutputLine(NULL, "極めて平均的な普通の家庭だ。」",
 		   NULL, " We're the image of a normal, average household.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
