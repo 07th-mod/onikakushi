@@ -436,7 +436,8 @@ void main()
 //「会則第一条！＠　狙うのは１位のみ＠　…遊びだからなんていう、いい加減なプレイは許さないッ！！！＠
 	PlaySE(3, "s19/03/990300148", 256, 64);
 	OutputLine(NULL, "「会則第一条！！",
-		   NULL, "\"The first rule of our society!!", Line_WaitForInput);
+		   NULL, "\"The first rule of our society!!", Line_ContinueAfterTyping);
+	Wait ( 900 );
 	OutputLine(NULL, "　狙うのは１位のみ！",
 		   NULL, " Aim only for first place!", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300149", 256, 64);
