@@ -2225,7 +2225,7 @@ void main()
 //「あぁ、ものすごい大惨事だぞ＠　半径数百キロは壊滅だ＠　だがこれは悲劇の序章にしか過ぎない！＠　なんとこれこそは…ジオン広告社が引き起こした独立戦争の幕開けだったのだッ！！」/
 	PlaySE(3, "s19/01/hr_kei05890", 256, 64);	
 	OutputLine(NULL, "「あぁ、宇宙人が作った装置でロシュの限界を解除し、まず一個落としたらしい。！",
-		   NULL, "\"Yeah, the aliens deactivated the Roche limit with a device they created and started by hurling one asteroid", Line_WaitForInput);
+		   NULL, "\"Yeah, the aliens deactivated the Roche limit with a device they created and started by hurling one asteroid.", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05900", 256, 64);	
 	OutputLine(NULL, "　まさか俺もそこまでやるとは思わなかった。",
 		   NULL, " Even I didn't think that they'd go this far.", Line_WaitForInput);
@@ -2271,11 +2271,10 @@ void main()
 		   NULL, " That's right, the Earth Federation's top ace... is Rena Ryuugu!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-
-//　下級生たちが唾をごくりと飲みこむ…＠
-	OutputLine(NULL, "　下級生たちが唾をごくりと飲みこむ…！",
-		   NULL, "The lower grade students all gulped...!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	PlaySE(3, "s19/00/girla99005", 256, 64);
+	OutputLine(NULL, "　「やっぱり、上級生は私たちと違うんだ～」",
+		   NULL, "\"So the older kids really ARE different!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_WaitForInput);
 
 
 
