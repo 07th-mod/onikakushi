@@ -1514,13 +1514,7 @@ void main()
 //「魅音委員長も被害にあったって言ってたよー！」!w800
 	PlaySE(3, "s19/00/girlE99003", 256, 64);
 	OutputLine(NULL, "「委員長の写真貼り付けたのもあるらしいよー！」",
-		   NULL, "\"I heard he even has one with a photo of our Class Rep stuck to it~!\"", Line_ContinueAfterTyping);
-
-	SetValidityOfInput( FALSE );
-	Wait( 800 );
-	SetValidityOfInput( TRUE );
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
+		   NULL, "\"I heard he even has one with a photo of our Class Rep stuck to it~!\"", Line_WaitForInput);
 
 //「え゛ーーーッッ？！￥
 	PlaySE(3, "s19/00/girlD99004", 256, 64);
