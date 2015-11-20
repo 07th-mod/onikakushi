@@ -353,7 +353,7 @@ void main()
 //「ここいらではこの遊びのこと、「ゾンビ鬼」って呼んでるけどね。＠
 	PlaySE(3, "s19/03/990300226", 256, 64);
 	OutputLine(NULL, "「ここいらではこの遊びのこと、「ゾンビ鬼」って呼んでるけどね。」",
-		   NULL, "\"They call the version we're playing here zombie tag, you see.\"", Line_WaitForInput);
+		   NULL, "\"We call this version \"zombie tag\", you see.\", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1468,8 +1468,8 @@ void main()
 
 //「趣味はお風呂覗きなんだってー。＠
 	PlaySE(3, "s19/00/girlB99003", 256, 64);
-	OutputLine(NULL, "「趣味はお風呂覗きなんだってー。」",
-		   NULL, "\"They say he enjoys peeping into bathrooms.\"", Line_WaitForInput);
+	OutputLine(NULL, "「趣味は抱きまくらのコレクションなんだってー。」",
+		   NULL, "\"They say he has a collection of dakimakura love pillows.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1483,8 +1483,8 @@ void main()
 
 //「夜な夜な下着を盗んで回ってるって本当なのぅ？＠
 	PlaySE(3, "s19/00/girlC99004", 256, 64);
-	OutputLine(NULL, "「夜な夜な下着を盗んで回ってるって本当なのぅ？」",
-		   NULL, "\"Is it true that he's going around every night stealing panties?\"", Line_WaitForInput);
+	OutputLine(NULL, "「夜な夜な抱きながら寝てるって本当なのぅ？」",
+		   NULL, "\"Is it true that he sleeps with them at night?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1498,8 +1498,8 @@ void main()
 
 //「ぱんつをかぶったり匂いを嗅いだりするんだって。＠
 	PlaySE(3, "s19/00/girlD99003", 256, 64);
-	OutputLine(NULL, "「ぱんつをかぶったり匂いを嗅いだりするんだって。」",
-		   NULL, "\"I heard he wears panties on his head and smells them and stuff.\"", Line_WaitForInput);
+	OutputLine(NULL, "「ふにふにの柔らか～い感触がたまんないって。」",
+		   NULL, "\"I heard he can't get enough of the fluffy soft sensation!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1513,14 +1513,8 @@ void main()
 
 //「魅音委員長も被害にあったって言ってたよー！」!w800
 	PlaySE(3, "s19/00/girlE99003", 256, 64);
-	OutputLine(NULL, "「魅音委員長も被害にあったって言ってたよー！」",
-		   NULL, "\"I heard that Class Representative Mion was a victim too~!\"", Line_ContinueAfterTyping);
-
-	SetValidityOfInput( FALSE );
-	Wait( 800 );
-	SetValidityOfInput( TRUE );
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
+	OutputLine(NULL, "「委員長の写真貼り付けたのもあるらしいよー！」",
+		   NULL, "\"I heard he even has one with a photo of our Class Rep stuck to it~!\"", Line_WaitForInput);
 
 //「え゛ーーーッッ？！￥
 	PlaySE(3, "s19/00/girlD99004", 256, 64);
@@ -1599,8 +1593,8 @@ void main()
 	OutputLine(NULL, "「聞いたー？",
 		   NULL, "\"Did you hear?", Line_WaitForInput);
 	PlaySE(3, "s19/00/girlE99005", 256, 64);
-	OutputLine(NULL, "　転校生の前原さんてＨな人なんだってー！",
-		   NULL, " I heard that the new transfer student Maebara-san is a really perverted person!", Line_WaitForInput);
+	OutputLine(NULL, "　転校生の前原さんて2次元萌えな人なんだってー！",
+		   NULL, " I heard that the new transfer student Maebara-san is into anime girls!", Line_WaitForInput);
 	PlaySE(3, "s19/00/girlE99006", 256, 64);
 	OutputLine(NULL, "　きゃはははは！！」",
 		   NULL, " Kyahahahaha!!\"", Line_WaitForInput);
@@ -2208,8 +2202,8 @@ void main()
 
 //スペースコロニーだッ！！」/
 	PlaySE(3, "s19/01/hr_kei05880", 256, 64);
-	OutputLine(NULL, "スペースコロニーだッ！！」",
-		   NULL, "Was a space colony!!\"", Line_ContinueAfterTyping);
+	OutputLine(NULL, "小惑星だッ！！」",
+		   NULL, "Was a comet!!\"", Line_ContinueAfterTyping);
 
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
@@ -2222,25 +2216,25 @@ void main()
 
 //「ス、スペースコロニーですってぇえぇッ？！＠
 	PlaySE(3, "s19/04/990400106", 256, 64);
-	OutputLine(NULL, "「ス、スペースコロニーですってぇえぇッ？！」",
-		   NULL, "\"A-A space colonyyyyy!?\"", Line_WaitForInput);
+	OutputLine(NULL, "「しょっ小惑星ですってぇえぇッ？！」",
+		   NULL, "\"A-An asteroid!?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 
 //「あぁ、ものすごい大惨事だぞ＠　半径数百キロは壊滅だ＠　だがこれは悲劇の序章にしか過ぎない！＠　なんとこれこそは…ジオン広告社が引き起こした独立戦争の幕開けだったのだッ！！」/
 	PlaySE(3, "s19/01/hr_kei05890", 256, 64);	
-	OutputLine(NULL, "「あぁ、ものすごい大惨事だぞ！",
-		   NULL, "\"Yeah, it's a really big disaster!", Line_WaitForInput);
+	OutputLine(NULL, "「あぁ、宇宙人が作った装置でロシュの限界を解除し、まず一個落としたらしい。！",
+		   NULL, "\"Yeah, the aliens deactivated the Roche limit with a device they created and started by hurling one asteroid.", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05900", 256, 64);	
-	OutputLine(NULL, "　半径数百キロは壊滅だ！",
-		   NULL, " Everything in a 100 kilometer radius was obliterated!", Line_WaitForInput);
+	OutputLine(NULL, "　まさか俺もそこまでやるとは思わなかった。",
+		   NULL, " Even I didn't think that they'd go this far.", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05910", 256, 64);	
-	OutputLine(NULL, "　だがこれは悲劇の序章にしか過ぎない！！",
-		   NULL, " But that's only the prelude to this tragic tale!!", Line_WaitForInput);
+	OutputLine(NULL, "　しかも、続いて今度は百個も！！",
+		   NULL, " And they plan to drop 100 of them next!!", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05920", 256, 64);
-	OutputLine(NULL, "　なんとこれこそは…ジオン広告社が引き起こした独立戦争の幕開けだったのだッ！！」",
-		   NULL, " This is the beginning... the start of a war for independence by the Propagandapality of Zeon!!\"", Line_ContinueAfterTyping);
+	OutputLine(NULL, "　地球軍の完全な誤算だッ！！」",
+		   NULL, " The Earth Federation was totally unprepared!!\"", Line_ContinueAfterTyping);
 
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 0, 50, 20, 3, 0, );
@@ -2257,31 +2251,30 @@ void main()
 
 //「そ…それでどうなるの…＠　地球連邦は負けちゃうの？￥
 	PlaySE(3, "s19/00/girlC99005", 256, 64);
-	OutputLine(NULL, "「そ…それでどうなるの…？",
-		   NULL, "\"Wh... What will happen...?", Line_WaitForInput);
+	OutputLine(NULL, "「ち…地球軍って…？",
+		   NULL, "\"A... an Earth Federation...?", Line_WaitForInput);
 	PlaySE(3, "s19/00/girlC99006", 256, 64);
-	OutputLine(NULL, "　地球連邦は負けちゃうの？」",
-		   NULL, " Will the Terran Federation lose?\"", Line_Normal);
+	OutputLine(NULL, "　私達、宇宙人と戦争でもしてるんですか？」",
+		   NULL, " Are we really at war with aliens?\"", Line_Normal);
 	ClearMessage();
 
 
 //「このままでは負けるッ！＠　赤い彗星に勝てるのはヤツしかいない！＠　それが竜宮レナなのだぁッ！！＠
 	PlaySE(3, "s19/01/hr_kei05960", 256, 64);
-	OutputLine(NULL, "「このままでは負けるッ！！",
-		   NULL, "\"If things go on like this, they will!!", Line_WaitForInput);
+	OutputLine(NULL, "「このままでは地球は壊滅だッ！！",
+		   NULL, "\"If things go on like this, Earth is finished!!", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05970", 256, 64);
-	OutputLine(NULL, "　赤い彗星に勝てるのはヤツしかいない！！",
-		   NULL, " Only one person can defeat the Red Comet!!", Line_WaitForInput);
+	OutputLine(NULL, "　しかし！レナなら、レナの放つ音速の『マッハレナパンチ』なら小惑星を全て迎撃することが出来る！！",
+		   NULL, " But don't despair!! If we have Rena's ultrasonic \"Mach-Rena-Punch\", it'll be possible to intercept all of the asteroids!", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05980", 256, 64);
-	OutputLine(NULL, "　それが竜宮レナなのだぁッ！！」",
-		   NULL, " That person is Rena Ryuugu!!\"", Line_WaitForInput);
+	OutputLine(NULL, "　そう、地球軍のトップエース、それが竜宮レナなのだぁッ！！」",
+		   NULL, " That's right, the Earth Federation's top ace... is Rena Ryuugu!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-
-//　下級生たちが唾をごくりと飲みこむ…＠
-	OutputLine(NULL, "　下級生たちが唾をごくりと飲みこむ…！",
-		   NULL, "The lower grade students all gulped...!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	PlaySE(3, "s19/00/girla99005", 256, 64);
+	OutputLine(NULL, "　「やっぱり、上級生は私たちと違うんだ～」",
+		   NULL, "\"So the older kids really ARE different!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_WaitForInput);
 
 
 
@@ -2316,22 +2309,22 @@ void main()
 
 //「でも…連邦艦隊の拡散波動砲でも、彗星帝国には効かなかったんじゃ…。＠
 	PlaySE(3, "s19/00/girlA99006", 256, 64);
-	OutputLine(NULL, "「でも…連邦艦隊の拡散波動砲でも、彗星帝国には効かなかったんじゃ…。」",
-		   NULL, "\"But... I thought even the Terran Federation's Impulse Wave Diffusal Cannon... didn't work on the Comet Empire...\"", Line_WaitForInput);
+	OutputLine(NULL, "「でも…たとえレナさんでも、月を押し戻すことなんて出来るんでしょうか？＞」",
+		   NULL, "\"But... Rena-san might be strong... but, can she really push back the moon..?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 
 //「惜しいな。それは白い方の彗星だぞ＠効かなかったのは弱点を知らなかったからだ＠もちろんレナは白色彗星の弱点だって熟知してる！＠
 	PlaySE(3, "s19/01/hr_kei06000", 256, 64);
-	OutputLine(NULL, "「惜しいな。それは白い方の彗星だぞ。",
-		   NULL, "\"You're close. That's the white variety of those comets.", Line_WaitForInput);
+	OutputLine(NULL, "「心配無用だ！",
+		   NULL, "\"Unnecessary concerns!", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei06010", 256, 64);
-	OutputLine(NULL, "効かなかったのは弱点を知らなかったからだ。",
-		   NULL, " The reason it didn't work was because they didn't know the weak point.", Line_WaitForInput);
+	OutputLine(NULL, "つい先日も、レナは地球に激突するはずの彗星爆弾を、一つ弾き飛ばしている。",
+		   NULL, " Just days ago, Rena blew away a comet bomb that was going to smash into Earth.", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei06020", 256, 64);
-	OutputLine(NULL, "もちろんレナは白色彗星の弱点だって熟知してる！」",
-		   NULL, " Of course, Rena knows their weak point all too well!\"", Line_WaitForInput);
+	OutputLine(NULL, "小惑星の百個や二百個くらい、音速を超える光速のパンチで一撃だぁぁ！！」",
+		   NULL, " One or two hundred asteroids are nothing before one of her light-speed punches!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2470,8 +2463,8 @@ void main()
 	OutputLine(NULL, "「みんなが何を言ってるのかわかんないよ！",
 		   NULL, "\"What are you all saying!?", Line_WaitForInput);
 	PlaySE(3, "s19/02/990200257", 256, 64);
-	OutputLine(NULL, "　レナはロボットの操縦なんか出来ないよー！」",
-		   NULL, " I can't control a mech!\"", Line_Normal);
+	OutputLine(NULL, "　レナはパンチで小惑星なんか破壊出来ないよぅー！」",
+		   NULL, " I can't destroy asteroids by punching them!\"", Line_Normal);
 	ClearMessage();
 
 
