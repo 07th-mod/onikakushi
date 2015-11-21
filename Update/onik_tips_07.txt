@@ -91,9 +91,10 @@
 //「あーレナが日直かぁ＠そりゃお疲れ様なことで。￥
 	PlaySE(3, "s20/03/440300025", 128, 64);		
 	OutputLine(NULL, "「あーレナが日直かぁ。",
-		   NULL, "\"Ah~ It was Rena's turn for class duty.", Line_WaitForInput);
+		   NULL, "\"Ah~ It was Rena's turn for class duty.", Line_ContinueAfterTyping);
+	Wait (1400)
 	OutputLine(NULL, "そりゃお疲れ様なことで。」",
-		   NULL, " That's very much appreciated.\"", Line_Normal);
+		   NULL, " Sounds like a drag.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_110", "right", 0, 0, 300 );
@@ -133,21 +134,20 @@
 //「......レナはあだ名なのです＠ちゃんとした名前がありますですよ。＠
 	PlaySE(3, "s20/05/440500006", 128, 64);			
 	OutputLine(NULL, "「……レナはあだ名なのです。",
-		   NULL, "\"...Rena is her nickname.", Line_WaitForInput);
+		   NULL, "\"...Rena is her nickname.", Line_ContinueAfterTyping);
+	Wait (1200)
 	OutputLine(NULL, "ちゃんとした名前がありますですよ。」",
 		   NULL, " She has a proper name as well.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
 //「え、そうなのか？＠　俺はてっきり竜宮レナってのが本名だと思ってたよ。＠
 	PlaySE(3, "s20/01/440100030", 128, 64);			
 	OutputLine(NULL, "「え、そうなのか？！",
-		   NULL, "\"What, really!?", Line_WaitForInput);
+		   NULL, "\"What, really!?", Line_ContinueAfterTyping);
+	Wait (1000)
 	OutputLine(NULL, "　俺はてっきり竜宮レナってのが本名だと思ってたよ。」",
-		   NULL, " I was sure that Rena Ryuugu was her full name.\"", Line_WaitForInput);
+		   NULL, " I was sure that Rena Ryuugu was her actual name.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
 
 	DisableWindow();
 	DrawBustshotWithFiltering( 3, "sa_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
@@ -171,12 +171,11 @@
 //「本当の名前は何て言うんだろうな＠...レナが戻ってきたら聞いてみるかな！＠
 	PlaySE(3, "s20/01/440100031", 128, 64);	
 	OutputLine(NULL, "「本当の名前は何て言うんだろうな。",
-		   NULL, "\"I wonder what her real name is...", Line_WaitForInput);
+		   NULL, "\"I wonder what her real name is...", Line_ContinueAfterTyping);
+	Wait (2000)
 	OutputLine(NULL, "…レナが戻ってきたら聞いてみるかな！」",
 		   NULL, " Let's ask her when she comes back!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //　沙都子と梨花ちゃんが顔を向かい合わせる￥
 	OutputLine(NULL, "　沙都子と梨花ちゃんが顔を向かい合わせる。",
@@ -188,7 +187,8 @@
 //「......聞かなくてもいいですよ＠ボクたちが教えてあげますです。＠
 	PlaySE(3, "s20/05/440500007", 128, 64);		
 	OutputLine(NULL, "「……聞かなくてもいいですよ。",
-		   NULL, "\"...You don't need to ask her.", Line_WaitForInput);
+		   NULL, "\"...You don't need to ask her.", Line_ContinueAfterTyping);
+	Wait (1500)
 	OutputLine(NULL, "ボクたちが教えてあげますです。」",
 		   NULL, " We'll tell you what it is.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -200,12 +200,11 @@
 //「お礼の礼に、奈良の奈＠...竜宮礼奈が本名ですのよ！＠
 	PlaySE(3, "s20/04/440400014", 128, 64);	
 	OutputLine(NULL, "「お礼の礼に、奈良の奈。",
-		   NULL, "\"It's the 'rei' from 'orei' and the 'na' from 'nara.'", Line_WaitForInput);
+		   NULL, "\"It's the 'rei' from 'orei' and the 'na' from 'nara.'", Line_ContinueAfterTyping);
+	Wait (1300)
 	OutputLine(NULL, "…竜宮礼奈が本名ですのよ！」",
 		   NULL, " Her real name is Reina Ryuugu!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //「礼奈か＠.........ふーん＠それでレイナじゃなくてレナって読むのか＠　面白い読み方だよな。＠
 	PlaySE(3, "s20/01/440100032", 128, 64);	
@@ -248,7 +247,8 @@
 //「圭ちゃん＠...レナはレナだよ＠　礼奈って呼ぶのは他人だけ＠そこんとこ、わかってるよね？＠
 	PlaySE(3, "s20/03/440300026", 128, 64);	
 	OutputLine(NULL, "「圭ちゃん。",
-		   NULL, "\"Kei-chan...", Line_WaitForInput);
+		   NULL, "\"Kei-chan...", Line_ContinueAfterTyping);
+	Wait (1000)
 	OutputLine(NULL, "…レナはレナだよ？",
 		   NULL, " Rena is Rena, you know?", Line_WaitForInput);
 	PlaySE(3, "s20/03/440300027", 128, 64);
@@ -292,11 +292,11 @@
 //「面白けりゃね＠何て呼ばれたいわけ？＠
 	PlaySE(3, "s20/03/440300029", 128, 64);	
 	OutputLine(NULL, "「面白けりゃね。",
-		   NULL, "\"If it's good.", Line_WaitForInput);
+		   NULL, "\"If it's good.", Line_ContinueAfterTyping);
+	Wait (1200)
 	OutputLine(NULL, "何て呼ばれたいわけ？」",
 		   NULL, " So what do you want to be called?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
-
 
 	PlaySE( 4, "wa_029", 128, 64 );
 
@@ -329,15 +329,14 @@
 //「あれあれ＠　誰かレナの事を探してたかな＠　かな？＠
 	PlaySE(3, "s20/02/440200034", 128, 64);
 	OutputLine(NULL, "「あれあれ？",
-		   NULL, "\"What's this now?", Line_WaitForInput);
+		   NULL, "\"What's this now?", Line_ContinueAfterTyping);
+	Wait (1000)
 	OutputLine(NULL, "　誰かレナの事を探してたかな？",
 		   NULL, " Who is looking for me, I wonder?", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200035", 128, 64);
 	OutputLine(NULL, "　かな？」",
 		   NULL, " I wonder?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //　それを見てにんまりと笑う俺と魅音￥
 	OutputLine(NULL, "　それを見てにんまりと笑う俺と魅音。",
@@ -360,12 +359,11 @@
 //「越後屋、主も悪よのぅ＠...ふぉっふぉっふぉ！！！＠
 	PlaySE(3, "s20/03/440300030", 128, 64);	
 	OutputLine(NULL, "「越後屋、主も悪よのぅ。",
-		   NULL, "\"Con man, you're quite sinister...", Line_WaitForInput);
+		   NULL, "\"Con man, you're quite sinister...", Line_ContinueAfterTyping);
+	Wait (2800)
 	OutputLine(NULL, "…ふぉっふぉっふぉ！！！」",
 		   NULL, " Hwah hwah hwah!!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 	DrawSceneWithMask( "bg_108", "right", 0, 0, 300 );
 	DrawBustshotWithFiltering( 2, "re_se_bi_b1", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
@@ -373,25 +371,27 @@
 //「なな、何かな何かな？＠　圭一くんと魅ぃちゃんが悪代官だよ＠　越後屋だよ？！￥
 	PlaySE(3, "s20/02/440200036", 128, 64);	
 	OutputLine(NULL, "「なな、何かな何かな？！",
-		   NULL, "\"Wh-What is this, what is this!?", Line_WaitForInput);
+		   NULL, "\"Wh-What is this, what is this!?", Line_ContinueAfterTyping);
+	Wait (2000)
 	OutputLine(NULL, "　圭一くんと魅ぃちゃんが悪代官だよ？",
-		   NULL, " Keiichi-kun and Mii-chan are evil bailiffs?", Line_WaitForInput);
+		   NULL, " Keiichi-kun and Mii-chan are an evil bailiff and...?", Line_ContinueAfterTyping);
+	Wait (800)
 	PlaySE(3, "s20/02/440200037", 128, 64);
 	OutputLine(NULL, "　越後屋だよ？！」",
-		   NULL, " A con man!?\"", Line_Normal);
+		   NULL, " a con man!?\"", Line_Normal);
 	ClearMessage();
 
 //「おのれ竜宮レナの助＠　ここで会ったが百年目でおじゃる＠いざ覚悟～！！＠
 	PlaySE(3, "s20/01/440100038", 128, 64);	
 	OutputLine(NULL, "「おのれ竜宮レナの助！",
-		   NULL, "\"Damn you, Renanosuke Ryuugu!", Line_WaitForInput);
+		   NULL, "\"Damn you, Renanosuke Ryuugu!", Line_ContinueAfterTyping);
+	Wait (2000)
 	OutputLine(NULL, "　ここで会ったが百年目でおじゃる。",
 		   NULL, " Today doth be when thou meetest thy maker.", Line_WaitForInput);
 	PlaySE(3, "s20/01/440100039", 128, 64);
 	OutputLine(NULL, "いざ覚悟〜！！」",
 		   NULL, " Have at thee~!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
 
 	DisableWindow();
 	DrawBustshot( 2, "re_se_na_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
@@ -466,7 +466,7 @@
 //※レナのフリッカーが２発炸裂！
 //　印籠のタイミングでレナの必殺パンチが炸裂する＠
 	OutputLine(NULL, "　印籠のタイミングでレナの必殺パンチが炸裂する。",
-		   NULL, "Rena's fierce punches exploded in the proper timing to take out the seal.", Line_WaitForInput);
+		   NULL, "Rena's fierce punches exploded just as soon as she had shown her seal.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
@@ -478,19 +478,18 @@
 //「...レナにはぜひ世直しの旅に出てもらいたいもんだ＠...永田町なんかどうだ？＠
 	PlaySE(3, "s20/01/440100040", 128, 64);	
 	OutputLine(NULL, "「…レナにはぜひ世直しの旅に出てもらいたいもんだ。",
-		   NULL, "\"...I do hope that Rena does go on a journey to make the world a better place.", Line_WaitForInput);
+		   NULL, "\"...I do hope that Rena does go on a journey to make the world a better place.", Line_ContinueAfterTyping);
+	Wait (2600)
 	OutputLine(NULL, "…永田町なんかどうだ？」",
-		   NULL, " How about heading to Nagata-chou?\"", Line_WaitForInput);
+		   NULL, " How about heading to parliament first?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //「......ダメだよ＠旅先でかぁいいものをチョロまかすから。」/
 	PlaySE(3, "s20/03/440300031", 128, 64);		
 	OutputLine(NULL, "「……ダメだよ。",
-		   NULL, "\"...", Line_WaitForInput);
+		   NULL, "\"...spare me.", Line_WaitForInput);
 	OutputLine(NULL, "旅先でかぁいいものをチョロまかすから。」",
-		   NULL, "My destination is decided by where the kyute stuff gathers.\"", Line_ContinueAfterTyping);
+		   NULL, "I'll get kyute stuff for you on my travels.\"", Line_ContinueAfterTyping);
 
 	PlaySE( 4, "wa_002", 128, 64 );
 	Wait( 200 );
