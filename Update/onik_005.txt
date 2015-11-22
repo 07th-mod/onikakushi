@@ -1128,7 +1128,7 @@
 
 //　万が一自分が負けた時には「角の折ってあるメモ」を引き当てれば安全ってわけか＠
 	OutputLine(NULL, "　万が一自分が負けた時には「角の折ってあるメモ」を引き当てれば安全ってわけか。",
-		   NULL, "Just in case you lost, you grabbed the note with the folded corner and you'd be safe.", Line_WaitForInput);
+		   NULL, "Just in case you lost, just grab the note with the folded corner and you'd be safe.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1463,13 +1463,12 @@
 	PlaySE(3, "s19/03/990300292", 256, 64);
 	OutputLine(NULL, "「……だッ？！",
 		   NULL, "\"...Wha!?", Line_ContinueAfterTyping);
-
 	SetValidityOfInput( FALSE );
-	Wait( 400 );
+	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-
 	OutputLine(NULL, "　誰これ？！",
 		   NULL, " Who did this!?", Line_WaitForInput);
+
 	PlaySE(3, "s19/03/990300293", 256, 64);
 	OutputLine(NULL, "　書いたヤツだれぇえぇえ？！」",
 		   NULL, " Who wrote thiiiiis!?\"", Line_WaitForInput);
@@ -1701,8 +1700,8 @@
 
 //「…校長先生のエアリアル起動技です。＠
 	PlaySE(3, "s19/05/990500067", 256, 64);
-	OutputLine(NULL, "「…校長先生のエアリアル起動技です。」",
-		   NULL, "\"...That's the principal's aerial opener!\"", Line_WaitForInput);
+	OutputLine(NULL, "「…校長先生、超奥義発動です。」",
+		   NULL, "\"...The principal's special launcher move just started.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2224,7 +2223,7 @@
 	PlaySE( 4, "wa_029", 128, 64 );
 //"上下１枚ずつ脱衣。"
 	OutputLine(NULL, "“上下１枚ずつ脱衣。”",
-		   NULL, "\"Remove one piece of clothing from the top and bottom halves of your body.\"", Line_Normal);
+		   NULL, "\"Remove one item of clothing from the top and bottom halves of your body.\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -2613,6 +2612,7 @@
 	PlaySE(3, "s19/01/hr_kei07610", 256, 64);
 	OutputLine(NULL, "「魅音の負けだな。",
 		   NULL, "\"Mion's loss, right?", Line_WaitForInput);
+	PlaySE(3, "s19/01/hr_kei07610", 256, 64);
 	OutputLine(NULL, "引くぞ。",
 		   NULL, " I'll draw it out.", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei07630", 256, 64);
@@ -2659,6 +2659,7 @@
 	PlaySE(3, "s19/01/hr_kei07640", 256, 64);
 	OutputLine(NULL, "「レナの負けだな。",
 		   NULL, "\"Rena lost?", Line_WaitForInput);
+	PlaySE(3, "s19/01/hr_kei07650", 256, 64);
 	OutputLine(NULL, "引くぞ。",
 		   NULL, " I'll draw it for you.", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei07660", 256, 64);
@@ -2866,7 +2867,6 @@
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 //　そう＠
-	PlaySE(3, "s19/03/990300629", 256, 64);
 	OutputLine(NULL, "　そう。",
 		   NULL, "That was it.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3773,8 +3773,8 @@
 
 //「あははは～圭一くん、前屈みだぁぁ……かぁいいかぁいいッ！！＠
 	PlaySE(3, "s19/02/990200368", 256, 64);
-	OutputLine(NULL, "「あははは〜圭一くん、前屈みだぁぁ……かぁいいかぁいいッ！！」",
-		   NULL, "\"Ahahaha~ Keiichi-kun is bending forward... kyute kyute!!\"", Line_WaitForInput);
+	OutputLine(NULL, "「あははは〜圭一くん、…かぁいいかぁいいッ！！」",
+		   NULL, "\"Ahahaha~ Keiichi-kun is so... kyute kyute!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -4274,7 +4274,7 @@
 //「富竹のおじさまだってなかなか隅に置けないって噂ですけどぉ？＠
 	PlaySE(3, "s19/03/990300333", 256, 64);
 	OutputLine(NULL, "「富竹のおじさまだってなかなか隅に置けないって噂ですけどぉ？」",
-		   NULL, "\"I've heard through the grapevine that Mr. Tomitake is quite the catch himself, hmm?\"", Line_WaitForInput);
+		   NULL, "\"I've heard through the grapevine that Mr. Tomitake isn't doing so badly himself, hmm?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
