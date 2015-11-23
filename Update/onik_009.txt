@@ -402,21 +402,19 @@ void main()
 
 
 //「そっか。!s250……!sdよっしゃ＠　今日は目いっぱい騒ぐぞぉ！！＠
-	PlaySE(3, "s19/03/500300113", 256, 64);
+	PlaySE(3, "s19/01/hr_kei33560", 256, 64);
 	OutputLine(NULL, "「そっか。",
 		   NULL, "\"I see.", Line_ContinueAfterTyping);
 //!s250
 
 	SetSpeedOfMessage( TRUE, 0, );
-
 	OutputLine(NULL, "……",
 		   NULL, " ...", Line_ContinueAfterTyping);
-
 	SetSpeedOfMessage( FALSE, 0, );
-
-	PlaySE(3, "s19/03/500300599", 256, 64);
+	Wait (400)
 	OutputLine(NULL, "よっしゃ！",
 		   NULL, "All right!", Line_WaitForInput);
+
 	PlaySE(3, "s19/01/hr_kei33570", 256, 64);
 	OutputLine(NULL, "　今日は目いっぱい騒ぐぞぉ！！」",
 		   NULL, " Let's make some noise today!!\"", Line_WaitForInput);
@@ -574,7 +572,7 @@ void main()
 		   NULL, " I'm glad he liked it.", Line_WaitForInput);
 	PlaySE(3, "s19/02/500200796", 256, 64);
 	OutputLine(NULL, "和正くんにもよろしくお伝えくださいね！」",
-		   NULL, " Say hello to Kazuma-kun for me, please!\"", Line_Normal);
+		   NULL, " Say hello to Kazumasa-kun for me, please!\"", Line_Normal);
 	ClearMessage();
 
 
@@ -908,7 +906,7 @@ void main()
 //「梨花ちゃんはお祭りの最後に大切なお仕事があるから、その衣装なの。＠
 	PlaySE(3, "s19/02/500200805", 256, 64);
 	OutputLine(NULL, "「梨花ちゃんはお祭りの最後に大切なお仕事があるから、その衣装なの。」",
-		   NULL, "\"Rika-chan has an important task to do at the end of the festival, so she's wearing this.\"", Line_WaitForInput);
+		   NULL, "\"Rika-chan has an important role to play at the end of the festival, so she's wearing this.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -938,7 +936,7 @@ void main()
 //「ってことはここで時間を無駄にできないということですわ～＠　参りましょう！！＠
 	PlaySE(3, "s19/04/500400682", 256, 64);
 	OutputLine(NULL, "「ってことはここで時間を無駄にできないということですわ〜！",
-		   NULL, "\"But we cannot afford to waste any time~!", Line_WaitForInput);
+		   NULL, "\"So we cannot afford to waste any time~!", Line_WaitForInput);
 	PlaySE(3, "s19/04/500400683", 256, 64);
 	OutputLine(NULL, "　参りましょう！！」",
 		   NULL, " Let us begin!!\"", Line_WaitForInput);
@@ -1497,7 +1495,7 @@ void main()
 	PlaySE(3, "s19/02/500200819", 256, 64);
 	OutputLine(NULL, "「よーいどん！！！",
 		   NULL, "\"Ready... Go!!!\"", Line_ContinueAfterTyping);
-
+	Wait (800)
 	ShakeScreenSx( 1, 1, );
 
 //………あれ＠　圭一くんと梨花ちゃんは…なんでスタートしないんだろ？　しないんだろ？＠
