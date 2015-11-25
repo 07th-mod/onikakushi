@@ -202,7 +202,7 @@ void main()
 
 //　…実の息子が言うのもなんだが、そんなに売れているとは思えない＠
 	OutputLine(NULL, "　…実の息子が言うのもなんだが、そんなに売れているとは思えない。",
-		   NULL, "...Since his own son is saying something like that, I can't imagine he's selling all that well.", Line_WaitForInput);
+		   NULL, "...As his son, it's a bit strange for me to say, but I can't imagine he's selling all that well.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -216,7 +216,7 @@ void main()
 
 //　俺が知らないだけで……ひょっとするとすごい大画伯なのかもしれない…￥
 	OutputLine(NULL, "　俺が知らないだけで……ひょっとするとすごい大画伯なのかもしれない…。",
-		   NULL, "It could be that he's some master painter... and I didn't know about it...", Line_Normal);
+		   NULL, "Maybe he's actually a master painter... and I just never knew it...", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_028", 128, 64 );
@@ -295,7 +295,7 @@ void main()
 		   NULL, "\"Don't get all flustered!", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei33510", 256, 64);
 	OutputLine(NULL, "　実に気まずい！",
-		   NULL, " It really doesn't feel right!", Line_WaitForInput);
+		   NULL, " This feels so awkward!", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei33520", 256, 64);
 	OutputLine(NULL, "　行くぞレナ！」",
 		   NULL, " Let's go, Rena!\"", Line_WaitForInput);
@@ -402,21 +402,19 @@ void main()
 
 
 //「そっか。!s250……!sdよっしゃ＠　今日は目いっぱい騒ぐぞぉ！！＠
-	PlaySE(3, "s19/03/500300113", 256, 64);
+	PlaySE(3, "s19/01/hr_kei33560", 256, 64);
 	OutputLine(NULL, "「そっか。",
 		   NULL, "\"I see.", Line_ContinueAfterTyping);
 //!s250
 
 	SetSpeedOfMessage( TRUE, 0, );
-
 	OutputLine(NULL, "……",
 		   NULL, " ...", Line_ContinueAfterTyping);
-
 	SetSpeedOfMessage( FALSE, 0, );
-
-	PlaySE(3, "s19/03/500300599", 256, 64);
+	Wait (400)
 	OutputLine(NULL, "よっしゃ！",
 		   NULL, "All right!", Line_WaitForInput);
+
 	PlaySE(3, "s19/01/hr_kei33570", 256, 64);
 	OutputLine(NULL, "　今日は目いっぱい騒ぐぞぉ！！」",
 		   NULL, " Let's make some noise today!!\"", Line_WaitForInput);
@@ -574,7 +572,7 @@ void main()
 		   NULL, " I'm glad he liked it.", Line_WaitForInput);
 	PlaySE(3, "s19/02/500200796", 256, 64);
 	OutputLine(NULL, "和正くんにもよろしくお伝えくださいね！」",
-		   NULL, " Say hello to Kazuma-kun for me, please!\"", Line_Normal);
+		   NULL, " Say hello to Kazumasa-kun for me, please!\"", Line_Normal);
 	ClearMessage();
 
 
@@ -908,7 +906,7 @@ void main()
 //「梨花ちゃんはお祭りの最後に大切なお仕事があるから、その衣装なの。＠
 	PlaySE(3, "s19/02/500200805", 256, 64);
 	OutputLine(NULL, "「梨花ちゃんはお祭りの最後に大切なお仕事があるから、その衣装なの。」",
-		   NULL, "\"Rika-chan has an important task to do at the end of the festival, so she's wearing this.\"", Line_WaitForInput);
+		   NULL, "\"Rika-chan has an important role to play at the end of the festival, so she's wearing this.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -938,7 +936,7 @@ void main()
 //「ってことはここで時間を無駄にできないということですわ～＠　参りましょう！！＠
 	PlaySE(3, "s19/04/500400682", 256, 64);
 	OutputLine(NULL, "「ってことはここで時間を無駄にできないということですわ〜！",
-		   NULL, "\"But we cannot afford to waste any time~!", Line_WaitForInput);
+		   NULL, "\"So we cannot afford to waste any time~!", Line_WaitForInput);
 	PlaySE(3, "s19/04/500400683", 256, 64);
 	OutputLine(NULL, "　参りましょう！！」",
 		   NULL, " Let us begin!!\"", Line_WaitForInput);
@@ -1497,7 +1495,7 @@ void main()
 	PlaySE(3, "s19/02/500200819", 256, 64);
 	OutputLine(NULL, "「よーいどん！！！",
 		   NULL, "\"Ready... Go!!!\"", Line_ContinueAfterTyping);
-
+	Wait (800)
 	ShakeScreenSx( 1, 1, );
 
 //………あれ＠　圭一くんと梨花ちゃんは…なんでスタートしないんだろ？　しないんだろ？＠
@@ -1569,9 +1567,10 @@ void main()
 
 	SetSpeedOfMessage( TRUE, 0, );
 	OutputLine(NULL, "……",
-		   NULL, "......", Line_WaitForInput);
+		   NULL, "......", Line_ContinueAfterTyping);
 
 	SetSpeedOfMessage( FALSE, 0, );
+	Wait (1200)
 	OutputLine(NULL, "初めてだな。」",
 		   NULL, " We've gone head-to-head like this.\"", Line_Normal);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -2060,6 +2059,8 @@ void main()
 	DrawBustshotWithFiltering( 1, "me_si_th_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「………圭ちゃんの方がわかんね～センスしてるよー。￥
+// I feel this line needs a better translation, but haven't thought of one yet!
+// kind of like "...I think you're the one with the poor tastes." (she's talking about Keiichi's affinity for Rika's little loli-moe act, hence the following mental anguish instilled on Keiichi on having it pointed out)
 	PlaySE(3, "s19/03/500300721", 256, 64);
 	OutputLine(NULL, "「………圭ちゃんの方がわかんね〜センスしてるよー。」",
 		   NULL, "\"...Kei-chan has a pretty weird definition of 'art.'\"", Line_Normal);
@@ -2230,7 +2231,7 @@ void main()
 //「圭ちゃんに限って……いやまさか……。＠
 	PlaySE(3, "s19/03/500300724", 256, 64);
 	OutputLine(NULL, "「圭ちゃんに限って……いやまさか……。」",
-		   NULL, "\"This is Kei-chan, after all... No, it couldn't be...\"", Line_WaitForInput);
+		   NULL, "\"Kei-chan, wouldn't stoop to... no, would he?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2603,8 +2604,8 @@ void main()
 	OutputLine(NULL, "「な、…なぁんだ…！",
 		   NULL, "\"Oh... Ohhh...!", Line_WaitForInput);
 	PlaySE(3, "s19/03/500300732", 256, 64);
-	OutputLine(NULL, "　てっきりおじさんは圭一のかぁいいオットセイかと〜！！」",
-		   NULL, " This old man thought you meant it was Keiichi's kyute little fur seal!!\"", Line_WaitForInput);
+	OutputLine(NULL, "　てっきりおじさんは圭ちゃんの・・・　あははははっはぁ～！！」",
+		   NULL, " This old man thought you meant it was Keiichi's... Ahahaha.. haaa!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2768,7 +2769,7 @@ void main()
 //「御陰様でね＠いい絵がたくさん撮れたよ。＠
 	PlaySE(3, "s19/08/500800003", 256, 64);
 	OutputLine(NULL, "「御陰様でね。",
-		   NULL, "\"Thanks to you.", Line_WaitForInput);
+		   NULL, "\"Yes, thanks for asking.", Line_WaitForInput);
 	PlaySE(3, "s19/08/500800004", 256, 64);
 	OutputLine(NULL, "いい絵がたくさん撮れたよ。」",
 		   NULL, " I got plenty of good shots.\"", Line_WaitForInput);
@@ -3226,8 +3227,8 @@ void main()
 	OutputLine(NULL, "「身包み剥いでッ！！",
 		   NULL, "\"We'll leave you with nothing!", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei34020", 256, 64);	
-	OutputLine(NULL, "　ケツの毛までひん剥いてやるぜぇえぇえッ！！！！」",
-		   NULL, " We won't even leave the hairs on your butt!!\"", Line_WaitForInput);
+	OutputLine(NULL, "　地獄の底に叩き落としてやるぜぇえぇえッ！！！！」",
+		   NULL, " -and beat you into the depths of hell!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3564,7 +3565,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 3, "sa_si_aw_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	DrawBustshotWithFiltering( 3, "ri_mk_ni_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「…くまさんを落とせれば勝利は確定しますですね。＠
 	PlaySE(3, "s19/05/500500302", 256, 64);
@@ -4710,7 +4711,7 @@ void main()
 //「つまり、圭ちゃんと梨花ちゃんは手堅く、ラクなものを撃ち落せばビリ回避ってわけだね。＠
 	PlaySE(3, "s19/03/500300757", 256, 64);
 	OutputLine(NULL, "「つまり、圭ちゃんと梨花ちゃんは手堅く、ラクなものを撃ち落せばビリ回避ってわけだね。」",
-		   NULL, "\"So both Kei-chan and Rika-chan can just shoot down a small, easy prize and avoid being dead last.\"", Line_WaitForInput);
+		   NULL, "\"So both Kei-chan and Rika-chan can just shoot down a sure, easy prize and avoid being dead last.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -4764,7 +4765,7 @@ void main()
 
 //　非情に徹するなら魅音の言う通り、ここは小物狙いだ＠……だが……！￥
 	OutputLine(NULL, "　非情に徹するなら魅音の言う通り、ここは小物狙いだ。",
-		   NULL, "If I took the ruthless route, as Mion had suggested, then I'd go for a small target.", Line_WaitForInput);
+		   NULL, "If I took the ruthless route, as Mion had suggested, then I'd go for something insignificant.", Line_WaitForInput);
 	OutputLine(NULL, "……だが……！！",
 		   NULL, " ...Except...!!", Line_Normal);
 	ClearMessage();
@@ -4872,7 +4873,7 @@ void main()
 	OutputLine(NULL, "　兄ちゃんいいぞぉ！！",
 		   NULL, " Cool, onii-chan!!", Line_WaitForInput);
 	OutputLine(NULL, "　男見せたれぇえぇええぇッ！！！！」",
-		   NULL, " You got balls maaaan!!!!\"", Line_Normal);
+		   NULL, " Show us what you've got!!!!\"", Line_Normal);
 	ClearMessage();
 
 
