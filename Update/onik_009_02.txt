@@ -1548,16 +1548,13 @@ void main()
 		   NULL, " Or it may have been because of a pre-existing condition.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
 //「でも、奇病ですよ＠　この医学の進歩した時代に原因不明なんて…。￥
 	PlaySE(3, "s01/01/120100029", 256, 64);	
 	OutputLine(NULL, "「でも、奇病ですよ？",
-		   NULL, "\"But it was an unknown illness.", Line_WaitForInput);
+		   NULL, "\"But it was an unknown illness.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　この医学の進歩した時代に原因不明なんて…。」",
-		   NULL, " It's hard to believe something with an unknown cause could exist with all our advances in medicine...\"", Line_Normal);
+		   NULL, " It's hard to believe such a thing could exist with all our advances in medicine...\"", Line_Normal);
 	ClearMessage();
-
 
 //「尾ひれだよ＠噂が噂を呼んだだけさ＠
 	PlaySE(3, "s01/08/120800076", 256, 64);
