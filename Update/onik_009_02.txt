@@ -1548,16 +1548,13 @@ void main()
 		   NULL, " Or it may have been because of a pre-existing condition.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
 //「でも、奇病ですよ＠　この医学の進歩した時代に原因不明なんて…。￥
 	PlaySE(3, "s01/01/120100029", 256, 64);	
 	OutputLine(NULL, "「でも、奇病ですよ？",
-		   NULL, "\"But it was an unknown illness.", Line_WaitForInput);
+		   NULL, "\"But it was an unknown illness.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　この医学の進歩した時代に原因不明なんて…。」",
-		   NULL, " It's hard to believe something with an unknown cause could exist with all our advances in medicine...\"", Line_Normal);
+		   NULL, " It's hard to believe such a thing could exist with all our advances in medicine...\"", Line_Normal);
 	ClearMessage();
-
 
 //「尾ひれだよ＠噂が噂を呼んだだけさ＠
 	PlaySE(3, "s01/08/120800076", 256, 64);
@@ -1725,7 +1722,7 @@ void main()
 		   NULL, " Even if Oyashiro-sama's curse actually did exist,", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800096", 256, 64);
 	OutputLine(NULL, "そんな圭一くんに祟りがあるなんてとても思えないね。」",
-		   NULL, " Keiichi-kun couldn't bring himself to believe that such a thing existed.\"", Line_Normal);
+		   NULL, " I can't imagine that Keiichi-kun would become a target.\"", Line_Normal);
 	ClearMessage();
 
 
@@ -2058,7 +2055,7 @@ void main()
 
 //　甘いぜ富竹さん。これがあるからうちの部は負けられないんだよ…￥
 	OutputLine(NULL, "　甘いぜ富竹さん。これがあるからうちの部は負けられないんだよ…。",
-		   NULL, "You're too naive, Tomitake-san. This is why our club can never lose...", Line_Normal);
+		   NULL, "You're too naive, Tomitake-san. This is why you've got to avoid losing in our club...", Line_Normal);
 	ClearMessage();
 
 
@@ -2093,7 +2090,7 @@ void main()
 		   NULL, "\"Ahaha, it just has to be permanent.", Line_WaitForInput);
 	PlaySE(3, "s01/03/120300006", 256, 64);
 	OutputLine(NULL, "お洗濯したら落ちちゃうじゃない。」",
-		   NULL, " It comes off when you do the laundry, anyway.\"", Line_WaitForInput);
+		   NULL, " Water-based marker would come off in the laundry.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2456,7 +2453,7 @@ void main()
 //「こんな時間だけど、…１人で大丈夫か？＠
 	PlaySE(3, "s01/01/120100042", 256, 64);
 	OutputLine(NULL, "「こんな時間だけど、…１人で大丈夫か？」",
-		   NULL, "\"It's already pretty late. Are you all right by yourself?\"", Line_WaitForInput);
+		   NULL, "\"It's already pretty late. Are you alright by yourself?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2489,7 +2486,7 @@ void main()
 //「出したら…助けに来てくれるのかな？……かな？＠
 	PlaySE(3, "s01/02/120200008", 256, 64);
 	OutputLine(NULL, "「出したら…助けに来てくれるのかな？……かな？」",
-		   NULL, "\"If someone does come... will you come and save me, maybe? ...Maybe?\"", Line_WaitForInput);
+		   NULL, "\"If I do shout... will you come and save me, maybe? ...Maybe?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2544,7 +2541,7 @@ void main()
 
 //　誰もが微塵ほども口にしない祟りの話＠……知れば知るほどに不安になる、今夜￥
 	OutputLine(NULL, "　誰もが微塵ほども口にしない祟りの話。",
-		   NULL, "The curse that not a single person even whispered about.", Line_WaitForInput);
+		   NULL, "The curse that not a soul mentioned, even under their breath.", Line_WaitForInput);
 	OutputLine(NULL, "……知れば知るほどに不安になる、今夜。",
 		   NULL, " ...The more I learned about it tonight, the more unsettling it became.", Line_Normal);
 	ClearMessage();
