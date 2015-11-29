@@ -931,23 +931,19 @@ void main()
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
 //　箱の中に隠していた正解のカードを取りだし、魅音の推理を検証する…￥
 	OutputLine(NULL, "　箱の中に隠していた正解のカードを取りだし、魅音の推理を検証する…。",
 		   NULL, "Mion drew the cards from the box and we checked to see if her deduction was right...", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 2, "left", 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshot( 3, "re_se_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	DrawBustshot( 2, "me_se_to_b2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「正解だねッ！！＠
 	PlaySE(3, "s01/03/120300038", 256, 64);
 	OutputLine(NULL, "「正解だねッ！！」",
-		   NULL, "\"You were right!!\"", Line_WaitForInput);
+		   NULL, "\"I was right!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 	DisableWindow();
 	DrawBustshotWithFiltering( 1, "sa_se_bi_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
