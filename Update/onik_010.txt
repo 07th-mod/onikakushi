@@ -176,7 +176,7 @@ void main()
 
 //　その様子を見て悶絶するレナに呆れる魅音￥
 	OutputLine(NULL, "　その様子を見て悶絶するレナに呆れる魅音。",
-		   NULL, "Seeing that, Rena began to swoon as Mion looked on dejectedly.", Line_Normal);
+		   NULL, "Seeing that, Rena began to swoon as Mion looked on in disbelief.", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -501,7 +501,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "re_se_de_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 3, "me_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「つまりね＠これらのカードが１枚づつ抜かれるの＠それが正解のカード。＠
 	PlaySE(3, "s01/03/120300018", 256, 64);
@@ -515,10 +515,6 @@ void main()
 		   NULL, " These are the answer cards.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
-	DisableWindow();
-	DrawBustshotWithFiltering( 3, "me_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「で、残ったカードはシャッフルしてみんなで等分＠互いに手持ちのカードを質問しあって、抜かれた正解のカードが何かを探るわけ！￥
 	PlaySE(3, "s01/03/120300021", 256, 64);
@@ -538,7 +534,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshot( 1, "re_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	DrawBustshot( 3, "me_se_wa_b1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「それで、答えがわかったら挙手＠　ゲームを終了して答えが正しいかを確認。＠
 	PlaySE(3, "s01/03/120300023", 256, 64);
@@ -735,7 +731,7 @@ void main()
 
 //　犯人、凶器、犯行現場を１つ選び、全員に尋ねる＠
 	OutputLine(NULL, "　犯人、凶器、犯行現場を１つ選び、全員に尋ねる。",
-		   NULL, "You pick one suspect, weapon, and murder scene and ask each person.", Line_WaitForInput);
+		   NULL, "You pick one suspect, weapon, and murder scene and ask the other players.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -935,23 +931,19 @@ void main()
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
 //　箱の中に隠していた正解のカードを取りだし、魅音の推理を検証する…￥
 	OutputLine(NULL, "　箱の中に隠していた正解のカードを取りだし、魅音の推理を検証する…。",
 		   NULL, "Mion drew the cards from the box and we checked to see if her deduction was right...", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 2, "left", 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshot( 3, "re_se_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	DrawBustshot( 2, "me_se_to_b2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「正解だねッ！！＠
 	PlaySE(3, "s01/03/120300038", 256, 64);
 	OutputLine(NULL, "「正解だねッ！！」",
-		   NULL, "\"You were right!!\"", Line_WaitForInput);
+		   NULL, "\"I was right!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 	DisableWindow();
 	DrawBustshotWithFiltering( 1, "sa_se_bi_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
@@ -1486,7 +1478,7 @@ void main()
 
 
 //「うん。わかったね！￥
-	PlaySE(3, "s01/02/120200035", 256, 64);
+	PlaySE(3, "s01/02/120200035", 256, 64);// Missing sound
 	OutputLine(NULL, "「うん。わかったね！」",
 		   NULL, "\"Okay. Got it!\"", Line_Normal);
 	ClearMessage();
@@ -1598,7 +1590,7 @@ void main()
 
 //　これから大勝負というこの時に来客とはツイていないが、それ以上に俺への来客という珍事に興味を覚えた＠
 	OutputLine(NULL, "　これから大勝負というこの時に来客とはツイていないが、それ以上に俺への来客という珍事に興味を覚えた。",
-		   NULL, "It was rather unfortunate that I'd have someone waiting on me right before my big match, but I was more interested in the unexpected guest.", Line_WaitForInput);
+		   NULL, "Right before my big match was pretty bad timing to have a visitor, but the very fact that someone was here to see me was strange enough to pique my interest.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1650,7 +1642,7 @@ void main()
 
 //　……どうも富竹さん以降、俺は中年男に縁があるようだな…￥
 	OutputLine(NULL, "　……どうも富竹さん以降、俺は中年男に縁があるようだな…。",
-		   NULL, "...Ever since I met Tomitake-san, I'd been running into so many middle-aged men...", Line_Normal);
+		   NULL, "...Ever since I met Tomitake-san, it seemed I was fated to meet middle-aged men...", Line_Normal);
 	ClearMessage();
 
 
