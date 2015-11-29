@@ -501,7 +501,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "re_se_de_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 3, "me_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「つまりね＠これらのカードが１枚づつ抜かれるの＠それが正解のカード。＠
 	PlaySE(3, "s01/03/120300018", 256, 64);
@@ -515,10 +515,6 @@ void main()
 		   NULL, " These are the answer cards.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
-	DisableWindow();
-	DrawBustshotWithFiltering( 3, "me_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「で、残ったカードはシャッフルしてみんなで等分＠互いに手持ちのカードを質問しあって、抜かれた正解のカードが何かを探るわけ！￥
 	PlaySE(3, "s01/03/120300021", 256, 64);
@@ -538,7 +534,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshot( 1, "re_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	DrawBustshot( 3, "me_se_wa_b1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「それで、答えがわかったら挙手＠　ゲームを終了して答えが正しいかを確認。＠
 	PlaySE(3, "s01/03/120300023", 256, 64);
