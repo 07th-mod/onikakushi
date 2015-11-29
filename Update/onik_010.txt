@@ -731,7 +731,7 @@ void main()
 
 //　犯人、凶器、犯行現場を１つ選び、全員に尋ねる＠
 	OutputLine(NULL, "　犯人、凶器、犯行現場を１つ選び、全員に尋ねる。",
-		   NULL, "You pick one suspect, weapon, and murder scene and ask each person.", Line_WaitForInput);
+		   NULL, "You pick one suspect, weapon, and murder scene and ask the other players.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1482,7 +1482,7 @@ void main()
 
 
 //「うん。わかったね！￥
-	PlaySE(3, "s01/02/120200035", 256, 64);
+	PlaySE(3, "s01/02/120200035", 256, 64);// Missing sound
 	OutputLine(NULL, "「うん。わかったね！」",
 		   NULL, "\"Okay. Got it!\"", Line_Normal);
 	ClearMessage();
