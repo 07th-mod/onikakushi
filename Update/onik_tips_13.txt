@@ -27,9 +27,9 @@
 //　爪の間に肉や皮がびっしり詰まっとった＠他人の爪じゃない＠間違いなく本人の爪じゃわい＠傷の形も一致する。￥
 	PlaySE(3, "s20/00/443200002", 128, 64);	
 	OutputLine(NULL, "　爪の間に肉や皮がびっしり詰まっとった。",
-		   NULL, "Tissue is packed under the nails.", Line_WaitForInput);
+		   NULL, "Tissue is packed under the nails.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "他人の爪じゃない。",
-		   NULL, " Not someone else's nails.", Line_WaitForInput);
+		   NULL, " Not someone else's nails.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "間違いなく本人の爪じゃわい。",
 		   NULL, " It's undoubtedly by the individual's own nails.", Line_WaitForInput);
 	PlaySE(3, "s20/00/443200003", 128, 64);
@@ -42,7 +42,7 @@
 //「えぇえぇ＠直接死因が自殺ってのはわかってますよ。＠
 	PlaySE(3, "s20/11/440700009", 128, 64);	
 	OutputLine(NULL, "「えぇえぇ。",
-		   NULL, "\"Yeaaaah...", Line_WaitForInput);
+		   NULL, "\"Yeaaaah...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "直接死因が自殺ってのはわかってますよ。」",
 		   NULL, " I know the immediate cause of death was suicide.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -52,7 +52,7 @@
 //「わかっとるわい＠人為的にこういう症状が起こせんかと言っとるんだろう？＠
 	PlaySE(3, "s20/00/443200004", 128, 64);	
 	OutputLine(NULL, "「わかっとるわい。",
-		   NULL, "\"I get it.", Line_WaitForInput);
+		   NULL, "\"I get it.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "人為的にこういう症状が起こせんかと言っとるんだろう？」",
 		   NULL, " You're saying the cause of death is unnatural, right?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -64,7 +64,7 @@
 //「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。￥
 	PlaySE(3, "s20/11/440700010", 128, 64);
 	OutputLine(NULL, "「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。」",
-		   NULL, "\"It's kind of like when your back itches and you scratch a little too hard and draw blood.\"", Line_Normal);
+		   NULL, "\"It's not quite on the same level as when your back itches and you scratch a little too hard and draw blood, after all.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawBustshotWithFiltering( 5, "black", "down", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
