@@ -3757,14 +3757,14 @@ void main()
 		   NULL, "\"With the Rope, in the...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 300 );
+	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……う〜ん",
 		   NULL, " hmm...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 300 );
+	Wait( 2500 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "………ラウンジ！！！」",
@@ -3779,7 +3779,8 @@ void main()
 //「わっはっはっはッ！＠　ハッズレ～～！！＠
 	PlaySE(3, "s01/03/120300042", 256, 64);		
 	OutputLine(NULL, "「わっはっはっはッ！！",
-		   NULL, "\"Bwahahaha!!", Line_WaitForInput);
+		   NULL, "\"Bwahahaha!!", Line_ContinueAfterTyping);
+	Wait (1200);
 	OutputLine(NULL, "　ハッズレ〜〜！！」",
 		   NULL, " Nooope~~!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
