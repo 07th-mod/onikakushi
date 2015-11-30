@@ -2080,12 +2080,11 @@ void main()
 //「前原さんは…その…祟りとかを信じていますか＠　率直なところで結構です。＠
 	PlaySE(3, "s01/11/120700023", 256, 64);
 	OutputLine(NULL, "「前原さんは…その…祟りとかを信じていますか？",
-		   NULL, "\"Do you know of that... well, curse, Maebara-san?", Line_WaitForInput);
+		   NULL, "\"Maebara-san... do you believe in the curse?", Line_ContinueAfterTyping);
+	Wait (5500);
 	OutputLine(NULL, "　率直なところで結構です。」",
 		   NULL, " Feel free to speak openly about it.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 
 	FadeOutBGM( 1, 1000, TRUE );
@@ -2359,13 +2358,13 @@ void main()
 
 
 //　爪？＠　爪って、指についてる…この爪か？＠　それで…ガリガリと？！？￥
-	PlaySE(3, "s01/01/120100108", 256, 64);	
+//	PlaySE(3, "s01/01/120100108", 256, 64);	// Wrong sound (the one matching this line seems to be missing)
 	OutputLine(NULL, "　爪？！",
 		   NULL, "\"Nails!?", Line_WaitForInput);
 	OutputLine(NULL, "　爪って、指についてる…この爪か？！",
 		   NULL, " As in fingernails!?", Line_WaitForInput);
 	OutputLine(NULL, "　それで…ガリガリと？！？！",
-		   NULL, " With those... he clawed through...?!", Line_Normal);
+		   NULL, " You mean... his neck was clawed through...?!", Line_Normal);
 	ClearMessage();
 
 
@@ -2397,7 +2396,7 @@ void main()
 
 //　富竹さんは…何を思ったか、自分の爪で力いっぱいガリガリと＠　喉を掻き毟りだしたのだ＠
 	OutputLine(NULL, "　富竹さんは…何を思ったか、自分の爪で力いっぱいガリガリと！",
-		   NULL, "Tomitake-san thought there was a reason to tear open his own throat!", Line_WaitForInput);
+		   NULL, "Tomitake-san - whatever was going through his mind - tore open his own throat!", Line_WaitForInput);
 	OutputLine(NULL, "　喉を掻き毟りだしたのだ。",
 		   NULL, " As hard as he could with his own nails.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -2606,7 +2605,7 @@ void main()
 //「死亡推定時刻は２１時から２３時頃のようです＠つまり…お祭りで前原さんが富竹さんとお話して別れてからからすぐの出来事なんですよ。＠
 	PlaySE(3, "s01/11/120700055", 256, 64);
 	OutputLine(NULL, "「死亡推定時刻は２１時から２３時頃のようです。",
-		   NULL, "\"The presumed time of death was around 9:23pm.", Line_WaitForInput);
+		   NULL, "\"The presumed time of death was between 9pm and 11pm.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700056", 256, 64);	
 	OutputLine(NULL, "つまり…お祭りで前原さんが富竹さんとお話して別れてからからすぐの出来事なんですよ。」",
 		   NULL, " Meaning... it occurred right after you finished talking to Tomitake-san at the festival.\"", Line_WaitForInput);
