@@ -51,7 +51,7 @@ void main()
 	DisableWindow();
 	DrawBustshotWithFiltering( 1, "me_se_wi_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
 
-//「圭ちゃんが喜びそうなＨ番組なんかやってたっけぇ？＠
+//「圭ちゃんが喜びそうなＨ番組なんかやってたっけぇ？＠ // Mion doesn't say the "H" part in the audio.. makes Satoko's line seem really weird so I'm leaving this unchanged (maybe Sui had a different follow-up line?)
 	PlaySE(3, "s01/03/120300057", 256, 64);	
 	OutputLine(NULL, "「圭ちゃんが喜びそうなＨ番組なんかやってたっけぇ？」",
 		   NULL, "\"Was one of those raunchy TV shows you love so much on last night?\"", Line_WaitForInput);
@@ -839,7 +839,7 @@ void main()
 		   NULL, "\"N-Not bad, Satokoooo!!", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100166", 256, 64);
 	OutputLine(NULL, "　俺が寝ている間に…気配を消してこれだけの上等をやってくれるたぁよぅ…！！！」",
-		   NULL, " While I was sleeping, you were able to conceal your presence and able to pull off this fine piece of work!\"", Line_WaitForInput);
+		   NULL, " While I was sleeping, you were able to conceal your presence to pull off this fine piece of work!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1188,8 +1188,8 @@ void main()
 
 //「…家業手伝いは除くと書いてありますです。＠
 	PlaySE(3, "s01/05/120500020", 256, 64);
-	OutputLine(NULL, "「…家業手伝いは除くと書いてありますです。」",
-		   NULL, "\"...There's a clause that states family businesses are excluded.\"", Line_WaitForInput);
+	OutputLine(NULL, "「…家事手伝いは除くと書いてありますです。」",
+		   NULL, "\"...There's a clause that states household chores are excluded.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1492,11 +1492,11 @@ void main()
 
 //「…いっぱいいっぱい慰みものにされましたですね＠かわいそかわいそです。＠
 	PlaySE(3, "s01/05/120500024", 256, 64);	
-	OutputLine(NULL, "「…いっぱいいっぱい慰みものにされましたですね。",
-		   NULL, "\"...She was used as a plaything for quite a while.", Line_WaitForInput);
+	OutputLine(NULL, "「…いっぱいいっぱい甚振られましたですね。",
+		   NULL, "\"...Being picked on so much by Keiichi-kun.", Line_WaitForInput);
 	PlaySE(3, "s01/05/120500025", 256, 64);
 	OutputLine(NULL, "かわいそかわいそです。」",
-		   NULL, " How unfortunate.\"", Line_WaitForInput);
+		   NULL, " You poor thing.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3002,7 +3002,7 @@ void main()
 
 //　ふと意識が戻り、階下の母が呼んでいるのが聞こえた￥
 	OutputLine(NULL, "　ふと意識が戻り、階下の母が呼んでいるのが聞こえた。",
-		   NULL, "Finally, I returned to my senses as I heard my mother calling out to me from the bottom of the steps.", Line_Normal);
+		   NULL, "Finally, I returned to my senses as I heard my mother calling out to me from the bottom of the stairs.", Line_Normal);
 	ClearMessage();
 
 
@@ -3358,9 +3358,9 @@ void main()
 	PlaySE(3, "s01/11/120700145", 256, 64);
 	OutputLine(NULL, "最初の事件、ご存知ですよね？",
 		   NULL, " Do you know the first incident?", Line_WaitForInput);
-	PlaySE(3, "s01/11/120700146", 256, 64);	
+	PlaySE(3, "s01/11/120700146", 256, 64);	// missing line
 	OutputLine(NULL, "　バラバラ殺人。」",
-		   NULL, " The murder by dismemberment?\"", Line_WaitForInput);
+		   NULL, " The murder by dismemberment.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3566,7 +3566,7 @@ void main()
 
 //　…ダイバーが沼に潜りいくつかの遺品を回収したが肝心の死体は発見できなかった＠
 	OutputLine(NULL, "　…ダイバーが沼に潜りいくつかの遺品を回収したが肝心の死体は発見できなかった。",
-		   NULL, "...A diver was able to recover a few remnants, but they weren't able to find a body.", Line_WaitForInput);
+		   NULL, "...A diver was able to recover a few of her articles, but they weren't able to find a body.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3580,7 +3580,7 @@ void main()
 //「これらを鬼隠しと呼んでいいかはちょぉっとわかりませんがね＠前原さんの言う通り、確かに毎年１人、行方不明になっています。＠
 	PlaySE(3, "s01/11/120700157", 256, 64);
 	OutputLine(NULL, "「これらを鬼隠しと呼んでいいかはちょぉっとわかりませんがね。",
-		   NULL, "\"I'm not sure if we could call these cases as being demoned away.", Line_WaitForInput);
+		   NULL, "\"I'm not sure if we could refer these cases as being demoned away.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700158", 256, 64);
 	OutputLine(NULL, "前原さんの言う通り、確かに毎年１人、行方不明になっています。」",
 		   NULL, " It's just as you've said. Every year, one person does go missing.\"", Line_WaitForInput);
@@ -3607,8 +3607,8 @@ void main()
 	OutputLine(NULL, "「えぇ逮捕されてます。",
 		   NULL, "\"Yeah, we arrested him.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700160", 256, 64);	
-	OutputLine(NULL, "覚醒剤の常習歴もあるトンチンカンでしてね。",
-		   NULL, " He was just a miscreant with a record of narcotics abuse.", Line_WaitForInput);
+	OutputLine(NULL, "以前に、逮捕歴もあるやつでしてね。",
+		   NULL, " He already had a criminal record from before.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700161", 256, 64);
 	OutputLine(NULL, "別件で取調べ中に犯行を自供してます。",
 		   NULL, " He admitted to the crime while being questioned about a different incident.", Line_WaitForInput);
@@ -3641,7 +3641,7 @@ void main()
 //「さぁ…多分単独犯だと思います＠もっとも、今では確かめようもないんですよ＠……実はその男、取り調べ中に、拘置所内でお亡くなりになっちゃいまして。￥
 	PlaySE(3, "s01/11/120700166", 256, 64);
 	OutputLine(NULL, "「さぁ…多分単独犯だと思います。",
-		   NULL, "\"No idea... It's considered a separate case.", Line_WaitForInput);
+		   NULL, "\"No idea... It was most likely only the one perpetrator.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700167", 256, 64);
 	OutputLine(NULL, "もっとも、今では確かめようもないんですよ。",
 		   NULL, " Moreover, we can't even check now.", Line_WaitForInput);
@@ -4559,7 +4559,7 @@ void main()
 
 //　……大石さんとしていた、不穏な、不用意な数々の会話が頭を過ぎる……￥
 	OutputLine(NULL, "　……大石さんとしていた、不穏な、不用意な数々の会話が頭を過ぎる……。",
-		   NULL, "...All of the ominous things and all the nonsense I spoke to Ooishi-san about began rushing through my head...", Line_Normal);
+		   NULL, "...All of the unsettling and unguarded things I spoke to Ooishi-san about began rushing through my head...", Line_Normal);
 	ClearMessage();
 
 
