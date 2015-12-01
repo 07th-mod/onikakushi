@@ -2080,12 +2080,11 @@ void main()
 //「前原さんは…その…祟りとかを信じていますか＠　率直なところで結構です。＠
 	PlaySE(3, "s01/11/120700023", 256, 64);
 	OutputLine(NULL, "「前原さんは…その…祟りとかを信じていますか？",
-		   NULL, "\"Do you know of that... well, curse, Maebara-san?", Line_WaitForInput);
+		   NULL, "\"Maebara-san... do you believe in the curse?", Line_ContinueAfterTyping);
+	Wait (5500);
 	OutputLine(NULL, "　率直なところで結構です。」",
 		   NULL, " Feel free to speak openly about it.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 
 	FadeOutBGM( 1, 1000, TRUE );
@@ -2359,13 +2358,13 @@ void main()
 
 
 //　爪？＠　爪って、指についてる…この爪か？＠　それで…ガリガリと？！？￥
-	PlaySE(3, "s01/01/120100108", 256, 64);	
+//	PlaySE(3, "s01/01/120100108", 256, 64);	// Wrong sound (the one matching this line seems to be missing)
 	OutputLine(NULL, "　爪？！",
 		   NULL, "\"Nails!?", Line_WaitForInput);
 	OutputLine(NULL, "　爪って、指についてる…この爪か？！",
 		   NULL, " As in fingernails!?", Line_WaitForInput);
 	OutputLine(NULL, "　それで…ガリガリと？！？！",
-		   NULL, " With those... he clawed through...?!", Line_Normal);
+		   NULL, " You mean... his neck was clawed through...?!", Line_Normal);
 	ClearMessage();
 
 
@@ -2397,7 +2396,7 @@ void main()
 
 //　富竹さんは…何を思ったか、自分の爪で力いっぱいガリガリと＠　喉を掻き毟りだしたのだ＠
 	OutputLine(NULL, "　富竹さんは…何を思ったか、自分の爪で力いっぱいガリガリと！",
-		   NULL, "Tomitake-san thought there was a reason to tear open his own throat!", Line_WaitForInput);
+		   NULL, "Tomitake-san - whatever was going through his mind - tore open his own throat!", Line_WaitForInput);
 	OutputLine(NULL, "　喉を掻き毟りだしたのだ。",
 		   NULL, " As hard as he could with his own nails.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -2606,7 +2605,7 @@ void main()
 //「死亡推定時刻は２１時から２３時頃のようです＠つまり…お祭りで前原さんが富竹さんとお話して別れてからからすぐの出来事なんですよ。＠
 	PlaySE(3, "s01/11/120700055", 256, 64);
 	OutputLine(NULL, "「死亡推定時刻は２１時から２３時頃のようです。",
-		   NULL, "\"The presumed time of death was around 9:23pm.", Line_WaitForInput);
+		   NULL, "\"The presumed time of death was between 9pm and 11pm.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700056", 256, 64);	
 	OutputLine(NULL, "つまり…お祭りで前原さんが富竹さんとお話して別れてからからすぐの出来事なんですよ。」",
 		   NULL, " Meaning... it occurred right after you finished talking to Tomitake-san at the festival.\"", Line_WaitForInput);
@@ -3084,8 +3083,8 @@ void main()
 
 //「毎年、綿流しの日に村の仇敵が死ぬ！＠　それだけで充分に疑えると思いませんか？＠
 	PlaySE(3, "s01/11/120700083", 256, 64);
-	OutputLine(NULL, "「毎年、綿流しの日に村の仇敵が死ぬ！！",
-		   NULL, "\"Every year... The enemies of the village die on the day of the Watanagashi!!", Line_WaitForInput);
+	OutputLine(NULL, "「毎年、綿流しの日に村の仇敵が死ぬ。",
+		   NULL, "\"Every year... The enemies of the village die on the day of the Watanagashi.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700084", 256, 64);
 	OutputLine(NULL, "　それだけで充分に疑えると思いませんか？」",
 		   NULL, " Don't you think that's enough reason to suspect something?\"", Line_WaitForInput);
@@ -3207,7 +3206,7 @@ void main()
 //「つまり、村の敵でなく、よそ者だというだけの理由で犠牲になりつつあるんですよ。＠
 	PlaySE(3, "s01/11/120700092", 256, 64);
 	OutputLine(NULL, "「つまり、村の敵でなく、よそ者だというだけの理由で犠牲になりつつあるんですよ。」",
-		   NULL, "\"It means... it's not just enemies of the village anymore. Just being an outsider is reason enough.\"", Line_WaitForInput);
+		   NULL, "\"It means... it's not just enemies of the village anymore. Just being an outsider could be reason enough.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3215,7 +3214,7 @@ void main()
 //「じゃあ…来年の被害者は…「村のよそ者」から選ばれるっていうのか？！￥
 	PlaySE(3, "s01/01/120100130", 256, 64);	
 	OutputLine(NULL, "「じゃあ…来年の被害者は…「村のよそ者」から選ばれるっていうのか？！」",
-		   NULL, "\"Then... Next year's victim... They're just going to be picked out of the 'village outsider' pool!?\"", Line_Normal);
+		   NULL, "\"Then... You're saying that next year's victim... will be picked out of the 'village outsider' pool!?\"", Line_Normal);
 	ClearMessage();
 
 
@@ -3316,7 +3315,7 @@ void main()
 
 //　魅音が「戦った」ことは知っている＠
 	OutputLine(NULL, "　魅音が「戦った」ことは知っている。",
-		   NULL, "I knew Mion knew what it meant to \"fight.\"", Line_WaitForInput);
+		   NULL, "I knew Mion had \"fought.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3588,7 +3587,7 @@ void main()
 		   NULL, "\"It's fine if you don't see or hear anything, Maebara-san.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700113", 256, 64);
 	OutputLine(NULL, "……それは村が関わっていないという証拠になるのですから。」",
-		   NULL, " ...There is enough proof that the village is not involved.\"", Line_WaitForInput);
+		   NULL, " ...It would help to prove that the village is not involved, after all.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3758,14 +3757,14 @@ void main()
 		   NULL, "\"With the Rope, in the...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 300 );
+	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……う〜ん",
 		   NULL, " hmm...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 300 );
+	Wait( 2500 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "………ラウンジ！！！」",
@@ -3780,7 +3779,8 @@ void main()
 //「わっはっはっはッ！＠　ハッズレ～～！！＠
 	PlaySE(3, "s01/03/120300042", 256, 64);		
 	OutputLine(NULL, "「わっはっはっはッ！！",
-		   NULL, "\"Bwahahaha!!", Line_WaitForInput);
+		   NULL, "\"Bwahahaha!!", Line_ContinueAfterTyping);
+	Wait (1200);
 	OutputLine(NULL, "　ハッズレ〜〜！！」",
 		   NULL, " Nooope~~!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
