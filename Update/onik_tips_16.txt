@@ -317,12 +317,13 @@
 //「なっはっはっはっはっはっは！！＠　じゃあホシには殺意はなかったってことですかねぇ＠ちょいと小銭を巻き上げようと殴ったら、たまたま殴り所が悪かったと！￥
 	PlaySE(3, "s20/11/440700030", 128, 64);	
 	OutputLine(NULL, "「なっはっはっはっはっはっは！！！",
-		   NULL, "\"Nahahahahahahah!!!", Line_WaitForInput);
+		   NULL, "\"Nahahahahahahah!!!", Line_ContinueAfterTyping);
+	Wait ( 2000 );
 	OutputLine(NULL, "　じゃあホシには殺意はなかったってことですかねぇ。",
-		   NULL, " Then his lady didn't have any intent to kill.", Line_WaitForInput);
+		   NULL, " Guess this means the assailants didn't have any intent to kill.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700031", 128, 64);		
 	OutputLine(NULL, "ちょいと小銭を巻き上げようと殴ったら、たまたま殴り所が悪かったと！」",
-		   NULL, " Just smacked him in a bad place when he nicked some change!\"", Line_Normal);
+		   NULL, " They smacked him hoping to nick some change, and just happened to hit a bad place!\"", Line_Normal);
 	ClearMessage();
 
 //　でっぷりした中年が二人してげらげらと下品に笑い合う￥
