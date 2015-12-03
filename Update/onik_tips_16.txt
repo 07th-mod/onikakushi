@@ -34,9 +34,10 @@
 //「遠回しですねぇ＠...では間接的にはあるってことですか？＠
 	PlaySE(3, "s20/11/440700019", 128, 64);	
 	OutputLine(NULL, "「遠回しですねぇ。",
-		   NULL, "\"That's quite a roundabout response.", Line_WaitForInput);
+		   NULL, "\"That's quite a roundabout response.", Line_ContinueAfterTyping);
+	Wait ( 1600 )
 	OutputLine(NULL, "…では間接的にはあるってことですか？」",
-		   NULL, " You're saying there's one that does it indirectly?\"", Line_WaitForInput);
+		   NULL, " You mean that there's one that does it indirectly?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -44,14 +45,14 @@
 //「自殺したくなる精神状態を誘発することはできる、!w1000っちゅうことだ。＠
 	PlaySE(3, "s20/00/443200021", 128, 64);	
 	OutputLine(NULL, "「自殺したくなる精神状態を誘発することはできる、",
-		   NULL, "\"Something that puts you into a suicidal mental state,", Line_ContinueAfterTyping);
+		   NULL, "\"It's possible to induce a suicidal mental state,", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "っちゅうことだ。」",
-		   NULL, " like that...?\"", Line_WaitForInput);
+		   NULL, " is what I mean.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
