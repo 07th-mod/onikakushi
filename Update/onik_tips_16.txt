@@ -114,7 +114,8 @@
 		   NULL, " Nor does mania on its own lead to suicide.", Line_WaitForInput);
 	PlaySE(3, "s20/00/443200026", 128, 64);	
 	OutputLine(NULL, "　今度は逆に、非常に自信過剰で行動的なので、自らを順風満帆と思う。",
-		   NULL, " That has an opposite effect, filling the person with confidence and making them feel as though they're walking on air.", Line_WaitForInput);
+		   NULL, " That has an opposite effect, filling the person with confidence and making them feel as though they're walking on air.", Line_ContinueAfterTyping);
+	Wait ( 2500 );
 	OutputLine(NULL, "だから自殺などせんのだ。」",
 		   NULL, " Thus, they do not commit suicide.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -138,9 +139,10 @@
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 //「なぁるほど＠　つまり自殺する気力が回復するわけですね。＠
-	PlaySE(3, "s20/11/440700022", 128, 64);		
+	PlaySE(3, "s20/11/440700022", 128, 64);
 	OutputLine(NULL, "「なぁるほど！",
-		   NULL, "\"I see!", Line_WaitForInput);
+		   NULL, "\"I see!", Line_ContinueAfterTyping);
+	Wait ( 1200 );
 	OutputLine(NULL, "　つまり自殺する気力が回復するわけですね。」",
 		   NULL, " So it means they gain the willpower to commit suicide.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -217,7 +219,8 @@
 //「覚醒剤反応、出なかったんですよねぇ＠...他の可能性は？￥
 	PlaySE(3, "s20/11/440700026", 128, 64);	
 	OutputLine(NULL, "「覚醒剤反応、出なかったんですよねぇ。",
-		   NULL, "\"There were no signs of stimulants.", Line_WaitForInput);
+		   NULL, "\"There were no signs of stimulants.", Line_ContinueAfterTyping);
+	Wait ( 2800 );
 	OutputLine(NULL, "…他の可能性は？」",
 		   NULL, " Are there any other possibilities?\"", Line_Normal);
 	ClearMessage();
@@ -234,7 +237,8 @@
 //　バセドー病等の甲状腺異常を引き起こす病気にしばしば躁鬱病に似た症状が報告されとる＠だがバセドー病は特徴的な症状が多い＠仏は違うの。＠
 	PlaySE(3, "s20/00/443200034", 128, 64);	
 	OutputLine(NULL, "　バセドー病等の甲状腺異常を引き起こす病気にしばしば躁鬱病に似た症状が報告されとる。",
-		   NULL, "Something like Graves' disease, which affects the thyroid, and is known to cause symptoms that resemble bipolar disorder.", Line_WaitForInput);
+		   NULL, "Something like Graves' disease, which affects the thyroid, and is known to cause symptoms that resemble bipolar disorder.", Line_ContinueAfterTyping);
+	Wait ( 4000 );
 	OutputLine(NULL, "だがバセドー病は特徴的な症状が多い。",
 		   NULL, " But Graves' disease has many characteristic symptoms of its own.", Line_WaitForInput);
 	PlaySE(3, "s20/00/443200035", 128, 64);
@@ -302,7 +306,8 @@
 //「かっかっか＠　つまり、乱闘中に豆腐の角に頭ぶつけて、それでとんちんかんになったんじゃないかと言っとるんだ。＠
 	PlaySE(3, "s20/00/443200040", 128, 64);	
 	OutputLine(NULL, "「かっかっか！",
-		   NULL, "\"Bwah ha ha!", Line_WaitForInput);
+		   NULL, "\"Bwah ha ha!", Line_ContinueAfterTyping);
+	Wait ( 1200 );
 	OutputLine(NULL, "　つまり、乱闘中に豆腐の角に頭ぶつけて、それでとんちんかんになったんじゃないかと言っとるんだ。」",
 		   NULL, " Basically, he knocked his noggin in the brawl and that made him go haywire.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -354,7 +359,7 @@
 //「ありゃぁこんな時間＠　そろそろ戻らないと熊ちゃん、怒っちゃいますねぇ。＠
 	PlaySE(3, "s20/11/440700033", 128, 64);	
 	OutputLine(NULL, "「ありゃぁこんな時間！",
-		   NULL, "\"Oh my goodness, look at the time!", Line_WaitForInput);
+		   NULL, "\"Oh my goodness, look at the time!", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　そろそろ戻らないと熊ちゃん、怒っちゃいますねぇ。」",
 		   NULL, " I need to get back soon or Kuma-chan will get angry with me.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -364,7 +369,7 @@
 //「おう＠　頑張れよ＠　いいお年をの！＠
 	PlaySE(3, "s20/00/443200043", 128, 64);	
 	OutputLine(NULL, "「おう！",
-		   NULL, "\"Yeah!", Line_WaitForInput);
+		   NULL, "\"Yeah!", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　頑張れよ！",
 		   NULL, " Good luck!", Line_WaitForInput);
 	PlaySE(3, "s20/00/443200044", 128, 64);
