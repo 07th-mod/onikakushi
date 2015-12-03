@@ -351,7 +351,7 @@ void main()
 
 //　夕食までには帰るが少し遅くなるかもしれない＠
 	OutputLine(NULL, "　夕食までには帰るが少し遅くなるかもしれない。",
-		   NULL, "They would probably be back sometime after dinner.", Line_WaitForInput);
+		   NULL, "They would be back for dinner, but might be a bit late.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -470,7 +470,7 @@ void main()
 
 //　やたらとおしゃべりな先生の問診に適当に答えると、やはり先生も定番の「風邪ですね」という言葉を返してくれた＠
 	OutputLine(NULL, "　やたらとおしゃべりな先生の問診に適当に答えると、やはり先生も定番の「風邪ですね」という言葉を返してくれた。",
-		   NULL, "After properly answering all of the chatty doctor's questions, he responded with the old \"it's probably a cold.\"", Line_WaitForInput);
+		   NULL, "After half-heartedly answering all of the chatty doctor's questions, he responded with the old \"it's probably a cold.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
@@ -811,7 +811,7 @@ void main()
 //「地元の食堂だといやでしょう＠町まで行きましょう＠ちょっと走りますがよろしいですかな＠　私、おいしいお店知ってるんですよ？＠
 	PlaySE(3, "s01/11/120700199", 256, 64);
 	OutputLine(NULL, "「地元の食堂だといやでしょう。",
-		   NULL, "\"I doubt you'd want to eat at one of these local places.", Line_WaitForInput);
+		   NULL, "\"I expect you'd rather avoid using one of the local places.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700200", 256, 64);
 	OutputLine(NULL, "町まで行きましょう。",
 		   NULL, " Let's go into town.", Line_WaitForInput);
@@ -955,7 +955,7 @@ void main()
 		   NULL, "\"Um... you know that thing you see in comics all the time?", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100279", 256, 64);
 	OutputLine(NULL, "体内に取り込まれると分解したりして、証拠が何も残らないなんて、そんな薬…。」",
-		   NULL, " Where there's a drug that, if you put it in them, it doesn't leave any traces...\"", Line_WaitForInput);
+		   NULL, " Where there's a drug that doesn't leave any traces after being consumed...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1064,8 +1064,8 @@ void main()
 
 //「２名です。タバコは我慢します。＠
 	PlaySE(3, "s01/11/120700216", 256, 64);
-	OutputLine(NULL, "「２名です。タバコは我慢します。」",
-		   NULL, "\"Two, please. Non-smoking.\"", Line_WaitForInput);
+	OutputLine(NULL, "「２名です。タバコは・・・我慢します。」",
+		   NULL, "\"Two, please. I'll... make do with non-smoking.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1297,7 +1297,7 @@ void main()
 //　例えば…不治の病にかかった村人を鬼ヶ淵に運んで、治してもらったりとかしたんだそうです。＠
 	PlaySE(3, "s01/11/120700233", 256, 64);	
 	OutputLine(NULL, "　例えば…不治の病にかかった村人を鬼ヶ淵に運んで、治してもらったりとかしたんだそうです。」",
-		   NULL, "Taking villagers with incurable illnesses into the Ogres' Abyss and healing them... for example.\"", Line_WaitForInput);
+		   NULL, "Villagers with incurable illnesses would be taken to the Ogres' Abyss to be healed, for example.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1363,14 +1363,14 @@ void main()
 
 
 	OutputLine(NULL, "鬼ヶ淵に住む村人、",
-		   NULL, " All the people who lived in Onigafuchi...", Line_ContinueAfterTyping);
+		   NULL, " All the vilagers of Onigafuchi -", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 800 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "鬼たちがですね、全員で追いかけて取り囲んで捕まえたんだそうです。」",
-		   NULL, " The demons chased them down, rounded them up, and captured them.\"", Line_Normal);
+		   NULL, "the demons- chased, surrounded, and captured them.\"", Line_Normal);
 	ClearMessage();
 
 
@@ -1482,7 +1482,7 @@ void main()
 //「鬼たちの獲物は常に１人で、しかも前もって決められているらしいんです。＠
 	PlaySE(3, "s01/11/120700245", 256, 64);
 	OutputLine(NULL, "「鬼たちの獲物は常に１人で、しかも前もって決められているらしいんです。」",
-		   NULL, "\"Normally they hunted down a single person, and they chose who it was going to be beforehand.\"", Line_WaitForInput);
+		   NULL, "\"They would always hunt down a single person, and they chose who it was going to be beforehand.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1579,7 +1579,7 @@ void main()
 
 //　……話の内容は大石さんの言う、犯人は村ぐるみ説と一部重なるからだ￥
 	OutputLine(NULL, "　……話の内容は大石さんの言う、犯人は村ぐるみ説と一部重なるからだ。",
-		   NULL, "...Parts of the story he told me overlapped with his theory that the perpetrators were all the village families.", Line_Normal);
+		   NULL, "...Parts of the story he told me overlapped with his theory that the entire village was in on the crime.", Line_Normal);
 	ClearMessage();
 
 //　犯人が村まるごとでなかったにせよ、数人の犯人の「狩り」を村人たちが「布団を被って見殺しにした」ことは十分に考えられる……？？＠
@@ -1597,7 +1597,7 @@ void main()
 //「…じゃあ大石さんは…やっぱり村ぐるみ、もしくは村人数人の犯行だと見てるんですね…？＠
 	PlaySE(3, "s01/01/120100296", 256, 64);
 	OutputLine(NULL, "「…じゃあ大石さんは…やっぱり村ぐるみ、もしくは村人数人の犯行だと見てるんですね…？」",
-		   NULL, "\"...Then, Ooishi-san... I guess it looks like it's either the village families or a group of villagers perpetrating the crimes...?\"", Line_WaitForInput);
+		   NULL, "\"...Then, Ooishi-san... I guess it looks like it's either the entire village or a group of villagers perpetrating the crimes...?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1637,7 +1637,7 @@ void main()
 
 //　ウェイトレスさんがお代りのコーヒーを注ぐ間、口を開くことはなかった￥
 	OutputLine(NULL, "　ウェイトレスさんがお代りのコーヒーを注ぐ間、口を開くことはなかった。",
-		   NULL, "I waited for the waitress to finish pouring coffee before speaking.", Line_Normal);
+		   NULL, "He waited for the waitress to finish pouring coffee before speaking.", Line_Normal);
 	ClearMessage();
 
 
@@ -1670,7 +1670,7 @@ void main()
 
 //　以前、俺は仲間を疑うようなことを言った大石さんに逆上した＠……だが、今度の俺はそうはならなかった￥
 	OutputLine(NULL, "　以前、俺は仲間を疑うようなことを言った大石さんに逆上した。",
-		   NULL, "If Ooishi-san had said this to me before... I would've been furious, since he'd told me earlier not to suspect my friends...", Line_WaitForInput);
+		   NULL, "If Ooishi-san had said this to me before... I would've gotten angry at him for calling my friends into question...", Line_WaitForInput);
 	OutputLine(NULL, "……だが、今度の俺はそうはならなかった。",
 		   NULL, " But as I was now, I couldn't...", Line_Normal);
 	ClearMessage();
@@ -1788,7 +1788,7 @@ void main()
 		   NULL, "\"In the second year, the married couple who supported the project died in that accident, right?", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700266", 256, 64);
 	OutputLine(NULL, "現場にはお嬢さんも一緒にいたんです。",
-		   NULL, " They had a daughter...", Line_WaitForInput);
+		   NULL, " Their daughter was with them at the time...", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700267", 256, 64);
 	OutputLine(NULL, "…それが北条沙都子さんなんです。」",
 		   NULL, " Her name is Satoko Houjou-san.\"", Line_WaitForInput);
@@ -2057,7 +2057,7 @@ void main()
 
 //　あの…ぽやーっとした…レナが…？＠
 	OutputLine(NULL, "　あの…ぽやーっとした…レナが…？！",
-		   NULL, "That... same, silly... Rena had...!?", Line_WaitForInput);
+		   NULL, "That... same, spacey... Rena had...!?", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2214,7 +2214,7 @@ void main()
 		   NULL, "\"According to their residency register, the Ryuugu family used to reside in Hinamizawa.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700295", 256, 64);
 	OutputLine(NULL, "レナさんがちょうど小学校に上がるときに茨城へ引っ越されたんです。」",
-		   NULL, " Rena-san moved to Ibaraki right after she finished elementary school.\"", Line_Normal);
+		   NULL, " They moved to Ibaraki just as Rena-san entered elementary school.\"", Line_Normal);
 	ClearMessage();
 
 
@@ -2264,7 +2264,7 @@ void main()
 //「…レナのことはわかりました…＠じゃあその……最後の被害者の富竹さんはどうなんですか＠　…誰と接点があるんですか…？＠
 	PlaySE(3, "s01/01/120100307", 256, 64);
 	OutputLine(NULL, "「…レナのことはわかりました…。",
-		   NULL, "\"...Now I understand Rena...", Line_WaitForInput);
+		   NULL, "\"...Now I know about Rena...", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100308", 256, 64);
 	OutputLine(NULL, "じゃあその……最後の被害者の富竹さんはどうなんですか？",
 		   NULL, " Then... how about the last victim, Tomitake-san?", Line_WaitForInput);
@@ -2480,7 +2480,7 @@ void main()
 
 //　……第一、引っ越してきたばかりの俺に…何がわかるってんだ＠
 	OutputLine(NULL, "　……第一、引っ越してきたばかりの俺に…何がわかるってんだ。",
-		   NULL, "...First of all... what could I, having just moved here... know?", Line_WaitForInput);
+		   NULL, "...First of all... what could I, having just moved here, possibly know?", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2493,7 +2493,7 @@ void main()
 
 //　……俺が、大石さんが怪しいと目する…魅音たちの仲間の一人だからだ￥
 	OutputLine(NULL, "　……俺が、大石さんが怪しいと目する…魅音たちの仲間の一人だからだ。",
-		   NULL, "...That I looked suspicious to Ooishi-san... as I was part of Mion's circle of friends.", Line_Normal);
+		   NULL, "...That I was part of Mion's circle of friends, who looked suspicious to Ooishi-san...", Line_Normal);
 	ClearMessage();
 
 
@@ -2554,7 +2554,7 @@ void main()
 
 //　そんなバカな、と反論しようと思ったが、すっかり意気消沈した俺にそんな気力はなかった￥
 	OutputLine(NULL, "　そんなバカな、と反論しようと思ったが、すっかり意気消沈した俺にそんな気力はなかった。",
-		   NULL, "I wanted to reply with 'that was absurd,' but in my downtrodden state I couldn't bring myself to say it.", Line_Normal);
+		   NULL, "I wanted to reply with 'that's absurd!,' but in my downtrodden state I couldn't bring myself to say it.", Line_Normal);
 	ClearMessage();
 
 
@@ -4086,7 +4086,7 @@ void main()
 
 //　……それならそもそもあの綿流しの晩、富竹さんに過去の事件の話を聞いたことからいけなかったんだろう…＠
 	OutputLine(NULL, "　……それならそもそもあの綿流しの晩、富竹さんに過去の事件の話を聞いたことからいけなかったんだろう…。",
-		   NULL, "...And I even shouldn't have heard about the past incidents from Tomitake-san the night of the Watanagashi...", Line_WaitForInput);
+		   NULL, "...I shouldn't even have asked Tomitake-san about the past incidents on the night of the Watanagashi...", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
@@ -4762,7 +4762,7 @@ void main()
 
 //　ようやく正常に息ができるようになると、今度は心臓が早鐘のようにばくばく言い始める＠
 	OutputLine(NULL, "　ようやく正常に息ができるようになると、今度は心臓が早鐘のようにばくばく言い始める。",
-		   NULL, "I was finally able to breath normally again, but this time my heart was intensely throbbing.", Line_WaitForInput);
+		   NULL, "I was finally able to breath normally again, but this time my heart was throbbing intensely.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
@@ -4826,7 +4826,7 @@ void main()
 	DrawSceneWithMask( "bg_080", "left", 0, 0, 1300 );
 
 //　そして自らの肩を抱き、恐怖と悔しさと怒りと悲しみでぐちゃぐちゃになりながら吠えた猛った…￥
-	OutputLine(NULL, "　そして自らの肩を抱き、恐怖と悔しさと怒りと悲しみでぐちゃぐちゃになりながら吠えた猛った…。",
+	OutputLine(NULL, "　そして自らの肩を抱き、恐怖と悔しさと怒りと悲しみでぐちゃぐちゃになりながら吠え猛った…。",
 		   NULL, "I clutched my own shoulders, howling madly in a mix of fear, anger, sadness and frustration...", Line_Normal);
 	ClearMessage();
 
