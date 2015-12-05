@@ -37,15 +37,14 @@ void main()
 //「じゃー、県議と市議の園崎だ。＠
 	PlaySE(3, "s20/11/440700036", 128, 64);
 	OutputLine(NULL, "「じゃー、県議と市議の園崎だ。」",
-		   NULL, "\"Then it's prefectural assembly member and city councilor Sonozaki.\"", Line_WaitForInput);
+		   NULL, "\"Then it's prefectural assembly member Sonozaki and city councilor Sonozaki.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //「面白いっすね＠親戚同士で県議と市議やってんすか。￥
 	PlaySE(3, "s20/19/443100003", 128, 64);	
 	OutputLine(NULL, "「面白いっすね。",
-		   NULL, "\"That's interesting.", Line_WaitForInput);
+		   NULL, "\"That's interesting.", Line_ContinueAfterTyping);
+	Wait ( 1200 );
 	OutputLine(NULL, "親戚同士で県議と市議やってんすか。」",
 		   NULL, " The prefectural assembly member and city councilor are related.\"", Line_Normal);
 	ClearMessage();
@@ -55,7 +54,8 @@ void main()
 //「これがズルイんですよ＠お互いの名前で事前運動バンバン＠片方の選挙中にはもう片方が別に講演会を開いて、二重に選挙運動やってんですよ＠堂々と。＠
 	PlaySE(3, "s20/11/440700037", 128, 64);	
 	OutputLine(NULL, "「これがズルイんですよ。",
-		   NULL, "\"It's dirty is what it is.", Line_WaitForInput);
+		   NULL, "\"It's dirty is what it is.", Line_ContinueAfterTyping);
+	Wait ( 1000 );
 	OutputLine(NULL, "お互いの名前で事前運動バンバン。",
 		   NULL, " Shouting out each other's name during elections.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700038", 128, 64);		
@@ -65,7 +65,6 @@ void main()
 	OutputLine(NULL, "堂々と。」",
 		   NULL, " Blatantly.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
 
 
 //「よくわかんないんすけど、それって公選法違反じゃないんすか？＠
@@ -124,7 +123,7 @@ void main()
 //「お見送りしてんのは...副署長とうちの課長っすね。＠
 	PlaySE(3, "s20/19/443100006", 128, 64);
 	OutputLine(NULL, "「お見送りしてんのは…副署長とうちの課長っすね。」",
-		   NULL, "\"Looks like they were seen off by... the department chief and the deputy chief.\"", Line_WaitForInput);
+		   NULL, "\"Looks like they were seen off by... the deputy chief and the department chief.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -145,7 +144,7 @@ void main()
 
 //　その日の夜、おでんを食いに行かないかと課長に誘われた時、やっぱりなぁと思った￥
 	OutputLine(NULL, "　その日の夜、おでんを食いに行かないかと課長に誘われた時、やっぱりなぁと思った。",
-		   NULL, "That night, when the chief invited me along to get some oden, I thought that was it.", Line_Normal);
+		   NULL, "That night, when the department chief invited me along to get some oden, I thought that was it.", Line_Normal);
 	ClearMessage();
 
 ////setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
@@ -167,39 +166,36 @@ void main()
 		   NULL, "\"You have a lot of connections, so you might have heard something...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	Wait( 3000 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……聞いてるかな？」",
-		   NULL, " Did you?\"", Line_WaitForInput);
+		   NULL, " Have you?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //「いいえ＠何も。＠
 	PlaySE(3, "s20/11/440700042", 128, 64);	
 	OutputLine(NULL, "「いいえ。",
-		   NULL, "\"Nope.", Line_WaitForInput);
+		   NULL, "\"Nope.", Line_ContinueAfterTyping);
+	Wait( 300 );
 	OutputLine(NULL, "何も。」",
 		   NULL, " Not a thing.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
 //「お母さん、ガンモにはんぺん頼みます＠......署長んとこに議員の怒鳴り込みがあったんだよ。＠
 	PlaySE(3, "s20/00/442700002", 128, 64);		
 	OutputLine(NULL, "「お母さん、ガンモにはんぺん頼みます。",
-		   NULL, "\"Ma'am, I'll take a tofu fritter and fish cake.", Line_WaitForInput);
+		   NULL, "\"Ma'am, I'll take a tofu fritter and fish cake.", Line_ContinueAfterTyping);
+	Wait ( 2800 );
 	OutputLine(NULL, "……署長んとこに議員の怒鳴り込みがあったんだよ。」",
-		   NULL, " A councilor stormed in on the police chief in a rage.\"", Line_WaitForInput);
+		   NULL, " ...The councilors stormed in on the police chief in a rage.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //「あれま。そうなんですか＠...お母さん、私にもう一杯下さい。￥
 	PlaySE(3, "s20/11/440700043", 128, 64);		
 	OutputLine(NULL, "「あれま。そうなんですか。",
-		   NULL, "\"Oh, my. Is that so?", Line_WaitForInput);
+		   NULL, "\"Oh, my. Is that so?", Line_ContinueAfterTyping);
+	Wait ( 2600 );
 	OutputLine(NULL, "…お母さん、私にもう一杯下さい。」",
 		   NULL, " Ma'am, I'll take another bowl.\"", Line_Normal);
 	ClearMessage();
@@ -232,12 +228,11 @@ void main()
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
 //「とぼけるなよ＠例の雛見沢の、過去の事件＠蒸し返してるだろ。￥
 	PlaySE(3, "s20/00/442700004", 128, 64);	
 	OutputLine(NULL, "「とぼけるなよ。",
 		   NULL, "\"No need to play dumb.", Line_ContinueAfterTyping);
-	Wait ( 800 );
+	Wait ( 1000 );
 	OutputLine(NULL, "例の雛見沢の、過去の事件。",
 		   NULL, " You're reopening the past cases regarding Hinamizawa,", Line_WaitForInput);
 	PlaySE(3, "s20/00/442700005", 128, 64);
@@ -248,11 +243,11 @@ void main()
 //「私、富竹殺しで手一杯でそんな余裕ないですよ＠　なっはっはっは！＠
 	PlaySE(3, "s20/11/440700045", 128, 64);		
 	OutputLine(NULL, "「私、富竹殺しで手一杯でそんな余裕ないですよ？",
-		   NULL, "\"I've already got my hands full with Tomitake's death, actually.", Line_WaitForInput);
+		   NULL, "\"I've already got my hands full with Tomitake's death.", Line_ContinueAfterTyping);
+		   Wait ( 3000 );
 	OutputLine(NULL, "　なっはっはっは！」",
 		   NULL, " Nahahaha!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
 
 
 //「本当に＠　本当にそうならいいんだけどさ...。￥
@@ -281,7 +276,8 @@ void main()
 //「いやぁご馳走になっちゃいました＠今月は負けっぱなしだったんで財布辛かったんですよ＠助かりました。＠
 	PlaySE(3, "s20/11/440700046", 128, 64);		
 	OutputLine(NULL, "「いやぁご馳走になっちゃいました。",
-		   NULL, "\"Whew, that was quite the feast.", Line_WaitForInput);
+		   NULL, "\"Whew, that was quite the feast.", Line_ContinueAfterTyping);
+	Wait (2600);
 	OutputLine(NULL, "今月は負けっぱなしだったんで財布辛かったんですよ。",
 		   NULL, " This month has been a bunch of losses for me, so my wallet was feeling the pinch.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700047", 128, 64);
@@ -289,12 +285,11 @@ void main()
 		   NULL, " Much appreciated.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
 //「いやいいよ＠また馬、教えてよ＠大石さんと同じ馬を買うから。＠
 	PlaySE(3, "s20/00/442700007", 128, 64);		
 	OutputLine(NULL, "「いやいいよ。",
-		   NULL, "\"Nah, it's nothing.", Line_WaitForInput);
+		   NULL, "\"Nah, it's nothing.", Line_ContinueAfterTyping);
+	Wait (800);
 	OutputLine(NULL, "また馬、教えてよ。",
 		   NULL, " Tell me a good horse again.", Line_WaitForInput);
 	PlaySE(3, "s20/00/442700008", 128, 64);
@@ -303,11 +298,11 @@ void main()
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
 //「なっはっはっは＠　最近はダメです＠馬の声がさっぱりですから！!w1500　...タクシー！！！￥
 	PlaySE(3, "s20/11/440700048", 128, 64);	
 	OutputLine(NULL, "「なっはっはっは！",
-		   NULL, "\"Nahahahah!", Line_WaitForInput);
+		   NULL, "\"Nahahahah!", Line_ContinueAfterTyping);
+	Wait (1400);
 	OutputLine(NULL, "　最近はダメです。",
 		   NULL, " I haven't been doing well there lately.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700049", 128, 64);	
@@ -315,7 +310,7 @@ void main()
 		   NULL, " I haven't been able to read the horses at all!", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	Wait( 1200 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　…タクシー！！！」",
@@ -331,7 +326,7 @@ void main()
 
 //　課長はハイヤー＠
 	OutputLine(NULL, "　課長はハイヤー。",
-		   NULL, "The police chief is taking a taxi.", Line_WaitForInput);
+		   NULL, "The department chief is taking a taxi.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -353,7 +348,7 @@ void main()
 
 //　タクシーに押し込み、課長の自宅の住所を伝える￥
 	OutputLine(NULL, "　タクシーに押し込み、課長の自宅の住所を伝える。",
-		   NULL, "Pushing him into the cab, I gave the driver the police chief's address.", Line_Normal);
+		   NULL, "Pushing him into the cab, I gave the driver the department chief's address.", Line_Normal);
 	ClearMessage();
 
 //「ではではまた明日＠よいお年を...！＠
@@ -383,14 +378,14 @@ void main()
 //「過去の事件は全部個別に終わってる＠縦に並べるのはやめるんだよ＠村の連中は半ば本気で祟りを信じてるんだから。＠
 	PlaySE(3, "s20/00/442700010", 128, 64);	
 	OutputLine(NULL, "「過去の事件は全部個別に終わってる。",
-		   NULL, "\"The past incidents have all been closed.", Line_WaitForInput);
+		   NULL, "\"The past incidents have all been closed.", Line_ContinueAfterTyping);
+	Wait (2200);
 	OutputLine(NULL, "縦に並べるのはやめるんだよ。",
 		   NULL, " Stop lumping them all together.", Line_WaitForInput);
 	PlaySE(3, "s20/00/442700011", 128, 64);
 	OutputLine(NULL, "村の連中は半ば本気で祟りを信じてるんだから。」",
 		   NULL, " Those villagers half-believe it's really a curse.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
 
 
 //「私だって祟りなんか信じちゃいませんよ。￥
@@ -414,16 +409,16 @@ void main()
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
 //「婆さまがどうしても生まれの北海道に帰りたいって泣くんですよ...＠最後のご奉公なんです＠退職金は、まぁススキノで楽しむことにします＠なっはっはっは！！￥
 	PlaySE(3, "s20/11/440700053", 128, 64);	
 	OutputLine(NULL, "「婆さまがどうしても生まれの北海道に帰りたいって泣くんですよ…。",
-		   NULL, "\"Mother pines to return to her birthplace...", Line_WaitForInput);
+		   NULL, "\"Mother pines to return to her birthplace...", Line_ContinueAfterTyping);
+	Wait (4200);
 	OutputLine(NULL, "最後のご奉公なんです。",
 		   NULL, " It's the least I can do.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700054", 128, 64);		
-	OutputLine(NULL, "退職金は、まぁススキノで楽しむことにします。",
-		   NULL, " And the severance? Well, it'll let me enjoy myself in Susukino.", Line_WaitForInput);
+	OutputLine(NULL, "退職金は、まぁ歓楽街で楽しむことにします。",
+		   NULL, " And the severance? Well, I'll enjoy it at the entertainment district.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700055", 128, 64);
 	OutputLine(NULL, "なっはっはっは！！」",
 		   NULL, " Nahahahah!!\"", Line_Normal);
@@ -437,100 +432,102 @@ void main()
 
 //　官公署の退職金は、退職時の月給を掛け算して算出する＠
 	OutputLine(NULL, "　官公署の退職金は、退職時の月給を掛け算して算出する。",
-		   NULL, "A public servant's pension is calculated based on their monthly salary.", Line_WaitForInput);
+		   NULL, "A public servant's severance payment is calculated based on their monthly salary when they retire.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 
 //　そこで、退職直前に特別昇格で二号給（２年分）給料を昇給させることによって＠退職金を水増しするなんてことが、この辺の地方では慣習で行なわれている＠
 	OutputLine(NULL, "　そこで、退職直前に特別昇格で二号給（２年分）給料を昇給させることによって、",
-		   NULL, "So if you were to get a raise right before retirement, your bonus (two years' salary) would be inflated,", Line_WaitForInput);
+		   NULL, "So, a special promotion of two pay grades is given before retirement.", Line_WaitForInput);
 	OutputLine(NULL, "退職金を水増しするなんてことが、この辺の地方では慣習で行なわれている。",
-		   NULL, " and you'd get a heavy surplus of funds. That tends to be how it's done around here.", Line_WaitForInput);
+		   NULL, " This tops-up the employees severance payment. That tends to be how it's done around here.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 
 //　もちろん、あまり褒められた慣習じゃないんですが...＠
 	OutputLine(NULL, "　もちろん、あまり褒められた慣習じゃないんですが…。",
-		   NULL, "Of course, it's not a custom that's thought of highly...", Line_WaitForInput);
+		   NULL, "Of course, it's not exactly a commendable custom...", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
 //　ちなみに二号給違うと退職金の額はかなり違う￥
 	OutputLine(NULL, "　ちなみに二号給違うと退職金の額はかなり違う。",
-		   NULL, "The difference between the bonus and the pension is quite a bit.", Line_Normal);
+		   NULL, "Incidentally, the difference that two pay grades makes to the payout is quite significant.", Line_Normal);
 	ClearMessage();
 
 //「さすがインテリの若署長は言い出すことが模範的です＠...でもまぁ＠私たちの給料が血税で支払われてることを思えば、まぁ時代の流れですかねぇ。＠
 	PlaySE(3, "s20/11/440700056", 128, 64);	
 	OutputLine(NULL, "「さすがインテリの若署長は言い出すことが模範的です。",
-		   NULL, "\"I'd expect nothing less exemplary from our egg-head chief.", Line_WaitForInput);
+		   NULL, "\"I'd expect no less of our egg-head chief, quite the model veiled threat.", Line_ContinueAfterTyping);
+	Wait (3400);
 	OutputLine(NULL, "…でもまぁ。",
 		   NULL, " But... well...", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700057", 128, 64);		
-	OutputLine(NULL, "私たちの給料が血税で支払われてることを思えば、まぁ時代の流れですかねぇ。」",
-		   NULL, " They say our salary is compensation for our hard work, but in the end it really just has to do with the passage of time.\"", Line_WaitForInput);
+	OutputLine(NULL, "私たちの給料が血税で支払われてることを思えば、",
+		   NULL, " Considering how our pay comes from the public's hard-earned taxes,", Line_ContinueAfterTyping);
+	Wait (2800);
+	OutputLine(NULL, "まぁ時代の流れですかねぇ。\"」",
+		   NULL, " it's the way of the times, I suppose.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
 
 //　本当はすごく笑えないのだが、取り合えず笑い飛ばしておく￥
 	OutputLine(NULL, "　本当はすごく笑えないのだが、取り合えず笑い飛ばしておく。",
-		   NULL, "That's not something I can laugh at, but I'll laugh through it, anyway.", Line_Normal);
+		   NULL, "It certainly wasn't a laughing matter, but I'll laugh through it, anyway.", Line_Normal);
 	ClearMessage();
 
 //「僕も模範的な事とは思わないよ＠でもまぁ、大石さんはそれだけの退職金をもらってもおかしくない活躍をしてきたからさ＠僕としてはぜひもらって欲しいんだよ。＠
 	PlaySE(3, "s20/00/442700015", 128, 64);	
 	OutputLine(NULL, "「僕も模範的な事とは思わないよ。",
-		   NULL, "\"I don't think it's anything exemplary.", Line_WaitForInput);
+		   NULL, "\"I don't think it's such a model response.", Line_ContinueAfterTyping);
+	Wait (2600);
 	OutputLine(NULL, "でもまぁ、大石さんはそれだけの退職金をもらってもおかしくない活躍をしてきたからさ。",
-		   NULL, " But given how hard you've worked, it's not odd that you're getting that much of a pension.", Line_WaitForInput);
+		   NULL, " But given how hard you've worked, it's not at all odd for you to take home such a good package.", Line_WaitForInput);
 	PlaySE(3, "s20/00/442700016", 128, 64);
 	OutputLine(NULL, "僕としてはぜひもらって欲しいんだよ。」",
-		   NULL, " I'd like to get that much myself.\"", Line_WaitForInput);
+		   NULL, " Personally, I'd like you to get it.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
 
 
 //「もらえるもんなら、そりゃー欲しいですけどね＠...なっはっはっは！＠
 	PlaySE(3, "s20/11/440700058", 128, 64);			
 	OutputLine(NULL, "「もらえるもんなら、そりゃー欲しいですけどね。",
-		   NULL, "\"If I can get it, well, of course I'd want it.", Line_WaitForInput);
+		   NULL, "\"If I can get it, well, of course I'd want it.", Line_ContinueAfterTyping);
+	Wait (2600);
 	OutputLine(NULL, "…なっはっはっは！」",
 		   NULL, " Nahahahah!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
 //「もらえるよ＠大石さんが大人なら。￥
 	PlaySE(3, "s20/00/442700017", 128, 64);	
 	OutputLine(NULL, "「もらえるよ。",
-		   NULL, "\"You'll get it.", Line_WaitForInput);
+		   NULL, "\"You'll get it.", Line_ContinueAfterTyping);
+	Wait (1200);
 	OutputLine(NULL, "大石さんが大人なら。」",
-		   NULL, " You're an adult, after all.\"", Line_Normal);
+		   NULL, " As long you're an adult about this.\"", Line_Normal);
 	ClearMessage();
 
 //「運転手さん、引き止めてすみませんね＠お願いします。＠
 	PlaySE(3, "s20/11/440700059", 128, 64);		
 	OutputLine(NULL, "「運転手さん、引き止めてすみませんね。",
-		   NULL, "\"Sorry for holding you up here, Driver.", Line_WaitForInput);
+		   NULL, "\"Sorry for holding you up here, Driver.", Line_ContinueAfterTyping);
+	Wait (2100);
 	OutputLine(NULL, "お願いします。」",
 		   NULL, " Thank you very much.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
 //　威勢良くドアを閉め、課長の会話を少し乱暴に遮る＠
 	OutputLine(NULL, "　威勢良くドアを閉め、課長の会話を少し乱暴に遮る。",
-		   NULL, "I closed the door roughly, interrupting the chief's conversation a bit rudely.", Line_WaitForInput);
+		   NULL, "I closed the door roughly, interrupting the department chief's conversation a bit rudely.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 
 //　課長はまだ何か言いたげだったが、苦笑すると手を振った。こちらも手を振って応える￥
 	OutputLine(NULL, "　課長はまだ何か言いたげだったが、苦笑すると手を振った。こちらも手を振って応える。",
-		   NULL, "It looked like the chief still had something to say, but he just smiled wryly and waved. I waved in return.", Line_Normal);
+		   NULL, "It looked like he still had something to say, but he just smiled wryly and waved. I waved in return.", Line_Normal);
 	ClearMessage();
 
 //　タクシーは徐々に加速し、すぐに光の川に飲み込まれていった￥
@@ -546,13 +543,14 @@ void main()
 		   NULL, "\"Nahahahah!", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	Wait( 3000 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……まいったな。",
-		   NULL, " ...Oh, man...", Line_WaitForInput);
+		   NULL, " ...Oh, man...", Line_ContinueAfterTyping);
+	Wait (2000);
 	OutputLine(NULL, "ローン返済できるかなぁ…。」",
-		   NULL, " I wonder if I really can repay that loan...\"", Line_Normal);
+		   NULL, " I wonder if I'll be able to repay that loan...\"", Line_Normal);
 	ClearMessage();
 
 	SetValidityOfInput( FALSE );
