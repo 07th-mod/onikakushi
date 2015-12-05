@@ -19,7 +19,7 @@ void main()
 //「......おんやぁ＠　今の皆さんは確か...。＠
 	PlaySE(3, "s20/11/440700035", 128, 64);	
 	OutputLine(NULL, "「……おんやぁ？",
-		   NULL, "\"...Herm?", Line_WaitForInput);
+		   NULL, "\"...Herm?", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　今の皆さんは確か…。」",
 		   NULL, " Those guys just now...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -116,7 +116,7 @@ void main()
 
 //　......どいつもこいつも園崎家の息のかかった連中か＠...面白くないですねぇ￥
 	OutputLine(NULL, "　……どいつもこいつも園崎家の息のかかった連中か。",
-		   NULL, "...All of them involved with the Sonozaki family.", Line_WaitForInput);
+		   NULL, "...So, they're all influenced by the Sonozaki family.", Line_WaitForInput);
 	OutputLine(NULL, "…面白くないですねぇ。",
 		   NULL, " What crap...", Line_Normal);
 	ClearMessage();
@@ -170,7 +170,6 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-
 	OutputLine(NULL, "……聞いてるかな？」",
 		   NULL, " Did you?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -192,7 +191,7 @@ void main()
 	OutputLine(NULL, "「お母さん、ガンモにはんぺん頼みます。",
 		   NULL, "\"Ma'am, I'll take a tofu fritter and fish cake.", Line_WaitForInput);
 	OutputLine(NULL, "……署長んとこに議員の怒鳴り込みがあったんだよ。」",
-		   NULL, " A councilor barked at me in the police chief's stead.\"", Line_WaitForInput);
+		   NULL, " A councilor stormed in on the police chief in a rage.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -213,7 +212,7 @@ void main()
 
 //　あんなヤクザと政治家のぎりぎりみたいなのに怒鳴りつけられたら、キャリアのハナタレ若署長にはキツイでしょうねぇ...￥
 	OutputLine(NULL, "　あんなヤクザと政治家のぎりぎりみたいなのに怒鳴りつけられたら、キャリアのハナタレ若署長にはキツイでしょうねぇ…。",
-		   NULL, "Our snot-nosed career police chief couldn't even handle being yelled at by them. They're like yakuza...", Line_Normal);
+		   NULL, "Our snot-nosed career police chief couldn't handle being yelled at by them. They're like yakuza...", Line_Normal);
 	ClearMessage();
 
 //「雛見沢事件の捜査の仕方で、君を指名して陳情してきたよ。＠
@@ -227,7 +226,7 @@ void main()
 //「ありゃ私＠　はてはて。＠
 	PlaySE(3, "s20/11/440700044", 128, 64);	
 	OutputLine(NULL, "「ありゃ私？",
-		   NULL, "\"Goodness, me?", Line_WaitForInput);
+		   NULL, "\"Goodness, me?", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　はてはて。」",
 		   NULL, " I've not the faintest.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -237,7 +236,8 @@ void main()
 //「とぼけるなよ＠例の雛見沢の、過去の事件＠蒸し返してるだろ。￥
 	PlaySE(3, "s20/00/442700004", 128, 64);	
 	OutputLine(NULL, "「とぼけるなよ。",
-		   NULL, "\"No need to play dumb.", Line_WaitForInput);
+		   NULL, "\"No need to play dumb.", Line_ContinueAfterTyping);
+	Wait ( 800 );
 	OutputLine(NULL, "例の雛見沢の、過去の事件。",
 		   NULL, " You're reopening the past cases regarding Hinamizawa,", Line_WaitForInput);
 	PlaySE(3, "s20/00/442700005", 128, 64);
@@ -260,7 +260,7 @@ void main()
 	OutputLine(NULL, "「本当に？",
 		   NULL, "\"Really?", Line_WaitForInput);
 	OutputLine(NULL, "　本当にそうならいいんだけどさ…。」",
-		   NULL, " If that's true, then there's no problem...\"", Line_Normal);
+		   NULL, " I hope so for your sake...\"", Line_Normal);
 	ClearMessage();
 
 //　しばしの沈黙＠
@@ -346,7 +346,7 @@ void main()
 
 //　舌はよく回っても、課長の腰から下はもうすっかり砕けている様子＠
 	OutputLine(NULL, "　舌はよく回っても、課長の腰から下はもうすっかり砕けている様子。",
-		   NULL, "Even though he could still rattle off, it looked like his legs were already goo.", Line_WaitForInput);
+		   NULL, "Even though he could still rattle off, it looked like his legs were already jelly.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -361,7 +361,7 @@ void main()
 	OutputLine(NULL, "「ではではまた明日。",
 		   NULL, "\"Well, see you again tomorrow.", Line_WaitForInput);
 	OutputLine(NULL, "よいお年を…！」",
-		   NULL, " Happy New Year...!\"", Line_WaitForInput);
+		   NULL, " Best wishes...!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
