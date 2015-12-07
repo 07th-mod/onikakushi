@@ -199,14 +199,14 @@ void main()
 
 //　……とても学校に行けるような体調、!w1000…いや、精神状態ではなかった＠
 	OutputLine(NULL, "　……とても学校に行けるような体調、",
-		   NULL, "...I was well enough to go...", Line_ContinueAfterTyping);
+		   NULL, "...I felt far from well enough...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…いや、精神状態ではなかった。",
-		   NULL, " but I wasn't mentally prepared for it.", Line_WaitForInput);
+		   NULL, " no, I wasn't mentally fit to go.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -430,14 +430,14 @@ void main()
 
 //　そんな俺の様子に……例えば大石さんのような人間に「何かの異変」を気取られかねない、ということなのだろう￥
 	OutputLine(NULL, "　そんな俺の様子に……例えば大石さんのような人間に「何かの異変」を気取られかねない、ということなのだろう。",
-		   NULL, "For example, maybe... I shouldn't pay attention to someone like Ooishi-san enticing me with \"something unusual.\"", Line_Normal);
+		   NULL, "If I acted differently, someone like Ooishi-san, for example, might end up noticing that \"something is up.\"", Line_Normal);
 	ClearMessage();
 
 //　つまり、…俺自身が口を閉ざしていようと、いつもと違う振る舞いをすれば＠それは結果的に「好まざる者」たちに何かを伝えてしまう結果となるわけだ…＠
 	OutputLine(NULL, "　つまり、…俺自身が口を閉ざしていようと、いつもと違う振る舞いをすれば、",
 		   NULL, "Meaning... if I didn't watch my mouth or did anything differently from the norm,", Line_WaitForInput);
 	OutputLine(NULL, "それは結果的に「好まざる者」たちに何かを伝えてしまう結果となるわけだ…。",
-		   NULL, " in effect, it would end up flagging myself as someone who was \"not wanted\"...", Line_WaitForInput);
+		   NULL, " in effect, it would end up communicating something to those who were \"undesirable\"...", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
@@ -746,7 +746,7 @@ void main()
 	OutputLine(NULL, "その後毎年起こる怪死事件も忘れる。",
 		   NULL, " Forget about the mysterious deaths that happened the following years.", Line_WaitForInput);
 	OutputLine(NULL, "…転落事故も、病死も自殺も、撲殺も失踪も、全部全部忘れる。",
-		   NULL, " ...Forget about the people falling to their death... and the terminal illness and suicide... and the lynching... and the disappearances. Forget it. Forget all of it.", Line_WaitForInput);
+		   NULL, " ...Forget about the people falling to their death... and the terminal illness and suicide... the fatal beatings... and the disappearances. Forget it. Forget all of it.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
@@ -754,7 +754,7 @@ void main()
 	OutputLine(NULL, "　レナが怖いのも、魅音が怖いのももちろん忘れる。",
 		   NULL, "Forget that Rena and Mion were scary. Of course, forget it all.", Line_WaitForInput);
 	OutputLine(NULL, "みんな忘れる。",
-		   NULL, " Forget about everyone.", Line_WaitForInput);
+		   NULL, " Forget about all of it.", Line_WaitForInput);
 	OutputLine(NULL, "おはぎのことも全部忘れる。",
 		   NULL, " Forget about the mochi, too.", Line_WaitForInput);
 	OutputLine(NULL, "忘れる忘れる忘れる。",
@@ -908,7 +908,7 @@ void main()
 
 //　ご近所さんに笑顔に挨拶したあと、俺に振り返りぺろりと舌を出してみせた￥
 	OutputLine(NULL, "　ご近所さんに笑顔に挨拶したあと、俺に振り返りぺろりと舌を出してみせた。",
-		   NULL, "As we smiled and parted ways with our neighbor, they turned back towards me and stuck out a tongue.", Line_Normal);
+		   NULL, "After greeting our neighbor with a smile, Rena turned back to me and poked her tongue out.", Line_Normal);
 	ClearMessage();
 
 //　そんな仕種に思わずつられて、自然に頬が緩んだ気がした＠
@@ -1115,7 +1115,7 @@ void main()
 
 	SetSpeedOfMessage( FALSE, 0, );
 
-	PlaySE(3, "s01/02/120200252", 256, 64);
+	PlaySE(3, "s01/02/120200176", 256, 64);
 	OutputLine(NULL, "圭一くん？」",
 		   NULL, " \"Keiichi-kun?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -1602,7 +1602,7 @@ void main()
 
 //　あるいは職員室に先生を呼びに走ったのだろうか＠
 	OutputLine(NULL, "　あるいは職員室に先生を呼びに走ったのだろうか？",
-		   NULL, "Or did they run to the staff room after being directed there by the teachers?", Line_WaitForInput);
+		   NULL, "Or did they run to the staff room to call for the teachers?", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
@@ -1632,14 +1632,14 @@ void main()
 
 //　…それを見て見ぬふりだと非難するのはあまりに暴力的だ￥
 	OutputLine(NULL, "　…それを見て見ぬふりだと非難するのはあまりに暴力的だ。",
-		   NULL, "...It was far too violent an act for them to seek refuge by looking the other way.", Line_Normal);
+		   NULL, "...It would be cruel to blame anyone for looking the other way.", Line_Normal);
 	ClearMessage();
 
 //　彼らは見て見ぬふりをしてたんじゃない＠……それが、唯一の護身術だと知っていたからだ￥
 	OutputLine(NULL, "　彼らは見て見ぬふりをしてたんじゃない。",
-		   NULL, "That's not to say they were looking the other way...", Line_WaitForInput);
+		   NULL, "No, they weren't simply looking the other way...", Line_WaitForInput);
 	OutputLine(NULL, "……それが、唯一の護身術だと知っていたからだ。",
-		   NULL, " ...They were doing the only thing they could to protect themselves.", Line_Normal);
+		   NULL, " ...They knew it was the only way they could to protect themselves.", Line_Normal);
 	ClearMessage();
 
 
@@ -1878,7 +1878,7 @@ void main()
 
 //　その後、レナは謹慎処分となり、病院へ通院して診察を受けた＠
 	OutputLine(NULL, "　その後、レナは謹慎処分となり、病院へ通院して診察を受けた。",
-		   NULL, "Following that, Rena was suspended and had regular  examinations at the hospital.", Line_WaitForInput);
+		   NULL, "Following that, Rena was suspended and had regular examinations at the hospital.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2076,7 +2076,7 @@ void main()
 
 //　敵が人間だろうと祟りだろうと＠……俺は殺されない＠
 	OutputLine(NULL, "　敵が人間だろうと祟りだろうと。",
-		   NULL, "Regardless of my opponent being a human or curse.", Line_WaitForInput);
+		   NULL, "Regardless of whether my opponent were a human or a curse.", Line_WaitForInput);
 	OutputLine(NULL, "……俺は殺されない。",
 		   NULL, " ...I won't let it kill me.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
