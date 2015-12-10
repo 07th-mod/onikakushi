@@ -848,7 +848,7 @@
 
 //　…俺はこの泥まみれを自らの甘さの代償として受け入れることにする＠
 	OutputLine(NULL, "　…俺はこの泥まみれを自らの甘さの代償として受け入れることにする。",
-		   NULL, "...I being covered in mud was the price I had paid for my own naiveté.", Line_WaitForInput);
+		   NULL, "...getting covered in mud was the price I had paid for my own naiveté.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -901,7 +901,7 @@
 
 //　…犯人は村ぐるみの可能性があるって…！￥
 	OutputLine(NULL, "　…犯人は村ぐるみの可能性があるって…！！",
-		   NULL, "There was the possibility that all the families of the village were involved...!!", Line_Normal);
+		   NULL, "There was the possibility of a village conspiracy...!!", Line_Normal);
 	ClearMessage();
 
 
@@ -961,7 +961,7 @@
 
 //　敵は複数、村ぐるみ＠…祟りを妄信する村人たちは俺を助けない￥
 	OutputLine(NULL, "　敵は複数、村ぐるみ。",
-		   NULL, "The enemy were numerous: all the village families.", Line_WaitForInput);
+		   NULL, "The enemy were numerous: the whole village.", Line_WaitForInput);
 	OutputLine(NULL, "…祟りを妄信する村人たちは俺を助けない。",
 		   NULL, " ...The villagers with their unwavering faith in the curse would do nothing to help me.", Line_Normal);
 	ClearMessage();
@@ -1718,7 +1718,8 @@
 //「わ、圭一くん、…野球部だよ＠　野球部だよ？？＠
 	PlaySE(3, "s01/02/120200200", 256, 64);	
 	OutputLine(NULL, "「わ、圭一くん、…野球部だよ？",
-		   NULL, "\"Whoa, Keiichi-kun... are you on the baseball team?", Line_WaitForInput);
+		   NULL, "\"Whoa, Keiichi-kun... are you on the baseball team?", Line_ContinueAfterTyping);
+	Wait (1600);
 	OutputLine(NULL, "　野球部だよ？？」",
 		   NULL, " ...The baseball team??\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -1805,16 +1806,17 @@
 		   NULL, " This old man will cheer you on.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-	DisableWindow();
-	DrawBustshot( 3, "re_se_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+//	DisableWindow();
+//	DrawBustshot( 3, "re_se_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+//  Commented out Rena's sprite change because the script from Sui takes her line out :(
 
 //「…県立大島が強いらしいよ＠左腕の亀田くんがすごいんだって＠…頑張ってね！＠
+	PlaySE(3, "s01/03/120300137", 256, 64);
+	OutputLine(NULL, "「…野球部の強い高校、教えよっか？",
+		   NULL, "\"...Want me to tell you the best highschools for baseball?", Line_WaitForInput);
 	PlaySE(3, "s01/03/120300138", 256, 64);
-	OutputLine(NULL, "「…県立大島が強いらしいよ。",
-		   NULL, "\"...Regionally speaking, it seems that Oshima High is pretty strong.", Line_WaitForInput);
-	OutputLine(NULL, "左腕の亀田くんがすごいんだって。",
-		   NULL, " They say their southpaw, Kameda-kun, is amazing.", Line_WaitForInput);
+	OutputLine(NULL, "そこにいる左腕の、亀田くんがすごいピッチャーなんだけどさ。",
+		   NULL, " See Kameda-kun over there? He's a southpaw and an amazing pitcher.", Line_WaitForInput);
 	PlaySE(3, "s01/03/120300139", 256, 64);
 	OutputLine(NULL, "…頑張ってね！」",
 		   NULL, " Good luck!\"", Line_WaitForInput);
@@ -1824,7 +1826,7 @@
 
 //　なんだかいつの間にか球児にされてしまったが、まぁいいか￥
 	OutputLine(NULL, "　なんだかいつの間にか球児にされてしまったが、まぁいいか。",
-		   NULL, "Seems they've made me out as some kind of local prodigy, but oh well...", Line_Normal);
+		   NULL, "Seems they've already taken me for a baseball nut, but oh well...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_027", "up", 0, 0, 300 );
@@ -1890,7 +1892,7 @@
 
 //　あんな風に微笑まれたら…俺は………俺は…ッ！＠
 	OutputLine(NULL, "　あんな風に微笑まれたら…俺は………俺は…ッ！！",
-		   NULL, "If they make me smile like that... I'll... I'll... ngh!!", Line_WaitForInput);
+		   NULL, "If they smile at me like that... I'll... I'll... ngh!!", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3100,13 +3102,11 @@
 		   NULL, " Umm, well...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 500 );
+	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	OutputLineAll(NULL, "", Line_WaitForInput);
-
 	OutputLine(NULL, "あのね！",
-		   NULL, "Well...", Line_ContinueAfterTyping);
+		   NULL, " well...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
@@ -3220,7 +3220,7 @@
 		   NULL, " Definitely.", Line_WaitForInput);
 	PlaySE(3, "s01/02/120200230", 256, 64);
 	OutputLine(NULL, "なんで圭一くんまで…。」",
-		   NULL, " Why has Keiichi-kun also...\"", Line_WaitForInput);
+		   NULL, " Why you too...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3314,7 +3314,7 @@
 //「な、なんでバットまで同じなのッ？！？！＠
 	PlaySE(3, "s01/02/120200235", 256, 64);
 	OutputLine(NULL, "「な、なんでバットまで同じなのッ？！？！」",
-		   NULL, "\"Wh-Why is that bat the same, too!?!?\"", Line_WaitForInput);
+		   NULL, "\"Wh-Why is even your bat the same!?!?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -3523,7 +3523,7 @@
 		   NULL, " Why is it...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	Wait( 1600 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "どうしてそんなにまで同じなのッ？！」",
@@ -3868,20 +3868,11 @@
 		   NULL, "\"Satoshi-kun, you see...", Line_ContinueAfterTyping);
 
 	PlaySE( 4, "wa_023", 125, 64 );
+	Wait (1800);
 
 //"!s100転校!sd"しちゃったの。＠
-
-	OutputLine(NULL, "“",
-		   NULL, " '", Line_ContinueAfterTyping);
-	Wait(100);
-	SetSpeedOfMessage( TRUE, 0, );
-	OutputLine(NULL, "転校",
-		   NULL, "transferred", Line_ContinueAfterTyping);
-
-	SetSpeedOfMessage( FALSE, 0, );
-	OutputLine(NULL, "”しちゃったの。」",
-		   NULL, "' out.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLine(NULL, "　転校しちゃったの。」",
+		   NULL, " transferred out.\"", Line_ContinueAfterTyping);
 
 
 //　転校って……なんだよ…＠
