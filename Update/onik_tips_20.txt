@@ -27,7 +27,8 @@
 //「最近のカップめんは凝ってて種類も多いんだよ＠どれも一通りは食ってみたいし。＠
 	PlaySE(3, "s20/01/440100041", 256, 64);
 	OutputLine(NULL, "「最近のカップめんは凝ってて種類も多いんだよ。",
-		   NULL, "\"Cup noodles have gotten so elaborate recently, and there are a bunch of different types.", Line_WaitForInput);
+		   NULL, "\"Cup noodles have gotten so elaborate recently, and there are a bunch of different types.", Line_ContinueAfterTyping);
+	Wait (1600);
 	OutputLine(NULL, "どれも一通りは食ってみたいし。」",
 		   NULL, " I want to try each of them at least once.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -40,20 +41,13 @@
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
-//「圭一＠箱売りしてるのにしなさい。安いから。＠
-	OutputLine(NULL, "「圭一。",
-		   NULL, "\"Keiichi.", Line_WaitForInput);
-	OutputLine(NULL, "箱売りしてるのにしなさい。安いから。」",
-		   NULL, " Buy them in the big case. It's cheaper.\"", Line_WaitForInput);
+//　あまりの量と種類に親父が渋って、バラ売りじゃなく箱で選んでこい、と言う。
+	OutputLine(NULL, "　あまりの量と種類に親父が渋って、",
+		   NULL, "Looking displeased at the sheer amount and the number of different varieties,", Line_WaitForInput);
+	OutputLine(NULL, "　バラ売りじゃなく箱で選んでこい、と言う。",
+		   NULL, " Dad told me to go get a multipack instead of individual ones.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
-//　親父が渋る￥
-	OutputLine(NULL, "　親父が渋る。",
-		   NULL, "Dad faltered.", Line_Normal);
-	ClearMessage();
 
 //　まぁこういう展開は読めていた＠
 	OutputLine(NULL, "　まぁこういう展開は読めていた。",
@@ -61,20 +55,19 @@
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
 //　親父が出てきたらどうしようもない￥
 	OutputLine(NULL, "　親父が出てきたらどうしようもない。",
-		   NULL, "Dad knew there was no point in him butting in.", Line_Normal);
+		   NULL, "Now that Dad had thrown his hat into the ring, I'd have to compromise.", Line_Normal);
 	ClearMessage();
 
 //「それじゃ１種類しか食えないよ＠　飽きちゃうって！＠
 	PlaySE(3, "s20/01/440100042", 256, 64);
 	OutputLine(NULL, "「それじゃ１種類しか食えないよ！",
-		   NULL, "\"Then I'd only get to eat one kind!", Line_WaitForInput);
+		   NULL, "\"Then I'd only get to eat one kind!", Line_ContinueAfterTyping);
+	Wait (1300);
 	OutputLine(NULL, "　飽きちゃうって！」",
 		   NULL, " I'd get bored with it!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
 
 
 //　形式だけの抵抗だ＠
@@ -88,45 +81,48 @@
 		   NULL, "I had already given up inside and wasn't sure which case of noodles to get.", Line_Normal);
 	ClearMessage();
 
-//「決められないならお母さんが決めちゃうわよ。＠
-	OutputLine(NULL, "「決められないならお母さんが決めちゃうわよ。」",
-		   NULL, "\"If you can't pick, then Mommy will pick for you.\"", Line_WaitForInput);
+//お袋と親父は早々にレジへ並んで、まだ売り場であれこれ迷う俺を呼んでいる。
+	OutputLine(NULL, "お袋と親父は早々にレジへ並んで、まだ売り場であれこれ迷う俺を呼んでいる。",
+		   NULL, "Mom and Dad were already waiting in line, calling for me as I struggled with the decision.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
-
-//　そう急かされても困る...＠
-	OutputLine(NULL, "　そう急かされても困る…！",
-		   NULL, "You don't have to rush me...!", Line_WaitForInput);
+//　列も長くないし、時間はない……。俺は仕方なく、手早く目当てのラーメンの箱を探しあてた。
+	OutputLine(NULL, "　列も長くないし、時間はない……。",
+		   NULL, "The line is short, and there isn't much time...!", Line_WaitForInput);
+	OutputLine(NULL, "俺は仕方なく、手早く目当てのラーメンの箱を探しに行く。",
+		   NULL, " Left with no choice, I quickly search the cases of noodles for what I want.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-
-//　手早く目当てのラーメンの箱を探しに行く￥
-	OutputLine(NULL, "　手早く目当てのラーメンの箱を探しに行く。",
-		   NULL, "I quickly search the cases of noodles for what I want.", Line_Normal);
+// 困ったときには、……そう！　豚骨ショウガ味の大盛カップ！！
+	OutputLine(NULL, "困ったときには、……そう！　豚骨ショウガ味の大盛カップ！！",
+		   NULL, "When in trouble... That's it! Pork-bone & Ginger, extra large!!", Line_Normal);
 	ClearMessage();
-
-//「豚骨ショウガ味、デカカップ＠　ねぇ圭一、もう少し普通のにしない？＠
-	OutputLine(NULL, "「豚骨ショウガ味、デカカップ？",
-		   NULL, "\"Pork -bone & Ginger, large cup?", Line_WaitForInput);
-	OutputLine(NULL, "　ねぇ圭一、もう少し普通のにしない？」",
-		   NULL, " Hey, Keiichi, can't you get a more normal one?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
 
 
 //　お袋に選ばせると醤油味だと塩味だの、手堅いチョイスに固まる傾向がある￥
 	OutputLine(NULL, "　お袋に選ばせると醤油味だと塩味だの、手堅いチョイスに固まる傾向がある。",
-		   NULL, "If I let Mom pick, she'd err on the side of safety and get soy sauce or salt flavored.", Line_Normal);
+		   NULL, "If I let Mom pick, she'd err on the side of safety and get soy sauce or salt flavored.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+// だから豚骨の箱をどん、と買い物かごに積み込むと、『……これぇ？』と言いたげな顔で俺を見返した。
+	OutputLine(NULL, "だから豚骨の箱をどん、と買い物かごに積み込むと、『……これぇ？』と言いたげな顔で俺を見返した。",
+		   NULL, "So, when I plonked a large box of pork-bone flavor in the shopping cart, Mom looked back at me with an expression as if to say \"...These ones?\"", Line_WaitForInput);
+
+// とはいえ、これだけは譲れないとばかりに俺は、チョイスしてきた持論を展開する。
+	OutputLine(NULL, "とはいえ、これだけは譲れないとばかりに俺は、チョイスしてきた持論を展開する。",
+		   NULL, " To show her this was my last compromise, I began explaining the choice.", Line_Normal);
 	ClearMessage();
+
 
 //「豚骨はうまいんだよ＠　大盛りだけど大味ってわけじゃないし...！！＠
 	PlaySE(3, "s20/01/440100043", 256, 64);
 	OutputLine(NULL, "「豚骨はうまいんだよ！",
-		   NULL, "\"Pork-bone is good!", Line_WaitForInput);
+		   NULL, "\"Pork-bone is good!", Line_ContinueAfterTyping);
+	Wait (1200);
 	OutputLine(NULL, "　大盛りだけど大味ってわけじゃないし…！！」",
-		   NULL, " I don't want a big bowl of tasteless stuff...!!\"", Line_WaitForInput);
+		   NULL, " You get a large serving, but the flavor isn't too strong...!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 
