@@ -4219,8 +4219,8 @@ void main()
 		   NULL, "...With hatchets.", Line_WaitForInput);
 	OutputLine(NULL, "…つるはしで。",
 		   NULL, " ...With pickaxes.", Line_WaitForInput);
-	OutputLine(NULL, "…斧、で。",
-		   NULL, " ...With... an axe.", Line_Normal);
+	OutputLine(NULL, "…鉈、で。",
+		   NULL, " ...With... a hatchet.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 
@@ -4261,8 +4261,8 @@ void main()
 
 
 //　レナもまた、俺の声に驚き、その手の斧をどさりと草むらに落とした￥
-	OutputLine(NULL, "　レナもまた、俺の声に驚き、その手の斧をどさりと草むらに落とした。",
-		   NULL, "Rena dropped the axe she was holding onto the grass after being startled by my voice.", Line_Normal);
+	OutputLine(NULL, "　レナもまた、俺の声に驚き、その手の鉈をどさりと草むらに落とした。",
+		   NULL, "Rena dropped the hatchet she was holding onto the grass after being startled by my voice.", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 1, "msys11", 128, 0 );
@@ -4272,10 +4272,10 @@ void main()
 //「圭一くんね、さっきほら、斧とかがあると便利だって言ったじゃない？＠　そ、それでねレナ、物置からちゃんと斧、持ってきたんだよ…！！＠
 	PlaySE(3, "s19/02/990200222", 256, 64);
 	OutputLine(NULL, "「圭一くんね、さっきほら、斧とかがあると便利だって言ったじゃない？！",
-		   NULL, "\"Keiichi-kun, you see, earlier, yeah, you said it would help if you had an axe, didn't you!?", Line_WaitForInput);
+		   NULL, "\"Keiichi-kun, you see, earlier, yeah, you said it would help if you had an axe or something, didn't you!?", Line_WaitForInput);
 	PlaySE(3, "s19/02/990200223", 256, 64);
-	OutputLine(NULL, "　そ、それでねレナ、物置からちゃんと斧、持ってきたんだよ…！！」",
-		   NULL, " S-So then I... brought an axe for you... from the shed...!!\"", Line_WaitForInput);
+	OutputLine(NULL, "　そ、それでねレナ、物置からちゃんと鉈、持ってきたんだよ…！！」",
+		   NULL, " S-So then I... brought a hatchet for you... from the shed...!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -4324,8 +4324,8 @@ void main()
 
 //「最後の梁はその斧じゃないと壊せそうにない＠せっかく持ってきてくれたんだし。…明日借りるよ。!d500な？＠
 	PlaySE(3, "s19/01/hr_kei05040", 256, 64);
-	OutputLine(NULL, "「最後の梁はその斧じゃないと壊せそうにない。",
-		   NULL, "\"Doesn't look like we can break that last beam without an axe.", Line_WaitForInput);
+	OutputLine(NULL, "「最後の梁はその鉈じゃないと壊せそうにない。",
+		   NULL, "\"Doesn't look like we can break that last beam without that hatchet.", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05050", 256, 64);
 	OutputLine(NULL, "せっかく持ってきてくれたんだし。…明日借りるよ。",
 		   NULL, " You brought it after all... I'll have to borrow it tomorrow.", Line_ContinueAfterTyping);
