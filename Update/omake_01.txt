@@ -38,7 +38,7 @@ void main()
 //「この度は当サークル、０７ｔｈ　Ｅｘｐａｎｓｉｏｎのノベルゲーム＠ひぐらしのなく頃に～鬼隠し編～をお買い上げ下さいまして、誠にありがとうございました＠　いかがだったでしょうか＠　ちょっぴりでもお楽しみいただけたなら幸いです。￥
 	PlaySE(3, "s20/02/440200103", 256, 64);
 	OutputLine(NULL, "「この度は当サークル、０７ｔｈ　Ｅｘｐａｎｓｉｏｎのノベルゲーム、",
-		   NULL, "\"Thank you for buying Higurashi When They Cry ~Onikakushi~,", Line_WaitForInput);
+		   NULL, "\"Thank you for buying Higurashi When They Cry ~Onikakushi~,", Line_ContinueAfterTyping);
 	OutputLine(NULL, "ひぐらしのなく頃に〜鬼隠し編〜をお買い上げ下さいまして、誠にありがとうございました！",
 		   NULL, " a visual novel by 07th Expansion!", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200104", 256, 64);
@@ -77,10 +77,16 @@ void main()
 	FadeBustshotWithFiltering( 3, "right", 1, FALSE, 0, 0, 300, TRUE );
 	DrawBustshotWithFiltering( 3, "re_se_de_a1", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
-//「なんでも、今回の「鬼隠し編」は全体の物語のプロローグみたいなお話なんですって。＠
+// レナrvS20/02/440200106.「あははは！kvS20/02/440200107.　今回の『鬼隠し』は、全体の謎に挑む人たちが最初に通るお話。kvS20/02/440200108.だから実質上のプロローグの位置づけなんだって」
+	PlaySE(3, "s20/02/440200106", 256, 64);
+	OutputLine(NULL, "「あははは！",
+		   NULL, "\"Ahaha!", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200107", 256, 64);
-	OutputLine(NULL, "「なんでも、今回の「鬼隠し編」は全体の物語のプロローグみたいなお話なんですって。」",
-		   NULL, "\"As I understand it, this ~Onikakushi~ chapter is supposed to be somewhat of a prologue to the entire series.\"", Line_WaitForInput);
+	OutputLine(NULL, "今回の『鬼隠し』は、全体の謎に挑む人たちが最初に通るお話。",
+		   NULL, " This ~Onikakushi~ chapter is the first story that readers challenging the mystery of the entire series get to experience.", Line_WaitForInput);
+	PlaySE(3, "s20/02/440200108", 256, 64);
+	OutputLine(NULL, "だから実質上のプロローグの位置づけなんだって。」",
+		   NULL, " So it's actually supposed to be somewhat of a prologue.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -108,7 +114,7 @@ void main()
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 	PlaySE(3, "s20/03/440300250", 256, 64);
-	OutputLine(NULL, "　この最悪のバッドエンドを回避するために、プレイヤーさんが物語を模索していくのがサウンドノベルだし。」",
+	OutputLine(NULL, "　この最悪のバッドエンドを回避するために、プレイヤーさんが物語を模索していくのがこの作品の醍醐味だし」",
 		   NULL, "The player digging through the story in order to avoid a bad ending is the point of these types of games after all.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
@@ -127,7 +133,7 @@ void main()
 
 //「次の話はどんなのになるわけ＠　レナは聞いてるー？＠
 	PlaySE(3, "s20/03/440300251", 256, 64);
-	OutputLine(NULL, "「次の話はどんなのになるわけ？",
+	OutputLine(NULL, "「これから、どんな話が待ち受けてるんだろう？",
 		   NULL, "\"What happens in the next chapter?", Line_WaitForInput);
 	PlaySE(3, "s20/03/440300252", 256, 64);
 	OutputLine(NULL, "　レナは聞いてるー？」",
@@ -139,22 +145,28 @@ void main()
 	DrawSceneWithMask( "bg_165", "left", 0, 0, 300 );
 	DrawBustshotWithFiltering( 1, "re_se_wa_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
-//「うん。次のシナリオは今回のシナリオとはまた別の側面を紹介する物語…って言ってたよ。＠
+// レナrvS20/02/440200109.「うん。kvS20/02/440200110.今回はレナをパートナーに選んだ物語だったけど、kvS20/02/440200111.他にも魅ぃちゃん、沙都子ちゃんをパートナーに選んだお話もあるみたいだね」
+
+	PlaySE(3, "s20/02/440200109", 256, 64);
+	OutputLine(NULL, "「うん。",
+		   NULL, "\"Yeah.", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200110", 256, 64);
-	OutputLine(NULL, "「うん。次のシナリオは今回のシナリオとはまた別の側面を紹介する物語…って言ってたよ。」",
-		   NULL, "\"Yeah. They said the next chapter will introduce another aspect of the story.\"", Line_WaitForInput);
+	OutputLine(NULL, "今回はレナをパートナーに選んだ物語だったけど、",
+		   NULL, " This episode has Rena as your closest friend,", Line_WaitForInput);
+	PlaySE(3, "s20/02/440200111", 256, 64);
+	OutputLine(NULL, "他にも魅ぃちゃん、沙都子ちゃんをパートナーに選んだお話もあるみたいだね。」",
+		   NULL, " but it seems like there are stories featuring Mii-chan and Satoko-chan, too.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 	DisableWindow();
 	DrawBustshot( 3, "sa_se_ak_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
 
-//「……難しい言い方ですわねぇ＠何なんですの？￥
+// 沙都子rvS20/04/440400131.「他のシナリオにはどんな展開があるんですの？」
+
 	PlaySE(3, "s20/04/440400131", 256, 64);
-	OutputLine(NULL, "「……難しい言い方ですわねぇ。",
-		   NULL, "\"...That's a strange way of putting it.", Line_WaitForInput);
-	OutputLine(NULL, "何なんですの？」",
-		   NULL, " What does that mean?\"", Line_Normal);
+	OutputLine(NULL, "「他のシナリオにはどんな展開があるんですの？」",
+		   NULL, "\"What kind of plot developments can we expect from the other scenarios?\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_165", "m1", 0, 0, 300 );
