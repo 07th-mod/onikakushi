@@ -2831,7 +2831,7 @@ void main()
 
 //　そんな俺の、叫びのような思考は...そのまま口からこぼれた＠
 	OutputLine(NULL, "　そんな俺の、叫びのような思考は…そのまま口からこぼれた。",
-		   NULL, "Those thoughts, screamed in my head... eventually spilling out of my mouth.", Line_WaitForInput);
+		   NULL, "Those thoughts screamed in my head... eventually spilling out of my mouth.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -2947,13 +2947,13 @@ void main()
 		   NULL, " Talk...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 1400 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "お話。……",
 		   NULL, " Talk...", Line_ContinueAfterTyping);
 //!s200
-
+	Wait( 2600 );
 	SetSpeedOfMessage( TRUE, 0, );
 
 
@@ -4310,7 +4310,7 @@ void main()
 
 //　額を割られ、血まみれになって倒れる仲間たちを残し、レナは校舎へ向かった＠
 	OutputLine(NULL, "　額を割られ、血まみれになって倒れる仲間たちを残し、レナは校舎へ向かった。",
-		   NULL, "Leaving her friends covered in blood with gashes on their head, she made her way towards the school building.", Line_WaitForInput);
+		   NULL, "Leaving her friends covered in blood with gashes on their heads, she made her way towards the school building.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -4894,7 +4894,7 @@ void main()
 	OutputLine(NULL, "　やさしく、やさしく。",
 		   NULL, "Gently, ever so gently.", Line_WaitForInput);
 	OutputLine(NULL, "…カウンセリングの基本は聞きに徹することだ。",
-		   NULL, " The fundamentals of counseling were believing what you were told.", Line_Normal);
+		   NULL, " A fundamental part of counseling is to be a good, patient listener.", Line_Normal);
 	ClearMessage();
 
 
@@ -4904,7 +4904,7 @@ void main()
 		   NULL, "\"Whoever abandons Hinamizawa... will be hunted down by Oyashiro-sama!!", Line_WaitForInput);
 	PlaySE(3, "s01/02/120200434", 256, 64);
 	OutputLine(NULL, "　そして…とうとう私のところにも来たんです！！！」",
-		   NULL, " And... they've finally gotten to me!!!\"", Line_WaitForInput);
+		   NULL, " And... it's finally gotten to me!!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -4984,7 +4984,7 @@ void main()
 		   NULL, "\"Everyone knows... It's Hinamizawa's guardian deity...", Line_WaitForInput);
 	PlaySE(3, "s01/02/120200444", 256, 64);
 	OutputLine(NULL, "それで、雛見沢を捨てて出て行こうとすると……バチを当てるんです。」",
-		   NULL, " And if you ever try abandoning Hinamizawa by leaving... you'll incur his wrath.\"", Line_WaitForInput);
+		   NULL, " And if you ever try abandoning Hinamizawa by leaving... you'll incur its wrath.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -5315,7 +5315,7 @@ void main()
 //　...オヤシロさまの祟りがどうだったにせよ、クラスメートを金属バットで殴った理由にはなりませんし、被害者が訴えない理由にもなりません＠
 	PlaySE(3, "s01/11/120700508", 256, 64);
 	OutputLine(NULL, "　…オヤシロさまの祟りがどうだったにせよ、クラスメートを金属バットで殴った理由にはなりませんし、被害者が訴えない理由にもなりません。",
-		   NULL, "...Even if it was Oyashiro-sama's curse, it doesn't add up as to why her classmates, the victims who were beaten with a metal bat, wouldn't press charges.", Line_WaitForInput);
+		   NULL, "...Even if it was Oyashiro-sama's curse, it doesn't explain Rena beating her classmates with a metal bat, or why the victims wouldn't press charges.", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -6518,7 +6518,7 @@ void main()
 
 //　絶対絶命...という複雑な単語は、もう思いつかなかった........................￥
 	OutputLine(NULL, "　絶対絶命…という複雑な単語は、もう思いつかなかった……………………。",
-		   NULL, "'Dire straits,' I couldn't even come up the phrase that adequately described my situation...", Line_Normal);
+		   NULL, "'Dire straits,' I couldn't even come up with the phrase that adequately described my situation...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawScene( "black", 3000 );
