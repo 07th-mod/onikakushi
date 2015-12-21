@@ -1407,10 +1407,10 @@ void main()
 
 //「……祟ってばかりの悪い神様なら、祀るの嫌です＠ボクは祟るより、ご利益のある神さまの方が好きですよ。￥
 	PlaySE(3, "s20/05/440500097", 256, 64);
-	OutputLine(NULL, "「……祟ってばかりの悪い神様なら、祀るの嫌です。",
+	OutputLine(NULL, "「……祟ってばかりの悪い神様なら、祀るのは嫌なのです。",
 		   NULL, "\"...I don't want to worship some bad god that just curses people.", Line_WaitForInput);
 	PlaySE(3, "s20/05/440500098", 256, 64);	
-	OutputLine(NULL, "ボクは祟るより、ご利益のある神さまの方が好きですよ。」",
+	OutputLine(NULL, "ボクは祟るより、ご利益のある神さまの方が好きなのですよ。」",
 		   NULL, " I'd like a generous god more than one that curses.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
@@ -1419,7 +1419,7 @@ void main()
 
 //「そっか、梨花ちゃんって巫女さんをやったんだよね…＠　うん。いい意見。＠
 	PlaySE(3, "s20/02/440200154", 256, 64);
-	OutputLine(NULL, "「そっか、梨花ちゃんって巫女さんをやったんだよね…！",
+	OutputLine(NULL, "「そっか、梨花ちゃんって巫女さんをやってるんだよね…！",
 		   NULL, "\"That's right, Rika-chan is a shrine maiden...!", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200155", 256, 64);
 	OutputLine(NULL, "　うん。いい意見。」",
@@ -1473,68 +1473,6 @@ void main()
 		   NULL, " So half of us think it was a curse, and half of us think it was people?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-	DisableWindow();
-	DrawBustshotWithFiltering( 1, "tm_si_de_a1", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
-
-//「レナちゃん、参考まででいいんだけどさ＠
-//　β版までをプレイしてくれたテストプレイヤーさんたちの感想ではどんな感じなんだい？＠
-
-//;＜富竹
-	OutputLine(NULL, "「レナちゃん、参考まででいいんだけどさ。",
-		   NULL, "\"Rena-chan, just for reference,", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-	OutputLine(NULL, "　β版までをプレイしてくれたテストプレイヤーさんたちの感想ではどんな感じなんだい？」",
-		   NULL, "what did the test players who played the beta version think?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
-
-	DisableWindow();
-	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 3, "re_se_de_b1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
-
-//「えっとー＠うん＠人間派がとっても多かったの！＠
-	OutputLine(NULL, "「えっとー。",
-		   NULL, "\"Hmmm.", Line_WaitForInput);
-	OutputLine(NULL, "うん。",
-		   NULL, " Yeah.", Line_WaitForInput);
-	OutputLine(NULL, "人間派がとっても多かったの！」",
-		   NULL, " There were a lot more players who believed in the 'people' explanation!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
-	DisableWindow();
-	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 1, "me_se_wi_a1", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
-
-//「ほらほら見たことか＠　冷静な百戦錬磨の同志諸兄はよく見てるよ！￥
-	OutputLine(NULL, "「ほらほら見たことか！",
-		   NULL, "\"See, see, right there!", Line_WaitForInput);
-	OutputLine(NULL, "　冷静な百戦錬磨の同志諸兄はよく見てるよ！」",
-		   NULL, " Our veteran comrades are cool, collected, and very observant!\"", Line_Normal);
-	ClearMessage();
-	DisableWindow();
-	DrawSceneWithMask( "bg_161", "right", 0, 0, 300 );
-	DrawBustshot( 1, "ri_se_de_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
-
-//「……でも、β版は途中までしかできてませんでしたです。＠
-
-	OutputLine(NULL, "「……でも、β版は途中までしかできてませんでしたです。」",
-		   NULL, "\"...But the beta version only finished partway through the story.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
-	DisableWindow();
-	DrawBustshotWithFiltering( 3, "re_se_wa_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
-
-//「そうね＠β版をプレイしてくれた方も、最後まで通して見てみたら、また意見が変わってるかもしれないね。￥
-
-	OutputLine(NULL, "「そうね。",
-		   NULL, "\"That's right.", Line_WaitForInput);
-	OutputLine(NULL, "β版をプレイしてくれた方も、最後まで通して見てみたら、また意見が変わってるかもしれないね。」",
-		   NULL, " Even the people who played the beta might change their minds if they got through to the very end.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	PlayBGM( 1, "msys02", 128, 0 );
