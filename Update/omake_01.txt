@@ -175,10 +175,10 @@ void main()
 //「今回の鬼隠し編では、雛見沢で近年起こった連続怪死事件が紹介されたでしょ＠
 //　次回のシナリオでは雛見沢の古い歴史なんかが紹介されるんですって。￥
 	PlaySE(3, "s20/02/440200115", 256, 64);
-	OutputLine(NULL, "「今回の鬼隠し編では、雛見沢で近年起こった連続怪死事件が紹介されたでしょ？",
+	OutputLine(NULL, "「今回の『鬼隠』では、雛見沢で近年起こった連続怪死事件が紹介されたでしょ？",
 		   NULL, "\"In this chapter, they introduced the string of mysterious deaths that were happening in Hinamizawa recently, right?", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200116", 256, 64);	
-	OutputLine(NULL, "　次回のシナリオでは雛見沢の古い歴史なんかが紹介されるんですって。」",
+	OutputLine(NULL, "　たとえば魅ぃちゃんのシナリオでは雛見沢の古い歴史なんかが紹介されるんだって」",
 		   NULL, " The next chapter will introduce some of the history of Hinamizawa.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
@@ -233,7 +233,7 @@ void main()
 
 //「でも、どんなお話になるのか楽しみにございますわね！￥
 	PlaySE(3, "s20/04/440400132", 256, 64);	
-	OutputLine(NULL, "「でも、どんなお話になるのか楽しみにございますわね！」",
+	OutputLine(NULL, "「でも、どんなお話になるのか楽しみでございますわね！」",
 		   NULL, "\"However, I am looking forward to seeing what kind of story it's going to be!\"", Line_Normal);
 	ClearMessage();
 ////setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
@@ -316,19 +316,24 @@ void main()
 
 //「………きっと立ち絵がないので登場できないのです。＠
 	PlaySE(3, "s20/05/440500088", 256, 64);	
-	OutputLine(NULL, "「………きっと立ち絵がないので登場できないのです。」",
-		   NULL, "\"...It's probably because he doesn't have any character art so he couldn't poke his head in even if he wanted to.\"", Line_WaitForInput);
+	OutputLine(NULL, "「………きっと喋るワード数が多すぎて居残りなのです。」",
+		   NULL, "\"...He probably had too many lines in his script, and had to stay behind recording.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
 	DrawBustshotWithFiltering( 1,"oi_si_wa_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
-//「梨花さん、そーゆうのは大人の事情って言うんですよ。んっふっふっふ！￥
+// 大石rvS20/11/440700336.「そりゃ古手さん、仕方がありませんよ。kvS20/11/440700337.前原さんの台詞だけで普通のアドベンチャーゲームなら全員分の量がありますからね～。kvS20/11/440700338.んっふっふっふ！」
+	PlaySE(3, "s20/11/440700336", 256, 64);		
+	OutputLine(NULL, "「そりゃ古手さん、仕方がありませんよ。",
+		   NULL, "\"Well, you can hardly blame him.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700337", 256, 64);		
-	OutputLine(NULL, "「梨花さん、そーゆうのは大人の事情って言うんですよ。んっふっふっふ！」",
-		   NULL, "\"Rika-san, that's what we refer to as a 'personal problem,' hehehehe!\"", Line_Normal);
+	OutputLine(NULL, "前原さんの台詞だけで普通のアドベンチャーゲームなら全員分の量がありますからね～。",
+		   NULL, "　Maebara-san has enough lines to cover a full cast in a normal novel game, you see~", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700338", 256, 64);
+	OutputLine(NULL, "んっふっふっふ！」",
+		   NULL, " hehehehe!\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "black", "left", 0, 0, 300 );
@@ -359,7 +364,7 @@ void main()
 
 //「結局…圭一くんを襲った者の正体って何なのかしら。＠
 	PlaySE(3, "s20/02/440200122", 256, 64);	
-	OutputLine(NULL, "「結局…圭一くんを襲った者の正体って何なのかしら。」",
+	OutputLine(NULL, "結局…圭一くんを襲ったのって、正体は何なんだろう……？",
 		   NULL, "\"I wonder... What was the identity of the thing that attacked Keiichi-kun?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
@@ -378,8 +383,8 @@ void main()
 
 //「……でも圭一、最後な電話をしてましたです。＠
 	PlaySE(3, "s20/05/440500089", 256, 64);
-	OutputLine(NULL, "「……でも圭一、最後な電話をしてましたです。」",
-		   NULL, "\"...But at the end, Keiichi made that phone call.\"", Line_WaitForInput);
+	OutputLine(NULL, "「……でも圭一は、最期に謎の電話をかけてきていましたのです。」",
+		   NULL, "\"...But Keiichi made that mysterious phone call at his demise.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -437,7 +442,7 @@ void main()
 
 //「せっかくですから、意見を出してみようじゃあないですか＠じゃー園崎さんから。＠
 	PlaySE(3, "s20/11/440700339", 256, 64);
-	OutputLine(NULL, "「せっかくですから、意見を出してみようじゃあないですか。",
+	OutputLine(NULL, "「せっかくですから、意見を出してみようじゃありませんか。",
 		   NULL, "\"Since we're all here, why don't we all share our theories?", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700340", 256, 64);
 	OutputLine(NULL, "じゃー園崎さんから。」",
@@ -507,7 +512,7 @@ void main()
 
 //「そう言えばそうよね…＠とても人間の仕業とは思えないシーンだったし。￥
 	PlaySE(3, "s20/02/440200126", 256, 64);
-	OutputLine(NULL, "「そう言えばそうよね…。",
+	OutputLine(NULL, "「そう言えばそうだよね…。",
 		   NULL, "\"When you say it that way...", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200127", 256, 64);
 	OutputLine(NULL, "とても人間の仕業とは思えないシーンだったし。」",
@@ -727,8 +732,8 @@ void main()
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 	PlaySE(3, "s20/11/440700350", 256, 64);
-	OutputLine(NULL, "　…第一、圭一くんを殺して誰が得をすると言うんです？」",
-		   NULL, "...First off, who benefits from killing Keiichi-kun?\"", Line_Normal);
+	OutputLine(NULL, "　…第一、前原さんを殺して誰が得をすると言うんです？」",
+		   NULL, "...First off, who benefits from killing Maebara-san?\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_166", "right", 0, 0, 300 );
@@ -826,7 +831,7 @@ void main()
 	OutputLine(NULL, "「なるほど。",
 		   NULL, "\"I see.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700352", 256, 64);	
-	OutputLine(NULL, "虐げられた某家の人たちが先祖の恨みを晴らすために…ってな感じですか？",
+	OutputLine(NULL, "過去に酷い扱いを受けた某家の人たちが先祖の恨みを晴らすために…ってな感じですか？",
 		   NULL, " A member of some repressed family looking to air out an old grudge of their ancestors... something like that?", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700353", 256, 64);
 	OutputLine(NULL, "　うーん………私はそれにも反対ですねぇ。」",
@@ -864,8 +869,8 @@ void main()
 
 //「劇中で前原さんが言うように、オヤシロさまがレナさんや園崎さんに乗り移って悪さをしている…って考える＠……一番つじつまが合うんです＠残念ながら。＠
 	PlaySE(3, "s20/11/440700354", 256, 64);
-	OutputLine(NULL, "「劇中で前原さんが言うように、オヤシロさまがレナさんや園崎さんに乗り移って悪さをしている…って考えると",
-		   NULL, "\"If, like how Maebara-san said during the story, it was the case that Oyashiro-sama possessed Rena-san and Sonozaki-san and committed those acts...", Line_WaitForInput);
+	OutputLine(NULL, "「劇中で前原さんが言うように、オヤシロさまが竜宮さんや園崎さんに乗り移って悪さをしている…って考えると",
+		   NULL, "\"If, like how Maebara-san said during the story, it was the case that Oyashiro-sama possessed Ryuugu-san and Sonozaki-san and committed those acts...", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700355", 256, 64);
 	OutputLine(NULL, "……一番つじつまが合うんです。",
 		   NULL, " That would fit the evidence the most.", Line_WaitForInput);
@@ -880,7 +885,7 @@ void main()
 
 //「えっと……実は私も大石さんと同じ意見なの＠…あんなにやさしかったレナや魅ぃちゃんが突然おかしくなるなんて、そうじゃなきゃ説明つかないもの。＠
 	PlaySE(3, "s20/02/440200135", 256, 64);
-	OutputLine(NULL, "「えっと……実は私も大石さんと同じ意見なの。",
+	OutputLine(NULL, "「えっと……実はレナも大石さんと同じ意見なの。",
 		   NULL, "\"Ummm... Actually, I'm of the same opinion as Ooishi-san.", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200136", 256, 64);
 	OutputLine(NULL, "…あんなにやさしかったレナや魅ぃちゃんが突然おかしくなるなんて、そうじゃなきゃ説明つかないもの。」",
@@ -912,10 +917,10 @@ void main()
 
 //「……魅ぃの話の意味がわかりにくいですよ＠説明がほしいです。＠
 	PlaySE(3, "s20/05/440500092", 256, 64);
-	OutputLine(NULL, "「……魅ぃの話の意味がわかりにくいですよ。",
+	OutputLine(NULL, "「……魅ぃの話の意味がわかりにくいのですよ。",
 		   NULL, "\"...I don't get what Mii is saying.", Line_WaitForInput);
 	PlaySE(3, "s20/05/440500093", 256, 64);	
-	OutputLine(NULL, "説明がほしいです。」",
+	OutputLine(NULL, "説明がほしいのです。」",
 		   NULL, " I'd like an explanation.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
@@ -1001,7 +1006,7 @@ void main()
 	OutputLine(NULL, "　これは全部祟りの仕業なんですのよー！",
 		   NULL, " This is all the curse's fault!", Line_WaitForInput);
 	PlaySE(3, "s20/04/440400149", 256, 64);	
-	OutputLine(NULL, "　レナさんも魅音さんもみんなやさしい、いい人がいいですのーーー！！！！」",
+	OutputLine(NULL, "　レナさんも魅音さんもみんなやさしい、いい人がいいのですのーーー！！！！」",
 		   NULL, " Rena-san and Mion-san and everybody else are all kind, nice people!!!!\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
@@ -1010,7 +1015,7 @@ void main()
 
 //「わ、私もそうだな＠　レナや魅音ちゃんって本当にいい人なんだって思う＠…きっと劇中で出てきた厳しいシーンは、何かに取り憑かれてたんだって思うの。￥
 	PlaySE(3, "s20/02/440200139", 256, 64);
-	OutputLine(NULL, "「わ、私もそうだな！",
+	OutputLine(NULL, "「れ、レナもそうだな！",
 		   NULL, "\"I-I think that too!", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200140", 256, 64);	
 	OutputLine(NULL, "　レナや魅音ちゃんって本当にいい人なんだって思う。",
@@ -1292,8 +1297,8 @@ void main()
 	OutputLine(NULL, "「人間派が２人出ましたね。",
 		   NULL, "\"Two for the 'people' explanation then.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700365", 256, 64);	
-	OutputLine(NULL, "レナさんは祟り派でしたよね？」",
-		   NULL, " Rena-san was on the 'curse' side of things, right?\"", Line_WaitForInput);
+	OutputLine(NULL, "竜宮さんは祟り派でしたよね？」",
+		   NULL, " Ryuugu-san was on the 'curse' side of things, right?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
@@ -1306,7 +1311,7 @@ void main()
 	OutputLine(NULL, "「はい。",
 		   NULL, "\"Yup.", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200150", 256, 64);		
-	OutputLine(NULL, "私と沙都子ちゃんは祟り派です。",
+	OutputLine(NULL, "レナと沙都子ちゃんは祟り派です。",
 		   NULL, " Satoko-chan and I believe it was a curse.", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200151", 256, 64);
 	OutputLine(NULL, "ねー？」",
@@ -1373,7 +1378,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 3, "tm_si_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	DrawBustshotWithFiltering( 3, "re_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「あれ？　梨花ちゃんがまだだね＠どっちだと思う？＠
 
@@ -1407,10 +1412,10 @@ void main()
 
 //「……祟ってばかりの悪い神様なら、祀るの嫌です＠ボクは祟るより、ご利益のある神さまの方が好きですよ。￥
 	PlaySE(3, "s20/05/440500097", 256, 64);
-	OutputLine(NULL, "「……祟ってばかりの悪い神様なら、祀るの嫌です。",
+	OutputLine(NULL, "「……祟ってばかりの悪い神様なら、祀るのは嫌なのです。",
 		   NULL, "\"...I don't want to worship some bad god that just curses people.", Line_WaitForInput);
 	PlaySE(3, "s20/05/440500098", 256, 64);	
-	OutputLine(NULL, "ボクは祟るより、ご利益のある神さまの方が好きですよ。」",
+	OutputLine(NULL, "ボクは祟るより、ご利益のある神さまの方が好きなのですよ。」",
 		   NULL, " I'd like a generous god more than one that curses.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
@@ -1419,7 +1424,7 @@ void main()
 
 //「そっか、梨花ちゃんって巫女さんをやったんだよね…＠　うん。いい意見。＠
 	PlaySE(3, "s20/02/440200154", 256, 64);
-	OutputLine(NULL, "「そっか、梨花ちゃんって巫女さんをやったんだよね…！",
+	OutputLine(NULL, "「そっか、梨花ちゃんって巫女さんをやってるんだよね…！",
 		   NULL, "\"That's right, Rika-chan is a shrine maiden...!", Line_WaitForInput);
 	PlaySE(3, "s20/02/440200155", 256, 64);
 	OutputLine(NULL, "　うん。いい意見。」",
@@ -1453,7 +1458,7 @@ void main()
 
 //「……そういうことにしますです☆￥
 	PlaySE(3, "s20/05/440500099", 256, 64);	
-	OutputLine(NULL, "「……そういうことにしますです☆」",
+	OutputLine(NULL, "「……そういうことにしますのです☆」",
 		   NULL, "\"...We'll just go with that☆\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
@@ -1473,68 +1478,6 @@ void main()
 		   NULL, " So half of us think it was a curse, and half of us think it was people?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-
-	DisableWindow();
-	DrawBustshotWithFiltering( 1, "tm_si_de_a1", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
-
-//「レナちゃん、参考まででいいんだけどさ＠
-//　β版までをプレイしてくれたテストプレイヤーさんたちの感想ではどんな感じなんだい？＠
-
-//;＜富竹
-	OutputLine(NULL, "「レナちゃん、参考まででいいんだけどさ。",
-		   NULL, "\"Rena-chan, just for reference,", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-	OutputLine(NULL, "　β版までをプレイしてくれたテストプレイヤーさんたちの感想ではどんな感じなんだい？」",
-		   NULL, "what did the test players who played the beta version think?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
-
-	DisableWindow();
-	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 3, "re_se_de_b1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
-
-//「えっとー＠うん＠人間派がとっても多かったの！＠
-	OutputLine(NULL, "「えっとー。",
-		   NULL, "\"Hmmm.", Line_WaitForInput);
-	OutputLine(NULL, "うん。",
-		   NULL, " Yeah.", Line_WaitForInput);
-	OutputLine(NULL, "人間派がとっても多かったの！」",
-		   NULL, " There were a lot more players who believed in the 'people' explanation!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
-	DisableWindow();
-	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 1, "me_se_wi_a1", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
-
-//「ほらほら見たことか＠　冷静な百戦錬磨の同志諸兄はよく見てるよ！￥
-	OutputLine(NULL, "「ほらほら見たことか！",
-		   NULL, "\"See, see, right there!", Line_WaitForInput);
-	OutputLine(NULL, "　冷静な百戦錬磨の同志諸兄はよく見てるよ！」",
-		   NULL, " Our veteran comrades are cool, collected, and very observant!\"", Line_Normal);
-	ClearMessage();
-	DisableWindow();
-	DrawSceneWithMask( "bg_161", "right", 0, 0, 300 );
-	DrawBustshot( 1, "ri_se_de_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
-
-//「……でも、β版は途中までしかできてませんでしたです。＠
-
-	OutputLine(NULL, "「……でも、β版は途中までしかできてませんでしたです。」",
-		   NULL, "\"...But the beta version only finished partway through the story.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
-	DisableWindow();
-	DrawBustshotWithFiltering( 3, "re_se_wa_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
-
-//「そうね＠β版をプレイしてくれた方も、最後まで通して見てみたら、また意見が変わってるかもしれないね。￥
-
-	OutputLine(NULL, "「そうね。",
-		   NULL, "\"That's right.", Line_WaitForInput);
-	OutputLine(NULL, "β版をプレイしてくれた方も、最後まで通して見てみたら、また意見が変わってるかもしれないね。」",
-		   NULL, " Even the people who played the beta might change their minds if they got through to the very end.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	PlayBGM( 1, "msys02", 128, 0 );
@@ -1684,7 +1627,7 @@ void main()
 
 //「……立ち絵を描いてもらえたら圭一も来れますですよ。＠
 	PlaySE(3, "s20/05/440500101", 256, 64);
-	OutputLine(NULL, "「……立ち絵を描いてもらえたら圭一も来れますですよ。」",
+	OutputLine(NULL, "「……収録の残り台詞数でボクたちの誰か一人でも抜いたら、圭一も参加できるのですよ。」",
 		   NULL, "\"...You can come if you get some character art for yourself.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
@@ -1695,7 +1638,7 @@ void main()
 
 //「梨花、それは内緒ですわ…。￥
 	PlaySE(3, "s20/04/440400159", 256, 64);	
-	OutputLine(NULL, "「梨花、それは内緒ですわ…。」",
+	OutputLine(NULL, "「梨花、あの量でそれは不可能ですわ…。」",
 		   NULL, "\"Rika, that's a secret...\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
@@ -1784,7 +1727,7 @@ void main()
 	OutputLine(NULL, "　人間も祟りも全部！！！",
 		   NULL, " It's both humans and a curse!!!", Line_WaitForInput);
 	PlaySE(3, "s20/01/440100201", 256, 64);	
-	OutputLine(NULL, "　これはイジメだーー！！！！」",
+	OutputLine(NULL, "　これはなにかの嫌がらせかーー！！！！」",
 		   NULL, " Everybody's just picking on me!!!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
@@ -1835,7 +1778,7 @@ void main()
 
 //「それでは引き続き、『ひぐらしのなく頃に～綿流し編～』をお楽しみ下さいね！￥
 	PlaySE(3, "s20/02/440200173", 256, 64);	
-	OutputLine(NULL, "「それでは引き続き、『ひぐらしのなく頃に〜綿流し編〜』をお楽しみ下さいね！」",
+	OutputLine(NULL, "「それでは引き続き、『ひぐらしのなく頃に粋』をお楽しみ下さいね！」",
 		   NULL, "\"Well then, please look forward to the next release, 'Higurashi When They Cry ~Watanagashi~'!\"", Line_Normal);
 	ClearMessage();
 
