@@ -137,3 +137,4 @@ Credits:
 
 - Another Anon - For providing the watermark-less window.
 
+- Norgus - For helping us reach v2 with thousands of fixes.
