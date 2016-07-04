@@ -25,7 +25,7 @@ Installation:
 -----------------------------------------------------------------------------------------
  - 0. Required Resources:
   - [Higurashi When They Cry - Ch.1 Onikakushi](http://store.steampowered.com/app/310360)
-  - [HigurashiPS3-Voices01.zip](https://mega.co.nz/#!vgdQkIrK!6Ral1MRTC266DVg4SM-P01s3Gnflo2StDdF0RrgigrY) 
+  - [HigurashiPS3-Voices01.zip](https://mega.nz/#!GQgR3DTR!6Ral1MRTC266DVg4SM-P01s3Gnflo2StDdF0RrgigrY) 
   - [ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
   - [PS3 Voice and Graphics Patch](https://github.com/higurashi-mod/scripts/releases/)
 
