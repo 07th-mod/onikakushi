@@ -26,7 +26,7 @@ Installation:
  - 0. Required Resources:
   - [Higurashi When They Cry - Ch.1 Onikakushi](http://store.steampowered.com/app/310360)
   - [HigurashiPS3-Voices01.zip](https://github.com/07th-mod/resources/releases/download/Nipah/HigurashiPS3-Voices01.zip) 
-  - [ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
+  - [Graphics mod](https://mega.nz/#!BAdhAK4D!jMKYBVotO908GkVY9hQ5SKv95-yrkABETmXFGoaupVI)
   - [PS3 Voice and Graphics Patch](https://github.com/07th-mod/onikakushi/releases/)
 
 
@@ -49,10 +49,8 @@ Installation:
 
 <img src = "https://raw.githubusercontent.com/higurashi-mod/onikakushi/master/Screenshots/2_voices%20go%20into%20se%20folder.png" height="400" width="900">
 
-- 3. [Download ONE of the graphics packs here](https://www.mediafire.com/folder/xq4ncmss3yiwr/Higurashi_Steam_Modding)
-  - Tweaked Steam has Steam sprites, full ps2 replaces the steam sprites.
+- 3. [Download graphics mod](https://mega.nz/#!BAdhAK4D!jMKYBVotO908GkVY9hQ5SKv95-yrkABETmXFGoaupVI)
   - Extract the files with an archive manager to a folder.
-  - Rename the <b>CGAlt Steam</b> folder to <b>CGAlt</b> folder
   - Place the <b>CGAlt</b> folder  into the <b>StreamingAssets</b> folder
   - Let it rewrite any files
   - Ignore the <b>Script</b> folder, they will be covered by this patch.
