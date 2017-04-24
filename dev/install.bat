@@ -40,8 +40,8 @@ rmdir /S /Q .\onikakushi-steam-sprites > nul
 echo S | .\7za.exe x PS3.Voice.and.Graphics.Patch.v.2.1.zip
 .\7za.exe x onikakushi-graphics.zip
 move .\onikakushi-graphics-master* .\onikakushi-graphics > nul
-move .\onikakushi-graphics\CGAlt .\CG > nul
-rmdir /Q .\onikakushi-graphics > nul
+echo D | xcopy /E /Y .\onikakushi-graphics\CGAlt .\CG > nul
+rmdir /S /Q .\onikakushi-graphics > nul
 timeout /t 1 > nul
 
 call :colorEcho a0 "Moving folders..."
