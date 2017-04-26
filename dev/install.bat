@@ -48,8 +48,7 @@ call :colorEcho a0 "Moving folders..."
 echo.
 echo D | xcopy /E /Y .\CGAlt ..\CGAlt > nul
 echo D | xcopy /E /Y .\CG ..\CG > nul
-echo D | xcopy /E /Y .\temp\patch\onikakushi\SE ..\SE > nul
-rmdir /S /Q .\temp > nul
+echo D | xcopy /E /Y .\SE ..\SE > nul
 echo D | xcopy /E /Y .\Update ..\Update > nul
 
 call :colorEcho a0 "Deleting useless files..."
