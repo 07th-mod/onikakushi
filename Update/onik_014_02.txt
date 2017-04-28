@@ -2874,8 +2874,8 @@ void main()
 //"... ......さぁてね。...おじさんにわからないことはないからね...。"
 	PlaySE(3, "s01/03/120300113", 256, 64);
 	OutputLine(NULL, "“………さぁてね。",
-		   NULL, "\"...There's nothing", Line_WaitForInput);	
-	PlaySE(3, "s01/03/120300114", 256, 64);		   
+		   NULL, "\"...There's nothing", Line_WaitForInput);
+	PlaySE(3, "s01/03/120300114", 256, 64);
 	OutputLine(NULL, "…おじさんにわからないことはないからね…。”",
 		   NULL, " this old man doesn't know.\"", Line_Normal);
 
@@ -3659,7 +3659,7 @@ void main()
 	ClearMessage();
 
 //「......圭一く＠。......本当にお母さん、ご飯作ってってくれたの...？＠
-	PlaySE(3, "s01/02/120200289", 256, 64);	
+	PlaySE(3, "s01/02/120200289", 256, 64);
 	OutputLine(NULL, "「……圭一くん",
 		   NULL, "\"...Keiichi-kun...", Line_WaitForInput);
 	PlaySE(3, "s01/02/120200290", 256, 64);
@@ -4503,7 +4503,13 @@ void main()
 	PlaySE(3, "s01/01/120100567", 256, 64);
 	OutputLine(NULL, "……頼むから……帰ってくれ…！！」",
 		   NULL, " I beg you... please go away...!!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	ClearMessage();
+
+	DrawSceneWithMask( "25_c", "right", 0, 0, 300 );
+
+
+//	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 
 
