@@ -1,1 +1,0 @@
-Place the Update folder into StreamingAssets folder.
