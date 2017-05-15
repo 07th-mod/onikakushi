@@ -1,5 +1,14 @@
 void main()
 {
+	int AdvMode;
+	AdvMode = 1;
+	int Line_ModeSpecific;
+	if (AdvMode) {
+		Line_ModeSpecific = Line_Normal;
+		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
+	} else {
+		Line_ModeSpecific = Line_WaitForInput;
+	}
 
 
 //■犯人は４人以上？
@@ -19,13 +28,14 @@ void main()
 //「自分で喉を掻き破った出血性ショック死＠
 	PlaySE(3, "s20/00/443200001", 128, 64);
 	OutputLine(NULL, "「自分で喉を掻き破った出血性ショック死。",
-		   NULL, "\"Hypovolemic shock induced by clawing out their own throat.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "\"Hypovolemic shock induced by clawing out their own throat.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　爪の間に肉や皮がびっしり詰まっとった＠他人の爪じゃない＠間違いなく本人の爪じゃわい＠傷の形も一致する。￥
-	PlaySE(3, "s20/00/443200002", 128, 64);	
+	PlaySE(3, "s20/00/443200002", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　爪の間に肉や皮がびっしり詰まっとった。",
 		   NULL, "Tissue is packed under the nails.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "他人の爪じゃない。",
@@ -40,22 +50,24 @@ void main()
 	DrawBustshotWithFiltering( 3, "oi_si_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「えぇえぇ＠直接死因が自殺ってのはわかってますよ。＠
-	PlaySE(3, "s20/11/440700009", 128, 64);	
+	PlaySE(3, "s20/11/440700009", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「えぇえぇ。",
 		   NULL, "\"Yeaaaah...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "直接死因が自殺ってのはわかってますよ。」",
-		   NULL, " I know the immediate cause of death was suicide.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " I know the immediate cause of death was suicide.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「わかっとるわい＠人為的にこういう症状が起こせんかと言っとるんだろう？＠
-	PlaySE(3, "s20/00/443200004", 128, 64);	
+	PlaySE(3, "s20/00/443200004", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「わかっとるわい。",
 		   NULL, "\"I get it.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "人為的にこういう症状が起こせんかと言っとるんだろう？」",
-		   NULL, " You're saying the cause of death is unnatural, right?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " You're saying the cause of death is unnatural, right?\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
@@ -63,6 +75,7 @@ void main()
 
 //「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。￥
 	PlaySE(3, "s20/11/440700010", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。」",
 		   NULL, "\"It's not quite on the same level as when your back itches and you scratch a little too hard and draw blood, after all.\"", Line_Normal);
 	ClearMessage();
@@ -70,38 +83,44 @@ void main()
 	DrawBustshotWithFiltering( 5, "black", "down", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
 
 //　富竹氏の指には爪が剥がれたものもある＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　富竹氏の指には爪が剥がれたものもある。",
-		   NULL, "Some of Tomitake's fingernails had been pulled out.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "Some of Tomitake's fingernails had been pulled out.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　爪自体は割りと簡単に剥がれる＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　爪自体は割りと簡単に剥がれる。",
-		   NULL, "Fingernails actually rip off surprisingly easily.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Fingernails actually rip off surprisingly easily.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　だがとても痛い＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だがとても痛い。",
-		   NULL, "But it really hurts.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "But it really hurts.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　だから普通は剥がれるような無茶はしない＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だから普通は剥がれるような無茶はしない。",
-		   NULL, "Under normal circumstances, the pain would prevent you from completely pulling them out.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Under normal circumstances, the pain would prevent you from completely pulling them out.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　そして、富竹氏の遺体に残る数々のアザ＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そして、富竹氏の遺体に残る数々のアザ。",
 		   NULL, "Also, there were a lot of bruises on Tomitake's body.", Line_Normal);
 	ClearMessage();
 //長文のため＠を￥にチェンジ
 
 //　...形状その他から素手の暴行によるもの、それも複数人に囲まれてであることは明白だ￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…形状その他から素手の暴行によるもの、それも複数人に囲まれてであることは明白だ。",
 		   NULL, "...It's clear from the shape of them that he was assaulted first by someone—or a group of people.", Line_Normal);
 	ClearMessage();
@@ -110,31 +129,35 @@ void main()
 
 //「分泌物から見て、仏は極度の興奮状態にあったのは間違いないのう。＠
 	PlaySE(3, "s20/00/443200005", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「分泌物から見て、仏は極度の興奮状態にあったのは間違いないのう。」",
-		   NULL, "\"According to the toxicology report, the deceased was in an extreme state of hysteria right before death.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "\"According to the toxicology report, the deceased was in an extreme state of hysteria right before death.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 3, "oi_si_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「では乱闘になって、興奮のあまり自分の喉を引っ掻きだしたってことですか＠　襲った連中、さぞや度肝を抜かれたでしょうなぁ。＠
-	PlaySE(3, "s20/11/440700011", 128, 64);	
+	PlaySE(3, "s20/11/440700011", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「では乱闘になって、興奮のあまり自分の喉を引っ掻きだしたってことですか？",
 		   NULL, "\"Then he fought back and clawed out his own throat because of how hysterical he had become?", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　襲った連中、さぞや度肝を抜かれたでしょうなぁ。」",
-		   NULL, " The guys attacking him certainly would have been surprised by that.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, " The guys attacking him certainly would have been surprised by that.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　確かに異常な環境で異常に興奮した人間は、健常者には考えられない行動を取ることはありえる＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　確かに異常な環境で異常に興奮した人間は、健常者には考えられない行動を取ることはありえる。",
-		   NULL, "It is possible that, in such an abnormal environment, a person could perform acts that a sane individual couldn't possibly imagine.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "It is possible that, in such an abnormal environment, a person could perform acts that a sane individual couldn't possibly imagine.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　無論、極めて稀有なケースだが￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　無論、極めて稀有なケースだが。",
 		   NULL, "Of course, those are very rare cases.", Line_Normal);
 	ClearMessage();
@@ -142,51 +165,56 @@ void main()
 	DrawSceneWithMask( "bg_112", "left", 0, 0, 300 );
 
 //「実はな、大石くん＠仏が武器にしたらしい角材な＠砂粒とかガードレールの塗装片とかそんなのしか出んかったぞい。＠
-	PlaySE(3, "s20/00/443200006", 128, 64);	
+	PlaySE(3, "s20/00/443200006", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「実はな、大石くん。",
 		   NULL, "\"Actually, Ooishi-kun,", Line_ContinueAfterTyping);
 	OutputLine(NULL, "仏が武器にしたらしい角材な。",
 		   NULL, " that wood plank the deceased used as a weapon?", Line_WaitForInput);
 	PlaySE(3, "s20/00/443200007", 128, 64);
 	OutputLine(NULL, "砂粒とかガードレールの塗装片とかそんなのしか出んかったぞい。」",
-		   NULL, " They only found sand and the paint from the guardrail on it.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " They only found sand and the paint from the guardrail on it.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「ホシの服の繊維とか、皮膚片とかは？＠
 	PlaySE(3, "s20/11/440700012", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ホシの服の繊維とか、皮膚片とかは？」",
-		   NULL, "\"What about cloth fibers or skin?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "\"What about cloth fibers or skin?\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「出んかった＠仏は犯人を殴っとらん＠...あるいは殴った角材を、ホシが持ち去ったのかも知れんの。＠
-	PlaySE(3, "s20/00/443200008", 128, 64);	
+	PlaySE(3, "s20/00/443200008", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「出んかった。",
 		   NULL, "\"Nothing.", Line_WaitForInput);
 	OutputLine(NULL, "仏は犯人を殴っとらん。",
 		   NULL, " The deceased didn't strike the assailants...", Line_WaitForInput);
 	PlaySE(3, "s20/00/443200009", 128, 64);
 	OutputLine(NULL, "…あるいは殴った角材を、ホシが持ち去ったのかも知れんの。」",
-		   NULL, " Or it could be they took the plank he was fighting back with.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " Or it could be they took the plank he was fighting back with.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「なら、わざわざ角材なんて置いてきませんよ＠全部持ってっちゃいます。＠
-	PlaySE(3, "s20/11/440700013", 128, 64);	
+	PlaySE(3, "s20/11/440700013", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「なら、わざわざ角材なんて置いてきませんよ。",
 		   NULL, "\"In that case, they wouldn't have gone out of their way to replace it with another.", Line_WaitForInput);
 	OutputLine(NULL, "全部持ってっちゃいます。」",
-		   NULL, " They'd take them all.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " They'd take them all.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「かっかっかっか＠　それもそうじゃのう。￥
-	PlaySE(3, "s20/00/443200010", 128, 64);		
+	PlaySE(3, "s20/00/443200010", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「かっかっかっか！",
 		   NULL, "\"Har har har har!", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　それもそうじゃのう。」",
@@ -194,17 +222,19 @@ void main()
 	ClearMessage();
 
 //「富竹氏は結構、体格もいいし肌も焼けてるし＠...スポーツマンですよねぇ。＠
-	PlaySE(3, "s20/11/440700014", 128, 64);		
+	PlaySE(3, "s20/11/440700014", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「富竹氏は結構、体格もいいし肌も焼けてるし。",
 		   NULL, "\"Tomitake's pretty built and tanned...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "…スポーツマンですよねぇ。」",
-		   NULL, " He was quite athletic.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " He was quite athletic.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「ん＠　そうだな＠よく運動しとるようだの。￥
 	PlaySE(3, "s20/00/443200011", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ん？",
 		   NULL, "\"Hm?", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　そうだな。",
@@ -220,39 +250,45 @@ void main()
 	DrawBustshot( 2, "tm_si_de_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 //　...生前に何のスポーツを嗜んでいたか想像はつかないが、身体能力は高い方だと思う＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…生前に何のスポーツを嗜んでいたか想像はつかないが、身体能力は高い方だと思う。",
-		   NULL, "...I can't imagine what kind of sports he did when he was alive, but I think his physical strength would be on the higher side.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "...I can't imagine what kind of sports he did when he was alive, but I think his physical strength would be on the higher side.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　つまり、乱闘では決してひけを取らないはずなのだ＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　つまり、乱闘では決してひけを取らないはずなのだ。",
-		   NULL, "Meaning, he would be difficult to overpower in a brawl.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Meaning, he would be difficult to overpower in a brawl.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　これだけ体格のいい男が、身に危険が迫って、死に物狂いで武器を振り回して＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　これだけ体格のいい男が、身に危険が迫って、死に物狂いで武器を振り回して。",
-		   NULL, "If a man with such a physique sensed he was in danger and swung the plank around frantically...", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "If a man with such a physique sensed he was in danger and swung the plank around frantically...", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　それが犯人にかすりもしないなんて、ちょっと普通では考えられない＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それが犯人にかすりもしないなんて、ちょっと普通では考えられない。",
-		   NULL, "It's just unthinkable that it wouldn't even nick the perpetrator.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "It's just unthinkable that it wouldn't even nick the perpetrator.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　しかも相手は素手＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　しかも相手は素手。",
-		   NULL, "And his opponent was unarmed.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "And his opponent was unarmed.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　こっちは角材なんだから、１回くらいは殴れたと思うのだが...￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　こっちは角材なんだから、１回くらいは殴れたと思うのだが…。",
 		   NULL, "This guy had a wooden plank, so you'd think he'd hit them at least once...", Line_Normal);
 	ClearMessage();
@@ -264,17 +300,19 @@ void main()
 
 
 //「こんだけ体格のいい相手を取り囲んで襲おうとしたら＠...何人くらいいりますかねぇ。＠
-	PlaySE(3, "s20/11/440700015", 128, 64);	
+	PlaySE(3, "s20/11/440700015", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「こんだけ体格のいい相手を取り囲んで襲おうとしたら、",
 		   NULL, "\"To surround and take down someone of his physique...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "…何人くらいいりますかねぇ。」",
-		   NULL, " I wonder how many people it would take.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " I wonder how many people it would take.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「あほぅ＠それは大石くんの方が得意だろうが＠悪タレ時代を思い出さんかい！￥
-	PlaySE(3, "s20/00/443200013", 128, 64);	
+	PlaySE(3, "s20/00/443200013", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「あほぅ。",
 		   NULL, "\"Ya dimwit...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "それは大石くんの方が得意だろうが。",
@@ -285,76 +323,87 @@ void main()
 	ClearMessage();
 
 //　私が彼と喧嘩するなら何人ほしい＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私が彼と喧嘩するなら何人ほしい？",
-		   NULL, "If I was to take down this guy, how many would I need?", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "If I was to take down this guy, how many would I need?", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　群が時に大型獣を倒すように、多人数で襲うのは狩りの鉄則だ＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　群が時に大型獣を倒すように、多人数で襲うのは狩りの鉄則だ。",
-		   NULL, "When a group wants to take down big prey it's fundamental to attack with numbers.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "When a group wants to take down big prey it's fundamental to attack with numbers.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　......４人くらいはほしい＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……４人くらいはほしい。",
-		   NULL, "...I'd guess about four.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "...I'd guess about four.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　多少の体格差があってもこれだけいればなんとかなる＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　多少の体格差があってもこれだけいればなんとかなる。",
-		   NULL, "Even if there was a gap in their strength, they'd manage.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Even if there was a gap in their strength, they'd manage.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //「だとすると、結構犯人は多人数だの＠
 	PlaySE(3, "s20/00/443200015", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「だとすると、結構犯人は多人数だの。",
-		   NULL, "\"Then there were quite a few perpetrators.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "\"Then there were quite a few perpetrators.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　祭りで泥酔した４人以上のグループが怪しいとなるかの？￥
-	PlaySE(3, "s20/00/443200016", 128, 64);	
+	PlaySE(3, "s20/00/443200016", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　祭りで泥酔した４人以上のグループが怪しいとなるかの？」",
 		   NULL, "So any drunk-and-disorderly groups of more than four are suspicious?\"", Line_Normal);
 	ClearMessage();
 
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //　.........４人以上のグループ＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………４人以上のグループ。",
-		   NULL, "...A group of four or more.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "...A group of four or more.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　しかし...それだけの人数がいれば、遺体をもっと目に付きにくいところに隠せなかっただろうか＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　しかし…それだけの人数がいれば、遺体をもっと目に付きにくいところに隠せなかっただろうか？",
-		   NULL, "Just... if they had that many, then couldn't they have hidden the body in a less obvious location?", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "Just... if they had that many, then couldn't they have hidden the body in a less obvious location?", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　あるいは...瀕死の状態で監禁されていたのをなんとか抜け出してきたのか...＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　あるいは…瀕死の状態で監禁されていたのをなんとか抜け出してきたのか…。",
-		   NULL, "Or... did he somehow break away from that fatal predicament...", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Or... did he somehow break away from that fatal predicament...", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　だとしたら自殺する理由がわからない＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だとしたら自殺する理由がわからない。",
-		   NULL, "Then there would be no reason to commit suicide.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "Then there would be no reason to commit suicide.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　それ以上に、あの異常な死に方の理由がわからない......＠謎だらけだ￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それ以上に、あの異常な死に方の理由がわからない……。",
 		   NULL, "Moreover, I still can't comprehend the irregular way he died...", Line_WaitForInput);
 	OutputLine(NULL, "謎だらけだ。",
@@ -362,20 +411,22 @@ void main()
 	ClearMessage();
 
 //「こっちもそこは重視しとる＠徹底的に調べるつもりだが...あまり期待できんな＠何しろ、過去にこんな例はないんだからな。＠
-	PlaySE(3, "s20/00/443200017", 128, 64);	
+	PlaySE(3, "s20/00/443200017", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「こっちもそこは重視しとる。",
 		   NULL, "\"That's under serious consideration on my end, too.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "徹底的に調べるつもりだが…あまり期待できんな。",
 		   NULL, " I'll be examining it as thoroughly as possible, but don't get your hopes up.", Line_WaitForInput);
 	PlaySE(3, "s20/00/443200018", 128, 64);
 	OutputLine(NULL, "何しろ、過去にこんな例はないんだからな。」",
-		   NULL, " After all, we've never encountered a death like this before.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " After all, we've never encountered a death like this before.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「期待はしませんよ＠ですが結果を楽しみにしてます。￥
-	PlaySE(3, "s20/11/440700016", 128, 64);	
+	PlaySE(3, "s20/11/440700016", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「期待はしませんよ。",
 		   NULL, "\"I'm not hoping for much.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "ですが結果を楽しみにしてます。」",
@@ -383,25 +434,28 @@ void main()
 	ClearMessage();
 
 //「大石さん～＠　課長が呼んでるっすー！＠
-	PlaySE(3, "s20/19/443100001", 128, 64);		
+	PlaySE(3, "s20/19/443100001", 128, 64);
+	if (AdvMode) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「大石さん〜！",
 		   NULL, "\"Ooishi-san~!", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　課長が呼んでるっすー！」",
-		   NULL, " The chief is calling you!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " The chief is calling you!\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「すみません、ではまた来年お会いしましょう。＠
 	PlaySE(3, "s20/11/440700017", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「すみません、ではまた来年お会いしましょう。」",
-		   NULL, "\"Thanks. See ya 'round.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "\"Thanks. See ya 'round.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「おう＠いいお年をの！￥
 	PlaySE(3, "s20/00/443200019", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「おう。",
 		   NULL, "\"Yeah.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "いいお年をの！」",

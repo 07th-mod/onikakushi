@@ -1,21 +1,28 @@
-
 void main()
 {
-	SetFontId(1); //0 is MS Gothic (default japanese), 1 is MS PGothic (default english), 2 is dejavu sans, 3 is source han sans chinese simplified (for chinese)
+	// This variable can't be named just AdvMode as in other files because it causes an exception.
+	int InitAdvMode;
+	InitAdvMode = 1;
+
+	SetFontId(3); //0 is MS Gothic (default japanese), 1 is MS PGothic (default english), 2 is dejavu sans, 3 is source han sans chinese simplified (for chinese)
 	SetCharSpacing(0); //use negative values to make characters appear closer together
-	SetLineSpacing(1);
-	SetFontSize(42);
+	SetLineSpacing(8);
+	SetFontSize(30);
 
-	//SetNameFormat("<line-h=10><size=+6>{0}\n</size></line-h>");
-	SetNameFormat("");
+	if (InitAdvMode) {
+		SetNameFormat("<size=+4>{0}</size><line-h=25>\n</line-h>");
+		SetWindowPos(0, -270);
+		SetWindowSize(1150, 250);
+		SetWindowMargins(60, 30, 50, 30);
+	} else {
+		SetNameFormat("");
+		SetWindowPos(0, 0);
+		SetWindowSize(1240, 720);
+		SetWindowMargins(60, 30, 50, 30);
+	}
 
-	SetScreenAspect("0.5635");
-
-	SetWindowPos(0, 0);
-	SetWindowSize(1280, 720);
-	SetWindowMargins(60, 30, 50, 30);
-
-	SetGUIPosition( 15, 0);
+	SetScreenAspect("0.5625");
+	SetGUIPosition(0, 0);
 
 	CallScript( "flow" );
 }

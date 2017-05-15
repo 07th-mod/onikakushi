@@ -1,5 +1,14 @@
 void main()
 {
+	int AdvMode;
+	AdvMode = 1;
+	int Line_ModeSpecific;
+	if (AdvMode) {
+		Line_ModeSpecific = Line_Normal;
+		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
+	} else {
+		Line_ModeSpecific = Line_WaitForInput;
+	}
 
 //■捜査メモ
 
@@ -17,102 +26,114 @@ void main()
 
 //　富竹ジロウ（仏＠
 	OutputLine(NULL, "　富竹ジロウ（仏）",
-		   NULL, "Jirou Tomitake (Deceased)", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Jirou Tomitake (Deceased)", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //・鹿骨市内の安ホテルに滞＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・鹿骨市内の安ホテルに滞在",
-		   NULL, "・Resided in a cheap hotel in Shishibone city.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "・Resided in a cheap hotel in Shishibone city.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・宿帳に富竹ジロウと記＠　＞　ペンネー＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・宿帳に富竹ジロウと記名",
 		   NULL, "・Registered under the name Jirou Tomitake", Line_WaitForInput);
 	OutputLine(NULL, "　＞　ペンネーム",
-		   NULL, " > Pen name", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " > Pen name", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・折り畳み自転車で行動＠免許の類なし＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・折り畳み自転車で行動。",
 		   NULL, "・Travels via folding bike.", Line_WaitForInput);
 	OutputLine(NULL, "免許の類なし。",
-		   NULL, " No license.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " No license.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・ 自転車は現場から３００ｍ離れた林道脇に放置￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・自転車は現場から３００ｍ離れた林道脇に放置。",
 		   NULL, "・The bicycle was found 300 meters away, abandoned at the side of a forest path.", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_021", 128, 64 );
 
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //・祭り当日、会場にいた＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・祭り当日、会場にいた。",
-		   NULL, "・Present on the day of the festival.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "・Present on the day of the festival.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・失踪中の鷹野みよと一緒にいた＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・失踪中の鷹野みよと一緒にいた。",
-		   NULL, "・Accompanied by the missing Miyo Takano.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "・Accompanied by the missing Miyo Takano.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・９時ごろに警察官が目撃。その後は不明￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・９時ごろに警察官が目撃。その後は不明。",
 		   NULL, "・Was seen around 9pm by police. Location afterwards unknown.", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_021", 128, 64 );
 
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //・雛見沢には５～６年前から、季節毎に１週間ほど滞在＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・雛見沢には５〜６年前から、季節毎に１週間ほど滞在。",
-		   NULL, "・Held residence in Hinamizawa for one week each season for the last 5-6 years.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "・Held residence in Hinamizawa for one week each season for the last 5-6 years.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・野鳥専門のフリーカメラマ＠　＞　雑誌社調べろ＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・野鳥専門のフリーカメラマン",
 		   NULL, "・Freelance photographer specializing in wild birds", Line_WaitForInput);
 	OutputLine(NULL, "　＞　雑誌社調べろ！",
-		   NULL, " > Check with magazine companies!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " > Check with magazine companies!", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・遺品のフィルムには不審物な＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・遺品のフィルムには不審物なし",
-		   NULL, "・Nothing suspicious in the film located among the articles of the deceased.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "・Nothing suspicious in the film located among the articles of the deceased.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・遺品に財＠　＞　たんなる暴行＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・遺品に財布",
 		   NULL, "・Wallet was among the articles of the deceased.", Line_WaitForInput);
 	OutputLine(NULL, "　＞　たんなる暴行？",
-		   NULL, " > Mere act of violence?", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " > Mere act of violence?", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・ 財布の内容物から、生活基盤は東京～千葉＠　国鉄総武線沿線￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・財布の内容物から、生活基盤は東京〜千葉？",
 		   NULL, "・From the contents of his wallet, he spent most of his time around Tokyo and Chiba.", Line_WaitForInput);
 	OutputLine(NULL, "　国鉄総武線沿線？",
@@ -121,35 +142,39 @@ void main()
 
 	PlaySE( 4, "wa_021", 128, 64 );
 
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //・都内各区の住民基本台帳に富竹ジロウの同姓同名な＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・都内各区の住民基本台帳に富竹ジロウの同姓同名なし",
-		   NULL, "No individual matching the name 'Jirou Tomitake' in the residency records of any of the Tokyo wards.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "No individual matching the name 'Jirou Tomitake' in the residency records of any of the Tokyo wards.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・歯型から都内歯科へ照＠　＞　警視庁＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・歯型から都内歯科へ照合",
 		   NULL, "・Compare teeth to dental records", Line_WaitForInput);
 	OutputLine(NULL, "　＞　警視庁へ",
-		   NULL, " > send to metro police", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " > send to metro police", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・顔写真の送＠　＞　警視庁＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・顔写真の送付",
 		   NULL, "・Attach a photo", Line_WaitForInput);
 	OutputLine(NULL, "　＞　警視庁へ",
-		   NULL, " > send to metro police", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " > send to metro police", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・各雑誌社に富竹ジロウ問い合わ￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・各雑誌社に富竹ジロウ問い合わせ",
 		   NULL, "・Contact magazines regarding 'Jirou Tomitake'", Line_Normal);
 	ClearMessage();
@@ -157,45 +182,51 @@ void main()
 	PlaySE( 4, "wa_021", 128, 64 );
 
 //　鷹野みよ（失踪＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鷹野みよ（失踪）",
-		   NULL, "Miyo Takano (Missing)", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Miyo Takano (Missing)", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //・入江診療所に勤務の看護＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・入江診療所に勤務の看護婦",
-		   NULL, "・Nurse at Irie Clinic", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "・Nurse at Irie Clinic", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・趣味の野鳥撮影で富竹と親し＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・趣味の野鳥撮影で富竹と親しい",
-		   NULL, "・Became close to Tomitake through her passion for wild bird photography.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "・Became close to Tomitake through her passion for wild bird photography.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・自宅は興宮Ｘ丁目ＸＸＸ番地＠独身＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・自宅は興宮Ｘ丁目ＸＸＸ番地。",
 		   NULL, "・Resides in Okinomiya X district XXX.", Line_WaitForInput);
 	OutputLine(NULL, "独身。",
-		   NULL, " Single.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " Single.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・富竹と共に祭り会場で目撃され、その後行方不明￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・富竹と共に祭り会場で目撃され、その後行方不明。",
 		   NULL, "・Witnessed accompanying Tomitake on the festival grounds. Currently missing.", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_021", 128, 64 );
 
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //・誘拐された＠　それとも容疑者＠　＞　重要参考人＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・誘拐された？",
 		   NULL, "・Abducted?", Line_WaitForInput);
 	OutputLine(NULL, "　それとも容疑者？",
@@ -203,34 +234,38 @@ void main()
 	OutputLine(NULL, "　＞　重要参考人！",
 		   NULL, " > An important person of interest!", Line_WaitForInput);
 
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //・仏を殺す動機がな＠　＞　痴情のもつれ＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・仏を殺す動機がない",
 		   NULL, "・Had no motive to kill the deceased", Line_WaitForInput);
 	OutputLine(NULL, "　＞　痴情のもつれ？",
-		   NULL, " > Squabble from jealousy?", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " > Squabble from jealousy?", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・人間関係を徹底的に調べる＠　＞　勤務先＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・人間関係を徹底的に調べる！",
 		   NULL, "・Need to thoroughly investigate their relationship!", Line_WaitForInput);
 	OutputLine(NULL, "　＞　勤務先他",
-		   NULL, " >Place of work, etc.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " >Place of work, etc.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //・ 会場警備の警察官に再度聞き込み＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・会場警備の警察官に再度聞き込み！",
-		   NULL, "・Need to get information from the police on scene again!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "・Need to get information from the police on scene again!", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //・シュークリームが食べたいなぁ＠ジャンボで４つ＠＞　大￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・シュークリームが食べたいなぁ。",
 		   NULL, "・I want some cream puffs.", Line_WaitForInput);
 	OutputLine(NULL, "ジャンボで４つ。",
