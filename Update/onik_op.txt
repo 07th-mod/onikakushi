@@ -52,7 +52,7 @@ void main()
 //!s50
 
 	SetSpeedOfMessage( TRUE, 100, );
-	SetDrawingPointOfMessage( 0, 5 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 
 //　どうせ引き裂かれるなら、!w2000
 	OutputLine(NULL, "どうせ引き裂かれるなら、",
@@ -72,7 +72,7 @@ void main()
 
 //locate 0,4
 
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 
 //　信じてた。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -115,7 +115,7 @@ void main()
 	PlaySE( 4, "wa_017", 128, 64 );
 //locate 0,3
 
-	SetDrawingPointOfMessage( 0, 3 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 3 ); }
 
 //　でも......薄々は気付いてる。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -168,7 +168,7 @@ void main()
 	ClearMessage();
 //locate 0,6
 
-	SetDrawingPointOfMessage( 0, 6 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 6 ); }
 //　機械的に繰り返されていたそれはようやく収まり、とても静かになった。!w4000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "機械的に繰り返されていたそれはようやく収まり、とても静かになった。",
@@ -183,7 +183,7 @@ void main()
 	DrawSceneWithMask( "bg_204", "c", 0, 0, 1300 );
 //locate 0,4
 
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 //　ひぐらしの声だけが...いやに騒がしい。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "ひぐらしの声だけが…いやに騒がしい。",
@@ -241,7 +241,7 @@ void main()
 
 //locate 0,5
 
-	SetDrawingPointOfMessage( 0, 5 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 //　泣いているのは俺だけだった。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "泣いているのは俺だけだった。",
@@ -267,7 +267,7 @@ void main()
 
 //locate 0,2
 
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 //　彼女がそれを繰り返し口にしていた時も、表情どころか感情もなかった。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "彼女がそれを繰り返し口にしていた時も、表情どころか感情もなかった。",
@@ -334,7 +334,7 @@ void main()
 
 //locate 0,6
 
-	SetDrawingPointOfMessage( 0, 6 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 6 ); }
 //　もう充分だろ？!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "もう充分だろ？",
@@ -360,7 +360,7 @@ void main()
 
 //locate 0,4
 
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 //　俺はもう充分に心を痛めたさ。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "俺はもう充分に心を痛めたさ。",
@@ -398,7 +398,7 @@ void main()
 
 //locate 0,2
 
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 //　捨てれば...もっと心が楽になれる...。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "捨てれば…もっと心が楽になれる…。",
@@ -435,7 +435,7 @@ void main()
 
 //locate 0,5
 
-	SetDrawingPointOfMessage( 0, 5 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 //　なぁ俺。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "なぁ俺。",
@@ -491,7 +491,7 @@ void main()
 
 //locate 0,6
 
-	SetDrawingPointOfMessage( 0, 6 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 6 ); }
 
 //　それに.........捨てるんじゃない。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -517,7 +517,7 @@ void main()
 
 //locate 0,11
 
-	SetDrawingPointOfMessage( 0, 11 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 11 ); }
 //　...花を手向けるように。!w4000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "…花を手向けるように。",
@@ -529,7 +529,7 @@ void main()
 
 //locate 0,3
 
-	SetDrawingPointOfMessage( 0, 3 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 3 ); }
 //　さぁ。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "さぁ。",
@@ -587,7 +587,7 @@ void main()
 
 //locate 0,4
 
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 	PlaySE( 4, "wa_015", 128, 64 );
 	Wait( 800 );
 	PlaySE( 4, "wa_017", 128, 64 );
@@ -660,7 +660,7 @@ void main()
 
 //locate 0,2
 
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 
 //　これで最後だから。!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -720,7 +720,7 @@ void main()
 //print 1
 //locate 0,5
 
-	SetDrawingPointOfMessage( 0, 5 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 
 //　ひょっとすると、...俺は君の事が、!w2000
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }

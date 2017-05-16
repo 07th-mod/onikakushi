@@ -1369,7 +1369,7 @@ void main()
 //!s100
 //locate 7,4
 
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 	SetStyleOfMessageSwinging( 1 );
 	SetValidityOfTextFade( FALSE );
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -1442,7 +1442,7 @@ void main()
 	DrawSceneWithMask( "bg_080", "left", 0, 0, 1300 );
 
 //locate 0,2
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 	SetStyleOfMessageSwinging( 0 );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -1488,7 +1488,7 @@ void main()
 	ClearMessage();
 
 //locate 0,2
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 	DisableWindow();
 	DrawSceneWithMask( "bg_022", "left", 0, 0, 1300 );
 
@@ -1549,7 +1549,7 @@ void main()
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //locate 0,2
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 
 //　居間では絨毯が剥がされ、投げ捨てられていた。
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1582,7 +1582,7 @@ void main()
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //locate 0,2
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 
 //　台所ではゴミ袋が破かれ、その中身が床にばら撒かれていた。
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1641,7 +1641,7 @@ void main()
 	ClearMessage();
 
 //locate 0,4
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　また、冷蔵庫に貼り付けられていたメモには「針がなかった？」と記されていた。
@@ -1682,7 +1682,7 @@ void main()
 	DrawScene( "black", 1000 );
 
 //locate 0,3
-	SetDrawingPointOfMessage( 0, 3 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 3 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　荒らされてはいなかったが、引越し以来、開放したままになっているガレージのシャッターが閉じられていた。
@@ -1748,7 +1748,7 @@ void main()
 	ClearMessage();
 
 //locate 0,5
-	SetDrawingPointOfMessage( 0, 5 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　発見時、容疑者は意識不明の重体。
@@ -1778,7 +1778,7 @@ void main()
 	DrawScene( "bg_188", 1000 );
 
 //locate 0,4
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　検死の結果、直接の死因は出血性ショック死。
@@ -1806,7 +1806,7 @@ void main()
 	ClearMessage();
 
 //locate 0,3
-	SetDrawingPointOfMessage( 0, 3 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 3 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　先週に発生した富竹氏事件の異常な死に方との酷似に、警察は関連性があるものとして捜査を開始する。
@@ -1845,7 +1845,7 @@ void main()
 	ClearMessage();
 
 //locate 0,5
-	SetDrawingPointOfMessage( 0, 5 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　当初はあまりの不可解さに、衝動的な突発的犯行と断定していた。
@@ -1872,7 +1872,7 @@ void main()
 	ClearMessage();
 
 //locate 0,2
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　親しかったグループとの離縁。孤立。意味不明の言動。
@@ -1911,7 +1911,7 @@ void main()
 	ClearMessage();
 
 //locate 0,3
-	SetDrawingPointOfMessage( 0, 3 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 3 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　犯行の前々日には、両親に自らの死をほのめかす発言もしていた。
@@ -1941,7 +1941,7 @@ void main()
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 0,4
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 
 //　その後、
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2077,7 +2077,7 @@ void main()
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 0,5
-	SetDrawingPointOfMessage( 0, 5 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 
 //　だが……後年。
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2103,7 +2103,7 @@ void main()
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 0,2
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 
 //　２枚のメモは、Ｂ５のページを半分にしたものが１枚ずつではなく…。
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2153,7 +2153,7 @@ void main()
 	ClearMessage();
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 0,2
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 
 //　文字の大きさと、破かれた部分から推定して、削除されたのは２～３行。
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2203,7 +2203,7 @@ void main()
 	ClearMessage();
 
 //locate 0,4
-	SetDrawingPointOfMessage( 0, 4 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　第一発見者は、かねてから事件との関係を噂される疑惑の刑事。大石蔵人。
@@ -2238,7 +2238,7 @@ void main()
 //dwaveplayloop 9
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 4,6
-	SetDrawingPointOfMessage( 0, 6 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 6 ); }
 	SetStyleOfMessageSwinging( 1 );
 //容疑者のメモ
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2337,7 +2337,7 @@ void main()
 	DrawScene( "bg_221", 1000 );
 
 //locate 0,2
-	SetDrawingPointOfMessage( 0, 2 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //（ここからが２枚目。ここから上が真横に破られている。）
@@ -2388,7 +2388,7 @@ void main()
 	ClearMessage();
 
 //locate 0,6
-	SetDrawingPointOfMessage( 0, 6 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 6 ); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　これを読んだあなた。どうか真相を暴いてください。/

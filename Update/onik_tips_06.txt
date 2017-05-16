@@ -27,7 +27,7 @@ void main()
 
 //locate 3,5
 
-	SetDrawingPointOfMessage( 0, 5 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 	SetStyleOfMessageSwinging( 1 );
 //　雛見沢ダムで悪夢の惨劇＠
 	OutputLine(NULL, "　雛見沢ダムで悪夢の惨劇！",
@@ -38,7 +38,7 @@ void main()
 
 //locate 4,6
 
-	SetDrawingPointOfMessage( 0, 6 );
+	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 6 ); }
 
 //　リンチ・バラバラ殺人￥
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
