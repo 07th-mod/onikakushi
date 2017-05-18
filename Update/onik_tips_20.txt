@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -24,6 +23,7 @@ void main()
 	PlayBGM( 1, "msys01", 128, 0 );
 
 //　セブンスマートは市内にある、酒類食料品の安売量販店だ￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　セブンスマートは市内にある、酒類食料品の安売量販店だ。",
 		   NULL, "The Seventh Mart was a bargain supermarket with food and alcohol.", Line_Normal);
 	ClearMessage();

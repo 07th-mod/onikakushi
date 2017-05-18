@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -40,6 +39,7 @@ void main()
 //!sd
 //「おっはよ～＠　圭ちゃん、昨日はお疲れ様～！＠
 	PlaySE(3, "s01/03/120300013", 256, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「おっはよ〜！",
 		   NULL, "\"Good morning~!", Line_WaitForInput);
 	PlaySE(3, "s01/03/120300014", 256, 64);

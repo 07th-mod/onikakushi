@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -30,6 +29,7 @@ void main()
 	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 	SetStyleOfMessageSwinging( 1 );
 //　雛見沢ダムで悪夢の惨劇＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　雛見沢ダムで悪夢の惨劇！",
 		   NULL, "Nightmare befalls the Hinamizawa dam!", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

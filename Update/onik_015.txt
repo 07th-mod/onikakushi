@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -23,6 +22,7 @@ void main()
 	DrawSceneWithMask( "bg_081", "m1", 0, 0, 1300 );
 
 //　一睡もしなかった、というのは嘘になるのだろうか...＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　一睡もしなかった、というのは嘘になるのだろうか…。",
 		   NULL, "I guess I'd be lying if I said I didn't get any sleep.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

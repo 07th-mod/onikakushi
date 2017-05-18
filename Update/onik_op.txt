@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -55,6 +54,7 @@ void main()
 	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 
 //　どうせ引き裂かれるなら、!w2000
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "どうせ引き裂かれるなら、",
 		   NULL, "If I was going to be ripped apart anyways,", Line_ContinueAfterTyping);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }

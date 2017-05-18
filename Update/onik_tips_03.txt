@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -34,6 +33,7 @@ void main()
 
 //「...圭ちゃんってさ、すごいお金持ちってわけでもないの？＠
 	PlaySE(3, "s20/03/440300016", 128, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「…圭ちゃんってさ、すごいお金持ちってわけでもないの？」",
 		   NULL, "\"...So Kei-chan, you're not stinking rich?\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

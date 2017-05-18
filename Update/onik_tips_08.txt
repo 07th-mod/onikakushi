@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -23,7 +22,7 @@ void main()
 	PlayBGM( 1, "msys12", 128, 0 );
 	DrawScene( "bg_077", 1000 );
 
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //　例年になく早い梅雨明けを迎え、早くも夏の訪れを感じる今日この頃、皆さんにおかれましてはますますご清祥のこととお喜び申し上げます＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }

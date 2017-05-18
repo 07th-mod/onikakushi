@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -31,6 +30,7 @@ void main()
 
 //「......レナってさ、俺と同い年だったよな？＠
 	PlaySE(3, "s20/01/440100001", 128, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「……レナってさ、俺と同い年だったよな？」",
 		   NULL, "\"... So, Rena, we're the same age?\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -29,6 +28,7 @@ void main()
 
 	PlayBGM( 1, "msys12", 128, 0 );
 //　それから数日がたった￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それから数日がたった。",
 		   NULL, "A few days had passed since the incident.", Line_Normal);
 	ClearMessage();

@@ -6,7 +6,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -28,6 +27,7 @@ void main()
 
 //「ランディーくん人形ー？＠　あ～そりゃあレナのツボだわなぁ！＠
 	PlaySE(3, "s19/03/990300130", 256, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ランディーくん人形ー？！",
 		   NULL, "\"A Colonel Randy!?", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300131", 256, 64);

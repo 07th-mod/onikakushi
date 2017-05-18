@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -31,6 +30,7 @@ void main()
 	DrawSceneWithMask( "bg_038", "m1", 0, 0, 1300 );
 
 //　休日の朝をのんびり過ごしていたら、すっかり遅れてしまった＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　休日の朝をのんびり過ごしていたら、すっかり遅れてしまった。",
 		   NULL, "I took it a little too easy on the morning of my day off. I was totally late.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

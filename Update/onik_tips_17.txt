@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -27,6 +26,7 @@ void main()
 
 //「......おんやぁ＠　今の皆さんは確か...。＠
 	PlaySE(3, "s20/11/440700035", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「……おんやぁ？",
 		   NULL, "\"...Herm?", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　今の皆さんは確か…。」",

@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -29,6 +28,7 @@ void main()
 
 //「最近、圭一くんの元気がないね＠機嫌が悪いのかな。＠
 	PlaySE(3, "s20/02/440200042", 256, 64);
+	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「最近、圭一くんの元気がないね。",
 		   NULL, "\"Keiichi-kun's been feeling down lately.", Line_ContinueAfterTyping);
 	Wait (2800);

@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -26,6 +25,7 @@ void main()
 
 //「......レナがいないです＠圭一は知りませんですか？＠
 	PlaySE(3, "s20/05/440500004", 128, 64);
+	if (AdvMode) { OutputLine("<color=#6969ab>梨花</color>", NULL, "<color=#6969ab>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「……レナがいないです。",
 		   NULL, "\"...Rena's not here.", Line_WaitForInput);
 	OutputLine(NULL, "圭一は知りませんですか？」",

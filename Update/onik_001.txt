@@ -6,7 +6,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -26,6 +25,7 @@ void main()
 	DrawSceneWithMask( "bg_080", "m1", 0, 0, 3000 );
 
 //　夏を迎えても、朝の空気は切るように冷たい＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　夏を迎えても、朝の空気は切るように冷たい。",
 		   NULL, "Even though we were approaching summer, the morning air still had a frigid bite.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

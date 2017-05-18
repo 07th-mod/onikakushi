@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -27,6 +26,7 @@ void main()
 
 //「自分で喉を掻き破った出血性ショック死＠
 	PlaySE(3, "s20/00/443200001", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「自分で喉を掻き破った出血性ショック死。",
 		   NULL, "\"Hypovolemic shock induced by clawing out their own throat.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

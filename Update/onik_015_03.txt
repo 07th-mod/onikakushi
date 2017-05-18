@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -27,6 +26,7 @@ void main()
 	DrawScene( "bg_112", 3000 );
 
 //　喫煙スペースには紫煙が立ち込めていた￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　喫煙スペースには紫煙が立ち込めていた。",
 		   NULL, "The smoking room was filled with a cloud of cigarette smoke.", Line_Normal);
 	ClearMessage();

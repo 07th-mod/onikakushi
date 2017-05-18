@@ -5,7 +5,6 @@ void main()
 	int Line_ModeSpecific;
 	if (AdvMode) {
 		Line_ModeSpecific = Line_Normal;
-		OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	} else {
 		Line_ModeSpecific = Line_WaitForInput;
 	}
@@ -30,6 +29,7 @@ void main()
 	SetStyleOfMessageSwinging( 1 );
 
 //（新聞には掲載されなかった......￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "（新聞には掲載されなかった……）",
 		   NULL, "(It wasn't reported in the newspaper...)", Line_Normal);
 	ClearMessage();
