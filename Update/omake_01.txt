@@ -863,11 +863,10 @@ void main()
 		   NULL, "\"Exactly!", Line_WaitForInput);
 	PlaySE(3, "s20/03/440300273", 256, 64);
 	OutputLine(NULL, "これは営利殺人じゃないんだよ。",
-		   NULL, " This wasn't a murder where you consider the typical motives. ", Line_ModeSpecific);
+		   NULL, " This wasn't a murder where you consider the typical motives.", Line_WaitForInput);
 	PlaySE(3, "s20/03/440300274", 256, 64);
-	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "きっとこれは…村の血塗られた歴史を再現するための………何らかの儀式的殺人じゃないかなって思うわけ！」",
-		   NULL, "It makes me think that this was most likely... some sort of ritualistic murder to reenact the blood-stained history of the village!\"", Line_Normal);
+		   NULL, " It makes me think that this was most likely... some sort of ritualistic murder to reenact the blood-stained history of the village!\"", Line_Normal);
 
 	ClearMessage();
 	DisableWindow();
@@ -895,11 +894,10 @@ void main()
 		   NULL, " I think... that maybe this was an act of revenge.", Line_WaitForInput);
 	PlaySE(3, "s20/08/440800080", 256, 64);
 	OutputLine(NULL, "土着的な何か。",
-		   NULL, " Something native to the region... ", Line_ModeSpecific);
+		   NULL, " Something native to the region...", Line_WaitForInput);
 	PlaySE(3, "s20/08/440800081", 256, 64);
-	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "…今回のシナリオでは語られなかった因縁だよ！」",
-		   NULL, "Some connection not touched on this time around!\"", Line_Normal);
+		   NULL, " Some connection not touched on this time around!\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_165", "right", 0, 0, 300 );
@@ -956,11 +954,10 @@ void main()
 		   NULL, "\"If, as Maebara-san said during the story, it was the case that Oyashiro-sama possessed Ryuugu-san and Sonozaki-san and committed those acts...", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700355", 256, 64);
 	OutputLine(NULL, "……一番つじつまが合うんです。",
-		   NULL, " That would fit the evidence the most. ", Line_ModeSpecific);
+		   NULL, " That would fit the evidence the most.", Line_WaitForInput);
 	PlaySE(3, "s20/11/440700356", 256, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "残念ながら。」",
-		   NULL, "As much as I hate to say it.\"", Line_ModeSpecific);
+		   NULL, " As much as I hate to say it.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1132,14 +1129,14 @@ void main()
 		   NULL, " Then let me ask everybody who thinks it was a curse...", Line_WaitForInput);
 	PlaySE(3, "s20/03/440300282", 256, 64);
 	OutputLine(NULL, "…祟りが起こるからにはそれなりの理由があるんでしょ？",
-		   NULL, " There has to be a reason for a curse, right? ", Line_ModeSpecific);
+		   NULL, " There has to be a reason for a curse, right?", Line_WaitForInput);
 	PlaySE(3, "s20/03/440300283", 256, 64);
-	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　無差別に祟るとは思えないなー。",
-		   NULL, "It doesn't make sense for a curse to just indiscriminately befall someone.", Line_WaitForInput);
+		   NULL, " It doesn't make sense for a curse to just indiscriminately befall someone. ", Line_ModeSpecific);
 	PlaySE(3, "s20/03/440300284", 256, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "そこんとこ説明できるの？」",
-		   NULL, " Can somebody explain that?\"", Line_ModeSpecific);
+		   NULL, "Can somebody explain that?\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
@@ -1172,14 +1169,14 @@ void main()
 		   NULL, " A personified deity is, in the end, nothing more than the creation of people.", Line_WaitForInput);
 	PlaySE(3, "s20/08/440800086", 256, 64);
 	OutputLine(NULL, "だからその考え方も、人間に理解できるようにできてる。",
-		   NULL, " That's why their method of thinking is also understandable to humans. ", Line_ModeSpecific);
+		   NULL, " That's why their method of thinking is also understandable to humans.", Line_WaitForInput);
 	PlaySE(3, "s20/08/440800087", 256, 64);
-	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "…ギリシャ神話の神様を見てごらんよ。",
-		   NULL, "Just take a look at the Greek Pantheon.", Line_WaitForInput);
+		   NULL, " Just take a look at the Greek Pantheon. ", Line_ModeSpecific);
 	PlaySE(3, "s20/08/440800088", 256, 64);
+	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "泣いたり怒ったり嫉妬したり…とにかく人間的なんだよ。」",
-		   NULL, " They cry, get angry, get jealous... basically, they're just like humans.\"", Line_Normal);
+		   NULL, "They cry, get angry, get jealous... basically, they're just like humans.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawBustshot( 2, "re_se_na_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
@@ -1871,11 +1868,10 @@ void main()
 		   NULL, " Targeted by suspicious people from the village, and then cursed by some strange Oyashiro-sama on top of that!", Line_WaitForInput);
 	PlaySE(3, "s20/01/440100200", 256, 64);
 	OutputLine(NULL, "　人間も祟りも全部！！！",
-		   NULL, " It's both humans and a curse!!! ", Line_ModeSpecific);
+		   NULL, " It's both humans and a curse!!!", Line_WaitForInput);
 	PlaySE(3, "s20/01/440100201", 256, 64);
-	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　これはなにかの嫌がらせかーー！！！！」",
-		   NULL, "Everybody's just picking on me!!!!\"", Line_ModeSpecific);
+		   NULL, " Everybody's just picking on me!!!!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

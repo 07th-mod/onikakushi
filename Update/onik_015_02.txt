@@ -568,10 +568,9 @@ void main()
 //　患者自らが医者を迎えるというのも変な話だ＠......大石さんが駆けつけるまでの数十分間、いてくれるだけでこれほど心強いことはない＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　患者自らが医者を迎えるというのも変な話だが",
-		   NULL, "It was strange for a patient to welcome in the doctor who was making a house call. ", Line_ModeSpecific);
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+		   NULL, "It was strange for a patient to welcome in the doctor who was making a house call.", Line_WaitForInput);
 	OutputLine(NULL, "……大石さんが駆けつけるまでの数十分間、いてくれるだけでこれほど心強いことはない。",
-		   NULL, "But it would be incredibly reassuring to have him here for the considerable time it would take Ooishi-san to get here.", Line_ModeSpecific);
+		   NULL, " But it would be incredibly reassuring to have him here for the considerable time it would take Ooishi-san to get here.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 

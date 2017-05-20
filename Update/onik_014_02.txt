@@ -1168,14 +1168,9 @@ void main()
 
 
 //　本当はいろんな種類をいっぱい買いたかったが、高いからと断られ、好物のデカカップ豚骨ショウガ味を１ダース買った＠
-	if (AdvMode) {
-		OutputLineAll("", NULL, Line_ContinueAfterTyping);
-		OutputLine(NULL, "　本当はいろんな種類をいっぱい買いたかったが、高いからと断られ、好物のデカカップ豚骨ショウガ味を１ダース買った。",
-			   NULL, "<size=-2>I wanted to get a bunch of different kinds, actually, but they refused since the individual packs were expensive. So instead, I got a whole case of the Mega-size Pork-bone & Ginger flavored ones I liked.</size>", Line_ModeSpecific);
-	} else {
-		OutputLine(NULL, "　本当はいろんな種類をいっぱい買いたかったが、高いからと断られ、好物のデカカップ豚骨ショウガ味を１ダース買った。",
-			   NULL, "I wanted to get a bunch of different kinds, actually, but they refused since the individual packs were expensive. So instead, I got a whole case of the Mega-size Pork-bone & Ginger flavored ones I liked.", Line_ModeSpecific);
-	}
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　本当はいろんな種類をいっぱい買いたかったが、高いからと断られ、好物のデカカップ豚骨ショウガ味を１ダース買った。",
+		   NULL, "I wanted to get a bunch of different kinds, actually, but they refused since the individual packs were expensive. So instead, I got a whole case of the Mega-size Pork-bone & Ginger flavored ones I liked.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -6826,10 +6821,9 @@ void main()
 	OutputLine(NULL, "　この土砂降りの中、傘もさしていなかった。",
 		   NULL, "Even in this torrential rain. They didn't have an umbrella.", Line_WaitForInput);
 	OutputLine(NULL, "もちろん全身はずぶ濡れ…。",
-		   NULL, " They were unquestionably drenched from head to toe... ", Line_ModeSpecific);
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+		   NULL, " They were unquestionably drenched from head to toe...", Line_WaitForInput);
 	OutputLine(NULL, "滝のような雨に、髪の毛からぼたぼたと水を滴らせている…。",
-		   NULL, "In this shower which more resembled a waterfall... droplets of water dripped down from her hair...", Line_Normal);
+		   NULL, " In this shower which more resembled a waterfall... droplets of water dripped down from her hair...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 //	DrawFilm( 2,  34, 34, 255, 255, 0, 0, FALSE );

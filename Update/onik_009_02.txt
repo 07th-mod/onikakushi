@@ -1633,14 +1633,14 @@ void main()
 		   NULL, "\"The accidental deaths of the couple who supported the dam is the same.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800065", 256, 64);
 	OutputLine(NULL, "恨みを買う立場だったからね、警察が特に入念に捜査したと思うよ。",
-		   NULL, " He was in a position that made others hate him. The police made a point of investigating from that angle. ", Line_ModeSpecific);
+		   NULL, " He was in a position that made others hate him. The police made a point of investigating from that angle.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800066", 256, 64);
-	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "それで発表は事故。",
-		   NULL, "They concluded it was an accident.", Line_WaitForInput);
+		   NULL, " They concluded it was an accident. ", Line_ModeSpecific);
 	PlaySE(3, "s01/08/120800067", 256, 64);
+	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "他殺じゃない。」",
-		   NULL, " Not foul play.\"", Line_ModeSpecific);
+		   NULL, "Not foul play.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1770,11 +1770,10 @@ void main()
 		   NULL, "Of course, the police ordered an autopsy because of the strange way he died.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800081", 256, 64);
 	OutputLine(NULL, "…で、事件性は発見されなかったんだろ？",
-		   NULL, " ...But there wasn't enough for them to open a full investigation, you know? ", Line_ModeSpecific);
+		   NULL, " ...But there wasn't enough for them to open a full investigation, you know?", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800082", 256, 64);
-	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　本当に偶然の病死なんだよ。」",
-		   NULL, "Turns out it was just a sudden death due to illness.\"", Line_Normal);
+		   NULL, " Turns out it was just a sudden death due to illness.\"", Line_Normal);
 	ClearMessage();
 
 

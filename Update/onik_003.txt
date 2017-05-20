@@ -2974,11 +2974,10 @@ void main()
 		   NULL, " Acting all big and full of themselves!", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300209", 256, 64);
 	OutputLine(NULL, "　金で解決できないと悟るとあらゆる嫌がらせをしてきたんだよ？！",
-		   NULL, " Since they figured out that they couldn't settle it with money, they did a bunch of nasty stuff! ", Line_ModeSpecific);
+		   NULL, " Since they figured out that they couldn't settle it with money, they did a bunch of nasty stuff!", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300210", 256, 64);
-	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　嫌らしいヤツらだった！」",
-		   NULL, "They were nasty guys!\"", Line_ModeSpecific);
+		   NULL, " They were nasty guys!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -3007,19 +3006,19 @@ void main()
 		   NULL, " They went to Tokyo and struck deals with legislators...", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300213", 256, 64);
 	OutputLine(NULL, "……そうしてる内に計画は撤回されたんだよ。",
-		   NULL, " And as a result, the development plan was retracted. ", Line_ModeSpecific);
+		   NULL, " And as a result, the development plan was retracted.", Line_WaitForInput);
 
 	DisableWindow();
 	DrawBustshot( 2, "me_se_wi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //私たちの完全勝利だった＠　あっはははは！＠
 	PlaySE(3, "s19/03/990300214", 256, 64);
-	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "私たちの完全勝利だった！",
-		   NULL, "It was our complete victory!", Line_WaitForInput);
+		   NULL, " It was our complete victory! ", Line_ModeSpecific);
 	PlaySE(3, "s19/03/990300215", 256, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　あっはははは！」",
-		   NULL, " Ahahahahaha!\"", Line_ModeSpecific);
+		   NULL, "Ahahahahaha!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

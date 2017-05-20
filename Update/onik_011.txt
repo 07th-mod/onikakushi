@@ -3570,11 +3570,10 @@ void main()
 		   NULL, "\"Hm... I believe... that's when somebody suddenly vanishes because they've been abducted by a demon.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700133", 256, 64);
 	OutputLine(NULL, "この辺り独特の言い回しですね。",
-		   NULL, " It's a special saying from around here. ", Line_ModeSpecific);
+		   NULL, " It's a special saying from around here.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700134", 256, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "世間様で言う、神隠しと同じ意味です。」",
-		   NULL, "It has the same meaning as 'spirited away' like everyone else says.\"", Line_Normal);
+		   NULL, " It has the same meaning as 'spirited away' like everyone else says.\"", Line_Normal);
 	ClearMessage();
 
 
@@ -4002,11 +4001,10 @@ void main()
 		   NULL, " Then what about the incident with the housewife beaten to death?", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100245", 256, 64);
 	OutputLine(NULL, "　誰か行方不明になりましたか？",
-		   NULL, " Who went missing? ", Line_ModeSpecific);
+		   NULL, " Who went missing?", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100246", 256, 64);
-	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…確か犯人は逮捕されたんですよね？」",
-		   NULL, "...I believe the perpetrator was caught, right?\"", Line_Normal);
+		   NULL, " ...I believe the perpetrator was caught, right?\"", Line_Normal);
 	ClearMessage();
 
 

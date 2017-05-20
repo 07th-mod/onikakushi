@@ -71,12 +71,12 @@ void main()
 	OutputLine(NULL, "営林署貯木場一、",
 		   NULL, " 1 forestry department lumber yard,", Line_WaitForInput);
 	OutputLine(NULL, "神社五、",
-		   NULL, " 5 shrines, ", Line_ModeSpecific);
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+		   NULL, " 5 shrines,", Line_WaitForInput);
 	OutputLine(NULL, "寺院二、",
-		   NULL, "2 temples,", Line_WaitForInput);
+		   NULL, " 2 temples, ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "魚族増殖場一、",
-		   NULL, " and 1 fishery.", Line_WaitForInput);
+		   NULL, "and 1 fishery.", Line_WaitForInput);
 	OutputLine(NULL, "等多数の公共的文化的生産的施設と信仰の対象を永久に湖底に没するものである。",
 		   NULL, " All of these communal, cultural, agricultural areas, and places of worship were to be indefinitely submerged at the bottom of the artificial lake basin.", Line_Normal);
 	ClearMessage();

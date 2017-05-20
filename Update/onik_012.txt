@@ -2051,14 +2051,14 @@ void main()
 		   NULL, "\"The housewife who died in the fourth year you know already, don't you?", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700271", 256, 64);
 	OutputLine(NULL, "北条沙都子さんの義理の叔母です。",
-		   NULL, " It was the step-aunt of Satoko Houjou-san. ", Line_ModeSpecific);
+		   NULL, " It was the step-aunt of Satoko Houjou-san.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700272", 256, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "……当時は沙都子さんはご両親を事故で失っていましたので、預けられていたのです。",
-		   NULL, "...She was in her aunt and uncle's custody, as she had lost both of her parents in the accident...", Line_WaitForInput);
+		   NULL, " ...She was in her aunt and uncle's custody, as she had lost both of her parents in the accident... ", Line_ModeSpecific);
 	PlaySE(3, "s01/11/120700273", 256, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "被害者宅に。」",
-		   NULL, " She lived in the victim's house.\"", Line_Normal);
+		   NULL, "She lived in the victim's house.\"", Line_Normal);
 	ClearMessage();
 
 //　唇が乾いていくのがわかる……＠
@@ -4581,12 +4581,12 @@ void main()
 	OutputLine(NULL, "　じゃあ大石さんだって＊されるだろう。",
 		   NULL, "They'll probably **** Ooishi-san as well.", Line_WaitForInput);
 	OutputLine(NULL, "みんながこんなにも知らないほうがいいと忠告してくれることを掘り返そうとしている。",
-		   NULL, " For trying to unearth what everybody was warning me was better left buried. ", Line_ModeSpecific);
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+		   NULL, " For trying to unearth what everybody was warning me was better left buried.", Line_WaitForInput);
 	OutputLine(NULL, "それに…俺にみんなを疑わせるようなことを吹き込んだ許せない男だ。",
-		   NULL, "Besides that... he was unforgivable for spewing words that made me doubt the others.", Line_WaitForInput);
+		   NULL, " Besides that... he was unforgivable for spewing words that made me doubt the others. ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "…あんなヤツ＊されて当り前なんだ…！！！",
-		   NULL, " ...Of course a guy like that is going to be ****ed...!!!", Line_Normal);
+		   NULL, "...Of course a guy like that is going to be ****ed...!!!", Line_Normal);
 	ClearMessage();
 
 //　富竹さんも大石さんも所詮はよそ者なんだ＠雛見沢の人間とは相容れない存在なんだよ＠そんなヤツらこそオヤシロさまの祟りにあって＊されるべきなんだ！￥
@@ -4594,10 +4594,9 @@ void main()
 	OutputLine(NULL, "　富竹さんも大石さんも所詮はよそ者なんだ。",
 		   NULL, "Both Tomitake-san and Ooishi-san were nothing but outsiders, after all.", Line_WaitForInput);
 	OutputLine(NULL, "雛見沢の人間とは相容れない存在なんだよ。",
-		   NULL, " They were entities who couldn't coexist with the people of Hinamizawa. ", Line_ModeSpecific);
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+		   NULL, " They were entities who couldn't coexist with the people of Hinamizawa.", Line_WaitForInput);
 	OutputLine(NULL, "そんなヤツらこそオヤシロさまの祟りにあって＊されるべきなんだ！！",
-		   NULL, "Those guys should just fall to Oyashiro-sama's curse and just ***!!", Line_Normal);
+		   NULL, " Those guys should just fall to Oyashiro-sama's curse and just ***!!", Line_Normal);
 	ClearMessage();
 
 	FadeOutBGM( 0, 1000, FALSE );
@@ -4650,10 +4649,9 @@ void main()
 	OutputLine(NULL, "……もう大丈夫。",
 		   NULL, " ...I was fine now.", Line_WaitForInput);
 	OutputLine(NULL, "…もう怖くない。",
-		   NULL, " ...I was no longer frightened. ", Line_ModeSpecific);
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+		   NULL, " ...I was no longer frightened.", Line_WaitForInput);
 	OutputLine(NULL, "…もう完全復活。",
-		   NULL, "...I had completely recovered.", Line_ModeSpecific);
+		   NULL, " ...I had completely recovered.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

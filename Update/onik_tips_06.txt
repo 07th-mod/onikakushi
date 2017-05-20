@@ -67,10 +67,9 @@ void main()
 //「始めは殺すつもりはなかったのでしょう＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「始めは殺すつもりはなかったのでしょう。",
-		   NULL, "\"They probably didn't mean to kill him at first, ", Line_ModeSpecific);
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+		   NULL, "\"They probably didn't mean to kill him at first,", Line_WaitForInput);
 	OutputLine(NULL, "　ですが被害者がシャベルを振り回して抵抗を始めると、加害者たちも一斉に得物を手にし、一気に殺し合いにエスカレートしたのです。」",
-		   NULL, "but as the victim resisted by swinging around a shovel, the rest of the perpetrators armed themselves in return, and it quickly escalated to homicide.\"", Line_ModeSpecific);
+		   NULL, " but as the victim resisted by swinging around a shovel, the rest of the perpetrators armed themselves in return, and it quickly escalated to homicide.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

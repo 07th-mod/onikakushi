@@ -2807,11 +2807,10 @@ void main()
 		   NULL, " ...There are traces of where he struck trees and the guardrails with in.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700050", 256, 64);
 	OutputLine(NULL, "周囲に散乱する富竹さんの血痕…。",
-		   NULL, " Tomitake-san's blood was found all over the place... ", Line_ModeSpecific);
+		   NULL, " Tomitake-san's blood was found all over the place...", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700051", 256, 64);
-	if (AdvMode) { OutputLine("中年男", NULL, "Middle-Aged Man", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "………つまりですね、」",
-		   NULL, "...meaning...\"", Line_ModeSpecific);
+		   NULL, " ...meaning...\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2830,11 +2829,10 @@ void main()
 		   NULL, "\"There were external injuries, which were not self-inflicted, discovered on Tomitake-san.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700053", 256, 64);
 	OutputLine(NULL, "…富竹さんは何者かに暴行を受けた可能性があるということです。",
-		   NULL, " ...There is a high probability Tomitake-san was assaulted. ", Line_ModeSpecific);
+		   NULL, " ...There is a high probability Tomitake-san was assaulted.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700054", 256, 64);
-	if (AdvMode) { OutputLine("中年男", NULL, "Middle-Aged Man", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "外傷の部位から見て、複数犯の可能性もあります。」",
-		   NULL, "The external injuries suggest there may be multiple suspects.\"", Line_Normal);
+		   NULL, " The external injuries suggest there may be multiple suspects.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawScene( "black", 1000 );
@@ -3488,14 +3486,9 @@ void main()
 
 //「神主はダム騒動当時、リーダーシップを期待されながらも、積極的な働きがなかったため、一部の村人から失望、反感を買っていました。￥
 	PlaySE(3, "s01/11/120700089", 256, 64);
-	if (AdvMode) {
-		OutputLine("中年男", NULL, "Middle-Aged Man", NULL, Line_ContinueAfterTyping);
-		OutputLine(NULL, "「神主はダム騒動当時、リーダーシップを期待されながらも、積極的な働きがなかったため、一部の村人から失望、反感を買っていました。」",
-			   NULL, "<size=-2>\"The villagers had expected leadership from the Shinto priest at the time of the dam dispute. But he wasn't proactive, so there was a faction of villagers who harbored ill will towards him as a result.\"</size>", Line_Normal);
-	} else {
-		OutputLine(NULL, "「神主はダム騒動当時、リーダーシップを期待されながらも、積極的な働きがなかったため、一部の村人から失望、反感を買っていました。」",
-			   NULL, "\"The villagers had expected leadership from the Shinto priest at the time of the dam dispute. But he wasn't proactive, so there was a faction of villagers who harbored ill will towards him as a result.\"", Line_Normal);
-	}
+	if (AdvMode) { OutputLine("中年男", NULL, "Middle-Aged Man", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「神主はダム騒動当時、リーダーシップを期待されながらも、積極的な働きがなかったため、一部の村人から失望、反感を買っていました。」",
+		   NULL, "\"The villagers had expected leadership from the Shinto priest at the time of the dam dispute. But he wasn't proactive, so there was a faction of villagers who harbored ill will towards him as a result.\"", Line_Normal);
 	ClearMessage();
 
 

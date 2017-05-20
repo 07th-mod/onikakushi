@@ -1683,14 +1683,9 @@ void main()
 
 
 //　複数のワナを多彩に組み合わせ、本命のワナへ誘う誘導や、連続でヒットさせる連鎖系トラップなどなど＠
-	if (AdvMode) {
-		OutputLineAll("", NULL, Line_ContinueAfterTyping);
-		OutputLine(NULL, "　複数のワナを多彩に組み合わせ、本命のワナへ誘う誘導や、連続でヒットさせる連鎖系トラップなどなど。",
-			   NULL, "<size=-2>Satoko liked to combine a variety of traps: traps that were simply there to bait you into the main one, traps that relentlessly kept coming at you like a sadistic Rube Goldberg machine, the list goes on.</size>", Line_ModeSpecific);
-	} else {
-		OutputLine(NULL, "　複数のワナを多彩に組み合わせ、本命のワナへ誘う誘導や、連続でヒットさせる連鎖系トラップなどなど。",
-			   NULL, "Satoko liked to combine a variety of traps: traps that were simply there to bait you into the main one, traps that relentlessly kept coming at you like a sadistic Rube Goldberg machine, the list goes on.", Line_ModeSpecific);
-	}
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　複数のワナを多彩に組み合わせ、本命のワナへ誘う誘導や、連続でヒットさせる連鎖系トラップなどなど。",
+		   NULL, "Satoko liked to combine a variety of traps: traps that were simply there to bait you into the main one, traps that relentlessly kept coming at you like a sadistic Rube Goldberg machine, the list goes on.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 

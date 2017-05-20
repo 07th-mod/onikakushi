@@ -3492,11 +3492,10 @@ void main()
 	PlaySE(3, "s19/01/hr_kei33990", 256, 64);
 	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「我が部はだな、複雑化する社会に対応するため、活動毎に提案されるさまざまな条件下、…時には順境。",
-		   NULL, "\"What our club does, you see... In order to cope with our complicated society, we perform various activities with various rules. Sometimes they are in your favor... ", Line_ModeSpecific);
+		   NULL, "\"What our club does, you see... In order to cope with our complicated society, we perform various activities with various rules. Sometimes they are in your favor...", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei34000", 256, 64);
-	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "あるいは逆境からいかにして…！！」",
-		   NULL, "...and sometimes they work against you...!!\"", Line_ModeSpecific);
+		   NULL, " ...and sometimes they work against you...!!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
