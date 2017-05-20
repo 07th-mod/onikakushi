@@ -1785,10 +1785,11 @@ void main()
 		   NULL, "\"I think you guys are suspects in the previous incidents, too.", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100677", 256, 64);
 	OutputLine(NULL, "ダムの反対運動の時から、お前が警察の世話になってたこともよく知ってる！",
-		   NULL, " I also know you've spent a lot of time with the cops ever since the anti-dam movement.", Line_WaitForInput);
+		   NULL, " I also know you've spent a lot of time with the cops ever since the anti-dam movement. ", Line_ModeSpecific);
 	PlaySE(3, "s01/01/120100678", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　隠しきれてると思うなよ…いいな！！」",
-		   NULL, " Don't think you can hide it from me... Got that!?\"", Line_ModeSpecific);
+		   NULL, "Don't think you can hide it from me... Got that!?\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -3041,7 +3042,7 @@ void main()
 
 	PlaySE(3, "s01/02/120200358", 256, 64);
 	OutputLine(NULL, "あはははははははははははははははははははははは。」",
-		   NULL, " Ahahahahahahahahahahahahahahahahahahahaha.\"", Line_WaitForInput);
+		   NULL, " Ahahahahahahahahahahahahahahahahahahahaha.\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3313,7 +3314,7 @@ void main()
 
 
 	OutputLine(NULL, "あはははははははははははははは。」",
-		   NULL, " Ahahahahahahahahahahahahahaha.\"", Line_WaitForInput);
+		   NULL, " Ahahahahahahahahahahahahahaha.\"", Line_ModeSpecific);
 
 
 
@@ -3698,16 +3699,17 @@ void main()
 		   NULL, "\"If Keiichi-kun doesn't have anything to worry about, he'll go back to normal.", Line_WaitForInput);
 	PlaySE(3, "s01/02/120200394", 256, 64);
 	OutputLine(NULL, "みんなとも仲良しに戻れて、また楽しく部活ができるよ。",
-		   NULL, " Everyone will be back to being friends and we can enjoy club activities again.", Line_WaitForInput);
+		   NULL, " Everyone will be back to being friends and we can enjoy club activities again. ", Line_ModeSpecific);
 	PlaySE(3, "s01/02/120200395", 256, 64);
+	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "今度は一緒に組んで魅ぃちゃんをやっつけようね。",
-		   NULL, " Next time we'll team up and beat Mii-chan.", Line_ContinueAfterTyping);
+		   NULL, "Next time we'll team up and beat Mii-chan.", Line_ContinueAfterTyping);
 //!s200
 
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "あはははははははははははははははは。」",
-		   NULL, " Ahahahahahahahahahahahahahahahaha.\"", Line_WaitForInput);
+		   NULL, " Ahahahahahahahahahahahahahahahaha.\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -3752,10 +3754,11 @@ void main()
 		   NULL, " Let's go up to the dam site together.", Line_WaitForInput);
 	PlaySE(3, "s01/02/120200401", 256, 64);
 	OutputLine(NULL, "見つけたばかりのかぁいいの、圭一くんにも見せてあげるね。",
-		   NULL, " I'll show you the kyute thing I just found.", Line_WaitForInput);
+		   NULL, " I'll show you the kyute thing I just found. ", Line_ModeSpecific);
 	PlaySE(3, "s01/02/120200402", 256, 64);
+	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "きっと圭一くんも気に入るよ。",
-		   NULL, " I'm sure you'll like it too.", Line_ContinueAfterTyping);
+		   NULL, "I'm sure you'll like it too.", Line_ContinueAfterTyping);
 //!s200
 
 	SetSpeedOfMessage( TRUE, 100, );
@@ -3881,9 +3884,14 @@ void main()
 	DrawBustshotWithFiltering( 2, "re_se_hi_a1_zoom", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //　疲労困憊で息も絶え絶えの俺に比べ...レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　疲労困憊で息も絶え絶えの俺に比べ…レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった。",
-		   NULL, "Compared to me, out of breath and utterly exhausted... Rena was so cool and composed that she could have froze the air around her. She wasn't breathing hard at all, rather, I couldn't even sense if her heart was beating.", Line_Normal);
+	if (AdvMode) {
+		OutputLineAll("", NULL, Line_ContinueAfterTyping);
+		OutputLine(NULL, "　疲労困憊で息も絶え絶えの俺に比べ…レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった。",
+			   NULL, "<size=-2>Compared to me, out of breath and utterly exhausted... Rena was so cool and composed that she could have froze the air around her. She wasn't breathing hard at all, rather, I couldn't even sense if her heart was beating.</size>", Line_Normal);
+	} else {
+		OutputLine(NULL, "　疲労困憊で息も絶え絶えの俺に比べ…レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった。",
+			   NULL, "Compared to me, out of breath and utterly exhausted... Rena was so cool and composed that she could have froze the air around her. She wasn't breathing hard at all, rather, I couldn't even sense if her heart was beating.", Line_Normal);
+	}
 	ClearMessage();
 //	DisableWindow();
 //	DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
@@ -3901,7 +3909,7 @@ void main()
 
 
 	OutputLine(NULL, "あははははははははははははははははははははは。」",
-		   NULL, " Ahahahahahahahahahahahahahahahahahahahaha.\"", Line_WaitForInput);
+		   NULL, " Ahahahahahahahahahahahahahahahahahahahaha.\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4401,7 +4409,7 @@ void main()
 
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "あはははははははははははははははははははははははは。",
-		   NULL, "Ahahahahahahahahahahahahahahahahahahahaha.", Line_WaitForInput);
+		   NULL, "Ahahahahahahahahahahahahahahahahahahahaha.", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -5659,10 +5667,11 @@ void main()
 		   NULL, "\"This is my first time hearing that.", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100754", 256, 64);
 	OutputLine(NULL, "村の外敵が祟られるのはわかりますが……、どうして出て行く村人まで？",
-		   NULL, " I can understand outside threats being cursed by the village, but why also villagers who leave?", Line_WaitForInput);
+		   NULL, " I can understand outside threats being cursed by the village, but why also villagers who leave? ", Line_ModeSpecific);
 	PlaySE(3, "s01/01/120100755", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　普通、出て行く者は祟られないものじゃないんですか？」",
-		   NULL, " Normally, people who leave villages aren't supposed to be cursed, right?\"", Line_ModeSpecific);
+		   NULL, "Normally, people who leave villages aren't supposed to be cursed, right?\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -5727,10 +5736,11 @@ void main()
 		   NULL, "\"The villagers at the foot of the mountains worshipped the ogres.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700496", 256, 64);
 	OutputLine(NULL, "で、鬼ヶ淵は神聖な土地なので絶対に不可侵。",
-		   NULL, " So Onigafuchi was hallowed ground that you could never enter.", Line_WaitForInput);
+		   NULL, " So Onigafuchi was hallowed ground that you could never enter. ", Line_ModeSpecific);
 	PlaySE(3, "s01/11/120700497", 256, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "むやみに立ち入るとオヤシロさまの祟りがある、とされてきたんです。」",
-		   NULL, " It came to be said that if you entered carelessly, you were cursed by Oyashiro-sama.\"", Line_ModeSpecific);
+		   NULL, "It came to be said that if you entered carelessly, you were cursed by Oyashiro-sama.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -6135,7 +6145,7 @@ void main()
 //　レナでないレナを内に宿したとしか思えない＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　レナでないレナを内に宿したとしか思えない。",
-		   NULL, "I could only believe that there was something that wasn't Rena residing within her.", Line_WaitForInput);
+		   NULL, "I could only believe that there was something that wasn't Rena residing within her.", Line_ModeSpecific);
 
 
 	FadeOutBGM( 1, 1000, TRUE );
@@ -6211,7 +6221,7 @@ void main()
 	PlaySE(3, "s01/02/120200446", 256, 64);
 	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「……あははははははははははははははははははははは。」",
-		   NULL, "\"...Ahahahahahahahahahahahahahahahahahaha.\"", Line_WaitForInput);
+		   NULL, "\"...Ahahahahahahahahahahahahahahahahahaha.\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -6731,7 +6741,7 @@ void main()
 //　そう思い、踵を返そうとした瞬間、そんな俺の考えを見透かしたかのように...その２人が駆け出した！＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そう思い、踵を返そうとした瞬間、そんな俺の考えを見透かしたかのように…その２人が駆け出した！！",
-		   NULL, "Deciding that, the moment I began to turn tail... both of them rushed towards me, as if they knew exactly what I was thinking!!", Line_WaitForInput);
+		   NULL, "Deciding that, the moment I began to turn tail... both of them rushed towards me, as if they knew exactly what I was thinking!!", Line_ModeSpecific);
 
 	PlayBGM( 1, "msys08", 128, 0 );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -6943,7 +6953,7 @@ void main()
 
 //「......なッ？！＠
 	PlaySE(3, "s01/00/mana020001", 256, 64);
-	if (AdvMode) { OutputLine("男", NULL, "Boy", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("男", NULL, "Man", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「……なッ？！」",
 		   NULL, "\"...Wha—!?\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

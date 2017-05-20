@@ -1608,13 +1608,14 @@ void main()
 		   NULL, " It's only a matter of time for the last one.", Line_Normal);
 	PlaySE(3, "s01/08/120800061", 256, 64);
 	OutputLine(NULL, "動機だって、酒の上での口論からと判明してる。",
-		   NULL, " The motive turned out to have been an argument they had while intoxicated.", Line_WaitForInput);
+		   NULL, " The motive turned out to have been an argument they had while intoxicated. ", Line_ModeSpecific);
 	PlaySE(3, "s01/08/120800062", 256, 64);
+	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "祟りなんかじゃない。",
-		   NULL, " That's no curse.", Line_WaitForInput);
+		   NULL, "That's no curse.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800063", 256, 64);
 	OutputLine(NULL, "……だろ？」",
-		   NULL, " ...Don't you agree?\"", Line_WaitForInput);
+		   NULL, " ...Don't you agree?\"", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -1632,10 +1633,11 @@ void main()
 		   NULL, "\"The accidental deaths of the couple who supported the dam is the same.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800065", 256, 64);
 	OutputLine(NULL, "恨みを買う立場だったからね、警察が特に入念に捜査したと思うよ。",
-		   NULL, " He was in a position that made others hate him. The police made a point of investigating from that angle.", Line_WaitForInput);
+		   NULL, " He was in a position that made others hate him. The police made a point of investigating from that angle. ", Line_ModeSpecific);
 	PlaySE(3, "s01/08/120800066", 256, 64);
+	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "それで発表は事故。",
-		   NULL, " They concluded it was an accident.", Line_WaitForInput);
+		   NULL, "They concluded it was an accident.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800067", 256, 64);
 	OutputLine(NULL, "他殺じゃない。」",
 		   NULL, " Not foul play.\"", Line_ModeSpecific);
@@ -1722,10 +1724,11 @@ void main()
 		   NULL, "\"It's even easier to explain what happened to the Shinto priest.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800074", 256, 64);
 	OutputLine(NULL, "綿流しのお祭りは神主さんにとっては年に一度の大行事。過労に体調不良が重なったんだろうね。",
-		   NULL, " The Watanagashi is a really big event that happens once a year. It was probably from all the built-up stress.", Line_WaitForInput);
+		   NULL, " The Watanagashi is a really big event that happens once a year. It was probably from all the built-up stress. ", Line_ModeSpecific);
 	PlaySE(3, "s01/08/120800075", 256, 64);
+	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "あるいは元々持病持ちだったのかもしれない。」",
-		   NULL, " Or it may have been because of a pre-existing condition.\"", Line_ModeSpecific);
+		   NULL, "Or it may have been because of a pre-existing condition.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //「でも、奇病ですよ＠　この医学の進歩した時代に原因不明なんて…。￥
@@ -1767,10 +1770,11 @@ void main()
 		   NULL, "Of course, the police ordered an autopsy because of the strange way he died.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800081", 256, 64);
 	OutputLine(NULL, "…で、事件性は発見されなかったんだろ？",
-		   NULL, " ...But there wasn't enough for them to open a full investigation, you know?", Line_WaitForInput);
+		   NULL, " ...But there wasn't enough for them to open a full investigation, you know? ", Line_ModeSpecific);
 	PlaySE(3, "s01/08/120800082", 256, 64);
+	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　本当に偶然の病死なんだよ。」",
-		   NULL, " Turns out it was just a sudden death due to illness.\"", Line_Normal);
+		   NULL, "Turns out it was just a sudden death due to illness.\"", Line_Normal);
 	ClearMessage();
 
 
@@ -1796,10 +1800,11 @@ void main()
 		   NULL, " Everyone was shaken up by the incidents happening for a third year.", Line_WaitForInput);
 	PlaySE(3, "s01/08/120800085", 256, 64);
 	OutputLine(NULL, "信心深い人たちはすぐに祟りだと決めてかかったのさ。",
-		   NULL, " Those who are of strong faith were quick to believe it was the work of the curse.", Line_WaitForInput);
+		   NULL, " Those who are of strong faith were quick to believe it was the work of the curse. ", Line_ModeSpecific);
 	PlaySE(3, "s01/08/120800086", 256, 64);
+	if (AdvMode) { OutputLine("<color=#977568>富竹</color>", NULL, "<color=#977568>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "……もちろん、神主の奥さんもね。",
-		   NULL, " ...Of course, that included the priest's wife.", Line_ModeSpecific);
+		   NULL, "...Of course, that included the priest's wife.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2420,7 +2425,7 @@ void main()
 //"やーいビリ！　沙都子"@
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“やーいビリ！　沙都子”",
-		   NULL, "\"Haha~ dead last! -Satoko\"", Line_WaitForInput);
+		   NULL, "\"Haha~ dead last! -Satoko\"", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -2453,7 +2458,7 @@ void main()
 //"また遊びに来てください。　圭一"@
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“また遊びに来てください。　圭一”",
-		   NULL, "\"Come back and play again. -Keiichi\"", Line_WaitForInput);
+		   NULL, "\"Come back and play again. -Keiichi\"", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 

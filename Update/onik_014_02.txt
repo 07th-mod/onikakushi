@@ -1168,9 +1168,14 @@ void main()
 
 
 //　本当はいろんな種類をいっぱい買いたかったが、高いからと断られ、好物のデカカップ豚骨ショウガ味を１ダース買った＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　本当はいろんな種類をいっぱい買いたかったが、高いからと断られ、好物のデカカップ豚骨ショウガ味を１ダース買った。",
-		   NULL, "I wanted to get a bunch of different kinds, actually, but they refused since the individual packs were expensive. So instead, I got a whole case of the Mega-size Pork-bone & Ginger flavored ones I liked.", Line_ModeSpecific);
+	if (AdvMode) {
+		OutputLineAll("", NULL, Line_ContinueAfterTyping);
+		OutputLine(NULL, "　本当はいろんな種類をいっぱい買いたかったが、高いからと断られ、好物のデカカップ豚骨ショウガ味を１ダース買った。",
+			   NULL, "<size=-2>I wanted to get a bunch of different kinds, actually, but they refused since the individual packs were expensive. So instead, I got a whole case of the Mega-size Pork-bone & Ginger flavored ones I liked.</size>", Line_ModeSpecific);
+	} else {
+		OutputLine(NULL, "　本当はいろんな種類をいっぱい買いたかったが、高いからと断られ、好物のデカカップ豚骨ショウガ味を１ダース買った。",
+			   NULL, "I wanted to get a bunch of different kinds, actually, but they refused since the individual packs were expensive. So instead, I got a whole case of the Mega-size Pork-bone & Ginger flavored ones I liked.", Line_ModeSpecific);
+	}
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1515,7 +1520,7 @@ void main()
 //　まず居間へ走り、明かりとテレビをつける。ボリュームは心持ち大きめに＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　敵に両親不在を、チャンスを教えてやってるようなものだ。",
-		   NULL, "It was the same as broadcasting to the enemy that my parents were gone and this was their chance.", Line_WaitForInput);
+		   NULL, "It was the same as broadcasting to the enemy that my parents were gone and this was their chance.", Line_ModeSpecific);
 
 
 	DrawSceneWithMask( "black", "left", 0, 0, 300 );
@@ -1609,9 +1614,10 @@ void main()
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "あ、あとは新聞受けだ！！",
-		   NULL, " Ah, I needed to get the paper!!", Line_WaitForInput);
+		   NULL, " Ah, I needed to get the paper!! ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　新聞はいつもお袋が持ってきてる。昼に出発したということは…夕刊が入りっ放しだ！！",
-		   NULL, " Mom always got the paper. Since they left in the afternoon... The evening paper was still out there!!", Line_Normal);
+		   NULL, "Mom always got the paper. Since they left in the afternoon... The evening paper was still out there!!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_021", "left", 0, 0, 1300 );
@@ -4456,11 +4462,12 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //「カップラーメン。!w2000........................当たりでしょ。＠
 	PlaySE(3, "s01/02/120200298", 256, 64);
+	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「カップラーメン。",
 		   NULL, "\"Cup noodles...", Line_ContinueAfterTyping);
 
@@ -4469,11 +4476,12 @@ void main()
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……………………当たりでしょ。」",
-		   NULL, " That's right, isn't it?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, " That's right, isn't it?\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　であることがわかるんだ......？＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　であることがわかるんだ……？！",
 		   NULL, "—that I was going to eat...!?", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4602,7 +4610,7 @@ void main()
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "＊＊＊＊＊＊＊。」",
-		   NULL, " *******.\"", Line_WaitForInput);
+		   NULL, " *******.\"", Line_ModeSpecific);
 	SetSpeedOfMessage( FALSE, 0, );
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4887,7 +4895,7 @@ void main()
 
 	PlaySE(3, "s01/02/120200316", 256, 64);
 	OutputLine(NULL, "…うふふふ。」",
-		   NULL, " Hehahahaha.\"", Line_WaitForInput);
+		   NULL, " Hehahahaha.\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -5183,7 +5191,7 @@ void main()
 //　だがバタンという軽快な音はしなかった＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だがバタンという軽快な音はしなかった。",
-		   NULL, "But that slamming sound I so desired didn't happen.", Line_WaitForInput);
+		   NULL, "But that slamming sound I so desired didn't happen.", Line_ModeSpecific);
 
 
 	DisableWindow();
@@ -5359,7 +5367,7 @@ void main()
 //!s100
 
 	OutputLine(NULL, "帰れぇええぇえぇええッ！！」",
-		   NULL, " GO AWAAAAAAAAY!!\"", Line_WaitForInput);
+		   NULL, " GO AWAAAAAAAAY!!\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -6359,10 +6367,11 @@ void main()
 		   NULL, " All of it is from either phone calls or meetings and interviews.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700403", 256, 64);
 	OutputLine(NULL, "ですからウラが取れていません。",
-		   NULL, " So they aren't corroborated.", Line_WaitForInput);
+		   NULL, " So they aren't corroborated. ", Line_ModeSpecific);
 	PlaySE(3, "s01/11/120700404", 256, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "鵜呑みにしないでほしい、……………ということなんですよ。",
-		   NULL, " I'm asking you to take this all with a grain of salt... is what I mean.", Line_WaitForInput);
+		   NULL, "I'm asking you to take this all with a grain of salt... is what I mean.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700405", 256, 64);
 	OutputLine(NULL, "ご理解いただけますね？」",
 		   NULL, " Do we have an agreement?\"", Line_Normal);
@@ -6573,7 +6582,7 @@ void main()
 	PlaySE(3, "s01/11/120700411", 256, 64);
 	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「………………はい。」",
-		   NULL, "\"...Yes.\"", Line_WaitForInput);
+		   NULL, "\"...Yes.\"", Line_ModeSpecific);
 //!sd
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -6795,10 +6804,11 @@ void main()
 		   NULL, " Hello...?", Line_Normal);
 	PlaySE(3, "s01/11/vt1_oishi1006", 256, 64);
 	OutputLine(NULL, "　前原さん？",
-		   NULL, " Maebara-san?", Line_WaitForInput);
+		   NULL, " Maebara-san? ", Line_ModeSpecific);
 	PlaySE(3, "s01/11/vt1_oishi1007", 256, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　聞こえてます？」",
-		   NULL, " Can you hear me?\"", Line_Normal);
+		   NULL, "Can you hear me?\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawBustshotWithFiltering( 5, "black", "right", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
@@ -6816,9 +6826,10 @@ void main()
 	OutputLine(NULL, "　この土砂降りの中、傘もさしていなかった。",
 		   NULL, "Even in this torrential rain. They didn't have an umbrella.", Line_WaitForInput);
 	OutputLine(NULL, "もちろん全身はずぶ濡れ…。",
-		   NULL, " They were unquestionably drenched from head to toe...", Line_WaitForInput);
+		   NULL, " They were unquestionably drenched from head to toe... ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "滝のような雨に、髪の毛からぼたぼたと水を滴らせている…。",
-		   NULL, " In this shower which more resembled a waterfall... droplets of water dripped down from her hair...", Line_Normal);
+		   NULL, "In this shower which more resembled a waterfall... droplets of water dripped down from her hair...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 //	DrawFilm( 2,  34, 34, 255, 255, 0, 0, FALSE );
@@ -7182,7 +7193,7 @@ void main()
 	OutputLine(NULL, "許さない、",
 		   NULL, " won't forgive,", Line_WaitForInput);
 	OutputLine(NULL, "許さない…！！",
-		   NULL, " I won't forgive...!!", Line_WaitForInput);
+		   NULL, " I won't forgive...!!", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 

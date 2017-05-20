@@ -2292,7 +2292,7 @@ void main()
 	OutputLine(NULL, "殴る。",
 		   NULL, " Smash.", Line_WaitForInput);
 	OutputLine(NULL, "殺されてたまるか。",
-		   NULL, " Like hell I'd let them kill me.", Line_WaitForInput);
+		   NULL, " Like hell I'd let them kill me.", Line_ModeSpecific);
 
 	PlaySE( 4, "wa_001", 125, 64 );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }

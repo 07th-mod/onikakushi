@@ -396,10 +396,9 @@ void main()
 
 //「ここいらではこの遊びのこと、「ゾンビ鬼」って呼んでるけどね。＠
 	PlaySE(3, "s19/03/990300226", 256, 64);
-	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ここいらではこの遊びのこと、「ゾンビ鬼」って呼んでるけどね。」",
-		   NULL, "\"We call this version \"zombie tag\", you see.\", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"We call this version \"zombie tag\", you see.\", Line_WaitForInput);
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
@@ -1058,11 +1057,12 @@ void main()
 		   NULL, "\"Heheh... Keiichi-kun,", Line_WaitForInput);
 	PlaySE(3, "s19/02/990200238", 256, 64);
 	OutputLine(NULL, "それ問題じゃないよね？」",
-		   NULL, " that wasn't a problem at all, was it?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, " that wasn't a problem at all, was it?\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　悩んだ時点で沙都子の負けだ＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　悩んだ時点で沙都子の負けだ。",
 		   NULL, "Satoko had already lost the moment she started working it out.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2475,10 +2475,11 @@ void main()
 		   NULL, " Even I didn't think that they'd go this far.", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05910", 256, 64);
 	OutputLine(NULL, "　しかも、続いて今度は百個も！！",
-		   NULL, " And they plan to drop 100 of them next!!", Line_WaitForInput);
+		   NULL, " And they plan to drop 100 of them next!! ", Line_ModeSpecific);
 	PlaySE(3, "s19/01/hr_kei05920", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　地球軍の完全な誤算だッ！！」",
-		   NULL, " The Earth Federation was totally unprepared!!\"", Line_ContinueAfterTyping);
+		   NULL, "The Earth Federation was totally unprepared!!\"", Line_ContinueAfterTyping);
 
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 0, 50, 20, 3, 0, );
@@ -2512,10 +2513,11 @@ void main()
 		   NULL, "\"If things go on like this, Earth is finished!!", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei05970", 256, 64);
 	OutputLine(NULL, "　しかし！レナなら、レナの放つ音速の『マッハレナパンチ』なら小惑星を全て迎撃することが出来る！！",
-		   NULL, " But don't despair!! If we have Rena's ultrasonic \"Mach-Rena-Punch\", it'll be possible to intercept all of the asteroids!", Line_WaitForInput);
+		   NULL, " But don't despair!! If we have Rena's ultrasonic \"Mach-Rena-Punch\", it'll be possible to intercept all of the asteroids! ", Line_ModeSpecific);
 	PlaySE(3, "s19/01/hr_kei05980", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そう、地球軍のトップエース、それが竜宮レナなのだぁッ！！」",
-		   NULL, " That's right, the Earth Federation's top ace... is Rena Ryuugu!!\"", Line_ModeSpecific);
+		   NULL, "That's right, the Earth Federation's top ace... is Rena Ryuugu!!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlaySE(3, "s19/00/girla99005", 256, 64);
@@ -2619,7 +2621,7 @@ void main()
 //　微妙に褒めていない気がするがまぁいい＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　微妙に褒めていない気がするがまぁいい。",
-		   NULL, "It didn't really feel like she was complimenting me, but whatever.", Line_WaitForInput);
+		   NULL, "It didn't really feel like she was complimenting me, but whatever.", Line_ModeSpecific);
 
 	DisableWindow();
 	DrawBustshot( 3, "sa_ta_aw_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
@@ -2893,12 +2895,13 @@ void main()
 //　覚悟の決まった笑顔に、一瞬俺の心臓がどきんと跳ねた＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　覚悟の決まった笑顔に、一瞬俺の心臓がどきんと跳ねた。",
-		   NULL, "The face she made as she resigned herself to her fate made my heart skip a beat.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "The face she made as she resigned herself to her fate made my heart skip a beat.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //「け…圭一くんはひどいことしないって……レナ、信じてるし…。￥
 	PlaySE(3, "s19/02/990200262", 256, 64);
+	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「け…圭一くんはひどいことしないって……レナ、信じてるし…。」",
 		   NULL, "\"I-I believe... that Keiichi-kun won't... do horrible things to me...\"", Line_Normal);
 	ClearMessage();
@@ -3199,9 +3202,10 @@ void main()
 //　不法投棄のダンプがまたゴミを捨てていって、今度こそ完全に埋って救出不能＠なんてことになれば……間違いなくレナは町のフライドチキン屋のランディーくん人形を狙うだろう￥
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　不法投棄のダンプがまたゴミを捨てていって、今度こそ完全に埋って救出不能、",
-		   NULL, "If they come to dump again illegally, he'll be buried completely and it'll be impossible to dig him out,", Line_WaitForInput);
+		   NULL, "If they come to dump again illegally, he'll be buried completely and it'll be impossible to dig him out, ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "なんてことになれば……間違いなくレナは町のフライドチキン屋のランディーくん人形を狙うだろう。",
-		   NULL, " and if that happens... Rena will undoubtedly go after the Colonel Randy in front of the fried chicken place in town.", Line_Normal);
+		   NULL, "and if that happens... Rena will undoubtedly go after the Colonel Randy in front of the fried chicken place in town.", Line_Normal);
 	ClearMessage();
 
 
@@ -4015,11 +4019,12 @@ void main()
 	OutputLine(NULL, "　もう少しなんだ。",
 		   NULL, "Just a bit more.", Line_WaitForInput);
 	OutputLine(NULL, "今日で…決着を着ける！",
-		   NULL, " Today... I would end it!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, " Today... I would end it!", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　始めはレナに軽口を叩きながらの作業だったが、もうそんな余裕はなかった￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　始めはレナに軽口を叩きながらの作業だったが、もうそんな余裕はなかった。",
 		   NULL, "When I first started, I chatted with Rena as I worked, but now I didn't have that luxury.", Line_Normal);
 	ClearMessage();
@@ -4134,11 +4139,12 @@ void main()
 //　嫌な音がして、腕がもげた＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　嫌な音がして、腕がもげた。",
-		   NULL, "The arm came off with a sickening sound.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "The arm came off with a sickening sound.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　それはごろんと、俺の足元に転がった￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それはごろんと、俺の足元に転がった。",
 		   NULL, "It clattered down noisily, stopping at my feet.", Line_Normal);
 	ClearMessage();

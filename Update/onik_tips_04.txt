@@ -48,9 +48,10 @@ void main()
 //　調べによると、６容疑者はＸＸ日午後９時頃、雛見沢ダム建設現場内の作業事務所にて＠現場監督のＸＸＸＸさんを集団で暴行して殺害し、遺体を切断して遺棄した疑い￥
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　調べによると、６容疑者はＸＸ日午後９時頃、雛見沢ダム建設現場内の作業事務所にて、",
-		   NULL, "According to our sources, the six suspects were at the Hinamizawa dam construction site work room on the XXth at 9PM,", Line_WaitForInput);
+		   NULL, "According to our sources, the six suspects were at the Hinamizawa dam construction site work room on the XXth at 9PM, ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "現場監督のＸＸＸＸさんを集団で暴行して殺害し、遺体を切断して遺棄した疑い。",
-		   NULL, " where they are suspected to have assaulted and murdered the site overseer XXXX as a group, dismembering his body and hiding it.", Line_Normal);
+		   NULL, "where they are suspected to have assaulted and murdered the site overseer XXXX as a group, dismembering his body and hiding it.", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_021", 128, 64 );
@@ -61,9 +62,10 @@ void main()
 	OutputLine(NULL, "　ＸＸ日午前８時頃、",
 		   NULL, "On the XXth at 8 o'clock in the morning,", Line_WaitForInput);
 	OutputLine(NULL, "鹿骨市内の病院から警察へ、「ＸＸＸＸさんを殺害したことをほのめかす男性がいる」との通報があり、",
-		   NULL, " a report was filed by the Shishibone city hospital in which a male suspect alluded to having murdered Mr. XXXX.", Line_WaitForInput);
+		   NULL, " a report was filed by the Shishibone city hospital in which a male suspect alluded to having murdered Mr. XXXX. ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "警察官が駆けつけ事情を聞いたところ、事件を自供。",
-		   NULL, " When questioned at the police station, the individual confessed to the crime.", Line_ModeSpecific);
+		   NULL, "When questioned at the police station, the individual confessed to the crime.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 

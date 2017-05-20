@@ -232,7 +232,7 @@ void main()
 	OutputLine(NULL, "　それとも容疑者？",
 		   NULL, " Or maybe a suspect?", Line_WaitForInput);
 	OutputLine(NULL, "　＞　重要参考人！",
-		   NULL, " > An important person of interest!", Line_WaitForInput);
+		   NULL, " > An important person of interest!", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 

@@ -731,13 +731,14 @@ void main()
 	Wait( 2000 );
 
 
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　!s150.......................................!s50好きだった。!w3000
 
 	SetSpeedOfMessage( TRUE, 10, );
 
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "…………………………………",
 		   NULL, "...", Line_ContinueAfterTyping);
 

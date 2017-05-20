@@ -844,9 +844,10 @@ void main()
 	OutputLine(NULL, "　残酷なバラバラ殺人のことも忘れる。",
 		   NULL, "Forget about the gruesome dismemberment.", Line_WaitForInput);
 	OutputLine(NULL, "その後毎年起こる怪死事件も忘れる。",
-		   NULL, " Forget about the mysterious deaths that happened the following years.", Line_WaitForInput);
+		   NULL, " Forget about the mysterious deaths that happened the following years. ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "…転落事故も、病死も自殺も、撲殺も失踪も、全部全部忘れる。",
-		   NULL, " ...Forget about the people falling to their death... and the terminal illness and suicide... the fatal beatings... and the disappearances. Forget it. Forget all of it.", Line_ModeSpecific);
+		   NULL, "...Forget about the people falling to their death... and the terminal illness and suicide... the fatal beatings... and the disappearances. Forget it. Forget all of it.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -1215,14 +1216,15 @@ void main()
 //　…もちろん文字通りの意味のわけはない＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…もちろん文字通りの意味のわけはない。",
-		   NULL, "...Of course she wasn't asking the question at face value.", Line_WaitForInput);
+		   NULL, "...Of course she wasn't asking the question at face value.", Line_ModeSpecific);
 
 
 
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　つまりレナは……私たちの意思は伝わったかな？!w600……そう言いたいのだろうか…￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　つまりレナは……",
 		   NULL, "In other words, Rena was asking...", Line_ContinueAfterTyping);
 
@@ -1944,7 +1946,7 @@ void main()
 //　…そっとその様子を伺ってみた＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…そっとその様子を伺ってみた。",
-		   NULL, "...I peered up to see.", Line_WaitForInput);
+		   NULL, "...I peered up to see.", Line_ModeSpecific);
 
 	DisableWindow();
 //	DrawBustshot( 2, "re_se_him_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
@@ -2265,9 +2267,10 @@ void main()
 //　祟りを信じまいとする俺は人間の犯人を切望し＠……近しい仲間たちにその嫌疑がかかった今、都合よくすり替え、今度はオヤシロさまの祟りのせいにしようとしている￥
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　祟りを信じまいとする俺は人間の犯人を切望し、",
-		   NULL, "Refusing to believe there was a curse, I wanted there to be a human perpetrator.", Line_WaitForInput);
+		   NULL, "Refusing to believe there was a curse, I wanted there to be a human perpetrator. ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "……近しい仲間たちにその嫌疑がかかった今、都合よくすり替え、今度はオヤシロさまの祟りのせいにしようとしている。",
-		   NULL, " ...Now that my close friends were the ones under suspicion, I changed my beliefs at my own convenience, saying it was Oyashiro-sama's curse to blame.", Line_Normal);
+		   NULL, "...Now that my close friends were the ones under suspicion, I changed my beliefs at my own convenience, saying it was Oyashiro-sama's curse to blame.", Line_Normal);
 	ClearMessage();
 
 //　俺にとって、レナたちが一連の怪死事件に深く関わっているかもしれないことと＠オヤシロさまの祟りが実在することを認めるのと……どちらがマシなんだろう￥

@@ -138,10 +138,11 @@ void main()
 		   NULL, "\"Recent studies find that those who develop it... or rather, those who are more susceptible to developing it,", Line_ContinueAfterTyping);
 	Wait (1800);
 	OutputLine(NULL, "最近の研究では、遺伝と心因が複雑に絡み合い…。",
-		   NULL, " may be genetically predisposed or may have had abnormal mental development...", Line_WaitForInput);
+		   NULL, " may be genetically predisposed or may have had abnormal mental development... ", Line_ModeSpecific);
 	PlaySE(3, "s20/00/profa44008", 256, 64);
+	if (AdvMode) { OutputLine("教授", NULL, "Professor", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "中でも幼少期の虐待が大きく作用するのではないかと言われています。」",
-		   NULL, " Some say that childhood abuse increases the chances.\"", Line_ModeSpecific);
+		   NULL, "Some say that childhood abuse increases the chances.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

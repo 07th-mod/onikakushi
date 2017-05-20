@@ -442,7 +442,7 @@ void main()
 //　瞳の輝きも暖かだった＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　瞳の輝きも暖かだった。",
-		   NULL, "Her eyes sparkled warmly.", Line_WaitForInput);
+		   NULL, "Her eyes sparkled warmly.", Line_ModeSpecific);
 
 	PlayBGM( 2, "lsys25", 128, 0 );
 
@@ -568,9 +568,10 @@ void main()
 //　患者自らが医者を迎えるというのも変な話だ＠......大石さんが駆けつけるまでの数十分間、いてくれるだけでこれほど心強いことはない＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　患者自らが医者を迎えるというのも変な話だが",
-		   NULL, "It was strange for a patient to welcome in the doctor who was making a house call.", Line_WaitForInput);
+		   NULL, "It was strange for a patient to welcome in the doctor who was making a house call. ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "……大石さんが駆けつけるまでの数十分間、いてくれるだけでこれほど心強いことはない。",
-		   NULL, " But it would be incredibly reassuring to have him here for the considerable time it would take Ooishi-san to get here.", Line_ModeSpecific);
+		   NULL, "But it would be incredibly reassuring to have him here for the considerable time it would take Ooishi-san to get here.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -1044,7 +1045,7 @@ void main()
 //　当り前な疑問を次々とぶつける＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　当り前な疑問を次々とぶつける。",
-		   NULL, "I asked one obvious question after another.", Line_WaitForInput);
+		   NULL, "I asked one obvious question after another.", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -1101,7 +1102,7 @@ void main()
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "あははははははははははははははははは。」",
-		   NULL, " Ahahahahahahahahahahahahahahahahaha.\"", Line_WaitForInput);
+		   NULL, " Ahahahahahahahahahahahahahahahahaha.\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1290,7 +1291,7 @@ void main()
 //　その疑問に対する答えが、二人のこの乾いた笑いだった＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その疑問に対する答えが、二人のこの乾いた笑いだった。",
-		   NULL, "Their answer to my question was that dry laughter.", Line_WaitForInput);
+		   NULL, "Their answer to my question was that dry laughter.", Line_ModeSpecific);
 
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -1347,7 +1348,7 @@ void main()
 	PlaySE(2, "s01/03/120300219", 256, 64);
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「あははははははははははははははははははははははははははは。」",
-		   NULL, "\"Ahahahahahahahahahahahahahahahahahahahaha.\"", Line_WaitForInput);
+		   NULL, "\"Ahahahahahahahahahahahahahahahahahahahaha.\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -1496,7 +1497,7 @@ void main()
 //　魅音、いや、魅音によく似たそいつは、まるで魅音のように、俺に語りかける＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音、いや、魅音によく似たそいつは、まるで魅音のように、俺に語りかける。",
-		   NULL, "Mion... no, that thing that looked like Mion... spoke to me like how Mion would speak to me.", Line_WaitForInput);
+		   NULL, "Mion... no, that thing that looked like Mion... spoke to me like how Mion would speak to me.", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -3577,11 +3578,12 @@ void main()
 //"レナと魅音は犯人の一味。"@
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“レナと魅音は犯人の一味。” ",
-		   NULL, "\"Rena and Mion are conspirators of the perpetrators.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "\"Rena and Mion are conspirators of the perpetrators.\"", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　これは疑いようのない事実＠...今でも信じたくない＠...だが事実なのだ＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　これは疑いようのない事実。",
 		   NULL, "This was an undeniable fact.", Line_WaitForInput);
 	OutputLine(NULL, "…今でも信じたくない。",
@@ -3634,7 +3636,7 @@ void main()
 //　......もしも......過去の事件で唯一監督という単語が絡むとしたら......一番初めのバラバラ殺人の被害者の現場監督だけ＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……もしも……過去の事件で唯一監督という単語が絡むとしたら……一番初めのバラバラ殺人の被害者の現場監督だけ。",
-		   NULL, "...If... they were going to include the managers from the past incidents... then the only one is the construction foreman, the victim from the first murder.", Line_WaitForInput);
+		   NULL, "...If... they were going to include the managers from the past incidents... then the only one is the construction foreman, the victim from the first murder.", Line_ModeSpecific);
 
 //...
 
@@ -4154,7 +4156,7 @@ void main()
 //　そんな生活がいかに不健全かを教えてくれたのが、みんなだったんだ＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そんな生活がいかに不健全かを教えてくれたのが、みんなだったんだ。",
-		   NULL, "Everyone here taught me how unhealthy that lifestyle was.", Line_WaitForInput);
+		   NULL, "Everyone here taught me how unhealthy that lifestyle was.", Line_ModeSpecific);
 
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -4491,7 +4493,7 @@ void main()
 //　泥を啜ってでも、草を食んででも...！＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　泥を啜ってでも、草を食んででも…！！",
-		   NULL, "Even if I had to drink mud and eat grass...!!", Line_WaitForInput);
+		   NULL, "Even if I had to drink mud and eat grass...!!", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -4619,7 +4621,7 @@ void main()
 
 //「いたぞ！！　裏口だ！！＠
 	PlaySE(3, "s01/00/inu02001", 256, 64);
-	if (AdvMode) { OutputLine("男", NULL, "Boy", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("男", NULL, "Man", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「いたぞ！！　裏口だ！！」",
 		   NULL, "\"There he is!! The back door!!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

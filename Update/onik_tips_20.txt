@@ -31,8 +31,9 @@ void main()
 //早く選べ、と急き立てる両親に悪態をつきながら、色とりどりのカップめんをどっさりとカートに載せる。
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "早く選べ、と急き立てる両親に悪態をつきながら、色とりどりのカップめんをどっさりとカートに載せる。",
-		   NULL, "I flopped the colorful collection of cup noodle bowls into the cart, muttering in irritation at being rushed by my parents.", Line_WaitForInput);
+		   NULL, "I flopped the colorful collection of cup noodle bowls into the cart, muttering in irritation at being rushed by my parents. ", Line_ModeSpecific);
 //案の定、何でこれだけの種類を選んできたんだ、とお袋はあきれた声を上げた。
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "案の定、何でこれだけの種類を選んできたんだ、とお袋はあきれた声を上げた。",
 		   NULL, "As expected, Mom gave a disbelieving look and asked why I had to get so many flavors.", Line_Normal);
 	ClearMessage();

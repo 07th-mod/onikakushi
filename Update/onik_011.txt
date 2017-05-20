@@ -2180,10 +2180,11 @@ void main()
 		   NULL, "\"It could be that the fatigue from moving has finally caught up to you.", Line_WaitForInput);
 	PlaySE(3, "s01/02/120200090", 256, 64);
 	OutputLine(NULL, "……前に住んでた所とは全然違うところだもん。",
-		   NULL, " ...It's completely different from where you used to live, after all.", Line_WaitForInput);
+		   NULL, " ...It's completely different from where you used to live, after all. ", Line_ModeSpecific);
 	PlaySE(3, "s01/02/120200091", 256, 64);
+	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "いろいろ慣れたり覚えたり……疲れて当然だよ。」",
-		   NULL, " Of course you've gotten tired... since there's so much you need to get used to and remember.\"", Line_ModeSpecific);
+		   NULL, "Of course you've gotten tired... since there's so much you need to get used to and remember.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -3569,10 +3570,11 @@ void main()
 		   NULL, "\"Hm... I believe... that's when somebody suddenly vanishes because they've been abducted by a demon.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700133", 256, 64);
 	OutputLine(NULL, "この辺り独特の言い回しですね。",
-		   NULL, " It's a special saying from around here.", Line_WaitForInput);
+		   NULL, " It's a special saying from around here. ", Line_ModeSpecific);
 	PlaySE(3, "s01/11/120700134", 256, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "世間様で言う、神隠しと同じ意味です。」",
-		   NULL, " It has the same meaning as 'spirited away' like everyone else says.\"", Line_Normal);
+		   NULL, "It has the same meaning as 'spirited away' like everyone else says.\"", Line_Normal);
 	ClearMessage();
 
 
@@ -4000,10 +4002,11 @@ void main()
 		   NULL, " Then what about the incident with the housewife beaten to death?", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100245", 256, 64);
 	OutputLine(NULL, "　誰か行方不明になりましたか？",
-		   NULL, " Who went missing?", Line_WaitForInput);
+		   NULL, " Who went missing? ", Line_ModeSpecific);
 	PlaySE(3, "s01/01/120100246", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…確か犯人は逮捕されたんですよね？」",
-		   NULL, " ...I believe the perpetrator was caught, right?\"", Line_Normal);
+		   NULL, "...I believe the perpetrator was caught, right?\"", Line_Normal);
 	ClearMessage();
 
 
@@ -4020,10 +4023,11 @@ void main()
 		   NULL, " He admitted to the crime while being questioned about a different incident.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700162", 256, 64);
 	OutputLine(NULL, "………ですがですね。",
-		   NULL, " But... well, you see...", Line_WaitForInput);
+		   NULL, " But... well, you see... ", Line_ModeSpecific);
 	PlaySE(3, "s01/11/120700163", 256, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "犯人逮捕からしばらくして、被害者宅の子供が行方不明になったんです。",
-		   NULL, " After he was arrested... a child from the victim's home went missing.", Line_WaitForInput);
+		   NULL, "After he was arrested... a child from the victim's home went missing.", Line_WaitForInput);
 	PlaySE(3, "s01/11/120700164", 256, 64);
 	OutputLine(NULL, "犯罪に巻きこまれたのかどうなのか……。",
 		   NULL, " It's still under investigation...", Line_WaitForInput);
@@ -4147,10 +4151,11 @@ void main()
 		   NULL, " Second year was the wife of a dam project supporter.", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100253", 256, 64);
 	OutputLine(NULL, "３年目は神主の妻。",
-		   NULL, " Third year was the wife of the Shinto priest.", Line_WaitForInput);
+		   NULL, " Third year was the wife of the Shinto priest. ", Line_ModeSpecific);
 	PlaySE(3, "s01/01/120100254", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "４年目は被害者宅の子供で、５年目は交際相手…かな。",
-		   NULL, " Fourth year was the victim's family's child, and the fifth year was the victim's girlfriend... I guess.", Line_WaitForInput);
+		   NULL, "Fourth year was the victim's family's child, and the fifth year was the victim's girlfriend... I guess.", Line_WaitForInput);
 	PlaySE(3, "s01/01/120100255", 256, 64);
 	OutputLine(NULL, "……特につながりはなさろうだし。」",
 		   NULL, " ...It doesn't seem like there's anything that connects them.\"", Line_ModeSpecific);

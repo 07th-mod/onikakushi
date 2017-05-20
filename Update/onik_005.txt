@@ -86,11 +86,12 @@ void main()
 //　問題は庭だった＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　問題は庭だった。",
-		   NULL, "The problem was the yard.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "The problem was the yard.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　そこには…!w300…!w300庭いっぱいに…!w300未知のオブジェクトが並んでいたのだ！￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そこには…",
 		   NULL, "There...", Line_ContinueAfterTyping);
 
@@ -260,7 +261,7 @@ void main()
 	PlaySE(3, "s19/02/990200308", 256, 64);
 	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「……うん、かぁいいよ……はぅ……ほしぃよぅ……。」",
-		   NULL, "\"...Yeah, kyute... hao... I want it...\"", Line_WaitForInput);
+		   NULL, "\"...Yeah, kyute... hao... I want it...\"", Line_ModeSpecific);
 
 	DisableWindow();
 	DrawBustshot( 1, "sa_se_ak_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
@@ -1510,7 +1511,7 @@ void main()
 		   NULL, " Seven!", Line_WaitForInput);
 	PlaySE(3, "s19/04/990400134", 256, 64);
 	OutputLine(NULL, "　あがりでございます！！」",
-		   NULL, " I'm out!\"", Line_WaitForInput);
+		   NULL, " I'm out!\"", Line_ModeSpecific);
 	DisableWindow();
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 200, TRUE );
 	DrawBustshotWithFiltering( 3, "ri_se_ni_a1", "right", 7, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
@@ -1567,14 +1568,15 @@ void main()
 	OutputLine(NULL, "　緒戦で敗北を喫したのは…なんと魅音だった！",
 		   NULL, "The loser of the first round... was, of all people, Mion!", Line_WaitForInput);
 	OutputLine(NULL, "　そして俺は確信する。",
-		   NULL, " And now I was certain...", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, " And now I was certain...", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 	SetValidityOfInput( FALSE );
 	Wait( 400 );
 	SetValidityOfInput( TRUE );
 //　…今日なら…俺は勝てるッ！！￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…今日なら…俺は勝てるッ！！！",
 		   NULL, "Today... I could win!!!", Line_Normal);
 	ClearMessage();
@@ -2622,7 +2624,7 @@ void main()
 	SetSpeedOfMessage( FALSE, 0, );
 
 	OutputLine(NULL, "な、なんだ……あははは……は。」",
-		   NULL, " O-Oh...Ahahaha... ha.\"", Line_WaitForInput);
+		   NULL, " O-Oh...Ahahaha... ha.\"", Line_ModeSpecific);
 
 
 
@@ -2734,13 +2736,14 @@ void main()
 //　…そして出た答えは非常に単純だった＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…そして出た答えは非常に単純だった。",
-		   NULL, "...And the answer was quite simple.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "...And the answer was quite simple.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 	PlaySE( 4, "wa_010", 128, 64 );
 //「ぉ……俺は勝ぁああぁあぁあつッッ！！！！＠
 	PlaySE(3, "s19/01/hr_kei07570", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ぉ……俺は勝ぁああぁあぁあつッッ！！！！」",
 		   NULL, "\"I... I WIIIIN!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -3493,14 +3496,14 @@ void main()
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "……はぅ〜〜！！",
-		   NULL, " ...Hao~~!!", Line_WaitForInput);
+		   NULL, " ...Hao~~!!", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　俺までレナ化した気分だ…！　こりゃあ確かに…か、かぁいい……♪♪♪",
-		   NULL, "It felt like I had become Rena...! This was definitely... ky-kyute...♪♪♪", Line_WaitForInput);
+		   NULL, "It felt like I had become Rena...! This was definitely... ky-kyute...♪♪♪", Line_ModeSpecific);
 
 	DisableWindow();
 	DrawSceneWithMask( "bg_108", "right", 0, 0, 300 );
@@ -4081,11 +4084,12 @@ void main()
 //　執行人たちが両手をわきわきとさせながら俺を取り囲む＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　執行人たちが両手をわきわきとさせながら俺を取り囲む。",
-		   NULL, "The executioners surrounded me, wagging their fingers.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "The executioners surrounded me, wagging their fingers.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 //「ぎゃぎゃ!s250………!s80ぎゃああぁあぁあぁあぁああッ！！！!sd￥
 	PlaySE(3, "s19/01/hr_kei08010", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ぎゃぎゃ",
 		   NULL, "\"N-N", Line_ContinueAfterTyping);
 //!s250
@@ -4395,7 +4399,7 @@ void main()
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "ぅううぅううッ！！！！！」",
-		   NULL, " hurRrk!!!!!!\"", Line_WaitForInput);
+		   NULL, " hurRrk!!!!!!\"", Line_ModeSpecific);
 //!sd
 
 	SetSpeedOfMessage( FALSE, 0, );
@@ -4899,10 +4903,11 @@ void main()
 		   NULL, "\"Tomitake-san comes around to Hinamizawa regularly.", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300346", 256, 64);
 	OutputLine(NULL, "年に２〜３回くらいかな？",
-		   NULL, " Maybe two, three times a year?", Line_WaitForInput);
+		   NULL, " Maybe two, three times a year? ", Line_ModeSpecific);
 	PlaySE(3, "s19/03/990300347", 256, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　季節の風景や野鳥を撮影してるんだってさー。ま、大した写真じゃないんだろうけどね！」",
-		   NULL, " He says he's taking pictures of the seasonal scenery and wild birds. But well, those photos really are nothing to phone home about!\"", Line_ModeSpecific);
+		   NULL, "He says he's taking pictures of the seasonal scenery and wild birds. But well, those photos really are nothing to phone home about!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

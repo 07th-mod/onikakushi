@@ -504,7 +504,7 @@ void main()
 //　古手神社は以前来た時の様子からは想像もつかないくらいの大賑わいを見せていた＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　古手神社は以前来た時の様子からは想像もつかないくらいの大賑わいを見せていた。",
-		   NULL, "It was way more lively at the Furude shrine than the last time I came, far exceeding my expectations.", Line_WaitForInput);
+		   NULL, "It was way more lively at the Furude shrine than the last time I came, far exceeding my expectations.", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -2054,7 +2054,7 @@ void main()
 
 
 
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
 	DrawBustshot( 1, "me_si_th_a2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, FALSE );
@@ -2626,7 +2626,7 @@ void main()
 
 
 
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+	if (AdvMode == 0) { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //「かぁいかったよ☆…圭一くんの!w500オットセイ、」
@@ -2877,12 +2877,13 @@ void main()
 //　互いを威嚇し合い一指即発状態の魅音と沙都子＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　互いを威嚇し合い一指即発状態の魅音と沙都子！",
-		   NULL, "They slung insults at each other and looked like they were ready to tear into each other at any second!", Line_WaitForInput);
+		   NULL, "They slung insults at each other and looked like they were ready to tear into each other at any second!", Line_ModeSpecific);
 
 
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 //　…頼む＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…頼む。",
 		   NULL, "...I beg of you.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3491,10 +3492,11 @@ void main()
 	PlaySE(3, "s19/01/hr_kei33990", 256, 64);
 	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「我が部はだな、複雑化する社会に対応するため、活動毎に提案されるさまざまな条件下、…時には順境。",
-		   NULL, "\"What our club does, you see... In order to cope with our complicated society, we perform various activities with various rules. Sometimes they are in your favor...", Line_WaitForInput);
+		   NULL, "\"What our club does, you see... In order to cope with our complicated society, we perform various activities with various rules. Sometimes they are in your favor... ", Line_ModeSpecific);
 	PlaySE(3, "s19/01/hr_kei34000", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "あるいは逆境からいかにして…！！」",
-		   NULL, " ...and sometimes they work against you...!!\"", Line_ModeSpecific);
+		   NULL, "...and sometimes they work against you...!!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -3777,7 +3779,7 @@ void main()
 //　全員が異議な～し！と叫ぶ＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　全員が異議な〜し！と叫ぶ。",
-		   NULL, "Everybody shouted their agreement.", Line_WaitForInput);
+		   NULL, "Everybody shouted their agreement.", Line_ModeSpecific);
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "up", 1, FALSE, 0, 0, 300, TRUE );
@@ -4062,8 +4064,8 @@ void main()
 //　事前のチェックと違い、入念な照準などない、直感の射撃！＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　事前のチェックと違い、入念な照準などない、直感の射撃！！",
-		   NULL, "It was completely different from her careful inspection. She was shooting from the hip!!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "It was completely different from her careful inspection. She was shooting from the hip!!", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
@@ -4074,6 +4076,7 @@ void main()
 	Wait( 300 );
 	SetValidityOfInput( TRUE );
 //　撃つ＠　詰める＠/$
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　撃つ！",
 		   NULL, "Fire!", Line_WaitForInput);
 	OutputLine(NULL, "　詰める。",
@@ -4570,7 +4573,7 @@ void main()
 //　観客がどよめき、富竹さんも何事かと振りかえる＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　観客がどよめき、富竹さんも何事かと振りかえる！",
-		   NULL, "Tomitake-san wheeled around to see what all the commotion the spectators were making was about!", Line_WaitForInput);
+		   NULL, "Tomitake-san wheeled around to see what all the commotion the spectators were making was about!", Line_ModeSpecific);
 
 
 	DisableWindow();
@@ -5643,7 +5646,7 @@ void main()
 	SetSpeedOfMessage( FALSE, 0, );
 
 	OutputLine(NULL, "倒せッ！！！！！",
-		   NULL, " knock it down!", Line_WaitForInput);
+		   NULL, " knock it down!", Line_ModeSpecific);
 
 
 
@@ -6505,17 +6508,19 @@ void main()
 //　巫女役の梨花ちゃんが神官に扮した町会の爺さま方を引き連れて登場する＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　巫女役の梨花ちゃんが神官に扮した町会の爺さま方を引き連れて登場する。",
-		   NULL, "Rika-chan entered dressed as a shrine maiden, followed by members of the municipal committee.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "Rika-chan entered dressed as a shrine maiden, followed by members of the municipal committee.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　お年寄りは梨花ちゃんの姿にありがたがりながら手を合わせている＠
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　お年寄りは梨花ちゃんの姿にありがたがりながら手を合わせている。",
-		   NULL, "The elders all looked at Rika-chan and clasped their hands in praise.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "The elders all looked at Rika-chan and clasped their hands in praise.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　静寂を乱すことを許されるのは富竹さんのフラッシュだけだ￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　静寂を乱すことを許されるのは富竹さんのフラッシュだけだ。",
 		   NULL, "The only thing allowed to disturb the profound silence was the flash from Tomitake-san's camera.", Line_Normal);
 	ClearMessage();

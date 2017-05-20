@@ -2417,8 +2417,9 @@ void main()
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　前原圭一/
-	OutputLineAll(NULL, "\n\n\n\n\n", Line_ContinueAfterTyping);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n\n\n", Line_ContinueAfterTyping); }
 
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "<pos=22>前原圭一",
 		   NULL, "<pos=36>Keiichi Maebara", Line_ContinueAfterTyping);
 

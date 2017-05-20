@@ -35,9 +35,10 @@ void main()
 //　県立白川自然公園内の展望台から２７ｍ下の渓流へ転落、行方不明になった＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ＸＸ日午後２時頃、鹿骨市雛見沢村Ｘ丁目、会社員ＸＸＸさんと妻ＸＸＸＸさんが、",
-		   NULL, "On the afternoon of XX at 2PM, office employee XXXX and his wife XXXX of Hinamizawa village in Shishibone prefecture", Line_WaitForInput);
+		   NULL, "On the afternoon of XX at 2PM, office employee XXXX and his wife XXXX of Hinamizawa village in Shishibone prefecture ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　県立白川自然公園内の展望台から２７ｍ下の渓流へ転落、行方不明になった。",
-		   NULL, " disappeared after falling 27 meters from the observatory platform in Shirakawa prefecture.", Line_ModeSpecific);
+		   NULL, "disappeared after falling 27 meters from the observatory platform in Shirakawa prefecture.", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

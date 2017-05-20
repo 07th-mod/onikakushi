@@ -359,10 +359,11 @@ void main()
 		   NULL, "\"What our club does, you see... In order to cope with our complicated society, we perform various activities under different sets of rules.", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300144", 256, 64);
 	OutputLine(NULL, "…時には順境。",
-		   NULL, " ...Sometimes they are in your favor.", Line_WaitForInput);
+		   NULL, " ...Sometimes they are in your favor. ", Line_ModeSpecific);
 	PlaySE(3, "s19/03/990300145", 256, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "あるいは逆境からいかにして…！！」",
-		   NULL, " And sometimes they work against you...!!\"", Line_ModeSpecific);
+		   NULL, "And sometimes they work against you...!!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1055,7 +1056,7 @@ void main()
 		   NULL, "\"I can tell what they are even if you switch them around!", Line_WaitForInput);
 	PlaySE(3, "s19/04/990400063", 256, 64);
 	OutputLine(NULL, "　あがりですのー！！」",
-		   NULL, " I am out!!\"", Line_WaitForInput);
+		   NULL, " I am out!!\"", Line_ModeSpecific);
 
 //	PlaySE( 4, "wa_007", 125, 0 );
 //	ShakeScreen( 1, 50, 20, 3, 0, );
@@ -1344,7 +1345,7 @@ void main()
 //　カードの端に特徴的な傷のあるカードは手やカードに重ね、見えないように工夫する＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　カードの端に特徴的な傷のあるカードは手やカードに重ね、見えないように工夫する。",
-		   NULL, "I covered the uniquely-marked cards with my hands or other cards, arranging them in such a way that they couldn't be seen.", Line_WaitForInput);
+		   NULL, "I covered the uniquely-marked cards with my hands or other cards, arranging them in such a way that they couldn't be seen.", Line_ModeSpecific);
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
@@ -2264,11 +2265,12 @@ void main()
 //　このゲームが始まって初めて、魅音の顔に影がさしたのを俺は見逃さない＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　このゲームが始まって初めて、魅音の顔に影がさしたのを俺は見逃さない。",
-		   NULL, "It was the first time since the start of the match that a shadow ran across Mion's expression, and I didn't let that slip by.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "It was the first time since the start of the match that a shadow ran across Mion's expression, and I didn't let that slip by.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　そして……俺は３回転半のひねりを入れてからビシリと指定したッ！￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そして……俺は３回転半のひねりを入れてからビシリと指定したッ！！",
 		   NULL, "Then... with a grand flourish, I declared it loudly!!", Line_Normal);
 	ClearMessage();
@@ -2802,14 +2804,15 @@ void main()
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "や、や、やめろおぉおおぉおぉ……ぉ……ぉ…！！！」",
-		   NULL, " NOoOoOoOoo...oo...oo...!!!\"", Line_WaitForInput);
+		   NULL, " NOoOoOoOoo...oo...oo...!!!\"", Line_ModeSpecific);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　俺の断末魔がこだましていった…￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　俺の断末魔がこだましていった…。",
 		   NULL, "I let out my death throes...", Line_Normal);
 	ClearMessage();
@@ -2971,10 +2974,11 @@ void main()
 		   NULL, " Acting all big and full of themselves!", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300209", 256, 64);
 	OutputLine(NULL, "　金で解決できないと悟るとあらゆる嫌がらせをしてきたんだよ？！",
-		   NULL, " Since they figured out that they couldn't settle it with money, they did a bunch of nasty stuff!", Line_WaitForInput);
+		   NULL, " Since they figured out that they couldn't settle it with money, they did a bunch of nasty stuff! ", Line_ModeSpecific);
 	PlaySE(3, "s19/03/990300210", 256, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　嫌らしいヤツらだった！」",
-		   NULL, " They were nasty guys!\"", Line_ModeSpecific);
+		   NULL, "They were nasty guys!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -3003,15 +3007,16 @@ void main()
 		   NULL, " They went to Tokyo and struck deals with legislators...", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300213", 256, 64);
 	OutputLine(NULL, "……そうしてる内に計画は撤回されたんだよ。",
-		   NULL, " And as a result, the development plan was retracted.", Line_WaitForInput);
+		   NULL, " And as a result, the development plan was retracted. ", Line_ModeSpecific);
 
 	DisableWindow();
 	DrawBustshot( 2, "me_se_wi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //私たちの完全勝利だった＠　あっはははは！＠
 	PlaySE(3, "s19/03/990300214", 256, 64);
+	if (AdvMode) { OutputLine("<color=#75bfa2>魅音</color>", NULL, "<color=#75bfa2>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "私たちの完全勝利だった！",
-		   NULL, " It was our complete victory!", Line_WaitForInput);
+		   NULL, "It was our complete victory!", Line_WaitForInput);
 	PlaySE(3, "s19/03/990300215", 256, 64);
 	OutputLine(NULL, "　あっはははは！」",
 		   NULL, " Ahahahahaha!\"", Line_ModeSpecific);
@@ -3705,7 +3710,7 @@ void main()
 	PlaySE(3, "s19/02/990200204", 256, 64);
 	if (AdvMode) { OutputLine("<color=#ef8e2d>レナ</color>", NULL, "<color=#ef8e2d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "……はぅ。」",
-		   NULL, "...Hao.\"", Line_WaitForInput);
+		   NULL, "...Hao.\"", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -4014,11 +4019,12 @@ void main()
 //　ランディーくん人形は見えているのに！＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ランディーくん人形は見えているのに！！",
-		   NULL, "Even though I could see Colonel Randy right there!!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "Even though I could see Colonel Randy right there!!", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　レナに大見得を切った手前、たいして進まないスピードに焦りを感じた￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　レナに大見得を切った手前、たいして進まないスピードに焦りを感じた。",
 		   NULL, "After grandstanding like that in front of Rena, I felt frantic because of how little I had progressed.", Line_Normal);
 	ClearMessage();
@@ -4367,11 +4373,12 @@ void main()
 //　だが間違いなくそれはあったのだ＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが間違いなくそれはあったのだ。",
-		   NULL, "But it had happened, without a doubt.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "But it had happened, without a doubt.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　……富竹さんが嘘をついていない限り￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……富竹さんが嘘をついていない限り。",
 		   NULL, "...As long as Tomitake-san wasn't lying.", Line_Normal);
 	ClearMessage();
@@ -4535,7 +4542,7 @@ void main()
 //　…俺はためらいもなく次のページを開いた＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…俺はためらいもなく次のページを開いた。",
-		   NULL, "...I turned the page without pausing.", Line_WaitForInput);
+		   NULL, "...I turned the page without pausing.", Line_ModeSpecific);
 
 	PlaySE( 4, "wa_021", 128, 64 );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }

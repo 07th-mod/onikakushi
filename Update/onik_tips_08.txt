@@ -170,11 +170,12 @@ void main()
 //　おもしろいアイデアがありましたら村長宅　公由（Ｘ）ＸＸＸＸまでどうぞ＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　おもしろいアイデアがありましたら村長宅　公由（Ｘ）ＸＸＸＸまでどうぞ！",
-		   NULL, "If you have an interesting idea, call Kimiyoshi at (X) XXXX!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "If you have an interesting idea, call Kimiyoshi at (X) XXXX!", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //（キリトリ線の下に模擬店券が２００円分付いている。￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "（キリトリ線の下に模擬店券が２００円分付いている。）",
 		   NULL, "(There is a 200 yen refreshment stand ticket attached below the cut line.)", Line_Normal);
 	ClearMessage();

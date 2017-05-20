@@ -128,10 +128,11 @@ void main()
 //　今度は逆に、非常に自信過剰で行動的なので、自らを順風満帆と思う＠だから自殺などせんのだ。＠
 	PlaySE(3, "s20/00/443200024", 128, 64);
 	OutputLine(NULL, "自殺をする気力すらないからだ。",
-		   NULL, " They don't have the willpower to commit suicide.", Line_WaitForInput);
+		   NULL, " They don't have the willpower to commit suicide. ", Line_ModeSpecific);
 	PlaySE(3, "s20/00/443200025", 128, 64);
+	if (AdvMode) { OutputLine("鑑識", NULL, "Forensic Investigator", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "…逆の状態もまた自殺をせん",
-		   NULL, " The opposite state doesn't lead to suicide, either.", Line_WaitForInput);
+		   NULL, "The opposite state doesn't lead to suicide, either.", Line_WaitForInput);
 	PlaySE(3, "s20/00/443200026", 128, 64);
 	OutputLine(NULL, "　今度は逆に、非常に自信過剰で行動的なので、自らを順風満帆と思う。",
 		   NULL, " That has an opposite effect, filling the person with confidence and making them feel as though they're walking on air.", Line_ContinueAfterTyping);

@@ -309,12 +309,13 @@ void main()
 //　レナの持ち上げ方は、とてもその中身が弁当とは考えられないものだった＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　レナの持ち上げ方は、とてもその中身が弁当とは考えられないものだった。",
-		   NULL, "Just from the way she was lifting it up, I couldn't believe the only things in there were lunch boxes.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "Just from the way she was lifting it up, I couldn't believe the only things in there were lunch boxes.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //「…訂正。俺も５ｋｇ…。￥
 	PlaySE(3, "s19/01/hr_kei01310", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「…訂正。俺も５ｋｇ…。」",
 		   NULL, "\"...Correction. I say five kilos, too...\"", Line_Normal);
 	ClearMessage();
@@ -474,13 +475,14 @@ void main()
 	PlaySE(3, "s19/01/hr_kei01330", 256, 64);
 	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「つまりなんだ。",
-		   NULL, "\"So that means...", Line_WaitForInput);
-	OutputLineAll(NULL, " \n", Line_ContinueAfterTyping);
+		   NULL, "\"So that means...", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　知らない顔が歩いてれば、それは自動的に新しく引っ越してきた前原さん、てことになるわけか。＠
 	PlaySE(3, "s19/01/hr_kei01340", 256, 64);
+	if (AdvMode) { OutputLine("<color=#a17f7f>圭一</color>", NULL, "<color=#a17f7f>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　知らない顔が歩いてれば、それは自動的に新しく引っ越してきた前原さん、てことになるわけか。」",
 		   NULL, "So that means when an unfamiliar face walks by, they automatically assume it's that Maebara fella who just moved here?\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1457,9 +1459,14 @@ void main()
 	DrawScene( "bg_216", 1000 );
 
 //　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す！",
-		   NULL, "It was a tough battle. Blocking with her full momentum and an elbow in the opening moves, Satoko appeared to have the upper hand. But the difference in our proficiency with chopsticks proved to be fatal and gave me the upper hand!", Line_ModeSpecific);
+	if (AdvMode) {
+		OutputLineAll("", NULL, Line_ContinueAfterTyping);
+		OutputLine(NULL, "　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す！",
+			   NULL, "<size=-2>It was a tough battle. Blocking with her full momentum and an elbow in the opening moves, Satoko appeared to have the upper hand. But the difference in our proficiency with chopsticks proved to be fatal and gave me the upper hand!</size>", Line_ModeSpecific);
+	} else {
+		OutputLine(NULL, "　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す！",
+			   NULL, "It was a tough battle. Blocking with her full momentum and an elbow in the opening moves, Satoko appeared to have the upper hand. But the difference in our proficiency with chopsticks proved to be fatal and gave me the upper hand!", Line_ModeSpecific);
+	}
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1734,7 +1741,7 @@ void main()
 //　りんごのうさぎさんにさく！と楊枝を刺すと、びし！と梨花ちゃんに差し出した＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　りんごのうさぎさんにさく！と楊枝を刺すと、びし！と梨花ちゃんに差し出した。",
-		   NULL, "Two apple rabbits! After sticking toothpicks into them, she thrust them toward Rika-chan.", Line_WaitForInput);
+		   NULL, "Two apple rabbits! After sticking toothpicks into them, she thrust them toward Rika-chan.", Line_ModeSpecific);
 
 	FadeOutBGM( 1, 1000, TRUE );
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -1851,11 +1858,12 @@ void main()
 //　赤面して頭部をぐるんぐるんと回している…！＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　赤面して頭部をぐるんぐるんと回している…！！",
-		   NULL, "She blushed and her head spun, waving around in circles...!!", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "She blushed and her head spun, waving around in circles...!!", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　だ、騙されるなレナぁあぁあ！！！￥
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だ、騙されるなレナぁあぁあ！！！！",
 		   NULL, "D-Don't fall for it, Renaaa!!!!", Line_Normal);
 	ClearMessage();
@@ -2574,7 +2582,7 @@ void main()
 	Wait( 200 );
 
 	OutputLine(NULL, "…お持ち帰りぃ………☆」",
-		   NULL, " take you home...☆\"", Line_WaitForInput);
+		   NULL, " take you home...☆\"", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -3101,7 +3109,7 @@ void main()
 
 //「お、おぉっと＠…びっくりした！＠
 	PlaySE(3, "s19/08/990800001", 256, 64);
-	if (AdvMode) { OutputLine("男", NULL, "Boy", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("男", NULL, "Man", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「お、おぉっと！",
 		   NULL, "\"W-Whoa!", Line_WaitForInput);
 	PlaySE(3, "s19/08/990800002", 256, 64);
@@ -3139,7 +3147,7 @@ void main()
 
 //「ごめんごめん＠驚かすつもりはなかったんだ。君は雛見沢の人かい？＠
 	PlaySE(3, "s19/08/990800003", 256, 64);
-	if (AdvMode) { OutputLine("男", NULL, "Boy", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("男", NULL, "Man", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ごめんごめん。",
 		   NULL, "\"My bad, my bad.", Line_WaitForInput);
 	PlaySE(3, "s19/08/990800004", 256, 64);
@@ -3601,7 +3609,7 @@ void main()
 		   NULL, "\"Just wondering if you knew about, you know...", Line_WaitForInput);
 	PlaySE(3, "s19/01/hr_kei02440", 256, 64);
 	OutputLine(NULL, "事故とか。」",
-		   NULL, " an accident or something.\"", Line_WaitForInput);
+		   NULL, " an accident or something.\"", Line_ModeSpecific);
 
 
 	FadeOutBGM( 1, 1000, TRUE );

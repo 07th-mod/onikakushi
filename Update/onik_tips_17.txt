@@ -95,10 +95,11 @@ void main()
 	OutputLine(NULL, "「事前運動にならない限り、政治活動は無制限ですからねぇ。",
 		   NULL, "\"As long as they have no prior consultation, there are no restrictions on their political activities.", Line_WaitForInput);
 	OutputLine(NULL, "…熊ちゃん、そんなんじゃ選対本部付きになった時、大変ですよぅ？",
-		   NULL, " Kuma-chan, the Second Investigation Division is going to be pretty tough for you.", Line_WaitForInput);
+		   NULL, " Kuma-chan, the Second Investigation Division is going to be pretty tough for you. ", Line_ModeSpecific);
 	PlaySE(3, "s20/11/440700041", 128, 64);
+	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　公選法くらいは勉強して下さい。」",
-		   NULL, " You should at least brush up on election laws.\"", Line_ModeSpecific);
+		   NULL, "You should at least brush up on election laws.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

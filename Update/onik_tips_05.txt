@@ -71,9 +71,10 @@ void main()
 	OutputLine(NULL, "営林署貯木場一、",
 		   NULL, " 1 forestry department lumber yard,", Line_WaitForInput);
 	OutputLine(NULL, "神社五、",
-		   NULL, " 5 shrines,", Line_WaitForInput);
+		   NULL, " 5 shrines, ", Line_ModeSpecific);
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "寺院二、",
-		   NULL, " 2 temples,", Line_WaitForInput);
+		   NULL, "2 temples,", Line_WaitForInput);
 	OutputLine(NULL, "魚族増殖場一、",
 		   NULL, " and 1 fishery.", Line_WaitForInput);
 	OutputLine(NULL, "等多数の公共的文化的生産的施設と信仰の対象を永久に湖底に没するものである。",
@@ -150,12 +151,13 @@ void main()
 //　村民の心にこの炎が灯り続ける限り、再び郷土が湖底に沈む災厄に見舞われることは断じてあり得ないのである＠
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　村民の心にこの炎が灯り続ける限り、再び郷土が湖底に沈む災厄に見舞われることは断じてあり得ないのである。",
-		   NULL, "As long as that passion resides in the hearts of the residents, they'll be able to confront whomever next decides to sink their homes into a lake basin.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+		   NULL, "As long as that passion resides in the hearts of the residents, they'll be able to confront whomever next decides to sink their homes into a lake basin.", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　　　　　鬼ケ淵死守同盟会長!w1000　公由喜一郎￥
 
+	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　　　　　鬼ケ淵死守同盟会長",
 		   NULL, "Onigafuchi Defense Alliance Committee Chairman,", Line_ContinueAfterTyping);
 
