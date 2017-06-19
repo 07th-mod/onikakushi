@@ -26,6 +26,7 @@ void main()
 
 //「自分で喉を掻き破った出血性ショック死＠
 	PlaySE(3, "s20/00/443200001", 128, 64);
+	ClearMessage();
 	if (AdvMode) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「自分で喉を掻き破った出血性ショック死。",
 		   NULL, "\"Hypovolemic shock induced by clawing out their own throat.", Line_ModeSpecific);
@@ -51,7 +52,7 @@ void main()
 
 //「えぇえぇ＠直接死因が自殺ってのはわかってますよ。＠
 	PlaySE(3, "s20/11/440700009", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「えぇえぇ。",
 		   NULL, "\"Yeaaaah...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "直接死因が自殺ってのはわかってますよ。」",
@@ -75,7 +76,7 @@ void main()
 
 //「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。￥
 	PlaySE(3, "s20/11/440700010", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。」",
 		   NULL, "\"It's not quite on the same level as when your back itches and you scratch a little too hard and draw blood, after all.\"", Line_Normal);
 	ClearMessage();
@@ -140,7 +141,7 @@ void main()
 
 //「では乱闘になって、興奮のあまり自分の喉を引っ掻きだしたってことですか＠　襲った連中、さぞや度肝を抜かれたでしょうなぁ。＠
 	PlaySE(3, "s20/11/440700011", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「では乱闘になって、興奮のあまり自分の喉を引っ掻きだしたってことですか？",
 		   NULL, "\"Then he fought back and clawed out his own throat because of how hysterical he had become?", Line_ContinueAfterTyping);
 	OutputLine(NULL, "　襲った連中、さぞや度肝を抜かれたでしょうなぁ。」",
@@ -180,7 +181,7 @@ void main()
 
 //「ホシの服の繊維とか、皮膚片とかは？＠
 	PlaySE(3, "s20/11/440700012", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ホシの服の繊維とか、皮膚片とかは？」",
 		   NULL, "\"What about cloth fibers or skin?\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -203,7 +204,7 @@ void main()
 
 //「なら、わざわざ角材なんて置いてきませんよ＠全部持ってっちゃいます。＠
 	PlaySE(3, "s20/11/440700013", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「なら、わざわざ角材なんて置いてきませんよ。",
 		   NULL, "\"In that case, they wouldn't have gone out of their way to replace it with another.", Line_WaitForInput);
 	OutputLine(NULL, "全部持ってっちゃいます。」",
@@ -223,7 +224,7 @@ void main()
 
 //「富竹氏は結構、体格もいいし肌も焼けてるし＠...スポーツマンですよねぇ。＠
 	PlaySE(3, "s20/11/440700014", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「富竹氏は結構、体格もいいし肌も焼けてるし。",
 		   NULL, "\"Tomitake's pretty built and tanned...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "…スポーツマンですよねぇ。」",
@@ -301,7 +302,7 @@ void main()
 
 //「こんだけ体格のいい相手を取り囲んで襲おうとしたら＠...何人くらいいりますかねぇ。＠
 	PlaySE(3, "s20/11/440700015", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「こんだけ体格のいい相手を取り囲んで襲おうとしたら、",
 		   NULL, "\"To surround and take down someone of his physique...", Line_ContinueAfterTyping);
 	OutputLine(NULL, "…何人くらいいりますかねぇ。」",
@@ -426,7 +427,7 @@ void main()
 
 //「期待はしませんよ＠ですが結果を楽しみにしてます。￥
 	PlaySE(3, "s20/11/440700016", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「期待はしませんよ。",
 		   NULL, "\"I'm not hoping for much.", Line_ContinueAfterTyping);
 	OutputLine(NULL, "ですが結果を楽しみにしてます。」",
@@ -446,7 +447,7 @@ void main()
 
 //「すみません、ではまた来年お会いしましょう。＠
 	PlaySE(3, "s20/11/440700017", 128, 64);
-	if (AdvMode) { OutputLine("<color=#b1aab6>大石</color>", NULL, "<color=#b1aab6>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「すみません、ではまた来年お会いしましょう。」",
 		   NULL, "\"Thanks. See ya 'round.\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
