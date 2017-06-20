@@ -25,8 +25,6 @@ void main()
 
 //!s50
 
-	SetSpeedOfMessage( TRUE, 100, );
-
 //locate 13,0
 
 
@@ -38,12 +36,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "昭和５７年７月１日",
 		   NULL, "July 1, 1982", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //locate 13,1
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -52,12 +48,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "総総管イ１−１２号",
 		   NULL, "To departments 1 through 12,", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -67,12 +61,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "ＸＸ県警察本部",
 		   NULL, "XX Prefectural Police headquarters.", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -80,12 +72,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "本部長　ＸＸＸ",
 		   NULL, "Director-General XXX", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 //locate 10,5
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -98,10 +88,7 @@ void main()
 		   NULL, "To the chief constable and all facility managers.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -116,25 +103,21 @@ void main()
 		   NULL, "Regarding cases situated in the Hinamizawa village. (Notice)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 	SetStyleOfMessageSwinging( 0 );
-	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //　鹿骨市雛見沢村の近年の事件は、すでに一部マスコミでも報道されるように、/
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鹿骨市雛見沢村の近年の事件は、すでに一部マスコミでも報道されるように、",
 		   NULL, "As cases in Shishibone city, Hinamizawa village have been reported by certain sections of mass media,", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //世間の好奇の目を引き地域住民の穏便な生活に重大な影響を及ぼしつつある、大変憂慮すべき事態となっている。
@@ -143,10 +126,7 @@ void main()
 		   NULL, "it has drawn global attention, which is causing serious repercussions for the local residents. This has become a very serious situation.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -157,9 +137,7 @@ void main()
 		   NULL, "To protect the livelihood and prosperity of the residents, the following notice has been issued.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -171,9 +149,7 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -182,12 +158,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　興宮署昭和５７年第Ｘ号",
 		   NULL, "Okinomiya station 1982 case number X:", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -197,9 +171,7 @@ void main()
 		   NULL, "Hinamizawa village housewife murder (Dated June XX)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -208,12 +180,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　興宮署昭和５７年第Ｘ号",
 		   NULL, "Okinomiya station 1982 case number X:", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -223,9 +193,7 @@ void main()
 		   NULL, "Hinamizawa village student disappearance (Dated June XX)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -237,10 +205,7 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -249,12 +214,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　興宮署昭和５４年第Ｘ号",
 		   NULL, "Okinomiya station 1979 case number X:", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -264,10 +227,7 @@ void main()
 		   NULL, "Hinamizawa village site foreman murder (Dated June XX)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -276,12 +236,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　白川署昭和５５年第Ｘ号",
 		   NULL, "Shira station 1980 case number X:", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -291,10 +249,7 @@ void main()
 		   NULL, "Shira natural park falling incident (Dated June XX)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -303,12 +258,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　興宮署昭和５６年第Ｘ号",
 		   NULL, "Okinomiya station 1981 case number X:", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -318,9 +271,7 @@ void main()
 		   NULL, "Hinamizawa village Shinto priest's wife's disappearance (Dated June XX)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -329,12 +280,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "（３）関係各機関への報道自粛要請",
 		   NULL, "3. Requesting self-restraint from each organization concerning the release of sensitive information.", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -344,10 +293,7 @@ void main()
 		   NULL, "Please see attached reference materials 1, 2, and 3.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -359,12 +305,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "担当　ＸＸ県警察本部",
 		   NULL, "Management: XX Prefecture Police headquarters", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 16,9
@@ -375,12 +319,10 @@ void main()
 	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "内線ＸＸＸＸ",
 		   NULL, "Internal line: XXXX", Line_ContinueAfterTyping);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_ModeSpecific);
+	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 14,10
@@ -391,14 +333,13 @@ void main()
 		   NULL, "Police Affairs department XX XX", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
+
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	SetSpeedOfMessage( FALSE, 0, );
-
 	DisableWindow();
 	DrawScene( "black", 1000 );
 	FadeOutBGM( 0, 1000, FALSE );
