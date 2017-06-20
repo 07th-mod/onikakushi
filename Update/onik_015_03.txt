@@ -1227,7 +1227,6 @@ void main()
 //*Sub_Tips_099
 //容疑者のメモ
 
-	SetSpeedOfMessage( TRUE, 100, );
 	DisableWindow();
 	DrawScene( "black", 3000 );
 
@@ -1245,12 +1244,10 @@ void main()
 		   NULL, "July, 1983", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	SetStyleOfMessageSwinging( 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
+	SetStyleOfMessageSwinging( 0 );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　某県鹿骨市の寒村、雛見沢で女子生徒殺人事件が起こった。/
@@ -1259,22 +1256,17 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　容疑者は、前原圭一（１Ｘ歳）/
 	OutputLine(NULL, "　容疑者は、前原圭一（１Ｘ歳）",
-		   NULL, "The suspect is: Keiichi Maebara (Aged 1x )", Line_ContinueAfterTyping);
+		   NULL, "The suspect is: Keiichi Maebara (Aged 1x)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_119", "left", 0, 0, 1300 );
@@ -1286,9 +1278,9 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //（竜宮礼奈・園崎魅音）を呼び寄せ、金属バットで撲殺。
@@ -1296,9 +1288,7 @@ void main()
 		   NULL, " (Rena Ryuugu, Mion Sonozaki) to his house, and beat them to death with a metal bat.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
@@ -1313,26 +1303,20 @@ void main()
 	OutputLine(NULL, "　犯行現場は自宅２階の容疑者の自室だった。",
 		   NULL, "The scene of the crime was the suspect's room on the second floor of his house.", Line_ContinueAfterTyping);
 
-
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　室内は凄まじい返り血に彩られ、被害者ともみ合った形跡が認められた。
 	OutputLine(NULL, "　室内は凄まじい返り血に彩られ、被害者ともみ合った形跡が認められた。",
 		   NULL, "The inside of the room was covered with a significant quantity of splattered blood, and there were signs of a struggle with the victims.", Line_ContinueAfterTyping);
 
-
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　また、犯行現場とは別に、玄関、居間、台所でも荒らされた形跡が認められた。
@@ -1341,10 +1325,7 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,2
@@ -1358,12 +1339,10 @@ void main()
 		   NULL, "At the entryway, the shoe rack and wall had evidence of being impacted by a strong blunt force.", Line_ContinueAfterTyping);
 
 
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　凶器のバットによるものと断定。
@@ -1372,9 +1351,9 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　痕跡に血液反応が出なかったことから、犯行以前に破壊したものと推定。
@@ -1382,12 +1361,10 @@ void main()
 		   NULL, " Having no traces of blood, it is believed the destruction occurred before the murders.", Line_ContinueAfterTyping);
 
 
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　被害者の逃走を阻止するため、容疑者が威圧行為を行なった可能性がある。
@@ -1396,10 +1373,7 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 	DrawSceneWithMask( "bg_170", "right", 0, 0, 1300 );
@@ -1412,13 +1386,10 @@ void main()
 	OutputLine(NULL, "　居間では絨毯が剥がされ、投げ捨てられていた。",
 		   NULL, "In the living room, the rug had been pulled back, then thrown aside.", Line_ContinueAfterTyping);
 
-
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　これは被害者ともみ合った際のものとは考え難く、その真意は不明。
@@ -1427,10 +1398,7 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_210", "right", 0, 0, 1300 );
@@ -1443,13 +1411,9 @@ void main()
 	OutputLine(NULL, "　台所ではゴミ袋が破かれ、その中身が床にばら撒かれていた。",
 		   NULL, "In the kitchen, the garbage bag was torn apart, and its contents were spread out on the floor.", Line_ContinueAfterTyping);
 
-
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
-
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -1457,26 +1421,20 @@ void main()
 	OutputLine(NULL, "　ゴミは周囲に飛散し、容疑者のものと思われる手形も発見された。",
 		   NULL, "Garbage was strewn about in the surrounding area, and handprints believed to belong to the suspect were discovered.", Line_ContinueAfterTyping);
 
-
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　容疑者は何らかの理由でゴミを出し、それを掌で叩いたものと考えられる。
 	OutputLine(NULL, "　容疑者は何らかの理由でゴミを出し、それを掌で叩いたものと考えられる。",
 		   NULL, "It is believed that the suspect had for some reason taken out the garbage and struck it with his fists.", Line_ContinueAfterTyping);
 
-
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　その真意は不明。
@@ -1485,10 +1443,7 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,4
@@ -1499,13 +1454,10 @@ void main()
 	OutputLine(NULL, "　また、冷蔵庫に貼り付けられていたメモには「針がなかった？」と記されていた。",
 		   NULL, "In addition, there was a note stuck to the fridge. The words \"Was there a needle?\" were written on it.", Line_ContinueAfterTyping);
 
-
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
-	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　意味不明。
@@ -1513,9 +1465,8 @@ void main()
 		   NULL, "The meaning behind this remains unclear.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　念のためゴミを探すが、針は発見できなかった。
@@ -1523,9 +1474,7 @@ void main()
 		   NULL, " Just in case, the garbage was searched, but a needle was not discovered.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawScene( "black", 1000 );
@@ -1538,24 +1487,21 @@ void main()
 	OutputLine(NULL, "　荒らされてはいなかったが、引越し以来、開放したままになっているガレージのシャッターが閉じられていた。",
 		   NULL, "Though the garage door was functional, it had been left open ever since the suspect moved in. The garage door was found closed.", Line_ContinueAfterTyping);
 
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
-
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　シャッターからは容疑者の指紋を検出。
 	OutputLine(NULL, "　シャッターからは容疑者の指紋を検出。",
 		   NULL, "The suspect's fingerprints were discovered on the garage door.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　その真意は不明。
@@ -1563,9 +1509,7 @@ void main()
 		   NULL, "The reason behind this remains unknown.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -1577,9 +1521,8 @@ void main()
 		   NULL, "The suspect fled the scene of the crime.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //警邏中の警察官（雛見沢駐在所）が電話ボックス内で倒れているのを発見する。/
@@ -1587,9 +1530,7 @@ void main()
 		   NULL, " however, a patrolling officer (Hinamizawa Local PD) found the suspect collapsed inside a phone booth.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 3000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,5
@@ -1599,12 +1540,11 @@ void main()
 //　発見時、容疑者は意識不明の重体。
 	OutputLine(NULL, "　発見時、容疑者は意識不明の重体。",
 		   NULL, "At the time of discovery, the suspect was unconscious in critical condition.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　直ちに村内の診療所に搬送し手当てをしたが、意識は戻らず２４時間後に死亡した。
@@ -1613,9 +1553,7 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawScene( "bg_188", 1000 );
@@ -1627,12 +1565,11 @@ void main()
 //　検死の結果、直接の死因は出血性ショック死。
 	OutputLine(NULL, "　検死の結果、直接の死因は出血性ショック死。",
 		   NULL, "The results of the autopsy indicate the immediate cause of death to have been hypovolemic shock.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　自らの爪で喉を引き裂き、その結果の出血で死に至ったと断定した。
@@ -1641,9 +1578,7 @@ void main()
 
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,3
@@ -1653,23 +1588,21 @@ void main()
 //　先週に発生した富竹氏事件の異常な死に方との酷似に、警察は関連性があるものとして捜査を開始する。
 	OutputLine(NULL, "　先週に発生した富竹氏事件の異常な死に方との酷似に、警察は関連性があるものとして捜査を開始する。",
 		   NULL, "With the similarity to the death of Tomitake-san the prior week, the police believe there to be a connection and have opened an investigation.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //（ただし、地元からの強い要望により非公開捜査）
 	OutputLine(NULL, "（ただし、地元からの強い要望により非公開捜査）",
 		   NULL, "(However, due to the wishes of the local authorities, it will be a confidential investigation.)", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　異常な死に方に何らかの薬物の使用を疑うが、富竹氏事件と同様に一切検出されない。
@@ -1677,9 +1610,7 @@ void main()
 		   NULL, "Due to the abnormal nature of the death, it was suspected that drugs were involved. But as with Tomitake-san, no traces were discovered.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,5
@@ -1689,12 +1620,11 @@ void main()
 //　当初はあまりの不可解さに、衝動的な突発的犯行と断定していた。
 	OutputLine(NULL, "　当初はあまりの不可解さに、衝動的な突発的犯行と断定していた。",
 		   NULL, "What prompted all this remains inexplicable. As such, this case is being treated as an act committed on impulse.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　だが、容疑者の犯行直前までの奇行が次々と露呈するに従い、その方針は変更されることとなる。
@@ -1702,9 +1632,7 @@ void main()
 		   NULL, "However, with several accounts of the suspect's bizarre behavior leading up to the incident, it is possible that this was premeditated.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,2
@@ -1714,23 +1642,21 @@ void main()
 //　親しかったグループとの離縁。孤立。意味不明の言動。
 	OutputLine(NULL, "　親しかったグループとの離縁。孤立。意味不明の言動。",
 		   NULL, "Separated from his group of friends. Isolation. Inexplicable behavior.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　犯行の数日前からは金属バットを持ち歩くようになっていた。
 	OutputLine(NULL, "　犯行の数日前からは金属バットを持ち歩くようになっていた。",
 		   NULL, "Several days before the incident, the suspect began carrying around a metal bat.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　攻撃的な言動、独り言は学校でもしばしば見られ、クラスメートが実際にその一部を聞いている。
@@ -1738,9 +1664,7 @@ void main()
 		   NULL, "The suspect was observed displaying aggressive behavior, as well as talking to himself at school. His classmates have actually heard portions of what he was saying.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,3
@@ -1750,12 +1674,11 @@ void main()
 //　犯行の前々日には、両親に自らの死をほのめかす発言もしていた。
 	OutputLine(NULL, "　犯行の前々日には、両親に自らの死をほのめかす発言もしていた。",
 		   NULL, "Two days before the incident, the suspect declared to his parents the possibility of his death.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　警察は、これらの状況から、この事件が突発的なものでなく、数日前から予定された計画的犯行の可能性があるとして捜査を開始する。
@@ -1763,9 +1686,7 @@ void main()
 		   NULL, "Due to these circumstances, the police have begun an investigation on the possibility that this crime was not committed on impulse, but was instead planned several days in advance.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawScene( "bg_219", 1000 );
@@ -1779,9 +1700,7 @@ void main()
 		   NULL, "Afterwards...", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1500 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　容疑者の自室から直筆のメモが発見された。
@@ -1789,38 +1708,37 @@ void main()
 		   NULL, " A note was found in the suspect's room that he had written himself.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
 
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　メモはＢ５の大学ノートを半分に裂いたもの２枚で構成され、!s200まるで隠蔽するかのように、!s100壁時計の裏に貼られ、隠されていた。/
 	OutputLine(NULL, "　メモはＢ５の大学ノートを半分に裂いたもの２枚で構成され、",
 		   NULL, "The note was written on two sheets from a B5 college-ruled notebook that had each been torn in half.", Line_ContinueAfterTyping);
 //!s200
 
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-	Wait( 5 );
-
-	SetSpeedOfMessage( TRUE, 0, );
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 	OutputLine(NULL, "まるで隠蔽するかのように、",
-		   NULL, "And as if trying to conceal it", Line_ContinueAfterTyping);
-
-	SetSpeedOfMessage( FALSE, 0, );
+		   NULL, "And as if trying to conceal it", Line_WaitForInput);
 
 // !s100
+
+	FadeOutBGM( 2, 10, TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 	OutputLine(NULL, "壁時計の裏に貼られ、隠されていた。",
 		   NULL, " was stuck hidden behind a clock on the wall.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	PlayBGM( 2, "lsys24", 128, 0 );
 
@@ -1829,9 +1747,7 @@ void main()
 		   NULL, "The contents are as written in the appendix.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawScene( "bg_203", 1000 );
@@ -1844,11 +1760,10 @@ void main()
 		   NULL, "The police believe it to be strongly related to the incident.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　容疑者が、何らかの事件に巻き込まれていた可能性があるとして再び捜査方針を転換した。
@@ -1856,11 +1771,10 @@ void main()
 		   NULL, "The police changed their line of investigation based on the possibility that the suspect was involved in some sort of incident himself.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　だが、その後なんの手がかりも掴めず、メモそのものの信憑性も疑われるようになる。
@@ -1868,11 +1782,10 @@ void main()
 		   NULL, "However, no further clues were found, casting doubt on the credibility of the note.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　この事件は突発的なものなのか、計画的なものなのか。
@@ -1880,9 +1793,8 @@ void main()
 		   NULL, "Was the crime impulsive or premeditated?", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　真相もわからず進展もなく、事件は文字通り迷宮入りの様相となった。/
@@ -1890,9 +1802,7 @@ void main()
 		   NULL, " With the situation unclear and no further developments, the case has been labeled as 'Unresolved.'", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	PlayBGM( 1, "msys11", 128, 0 );
@@ -1907,9 +1817,7 @@ void main()
 		   NULL, "However... the following year,", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　そのメモにひとつの不審が浮上した。/
@@ -1917,10 +1825,7 @@ void main()
 		   NULL, " suspicion arose regarding the nature of the note.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 3000 );
-	SetValidityOfInput( TRUE );
-
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 2, "lsys24", 128, 0 );
@@ -1932,11 +1837,10 @@ void main()
 		   NULL, "The note was not written on two halves of B5 paper from two separate sheets...", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　元はＢ５の１ページに書かれたものを…何者かが、
@@ -1944,11 +1848,10 @@ void main()
 		   NULL, "but was originally a single sheet of B5 paper.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　"真ん中の数行を削除するために"/
@@ -1956,9 +1859,7 @@ void main()
 		   NULL, "\"In order to erase several lines from the middle,\" someone had...", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1500 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //破り捨てたのではないか…というのだ。/
@@ -1966,9 +1867,7 @@ void main()
 		   NULL, " torn them out.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 0,2
@@ -1979,11 +1878,10 @@ void main()
 		   NULL, "Judging from the size of the letters, the missing section is estimated to be 2-3 lines.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　削除した人物は容疑者以外である可能性が高い。/
@@ -1991,11 +1889,10 @@ void main()
 		   NULL, "It is highly probable that the person who eliminated the lines in question is not the suspect.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　また、時計裏に付着していた大量のセロテープ跡から、/
@@ -2003,9 +1900,8 @@ void main()
 		   NULL, "In addition, judging from traces of large quantities of cellophane tape being stuck to the back of the clock,", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //"メモ以外にも何かが貼り付けられていたのではないか"との憶測も出た。
@@ -2013,9 +1909,7 @@ void main()
 		   NULL, " speculation that \"something other than the note was stuck there,\" has arisen.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,4
@@ -2027,11 +1921,10 @@ void main()
 		   NULL, "The person who first discovered the crime was a detective rumored to have a connection with the incident: Kuraudo Ooishi.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　任意で事情聴取をしたが、メモの破損については否定する………。/
@@ -2039,9 +1932,7 @@ void main()
 		   NULL, "He underwent voluntary questioning, but denies involvement in any damages to the note.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	DisableWindow();
 	DrawScene( "bg_220", 1000 );
 	ClearMessage();
@@ -2059,21 +1950,18 @@ void main()
 		   NULL, "The suspect's note:", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　私、前原圭一は命を狙われています
 	OutputLine(NULL, "　私、前原圭一は命を狙われています",
 		   NULL, "I, Keiichi Maebara, am in fear for my life.", Line_ContinueAfterTyping);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　なぜ、誰に、命を狙われているのかはわかりません。
@@ -2081,11 +1969,10 @@ void main()
 		   NULL, "I do not know why they are after my life.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　ただひとつ判る事は、オヤシロさまの祟りと関係があるということです。
@@ -2093,11 +1980,10 @@ void main()
 		   NULL, "The only thing I do know is that it has to do with Oyashiro-sama's curse.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　レナと魅音は犯人の一味。/
@@ -2105,9 +1991,7 @@ void main()
 		   NULL, "Rena and Mion are conspirators of the perpetrators.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //他にも大人が４～５人以上。/
@@ -2115,9 +1999,7 @@ void main()
 		   NULL, " There are four or five adults, maybe more.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //白いワゴン車を所有。
@@ -2125,11 +2007,10 @@ void main()
 		   NULL, " They have a white van.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //（ここまでが１枚目。ここから下は真横に破られている。）
@@ -2137,9 +2018,7 @@ void main()
 		   NULL, "(This is all on the first sheet.  The section below this has been ripped out.)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawScene( "bg_221", 1000 );
@@ -2153,11 +2032,10 @@ void main()
 		   NULL, "(This is from the second sheet. The section above this has been ripped out.)", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　どうしてこんなことになったのか、私にはわかりません。
@@ -2165,11 +2043,10 @@ void main()
 		   NULL, "I have no idea why it has become like this.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 2, "lsys24", 128, 0 );
 
 
 //　これをあなたが読んだなら、その時、私は死んでいるでしょう。/
@@ -2177,9 +2054,8 @@ void main()
 		   NULL, "If you are reading this, then I am probably already dead.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　…死体があるか、ないかの違いはあるでしょうが。
@@ -2187,9 +2063,7 @@ void main()
 		   NULL, " ...Though you may or may not find my body.\"", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 4000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
 //locate 0,6
@@ -2201,9 +2075,8 @@ void main()
 		   NULL, "You, who are reading this. Please uncover the truth.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //それだけが私の望みです。
@@ -2211,9 +2084,7 @@ void main()
 		   NULL, " That is my only desire.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 
 //locate 15,12
 //	SetDrawingPointOfMessage( 0, 12 );
@@ -2223,11 +2094,11 @@ void main()
 //　前原圭一/
 	OutputLineAll(NULL, "\n\n\n\n\n", Line_ContinueAfterTyping);
 
-	OutputLine(NULL, "<pos=22>前原圭一",
-		   NULL, "<pos=36>Keiichi Maebara", Line_ContinueAfterTyping);
+	OutputLine(NULL, "前原圭一",
+		   NULL, "Keiichi Maebara", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 2, 10, TRUE );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 
@@ -2265,7 +2136,6 @@ void main()
 	DisableWindow();
 	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 4000, TRUE );
 	SetStyleOfMessageSwinging( 0 );
-	SetSpeedOfMessage( FALSE, 0, );
 
 //mov %Omake,1
 //mov %NEW_bg,1
