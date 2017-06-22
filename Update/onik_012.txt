@@ -2386,7 +2386,7 @@ void main()
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );
 
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -2637,7 +2637,7 @@ void main()
 		   NULL, "*Badump*", Line_ContinueAfterTyping);
 
 	ShakeScreen( 1, 50, 20, 3, 0, );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 

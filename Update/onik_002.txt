@@ -1426,7 +1426,7 @@ void main()
 		   NULL, "\"I will not allow you to have this hamburger!!\"", Line_ContinueAfterTyping);
 	PlaySE( 4, "wa_005", 128, 64 );
 	ShakeScreen( 0, 100, 20, 4, 0, );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
