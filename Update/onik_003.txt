@@ -576,7 +576,7 @@ void main()
 
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreenSx( 1, 2, );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 
@@ -1660,7 +1660,7 @@ void main()
 
 //	PlaySE( 4, "wa_007", 128, 64 );
 //	ShakeScreen( 1, 50, 20, 3, 0, );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 	DisableWindow();
@@ -2104,7 +2104,7 @@ void main()
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
 	DrawScene( "bg_108", 200 );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 
@@ -2171,7 +2171,7 @@ void main()
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
 	OutputLine(NULL, "逆転勝利だッッ！！！！！！！",
-		   NULL, " comeback victory!!!!!!!", Line_WaitForInput);
+		   NULL, " comeback victory!!!!!!!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask( "bg_108", "right", 0, 0, 300 );
