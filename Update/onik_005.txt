@@ -613,7 +613,7 @@ void main()
 		   NULL, " The Watanagashi Four-Demon Fire Fight!\"", Line_ContinueAfterTyping);
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 0, 50, 20, 3, 0, );
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 	DisableWindow();
@@ -812,7 +812,7 @@ void main()
 	PlaySE( 5, "s19/02/990200320", 300, 64 );
 	PlaySE( 6, "s19/04/990400121", 300, 64 );
 	PlaySE( 7, "s19/05/990500061", 300, 64 );
-	if (AdvMode) { OutputLine("<color=#f5e6d3>部活メンバー</color>", NULL, "<color=#f5e6d3>Club Member</color>", NULL, Line_ContinueAfterTyping); }
+	if (AdvMode) { OutputLine("<color=#f5e6d3>部活メンバー</color>", NULL, "<color=#f5e6d3>Club Members</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「な〜〜しッ！！」",
 		   NULL, "\"Naaay!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4460,7 +4460,7 @@ void main()
 	DisableWindow();
 	DrawScene( "white", 4000 );
 
-	OutputLineAll(NULL, "", Line_WaitForInput);
+	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 	DisableWindow();
