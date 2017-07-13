@@ -1290,12 +1290,11 @@ void main()
 
 
 //「げはッ！！!d400　肘は反則だろ沙都子！！＠
-	PlaySE(3, "s19/01/hr_kei01540", 256, 64);
+	PlaySE(3, "s19/01/hr_kei01550", 256, 64);
 	OutputLine(NULL, "「げはッ！！",
 		   NULL, "\"Hurk!!", Line_ContinueAfterTyping);
 
 	Wait( 400 );
-	PlaySE(3, "s19/01/hr_kei01550", 256, 64);
 	OutputLine(NULL, "　肘は反則だろ沙都子！！」",
 		   NULL, " Using your elbow is against the rules, Satoko!!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -1808,11 +1807,8 @@ void main()
 //「やるのは圭ちゃん。」!w500「はあッ？！＠
 	PlaySE(3, "s19/03/990300123", 256, 64);
 	OutputLine(NULL, "「やるのは圭ちゃん。」",
-		   NULL, "\"Kei-chan is going to be the one who does it.\"", Line_ContinueAfterTyping);
-
-	SetValidityOfInput( FALSE );
-	Wait( 500 );
-	SetValidityOfInput( TRUE );
+		   NULL, "\"Kei-chan is going to be the one who does it.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
 	PlaySE(3, "s19/01/hr_kei01630", 256, 64);
 	OutputLine(NULL, "「はあッ？！」",
@@ -3043,8 +3039,6 @@ void main()
 		   NULL, " You were waiting a while, I guess?", Line_ContinueAfterTyping);
 
 	Wait( 300 );
-
-	PlaySE(3, "s19/02/500200695", 256, 64);
 	OutputLine(NULL, "……かな？」",
 		   NULL, " ...I guess?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);

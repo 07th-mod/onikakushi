@@ -1487,10 +1487,9 @@ void main()
 //「…えぇと、どんなの＠　どんなの？!s200……………!sd/
 	PlaySE(3, "s19/02/990200331", 256, 64);
 	OutputLine(NULL, "「…えぇと、どんなの？",
-		   NULL, "\"...Um, what is it?", Line_ContinueAfterTyping);
+		   NULL, "\"...Um, what is it?", Line_WaitForInput);
 //!s200
 
-	Wait( 200 );
 	PlaySE(3, "s19/02/990200332", 256, 64);
 	OutputLine(NULL, "　どんなの？",
 		   NULL, " What is it?", Line_ContinueAfterTyping);

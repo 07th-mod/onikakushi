@@ -3106,11 +3106,8 @@ void main()
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "あのね！",
-		   NULL, " well...", Line_ContinueAfterTyping);
+		   NULL, " well...", Line_WaitForInput);
 
-	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
 	PlaySE(3, "s01/02/120200221", 256, 64);
 	OutputLine(NULL, "　ど、どうしてバットなんか持ってるのかな。",
 		   NULL, " Wh-Why do you have a bat, I wonder...", Line_ContinueAfterTyping);
