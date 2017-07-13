@@ -807,6 +807,9 @@ void main()
 	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「知ってるもん…！！",
 		   NULL, "\"I do know...!!", Line_WaitForInput);
+	PlaySE(3, "s19/04/990400088", 256, 64);
+	OutputLine(NULL, "知ってるもん！！",
+		   NULL, " I do know!!", Line_WaitForInput);
 	PlaySE(3, "s19/04/990400089", 256, 64);
 	OutputLine(NULL, "　知ってるもん！！！…",
 		   NULL, " I do know!!!...", Line_ContinueAfterTyping);
@@ -819,9 +822,7 @@ void main()
 	Wait( 300 );
 
 	OutputLine(NULL, "セッ、」",
-		   NULL, "Se...\"", Line_ContinueAfterTyping);
-
-	Wait( 600 );
+		   NULL, "Se...\"", Line_ModeSpecific);
 
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 

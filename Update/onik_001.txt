@@ -1386,7 +1386,6 @@ void main()
 
 	Wait( 300 );
 
-	PlaySE(3, "s19/02/500200521", 256, 64);
 	OutputLine(NULL, "…かな！」",
 		   NULL, " ...I guess!\"", Line_ModeSpecific);
 	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2153,11 +2152,7 @@ void main()
 	PlaySE(3, "s19/04/990400008", 256, 64);
 	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ぼぅ、暴力反対ですのー！！",
-		   NULL, "\"I-I'm against violence!!", Line_ContinueAfterTyping);
-
-	SetValidityOfInput( FALSE );
-	Wait( 600 );
-	SetValidityOfInput( TRUE );
+		   NULL, "\"I-I'm against violence!!", Line_WaitForInput);;
 
 	PlaySE(3, "s19/04/990400009", 256, 64);
 	OutputLine(NULL, "　証拠もないのにぃ〜！！」",
@@ -2344,11 +2339,7 @@ void main()
 	PlaySE(3, "s19/02/990200033", 256, 64);
 	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「…ひぅ！",
-		   NULL, "\"...Huu!", Line_ContinueAfterTyping);
-
-	SetValidityOfInput( FALSE );
-	Wait( 500 );
-	SetValidityOfInput( TRUE );
+		   NULL, "\"...Huu!", Line_WaitForInput);
 
 	PlaySE(3, "s19/02/990200034", 256, 64);
 	OutputLine(NULL, "　…だってだって…こんなにかぁいいよぅ？」",

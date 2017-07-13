@@ -1638,10 +1638,9 @@ void main()
 	PlaySE(3, "s19/02/990200331", 256, 64);
 	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「…えぇと、どんなの？",
-		   NULL, "\"...Um, what is it?", Line_ContinueAfterTyping);
+		   NULL, "\"...Um, what is it?", Line_WaitForInput);
 //!s200
 
-	Wait( 200 );
 	PlaySE(3, "s19/02/990200332", 256, 64);
 	OutputLine(NULL, "　どんなの？",
 		   NULL, " What is it?", Line_ContinueAfterTyping);
