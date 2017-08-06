@@ -1,0 +1,20 @@
+void main()
+{
+
+// animation extend
+		DrawBustshot( 24, "hina1_1", 0, -230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 200, FALSE );
+		DrawBustshot( 23, "hina1_2", 0, -230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 2, 200, FALSE );
+		DrawBustshot( 22, "hina1_3", 0, -230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 3, 200, FALSE );
+		DrawBustshot( 21, "hina1_4", 0, -230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 4, 200, TRUE );
+		MoveBustshot( 21, NULL, 0, 290, -480, 1, 10000, FALSE );
+		MoveBustshot( 22, NULL, 0, 280, -480, 2, 10000, FALSE );
+		MoveBustshot( 23, NULL, 0, 230, -480, 3, 10000, FALSE );
+		MoveBustshot( 24, NULL, 0, 200, -480, 4, 10000, TRUE );	
+// for skip animation extend correctly
+		MoveBustshot( 21, NULL, 0, 290, -480, 1, 0, FALSE );
+		MoveBustshot( 22, NULL, 0, 280, -480, 2, 0, FALSE );
+		MoveBustshot( 23, NULL, 0, 230, -480, 3, 0, FALSE );
+		MoveBustshot( 24, NULL, 0, 200, -480, 4, 0, TRUE );	
+// end of animation extend
+
+}

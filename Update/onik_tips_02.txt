@@ -1,13 +1,6 @@
 void main()
 {
-	int AdvMode;
-	AdvMode = 1;
-	int Line_ModeSpecific;
-	if (AdvMode) {
-		Line_ModeSpecific = Line_Normal;
-	} else {
-		Line_ModeSpecific = Line_WaitForInput;
-	}
+	
 
 //■うちって制服自由？
 
@@ -28,7 +21,7 @@ void main()
 
 //　まだ６月だってのに...!w1000暑い＠
 	ClearMessage();
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　まだ６月だってのに…",
 		   NULL, "It's only June...", Line_ContinueAfterTyping);
 
@@ -37,22 +30,22 @@ void main()
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "暑い。",
-		   NULL, " but it's already so hot.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " but it's already so hot.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　外ではセミがミンミンと鳴き、夜は蚊まで出る＠...これって完全に夏だよなぁ＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　外ではセミがミンミンと鳴き、夜は蚊まで出る。",
 		   NULL, "I could hear the higurashi outside chirping \"miii miii,\" and at night there are mosquitos.", Line_WaitForInput);
 	OutputLine(NULL, "…これって完全に夏だよなぁ。",
-		   NULL, " ...It might as well be summer already.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, " ...It might as well be summer already.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　...朝だけは涼しいのが救いか￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…朝だけは涼しいのが救いか。",
 		   NULL, "...My only salvation was that the mornings were still cool.", Line_Normal);
 	ClearMessage();
@@ -60,31 +53,31 @@ void main()
 	DrawBustshotWithFiltering( 3, "sa_se_bi_b1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「暑いでございますわねぇ！＠
-	PlaySE(3, "s20/04/440400001", 128, 64);
-	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/04/440400001", 128 );
 	OutputLine(NULL, "「暑いでございますわねぇ！」",
-		   NULL, "\"Summer, I do declare!\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"Summer, I do declare!\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　沙都子が気だるそうにスカートをバタバタさせている＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子が気だるそうにスカートをバタバタさせている。",
-		   NULL, "Satoko was flapping her skirt languidly.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "Satoko was flapping her skirt languidly.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　...はしたないぞ、おい＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…はしたないぞ、おい。",
-		   NULL, "...That's pretty unladylike there.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "...That's pretty unladylike there.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　...ガキンチョとは言え、一応女の子なんだからさぁ￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…ガキンチョとは言え、一応女の子なんだからさぁ。",
 		   NULL, "...Even if she was a little brat, she still was a girl.", Line_Normal);
 	ClearMessage();
@@ -92,18 +85,18 @@ void main()
 	DrawBustshot( 3, "sa_se_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「圭一はワイシャツ１枚で涼しそうですわねぇ...＠羨ましいですわ。＠
-	PlaySE(3, "s20/04/440400002", 128, 64);
-	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/04/440400002", 128 );
 	OutputLine(NULL, "「圭一はワイシャツ１枚で涼しそうですわねぇ…。",
 		   NULL, "\"Keiichi does seem quite cool with just a single button-up shirt...", Line_WaitForInput);
 	OutputLine(NULL, "羨ましいですわ。」",
-		   NULL, " I'm so jealous.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " I'm so jealous.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「俺から見りゃ、スカートの沙都子の方が涼しそうだよ＠この時期のズボンの股座がどれだけ蒸すか、女のお前にゃわかるまい！￥
-	PlaySE(3, "s20/01/440100016", 128, 64);
-	if (AdvMode) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/01/440100016", 128 );
 	OutputLine(NULL, "「俺から見りゃ、スカートの沙都子の方が涼しそうだよ。",
 		   NULL, "\"From how I see things, the skirt you're wearing looks like it would be much cooler.", Line_ContinueAfterTyping);
 	Wait ( 1500 );
@@ -114,50 +107,50 @@ void main()
 	DrawBustshot( 1, "re_se_ha_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「......む、...蒸すんだ.........、はぅ......。＠
-	PlaySE(3, "s20/02/440200020", 128, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200020", 128 );
 	OutputLine(NULL, "「……あ、…暑いって………、はぅ……。」",
-		   NULL, "\"...It... it gets hot... Hao...\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "\"...It... it gets hot... Hao...\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 //　またこの娘は、いかがわしい想像をたくましくさせてるな...￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　またこの娘は、いかがわしい想像をたくましくさせてるな…。",
 		   NULL, "This girl has gone imagining something indecent...", Line_Normal);
 	ClearMessage();
 
 //「レナの夏服は涼しそうな色合いがいいよな＠見てるこっちも涼しくなる。＠
-	PlaySE(3, "s20/01/440100017", 128, 64);
-	if (AdvMode) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/01/440100017", 128 );
 	OutputLine(NULL, "「レナの夏服は涼しそうな色合いがいいよな。",
 		   NULL, "\"Rena's summer clothes have a nice refreshing color.", Line_WaitForInput);
 	OutputLine(NULL, "見てるこっちも涼しくなる。」",
-		   NULL, " I feel cooler just looking at them.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " I feel cooler just looking at them.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 1, "re_se_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「あはははは＠ありがと＠　本当に涼しいんだよ。＠
-	PlaySE(3, "s20/02/440200021", 128, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200021", 128 );
 	OutputLine(NULL, "「あはははは。",
 		   NULL, "\"Ahahahaha.", Line_WaitForInput);
 	OutputLine(NULL, "ありがと！",
 		   NULL, " Thank you!", Line_WaitForInput);
-	PlaySE(3, "s20/02/440200022", 128, 64);
+	PlayVoice( 3, "s20/02/440200022", 128 );
 	OutputLine(NULL, "　本当に涼しいんだよ。」",
-		   NULL, " They really do feel pretty cool.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " They really do feel pretty cool.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 3, "sa_se_ak_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「私もレナさんみたいな涼しい夏服がよかったですわねぇ。￥
-	PlaySE(3, "s20/04/440400003", 128, 64);
-	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/04/440400003", 128 );
 	OutputLine(NULL, "「私もレナさんみたいな涼しい夏服がよかったですわねぇ。」",
 		   NULL, "\"I do wish my summer clothes were as breezy as Rena's.\"", Line_Normal);
 	ClearMessage();
@@ -165,73 +158,73 @@ void main()
 	DrawBustshot( 1, "re_se_de_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「でも沙都子ちゃんの夏服、ワンピースですっごい可愛いし＠　レナは沙都子ちゃんの夏服、着てみたいなー☆＠
-	PlaySE(3, "s20/02/440200023", 128, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200023", 128 );
 	OutputLine(NULL, "「でも沙都子ちゃんの夏服、ワンピースですっごい可愛いし！",
 		   NULL, "\"But Satoko-chan, your summer clothes are so cute, being a one piece and all!", Line_WaitForInput);
 	OutputLine(NULL, "　レナは沙都子ちゃんの夏服、着てみたいなー☆」",
-		   NULL, " I'd like to wear your summer clothes.☆\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " I'd like to wear your summer clothes.☆\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 3, "sa_se_de_b1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「これ、結構蒸しますわよ＠　絶対にレナさんの方が涼しいですわぁ。＠
-	PlaySE(3, "s20/04/440400004", 128, 64);
-	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/04/440400004", 128 );
 	OutputLine(NULL, "「これ、結構蒸しますわよ？",
 		   NULL, "\"This is actually quite stuffy, you know.", Line_WaitForInput);
 	OutputLine(NULL, "　絶対にレナさんの方が涼しいですわぁ。」",
-		   NULL, " I do believe what you're wearing would feel much cooler.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " I do believe what you're wearing would feel much cooler.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 1, "re_se_ha_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「でもかぁいい服の方がきっと楽しいよ。......はぅ！＠
-	PlaySE(3, "s20/02/440200024", 128, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200024", 128 );
 	OutputLine(NULL, "「でもかぁいい服の方がきっと楽しいよ。……はぅ！」",
-		   NULL, "\"But it would be so much more fun with kyute clothes... Hao!\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"But it would be so much more fun with kyute clothes... Hao!\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　......レナと沙都子では根本的に価値観が違う気がするぞ￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……レナと沙都子では根本的に価値観が違う気がするぞ。",
 		   NULL, "...I had a feeling that Rena and Satoko's base values were fundamentally different.", Line_Normal);
 	ClearMessage();
 
 //「そう言えば...、この学校って指定の制服とかないんだよな。＠
-	PlaySE(3, "s20/01/440100018", 128, 64);
-	if (AdvMode) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/01/440100018", 128 );
 	OutputLine(NULL, "「そう言えば…、この学校って指定の制服とかないんだよな。」",
-		   NULL, "\"Speaking of which... our school doesn't have a uniform.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"Speaking of which... our school doesn't have a uniform.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 1, "re_se_de_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「うん＠ないよ＠相応しい服であれば私服でも大丈夫なんだよ。＠
-	PlaySE(3, "s20/02/440200025", 128, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200025", 128 );
 	OutputLine(NULL, "「うん。",
 		   NULL, "\"Yeah.", Line_WaitForInput);
 	OutputLine(NULL, "ないよ。",
 		   NULL, " It doesn't.", Line_WaitForInput);
-	PlaySE(3, "s20/02/440200026", 128, 64);
+	PlayVoice( 3, "s20/02/440200026", 128 );
 	OutputLine(NULL, "相応しい服であれば私服でも大丈夫なんだよ。」",
-		   NULL, " As long as they're proper, then regular clothes are fine.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " As long as they're proper, then regular clothes are fine.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　私服の生徒は確かに多い＠制服を着ている生徒もいるが、みんなデザインは同じ、地味なものだ￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私服の生徒は確かに多い。",
 		   NULL, "There are quite a few students in regular clothes.", Line_WaitForInput);
 	OutputLine(NULL, "制服を着ている生徒もいるが、みんなデザインは同じ、地味なものだ。",
@@ -241,43 +234,43 @@ void main()
 	DrawSceneWithMask( "bg_108", "left", 0, 0, 300 );
 
 //「...他の連中が着てる制服は何なんだよ＠みんなお揃いだよな。＠
-	PlaySE(3, "s20/01/440100019", 128, 64);
-	if (AdvMode) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/01/440100019", 128 );
 	OutputLine(NULL, "「…他の連中が着てる制服は何なんだよ。",
 		   NULL, "\"...What's the uniform they're all wearing?", Line_WaitForInput);
 	OutputLine(NULL, "みんなお揃いだよな。」",
-		   NULL, " They're all the same.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " They're all the same.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshotWithFiltering( 1, "sa_se_aw_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「あれは町の学校の制服なんですのよ＠別に決まってるわけじゃないですけど、みんな着てますわね。＠
-	PlaySE(3, "s20/04/440400005", 128, 64);
-	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/04/440400005", 128 );
 	OutputLine(NULL, "「あれは町の学校の制服なんですのよ。",
 		   NULL, "\"That's the city school's uniform.", Line_WaitForInput);
 	OutputLine(NULL, "別に決まってるわけじゃないですけど、みんな着てますわね。」",
-		   NULL, " It's not like there's a rule, but they're all wearing them.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " It's not like there's a rule, but they're all wearing them.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「そこへ行くと、俺らの仲間はみんないろいろな制服を着てるよな＠...わざわざどこかから取り寄せたのか？＠
-	PlaySE(3, "s20/01/440100020", 128, 64);
-	if (AdvMode) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/01/440100020", 128 );
 	OutputLine(NULL, "「そこへ行くと、俺らの仲間はみんないろいろな制服を着てるよな。",
 		   NULL, "\"Speaking of which, everybody in our group is wearing a different uniform, aren't we?", Line_WaitForInput);
 	OutputLine(NULL, "…わざわざどこかから取り寄せたのか？」",
-		   NULL, " Did you go out of your way to get them from somewhere?\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " Did you go out of your way to get them from somewhere?\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「えぇ。魅音さんが調達して下さいますの。￥
-	PlaySE(3, "s20/04/440400006", 128, 64);
-	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/04/440400006", 128 );
 	OutputLine(NULL, "「えぇ。魅音さんが調達して下さいますの。」",
 		   NULL, "\"Why, yes. Mion-san supplied them.\"", Line_Normal);
 	ClearMessage();
@@ -285,53 +278,53 @@ void main()
 	DrawBustshotWithFiltering( 3, "re_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「魅ぃちゃんの親類で、古着商をやってる人がいて、全国の学校の服を格安で仕入れてるんですって。＠
-	PlaySE(3, "s20/02/440200027", 128, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200027", 128 );
 	OutputLine(NULL, "「魅ぃちゃんの親類で、古着商をやってる人がいて、全国の学校の服を格安で仕入れてるんですって。」",
-		   NULL, "\"Mii-chan's relative runs a secondhand clothing store. They can get school clothes from all over the country for cheap, they say.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"Mii-chan's relative runs a secondhand clothing store. They can get school clothes from all over the country for cheap, they say.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「んで、その親類に頼んで、いろいろ個性的な制服を取り寄せてもらってるわけか。＠
-	PlaySE(3, "s20/01/440100021", 128, 64);
-	if (AdvMode) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/01/440100021", 128 );
 	OutputLine(NULL, "「んで、その親類に頼んで、いろいろ個性的な制服を取り寄せてもらってるわけか。」",
-		   NULL, "\"So you asked those relatives to get a bunch of unique school uniforms, then.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "\"So you asked those relatives to get a bunch of unique school uniforms, then.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　...魅音のヤツ、仲間を着せ替え人形にして楽しんでるな、絶対＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…魅音のヤツ、仲間を着せ替え人形にして楽しんでるな、絶対。",
-		   NULL, "...That Mion, she probably loves using her friends as dress-up dolls.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "...That Mion, she probably loves using her friends as dress-up dolls.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　.........しかし変な古着屋だよな＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………しかし変な古着屋だよな。",
-		   NULL, "...That must be a strange secondhand clothing store.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "...That must be a strange secondhand clothing store.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　古着全般はわかるとして、全国の学校の服を仕入れてる￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　古着全般はわかるとして、全国の学校の服を仕入れてる？",
 		   NULL, "I get that it's a secondhand clothing store, but stocking clothes from schools all over the country?", Line_Normal);
 	ClearMessage();
 
 //　...よくわからん古着屋だ＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…よくわからん古着屋だ。",
-		   NULL, "...That's pretty strange for a secondhand clothing store.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "...That's pretty strange for a secondhand clothing store.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　遠くの知らない学校の制服など、何の役にも立たないんじゃないのか？￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　遠くの知らない学校の制服など、何の役にも立たないんじゃないのか？？",
 		   NULL, "What's the point in stocking up clothes from faraway schools they know nothing about??", Line_Normal);
 	ClearMessage();
@@ -339,35 +332,35 @@ void main()
 	DrawBustshot( 3, "re_se_na_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「...うん。それはレナも思うよ＠他にも体操服とかスクール水着のお古とかも扱ってるの＠...そういうののお古はちょっと嫌だよねぇ。＠
-	PlaySE(3, "s20/02/440200028", 128, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200028", 128 );
 	OutputLine(NULL, "「…うん。それはレナも思うよ。",
 		   NULL, "\"...Yeah. I think so, too.", Line_WaitForInput);
 	OutputLine(NULL, "他にも体操服とかスクール水着のお古とかも扱ってるの。",
 		   NULL, " They also have used school swimsuits and P.E. uniforms...", Line_WaitForInput);
-	PlaySE(3, "s20/02/440200029", 128, 64);
+	PlayVoice( 3, "s20/02/440200029", 128 );
 	OutputLine(NULL, "…そういうののお古はちょっと嫌だよねぇ。」",
-		   NULL, " I don't like the idea of having used ones.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " I don't like the idea of having used ones.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「あんまり儲かってなさそうな商売だ＠。......きっと少しでも儲けさせるために、魅音が一肌脱いでやってるんだろうな。＠
-	PlaySE(3, "s20/01/440100022", 128, 64);
-	if (AdvMode) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/01/440100022", 128 );
 	OutputLine(NULL, "「あんまり儲かってなさそうな商売だな",
 		   NULL, "\"Doesn't sound like that shop makes much money...", Line_WaitForInput);
 	OutputLine(NULL, "。……きっと少しでも儲けさせるために、魅音が一肌脱いでやってるんだろうな。」",
-		   NULL, " They probably have Mion pitch in and help so they can make a bit more.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " They probably have Mion pitch in and help so they can make a bit more.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 1, "sa_se_ak_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「......でも、いつも魅音さんが自信満々に言いますのよ＠　今にきっと大ブレイクしてすごい商売になる！！って。￥
-	PlaySE(3, "s20/04/440400007", 128, 64);
-	if (AdvMode) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/04/440400007", 128 );
 	OutputLine(NULL, "「……でも、いつも魅音さんが自信満々に言いますのよ？",
 		   NULL, "\"...But Mion-san says, 'It'll be a big hit and become a great store!'", Line_WaitForInput);
 	OutputLine(NULL, "　今にきっと大ブレイクしてすごい商売になる！！って。」",
@@ -375,14 +368,14 @@ void main()
 	ClearMessage();
 
 //　......学校制服の古着屋が大ブレイクねぇ＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……学校制服の古着屋が大ブレイクねぇ？",
-		   NULL, "...A secondhand clothing store that stocks school uniforms will be a big hit?", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "...A secondhand clothing store that stocks school uniforms will be a big hit?", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　...わからん￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…わからん。",
 		   NULL, "... I don't get it.", Line_Normal);
 	ClearMessage();

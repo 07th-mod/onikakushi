@@ -1,13 +1,6 @@
 void main()
 {
-	int AdvMode;
-	AdvMode = 1;
-	int Line_ModeSpecific;
-	if (AdvMode) {
-		Line_ModeSpecific = Line_Normal;
-	} else {
-		Line_ModeSpecific = Line_WaitForInput;
-	}
+	
 
 //■ダム推進派の夫婦の転落事故
 
@@ -26,54 +19,54 @@ void main()
 
 //　昭和５５年６月ＸＸ日夕刊よ＠
 	ClearMessage();
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　昭和５５年６月ＸＸ日夕刊より",
-		   NULL, "From the June 1980 edition.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "From the June 1980 edition.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　ＸＸ日午後２時頃、鹿骨市雛見沢村Ｘ丁目、会社員ＸＸＸさんと妻ＸＸＸＸさんが＠
 //　県立白川自然公園内の展望台から２７ｍ下の渓流へ転落、行方不明になった＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ＸＸ日午後２時頃、鹿骨市雛見沢村Ｘ丁目、会社員ＸＸＸさんと妻ＸＸＸＸさんが、",
 		   NULL, "On the afternoon of XX at 2PM, office employee XXXX and his wife XXXX of Hinamizawa village in Shishibone prefecture", Line_WaitForInput);
 	OutputLine(NULL, "　県立白川自然公園内の展望台から２７ｍ下の渓流へ転落、行方不明になった。",
-		   NULL, " disappeared after falling 27 meters from the observatory platform in Shirakawa prefecture.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " disappeared after falling 27 meters from the observatory platform in Shirakawa prefecture.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　警察と消防で下流を捜索し、同日夜７時頃、ＸＸＸさんの遺体を発見した＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　警察と消防で下流を捜索し、同日夜７時頃、ＸＸＸさんの遺体を発見した。",
-		   NULL, "Police and firefighters searched downstream and discovered the body of XXXX at around 7PM that evening.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "Police and firefighters searched downstream and discovered the body of XXXX at around 7PM that evening.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　妻のＸＸＸＸさんは依然見つかっていない＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　妻のＸＸＸＸさんは依然見つかっていない。",
-		   NULL, "His wife, XXXXX has yet to be found.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "His wife, XXXXX has yet to be found.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　渓流は先日の台風３号の影響で増水しており、捜索は難航している￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　渓流は先日の台風３号の影響で増水しており、捜索は難航している。",
 		   NULL, "The search has run into difficulties due to the effects of Typhoon 3 from the previous day.", Line_Normal);
 	ClearMessage();
 
 //　ＸＸさん夫妻は展望台で柵にもたれかかっていた所、柵が壊れ転落した模様＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ＸＸさん夫妻は展望台で柵にもたれかかっていた所、柵が壊れ転落した模様。",
-		   NULL, "It appeared a railing at the observatory that the XXs leaned on had broken, causing them to fall.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "It appeared a railing at the observatory that the XXs leaned on had broken, causing them to fall.", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　柵は老朽化しており、警察は公園内の設備管理が適正だったか関係者から事情を聞いている￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　柵は老朽化しており、警察は公園内の設備管理が適正だったか関係者から事情を聞いている。",
 		   NULL, "The grounds keeping staff was questioned by the police in regards to facility deterioration, and if park maintenance was performed properly.", Line_Normal);
 	ClearMessage();
