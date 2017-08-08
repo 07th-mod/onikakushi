@@ -1,13 +1,6 @@
 void main()
 {
-	int AdvMode;
-	AdvMode = 1;
-	int Line_ModeSpecific;
-	if (AdvMode) {
-		Line_ModeSpecific = Line_Normal;
-	} else {
-		Line_ModeSpecific = Line_WaitForInput;
-	}
+	
 
 
 //■元気ないね。
@@ -27,48 +20,48 @@ void main()
 	DrawBustshotWithFiltering( 3, "re_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「最近、圭一くんの元気がないね＠機嫌が悪いのかな。＠
-	PlaySE(3, "s20/02/440200042", 256, 64);
+	PlayVoice( 3, "s20/02/440200042", 256 );
 	ClearMessage();
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「最近、圭一くんの元気がないね。",
 		   NULL, "\"Keiichi-kun's been feeling down lately.", Line_ContinueAfterTyping);
 	Wait (2800);
 	OutputLine(NULL, "機嫌が悪いのかな。」",
-		   NULL, " Maybe he's in a bad mood.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " Maybe he's in a bad mood.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshotWithFiltering( 1, "me_se_wi_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「さぁてどうしたんだろうね＠生理でも来てんじゃないのー？＠
-	PlaySE(3, "s20/03/440300032", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300032", 256 );
 	OutputLine(NULL, "「さぁてどうしたんだろうね。",
 		   NULL, "\"I wonder.", Line_ContinueAfterTyping);
 	Wait (2400);
 	OutputLine(NULL, "恋の病にでもかかってるんじゃないのー？」",
-		   NULL, " Maybe he's got a crush on someone?\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " Maybe he's got a crush on someone?\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 3, "re_se_ha_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「みみ、魅ぃちゃんそれ下品...！＠
-	PlaySE(3, "s20/02/440200043", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200043", 256 );
 	OutputLine(NULL, "「み、魅ぃちゃんそれ飛躍しすぎ…！」",
-		   NULL, "\"M-M-Mii-chan, that's a logic leap...!\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"M-M-Mii-chan, that's a logic leap...!\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
 	DrawBustshot( 1, "me_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「うっひゃっひゃっひゃっひゃ！！￥
-	PlaySE(3, "s20/03/440300033", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300033", 256 );
 	OutputLine(NULL, "「うっひゃっひゃっひゃっひゃ！！」",
 		   NULL, "\"Uhyak hyak hyak hyak!!\"", Line_Normal);
 	ClearMessage();
@@ -76,80 +69,80 @@ void main()
 	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 400, TRUE );
 
 //「......どう思う？＠
-	PlaySE(3, "s20/02/440200044", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200044", 256 );
 	OutputLine(NULL, "「……どう思う？」",
-		   NULL, "\"...What do you think?\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"...What do you think?\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「さーね。＠
-	PlaySE(3, "s20/03/440300034", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300034", 256 );
 	OutputLine(NULL, "「さーね。」",
-		   NULL, "\"Don't know.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"Don't know.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「.........。＠
-	PlaySE(3, "s20/02/440200045", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200045", 256 );
 	OutputLine(NULL, "「………。」",
-		   NULL, "\"...\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"...\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「圭ちゃん、ひょっとして...＠.........かな？＠
-	PlaySE(3, "s20/03/440300035", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300035", 256 );
 	OutputLine(NULL, "「圭ちゃん、ひょっとして…。",
 		   NULL, "\"Could be that Kei-chan...", Line_ContinueAfterTyping);
 	Wait (2000);
 	OutputLine(NULL, "………かな？」",
-		   NULL, " Maybe...?\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " Maybe...?\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「......わかんない。￥
-	PlaySE(3, "s20/02/440200046", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200046", 256 );
 	OutputLine(NULL, "「……わかんない。」",
 		   NULL, "\"...I don't know.\"", Line_Normal);
 	ClearMessage();
 
 //「あの日、圭ちゃんと車で話してたの、中年のでっぷりした男だったんでしょ？＠
-	PlaySE(3, "s20/03/440300036", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300036", 256 );
 	OutputLine(NULL, "「あの日、圭ちゃんと車で話してたの、中年のでっぷりした男だったんでしょ？」",
-		   NULL, "\"That day, Kei-chan was in that car talking to some tubby middle-aged guy, right?\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"That day, Kei-chan was in that car talking to some tubby middle-aged guy, right?\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「うん＠間違いない。＠
-	PlaySE(3, "s20/02/440200047", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200047", 256 );
 	OutputLine(NULL, "「うん。",
 		   NULL, "\"Yeah.", Line_ContinueAfterTyping);
 	Wait (800);
 	OutputLine(NULL, "間違いない。」",
-		   NULL, " No mistake.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " No mistake.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「大石のヤツ、圭ちゃんに何を吹き込んでるのかなぁ...。＠
-	PlaySE(3, "s20/03/440300037", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300037", 256 );
 	OutputLine(NULL, "「大石のヤツ、圭ちゃんに何を吹き込んでるのかなぁ…。」",
-		   NULL, "\"That Ooishi, he probably fed him something fishy...\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"That Ooishi, he probably fed him something fishy...\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「真剣そうだったよ＠圭一くんは顔面蒼白だった。￥
-	PlaySE(3, "s20/02/440200048", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200048", 256 );
 	OutputLine(NULL, "「真剣そうだったよ。",
 		   NULL, "\"He looked serious.", Line_ContinueAfterTyping);
 	Wait (1600);
@@ -158,8 +151,8 @@ void main()
 	ClearMessage();
 
 //「.........あのねぇ＠レナはよく知らないだろうけど＠/
-	PlaySE(3, "s20/03/440300038", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300038", 256 );
 	OutputLine(NULL, "「………あのねぇ、",
 		   NULL, "\"You see...", Line_ContinueAfterTyping);
 	Wait (1400);
@@ -170,37 +163,37 @@ void main()
 	PlaySE( 4, "wa__024", 128, 64 );
 
 //実はあいつ、オヤシロさまの使いなんだよ。＠
-	PlaySE(3, "s20/03/440300039", 256, 64);
+	PlayVoice( 3, "s20/03/440300039", 256 );
 	OutputLine(NULL, "実はあいつ、オヤシロさまの使いなんだよ。」",
-		   NULL, " But he's actually the messenger of Oyashiro-sama.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " But he's actually the messenger of Oyashiro-sama.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「え＠　何の話？＠
-	PlaySE(3, "s20/02/440200049", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200049", 256 );
 	OutputLine(NULL, "「え？",
 		   NULL, "\"Huh?", Line_ContinueAfterTyping);
 	Wait (800);
 	OutputLine(NULL, "　何の話？」",
-		   NULL, " What do you mean?\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " What do you mean?\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「あいつが現れるとね、...必ず鬼隠しが起こるの＠......本当だよ。＠
-	PlaySE(3, "s20/03/440300040", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300040", 256 );
 	OutputLine(NULL, "「あいつが現れるとね、…必ず鬼隠しが起こるの。",
 		   NULL, "\"Whenever he shows up... someone is demoned away.", Line_ContinueAfterTyping);
 	Wait (5800);
 	OutputLine(NULL, "……本当だよ。」",
-		   NULL, " No lie...\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " No lie...\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「............あれ＠　そうなの？￥
-	PlaySE(3, "s20/02/440200050", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200050", 256 );
 	OutputLine(NULL, "「…………あれ？",
 		   NULL, "\"...Oh?", Line_ContinueAfterTyping);
 	Wait (1000);
@@ -209,27 +202,27 @@ void main()
 	ClearMessage();
 
 //「......一昨年、梨花ちゃんのお母さんが入水したでしょ＠　その直前に大石が尋問してたんだよ。＠
-	PlaySE(3, "s20/03/440300041", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300041", 256 );
 	OutputLine(NULL, "「……一昨年、梨花ちゃんのお母さんが入水したでしょ？",
 		   NULL, "\"...The year before last, when Rika-chan's mom drowned, right?", Line_ContinueAfterTyping);
 	Wait (3000);
 	OutputLine(NULL, "　その直前に大石が尋問してたんだよ。」",
-		   NULL, " Right before that, she was visited by Ooishi.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " Right before that, she was visited by Ooishi.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「.........そう言えば、悟史くんが転校する前にもいたね。＠
-	PlaySE(3, "s20/02/440200051", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200051", 256 );
 	OutputLine(NULL, "「………そう言えば、悟史くんが転校する前にもいたね。」",
-		   NULL, "\"...Now that you mention it, he was around before Satoshi-kun transferred out, too.\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"...Now that you mention it, he was around before Satoshi-kun transferred out, too.\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「転校～＠　あはははははは、レナはいいヤツだよなぁ。￥
-	PlaySE(3, "s20/03/440300042", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300042", 256 );
 	OutputLine(NULL, "「転校〜？",
 		   NULL, "\"Transferred~?", Line_ContinueAfterTyping);
 	Wait (1600);
@@ -238,34 +231,34 @@ void main()
 	ClearMessage();
 
 //「で、今度は圭一くんの前に現れたんだ＠......じゃあ圭一くんも鬼隠しになっちゃう？＠
-	PlaySE(3, "s20/02/440200052", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200052", 256 );
 	OutputLine(NULL, "「で、今度は圭一くんの前に現れたんだ。",
 		   NULL, "\"So this time he's appeared before Keiichi-kun...", Line_ContinueAfterTyping);
 	Wait (3800);
 	OutputLine(NULL, "……じゃあ圭一くんも鬼隠しになっちゃう？」",
-		   NULL, " So Keiichi-kun is going to be demoned away too?\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, " So Keiichi-kun is going to be demoned away too?\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //「........................。＠
-	PlaySE(3, "s20/03/440300043", 256, 64);
-	if (AdvMode) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/03/440300043", 256 );
 	OutputLine(NULL, "「……………………。」",
-		   NULL, "\"...\"", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "\"...\"", GetGlobalFlag(GLinemodeSp));
+	if(GetGlobalFlag(GADVMode) == 1) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //「........................。￥
-	PlaySE(3, "s20/02/440200053", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200053", 256 );
 	OutputLine(NULL, "「……………………。」",
 		   NULL, "\"...\"", Line_Normal);
 	ClearMessage();
 
 //　沈黙の空白がじんわりと続く＠そしてふと途切れた￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沈黙の空白がじんわりと続く。",
 		   NULL, "An empty silence hung in the air.", Line_WaitForInput);
 	OutputLine(NULL, "そしてふと途切れた。",
@@ -276,13 +269,13 @@ void main()
 	DrawBustshot( 1, "me_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 3000, TRUE );
 
-	if (AdvMode == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //　...哄笑だった￥
-	PlaySE(3, "s20/02/440200054", 256, 64);
-	PlaySE(4, "s20/03/440300044", 256, 64);
-	if (AdvMode) { OutputLine("<color=#f0953d>レナ</color>＆<color=#5ec69a>魅音</color>", NULL, "<color=#f0953d>Rena</color> & <color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if(GetGlobalFlag(GADVMode) == 1) { OutputLine("<color=#f0953d>レナ</color>＆<color=#5ec69a>魅音</color>", NULL, "<color=#f0953d>Rena</color> & <color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice( 3, "s20/02/440200054", 256 );
+	PlayVoice( 4, "s20/03/440300044", 256 );
 	OutputLine(NULL, "　…哄笑だった。",
 		   NULL, "By loud laughter...", Line_Normal);
 	ClearMessage();
