@@ -1,13 +1,5 @@
 void main()
 {
-	int AdvMode;
-	AdvMode = 1;
-	int Line_ModeSpecific;
-	if (AdvMode) {
-		Line_ModeSpecific = Line_Normal;
-	} else {
-		Line_ModeSpecific = Line_WaitForInput;
-	}
 
 
 //*Sub_Tips_011
@@ -25,12 +17,12 @@ void main()
 
 //locate 2,7
 
-	if (AdvMode == 0) { SetDrawingPointOfMessage( 0, 7 ); }
+	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 7 ); }
 	SetStyleOfMessageSwinging( 1 );
 
 //（新聞には掲載されなかった......￥
 	ClearMessage();
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "（新聞には掲載されなかった……）",
 		   NULL, "(It wasn't reported in the newspaper...)", Line_Normal);
 	ClearMessage();

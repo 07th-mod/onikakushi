@@ -1,13 +1,5 @@
 void main()
 {
-	int AdvMode;
-	AdvMode = 1;
-	int Line_ModeSpecific;
-	if (AdvMode) {
-		Line_ModeSpecific = Line_Normal;
-	} else {
-		Line_ModeSpecific = Line_WaitForInput;
-	}
 
 
 //■雛見沢ダム計画
@@ -26,22 +18,22 @@ void main()
 
 //　昭和五十年十月＠
 	ClearMessage();
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　昭和五十年十月。",
-		   NULL, "October, 1975.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "October, 1975.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　総理府告示第ＸＸＸ号を以て、雛見沢発電所電源開発基本計画が発表された＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　総理府告示第ＸＸＸ号を以て、雛見沢発電所電源開発基本計画が発表された。",
-		   NULL, "In accordance with the Prime Minister's bulletin number XXX, Hinamizawa's electrical development master plan was announced.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "In accordance with the Prime Minister's bulletin number XXX, Hinamizawa's electrical development master plan was announced.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 
 //　計画された「雛見沢ダム」の規模は甚大で、雛見沢村の受ける影響は余りに重大だった￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　計画された「雛見沢ダム」の規模は甚大で、雛見沢村の受ける影響は余りに重大だった。",
 		   NULL, "The vast scope of the projected Hinamizawa dam was to have an incredibly heavy impact on the village of Hinamizawa.", Line_Normal);
 	ClearMessage();
@@ -49,14 +41,14 @@ void main()
 	DrawScene( "bg_005", 1000 );
 
 //　雛見沢ダムにより水没する地域は雛見沢、高津戸、清津、松本、谷河内の五ヶ部落に及び＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　雛見沢ダムにより水没する地域は雛見沢、高津戸、清津、松本、谷河内の五ヶ部落に及び、",
-		   NULL, "The area to be flooded by the Hinamizawa dam would include the five areas of Hinamizawa, Takatsudo, Kiyotsu, Matsumoto, and Yagochi.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "The area to be flooded by the Hinamizawa dam would include the five areas of Hinamizawa, Takatsudo, Kiyotsu, Matsumoto, and Yagochi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　水没世帯は二九一戸＠人口一二五一人＠小学校一＠中学校一＠郵便局一＠農協支所一＠営林署貯木場一＠神社五＠寺院二＠魚族増殖場一＠等多数の公共的文化的生産的施設と信仰の対象を永久に湖底に没するものである￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　水没世帯は二九一戸、",
 		   NULL, "The submerged area would include 291 houses.", Line_WaitForInput);
 	OutputLine(NULL, "人口一二五一人、",
@@ -74,8 +66,8 @@ void main()
 	OutputLine(NULL, "神社五、",
 		   NULL, " 5 shrines,", Line_WaitForInput);
 	OutputLine(NULL, "寺院二、",
-		   NULL, " 2 temples, ", Line_ModeSpecific);
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+		   NULL, " 2 temples, ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "魚族増殖場一、",
 		   NULL, "and 1 fishery.", Line_WaitForInput);
 	OutputLine(NULL, "等多数の公共的文化的生産的施設と信仰の対象を永久に湖底に没するものである。",
@@ -85,41 +77,41 @@ void main()
 	DrawScene( "bg_001", 1000 );
 
 //　この天恵豊かで住みよい郷土を、血と汗をもって築いてくれた父祖幾百年の艱難辛苦を思えば余りに痛ましいことであり＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　この天恵豊かで住みよい郷土を、血と汗をもって築いてくれた父祖幾百年の艱難辛苦を思えば余りに痛ましいことであり、",
-		   NULL, "Forsaking the hundreds of years our ancestors poured their blood and sweat into this fertile, resource-rich land was just too painful to bear.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "Forsaking the hundreds of years our ancestors poured their blood and sweat into this fertile, resource-rich land was just too painful to bear.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　水没地域はもとより全部落は郷土死守の決意を固め次々に決起、団結し鬼ケ淵死守同盟を結成＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　水没地域はもとより全部落は郷土死守の決意を固め次々に決起、団結し鬼ケ淵死守同盟を結成。",
-		   NULL, "All the residents having homes that were to be submerged banded together, and created the Onigafuchi Defense Alliance.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "All the residents having homes that were to be submerged banded together, and created the Onigafuchi Defense Alliance.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　ダム建設の中止、又は支流への計画変更を強力に要請し続けたのである￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ダム建設の中止、又は支流への計画変更を強力に要請し続けたのである。",
 		   NULL, "The dam project was halted and petitions to alter the plan were circulated.", Line_Normal);
 	ClearMessage();
 
 //　平和的かつ民主的な話し合いを求めるも、政府とその傀儡である電源会社総裁ＸＸＸＸＸはこれを拒否＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　平和的かつ民主的な話し合いを求めるも、政府とその傀儡である電源会社総裁ＸＸＸＸＸはこれを拒否。",
-		   NULL, "The citizens sought peaceful negotiations, but the government and its puppet company XXXXX openly refused.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "The citizens sought peaceful negotiations, but the government and its puppet company XXXXX openly refused.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //　筆舌に尽くし難い極悪非道を以て、村民の民主的運動と雛見沢の郷土を踏みにじったのである＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　筆舌に尽くし難い極悪非道を以て、村民の民主的運動と雛見沢の郷土を踏みにじったのである。",
-		   NULL, "Performing unspeakable, heinous acts, they quashed the democratic actions of the villagers.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "Performing unspeakable, heinous acts, they quashed the democratic actions of the villagers.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　だが村民はこれに怯むことなく益々団結、郷土死守の決意をさらに強固にしていくのである￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが村民はこれに怯むことなく益々団結、郷土死守の決意をさらに強固にしていくのである。",
 		   NULL, "But the villagers did not falter. Instead, they banded together even more closely and steeled their resolve to protect their homes to the death.", Line_Normal);
 	ClearMessage();
@@ -127,14 +119,14 @@ void main()
 	DrawScene( "bg_092", 1000 );
 
 //　今日、恐るべき雛見沢ダム建設計画は、その再開が無期限に凍結されている＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　今日、恐るべき雛見沢ダム建設計画は、その再開が無期限に凍結されている。",
-		   NULL, "The continuation of that frightening Hinamizawa dam construction project is still stalled as of today.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, "The continuation of that frightening Hinamizawa dam construction project is still stalled as of today.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　村民はこの凍結が自らの団結の祟高な力によってなされていることを理解しており＠そしてこの恐るべき計画が依然撤回されていないことも理解しているのである￥
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　村民はこの凍結が自らの団結の祟高な力によってなされていることを理解しており、",
 		   NULL, "The villagers understand that the stalling was caused by sublime power through unity", Line_WaitForInput);
 	OutputLine(NULL, "そしてこの恐るべき計画が依然撤回されていないことも理解しているのである。",
@@ -142,23 +134,23 @@ void main()
 	ClearMessage();
 
 //　すでに鬼ケ淵死守同盟はその役割を終え解散しているが、そこで育まれた団結の炎は消えていない＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　すでに鬼ケ淵死守同盟はその役割を終え解散しているが、そこで育まれた団結の炎は消えていない。",
-		   NULL, "The Onigafuchi Defense Alliance had been dissolved after it did its part, but the feelings of unity it garnered have not yet been extinguished.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, "The Onigafuchi Defense Alliance had been dissolved after it did its part, but the feelings of unity it garnered have not yet been extinguished.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
 //　村民の心にこの炎が灯り続ける限り、再び郷土が湖底に沈む災厄に見舞われることは断じてあり得ないのである＠
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　村民の心にこの炎が灯り続ける限り、再び郷土が湖底に沈む災厄に見舞われることは断じてあり得ないのである。",
-		   NULL, "As long as that passion resides in the hearts of the residents, they'll be able to confront whomever next decides to sink their homes into a lake basin.", Line_ModeSpecific);
-	if (AdvMode) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
+		   NULL, "As long as that passion resides in the hearts of the residents, they'll be able to confront whomever next decides to sink their homes into a lake basin.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
 //　　　　　鬼ケ淵死守同盟会長!w1000　公由喜一郎￥
 
-	if (AdvMode) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　　　　　鬼ケ淵死守同盟会長",
 		   NULL, "Onigafuchi Defense Alliance Committee Chairman,", Line_ContinueAfterTyping);
 
