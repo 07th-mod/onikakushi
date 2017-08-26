@@ -1,24 +1,92 @@
 void main()
 {
-	// This variable can't be named just AdvMode as in other files because it causes an exception.
-	int InitAdvMode;
-	InitAdvMode = 1;
+	// Max Number for Global Flags hotkey
+	SetGlobalFlag(GCensorMaxNum , 0);
+	SetGlobalFlag(GEffectExtendMaxNum , 1);
+	SetGlobalFlag(GAltBGMflowMaxNum , 0);
+	SetGlobalFlag(GAltSEflowMaxNum , 0);
 
-	SetFontId(3); //0 is MS Gothic (default japanese), 1 is MS PGothic (default english), 2 is dejavu sans, 3 is source han sans chinese simplified (for chinese)
-	SetCharSpacing(0); //use negative values to make characters appear closer together
-	SetLineSpacing(8);
-	SetFontSize(30);
+	// restore default ADV-MODE setting
+	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 0) {
+		SetGlobalFlag(GVoiceVolume , 75);
+		SetGlobalFlag(GSEVolume , 50);
+		SetGlobalFlag(GBGMVolume , 50);
+		SetGlobalFlag(GADVMode , 1);
+		SetGlobalFlag(GEffectExtend , 1);
+		SetGlobalFlag(GAltBGM , 0);
+		SetGlobalFlag(GAltSE , 0);
+		SetGlobalFlag(GAltVoice , 0);
+		SetGlobalFlag(GCensor , 0);
+		SetGlobalFlag(GAltBGMflow , 0);
+		SetGlobalFlag(GAltSEflow , 0);
+		SetGlobalFlag(GAltVoicePriority , 0);
+		SetGlobalFlag(GWindowOpacity , 100);
+		SetGlobalFlag(GHideButtons , 1);
+		SetGlobalFlag(GMOD_SETTING_LOADER ,3 );
+	}
 
-	if (InitAdvMode) {
+	// restore default NVL-MODE setting
+	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 1) {
+		SetGlobalFlag(GVoiceVolume , 75);
+		SetGlobalFlag(GSEVolume , 50);
+		SetGlobalFlag(GBGMVolume , 50);
+		SetGlobalFlag(GADVMode , 0);
+		SetGlobalFlag(GEffectExtend , 1);
+		SetGlobalFlag(GAltBGM , 0);
+		SetGlobalFlag(GAltSE , 0);
+		SetGlobalFlag(GAltVoice , 0);
+		SetGlobalFlag(GCensor , 0);
+		SetGlobalFlag(GAltBGMflow , 0);
+		SetGlobalFlag(GAltSEflow , 0);
+		SetGlobalFlag(GAltVoicePriority , 0);
+		SetGlobalFlag(GWindowOpacity , 50);
+		SetGlobalFlag(GHideButtons , 0);
+		SetGlobalFlag(GMOD_SETTING_LOADER , 3);
+	}
+
+	// restore vanilla GFlag settings
+	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 2) {
+		SetGlobalFlag(GVoiceVolume , 75);
+		SetGlobalFlag(GSEVolume , 50);
+		SetGlobalFlag(GBGMVolume , 50);
+		SetGlobalFlag(GADVMode , 0);
+		SetGlobalFlag(GEffectExtend , 0);
+		SetGlobalFlag(GAltBGM , 0);
+		SetGlobalFlag(GAltSE , 0);
+		SetGlobalFlag(GAltVoice , 0);
+		SetGlobalFlag(GCensor , 0);
+		SetGlobalFlag(GAltBGMflow , 0);
+		SetGlobalFlag(GAltSEflow , 0);
+		SetGlobalFlag(GAltVoicePriority , 0);
+		SetGlobalFlag(GWindowOpacity , 50);
+		SetGlobalFlag(GHideButtons , 0);
+		SetGlobalFlag(GMOD_SETTING_LOADER , 0);
+		SetGlobalFlag(GCensorMaxNum , 0);
+		SetGlobalFlag(GEffectExtendMaxNum , 0);
+		SetGlobalFlag(GAltBGMflowMaxNum , 0);
+		SetGlobalFlag(GAltSEflowMaxNum , 0);
+	}
+
+	if(GetGlobalFlag(GADVMode) == 1) {
 		SetNameFormat("<size=+4>{0}\n</size>");
 		SetWindowPos(0, -275);
 		SetWindowSize(1150, 250);
 		SetWindowMargins(60, 30, 50, 30);
+		SetGlobalFlag(GLinemodeSp , Line_Normal);
+		SetFontId(3); //0 is MS Gothic (default japanese), 1 is MS PGothic (default english), 2 is dejavu sans, 3 is source han sans chinese simplified (for chinese)
+		SetCharSpacing(0); //use negative values to make characters appear closer together
+		SetLineSpacing(8);
+		SetFontSize(30);
 	} else {
 		SetNameFormat("");
 		SetWindowPos(0, 0);
 		SetWindowSize(1240, 720);
 		SetWindowMargins(60, 30, 50, 30);
+		SetGlobalFlag(GLinemodeSp , Line_WaitForInput);
+		SetFontId(3); //0 is MS Gothic (default japanese), 1 is MS PGothic (default english), 2 is dejavu sans, 3 is source han sans chinese simplified (for chinese)
+		SetCharSpacing(0); //use negative values to make characters appear closer together
+		SetLineSpacing(1);
+		SetFontSize(30);
 	}
 
 	SetScreenAspect("0.5625");
