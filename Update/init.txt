@@ -1,126 +1,123 @@
 void main()
 {
-// Max Number for Global Flags hotkey
-	SetGlobalFlag(GCensorMaxNum , 0);
+	// Max Number for Global Flags hotkey
+	SetGlobalFlag(GCensorMaxNum , 3);
 	SetGlobalFlag(GEffectExtendMaxNum , 0);
 	SetGlobalFlag(GAltBGMflowMaxNum , 0);
 	SetGlobalFlag(GAltSEflowMaxNum , 0);
 
-// restore default ADV-MODE setting
-	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 0)
-	{
-	SetGlobalFlag(GVoiceVolume , 75);
-	SetGlobalFlag(GSEVolume , 50);
-	SetGlobalFlag(GBGMVolume , 50);
-	SetGlobalFlag(GADVMode , 1);
-	SetGlobalFlag(GEffectExtend , 0);
-	SetGlobalFlag(GAltBGM , 0);
-	SetGlobalFlag(GAltSE , 0);
-	SetGlobalFlag(GAltVoice , 0);
-	SetGlobalFlag(GCensor , 0);
-	SetGlobalFlag(GAltBGMflow , 0);
-	SetGlobalFlag(GAltSEflow , 0);
-	SetGlobalFlag(GAltVoicePriority , 0);
-	SetGlobalFlag(GWindowOpacity , 100);
-	SetGlobalFlag(GHideButtons , 0);
-	SetGlobalFlag(GMOD_SETTING_LOADER ,3 );
+	// restore default ADV-MODE setting
+	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 0) {
+		SetGlobalFlag(GVoiceVolume , 75);
+		SetGlobalFlag(GSEVolume , 50);
+		SetGlobalFlag(GBGMVolume , 50);
+		SetGlobalFlag(GADVMode , 1);
+		SetGlobalFlag(GEffectExtend , 0);
+		SetGlobalFlag(GAltBGM , 0);
+		SetGlobalFlag(GAltSE , 0);
+		SetGlobalFlag(GAltVoice , 0);
+		SetGlobalFlag(GCensor , 2);
+		SetGlobalFlag(GAltBGMflow , 0);
+		SetGlobalFlag(GAltSEflow , 0);
+		SetGlobalFlag(GAltVoicePriority , 0);
+		SetGlobalFlag(GWindowOpacity , 100);
+		SetGlobalFlag(GHideButtons , 0);
+		SetGlobalFlag(GMOD_SETTING_LOADER ,3 );
 	}
-// restore default NVL-MODE setting
-	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 1)
-	{
-	SetGlobalFlag(GVoiceVolume , 75);
-	SetGlobalFlag(GSEVolume , 50);
-	SetGlobalFlag(GBGMVolume , 50);
-	SetGlobalFlag(GADVMode , 0);
-	SetGlobalFlag(GEffectExtend , 0);
-	SetGlobalFlag(GAltBGM , 0);
-	SetGlobalFlag(GAltSE , 0);
-	SetGlobalFlag(GAltVoice , 0);
-	SetGlobalFlag(GCensor , 0);
-	SetGlobalFlag(GAltBGMflow , 0);
-	SetGlobalFlag(GAltSEflow , 0);
-	SetGlobalFlag(GAltVoicePriority , 0);
-	SetGlobalFlag(GWindowOpacity , 50);
-	SetGlobalFlag(GHideButtons , 0);
-	SetGlobalFlag(GMOD_SETTING_LOADER , 3);
+
+	// restore default NVL-MODE setting
+	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 1) {
+		SetGlobalFlag(GVoiceVolume , 75);
+		SetGlobalFlag(GSEVolume , 50);
+		SetGlobalFlag(GBGMVolume , 50);
+		SetGlobalFlag(GADVMode , 0);
+		SetGlobalFlag(GEffectExtend , 0);
+		SetGlobalFlag(GAltBGM , 0);
+		SetGlobalFlag(GAltSE , 0);
+		SetGlobalFlag(GAltVoice , 0);
+		SetGlobalFlag(GCensor , 2);
+		SetGlobalFlag(GAltBGMflow , 0);
+		SetGlobalFlag(GAltSEflow , 0);
+		SetGlobalFlag(GAltVoicePriority , 0);
+		SetGlobalFlag(GWindowOpacity , 50);
+		SetGlobalFlag(GHideButtons , 0);
+		SetGlobalFlag(GMOD_SETTING_LOADER , 3);
 	}
-// restore vanilla GFlag settings
-	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 2)
-	{
-	SetGlobalFlag(GVoiceVolume , 75);
-	SetGlobalFlag(GSEVolume , 50);
-	SetGlobalFlag(GBGMVolume , 50);
-	SetGlobalFlag(GADVMode , 0);
-	SetGlobalFlag(GEffectExtend , 0);
-	SetGlobalFlag(GAltBGM , 0);
-	SetGlobalFlag(GAltSE , 0);
-	SetGlobalFlag(GAltVoice , 0);
-	SetGlobalFlag(GCensor , 0);
-	SetGlobalFlag(GAltBGMflow , 0);
-	SetGlobalFlag(GAltSEflow , 0);
-	SetGlobalFlag(GAltVoicePriority , 0);
-	SetGlobalFlag(GWindowOpacity , 50);
-	SetGlobalFlag(GHideButtons , 0);
-	SetGlobalFlag(GMOD_SETTING_LOADER , 0);
-	SetGlobalFlag(GCensorMaxNum , 0);
-	SetGlobalFlag(GEffectExtendMaxNum , 0);
-	SetGlobalFlag(GAltBGMflowMaxNum , 0);
-	SetGlobalFlag(GAltSEflowMaxNum , 0);
-	SetGlobalFlag(GFlagMonitor, 0);
-	SetGlobalFlag(GMOD_DEBUG_MODE, 0);
+
+	// restore vanilla GFlag settings
+	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 2) {
+		SetGlobalFlag(GVoiceVolume , 75);
+		SetGlobalFlag(GSEVolume , 50);
+		SetGlobalFlag(GBGMVolume , 50);
+		SetGlobalFlag(GADVMode , 0);
+		SetGlobalFlag(GEffectExtend , 0);
+		SetGlobalFlag(GAltBGM , 0);
+		SetGlobalFlag(GAltSE , 0);
+		SetGlobalFlag(GAltVoice , 0);
+		SetGlobalFlag(GCensor , 0);
+		SetGlobalFlag(GAltBGMflow , 0);
+		SetGlobalFlag(GAltSEflow , 0);
+		SetGlobalFlag(GAltVoicePriority , 0);
+		SetGlobalFlag(GWindowOpacity , 50);
+		SetGlobalFlag(GHideButtons , 0);
+		SetGlobalFlag(GMOD_SETTING_LOADER , 0);
+		SetGlobalFlag(GCensorMaxNum , 0);
+		SetGlobalFlag(GEffectExtendMaxNum , 0);
+		SetGlobalFlag(GAltBGMflowMaxNum , 0);
+		SetGlobalFlag(GAltSEflowMaxNum , 0);
 	}
 
 	ModADVModeSettingLoad(
-	"<size=+4>{0}\n</size>", //NameFormat
-	-170, //WindowPosX
-	-275, //WindowPosY
-	1150, //WindowSizeX
-	250, //WindowSizeY
-	60, //WindowMarginLeft
-	30, //WindowMarginTop
-	50, //WindowMarginRight
-	30, //WindowMarginBottom
-	3, //FontID
-	0, //CharSpacing
-	8, //LineSpacaing
-	30); //FontSize
-
+		"<size=+4>{0}\n</size>", //NameFormat
+		-170, //WindowPosX
+		-275, //WindowPosY
+		1150, //WindowSizeX
+		250, //WindowSizeY
+		60, //WindowMarginLeft
+		30, //WindowMarginTop
+		50, //WindowMarginRight
+		30, //WindowMarginBottom
+		3, //FontID
+		0, //CharSpacing
+		8, //LineSpacing
+		30 //FontSize
+	);
 
 	ModNVLModeSettingLoad(
-	"", //NameFormat
-	-170, //WindowPosX
-	0, //WindowPosY
-	1240, //WindowSizeX
-	720, //WindowSizeY
-	60, //WindowMarginLeft
-	30, //WindowMarginTop
-	50, //WindowMarginRight
-	30, //WindowMarginBottom
-	3, //FontID
-	0, //CharSpacing
-	1, //LineSpacaing
-	42); //FontSize
+		"", //NameFormat
+		-170, //WindowPosX
+		0, //WindowPosY
+		1240, //WindowSizeX
+		720, //WindowSizeY
+		60, //WindowMarginLeft
+		30, //WindowMarginTop
+		50, //WindowMarginRight
+		30, //WindowMarginBottom
+		3, //FontID
+		0, //CharSpacing
+		8, //LineSpacing
+		34 //FontSize
+	);
 
 	ModNVLADVModeSettingLoad(
-	"", //NameFormat
-	-174, //WindowPosX
-	-75, //WindowPosY
-	1024, //WindowSizeX
-	768, //WindowSizeY
-	60, //WindowMarginLeft
-	30, //WindowMarginTop
-	50, //WindowMarginRight
-	30, //WindowMarginBottom
-	3, //FontID
-	0, //CharSpacing
-	8, //LineSpacaing
-	30); //FontSize
-
+		"", //NameFormat
+		-174, //WindowPosX
+		-75, //WindowPosY
+		1024, //WindowSizeX
+		768, //WindowSizeY
+		60, //WindowMarginLeft
+		30, //WindowMarginTop
+		50, //WindowMarginRight
+		30, //WindowMarginBottom
+		3, //FontID
+		0, //CharSpacing
+		8, //LineSpacing
+		30 //FontSize
+	);
 
 	SetScreenAspect("0.5625");
 	SetGUIPosition(170, 0);
-	PlayVoice(1,"",128);
-	OutputLineAll(NULL, "", Line_Continue);
+	OutputLineAll(NULL, "", Line_ContinueAfterTyping);
 	DisableWindow();
 
 	CallScript( "flow" );
