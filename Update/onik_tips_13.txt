@@ -30,9 +30,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/443200002", 128);
 	OutputLine(NULL, "　爪の間に肉や皮がびっしり詰まっとった。",
-		   NULL, "Tissue is packed under the nails.", Line_ContinueAfterTyping);
+		   NULL, "Tissue is packed under the nails.", Line_Continue);
 	OutputLine(NULL, "他人の爪じゃない。",
-		   NULL, " Not someone else's nails.", Line_ContinueAfterTyping);
+		   NULL, " Not someone else's nails.", Line_Continue);
 	OutputLine(NULL, "間違いなく本人の爪じゃわい。",
 		   NULL, " It's undoubtedly by the individual's own nails.", Line_WaitForInput);
 	PlayVoice(3, "s20/00/443200003", 128);
@@ -46,7 +46,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700009", 128);
 	OutputLine(NULL, "「えぇえぇ。",
-		   NULL, "\"Yeaaaah...", Line_ContinueAfterTyping);
+		   NULL, "\"Yeaaaah...", Line_Continue);
 	OutputLine(NULL, "直接死因が自殺ってのはわかってますよ。」",
 		   NULL, " I know the immediate cause of death was suicide.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -57,7 +57,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/443200004", 128);
 	OutputLine(NULL, "「わかっとるわい。",
-		   NULL, "\"I get it.", Line_ContinueAfterTyping);
+		   NULL, "\"I get it.", Line_Continue);
 	OutputLine(NULL, "人為的にこういう症状が起こせんかと言っとるんだろう？」",
 		   NULL, " You're saying the cause of death is unnatural, right?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -135,7 +135,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700011", 128);
 	OutputLine(NULL, "「では乱闘になって、興奮のあまり自分の喉を引っ掻きだしたってことですか？",
-		   NULL, "\"Then he fought back and clawed out his own throat because of how hysterical he had become?", Line_ContinueAfterTyping);
+		   NULL, "\"Then he fought back and clawed out his own throat because of how hysterical he had become?", Line_Continue);
 	OutputLine(NULL, "　襲った連中、さぞや度肝を抜かれたでしょうなぁ。」",
 		   NULL, " The guys attacking him certainly would have been surprised by that.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -161,7 +161,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/443200006", 128);
 	OutputLine(NULL, "「実はな、大石くん。",
-		   NULL, "\"Actually, Ooishi-kun,", Line_ContinueAfterTyping);
+		   NULL, "\"Actually, Ooishi-kun,", Line_Continue);
 	OutputLine(NULL, "仏が武器にしたらしい角材な。",
 		   NULL, " that wood plank the deceased used as a weapon?", Line_WaitForInput);
 	PlayVoice(3, "s20/00/443200007", 128);
@@ -209,7 +209,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/443200010", 128);
 	OutputLine(NULL, "「かっかっかっか！",
-		   NULL, "\"Har har har har!", Line_ContinueAfterTyping);
+		   NULL, "\"Har har har har!", Line_Continue);
 	OutputLine(NULL, "　それもそうじゃのう。」",
 		   NULL, " That's true.\"", Line_Normal);
 	ClearMessage();
@@ -218,7 +218,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700014", 128);
 	OutputLine(NULL, "「富竹氏は結構、体格もいいし肌も焼けてるし。",
-		   NULL, "\"Tomitake's pretty built and tanned...", Line_ContinueAfterTyping);
+		   NULL, "\"Tomitake's pretty built and tanned...", Line_Continue);
 	OutputLine(NULL, "…スポーツマンですよねぇ。」",
 		   NULL, " He was quite athletic.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -229,7 +229,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/443200011", 128);
 	OutputLine(NULL, "「ん？",
-		   NULL, "\"Hm?", Line_ContinueAfterTyping);
+		   NULL, "\"Hm?", Line_Continue);
 	OutputLine(NULL, "　そうだな。",
 		   NULL, " That's right.", Line_WaitForInput);
 	PlayVoice(3, "s20/00/443200012", 128);
@@ -296,7 +296,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700015", 128);
 	OutputLine(NULL, "「こんだけ体格のいい相手を取り囲んで襲おうとしたら、",
-		   NULL, "\"To surround and take down someone of his physique...", Line_ContinueAfterTyping);
+		   NULL, "\"To surround and take down someone of his physique...", Line_Continue);
 	OutputLine(NULL, "…何人くらいいりますかねぇ。」",
 		   NULL, " I wonder how many people it would take.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -307,7 +307,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/443200013", 128);
 	OutputLine(NULL, "「あほぅ。",
-		   NULL, "\"Ya dimwit...", Line_ContinueAfterTyping);
+		   NULL, "\"Ya dimwit...", Line_Continue);
 	OutputLine(NULL, "それは大石くんの方が得意だろうが。",
 		   NULL, " If anything, that's your specialty.", Line_WaitForInput);
 	PlayVoice(3, "s20/00/443200014", 128);
@@ -407,7 +407,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/443200017", 128);
 	OutputLine(NULL, "「こっちもそこは重視しとる。",
-		   NULL, "\"That's under serious consideration on my end, too.", Line_ContinueAfterTyping);
+		   NULL, "\"That's under serious consideration on my end, too.", Line_Continue);
 	OutputLine(NULL, "徹底的に調べるつもりだが…あまり期待できんな。",
 		   NULL, " I'll be examining it as thoroughly as possible, but don't get your hopes up.", Line_WaitForInput);
 	PlayVoice(3, "s20/00/443200018", 128);
@@ -421,7 +421,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700016", 128);
 	OutputLine(NULL, "「期待はしませんよ。",
-		   NULL, "\"I'm not hoping for much.", Line_ContinueAfterTyping);
+		   NULL, "\"I'm not hoping for much.", Line_Continue);
 	OutputLine(NULL, "ですが結果を楽しみにしてます。」",
 		   NULL, " But I am looking forward to the results.\"", Line_Normal);
 	ClearMessage();
@@ -430,7 +430,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/19/443100001", 128);
 	OutputLine(NULL, "「大石さん〜！",
-		   NULL, "\"Ooishi-san~!", Line_ContinueAfterTyping);
+		   NULL, "\"Ooishi-san~!", Line_Continue);
 	OutputLine(NULL, "　課長が呼んでるっすー！」",
 		   NULL, " The chief is calling you!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -450,7 +450,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/443200019", 128);
 	OutputLine(NULL, "「おう。",
-		   NULL, "\"Yeah.", Line_ContinueAfterTyping);
+		   NULL, "\"Yeah.", Line_Continue);
 	OutputLine(NULL, "いいお年をの！」",
 		   NULL, " Best wishes!\"", Line_Normal);
 	ClearMessage();

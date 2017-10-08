@@ -69,7 +69,7 @@ void main()
 	SetGlobalFlag(GFlagMonitor, 0);
 	SetGlobalFlag(GMOD_DEBUG_MODE, 0);
 	}
-	
+
 	ModADVModeSettingLoad(
 	"<size=+4>{0}\n</size>", //NameFormat
 	-170, //WindowPosX
@@ -84,8 +84,8 @@ void main()
 	0, //CharSpacing
 	8, //LineSpacaing
 	30); //FontSize
-	
-	
+
+
 	ModNVLModeSettingLoad(
 	"", //NameFormat
 	-170, //WindowPosX
@@ -100,7 +100,7 @@ void main()
 	0, //CharSpacing
 	1, //LineSpacaing
 	42); //FontSize
-	
+
 	ModNVLADVModeSettingLoad(
 	"", //NameFormat
 	-174, //WindowPosX
@@ -115,12 +115,12 @@ void main()
 	0, //CharSpacing
 	8, //LineSpacaing
 	30); //FontSize
-	
+
 
 	SetScreenAspect("0.5625");
 	SetGUIPosition(170, 0);
 	PlayVoice(1,"",128);
-	OutputLineAll(NULL, "", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "", Line_Continue);
 	DisableWindow();
 
 	CallScript( "flow" );

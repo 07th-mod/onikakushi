@@ -469,11 +469,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/01/hr_kei07300", 256);
 	OutputLine(NULL, "「な、な！",
-		   NULL, "\"Wh-Wha!?", Line_ContinueAfterTyping);
+		   NULL, "\"Wh-Wha!?", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　なんで俺が下らん想像をしたことがわかったッ？！」",
 		   NULL, " How could you tell I was thinking something silly!?\"", GetGlobalFlag(GLinemodeSp));
@@ -602,7 +602,7 @@ void main()
 		   NULL, "\"Our club's summer tradition!", Line_WaitForInput);
 	PlayVoice(3, "s19/03/990300270", 256);
 	OutputLine(NULL, "　綿流祭四凶爆闘！！」",
-		   NULL, " The Watanagashi Four-Demon Fire Fight!\"", Line_ContinueAfterTyping);
+		   NULL, " The Watanagashi Four-Demon Fire Fight!\"", Line_Continue);
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 0, 50, 20, 3, 0, );
 	OutputLineAll(NULL, "", Line_Normal);
@@ -800,10 +800,10 @@ void main()
 
 
 //「な～～しッ！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>部活メンバー</color>", NULL, "<color=#f5e6d3>Club Members</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/01/hr_kei07330_01", 300);
 	PlayVoice(5, "s19/02/990200320", 300);
 	PlayVoice(6, "s19/04/990400121", 300);
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>部活メンバー</color>", NULL, "<color=#f5e6d3>Club Members</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(7, "s19/05/990500061", 300);
 	OutputLine(NULL, "「な〜〜しッ！！」",
 		   NULL, "\"Naaay!\"", GetGlobalFlag(GLinemodeSp));
@@ -898,13 +898,13 @@ void main()
 		   NULL, "\"Are you all satisfied?", Line_WaitForInput);
 	PlayVoice(3, "s19/03/990300280", 256);
 	OutputLine(NULL, "　じゃあ今日はね",
-		   NULL, " Then today, I guess", Line_ContinueAfterTyping);
+		   NULL, " Then today, I guess", Line_Continue);
 
 //!s200
 
 	SetSpeedOfMessage( TRUE, 0, );
 	OutputLine(NULL, "……………",
-		   NULL, " ...", Line_ContinueAfterTyping);
+		   NULL, " ...", Line_Continue);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -1192,7 +1192,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/05/990500062", 256);
 	OutputLine(NULL, "「…何もなし、",
-		   NULL, "\"...'No penalty,'", Line_ContinueAfterTyping);
+		   NULL, "\"...'No penalty,'", Line_Continue);
 
 	Wait( 300 );
 
@@ -1487,18 +1487,18 @@ void main()
 		   NULL, "\"Nine!", Line_WaitForInput);
 	PlayVoice(3, "s19/04/990400133", 256);
 	OutputLine(NULL, "　いないですの？！",
-		   NULL, " Nobody!?", Line_ContinueAfterTyping);
+		   NULL, " Nobody!?", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　８！",
-		   NULL, " Eight!", Line_ContinueAfterTyping);
+		   NULL, " Eight!", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　７！",
 		   NULL, " Seven!", Line_WaitForInput);
@@ -1543,11 +1543,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/03/990300291", 256);
 	OutputLine(NULL, "「ち…！",
-		   NULL, "\"Bah...!", Line_ContinueAfterTyping);
+		   NULL, "\"Bah...!", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 500 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　機を逸したか…ッ！！！！」",
 		   NULL, " I missed my chance...!\"", Line_Normal);
@@ -1603,10 +1603,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/03/990300292", 256);
 	OutputLine(NULL, "「……だッ？！",
-		   NULL, "\"...Wha!?", Line_ContinueAfterTyping);
-	SetValidityOfInput( FALSE );
+		   NULL, "\"...Wha!?", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "　誰これ？！",
 		   NULL, " Who did this!?", Line_WaitForInput);
 
@@ -1635,12 +1635,12 @@ void main()
 
 	PlayVoice(3, "s19/02/990200332", 256);
 	OutputLine(NULL, "　どんなの？",
-		   NULL, " What is it?", Line_ContinueAfterTyping);
+		   NULL, " What is it?", Line_Continue);
 
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "……………",
-		   NULL, " ...", Line_ContinueAfterTyping);
+		   NULL, " ...", Line_Continue);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -1956,19 +1956,19 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/03/990300297", 256);
 	OutputLine(NULL, "「……撫でた。",
-		   NULL, "\"...Petted.", Line_ContinueAfterTyping);
+		   NULL, "\"...Petted.", Line_Continue);
 
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……これで",
-		   NULL, " ...Is that...", Line_ContinueAfterTyping);
+		   NULL, " ...Is that...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 500 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……いい…？！」",
 		   NULL, " good enough...!?\"", GetGlobalFlag(GLinemodeSp));
@@ -2004,11 +2004,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/03/990300298", 256);
 	OutputLine(NULL, "「……ぉ",
-		   NULL, "\"...M...", Line_ContinueAfterTyping);
+		   NULL, "\"...M...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……鬼……。」",
 		   NULL, " monster...\"", GetGlobalFlag(GLinemodeSp));
@@ -2086,11 +2086,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/03/990300301", 256);
 	OutputLine(NULL, "「Ａ！",
-		   NULL, "\"Ace!", Line_ContinueAfterTyping);
+		   NULL, "\"Ace!", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　３・４・５！！　あっがりぃ！！」",
 		   NULL, " Three, Four, Five!! I'm out!!\"", GetGlobalFlag(GLinemodeSp));
@@ -2571,11 +2571,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/02/990200352", 256);
 	OutputLine(NULL, "「こ、これで…よろしいでしょうか…ご",
-		   NULL, "\"I-Is this... fine... M...", Line_ContinueAfterTyping);
+		   NULL, "\"I-Is this... fine... M...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "………ご主人様ぁ…。」",
 		   NULL, " Master...?\"", GetGlobalFlag(GLinemodeSp));
@@ -2610,7 +2610,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/01/hr_kei07550", 256);
 	OutputLine(NULL, "「あ、………",
-		   NULL, "\"Ah...", Line_ContinueAfterTyping);
+		   NULL, "\"Ah...", Line_Continue);
 //!sd
 
 	SetSpeedOfMessage( FALSE, 0, );
@@ -2924,25 +2924,25 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/02/990200355", 256);
 	OutputLine(NULL, "「……は、",
-		   NULL, "\"...Hu", Line_ContinueAfterTyping);
+		   NULL, "\"...Hu", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "はぅ…",
-		   NULL, " hao...", Line_ContinueAfterTyping);
+		   NULL, " hao...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…",
-		   NULL, " ...", Line_ContinueAfterTyping);
+		   NULL, " ...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "この格好でですか…ご主人様ぁ……。」",
 		   NULL, " In this outfit... Master...?\"", GetGlobalFlag(GLinemodeSp));
@@ -3080,11 +3080,11 @@ void main()
 //…きゃふ！!w400　あんまり頭をごろごろしないで下さいましぃ…。＠
 	PlayVoice(3, "s19/02/990200357", 256);
 	OutputLine(NULL, "…きゃふ！",
-		   NULL, " ...Eeek!", Line_ContinueAfterTyping);
+		   NULL, " ...Eeek!", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　あんまり頭をごろごろしないで下さいましぃ…。」",
 		   NULL, " Please refrain from moving your head around so much...\"", GetGlobalFlag(GLinemodeSp));
@@ -3184,13 +3184,13 @@ void main()
 		   NULL, "\"Eeeek!", Line_WaitForInput);
 	PlayVoice(3, "s19/02/990200359", 256);
 	OutputLine(NULL, "　ご主人様ぁ…あんまりごろごろしないで",
-		   NULL, " Master... please refrain from moving your head around", Line_ContinueAfterTyping);
+		   NULL, " Master... please refrain from moving your head around", Line_Continue);
 //!s150
 
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "……",
-		   NULL, "...", Line_ContinueAfterTyping);
+		   NULL, "...", Line_Continue);
 //!sd
 
 	SetSpeedOfMessage( FALSE, 0, );
@@ -3634,18 +3634,18 @@ void main()
 		   NULL, "\"How preposterous!!", Line_WaitForInput);
 	PlayVoice(3, "s19/01/hr_kei07850", 256);
 	OutputLine(NULL, "　レナなど返り討ちに",
-		   NULL, " That Rena can't defeat me", Line_ContinueAfterTyping);
+		   NULL, " That Rena can't defeat me", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…",
-		   NULL, "...", Line_ContinueAfterTyping);
+		   NULL, "...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 500 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…ひッ？！」",
 		   NULL, " ...eep!?\"", Line_Normal);
@@ -3772,7 +3772,7 @@ void main()
 		   NULL, "\"Now then! I'll take one out!", Line_WaitForInput);
 	PlayVoice(3, "s19/04/990400158", 256);
 	OutputLine(NULL, "　圭一さんの罰ゲーム！！！",
-		   NULL, " Keiichi-san's penalty!", Line_ContinueAfterTyping);
+		   NULL, " Keiichi-san's penalty!", Line_Continue);
 
 	PlaySE( 4, "wa_007", 128, 64 );
 
@@ -3836,9 +3836,9 @@ void main()
 //「なッ、!s120……なんだそりゃぁあぁあぁあぁッ？！？！？！」!sd
 	PlayVoice(3, "s19/01/hr_kei07890", 256);
 	if (GetGlobalFlag(GADVMode) == 0) { ClearMessage(); }
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_Continue); }
 	OutputLine(NULL, "「なッ、",
-		   NULL, "\"Wha", Line_ContinueAfterTyping);
+		   NULL, "\"Wha", Line_Continue);
 //!s120
 
 	SetSpeedOfMessage( TRUE, 0, );
@@ -4082,12 +4082,12 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/01/hr_kei08010", 256);
 	OutputLine(NULL, "「ぎゃぎゃ",
-		   NULL, "\"N-N", Line_ContinueAfterTyping);
+		   NULL, "\"N-N", Line_Continue);
 //!s250
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "………",
-		   NULL, "...", Line_ContinueAfterTyping);
+		   NULL, "...", Line_Continue);
 //!s80
 	SetSpeedOfMessage( TRUE, 127, );
 
@@ -4372,19 +4372,19 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/01/hr_kei08060", 256);
 	OutputLine(NULL, "「校",
-		   NULL, "\"Princi", Line_ContinueAfterTyping);
+		   NULL, "\"Princi", Line_Continue);
 //!s75
 
 	SetSpeedOfMessage( TRUE, 32, );
 
 	OutputLine(NULL, "長ぉぉおおおおぉおおおッ！！！　",
-		   NULL, " paaaAaaAal!!!", Line_ContinueAfterTyping);
+		   NULL, " paaaAaaAal!!!", Line_Continue);
 //!sd
 
 
 
 	OutputLine(NULL, "勝負",
-		   NULL, " I challenge you...", Line_ContinueAfterTyping);
+		   NULL, " I challenge you...", Line_Continue);
 //!s70
 
 	SetSpeedOfMessage( TRUE, 0, );
@@ -4846,11 +4846,11 @@ void main()
 		   NULL, "\"The way he's going, he probably won't ever get famous.", Line_WaitForInput);
 	PlayVoice(3, "s19/03/990300343", 256);
 	OutputLine(NULL, "個展開いたら私の写真、展示してもらう約束になってんだけど〜",
-		   NULL, " I had him promise he'd display a picture of me if he ever opened up a gallery, but...", Line_ContinueAfterTyping);
+		   NULL, " I had him promise he'd display a picture of me if he ever opened up a gallery, but...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 500 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…当分実現しそうにないかね。」",
 		   NULL, " I don't think that'll ever happen.\"", GetGlobalFlag(GLinemodeSp));

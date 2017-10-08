@@ -40,7 +40,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/02/440200103", 256);
 	OutputLine(NULL, "「この度は当サークル、０７ｔｈ　Ｅｘｐａｎｓｉｏｎのノベルゲーム、",
-		   NULL, "\"Thank you for buying Higurashi When They Cry ~Onikakushi~,", Line_ContinueAfterTyping);
+		   NULL, "\"Thank you for buying Higurashi When They Cry ~Onikakushi~,", Line_Continue);
 	OutputLine(NULL, "ひぐらしのなく頃に〜鬼隠し編〜をお買い上げ下さいまして、誠にありがとうございました！",
 		   NULL, " a visual novel by 07th Expansion!", Line_WaitForInput);
 	PlayVoice(3, "s20/02/440200104", 256);
@@ -432,10 +432,10 @@ void main()
 	OutputLine(NULL, "私もあの電話は変だと思ったね。",
 		   NULL, " I also thought that call was strange.", GetGlobalFlag(GLinemodeSp));
 	PlayVoice(3, "s20/03/440300263", 256);
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_Continue); }
 
 
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "　あの時点で圭ちゃんは犯人は人間だと確信してたはずなのにさ。」",
 		   NULL, "At that point, Kei-chan should have been certain that the culprits were people.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -976,11 +976,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/03/440300276", 256);
 	OutputLine(NULL, "「……そこは",
-		   NULL, "\"...About that", Line_ContinueAfterTyping);
+		   NULL, "\"...About that", Line_Continue);
 //!s500
 	SetSpeedOfMessage( TRUE, 0, );
 	OutputLine(NULL, "………",
-		   NULL, "...", Line_ContinueAfterTyping);
+		   NULL, "...", Line_Continue);
 //!sd,
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -1454,11 +1454,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/03/440300293", 256);
 	OutputLine(NULL, "「そりゃまー、",
-		   NULL, "\"Well...", Line_ContinueAfterTyping);
+		   NULL, "\"Well...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "私も自分のキャラがそんな悪魔みたいなヤツだとは思いたくないけどさ。",
 		   NULL, " I don't want to believe that my own personality was that twisted.", Line_WaitForInput);
@@ -1556,11 +1556,11 @@ void main()
 		   NULL, "\"Then what?", Line_WaitForInput);
 	PlayVoice(3, "s20/03/440300297", 256);
 	OutputLine(NULL, "　梨花ちゃんはオヤシロさまじゃないって思うなら、",
-		   NULL, " If Rika-chan doesn't believe that it was Oyashiro-sama...", Line_ContinueAfterTyping);
+		   NULL, " If Rika-chan doesn't believe that it was Oyashiro-sama...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…やっぱ犯人は人間って思うわけ？！」",
 		   NULL, " then do you think the perpetrators were human after all!?\"", GetGlobalFlag(GLinemodeSp));
@@ -1789,12 +1789,12 @@ void main()
 		   NULL, " Keiichi-kun,", Line_WaitForInput);
 	PlayVoice(3, "s20/02/440200167", 256);
 	OutputLine(NULL, "その",
-		   NULL, " didn't you", Line_ContinueAfterTyping);
+		   NULL, " didn't you", Line_Continue);
 //s500
 
 	SetSpeedOfMessage( TRUE, 0, );
 	OutputLine(NULL, "………",
-		   NULL, "...", Line_ContinueAfterTyping);
+		   NULL, "...", Line_Continue);
 //!sd,
 	SetSpeedOfMessage( FALSE, 0, );
 

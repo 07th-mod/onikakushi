@@ -1465,11 +1465,11 @@ void main()
 		   NULL, "\"But they were still man-eating demons.", Line_WaitForInput);
 	PlayVoice(3, "s01/11/120700235", 256);
 	OutputLine(NULL, "………婆さまに聞いた昔話ではですね、息子を治療してもらった代償として、連れて来た母親を食わせろ！",
-		   NULL, " According to the story my grandma told me... as payment for treating the son's illness, 'Let us eat the mother who brought him here!'", Line_ContinueAfterTyping);
+		   NULL, " According to the story my grandma told me... as payment for treating the son's illness, 'Let us eat the mother who brought him here!'", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　と、こうなるらしいんですよ。」",
 		   NULL, " ...Was apparently how things went.\"", Line_Normal);
@@ -1497,19 +1497,19 @@ void main()
 		   NULL, "\"Of course the mother took her son and ran.", Line_WaitForInput);
 	PlayVoice(3, "s01/11/120700237", 256);
 	OutputLine(NULL, "これをですね、",
-		   NULL, " Then, you see...", Line_ContinueAfterTyping);
+		   NULL, " Then, you see...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 
 	OutputLine(NULL, "鬼ヶ淵に住む村人、",
-		   NULL, " All the vilagers of Onigafuchi -", Line_ContinueAfterTyping);
+		   NULL, " All the vilagers of Onigafuchi -", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "鬼たちがですね、全員で追いかけて取り囲んで捕まえたんだそうです。」",
 		   NULL, "the demons- chased, surrounded, and captured them.\"", Line_Normal);
@@ -1994,11 +1994,11 @@ void main()
 		   NULL, "\"Huh!?", Line_WaitForInput);
 	PlayVoice(3, "s01/01/120100299", 256);
 	OutputLine(NULL, "　沙都子って、",
-		   NULL, " Satoko, meaning...", Line_ContinueAfterTyping);
+		   NULL, " Satoko, meaning...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……沙都子？！？！」",
 		   NULL, " Satoko!?!?\"", GetGlobalFlag(GLinemodeSp));
@@ -2150,11 +2150,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/11/120700275", 256);
 	OutputLine(NULL, "「被害者たちはなぜか、あなたのお友達グループに全てつながるのです。」",
-		   NULL, "\"All of the victims seem to be connected to your group of friends.\"", Line_ContinueAfterTyping);
+		   NULL, "\"All of the victims seem to be connected to your group of friends.\"", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 2000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
@@ -2372,11 +2372,11 @@ void main()
 //オヤシロさまって単語が。」!w5000@
 	PlayVoice(3, "s01/11/120700288", 256);
 	OutputLine(NULL, "オヤシロさまって単語が。」",
-		   NULL, " the word, 'Oyashiro-sama.'\"", Line_ContinueAfterTyping);
+		   NULL, " the word, 'Oyashiro-sama.'\"", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 5000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 
@@ -3808,11 +3808,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/03/120300112", 256);
 	OutputLine(NULL, "「渋いおじさまとご一緒だったみたいだけど、",
-		   NULL, "\"Seems you were with a rather austere-looking older guy.", Line_ContinueAfterTyping);
+		   NULL, "\"Seems you were with a rather austere-looking older guy.", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……誰？」",
 		   NULL, " ...Who was he?\"", Line_Normal);

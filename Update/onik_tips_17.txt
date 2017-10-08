@@ -21,7 +21,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700035", 128);
 	OutputLine(NULL, "「……おんやぁ？",
-		   NULL, "\"...Herm?", Line_ContinueAfterTyping);
+		   NULL, "\"...Herm?", Line_Continue);
 	OutputLine(NULL, "　今の皆さんは確か…。」",
 		   NULL, " Those guys just now...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -48,7 +48,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/19/443100003", 128);
 	OutputLine(NULL, "「面白いっすね。",
-		   NULL, "\"That's interesting.", Line_ContinueAfterTyping);
+		   NULL, "\"That's interesting.", Line_Continue);
 	Wait ( 1200 );
 	OutputLine(NULL, "親戚同士で県議と市議やってんすか。」",
 		   NULL, " The prefectural assembly member and city councilor are related.\"", Line_Normal);
@@ -60,7 +60,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700037", 128);
 	OutputLine(NULL, "「これがズルイんですよ。",
-		   NULL, "\"It's dirty is what it is.", Line_ContinueAfterTyping);
+		   NULL, "\"It's dirty is what it is.", Line_Continue);
 	Wait ( 1000 );
 	OutputLine(NULL, "お互いの名前で事前運動バンバン。",
 		   NULL, " Shouting out each other's name during elections.", Line_WaitForInput);
@@ -180,11 +180,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/442700001", 128);
 	OutputLine(NULL, "「大石さんは友達多いから聞いてるかもしれないけど",
-		   NULL, "\"You have a lot of connections, so you might have heard something...", Line_ContinueAfterTyping);
+		   NULL, "\"You have a lot of connections, so you might have heard something...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 3000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……聞いてるかな？」",
 		   NULL, " Have you?\"", GetGlobalFlag(GLinemodeSp));
@@ -194,7 +194,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700042", 128);
 	OutputLine(NULL, "「いいえ。",
-		   NULL, "\"Nope.", Line_ContinueAfterTyping);
+		   NULL, "\"Nope.", Line_Continue);
 	Wait( 300 );
 	OutputLine(NULL, "何も。」",
 		   NULL, " Not a thing.\"", GetGlobalFlag(GLinemodeSp));
@@ -204,7 +204,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/442700002", 128);
 	OutputLine(NULL, "「お母さん、ガンモにはんぺん頼みます。",
-		   NULL, "\"Ma'am, I'll take a tofu fritter and fish cake.", Line_ContinueAfterTyping);
+		   NULL, "\"Ma'am, I'll take a tofu fritter and fish cake.", Line_Continue);
 	Wait ( 2800 );
 	OutputLine(NULL, "……署長んとこに議員の怒鳴り込みがあったんだよ。」",
 		   NULL, " ...The councilors stormed in on the police chief in a rage.\"", GetGlobalFlag(GLinemodeSp));
@@ -214,7 +214,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700043", 128);
 	OutputLine(NULL, "「あれま。そうなんですか。",
-		   NULL, "\"Oh, my. Is that so?", Line_ContinueAfterTyping);
+		   NULL, "\"Oh, my. Is that so?", Line_Continue);
 	Wait ( 2600 );
 	OutputLine(NULL, "…お母さん、私にもう一杯下さい。」",
 		   NULL, " Ma'am, I'll take another bowl.\"", Line_Normal);
@@ -246,7 +246,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700044", 128);
 	OutputLine(NULL, "「ありゃ私？",
-		   NULL, "\"Goodness, me?", Line_ContinueAfterTyping);
+		   NULL, "\"Goodness, me?", Line_Continue);
 	OutputLine(NULL, "　はてはて。」",
 		   NULL, " I've not the faintest.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -256,7 +256,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/442700004", 128);
 	OutputLine(NULL, "「とぼけるなよ。",
-		   NULL, "\"No need to play dumb.", Line_ContinueAfterTyping);
+		   NULL, "\"No need to play dumb.", Line_Continue);
 	Wait ( 1000 );
 	OutputLine(NULL, "例の雛見沢の、過去の事件。",
 		   NULL, " You're reopening the past cases regarding Hinamizawa,", Line_WaitForInput);
@@ -269,7 +269,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700045", 128);
 	OutputLine(NULL, "「私、富竹殺しで手一杯でそんな余裕ないですよ？",
-		   NULL, "\"I've already got my hands full with Tomitake's death.", Line_ContinueAfterTyping);
+		   NULL, "\"I've already got my hands full with Tomitake's death.", Line_Continue);
 		   Wait ( 3000 );
 	OutputLine(NULL, "　なっはっはっは！」",
 		   NULL, " Nahahaha!\"", GetGlobalFlag(GLinemodeSp));
@@ -306,7 +306,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700046", 128);
 	OutputLine(NULL, "「いやぁご馳走になっちゃいました。",
-		   NULL, "\"Whew, that was quite the feast.", Line_ContinueAfterTyping);
+		   NULL, "\"Whew, that was quite the feast.", Line_Continue);
 	Wait (2600);
 	OutputLine(NULL, "今月は負けっぱなしだったんで財布辛かったんですよ。",
 		   NULL, " This month has been a bunch of losses for me, so my wallet was feeling the pinch.", Line_WaitForInput);
@@ -319,7 +319,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/442700007", 128);
 	OutputLine(NULL, "「いやいいよ。",
-		   NULL, "\"Nah, it's nothing.", Line_ContinueAfterTyping);
+		   NULL, "\"Nah, it's nothing.", Line_Continue);
 	Wait (800);
 	OutputLine(NULL, "また馬、教えてよ。",
 		   NULL, " Tell me a good horse again.", Line_WaitForInput);
@@ -333,17 +333,17 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700048", 128);
 	OutputLine(NULL, "「なっはっはっは！",
-		   NULL, "\"Nahahahah!", Line_ContinueAfterTyping);
+		   NULL, "\"Nahahahah!", Line_Continue);
 	Wait (1400);
 	OutputLine(NULL, "　最近はダメです。",
 		   NULL, " I haven't been doing well there lately.", Line_WaitForInput);
 	PlayVoice(3, "s20/11/440700049", 128);
 	OutputLine(NULL, "馬の声がさっぱりですから！",
-		   NULL, " I haven't been able to read the horses at all!", Line_ContinueAfterTyping);
+		   NULL, " I haven't been able to read the horses at all!", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1200 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　…タクシー！！！」",
 		   NULL, " ...Taxi!!!\"", Line_Normal);
@@ -419,7 +419,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/442700010", 128);
 	OutputLine(NULL, "「過去の事件は全部個別に終わってる。",
-		   NULL, "\"The past incidents have all been closed.", Line_ContinueAfterTyping);
+		   NULL, "\"The past incidents have all been closed.", Line_Continue);
 	Wait (2200);
 	OutputLine(NULL, "縦に並べるのはやめるんだよ。",
 		   NULL, " Stop lumping them all together.", Line_WaitForInput);
@@ -457,7 +457,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700053", 128);
 	OutputLine(NULL, "「婆さまがどうしても生まれの北海道に帰りたいって泣くんですよ…。",
-		   NULL, "\"Mother pines to return to her birthplace...", Line_ContinueAfterTyping);
+		   NULL, "\"Mother pines to return to her birthplace...", Line_Continue);
 	Wait (4200);
 	OutputLine(NULL, "最後のご奉公なんです。",
 		   NULL, " It's the least I can do.", Line_WaitForInput);
@@ -511,13 +511,13 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700056", 128);
 	OutputLine(NULL, "「さすがインテリの若署長は言い出すことが模範的です。",
-		   NULL, "\"I'd expect no less of our egg-head chief, quite the model veiled threat.", Line_ContinueAfterTyping);
+		   NULL, "\"I'd expect no less of our egg-head chief, quite the model veiled threat.", Line_Continue);
 	Wait (3400);
 	OutputLine(NULL, "…でもまぁ。",
 		   NULL, " But... well...", Line_WaitForInput);
 	PlayVoice(3, "s20/11/440700057", 128);
 	OutputLine(NULL, "私たちの給料が血税で支払われてることを思えば、",
-		   NULL, " Considering how our pay comes from the public's hard-earned taxes,", Line_ContinueAfterTyping);
+		   NULL, " Considering how our pay comes from the public's hard-earned taxes,", Line_Continue);
 	Wait (2800);
 	OutputLine(NULL, "まぁ時代の流れですかねぇ。」",
 		   NULL, " it's the way of the times, I suppose.\"", GetGlobalFlag(GLinemodeSp));
@@ -533,7 +533,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/442700015", 128);
 	OutputLine(NULL, "「僕も模範的な事とは思わないよ。",
-		   NULL, "\"I don't think it's such a model response.", Line_ContinueAfterTyping);
+		   NULL, "\"I don't think it's such a model response.", Line_Continue);
 	Wait (2600);
 	OutputLine(NULL, "でもまぁ、大石さんはそれだけの退職金をもらってもおかしくない活躍をしてきたからさ。",
 		   NULL, " But given how hard you've worked, it's not at all odd for you to take home such a good package.", Line_WaitForInput);
@@ -547,7 +547,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700058", 128);
 	OutputLine(NULL, "「もらえるもんなら、そりゃー欲しいですけどね。",
-		   NULL, "\"If I can get it, well, of course I'd want it.", Line_ContinueAfterTyping);
+		   NULL, "\"If I can get it, well, of course I'd want it.", Line_Continue);
 	Wait (2600);
 	OutputLine(NULL, "…なっはっはっは！」",
 		   NULL, " Nahahahah!\"", GetGlobalFlag(GLinemodeSp));
@@ -557,7 +557,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/00/442700017", 128);
 	OutputLine(NULL, "「もらえるよ。",
-		   NULL, "\"You'll get it.", Line_ContinueAfterTyping);
+		   NULL, "\"You'll get it.", Line_Continue);
 	Wait (1200);
 	OutputLine(NULL, "大石さんが大人なら。」",
 		   NULL, " As long you're an adult about this.\"", Line_Normal);
@@ -567,7 +567,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700059", 128);
 	OutputLine(NULL, "「運転手さん、引き止めてすみませんね。",
-		   NULL, "\"Sorry for holding you up here, Driver.", Line_ContinueAfterTyping);
+		   NULL, "\"Sorry for holding you up here, Driver.", Line_Continue);
 	Wait (2100);
 	OutputLine(NULL, "お願いします。」",
 		   NULL, " Thank you very much.\"", GetGlobalFlag(GLinemodeSp));
@@ -600,14 +600,14 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/11/440700060", 128);
 	OutputLine(NULL, "「なっはっはっは！",
-		   NULL, "\"Nahahahah!", Line_ContinueAfterTyping);
+		   NULL, "\"Nahahahah!", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 3000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……まいったな。",
-		   NULL, " ...Oh, man...", Line_ContinueAfterTyping);
+		   NULL, " ...Oh, man...", Line_Continue);
 	Wait (2000);
 	OutputLine(NULL, "ローン返済できるかなぁ…。」",
 		   NULL, " I wonder if I'll be able to repay that loan...\"", Line_Normal);

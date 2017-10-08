@@ -1946,7 +1946,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/02/120200200", 256);
 	OutputLine(NULL, "「わ、圭一くん、…野球部だよ？",
-		   NULL, "\"Whoa, Keiichi-kun... are you on the baseball team?", Line_ContinueAfterTyping);
+		   NULL, "\"Whoa, Keiichi-kun... are you on the baseball team?", Line_Continue);
 	Wait (1600);
 	OutputLine(NULL, "　野球部だよ？？」",
 		   NULL, " ...The baseball team??\"", GetGlobalFlag(GLinemodeSp));
@@ -2224,7 +2224,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/01/120100422", 256);
 	OutputLine(NULL, "「…甘えるんじゃねえぇえぇええぇッ！！！！」",
-		   NULL, "\"...Stop being so sooooooft!!!!\"", Line_ContinueAfterTyping);
+		   NULL, "\"...Stop being so sooooooft!!!!\"", Line_Continue);
 
 	PlaySE( 4, "wa_005", 125, 64 );
 	ShakeScreenSx( 1, 0, );
@@ -3493,25 +3493,25 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/02/120200220", 256);
 	OutputLine(NULL, "「あ、",
-		   NULL, "\"Uh...", Line_ContinueAfterTyping);
+		   NULL, "\"Uh...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 500 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…あのね、",
-		   NULL, " Umm, well...", Line_ContinueAfterTyping);
+		   NULL, " Umm, well...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "あのね！",
 		   NULL, " well...", Line_WaitForInput);
 
 	PlayVoice(3, "s01/02/120200221", 256);
 	OutputLine(NULL, "　ど、どうしてバットなんか持ってるのかな。",
-		   NULL, " Wh-Why do you have a bat, I wonder...", Line_ContinueAfterTyping);
+		   NULL, " Wh-Why do you have a bat, I wonder...", Line_Continue);
 	Wait(800);
 	OutputLine(NULL, "…かなッ！」",
 		   NULL, " I wonder...?\"", GetGlobalFlag(GLinemodeSp));
@@ -3803,12 +3803,12 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/01/120100458", 256);
 	OutputLine(NULL, "「悟史…って",
-		   NULL, "\"Satoshi... being...", Line_ContinueAfterTyping);
+		   NULL, "\"Satoshi... being...", Line_Continue);
 
 	SetSpeedOfMessage( TRUE, 0, );
 
 	OutputLine(NULL, "……………え…",
-		   NULL, " Huh...?\"", Line_ContinueAfterTyping);
+		   NULL, " Huh...?\"", Line_Continue);
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -3959,18 +3959,18 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/02/120200239", 256);
 	OutputLine(NULL, "「…悟史くんの時と…",
-		   NULL, "\"...Why is it...", Line_ContinueAfterTyping);
+		   NULL, "\"...Why is it...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "どうして……",
-		   NULL, " Why is it...", Line_ContinueAfterTyping);
+		   NULL, " Why is it...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1600 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "どうしてそんなにまで同じなのッ？！」",
 		   NULL, " that you're doing the exact same thing Satoshi-kun did when it happened to him!?\"", GetGlobalFlag(GLinemodeSp));
@@ -4084,11 +4084,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/02/120200250", 256);
 	OutputLine(NULL, "　そしてね、ある日突然",
-		   NULL, "Then one day, he suddenly...", Line_ContinueAfterTyping);
+		   NULL, "Then one day, he suddenly...", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…………ッ、………………。」",
 		   NULL, " Gh...\"", Line_Normal);
@@ -4356,14 +4356,14 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/02/120200255", 256);
 	OutputLine(NULL, "「悟史くんはね、…",
-		   NULL, "\"Satoshi-kun, you see...", Line_ContinueAfterTyping);
+		   NULL, "\"Satoshi-kun, you see...", Line_Continue);
 
 	PlaySE( 4, "wa_023", 125, 64 );
 	Wait (1800);
 
 //"!s100転校!sd"しちゃったの。＠
 	OutputLine(NULL, "　転校しちゃったの。」",
-		   NULL, " transferred out.\"", Line_ContinueAfterTyping);
+		   NULL, " transferred out.\"", Line_Continue);
 
 
 //　転校って……なんだよ…＠
@@ -4525,11 +4525,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s01/02/120200258", 256);
 	OutputLine(NULL, "「“転校”」",
-		   NULL, "\"Transfer.\"", Line_ContinueAfterTyping);
+		   NULL, "\"Transfer.\"", Line_Continue);
 
-	SetValidityOfInput( FALSE );
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 3000 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLineAll(NULL, "", Line_Normal);
 

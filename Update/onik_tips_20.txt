@@ -34,7 +34,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/01/440100041", 256);
 	OutputLine(NULL, "「最近のカップめんは凝ってて種類も多いんだよ。",
-		   NULL, "\"Cup noodles have gotten so elaborate recently, and there are a bunch of different types.", Line_ContinueAfterTyping);
+		   NULL, "\"Cup noodles have gotten so elaborate recently, and there are a bunch of different types.", Line_Continue);
 	Wait (1600);
 	OutputLine(NULL, "どれも一通りは食ってみたいし。」",
 		   NULL, " I want to try each of them at least once.\"", GetGlobalFlag(GLinemodeSp));
@@ -75,7 +75,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/01/440100042", 256);
 	OutputLine(NULL, "「それじゃ１種類しか食えないよ！",
-		   NULL, "\"Then I'd only get to eat one kind!", Line_ContinueAfterTyping);
+		   NULL, "\"Then I'd only get to eat one kind!", Line_Continue);
 	Wait (1300);
 	OutputLine(NULL, "　飽きちゃうって！」",
 		   NULL, " I'd get bored with it!\"", GetGlobalFlag(GLinemodeSp));
@@ -141,7 +141,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s20/01/440100043", 256);
 	OutputLine(NULL, "「豚骨はうまいんだよ！",
-		   NULL, "\"Pork-bone is good!", Line_ContinueAfterTyping);
+		   NULL, "\"Pork-bone is good!", Line_Continue);
 	Wait (1200);
 	OutputLine(NULL, "　大盛りだけど大味ってわけじゃないし…！！」",
 		   NULL, " You get a large serving, but the flavor isn't too strong...!!\"", GetGlobalFlag(GLinemodeSp));
