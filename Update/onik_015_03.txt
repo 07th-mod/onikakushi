@@ -54,15 +54,15 @@ void main()
 //	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
 //	DrawSceneWithMask( "bg_112", "left", 0, 0, 1300 );
 
-	DrawBustshotWithFiltering( 3, "Kuma_Def", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 19, "Kuma_Def", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 
 //「……うーん、どうしてこれが五萬切りなんすか＠　待ちが狭くなっちゃうっすよ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/19/123100001", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100001", 256);
 	OutputLine(NULL, "「……うーん、どうしてこれが五萬切りなんすか？",
 		   NULL, "\"...Hrm, why would you discard the 5 manzu there?", Line_WaitForInput);
-	PlayVoice(3, "s01/19/123100002", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100002", 256);
 	OutputLine(NULL, "　待ちが狭くなっちゃうっすよ？」",
 		   NULL, " It's just decreasing your options.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -74,10 +74,10 @@ void main()
 		   NULL, "One of the younger detectives was having a staring contest with the Mahjong magazine called \"Next Turn.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "oi_si_de_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 11, "oi_si_de_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「五萬切ってもテンパイ崩れませんから。＠
-	PlayVoice(3, "s01/19/123100003", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100003", 256);
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「五萬切ってもテンパイ崩れませんから。」",
 		   NULL, "\"You're still in tenpai if you cut the 5 manzu.\"", GetGlobalFlag(GLinemodeSp));
@@ -87,7 +87,7 @@ void main()
 
 //「ハイテーに賭けるなら、両面で受けた方がチャンスあるんじゃないすか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/19/123100004", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100004", 256);
 	OutputLine(NULL, "「ハイテーに賭けるなら、両面で受けた方がチャンスあるんじゃないすか？」",
 		   NULL, "\"If you're betting on a Haitei, then shouldn't you be going into it with a Mangan?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -96,19 +96,19 @@ void main()
 	DisableWindow();
 //	DrawSceneWithMask( "bg_112", "left", 0, 0, 1300 );
 //	DrawBustshot( 2, "oi_si_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
-	DrawBustshotWithFiltering( 2, "oi_si_wa_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 11, "oi_si_wa_a1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //	DrawBustshot( 1, "Kuma_def", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「熊ちゃん、河を見て下さい＠五萬は全員切ってますから安牌なんですよ＠終盤で形テンに走った誰かがダマで待ってたら嫌でしょ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700516", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700516", 256);
 	OutputLine(NULL, "「熊ちゃん、河を見て下さい。",
 		   NULL, "\"Kuma-chan, look at the pond.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700517", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700517", 256);
 	OutputLine(NULL, "五萬は全員切ってますから安牌なんですよ。",
 		   NULL, " They all discarded a 5 manzu. It's a safe tile.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700518", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700518", 256);
 	OutputLine(NULL, "終盤で形テンに走った誰かがダマで待ってたら嫌でしょ。」",
 		   NULL, " You'd hate if, at end game, someone was sitting on a tenpai on the last turn, wouldn't you?\"", Line_Normal);
 	ClearMessage();
@@ -121,15 +121,15 @@ void main()
 
 	DisableWindow();
 //	DrawBustshot( 3, "Kuma_ikari", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
-	DrawBustshotWithFiltering( 3, "Kuma_Ikari", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 19, "Kuma_Ikari", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 
 //「…納得いかないっすねぇ…＠わざわざ自分で当たり牌減らすなんて。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/19/123100005", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100005", 256);
 	OutputLine(NULL, "「…納得いかないっすねぇ…。",
 		   NULL, "\"...I just don't agree...", Line_WaitForInput);
-	PlayVoice(3, "s01/19/123100006", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100006", 256);
 	OutputLine(NULL, "わざわざ自分で当たり牌減らすなんて。」",
 		   NULL, " Why would you reduce your own options?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -141,7 +141,7 @@ void main()
 
 //「ちなみに、ハイテーで当たり牌出てもロンしちゃダメですよ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700519", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700519", 256);
 	OutputLine(NULL, "「ちなみに、ハイテーで当たり牌出てもロンしちゃダメですよ。」",
 		   NULL, "\"By the way, you can't call ron with your winning tile in that haitei.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -150,7 +150,7 @@ void main()
 
 //「え？！　どうしてっすか？！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/19/123100007", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100007", 256);
 	OutputLine(NULL, "「え？！　どうしてっすか？！」",
 		   NULL, "\"What!? Why is that!?\"", Line_Normal);
 	ClearMessage();
@@ -163,10 +163,10 @@ void main()
 
 //「大石さん、いますかー＠　一般の方から外線でーす。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>刑事</color>", NULL, "<color=#f5e6d3>Detective</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/00/dek02001", 256);
+	ModPlayVoiceLS(3, 0, "s01/00/dek02001", 256);
 	OutputLine(NULL, "「大石さん、いますかー？",
 		   NULL, "\"Are you here, Ooishi-san?", Line_WaitForInput);
-	PlayVoice(3, "s01/00/dek02002", 256);
+	ModPlayVoiceLS(3, 0, "s01/00/dek02002", 256);
 	OutputLine(NULL, "　一般の方から外線でーす。」",
 		   NULL, " You have a call from a civilian.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -177,7 +177,7 @@ void main()
 
 //「ありゃ、こりゃどうも。それじゃ、ちょいと失礼！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700520", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700520", 256);
 	OutputLine(NULL, "「ありゃ、こりゃどうも。それじゃ、ちょいと失礼！」",
 		   NULL, "\"Whoa, ain't that something? Welp, see ya soon!\"", Line_Normal);
 	ClearMessage();
@@ -186,10 +186,10 @@ void main()
 
 //「ど、どうしてロンしちゃダメなんすかぁ？＠　あ、待ってくださいよ大石さぁん！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/19/123100008", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100008", 256);
 	OutputLine(NULL, "「ど、どうしてロンしちゃダメなんすかぁ？！",
 		   NULL, "\"W-Why can't you call ron on it!?", Line_WaitForInput);
-	PlayVoice(3, "s01/19/123100009", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100009", 256);
 	OutputLine(NULL, "　あ、待ってくださいよ大石さぁん！」",
 		   NULL, " H-Hold on for a second, Ooishi-san!\"", Line_Normal);
 	ClearMessage();
@@ -209,10 +209,10 @@ void main()
 
 //「外線です＠公衆から。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>刑事</color>", NULL, "<color=#f5e6d3>Detective</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/00/dek02003", 256);
+	ModPlayVoiceLS(3, 0, "s01/00/dek02003", 256);
 	OutputLine(NULL, "「外線です。",
 		   NULL, "\"Outside line.", Line_WaitForInput);
-	PlayVoice(3, "s01/00/dek02004", 256);
+	ModPlayVoiceLS(3, 0, "s01/00/dek02004", 256);
 	OutputLine(NULL, "公衆から。」",
 		   NULL, " From a payphone.\"", Line_Normal);
 	ClearMessage();
@@ -221,23 +221,23 @@ void main()
 
 //「あーどうもすみません＠　……お待たせしました、大石です＠もしもし？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700521", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700521", 256);
 	OutputLine(NULL, "「あーどうもすみません！",
 		   NULL, "\"Oh, why thank you!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700522", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700522", 256);
 	OutputLine(NULL, "　……お待たせしました、大石です。",
 		   NULL, " ...Sorry to keep you waiting, this is Ooishi.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700523", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700523", 256);
 	OutputLine(NULL, "もしもし？」",
 		   NULL, " Who is it?\"", Line_Normal);
 	ClearMessage();
 
 //「お、大石さんですか？＠　もしもし？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100808", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100808", 256);
 	OutputLine(NULL, "「お、大石さんですか？！",
 		   NULL, "\"Ah, Ooishi-san!?", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100809", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100809", 256);
 	OutputLine(NULL, "　もしもし？！」",
 		   NULL, " Hello!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -246,10 +246,10 @@ void main()
 
 //「前原さんじゃありませんか＠どうもどうもこんにちは…！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700524", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700524", 256);
 	OutputLine(NULL, "「前原さんじゃありませんか。",
 		   NULL, "\"If it isn't Maebara-san.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700525", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700525", 256);
 	OutputLine(NULL, "どうもどうもこんにちは…！」",
 		   NULL, " Why, good evening...!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -280,10 +280,10 @@ void main()
 
 //「落ち着いて下さい＠何がありました？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700526", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700526", 256);
 	OutputLine(NULL, "「落ち着いて下さい。",
 		   NULL, "\"Please calm down.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700527", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700527", 256);
 	OutputLine(NULL, "何がありました？」",
 		   NULL, " Did something happen?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -292,7 +292,7 @@ void main()
 
 //「えっと、!w800その、!w1000……あぁぁ…ッ！！！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100810", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100810", 256);
 	OutputLine(NULL, "「えっと、",
 		   NULL, "\"Uh,", Line_Continue);
 
@@ -327,7 +327,7 @@ void main()
 
 //「何があったんです？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700528", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700528", 256);
 	OutputLine(NULL, "「何があったんです？！」",
 		   NULL, "\"What happened!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -336,7 +336,7 @@ void main()
 
 //「あぁぁあぁあの…お、…ぉぉ……俺……、＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100811", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100811", 256);
 	OutputLine(NULL, "「あぁぁあぁあの…お、…ぉぉ……俺……、」",
 		   NULL, "\"UhhhUhhm... I... I... I...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -345,13 +345,13 @@ void main()
 
 //「…落ち着いて前原さん＠　今そこに近場の警官を行かせます＠私もすぐそっちに行きますよ！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700529", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700529", 256);
 	OutputLine(NULL, "「…落ち着いて前原さん！",
 		   NULL, "\"...Calm down, Maebara-san!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700530", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700530", 256);
 	OutputLine(NULL, "　今そこに近場の警官を行かせます。",
 		   NULL, " I can have the local officers head to your location.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700531", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700531", 256);
 	OutputLine(NULL, "私もすぐそっちに行きますよ！」",
 		   NULL, " I'll be there soon, too!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -360,7 +360,7 @@ void main()
 
 //「………あ、その!s300……!sd多分!w1000……無理です。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100812", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100812", 256);
 	OutputLine(NULL, "「………あ、その",
 		   NULL, "\"...Ah, um...", Line_Continue);
 //!s300
@@ -405,10 +405,10 @@ void main()
 
 //「前原さんは今、公衆電話からかけてますよね＠　どこの公衆電話ですか？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700532", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700532", 256);
 	OutputLine(NULL, "「前原さんは今、公衆電話からかけてますよね？",
 		   NULL, "\"Maebara-san, you're calling from a payphone right now, right?", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700533", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700533", 256);
 	OutputLine(NULL, "　どこの公衆電話ですか？！」",
 		   NULL, " Where is that payphone!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -455,10 +455,10 @@ void main()
 
 //「…落ち着いて前原さん＠　今はどういう状況なんです…？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700534", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700534", 256);
 	OutputLine(NULL, "「…落ち着いて前原さん！",
 		   NULL, "\"...Calm down, Maebara-san!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700535", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700535", 256);
 	OutputLine(NULL, "　今はどういう状況なんです…？！」",
 		   NULL, " What is your current situation...!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -540,10 +540,10 @@ void main()
 
 //「かかり過ぎです＠警邏には何人乗ってます？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700536", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700536", 256);
 	OutputLine(NULL, "「かかり過ぎです。",
 		   NULL, "\"That's too long.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700537", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700537", 256);
 	OutputLine(NULL, "警邏には何人乗ってます？」",
 		   NULL, " How many officers are in there?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -552,7 +552,7 @@ void main()
 
 //「２人です。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>刑事</color>", NULL, "<color=#f5e6d3>Detective</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/00/dek02005", 256);
+	ModPlayVoiceLS(3, 0, "s01/00/dek02005", 256);
 	OutputLine(NULL, "「２人です。」",
 		   NULL, "\"Two.\"", Line_Normal);
 	ClearMessage();
@@ -580,7 +580,7 @@ void main()
 
 //「雛見沢の駐在さんには電話しました？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700538", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700538", 256);
 	OutputLine(NULL, "「雛見沢の駐在さんには電話しました？！」",
 		   NULL, "\"Did you call the officer stationed in Hinamizawa!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -589,10 +589,10 @@ void main()
 
 //「定時巡回の時間です＠家人は留守で連絡不能。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>刑事</color>", NULL, "<color=#f5e6d3>Detective</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/00/dek02006", 256);
+	ModPlayVoiceLS(3, 0, "s01/00/dek02006", 256);
 	OutputLine(NULL, "「定時巡回の時間です。",
 		   NULL, "\"He's scheduled to be on patrol.", Line_WaitForInput);
-	PlayVoice(3, "s01/00/dek02007", 256);
+	ModPlayVoiceLS(3, 0, "s01/00/dek02007", 256);
 	OutputLine(NULL, "家人は留守で連絡不能。」",
 		   NULL, " They're currently out, and it'll be impossible to contact them.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -601,21 +601,21 @@ void main()
 
 //「くそッ！＠　熊ちゃん、車を回して下さい。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700539", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700539", 256);
 	OutputLine(NULL, "「くそッ！！",
 		   NULL, "\"God damn!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700540", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700540", 256);
 	OutputLine(NULL, "　熊ちゃん、車を回して下さい。」",
 		   NULL, " Kuma-chan, bring the car around.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Kuma_Def", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 19, "Kuma_Def", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 
 //「了解っす！！！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/19/123100010", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100010", 256);
 	OutputLine(NULL, "「了解っす！！！」",
 		   NULL, "\"Understood!!!\"", Line_Normal);
 	ClearMessage();
@@ -626,13 +626,13 @@ void main()
 
 //「…もしもし＠　大石さん…＠　ごほっごぼッ！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100813", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100813", 256);
 	OutputLine(NULL, "「…もしもし？",
 		   NULL, "\"...Hello?", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100814", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100814", 256);
 	OutputLine(NULL, "　大石さん…？",
 		   NULL, " Ooishi-san...?", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100815", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100815", 256);
 	OutputLine(NULL, "　ごほっごぼッ！！」",
 		   NULL, " *Cough cough*!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -641,13 +641,13 @@ void main()
 
 //「もしもし＠　大丈夫です＠ちゃんと聞こえてますよ！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700541", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700541", 256);
 	OutputLine(NULL, "「もしもし！",
 		   NULL, "\"Hello!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700542", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700542", 256);
 	OutputLine(NULL, "　大丈夫です。",
 		   NULL, " It's all right.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700543", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700543", 256);
 	OutputLine(NULL, "ちゃんと聞こえてますよ！」",
 		   NULL, " I can hear you loud and clear!\"", Line_Normal);
 	ClearMessage();
@@ -693,19 +693,19 @@ void main()
 
 //「前原さん、今そこに警官が向かってます＠２～３分で到着しますから何とか持ちこたえて下さい＠　もしもし？＠　聞こえてますか？＠　前原さん？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700544", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700544", 256);
 	OutputLine(NULL, "「前原さん、今そこに警官が向かってます。",
 		   NULL, "\"Maebara-san, the police are on their way.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700545", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700545", 256);
 	OutputLine(NULL, "２〜３分で到着しますから何とか持ちこたえて下さい！",
 		   NULL, " They'll be there in a couple of minutes, so hold on somehow!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700546", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700546", 256);
 	OutputLine(NULL, "　もしもし？！",
 		   NULL, " Hello!?", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700547", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700547", 256);
 	OutputLine(NULL, "　聞こえてますか？！",
 		   NULL, " Can you hear me!?", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700548", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700548", 256);
 	OutputLine(NULL, "　前原さん？！」",
 		   NULL, " Maebara-san!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -731,13 +731,13 @@ void main()
 
 //「前原さん！＠　犯人は誰です？＠　何人なんですッ？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700549", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700549", 256);
 	OutputLine(NULL, "「前原さん！！",
 		   NULL, "\"Maebara-san!!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700550", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700550", 256);
 	OutputLine(NULL, "　犯人は誰です？！",
 		   NULL, " Who is the culprit!?", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700551", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700551", 256);
 	OutputLine(NULL, "　何人なんですッ？！」",
 		   NULL, " How many are there!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -746,7 +746,7 @@ void main()
 
 //「……お、!w1500…俺も!w1000……最初はニンゲンが犯人なんだと思いまし……!w1000げぼッ！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100816", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100816", 256);
 	OutputLine(NULL, "「……お、",
 		   NULL, "\"...I...", Line_Continue);
 
@@ -782,7 +782,7 @@ void main()
 
 //「大丈夫ですか！！　前原さん！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700552", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700552", 256);
 	OutputLine(NULL, "「大丈夫ですか！！　前原さん！！」",
 		   NULL, "\"Are you all right!? Maebara-san!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -791,7 +791,7 @@ void main()
 
 //「犯人はニンゲンなんだって、!w1000オヤシロさまの祟りなんかないんだって、!w1000そう思ってました…＠ついさっきまで＠……だけど!s400……!sdやっぱり…、!w1000げほげほ…ッ！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100817", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100817", 256);
 	OutputLine(NULL, "「犯人はニンゲンなんだって、",
 		   NULL, "\"I thought that", Line_Continue);
 
@@ -808,10 +808,10 @@ void main()
 
 	OutputLine(NULL, "そう思ってました…。",
 		   NULL, " and not Oyashiro-sama's curse...", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100818", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100818", 256);
 	OutputLine(NULL, "ついさっきまで。",
 		   NULL, " Up until right now.", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100819", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100819", 256);
 	OutputLine(NULL, "……だけど",
 		   NULL, " But...", Line_Continue);
 //!s400
@@ -847,7 +847,7 @@ void main()
 
 //「……でも!w800…やっぱり!w800…オヤシロさまってのは!w800……いるんだと思います……＠いや、います＠今。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100820", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100820", 256);
 	OutputLine(NULL, "「……でも",
 		   NULL, "\"...But...", Line_Continue);
 
@@ -871,10 +871,10 @@ void main()
 
 	OutputLine(NULL, "……いるんだと思います……。",
 		   NULL, " does exist...", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100821", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100821", 256);
 	OutputLine(NULL, "いや、います。",
 		   NULL, " No, he's...", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100822", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100822", 256);
 	OutputLine(NULL, "今。」",
 		   NULL, " here.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -883,7 +883,7 @@ void main()
 
 //「前原さん、どうか、どうか落ち着いて…、＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700553", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700553", 256);
 	OutputLine(NULL, "「前原さん、どうか、どうか落ち着いて…、」",
 		   NULL, "\"Maebara-san, please, just please calm down...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -892,10 +892,10 @@ void main()
 
 //「なんかさっきからおかしいと思ってたんです…＠ずーっとつけてくるんですよ…！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100823", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100823", 256);
 	OutputLine(NULL, "「なんかさっきからおかしいと思ってたんです…。",
 		   NULL, "\"I had been thinking it was strange for a while now...", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100824", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100824", 256);
 	OutputLine(NULL, "ずーっとつけてくるんですよ…！！",
 		   NULL, " It's been following me this whole time...!!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -904,23 +904,23 @@ void main()
 
 //　走っても走っても、走っても走っても…！！＠　影みたいにぴったりくっついて！＠　だけども少しずつ…少しずつ…＠俺の背中ににじり寄ってくるんです……。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100825", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100825", 256);
 	OutputLine(NULL, "　走っても走っても、走っても走っても…！！！",
 		   NULL, "I run and run and run and run...!!!", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100826", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100826", 256);
 	OutputLine(NULL, "　影みたいにぴったりくっついて！！",
 		   NULL, " But it just sticks to me like my shadow!!", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100827", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100827", 256);
 	OutputLine(NULL, "　だけども少しずつ…少しずつ…。",
 		   NULL, " But slowly... so slowly...", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100828", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100828", 256);
 	OutputLine(NULL, "俺の背中ににじり寄ってくるんです……。」",
 		   NULL, " It's digging itself into my back...\"", Line_Normal);
 	ClearMessage();
 
 //「……前原さん、!w1000…そいつは!s300………今!sd、ひょっとして…、!w1000………前原さんの…後ろに？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700554", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700554", 256);
 	OutputLine(NULL, "「……前原さん、",
 		   NULL, "\"...Maebara-san...", Line_Continue);
 
@@ -958,10 +958,10 @@ void main()
 
 //「……………後ろに＠……すぐ、……後ろに………。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100829", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100829", 256);
 	OutputLine(NULL, "「……………後ろに。",
 		   NULL, "\"...Behind me.", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100830", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100830", 256);
 	OutputLine(NULL, "……すぐ、……後ろに………。」",
 		   NULL, " Right... behind me...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -970,26 +970,26 @@ void main()
 
 //「お願いです前原さん＠……怖いのはわかります＠ですがお願いです！＠　……あなたの後ろに……誰がいるんですッ？！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700555", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700555", 256);
 	OutputLine(NULL, "「お願いです前原さん。",
 		   NULL, "\"Please, Maebara-san...", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700556", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700556", 256);
 	OutputLine(NULL, "……怖いのはわかります。",
 		   NULL, " I can tell you're scared.", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700557", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700557", 256);
 	OutputLine(NULL, "ですがお願いです！！",
 		   NULL, " But please!!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700558", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700558", 256);
 	OutputLine(NULL, "　……あなたの後ろに……誰がいるんですッ？！」",
 		   NULL, " ...Who is it... that's right behind you!?\"", Line_Normal);
 	ClearMessage();
 
 //「振り向けるわけ…ないじゃないですか…＠振り向いたら……俺!w800……俺…、＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/01/120100831", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100831", 256);
 	OutputLine(NULL, "「振り向けるわけ…ないじゃないですか…。",
 		   NULL, "\"I can't just... look behind me...", Line_WaitForInput);
-	PlayVoice(3, "s01/01/120100832", 256);
+	ModPlayVoiceLS(3, 1, "s01/01/120100832", 256);
 	OutputLine(NULL, "振り向いたら……俺",
 		   NULL, " If I do... I'll...", Line_Continue);
 
@@ -1005,13 +1005,13 @@ void main()
 
 //「怖いのはわかります！＠　でも教えて欲しい！＠　ちょっと振り返るだけでいいんです！＠　前原さんの後ろに……!w1000誰がいるんですッ？！？！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700559", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700559", 256);
 	OutputLine(NULL, "「怖いのはわかります！！",
 		   NULL, "\"I understand that you're scared!!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700560", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700560", 256);
 	OutputLine(NULL, "　でも教えて欲しい！！",
 		   NULL, " But please tell me!!", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700561", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700561", 256);
 	OutputLine(NULL, "　ちょっと振り返るだけでいいんです！！",
 		   NULL, " You just need to turn around a bit!!", Line_WaitForInput);
 	OutputLine(NULL, "　前原さんの後ろに……",
@@ -1021,7 +1021,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	PlayVoice(3, "s01/11/120700562", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700562", 256);
 	OutputLine(NULL, "誰がいるんですッ？！？！」",
 		   NULL, " Who is behind you, Maebara-san!?!?\"", Line_Normal);
 	ClearMessage();
@@ -1036,13 +1036,13 @@ void main()
 
 //「…前原さん＠……あんたまさか＠…喉を引っ掻いてたりは…しないでしょうね…？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700563", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700563", 256);
 	OutputLine(NULL, "「…前原さん、",
 		   NULL, "\"...Maebara-san...", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700564", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700564", 256);
 	OutputLine(NULL, "……あんたまさか、",
 		   NULL, " It couldn't be that you're...", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700565", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700565", 256);
 	OutputLine(NULL, "…喉を引っ掻いてたりは…しないでしょうね…？」",
 		   NULL, " clawing out... your own throat...?\"", Line_Normal);
 	ClearMessage();
@@ -1087,16 +1087,16 @@ void main()
 
 //「もしもし＠　もしもし？＠　前原さん？＠　もしもーしッ？！？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700566", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700566", 256);
 	OutputLine(NULL, "「もしもし！",
 		   NULL, "\"Hello?", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700567", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700567", 256);
 	OutputLine(NULL, "　もしもし？！",
 		   NULL, " Hello!?", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700568", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700568", 256);
 	OutputLine(NULL, "　前原さん？！",
 		   NULL, " Maebara-san!?", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700569", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700569", 256);
 	OutputLine(NULL, "　もしもーしッ？！？！」",
 		   NULL, " Helloooo!?!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1147,10 +1147,10 @@ void main()
 
 //「もしもし…＠　………………………前原…さん…？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700570", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700570", 256);
 	OutputLine(NULL, "「もしもし…？",
 		   NULL, "\"Hello...?", Line_WaitForInput);
-	PlayVoice(3, "s01/11/120700571", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700571", 256);
 	OutputLine(NULL, "　………………………前原…さん…？」",
 		   NULL, " ...Maebara...san...?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1214,7 +1214,7 @@ void main()
 
 //「…………あ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700572", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700572", 256);
 	OutputLine(NULL, "「…………あ。」",
 		   NULL, "\"...Ah.\"", Line_Normal);
 	ClearMessage();
@@ -1234,22 +1234,22 @@ void main()
 	ClearMessage();
 
 	DrawScene( "bg_192", 1000 );
-	DrawBustshot( 3, "Kuma_Def", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(3, 19, "Kuma_Def", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 
 //「大石さん、車はＯＫっす！！＠　大石さん…？！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/19/123100011", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100011", 256);
 	OutputLine(NULL, "「大石さん、車はＯＫっす！！！",
 		   NULL, "\"Ooishi-san, the car is good to go!!!", Line_WaitForInput);
-	PlayVoice(3, "s01/19/123100012", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100012", 256);
 	OutputLine(NULL, "　大石さん…？！」",
 		   NULL, " Ooishi-san...!?\"", Line_Normal);
 	ClearMessage();
 
 //「……ごめんなさい、だ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/11/120700573", 256);
+	ModPlayVoiceLS(3, 11, "s01/11/120700573", 256);
 	OutputLine(NULL, "「……ごめんなさい、だ。」",
 		   NULL, "\"...It was... I'm sorry.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1258,7 +1258,7 @@ void main()
 
 //「大石さん……？？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(3, "s01/19/123100013", 256);
+	ModPlayVoiceLS(3, 19, "s01/19/123100013", 256);
 	OutputLine(NULL, "「大石さん……？？」",
 		   NULL, "\"Ooishi-san...??\"", Line_Normal);
 	ClearMessage();
@@ -2322,7 +2322,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DisableWindow();
-	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 4000, TRUE );
+	ModDrawCharacter(5, 0, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 4000, TRUE );
 	SetStyleOfMessageSwinging( 0 );
 
 //mov %Omake,1
