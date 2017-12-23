@@ -7,7 +7,7 @@ This patch aims to combine the efforts of the ps3 voice patch and the ps3 sprite
 
 # Installing the patch
 
-> [Check our wiki](https://github.com/07th-mod/guide/wiki/Getting-started).
+> [Check our wiki](https://github.com/07th-mod/guide/wiki/Higurashi-Getting-started).
 
 # Releases
 
