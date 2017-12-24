@@ -1,7 +1,7 @@
 # PS3 Voice and Graphics Patch
 #### For Higurashi No Naku Koro Ni - Chapter 1 Onikakushi
 
-> This repository **only** hosts the script files and a few voice files needed to fix bugs, check our [wiki](https://github.com/07th-mod/guide/wiki/Getting-started) for instructions on how to install the patch!
+> This repository **only** hosts the script files and a few voice files needed to fix bugs, check our [wiki](https://github.com/07th-mod/guide/wiki/Higurashi-Getting-started) for instructions on how to install the patch!
 
 This patch aims to combine the efforts of the ps3 voice patch and the ps3 sprites/background patch, and fill in missing voice files not covered by the original voice patch.
 
