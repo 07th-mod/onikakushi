@@ -279,10 +279,10 @@ void main()
 
 //「圭一、そろそろ着くぞ＠起きなさい。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>圭一の父</color>", NULL, "<color=#f5e6d3>Keiichi's dad</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s19/00/992600001", 256);
+	ModPlayVoiceLS(3, 0, "s19/00/992600001", 256, TRUE);
 	OutputLine(NULL, "「圭一、そろそろ着くぞ。",
 		   NULL, "\"Keiichi, we're almost there.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 0, "s19/00/992600002", 256);
+	ModPlayVoiceLS(3, 0, "s19/00/992600002", 256, TRUE);
 	OutputLine(NULL, "起きなさい。」",
 		   NULL, " Wake up.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
