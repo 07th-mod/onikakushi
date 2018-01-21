@@ -15,7 +15,7 @@ void main()
 
 	DisableWindow();
 	PlayBGM( 2, "lsys12", 128, 0 );
-	DrawScene( "bg_112", 3000 );
+	DrawScene("background/ke_ky2", 3000 );
 
 //　喫煙スペースには紫煙が立ち込めていた￥
 	ClearMessage();
@@ -54,7 +54,7 @@ void main()
 //	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
 //	DrawSceneWithMask( "bg_112", "left", 0, 0, 1300 );
 
-	ModDrawCharacterWithFiltering(3, 19, "character/normal/kuma_Def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 19, "sprite/normal/kuma_def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 
 //「……うーん、どうしてこれが五萬切りなんすか＠　待ちが狭くなっちゃうっすよ？＠
@@ -74,7 +74,7 @@ void main()
 		   NULL, "One of the younger detectives was having a staring contest with the Mahjong magazine called \"Next Turn.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 11, "character/normal/oisi1_1_", "0", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 11, "sprite/normal/oisi1_1_", "0", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「五萬切ってもテンパイ崩れませんから。＠
 	ModPlayVoiceLS(3, 19, "s01/19/123100003", 256, TRUE);
@@ -96,7 +96,7 @@ void main()
 	DisableWindow();
 //	DrawSceneWithMask( "bg_112", "left", 0, 0, 1300 );
 //	DrawBustshot( 2, "oi_si_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
-	ModDrawCharacterWithFiltering(2, 11, "character/normal/oisi1_2_", "0", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 11, "sprite/normal/oisi1_2_", "0", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //	DrawBustshot( 1, "kuma_def", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
@@ -121,7 +121,7 @@ void main()
 
 	DisableWindow();
 //	DrawBustshot( 3, "kuma_ikari", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
-	ModDrawCharacterWithFiltering(3, 19, "character/normal/kuma_Ikari_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 19, "sprite/normal/kuma_komaru_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 
 //「…納得いかないっすねぇ…＠わざわざ自分で当たり牌減らすなんて。＠
@@ -182,7 +182,7 @@ void main()
 		   NULL, "\"Whoa, ain't that something? Welp, see ya soon!\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
+	DrawSceneWithMask("black", "left", 0, 0, 1300 );
 
 //「ど、どうしてロンしちゃダメなんすかぁ？＠　あ、待ってくださいよ大石さぁん！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
@@ -197,7 +197,7 @@ void main()
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 	PlaySE( 4, "wa_020", 128, 64 );
-	DrawSceneWithMask( "bg_192", "left", 0, 0, 200 );
+	DrawSceneWithMask("background/ke_s2", "left", 0, 0, 200 );
 
 //　大石の向かいの席の男が受話器を振っている＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -217,7 +217,7 @@ void main()
 		   NULL, " From a payphone.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_011", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/denwa", "left", 0, 0, 300 );
 
 //「あーどうもすみません＠　……お待たせしました、大石です＠もしもし？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -401,7 +401,7 @@ void main()
 
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_192", "right", 0, 0, 300 );
+	DrawSceneWithMask("background/ke_s2", "right", 0, 0, 300 );
 
 //「前原さんは今、公衆電話からかけてますよね＠　どこの公衆電話ですか？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -449,7 +449,7 @@ void main()
 		   NULL, "He understood quickly and hastily started on the internal lines.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_011", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/denwa", "left", 0, 0, 300 );
 
 	StopSE( 4 );
 
@@ -516,7 +516,7 @@ void main()
 		   NULL, " If I didn't get it from this call, I was certain there would never be another chance...!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_192", "right", 0, 0, 300 );
+	DrawSceneWithMask("background/ke_s2", "right", 0, 0, 300 );
 
 //　同僚がメモを回してきた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -610,7 +610,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 19, "character/normal/kuma_Def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 19, "sprite/normal/kuma_def_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 
 //「了解っす！！！￥
@@ -621,7 +621,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask( "bg_192", "right", 0, 0, 300 );
+	DrawSceneWithMask("background/ke_s2", "right", 0, 0, 300 );
 
 
 //「…もしもし＠　大石さん…＠　ごほっごぼッ！！＠
@@ -689,7 +689,7 @@ void main()
 		   NULL, "Had he already been attacked!? Was he injured!?", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_011", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/denwa", "left", 0, 0, 300 );
 
 //「前原さん、今そこに警官が向かってます＠２～３分で到着しますから何とか持ちこたえて下さい＠　もしもし？＠　聞こえてますか？＠　前原さん？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1061,7 +1061,7 @@ void main()
 		   NULL, "But... I could hear something like scratching...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "black", 400 );
+	DrawScene("black", 400 );
 
 //　ガタンガシャン！　とぶつかり合う音がした￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1083,7 +1083,7 @@ void main()
 		   NULL, "I could hear groaning and vomiting over on the other end, and a repeating... abnormal noise.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "bg_011", 400 );
+	DrawScene("background/denwa", 400 );
 
 //「もしもし＠　もしもし？＠　前原さん？＠　もしもーしッ？！？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1188,7 +1188,7 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	DrawScene( "black", 50 );
+	DrawScene("black", 50 );
 
 //　ぶつん￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1233,8 +1233,8 @@ void main()
 		   NULL, "The last thing he said came out so clearly in my mind.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "bg_192", 1000 );
-	ModDrawCharacter(3, 19, "character/normal/kuma_Def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	DrawScene("background/ke_s2", 1000 );
+	ModDrawCharacter(3, 19, "sprite/normal/kuma_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 
 //「大石さん、車はＯＫっす！！＠　大石さん…？！￥
@@ -1344,7 +1344,7 @@ void main()
 		   NULL, " ...That's how I felt.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "white", 3000 );
+	DrawScene("white", 3000 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 
@@ -1354,7 +1354,7 @@ void main()
 //容疑者のメモ
 
 	DisableWindow();
-	DrawScene( "black", 3000 );
+	DrawScene("black", 3000 );
 
 
 	PlayBGM( 1, "msys12", 128, 0 );
@@ -1398,7 +1398,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_119", "left", 0, 0, 1300 );
+	DrawSceneWithMask("background/ma3", "left", 0, 0, 1300 );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //　容疑者は自宅にクラスメートの女子２名/
@@ -1420,8 +1420,8 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
-	DrawSceneWithMask( "bg_080", "left", 0, 0, 1300 );
+	DrawSceneWithMask("black", "left", 0, 0, 1300 );
+	DrawSceneWithMask("background/ma_j3", "left", 0, 0, 1300 );
 
 //locate 0,2
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 2 ); }
@@ -1463,7 +1463,7 @@ void main()
 //locate 0,2
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 	DisableWindow();
-	DrawSceneWithMask( "bg_022", "left", 0, 0, 1300 );
+	DrawSceneWithMask("background/ma_g3_01", "left", 0, 0, 1300 );
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //　玄関では、靴箱と壁に激しい打撲の痕跡。
@@ -1512,7 +1512,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "bg_170", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/ma_d1", "right", 0, 0, 1300 );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //locate 0,2
@@ -1539,7 +1539,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_210", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/ma_s1", "right", 0, 0, 1300 );
 	PlayBGM( 2, "lsys24", 128, 0 );
 
 //locate 0,2
@@ -1621,7 +1621,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 
 //locate 0,3
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 3 ); }
@@ -1706,7 +1706,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_188", 1000 );
+	DrawScene("background/sinryou_soto3", 1000 );
 
 //locate 0,4
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 4 ); }
@@ -1851,7 +1851,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_219", 1000 );
+	DrawScene("background/tegami1", 1000 );
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 0,4
@@ -1916,7 +1916,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_203", 1000 );
+	DrawScene("background/sora5", 1000 );
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1976,7 +1976,7 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	PlayBGM( 1, "msys11", 128, 0 );
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 
 	PlayBGM( 2, "lsys24", 128, 0 );
 //locate 0,5
@@ -2111,7 +2111,7 @@ void main()
 	FadeOutBGM( 2, 10, TRUE );
 	OutputLineAll(NULL, "", Line_Normal);
 	DisableWindow();
-	DrawScene( "bg_220", 1000 );
+	DrawScene("background/tegami2", 1000 );
 	ClearMessage();
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 10, TRUE );
@@ -2204,7 +2204,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_221", 1000 );
+	DrawScene("background/tegami3", 1000 );
 
 //locate 0,2
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 2 ); }
@@ -2297,11 +2297,11 @@ void main()
 	SetValidityOfInput( TRUE );
 
 	DisableWindow();
-	DrawScene( "white", 100 );
+	DrawScene("white", 100 );
 	PlaySE( 4, "wa_036", 128, 64 );
-	DrawScene( "end_1", 100 );
+	DrawScene("end_1", 100 );
 //	DrawScene( "end_2", 200 );
-	DrawScene( "end_3", 4000 );
+	DrawScene("end_3", 4000 );
 //lsph 20,":c;bmp\Efe\End_1.bmp",0,0
 //lsph 21,":c;bmp\Efe\End_2.bmp",0,0
 //lsph 22,":c;bmp\Efe\End_3.bmp",0,0
@@ -2322,20 +2322,20 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DisableWindow();
-	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 4000, TRUE );
+	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 4000, TRUE );
 	SetStyleOfMessageSwinging( 0 );
 
 //mov %Omake,1
 //mov %NEW_bg,1
 //mov %Onikakusi_END,1
 //csp -1
-	DrawScene( "black", 400 );
+	DrawScene("black", 400 );
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 
 //	DrawSceneWithMask( "s_jump_back", "4", 0, 0, 1000 );
 	PlaySE( 4, "wa_041", 128, 64 );
-	DrawSceneWithMask( "ex_otsu", "5", 0, 0, 1000 );
+	DrawSceneWithMask("ex_otsu", "5", 0, 0, 1000 );
 	Wait( 10000 );
 //	DrawSceneWithMask( "s_jump_back", "4", 0, 0, 1000 );
 //	PlaySE( 4, "wa_041", 128, 64 );
@@ -2348,7 +2348,7 @@ void main()
 
 
 	SetValidityOfTextFade( TRUE );
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );

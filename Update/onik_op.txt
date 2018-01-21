@@ -11,29 +11,29 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	DrawScene( "black", 3000 );
-	DrawScene( "si_onikakusi", 1000 );
+	DrawScene("black", 3000 );
+	DrawScene("si_onikakusi", 1000 );
 	Wait( 15000 );
-	DrawScene( "black", 3000 );
+	DrawScene("black", 3000 );
 	PlaySE( 4, "wa_015", 128, 64 );
 	Wait( 1000 );
 	PlaySE( 4, "wa_017", 128, 64 );
-	DrawScene( "tyuui", 100 );
+	DrawScene("tyuui", 100 );
 
 
-	DrawScene( "black", 4000 );
+	DrawScene("black", 4000 );
 	PlaySE( 4, "wa_015", 128, 64 );
 	Wait( 1000 );
 	PlaySE( 4, "wa_017", 128, 64 );
-	DrawScene( "tyuui2", 100 );
+	DrawScene("tyuui2", 100 );
 
 
-	DrawScene( "black", 4000 );
+	DrawScene("black", 4000 );
 	PlaySE( 4, "wa_015", 128, 64 );
 	Wait( 1000 );
 	PlaySE( 4, "wa_017", 128, 64 );
 	Wait( 350 );
-	DrawScene( "black", 50 );
+	DrawScene("black", 50 );
 	PlaySE( 4, "wa_030", 128, 64 );
 	Wait( 3000 );
 
@@ -143,7 +143,7 @@ void main()
 		   NULL, "That mechanical, repetitious sound finally stilled, and everything fell silent.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_204", "c", 0, 0, 1300 );
+	DrawSceneWithMask("background/sora6", "c", 0, 0, 1300 );
 //locate 0,4
 
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 4 ); }
@@ -487,7 +487,7 @@ void main()
 		   NULL, " bouquet for you.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "black", 3000 );
+	DrawScene("black", 3000 );
 	FadeFilm( 1000, TRUE );
 //print 1
 //locate 0,5
@@ -519,8 +519,8 @@ void main()
 	PlaySE( 4, "wa_015", 128, 64 );
 	Wait( 800 );
 	PlaySE( 4, "wa_017", 128, 64 );
-	DrawBG( "aka1", 25, TRUE );
-	DrawBustshot( 5, "logo", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, TRUE );
+	DrawBG("background/aka1", 25, TRUE );
+	DrawBustshot(5, "logo", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, TRUE );
 
 
 //..lsp 10,"title\logo.bmp",0,140
@@ -531,7 +531,7 @@ void main()
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 
 	FadeBG( 3000, TRUE );
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 //csp -1
 //print 2
 

@@ -12,8 +12,8 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	DrawScene( "black", 1000 );
-	DrawScene( "bg_111", 400 );
+	DrawScene("black", 1000 );
+	DrawScene("background/ke_ky1", 400 );
 	PlayBGM( 2, "lsys12", 128, 0 );
 
 //「自分で喉を掻き破った出血性ショック死＠
@@ -40,7 +40,7 @@ void main()
 		   NULL, " The shape of the scars also matches.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	ModDrawCharacterWithFiltering(3, 11, "character/normal/oisi1_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「えぇえぇ＠直接死因が自殺ってのはわかってますよ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -64,7 +64,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(3, 11, "character/normal/oisi1_2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(3, 11, "sprite/normal/oisi1_2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -73,7 +73,7 @@ void main()
 		   NULL, "\"It's not quite on the same level as when your back itches and you scratch a little too hard and draw blood, after all.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshotWithFiltering( 5, "black", "down", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
+	DrawBustshotWithFiltering(5, "black", "down", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
 
 //　富竹氏の指には爪が剥がれたものもある＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -129,7 +129,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(3, 11, "character/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(3, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「では乱闘になって、興奮のあまり自分の喉を引っ掻きだしたってことですか＠　襲った連中、さぞや度肝を抜かれたでしょうなぁ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -155,7 +155,7 @@ void main()
 		   NULL, "Of course, those are very rare cases.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask( "bg_112", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/ke_ky2", "left", 0, 0, 300 );
 
 //「実はな、大石くん＠仏が武器にしたらしい角材な＠砂粒とかガードレールの塗装片とかそんなのしか出んかったぞい。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
@@ -238,9 +238,9 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBG( "black", 1000, TRUE );
+	DrawBG("black", 1000, TRUE );
 	DrawFilm( 2, 119, 119, 119, 255, 0, 1000, TRUE );
-	ModDrawCharacter(2, 8, "character/normal/tomi1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	ModDrawCharacter(2, 8, "sprite/normal/tomi1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 //　...生前に何のスポーツを嗜んでいたか想像はつかないが、身体能力は高い方だと思う＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -288,7 +288,7 @@ void main()
 	DisableWindow();
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 1000, TRUE );
 	FadeFilm( 1000, TRUE );
-	DrawScene( "bg_111", 1000 );
+	DrawScene("background/ke_ky1", 1000 );
 
 
 
@@ -459,7 +459,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DisableWindow();
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 	FadeOutBGM( 0, 1000, FALSE );
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );

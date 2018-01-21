@@ -10,8 +10,8 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	DrawScene( "black", 1000 );
-	DrawScene( "bg_222", 1000 );
+	DrawScene("black", 1000 );
+	DrawScene("background/tennai1", 1000 );
 	PlayBGM( 1, "msys01", 128, 0 );
 
 //　セブンスマートは市内にある、酒類食料品の安売量販店だ￥
@@ -195,7 +195,7 @@ void main()
 	ClearMessage();
 	SetValidityOfWindowDisablingWhenGraphicsControl( TRUE );
 	DisableWindow();
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 
 	FadeFilm( 0, TRUE );
 
@@ -874,13 +874,13 @@ void main()
 	ClearMessage();
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
-	DrawScene( "white", 1000 );
+	DrawScene("white", 1000 );
 
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	DisableWindow();
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 	FadeOutBGM( 0, 1000, FALSE );
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );

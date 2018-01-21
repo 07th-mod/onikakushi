@@ -11,10 +11,10 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	DrawScene( "black", 1000 );
-	DrawScene( "bg_192", 1000 );
+	DrawScene("black", 1000 );
+	DrawScene("background/ke_s2", 1000 );
 	PlayBGM( 1, "msys12", 128, 0 );
-	ModDrawCharacterWithFiltering(3, 11, "character/normal/oisi1_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「......おんやぁ＠　今の皆さんは確か...。＠
 	ClearMessage();
@@ -54,7 +54,7 @@ void main()
 		   NULL, " The prefectural assembly member and city councilor are related.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	ModDrawCharacter(3, 11, "character/normal/oisi1_2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(3, 11, "sprite/normal/oisi1_2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「これがズルイんですよ＠お互いの名前で事前運動バンバン＠片方の選挙中にはもう片方が別に講演会を開いて、二重に選挙運動やってんですよ＠堂々と。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -106,7 +106,7 @@ void main()
 		   NULL, " 'Cause I'm dumb. Heheheh...!\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	ModDrawCharacter(3, 11, "character/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(3, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 
 //　いたのは園崎県議と園崎市議＠
@@ -152,7 +152,7 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -165,14 +165,14 @@ void main()
 
 ////setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DisableWindow();
-	DrawScene( "bg_237", 400 );
+	DrawScene("background/mati7", 400 );
 	PlayBGM( 2, "lsys20", 128, 0 );
 	Wait( 2000 );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 //!sd
 
 	DisableWindow();
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 	PlayBGM( 1, "msys13", 128, 0 );
 //	DrawSceneWithMask( "bg_237", "up", 0, 0, 1300 );
 
@@ -299,8 +299,8 @@ void main()
 		   NULL, "While we were silent, we made headway on our food and drink.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "black", 1000 );
-	DrawScene( "bg_237", 1000 );
+	DrawScene("black", 1000 );
+	DrawScene("background/mati7", 1000 );
 
 //「いやぁご馳走になっちゃいました＠今月は負けっぱなしだったんで財布辛かったんですよ＠助かりました。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -594,7 +594,7 @@ void main()
 		   NULL, "The cab sped up gradually, and soon disappeared among the sea of lights.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	ModDrawCharacter(2, 11, "character_zoomed/night/oisi1_1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	ModDrawCharacter(2, 11, "portrait/night/oisi1_1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 //「なっはっはっは！!w1000......まいったな＠ローン返済できるかなぁ...。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -617,7 +617,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DisableWindow();
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 	FadeOutBGM( 0, 1000, FALSE );
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );

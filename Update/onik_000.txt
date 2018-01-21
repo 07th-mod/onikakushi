@@ -296,12 +296,12 @@ void main()
 
 
 	DisableWindow();
-	DrawScene( "white", 400 );
+	DrawScene("white", 400 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	DrawSceneWithMask( "bg_012", "c", 0, 0, 1300 );
+	DrawSceneWithMask("background/eki", "c", 0, 0, 1300 );
 
 //　ようやく列車が終点に着いたようだった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -331,7 +331,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask( "bg_124", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/mati2", "right", 0, 0, 1300 );
 
 
 //　ここからさらに車で山道を走る￥
@@ -347,14 +347,14 @@ void main()
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
-	DrawSceneWithMask( "bg_208", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/oki_g3", "right", 0, 0, 1300 );
 
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
 	DisableWindow();
-	DrawSceneWithMask( "bg_042", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/m_hi5", "right", 0, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
@@ -362,7 +362,7 @@ void main()
 //*******************************************************
 
 	DisableWindow();
-	DrawSceneWithMask( "bg_038", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/m_hi1", "right", 0, 0, 1300 );
 	PlayBGM( 1, "msys12", 128, 0 );
 //!sd
 
@@ -374,8 +374,8 @@ void main()
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DisableWindow();
-	DrawScene( "white", 400 );
-	DrawScene( "bg_216", 3000 );
+	DrawScene("white", 400 );
+	DrawScene("background/jt1", 3000 );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 //!sd
 
@@ -390,13 +390,13 @@ void main()
 	DisableWindow();
 	SetValidityOfInput( FALSE );
 //	Wait( 1000 );
-	DrawBustshotWithFiltering( 6, "cinema", "x", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
-	DrawBustshot( 7, "Title02", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 3000, TRUE );
+	DrawBustshotWithFiltering(6, "cinema", "x", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
+	DrawBustshot(7, "title02", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 3000, TRUE );
 	Wait( 2000 );
-	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 3000, TRUE );
+	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 3000, TRUE );
 	Wait( 1000 );
 	FadeBustshotWithFiltering( 7, "x", 1, FALSE, 0, 0, 1000, TRUE );
-	DrawScene( "black", 3000 );
+	DrawScene("black", 3000 );
 	SetValidityOfInput( TRUE );
 
 

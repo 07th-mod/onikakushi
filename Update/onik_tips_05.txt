@@ -12,7 +12,7 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 	PlayBGM( 2, "lsys12", 128, 0 );
 
 
@@ -38,7 +38,7 @@ void main()
 		   NULL, "The vast scope of the projected Hinamizawa dam was to have an incredibly heavy impact on the village of Hinamizawa.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_005", 1000 );
+	DrawScene("background/kawa4", 1000 );
 
 //　雛見沢ダムにより水没する地域は雛見沢、高津戸、清津、松本、谷河内の五ヶ部落に及び＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -74,7 +74,7 @@ void main()
 		   NULL, " All of these communal, cultural, agricultural areas, and places of worship were to be indefinitely submerged at the bottom of the artificial lake basin.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_001", 1000 );
+	DrawScene("background/damu2", 1000 );
 
 //　この天恵豊かで住みよい郷土を、血と汗をもって築いてくれた父祖幾百年の艱難辛苦を思えば余りに痛ましいことであり＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -116,7 +116,7 @@ void main()
 		   NULL, "But the villagers did not falter. Instead, they banded together even more closely and steeled their resolve to protect their homes to the death.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_092", 1000 );
+	DrawScene("background/mo_b1", 1000 );
 
 //　今日、恐るべき雛見沢ダム建設計画は、その再開が無期限に凍結されている＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -166,7 +166,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DisableWindow();
-	DrawScene( "black", 1000 );
+	DrawScene("black", 1000 );
 	FadeOutBGM( 0, 1000, FALSE );
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );
