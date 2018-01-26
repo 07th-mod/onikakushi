@@ -2550,8 +2550,12 @@ void main()
 	ClearMessage();
 	DisableWindow();
 //	FadeBustshotWithFiltering( 5, "left", 0, FALSE, 0, 0, 1300, TRUE );
-	DrawSceneWithMask( "04_b", "left", 0, 0, 300 );
 
+
+	//set big CG
+	SetValidityOfInterface(FALSE);
+	SetValidityOfSaving(FALSE);
+	DrawBustshot( 6, "scene/004", 0, 230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 300, TRUE );
 
 
 //　......それは想像を裏切らず、レナだった￥
@@ -2593,7 +2597,6 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-//	DrawFilm( 2, 255, 34, 34, 255, 0, 100, TRUE );
 	FadeOutBGM( 1, 100, FALSE );
 	FadeOutBGM( 2, 100, TRUE );
 
@@ -2601,13 +2604,14 @@ void main()
 //　......そして、その右腕には......
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……そして、その右腕には……",
-		   NULL, "...And in her right hand...", Line_Normal);
+		   NULL, "...And in her right hand...", Line_ContinueAfterTyping);
 
-	ClearMessage();
-	DisableWindow();
-	DrawSceneWithMask( "04_c", "left", 0, 0, 300 );
-
+	//move big CG
+	DrawFilm( 2, 255, 34, 34, 255, 0, 2500, FALSE );
+	MoveBustshot( 6, NULL, 0, -230, -480, 0, 2500, TRUE );
 	PlaySE( 4, "wa_027", 128, 64 );
+	ShakeScreen( 1, 50, 20, 3, 5);
+
 
 //斧。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2621,8 +2625,14 @@ void main()
 
 	ClearMessage();
 	DisableWindow();
-	DrawBustshotWithFiltering( 5, "black", "right", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 300, TRUE );
-//	FadeFilm( 0, TRUE );
+
+	//reset big CG layer and revert orignal effect
+	DrawBustshotWithFiltering( 5, "black", "right", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 27, 300, TRUE );
+	DrawBustshot( 6, "", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
+	FadeFilm( 0, TRUE );
+	SetValidityOfInterface(TRUE);
+	SetValidityOfSaving(TRUE);
+
 ////print 24
 
 //　再び木陰に身を隠し、今見た信じられない光景を思い出す￥
@@ -3254,7 +3264,7 @@ void main()
 
 
 	DisableWindow();
-	Negative( 100, TRUE );
+	Negative( 200, FALSE );
 
 	DrawBustshot( 1, "re_se_hii_a1_zoom", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 	PlaySE( 4, "wa_027", 128, 64 );
@@ -3262,12 +3272,18 @@ void main()
 
 //「嘘だッ！！！！！！！￥
 	PlayVoice(3, "s01/02/120200367", 256);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
-	OutputLine(NULL, "「嘘だッ！！！！！！！」",
-		   NULL, "\"LIES!!!!!!\"", Line_Normal);
-	ClearMessage();
 
-	FadeFilm( 100, TRUE );
+	DrawBustshot( 2, "text/oni_usoda", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 2, 0, FALSE );
+	StartShakingOfAllObjects( 1, 50, 10, 4, 20, FALSE);
+
+
+//	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
+//	OutputLine(NULL, "「嘘だッ！！！！！！！」",
+//		   NULL, "\"LIES!!!!!!\"", Line_Normal);
+//	ClearMessage();
+
+	FadeFilm( 400, FALSE );
+	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 800, TRUE );
 
 
 //　レナの叫びがこだまし、驚かせた鳥たちが羽ばたいていく＠
@@ -3924,7 +3940,8 @@ void main()
 
 	DisableWindow();
 //	DrawScene( "oni_re_01", 1000 );
-	DrawFilm( 2, 136, 136, 136, 255, 0, 1000, TRUE );
+//	DrawFilm( 2, 136, 136, 136, 255, 0, 1000, TRUE );
+	DrawFilm( 1, 255, 0, 0, 50, 0, 300, FALSE );
 //	DrawBustshotWithFiltering( 2, "re_se_wa_a1_zoom", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 	DrawBustshot( 2, "re_se_wa_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
@@ -3945,7 +3962,8 @@ void main()
 	ClearMessage();
 
 //	DrawScene( "oni_re_02", 1000 );
-	DrawFilm( 2, 255, 153, 153, 255, 0, 1000, TRUE );
+//	DrawFilm( 2, 255, 153, 153, 255, 0, 1000, TRUE );
+	DrawFilm( 1, 255, 0, 0, 100, 0, 300, FALSE );
 
 
 //　...そして頭上で両手が組まれた時、そこには斧が握られていた＠
@@ -4190,8 +4208,8 @@ void main()
 	ClearMessage();
 
 //	DrawScene( "oni_re_06", 1000 );
-	DrawFilm( 2, 255, 34, 34, 255, 0, 0, TRUE );
-
+//	DrawFilm( 2, 255, 34, 34, 255, 0, 0, TRUE );
+	DrawFilm( 2, 255, 0, 0, 255, 0, 300, FALSE );
 
 
 //　レナの眼差しがさらに冷え込む＠
@@ -4440,6 +4458,8 @@ void main()
 
 //■回想
 	DisableWindow();
+	DrawFilm( 2, 153, 153, 102, 255, 0, 0, FALSE );
+	DrawBustshot( 1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
 	DrawScene( "bg_081", 1000 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
@@ -4713,7 +4733,7 @@ void main()
 
 	DisableWindow();
 	DrawBustshotWithFiltering( 5, "black", "down", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
-	DrawBustshot( 2, "re_se_de_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	//DrawBustshot( 2, "re_se_de_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 
 
@@ -4733,7 +4753,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	//DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //　それは何かの相談でなく、いつもそうするようにたむろって、話に花を咲かせていただけらしい＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4748,7 +4768,7 @@ void main()
 		   NULL, "At that time, Rena underwent a \"change.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawFilm( 2, 255, 34, 34, 255, 0, 3000, TRUE );
+	//DrawFilm( 2, 255, 34, 34, 255, 0, 3000, TRUE );
 ////print 42
 
 //　その変化はあまりに突然で、３人は何が起こったのか理解できなかったらしい＠
@@ -4758,19 +4778,26 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-
-	PlaySE( 4, "wa_008", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 1, 0, );
 	PlaySE( 4, "wa_008", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
+	WaitToFinishSEPlaying(4);
+	//SetValidityOfInput( FALSE );
+	//Wait( 200 );
+	//SetValidityOfInput( TRUE );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 0, 0, );
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	WaitToFinishSEPlaying(4);
+	//ShakeScreenSx( 1, 0, );
+	PlaySE( 4, "wa_008", 128, 64 );
+	WaitToFinishSEPlaying(4);
+	//SetValidityOfInput( FALSE );
+	//Wait( 200 );
+	//SetValidityOfInput( TRUE );
+	PlaySE( 4, "wa_005", 128, 64 );
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	WaitToFinishSEPlaying(4);
+	//ShakeScreenSx( 0, 0, );
+	SetValidityOfInput( TRUE );
 
 //　そして金属バットを手に、仲間たちを次々に殴り倒した＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4779,20 +4806,24 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
+	SetValidityOfInput( FALSE );
 	SetValidityOfWindowDisablingWhenGraphicsControl( FALSE );
-	FadeBustshotWithFiltering( 2, "right", 1, FALSE, 0, 0, 300, TRUE );
+//	FadeBustshotWithFiltering( 2, "right", 1, FALSE, 0, 0, 300, TRUE );
 	FadeFilm( 0, TRUE );
 	PlaySE( 4, "wa_008", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
+	WaitToFinishSEPlaying(4);
+	//SetValidityOfInput( FALSE );
+	//Wait( 200 );
+	//SetValidityOfInput( TRUE );
 	PlaySE( 4, "wa_005", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
+	WaitToFinishSEPlaying(4);
 	PlaySE( 4, "wa_030", 128, 64 );
 //setwindow 8,16,23,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DrawSceneWithMask( "ryuuketu1", "aa", 0, 0, 300 );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	//SetValidityOfInput( FALSE );
+	//Wait( 1000 );
+	WaitToFinishSEPlaying(4);
 	SetValidityOfInput( TRUE );
 	SetValidityOfWindowDisablingWhenGraphicsControl( FALSE );
 
@@ -4808,30 +4839,26 @@ void main()
 		   NULL, "Leaving her friends covered in blood with gashes on their heads, she made her way towards the school building.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
+	
+	SetValidityOfInput( FALSE );
 	PlaySE( 4, "wa_008", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
+	DrawFilm( 2, 153, 153, 102, 255, 0, 200, FALSE );
+	DrawBustshot( 1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 200, FALSE );
+	DrawScene("100", 200);
+	WaitToFinishSEPlaying(4);
 	PlaySE( 4, "wa_009", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	WaitToFinishSEPlaying(4);
 	PlaySE( 4, "wa_008", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
+	WaitToFinishSEPlaying(4);
 	PlaySE( 4, "wa_009", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	WaitToFinishSEPlaying(4);
 	PlaySE( 4, "wa_008", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
+	WaitToFinishSEPlaying(4);
 	PlaySE( 4, "wa_009", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	WaitToFinishSEPlaying(4);
 	SetValidityOfInput( TRUE );
 
 //　そして教室の窓ガラスを次々に割っていったのだ＠
@@ -4853,6 +4880,7 @@ void main()
 //print 6
 	DisableWindow();
 	DrawSceneWithMask( "black", "up", 0, 0, 1300 );
+	DrawBustshot( 1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1300, FALSE );
 	DrawSceneWithMask( "bg_080", "down", 0, 0, 1300 );
 
 	StopSE( 4 );
@@ -5593,6 +5621,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	DrawBustshot( 1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1300, FALSE );
 	DrawSceneWithMask( "bg_080", "up", 0, 0, 1300 );
 
 //「オヤシロさまが...か......。＠
@@ -5717,6 +5746,7 @@ void main()
 		   NULL, "Long ago, Hinamizawa was feared and respected as the village of ogres.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
+	DrawBustshot( 1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
 	DrawScene( "bg_159", 1000 );
 
 //「ふもとの村人たちは鬼たちを崇めていました＠で、鬼ヶ淵は神聖な土地なので絶対に不可侵＠むやみに立ち入るとオヤシロさまの祟りがある、とされてきたんです。＠
@@ -5790,6 +5820,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	DrawBustshot( 1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
 	DrawScene( "bg_081", 1000 );
 
 //「つまり......オヤシロさまってのは、守り神ってよりも...監視者なんですね＠　この地を外界から隔離しようとする。＠
@@ -6164,6 +6195,7 @@ void main()
 	StopSE( 4 );
 	PlayBGM( 1, "msys08", 128, 0 );
 	PlayBGM( 2, "lsys15", 128, 0 );
+	DrawFilm( 2, 255, 34, 34, 255, 0, 0, FALSE );
 	DrawBG( "bg_143", 0, TRUE );
 	DrawBustshot( 2, "re_se_hi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	FadeBustshotWithFiltering( 5, "right", 0, FALSE, 0, 0, 1300, TRUE );
@@ -6659,6 +6691,7 @@ void main()
 	ClearMessage();
 
 	PlaySE( 4, "wa_022", 128, 64 );
+	DrawBG( "scene/eye", 1000, TRUE );
 
 //　......それよりも......目だった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -6734,6 +6767,8 @@ void main()
 
 	PlayBGM( 1, "msys08", 128, 0 );
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+	
+	DrawBG( "bg_003", 1000, TRUE );
 
 
 //　俺は心のどこかでレナに怯えながらも、怖いのはレナひとりだと決め付けてきた＠
@@ -7190,7 +7225,7 @@ void main()
 
 
 	DisableWindow();
-	DrawScene( "bg_003_re", 200 );
+	DrawFilm( 2, 255, 0, 0, 255, 0, 1000, TRUE );
 
 //　......と思ったのもつかの間、すぐに皮膚が擦り剥けるあの嫌な痛みと、胃の内容物がこみ上げてくる時にする、あの苦い感覚が口中を満たす＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -7232,7 +7267,7 @@ void main()
 		   NULL, "...My throat felt like it was being crushed by his immense strength!!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene( "bg_003_gr", 300 );
+	DrawFilm( 2, 94, 0, 0, 255, 0, 3000, TRUE );
 
 //　窒息するとか昏倒するとか、そんな理屈は思いつかなかった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -7292,7 +7327,9 @@ void main()
 		   NULL, "'Dire straits,' I couldn't even come up with the phrase that adequately described my situation...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
+
 	DrawScene( "black", 3000 );
+	FadeFilm( 0, TRUE );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 
 	FadeOutBGM( 1, 1000, TRUE );

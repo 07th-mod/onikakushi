@@ -4643,7 +4643,12 @@ void main()
 	DisableWindow();
 
 	PlaySE( 4, "wa_027", 128, 64 );
-	DrawScene( "04_c", 200 );
+
+	//draw big CG
+	SetValidityOfInterface(FALSE);
+	SetValidityOfSaving(FALSE);
+	DrawBustshot( 1, "scene/004b", 0, -230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 200, TRUE );
+	ShakeScreen( 1, 50, 20, 3, 5);
 
 //nega 0
 	FadeFilm( 0, TRUE );
@@ -4656,14 +4661,20 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(3, "s19/01/hr_kei05020", 256);
 	OutputLine(NULL, "「わああぁあぁあぁあぁあッ！！！」",
-		   NULL, "\"AhhHhhhHhHhhh!!!\"", Line_Continue);
+		   NULL, "\"AhhHhhhHhHhhh!!!\"", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_003", 128, 64 );
-	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	WaitToFinishVoicePlaying(3);
 
 	DisableWindow();
-	DrawSceneWithMask( "sunset/bg_023", "mask1013", 1, 0, 300 );
-	DrawBustshot( 2, "sunset/re_se_bi_a1_zoom", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+
+	//adjust character size and reset big CG layer and add shaking
+	DrawScene( "sunset/bg_023", 300 );
+	PlaySE( 4, "wa_003", 128, 64 );
+	StartShakingOfAllObjects( 1, 50, 10, 4, 20, TRUE);
+	DrawBustshot( 2, "sunset/re_se_bi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DrawBustshot( 1, "", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 0, TRUE );
+	SetValidityOfInterface(TRUE);
+	SetValidityOfSaving(FALSE);
 
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
