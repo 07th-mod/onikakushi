@@ -2943,10 +2943,12 @@ void main()
 
 //	DrawBustshot( 2, "re_se_hii_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
-	DrawSceneWithMask("02_d", "c", 0, 0, 0 );
-	DrawSceneWithMask("scene/002b", "c", 0, 0, 400 );
-
-	DrawSceneWithMask("scene/002b", "c", 0, 0, 100 );
+	DrawBG("scene/002b", 0, FALSE);
+	ModDrawCharacter(1, 0, "text/oni_usoda", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 0, FALSE );
+	StartShakingOfAllObjects( 1, 50, 10, 4, 20, FALSE);
+	Negative( 0, TRUE );
+	FadeFilm( 400, FALSE );
+	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 800, TRUE );
 
 	Wait( 1000 );
 
@@ -5107,8 +5109,7 @@ void main()
 	ClearMessage();
 
 
-	DrawSceneWithMask("23a", "left", 0, 0, 1000 );
-
+	DrawScene("black", 1000);
 
 
 //　さっき…俺が大石さんと話していた時…背中の向こう、わずか２００センチのところに……ずっとレナが立っていた……￥
@@ -5117,17 +5118,21 @@ void main()
 		   NULL, "Just now... as I was talking to Ooishi-san... With my back turned, Rena was standing a mere six feet away... the whole time...?", Line_Normal);
 	ClearMessage();
 
+	//draw big CG and add negative and shake and adjust SE location
+	SetValidityOfInterface(FALSE);
+	SetValidityOfSaving(FALSE);
+	ModDrawCharacter(1, 0, "scene/031", "0", 200, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, TRUE );
+	MoveBustshot( 1, NULL, -200, 0, 0, 0, 2500, TRUE );
+	Negative( 100, FALSE );
+	ShakeScreen( 1, 50, 20, 3, 5);
+	PlaySE( 4, "wa_027", 128, 64 );
+
 
 //　こんな薄暗い廊下に、ずっと……￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　こんな薄暗い廊下に、ずっと……？",
 		   NULL, "All that time... in this dimly lit doorway...?", Line_Normal);
 	ClearMessage();
-
-	PlaySE( 4, "wa_027", 128, 64 );
-
-	DrawSceneWithMask("23b", "left", 0, 0, 0 );
-
 
 
 //　何を見て＠
@@ -5151,6 +5156,13 @@ void main()
 	OutputLine(NULL, "　何の為に？",
 		   NULL, "For what reason?", Line_Normal);
 	ClearMessage();
+
+	//Disable nagative filter and reset big CG layer.
+	FadeFilm( 1000, FALSE );
+	DrawScene("background/ma_j3", 1000);
+	DrawBustshot( 1, "", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 0, TRUE );
+	SetValidityOfInterface(TRUE);
+	SetValidityOfSaving(TRUE);
 
 
 //　２人分のティーカップのほのかな湯気が、不吉な形にぐにゃりと歪みながら、俺の部屋いっぱいに紅茶の香りを満たしていった……￥
@@ -5182,7 +5194,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	DrawSceneWithMask("onik011", "mask_1900", 7, 0, 300 );
+	DrawSceneWithMask("text/onik011", "mask_1900", 7, 0, 300 );
 	SetValidityOfInput( FALSE );
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );

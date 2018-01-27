@@ -4643,7 +4643,12 @@ void main()
 	DisableWindow();
 
 	PlaySE( 4, "wa_027", 128, 64 );
-	DrawScene("04_c", 200 );
+
+	//draw big CG
+	SetValidityOfInterface(FALSE);
+	SetValidityOfSaving(FALSE);
+	ModDrawCharacter(1, 0, "scene/004b", "0", 0, -230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 200, TRUE );
+	ShakeScreen( 1, 50, 20, 3, 5);
 
 //nega 0
 	FadeFilm( 0, TRUE );
@@ -4656,14 +4661,20 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05020", 256, TRUE);
 	OutputLine(NULL, "「わああぁあぁあぁあぁあッ！！！」",
-		   NULL, "\"AhhHhhhHhHhhh!!!\"", Line_Continue);
+		   NULL, "\"AhhHhhhHhHhhh!!!\"", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_003", 128, 64 );
-	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	WaitToFinishVoicePlaying(3);
 
 	DisableWindow();
-	DrawSceneWithMask("background/mo_g1_01", "mask1013", 1, 0, 300 );
-	ModDrawCharacter(2, 2, "portrait/sunset/re1a_bikkuri_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+
+	//adjust character size and reset big CG layer and add shaking
+	DrawScene("background/mo_g1_01", 300 );
+	PlaySE( 4, "wa_003", 128, 64 );
+	StartShakingOfAllObjects( 1, 50, 10, 4, 20, TRUE);
+	ModDrawCharacter(2, 2, "sprite/sunset/re1a_bikkuri_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DrawBustshot( 1, "", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 0, TRUE );
+	SetValidityOfInterface(TRUE);
+	SetValidityOfSaving(FALSE);
 
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4848,7 +4859,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	DrawSceneWithMask("onik003", "mask_1900", 7, 0, 300 );
+	DrawSceneWithMask("text/onik003", "mask_1900", 7, 0, 300 );
 	SetValidityOfInput( FALSE );
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );
