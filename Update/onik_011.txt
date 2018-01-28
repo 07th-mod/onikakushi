@@ -2944,7 +2944,7 @@ void main()
 //	DrawBustshot( 2, "re_se_hii_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	DrawBG("scene/002b", 0, FALSE);
-	ModDrawCharacter(1, 0, "text/oni_usoda", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 0, FALSE );
+	DrawBustshot(1, "text/oni_usoda", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 0, FALSE );
 	StartShakingOfAllObjects( 1, 50, 10, 4, 20, FALSE);
 	Negative( 0, TRUE );
 	FadeFilm( 400, FALSE );
@@ -5121,7 +5121,7 @@ void main()
 	//draw big CG and add negative and shake and adjust SE location
 	SetValidityOfInterface(FALSE);
 	SetValidityOfSaving(FALSE);
-	ModDrawCharacter(1, 0, "scene/031", "0", 200, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, TRUE );
+	DrawBustshot(1, "scene/031", 200, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, TRUE );
 	MoveBustshot( 1, NULL, -200, 0, 0, 0, 2500, TRUE );
 	Negative( 100, FALSE );
 	ShakeScreen( 1, 50, 20, 3, 5);

@@ -2555,7 +2555,7 @@ void main()
 	//set big CG
 	SetValidityOfInterface(FALSE);
 	SetValidityOfSaving(FALSE);
-	ModDrawCharacter(6, 0, "scene/004", "0", 0, 230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 300, TRUE );
+	DrawBustshot(6, "scene/004", 0, 230, -480, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 300, TRUE );
 
 
 //　......それは想像を裏切らず、レナだった￥
@@ -3273,7 +3273,7 @@ void main()
 //「嘘だッ！！！！！！！￥
 	ModPlayVoiceLS(3, 2, "s01/02/120200367", 256, TRUE);
 
-	ModDrawCharacter(2, 0, "text/oni_usoda", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 2, 0, FALSE );
+	DrawBustshot(2, "text/oni_usoda", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 2, 0, FALSE );
 	StartShakingOfAllObjects( 1, 50, 10, 4, 20, FALSE);
 
 
@@ -4459,7 +4459,7 @@ void main()
 //■回想
 	DisableWindow();
 	DrawFilm( 2, 153, 153, 102, 255, 0, 0, FALSE );
-	ModDrawCharacter(1, 0, "append/waku", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
+	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
 	DrawScene("background/ma_j3_01", 1000 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
@@ -4843,7 +4843,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	PlaySE( 4, "wa_008", 128, 64 );
 	DrawFilm( 2, 153, 153, 102, 255, 0, 200, FALSE );
-	ModDrawCharacter(1, 0, "append/waku", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 200, FALSE );
+	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 200, FALSE );
 	DrawScene("scene/102", 200);
 	WaitToFinishSEPlaying(4);
 	PlaySE( 4, "wa_009", 128, 64 );
@@ -4880,7 +4880,7 @@ void main()
 //print 6
 	DisableWindow();
 	DrawSceneWithMask("black", "up", 0, 0, 1300 );
-	ModDrawCharacter(1, 0, "append/waku", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1300, FALSE );
+	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1300, FALSE );
 	DrawSceneWithMask("background/ma_j3", "down", 0, 0, 1300 );
 
 	StopSE( 4 );
@@ -5621,7 +5621,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(1, 0, "append/waku", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1300, FALSE );
+	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1300, FALSE );
 	DrawSceneWithMask("background/ma_j3", "up", 0, 0, 1300 );
 
 //「オヤシロさまが...か......。＠
@@ -5746,7 +5746,7 @@ void main()
 		   NULL, "Long ago, Hinamizawa was feared and respected as the village of ogres.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	ModDrawCharacter(1, 0, "append/waku", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
+	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
 	DrawScene("background/oni1", 1000 );
 
 //「ふもとの村人たちは鬼たちを崇めていました＠で、鬼ヶ淵は神聖な土地なので絶対に不可侵＠むやみに立ち入るとオヤシロさまの祟りがある、とされてきたんです。＠
@@ -5820,7 +5820,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(1, 0, "append/waku", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
+	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
 	DrawScene("background/ma_j3_01", 1000 );
 
 //「つまり......オヤシロさまってのは、守り神ってよりも...監視者なんですね＠　この地を外界から隔離しようとする。＠
