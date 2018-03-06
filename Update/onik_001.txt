@@ -2077,11 +2077,11 @@ void main()
 	PlayVoice(3, "s19/04/990400007", 256);
 	OutputLine(NULL, "「言い掛かりでございますわぁ！",
 		   NULL, "\"Nothing but lies and slander!", Line_WaitForInput);
+	PlayVoice(3, "s19/04/990400008", 256);
 	OutputLine(NULL, "　何の証拠があって",
 		   NULL, " Exactly what proof—", Line_ContinueAfterTyping);
 
 	Wait( 300 );
-	PlayVoice(3, "s19/04/990400010", 256);
 	OutputLine(NULL, "…ふわッ！」",
 		   NULL, " ...Uwah!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
