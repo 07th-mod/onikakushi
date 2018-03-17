@@ -2189,35 +2189,35 @@ void main()
 		   NULL, " Loli!", Line_Continue);
 
 	PlaySE( 4, "wa_010", 128, 64 );
-	OutputLineAll(NULL, "\n", Line_WaitForInput);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll(NULL, "", Line_WaitForInput); } else { OutputLineAll(NULL, "\n", Line_WaitForInput); }
 
 //巫女！/
 	PlayVoice(3, "s19/01/hr_kei33830_02", 256);
 	OutputLine(NULL, "巫女！",
 		   NULL, " Shrine maiden!", Line_Continue);
 	PlaySE( 4, "wa_029", 128, 64 );
-	OutputLineAll(NULL, "\n", Line_WaitForInput);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll(NULL, "", Line_WaitForInput); } else { OutputLineAll(NULL, "\n", Line_WaitForInput); }
 
 //半涙！/
 	PlayVoice(3, "s19/01/hr_kei33830_03", 256);
 	OutputLine(NULL, "半涙！",
 		   NULL, " Brink of crying!", Line_Continue);
 	PlaySE( 4, "wa_012", 128, 64 );
-	OutputLineAll(NULL, "\n", Line_WaitForInput);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll(NULL, "", Line_WaitForInput); } else { OutputLineAll(NULL, "\n", Line_WaitForInput); }
 
 //みぃ！/
 	PlayVoice(3, "s19/01/hr_kei33830_04", 256);
 	OutputLine(NULL, "みぃ！",
 		   NULL, " Mew!", Line_Continue);
 	PlaySE( 4, "wa_016", 128, 64 );
-	OutputLineAll(NULL, "\n", Line_WaitForInput);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll(NULL, "", Line_WaitForInput); } else { OutputLineAll(NULL, "\n", Line_WaitForInput); }
 
 //完璧だッ！！/
 	PlayVoice(3, "s19/01/hr_kei33830_05", 256);
 	OutputLine(NULL, "完璧だッ！！",
 		   NULL, " It was perfect!!", Line_Continue);
 	PlaySE( 4, "wa_007", 128, 64 );
-	OutputLineAll(NULL, "\n", Line_WaitForInput);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll(NULL, "", Line_WaitForInput); } else { OutputLineAll(NULL, "\n", Line_WaitForInput); }
 
 //ただのコケを萌えにまで昇華した…!w500これぞまさに芸術と呼ぶに相応しいッ！！＠
 	PlayVoice(3, "s19/01/hr_kei33830_06", 256);
