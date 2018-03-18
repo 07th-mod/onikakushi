@@ -5,20 +5,22 @@ void main()
 //■沢のほとりにて…昔話
 ////*Onikakusi_day9_2
 
-	DrawScene("monologue_oni1", 1000 );
+	DrawScene("text/monologue_oni1", 1000 );
 	ModPlayVoiceLS(3, 0, "s00/n/oni001", 256, TRUE);
 	Wait( 4000 );
 	ModPlayVoiceLS(3, 0, "s00/n/oni002", 256, TRUE);
 	Wait( 4000 );
 	ModPlayVoiceLS(3, 0, "s00/n/oni003", 256, TRUE);
 	Wait( 10000 );
-	DrawScene("monologue_oni2", 1000 );
+	DrawScene("text/monologue_oni2", 1000 );
 	ModPlayVoiceLS(3, 0, "s00/n/oni004", 256, TRUE);
 	Wait( 5000 );
 	ModPlayVoiceLS(3, 0, "s00/n/oni005", 256, TRUE);
 	Wait( 5000 );
+	DrawScene("title_oni", 1000 );
 	ModPlayVoiceLS(3, 0, "s00/n/oni007", 256, TRUE);
 	Wait( 2000 );
+	DrawScene("text/monologue_oni3", 1000 );
 	ModPlayVoiceLS(3, 0, "s00/n/oni008", 256, TRUE);
 	Wait( 3000 );
 	ModPlayVoiceLS(3, 0, "s00/n/oni009", 256, TRUE);
@@ -2958,7 +2960,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	DrawSceneWithMask("text/onik009_02", "mask_1900", 7, 0, 300 );
+	DrawSceneWithMask("tips/onik009_02", "mask_1900", 7, 0, 300 );
 	SetValidityOfInput( FALSE );
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );

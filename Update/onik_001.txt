@@ -2077,11 +2077,11 @@ void main()
 	ModPlayVoiceLS(3, 4, "s19/04/990400007", 256, TRUE);
 	OutputLine(NULL, "「言い掛かりでございますわぁ！",
 		   NULL, "\"Nothing but lies and slander!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "s19/04/990400008", 256, TRUE);
 	OutputLine(NULL, "　何の証拠があって",
 		   NULL, " Exactly what proof—", Line_ContinueAfterTyping);
 
 	Wait( 300 );
-	ModPlayVoiceLS(3, 4, "s19/04/990400010", 256, TRUE);
 	OutputLine(NULL, "…ふわッ！」",
 		   NULL, " ...Uwah!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2142,11 +2142,10 @@ void main()
 
 //「ぼぅ、暴力反対ですのー！！!w600　証拠もないのにぃ～！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 4, "s19/04/990400008", 256, TRUE);
+	ModPlayVoiceLS(3, 4, "s19/04/990400009", 256, TRUE);
 	OutputLine(NULL, "「ぼぅ、暴力反対ですのー！！",
 		   NULL, "\"I-I'm against violence!!", Line_WaitForInput);
 
-	ModPlayVoiceLS(3, 4, "s19/04/990400009", 256, TRUE);
 	OutputLine(NULL, "　証拠もないのにぃ〜！！」",
 		   NULL, " You don't even have any proof!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2333,7 +2332,6 @@ void main()
 	OutputLine(NULL, "「…ひぅ！",
 		   NULL, "\"...Huu!", Line_WaitForInput);
 
-	ModPlayVoiceLS(3, 2, "s19/02/990200034", 256, TRUE);
 	OutputLine(NULL, "　…だってだって…こんなにかぁいいよぅ？」",
 		   NULL, " ...But, but... they're sho kyute?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2348,7 +2346,7 @@ void main()
 
 //「でも...ちょっとくらいなら......だめかな？!d300だめかな？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "s19/02/990200035", 256, TRUE);
+	ModPlayVoiceLS(3, 2, "s19/02/990200034", 256, TRUE);
 	OutputLine(NULL, "「でも…ちょっとくらいなら……だめかな？",
 		   NULL, "\"But... just for a bit... is fine?", Line_Continue);
 
@@ -2394,6 +2392,7 @@ void main()
 	ModPlayVoiceLS(3, 2, "s19/02/990200035", 256, TRUE);
 	OutputLine(NULL, "「じゃあ見てるだけ。見てるだけだよ…。",
 		   NULL, "\"Then I can just look. Just looking...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "s19/02/990200036", 256, TRUE);
 	OutputLine(NULL, "それならいいよね。よね？」",
 		   NULL, " that should be fine, right? Right?\"", Line_Normal);
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4854,7 +4853,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	DrawSceneWithMask("text/onik001", "mask_1900", 7, 0, 300 );
+	DrawSceneWithMask("tips/onik001", "mask_1900", 7, 0, 300 );
 	SetValidityOfInput( FALSE );
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );
