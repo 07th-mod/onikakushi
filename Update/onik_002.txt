@@ -464,17 +464,11 @@ void main()
 		   NULL, " Everyone knows everyone since there are so few people here in Hinamizawa.\"", Line_Normal);
 	ClearMessage();
 
-//「つまりなんだ＠
+//「つまりなんだ＠　知らない顔が歩いてれば、それは自動的に新しく引っ越してきた前原さん、てことになるわけか。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei01330", 256, TRUE);
 	OutputLine(NULL, "「つまりなんだ。",
-		   NULL, "\"So that means...", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-
-//　知らない顔が歩いてれば、それは自動的に新しく引っ越してきた前原さん、てことになるわけか。＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+		   NULL, "\"So that means...", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei01340", 256, TRUE);
 	OutputLine(NULL, "　知らない顔が歩いてれば、それは自動的に新しく引っ越してきた前原さん、てことになるわけか。」",
 		   NULL, "So that means when an unfamiliar face walks by, they automatically assume it's that Maebara fella who just moved here?\"", GetGlobalFlag(GLinemodeSp));
@@ -1001,7 +995,7 @@ void main()
 	OutputLine(NULL, "「ここの場所、よく覚えといてね！",
 		   NULL, "\"This place. Be sure to remember it!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s19/03/990300111", 256, TRUE);
-	OutputLine(NULL, "　次の休みにはここでお祭りがあるんだから。」",
+	OutputLine(NULL, "　もうすぐここでお祭りがあるんだから。」",
 		   NULL, " On our next break, a festival will be held here.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -1811,7 +1805,7 @@ void main()
 		   NULL, "\"Uh... Um, hey!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 4, "s19/04/990400046", 256, TRUE);
 	PlaySE( 4, "wa_029", 64, 64 );
-	OutputLine(NULL, "　………レナお姉ちゃんのお弁当、沙都子もおいしかったよ…。",
+	OutputLine(NULL, "　………レナお姉ちゃんのお弁当、沙都子もおいしかったよ…。」",
 		   NULL, " ...So, Rena-oneechan's lunch? Satoko thought it was yummy, too...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -2332,29 +2326,19 @@ void main()
 	OutputLine(NULL, "あ〜んしてぇえぇ…けけけ圭一くん",
 		   NULL, " Say ahhh... K-K-K-Keiichi-kun...", Line_Continue);
 
-//!s100
+	Wait( 1800 );
 
 	SetSpeedOfMessage( TRUE, 0, );
 
-	OutputLine(NULL, "……けけけけけ…☆",
-		   NULL, " ...", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "……けけけけけ…☆」",
+		   NULL, " ...Tehehehehe...☆\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	SetSpeedOfMessage( FALSE, 0, );
 
-//!sd
 
 //　強制膝枕の上、俺の口にはまだまだりんごが押し込まれていく＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "」",
-		   NULL, "Tehehehehe...☆\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-
-
-//　奇声を発しながら次々とりんごを…俺の口に…!d200…!d200次々!d200…!d200…!d200…!d200りん!d200…!d200…!d200…!d200ご……￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　強制膝枕の上、俺の口にはまだまだりんごが押し込まれていく。",
 		   NULL, "My head was forcibly laid upon her lap and even more apples were shoved into my mouth.", Line_ContinueAfterTyping);
@@ -2613,7 +2597,7 @@ void main()
 
 //　うさぎさんのお皿を押しつけられた梨花ちゃんは唖然とする沙都子の手をレフェリーのように振り上げると、!w1000ぼそりと言った＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　うさぎさんのお皿を押しつけられた梨花ちゃんは唖然とする紗都子の手をレフェリーのように振り上げると、",
+	OutputLine(NULL, "　うさぎさんのお皿を押しつけられた梨花ちゃんは唖然とする沙都子の手をレフェリーのように振り上げると、",
 		   NULL, "Rika-chan raised up Satoko's hand like a referee after having that plate of rabbits shoved to her.", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
@@ -3300,8 +3284,8 @@ void main()
 	OutputLine(NULL, "「さぁねぇ。",
 		   NULL, "\"Dunno.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei02320", 256, TRUE);
-	OutputLine(NULL, "昔、殺して埋めたバラバラ死体でも確認してるんじゃないすか？」",
-		   NULL, " Maybe she's checking on the dismembered corpse of someone she buried here long ago?\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "昔起こった、殺人事件の死体でも捜してるんじゃないすか？」",
+		   NULL, " Maybe she's searching for the corpse from an old murder?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
