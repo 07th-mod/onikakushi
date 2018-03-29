@@ -3687,19 +3687,16 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s19/02/990200203", 256, TRUE);
 	OutputLine(NULL, "「……へ？…って……レナのため…に…？",
-		   NULL, "\"...Eh? ...You came... for me...?", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
+		   NULL, "\"...Eh? ...You came... for me...?", Line_WaitForInput);
 
 
 	DisableWindow();
 	ModDrawCharacter(2, 2, "sprite/normal/re1a_hau_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //……はぅ。＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s19/02/990200204", 256, TRUE);
-	OutputLine(NULL, "……はぅ。」",
-		   NULL, "...Hao.\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, " ……はぅ。」",
+		   NULL, " ...Hao.\"", GetGlobalFlag(GLinemodeSp));
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -3977,7 +3974,7 @@ void main()
 	Wait( 200 );
 //　黄昏時の空の中、次々と綺麗な放物線を描いて飛んで行＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　黄昏時の空の中、次々と綺麗な放物線を描いて飛んで行く",
+	OutputLine(NULL, "　黄昏時の空の中、次々と綺麗な放物線を描いて飛んで行く。",
 		   NULL, "Flying objects drew beautiful arcs across the twilight sky, one after another.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
