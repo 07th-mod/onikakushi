@@ -382,7 +382,7 @@ void main()
 	OutputLine(NULL, "「レナは甘えてますわ！",
 		   NULL, "\"You're so naive, Rena!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 4, "s19/04/vt0_satoko0002", 256, TRUE);
-	OutputLine(NULL, "　弱いものは食い尽くされるのが世の常でございますわー！」",
+	OutputLine(NULL, "　弱いものは食い尽くされるのが世の常でございますわよー！」",
 		   NULL, " The Law of the Jungle is survival of the fittest!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -667,8 +667,8 @@ void main()
 	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_nande_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「わ、!w400わ、!w400…油性じゃないよね＠　油性じゃないよね…？＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "「わ、",
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+		OutputLine(NULL, "「わ、",
 		   NULL, "\"Whoa,", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
@@ -1716,7 +1716,7 @@ void main()
 //「一騎討ちしましょうよ＠ワンチャンス＠　勝てたら圭ちゃん１位で私ビリの大逆転！…なんてどう？！　乗るでしょ？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s19/03/990300172", 256, TRUE);
-	OutputLine(NULL, "「一騎討ちしましょうよ。",
+	OutputLine(NULL, "「一騎討ちしょうよ。",
 		   NULL, "\"Let's have a duel.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s19/03/990300173", 256, TRUE);
 	OutputLine(NULL, "ワンチャンス！",
