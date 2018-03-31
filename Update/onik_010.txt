@@ -913,7 +913,7 @@ void main()
 	OutputLine(NULL, "　む、あるとの答えが２人しか出なかったぞ？",
 		   NULL, "Hrm, only two people said they had one?", Line_WaitForInput);
 	OutputLine(NULL, "　ってことは…「レナ」「斧」「ラウンジ」のどれかひとつは…犯人、正解ということか？！",
-		   NULL, " So it means... out of \"Rena\", \"Axe\", and \"Lounge,\" one of them is correct and is part of the crime!?", Line_Normal);
+		   NULL, " So it means... out of \"Rena,\" \"Axe,\" and \"Lounge,\" one of them is correct and is part of the crime!?", Line_Normal);
 	ClearMessage();
 
 
@@ -1621,6 +1621,7 @@ void main()
 
 
 //「うん。わかったね！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s01/02/120200035", 256, TRUE);
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「うん。わかったね！」",
@@ -2607,7 +2608,7 @@ void main()
 //	PlaySE(3, "s01/01/120100108", 256, 64);	// Wrong sound (the one matching this line seems to be missing)
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　爪？！",
-		   NULL, "\"Nails!?", Line_WaitForInput);
+		   NULL, "Nails!?", Line_WaitForInput);
 	OutputLine(NULL, "　爪って、指についてる…この爪か？！",
 		   NULL, " As in fingernails!?", Line_WaitForInput);
 	OutputLine(NULL, "　それで…ガリガリと？！？！",
@@ -2902,7 +2903,7 @@ void main()
 	OutputLine(NULL, "…彼女は？！",
 		   NULL, " ...What about her!?", Line_Normal);
 	ClearMessage();
-
+//Inconsistency in internal monologue being picked up.
 
 //「行方不明です＠出勤もしていませんし、昨夜は自宅にも帰っていません＠…事件に巻きこまれた可能性が極めて高いようです。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>中年男</color>", NULL, "<color=#f5e6d3>Middle-Aged Man</color>", NULL, Line_ContinueAfterTyping); }
@@ -4371,7 +4372,7 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "…ずーっと待ってたんだよ？　…だよ？」",
-		   NULL, " ...I waited all this time, you know? ...You know?", GetGlobalFlag(GLinemodeSp));
+		   NULL, " ...I waited all this time, you know? ...You know?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
