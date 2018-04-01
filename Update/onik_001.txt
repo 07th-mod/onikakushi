@@ -464,6 +464,8 @@ void main()
 		   NULL, "\"If that ever happens, I'll just leave you behind.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re1a_komaru_a2_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「け、圭一くん冷たい＠いつも待っててあげてるのにー...。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -531,6 +533,8 @@ void main()
 		   NULL, "With those words, Rena seemed to relax.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re1a_hau_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //　顔が一気に紅潮する￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -556,6 +560,8 @@ void main()
 		   NULL, " No matter how long.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re1a_bikkuri_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「......わわ、わ...!w400...ず、!w400ずーっと......。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -606,6 +612,8 @@ void main()
 		   NULL, "\"Have you ever read a romance novel, Rena...?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re1b_komaru_b1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「...え!w600......あ、...ないよ。!w400よ、読んだ事ない。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -981,7 +989,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s19/03/990300002", 256, TRUE);
 	OutputLine(NULL, "「おはようレナ。そして圭ちゃんお久しぶり！",
-		   NULL, "\"Morning Rena. And it's been a while, Kei-chan!", Line_WaitForInput);
+		   NULL, "\"Morning, Rena. And it's been a while, Kei-chan!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s19/03/990300003", 256, TRUE);
 	OutputLine(NULL, "　何年ぶりだっけぇ？」",
 		   NULL, " How many years?\"", GetGlobalFlag(GLinemodeSp));
@@ -1108,7 +1116,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(3, 3, "sprite/normal/me1a_tokui_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(3, 3, "sprite/normal/me1b_tokui_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	ModPlayVoiceLS(3, 3, "s19/03/990300011", 256, TRUE);
 	OutputLine(NULL, " 圭ちゃんの昨日の夕食からレナのスリーサイズまで、すべておじさんはお見通しさ」",
@@ -1129,7 +1137,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(3, 3, "sprite/normal/me1a_huteki_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(3, 3, "sprite/normal/me1b_huteki_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「……ちなみにレナのスリーサイズは？」
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1782,7 +1790,7 @@ void main()
 		   NULL, "\"An impressive combination, Satoko!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei00480", 256, TRUE);
 	OutputLine(NULL, "　だが所詮はガキの浅知恵だったな！」",
-		   NULL, " But in the end nothing more than the trivial machinations of a child!\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " But in the end, nothing more than the trivial machinations of a child!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2332,7 +2340,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s19/02/990200033", 256, TRUE);
 	OutputLine(NULL, "「…ひぅ！",
-		   NULL, "\"...Huu!", Line_WaitForInput);
+		   NULL, "\"...Huu!", Line_Continue);
 
 	OutputLine(NULL, "　…だってだって…こんなにかぁいいよぅ？」",
 		   NULL, " ...But, but... they're sho kyute?\"", GetGlobalFlag(GLinemodeSp));
@@ -2481,7 +2489,7 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("background/gk3", 400 );
-	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_wink_a1_", "2", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1b_warai_a1_", "2", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「あははは、間に合ったね！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -2491,7 +2499,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_wink_a1_", "2", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_def_a1_", "2", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「きりーっ、きょーつけー！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -2632,7 +2640,7 @@ void main()
 		   NULL, " If you don't take this seriously there'll be trouble later on.", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	Wait( 300 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "こんなレベルじゃ…。」",
@@ -2834,6 +2842,7 @@ void main()
 		   NULL, "Study = Entrance Exams. Having that basic law of the universe so easily overturned sent me into a state of shock.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
+	ModDrawCharacter(2, 3, "sprite/normal/me1a_huteki_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「そうかもね＠試験で振り落とさなきゃならないほど、人もいないし。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -3120,6 +3129,7 @@ void main()
 	DisableWindow();
 //	DrawBustshot( 1, "sa_se_wa_a1", -160-45, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 	ModDrawCharacter(1, 4, "sprite/normal/sa1a_warai_a1_", "1", -240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(2, 5, "sprite/normal/ri1_niko_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 //	DrawBustshot( 3, "re_se_wa_b1", 160+90, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 	ModDrawCharacter(3, 2, "sprite/normal/re1b_warai_b1_", "2", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
@@ -3448,6 +3458,7 @@ void main()
 //	DrawBustshot( 2, "re_se_ha_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「これ、前に評判良かったからいっぱい作ってみたの＠...おいしいかな？!d800...かな？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s19/02/990200050", 256, TRUE);
 	OutputLine(NULL, "「これ、前に評判良かったからいっぱい作ってみたの。",
 		   NULL, "\"Everyone liked this one so much before, so I made a lot this time.", Line_WaitForInput);
@@ -3678,7 +3689,7 @@ void main()
 	OutputLine(NULL, "えーと…",
 		   NULL, " Uhh...", Line_Continue);
 
-	Wait( 600 );
+	Wait( 2400 );
 
 	OutputLine(NULL, "黄色がカリフラワー、うぅん、緑がカリフラ……、」",
 		   NULL, " The yellow one is cauliflower... No, wait... the green one is cauliflower...\"", GetGlobalFlag(GLinemodeSp));
@@ -3701,7 +3712,7 @@ void main()
 	OutputLine(NULL, "「多分、黄色がぶろっこりで青がかりふらわで……",
 		   NULL, "\"Probably... the yellow one is broccoli and the blue one is cauliflower...", Line_Continue);
 
-	Wait( 400 );
+	Wait( 6400 );
 
 	OutputLine(NULL, "でも緑は……",
 		   NULL, " But the green one is...", Line_Continue);
@@ -3774,12 +3785,12 @@ void main()
 	OutputLine(NULL, "「…わかるもん……わかるもん…",
 		   NULL, "\"...I know... I know...", Line_Continue);
 
-	Wait( 300 );
+	Wait( 400 );
 
 	OutputLine(NULL, "…",
 		   NULL, "...", Line_Continue);
 
-	Wait( 300 );
+	Wait( 3600 );
 	OutputLine(NULL, "ぅわぁあぁああぁあん！！」",
 		   NULL, " Uwaaaaaahn!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3944,7 +3955,7 @@ void main()
 //　レナの両腕から超音速の拳が繰り出され、俺と魅音の顔面を直撃する＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　レナの両腕から超音速の拳が繰り出され、俺と魅音の顔面を直撃する。",
-		   NULL, "Both of Rena's fists shot out at supersonic speeds, striking Mion and me squarely in our faces.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Both of Rena's fists shot out at supersonic speed, striking Mion and me squarely in our faces.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
