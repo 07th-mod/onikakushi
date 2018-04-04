@@ -37,7 +37,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s20/01/440100023", 128, TRUE);
 	OutputLine(NULL, "「何だよ、突然。",
-		   NULL, "\"What is this all of a sudden?", Line_WaitForInput);
+		   NULL, "\"What is this all of a sudden?", Line_Continue);
+	Wait( 1200 );
 	OutputLine(NULL, "…俺がいつリムジンで登校したよ？」",
 		   NULL, " Did I come to school in a limo before?\"", Line_Normal);
 	ClearMessage();
