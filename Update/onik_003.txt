@@ -52,7 +52,7 @@ void main()
 		   NULL, "\"Probably better to hear it from Rena, don't you think?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s19/03/990300133", 256, TRUE);
 	OutputLine(NULL, "　どーせ「だってかぁいいんだもん☆」しか言わないだろうけどさ。」",
-		   NULL, " She'll probably just say, \"because it's just so kyute☆\" though.\"", Line_Normal);
+		   NULL, " She'll probably just say, 'because it's just so kyute☆' though.\"", Line_Normal);
 	ClearMessage();
 
 
@@ -505,7 +505,7 @@ void main()
 //　…沙都子が言うと、どんな手段を使ってもいい、と言ってるように聞こえる￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…沙都子が言うと、どんな手段を使ってもいい、と言ってるように聞こえる。",
-		   NULL, "...The way Satoko said it, it sounded like she was saying, 'use any means necessary.'", Line_Normal);
+		   NULL, "...The way Satoko said it, it sounded like she was saying, \"use any means necessary.\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -628,6 +628,7 @@ void main()
 	OutputLine(NULL, "ジジ抜きはどうッ？！」",
 		   NULL, "Like Old Bachelor!?\"", Line_Continue);
 
+	Wait( 200 );
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreenSx( 1, 2, );
 	OutputLineAll(NULL, "", Line_Normal);
@@ -668,21 +669,21 @@ void main()
 
 //「わ、!w400わ、!w400…油性じゃないよね＠　油性じゃないよね…？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "s19/02/990200176", 256, TRUE);
 	OutputLine(NULL, "「わ、",
 		   NULL, "\"Whoa,", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 400 );
+	Wait( 100 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "わ、",
-		   NULL, " whoa,", Line_ContinueAfterTyping);
+		   NULL, " whoa", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
-	Wait( 400 );
+	Wait( 100 );
 	SetValidityOfInput( TRUE );
 
-	ModPlayVoiceLS(3, 2, "s19/02/990200176", 256, TRUE);
 	OutputLine(NULL, "…油性じゃないよね？",
 		   NULL, " ...It won't be a permanent marker, right?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "s19/02/990200177", 256, TRUE);
@@ -971,7 +972,7 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("white", "right", 0, 0, 300 );
 	DrawSceneWithMask("background/gk3", "right", 0, 0, 300 );
-	ModDrawCharacter(2, 3, "sprite/normal/me1a_akuwarai_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	ModDrawCharacter(2, 3, "sprite/normal/me1b_huteki_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 //「くっくっく＠　圭ちゃんの手札を右から言うぜ＠　３、!d400４、!d400９、!d400Ｊ、!d400Ｑ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -981,6 +982,7 @@ void main()
 	ModPlayVoiceLS(3, 3, "s19/03/990300160", 256, TRUE);
 	OutputLine(NULL, "　圭ちゃんの手札を右から言うぜ？",
 		   NULL, " How about I tell you your hand starting from the right?", Line_WaitForInput);
+	ModDrawCharacter(2, 3, "sprite/normal/me1b_tokui_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 	ModPlayVoiceLS(3, 3, "s19/03/990300161", 256, TRUE);
 	OutputLine(NULL, "　３、",
 		   NULL, " Three,", Line_Continue);
@@ -1111,13 +1113,13 @@ void main()
 	OutputLine(NULL, "……あがり！」",
 		   NULL, " ...I'm out!\"", Line_Continue);
 
+	Wait( 2000 );
 	PlaySE( 4, "wa_006", 128, 64 );
-	ShakeScreenSx( 0, 3, );
-
+	ShakeScreenSx( 1, 3, );
+	
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
 
 
 //「おわぁあぁああぁあぁああぁああ！！＠
@@ -1528,7 +1530,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s19/02/990200183", 256, TRUE);
 	OutputLine(NULL, "「…わ、",
-		   NULL, "\"...Whoa,", Line_Continue);
+		   NULL, "\"...Whoa", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
@@ -2068,7 +2070,7 @@ void main()
 		   NULL, "\"??", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 500 );
+	Wait( 50 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　え？",
@@ -2854,7 +2856,7 @@ void main()
 //　きっと昨日持ち帰り損ねた、かぁいいランディーくん人形を掘り出しに行くのだろう＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　きっと昨日持ち帰り損ねた、かぁいいランディーくん人形を掘り出しに行くのだろう。",
-		   NULL, "Probably so she could dig out that kyute Colonel Randy that she wasn't able to take home yesterday.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Probably so she could dig out that 'kyute' Colonel Randy that she wasn't able to take home yesterday.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2883,7 +2885,7 @@ void main()
 //　宝の山、例のダム工事現場のことだ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　宝の山、例のダム工事現場のことだ。",
-		   NULL, "'Mountain of treasure,' meaning that dam construction site from before.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"Mountain of treasure,\" meaning that dam construction site from before.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -2988,6 +2990,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
+	DisableWindow();
+	ModDrawCharacter(2, 3, "sprite/normal/me1a_wink_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	
+
 //「村長や村の有力者たちがね、方々に陳情した＠　東京にも行ったし、いろんな政治家に根回しもした＠……そうしてる内に計画は撤回されたんだよ＠/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s19/03/990300211", 256, TRUE);
@@ -2999,9 +3005,7 @@ void main()
 	ModPlayVoiceLS(3, 3, "s19/03/990300213", 256, TRUE);
 	OutputLine(NULL, "……そうしてる内に計画は撤回されたんだよ。",
 		   NULL, " And as a result, the development plan was retracted.", Line_WaitForInput);
-
-	DisableWindow();
-	ModDrawCharacter(2, 3, "sprite/normal/me1a_wink_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+		   
 
 //私たちの完全勝利だった＠　あっはははは！＠
 	ModPlayVoiceLS(3, 3, "s19/03/990300214", 256, TRUE);
@@ -3066,7 +3070,7 @@ void main()
 //　富竹さんは「事件」と言い「腕が一本見つからない」と言っていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　富竹さんは「事件」と言い「腕が一本見つからない」と言っていた。",
-		   NULL, "Tomitake-san said, 'one arm wasn't found' in the 'incident.'", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Tomitake-san said, \"one arm wasn't found\" in the 'incident.'", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -3144,7 +3148,22 @@ void main()
 
 
 
+//■自宅
 
+	DisableWindow();
+	SetValidityOfInput( FALSE );
+	DrawBustshotWithFiltering(6, "cinema", "x", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
+	DrawBustshot(7, "title02", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 3000, TRUE );
+	Wait( 2000 );
+	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 3000, TRUE );
+	Wait( 1000 );
+	FadeBustshotWithFiltering( 7, "x", 1, FALSE, 0, 0, 1000, TRUE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DrawScene("background/ma_s1", 1000 );
+	
+
+	PlayBGM( 1, "msys01", 128, 0 );
 //　自宅に着き、見事にお袋と鉢合わせして、俺は改めて恥をかくことになったのだった…￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　自宅に着き、見事にお袋と鉢合わせして、俺は改めて恥をかくことになったのだった…。",
@@ -3152,18 +3171,6 @@ void main()
 	ClearMessage();
 
 
-
-//■自宅
-
-	DisableWindow();
-	DrawScene("black", 1000 );
-	FadeOutBGM( 1, 1000, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
-	DrawScene("background/ma_s1", 1000 );
-
-	PlayBGM( 1, "msys01", 128, 0 );
 //　帰宅早々、家は神経質なムードでぴりぴりしていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　帰宅早々、家は神経質なムードでぴりぴりしていた。",
@@ -3487,7 +3494,7 @@ void main()
 //　…本当に雛見沢でバラバラ殺人なんかあったんですか？、って＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…本当に雛見沢でバラバラ殺人なんかあったんですか？、って。",
-		   NULL, "...To ask, 'Was there really a dismemberment here in Hinamizawa?'", GetGlobalFlag(GLinemodeSp));
+		   NULL, "...To ask, \"Was there really a dismemberment here in Hinamizawa?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -3979,13 +3986,21 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-
+	PlaySE( 4, "wa_019", 128, 64 );
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	Wait( 400 );
 //　木材＠角材＠ベニヤ板＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　木材、",
-		   NULL, "Lumber,", Line_WaitForInput);
+		   NULL, "Lumber,", Line_ContinueAfterTyping);
+	PlaySE( 4, "wa_018", 128, 64 );
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	Wait( 400 );
 	OutputLine(NULL, "角材、",
-		   NULL, " timber,", Line_WaitForInput);
+		   NULL, " timber,", Line_ContinueAfterTyping);
+	PlaySE( 4, "wa_003", 128, 64 );
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	Wait( 200 );
 	OutputLine(NULL, "ベニヤ板。",
 		   NULL, " plywood.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4026,7 +4041,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1a_def_a1_", "0", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1a_komaru_a1_", "0", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
 
 //「もういいよ圭一くん…＠　すごい汗だよ＠……そんな…無理しなくても…いいよ…。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -4056,7 +4071,9 @@ void main()
 
 
 	DisableWindow();
+	PlaySE( 4, "wa_016", 128, 64 );
 	ModDrawCharacter(2, 2, "sprite/normal/re1a_bikkuri_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	Wait( 100 );
 
 //　レナが言葉をどもらせるとゆでダコみたいに真っ赤になった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4083,7 +4100,9 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "down", 0, 0, 3000 );
-	DrawSceneWithMask("background/mo_g2_01", "down", 0, 0, 300 );
+	PlaySE( 4, "wa_003", 128, 64 );
+	DrawSceneWithMask("background/mo_g2_01", "down", 0, 0, 50 );
+	ShakeScreen( 1, 50, 20, 3, 0, );
 
 //「さすがに…休憩……＠　こいつは…手ごわいぜ…！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -4219,9 +4238,9 @@ void main()
 //（……嫌な事件だったね＠…腕が一本、まだ見つかってないんだろ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "（……嫌な事件だったね。",
-		   NULL, "(...It was quite a disturbing incident.", Line_WaitForInput);
+		   NULL, "\"...It was quite a disturbing incident.", Line_WaitForInput);
 	OutputLine(NULL, "…腕が一本、まだ見つかってないんだろ？）",
-		   NULL, " ...They still haven't found one of the arms.)", GetGlobalFlag(GLinemodeSp));
+		   NULL, " ...They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4413,20 +4432,21 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	PlaySE( 4, "wa_022", 128, 64 );
+	Negative( 50 , TRUE );
 //"雛見沢ダム・作業員リンチ死！　バラバラ殺人！！"!w5000@
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“雛見沢ダム・作業員リンチ死！　バラバラ殺人！！”",
-		   NULL, "'HINAMIZAWA DAM WORKER LYNCHING! MURDER BY DISMEMBERMENT!!'", Line_ContinueAfterTyping);
+		   NULL, "\"HINAMIZAWA DAM WORKER LYNCHING! MURDER BY DISMEMBERMENT!!\"", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
-
+	
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-
+	FadeFilm( 0 , TRUE );
 //　…あった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…あった！",
@@ -4485,7 +4505,7 @@ void main()
 //"雛見沢ダムで悪夢の惨劇！　リンチ・バラバラ殺人！"@
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“雛見沢ダムで悪夢の惨劇！　リンチ・バラバラ殺人！”",
-		   NULL, "'A Tragic Nightmare at the Hinamizawa Construction Site! Lynching and Murder/Dismemberment!'", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"A Tragic Nightmare at the Hinamizawa Construction Site! Lynching and Murder/Dismemberment!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4493,7 +4513,7 @@ void main()
 //"被害者は現場監督。日頃から粗暴な振る舞いで加害者たちを…"@
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“被害者は現場監督。日頃から粗暴な振る舞いで加害者たちを…“",
-		   NULL, "The victim was the site foreman. He had assaulted his assailants daily with...'", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"The victim was the site foreman. He had assaulted his assailants daily with...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4501,7 +4521,7 @@ void main()
 //"日頃の鬱積が爆発？　現場監督は見るも無惨な……"@
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“日頃の鬱積が爆発？　現場監督は見るも無惨な……”",
-		   NULL, "'An explosive backlash from his daily actions? It's a horrible image, to see the site foreman as...'", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"An explosive backlash from his daily actions? It's a horrible image, to see the site foreman as...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4556,7 +4576,7 @@ void main()
 //"犯人達は被害者を鉈やつるはしで滅多打ちにして惨殺し、"!w2500@
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“犯人達は被害者を鉈やつるはしで滅多打ちにして惨殺し、”",
-		   NULL, "'The assailants butchered the victim's body with hatchets and pickaxes,", Line_ContinueAfterTyping);
+		   NULL, "\"The assailants butchered the victim's body with hatchets and pickaxes,", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 2500 );
@@ -4569,7 +4589,7 @@ void main()
 //"さらに斧で遺体を頭部・両腕・両足・胴体の６つに分割、"!w2500@
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“さらに斧で遺体を頭部・両腕・両足・胴体の６つに分割、”",
-		   NULL, "then used an axe to split the cadaver into six pieces: the head, arms, legs, and torso.'", Line_ContinueAfterTyping);
+		   NULL, "then used an axe to split the cadaver into six pieces: the head, arms, legs, and torso.\"", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 2500 );
