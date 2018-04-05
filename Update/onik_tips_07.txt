@@ -20,7 +20,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 5, "s20/05/440500004", 128, TRUE);
 	OutputLine(NULL, "「……レナがいないです。",
-		   NULL, "\"...Rena's not here.", Line_WaitForInput);
+		   NULL, "\"...Rena's not here.", Line_Continue);
+	Wait( 1500 );
 	OutputLine(NULL, "圭一は知りませんですか？」",
 		   NULL, " Do you know where she is, Keiichi?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -31,7 +32,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s20/01/440100026", 128, TRUE);
 	OutputLine(NULL, "「あれ？",
-		   NULL, "\"Huh?", Line_WaitForInput);
+		   NULL, "\"Huh?", Line_Continue);
+	Wait( 800 );
 	OutputLine(NULL, "　たった今までそこにいたのにな。",
 		   NULL, " She was just there, actually...", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s20/01/440100027", 128, TRUE);
@@ -134,7 +136,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s20/01/440100029", 128, TRUE);
 	OutputLine(NULL, "「レナってどういう名前なんだろうな。",
-		   NULL, "\"What kind of name is Rena, I wonder...", Line_WaitForInput);
+		   NULL, "\"What kind of name is Rena, I wonder...", Line_Continue);
+	Wait( 2500 );
 	OutputLine(NULL, "…レナって漢字だとどうなるんだ？」",
 		   NULL, " What kind of kanji does her name use?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -231,6 +234,7 @@ void main()
 	ModPlayVoiceLS(3, 1, "s20/01/440100032", 128, TRUE);
 	OutputLine(NULL, "「礼奈か。",
 		   NULL, "\"Reina, is it?", Line_Continue);
+	Wait( 1000 );
 	OutputLine(NULL, "………ふーん。",
 		   NULL, " ...Hmm.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s20/01/440100033", 128, TRUE);
@@ -328,7 +332,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	PlaySE( 4, "wa_029", 128, 64 );
-
+	Wait( 200 );
 //「越後屋。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s20/01/440100036", 128, TRUE);
@@ -532,7 +536,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s20/03/440300031", 128, TRUE);
 	OutputLine(NULL, "「……ダメだよ。",
-		   NULL, "\"...spare me.", Line_WaitForInput);
+		   NULL, "\"...Spare me.", Line_Continue);
+	Wait( 800 );
 	OutputLine(NULL, "旅先でかぁいいものをチョロまかすから。」",
 		   NULL, "I'll get kyute stuff for you on my travels.\"", Line_ContinueAfterTyping);
 
@@ -585,7 +590,7 @@ void main()
 	OutputLine(NULL, "　……あと１時間か。",
 		   NULL, "...Just one more hour.", Line_WaitForInput);
 	OutputLine(NULL, "やれやれ。",
-		   NULL, " Man oh man.", Line_WaitForInput);
+		   NULL, " Man, oh man.", Line_WaitForInput);
 	OutputLine(NULL, "……もうひと踏ん張りするかな！",
 		   NULL, " ...Got to buckle down for one more!", Line_Normal);
 	ClearMessage();
