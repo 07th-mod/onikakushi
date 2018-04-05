@@ -149,7 +149,7 @@ void main()
 		   NULL, "\"Now then, Class Representative, what shall we do for PE today?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "s19/02/990200230", 256, TRUE);
 	OutputLine(NULL, "　やるのかな？」",
-		   NULL, " What shall we do?", Line_Normal);
+		   NULL, " What shall we do?\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -324,12 +324,13 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	PlaySE( 4, "wa_010", 128, 64 );
 //「…上等だぜ。鬼ごっこ＠乗ってやらぁあぁああぁ！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05560", 256, TRUE);
 	OutputLine(NULL, "「…上等だぜ。鬼ごっこ、",
 		   NULL, "\"...Fine. Tag,", Line_WaitForInput);
+	PlaySE( 4, "wa_010", 128, 64 );
+	Wait( 300 );
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05570", 256, TRUE);
 	OutputLine(NULL, "乗ってやらぁあぁああぁ！！！」",
 		   NULL, " I'm iiiiiiiiin!!!\"", GetGlobalFlag(GLinemodeSp));
@@ -391,7 +392,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s19/03/990300226", 256, TRUE);
 	OutputLine(NULL, "「ここいらではこの遊びのこと、「ゾンビ鬼」って呼んでるけどね。」",
-		   NULL, "\"We call this version 'zombie tag', you see.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"We call this version 'zombie tag,' you see.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -945,7 +946,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "s19/04/990400095", 256, TRUE);
 	OutputLine(NULL, "「百数えればいいんですの？！」",
-		   NULL, "\"All I must do is count to 100 correct!?\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"All I must do is count to 100, correct!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -990,7 +991,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "s19/04/990400096", 256, TRUE);
 	OutputLine(NULL, "「うが！！",
-		   NULL, "\"Oh no!!", Line_WaitForInput);
+		   NULL, "\"Oh no!!", Line_Continue);
+	Wait( 2000 );
 	OutputLine(NULL, "ぶ、分母が違いますですの？！？！」",
 		   NULL, " Th-There are no common denominators?!?!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1163,7 +1165,7 @@ void main()
 	OutputLine(NULL, "　……冷静に考えろ前原圭一…。",
 		   NULL, "...Now think calmly, Keiichi Maebara...", Line_WaitForInput);
 	OutputLine(NULL, "俺が鬼ならどうする？",
-		   NULL, " If I was 'it', what would I do?", GetGlobalFlag(GLinemodeSp));
+		   NULL, " If I was 'it,' what would I do?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1191,6 +1193,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	DrawSceneWithMask("background/gr2", "right", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(2, 4, "sprite/normal/sa3_akuwarai_a1_", "1", "up", 7, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「さぁて圭一さんはどこでございましょう？＠　逃がしませんことよ～！！！＠
@@ -1538,7 +1541,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/girlc99001", 256, TRUE);
 	OutputLine(NULL, "「いない〜。",
-		   NULL, "\"Nope~.", Line_WaitForInput);
+		   NULL, "\"Nope~", Line_WaitForInput);
 	ModPlayVoiceLS(3, 0, "s19/00/girlc99002", 256, TRUE);
 	OutputLine(NULL, "圭一さんどこだろ。",
 		   NULL, " Where's Keiichi-san, I wonder?", Line_WaitForInput);
@@ -1560,7 +1563,7 @@ void main()
 //　校門という俺と同じワードに復讐性を感じる＠下手人は魅音か…￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　校門という俺と同じワードに復讐性を感じる。",
-		   NULL, "The word, 'gate', the same one I'd used, gave a hint of revenge.", Line_WaitForInput);
+		   NULL, "The word, \"gate,\" the same one I'd used, gave a hint of revenge.", Line_WaitForInput);
 	OutputLine(NULL, "下手人は魅音か…！",
 		   NULL, " So Mion was behind this...!", Line_Normal);
 	ClearMessage();
@@ -1680,9 +1683,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/girle99003", 256, TRUE);
 	OutputLine(NULL, "「委員長の写真貼り付けたのもあるらしいよー！」",
-		   NULL, "\"I heard he even has one with a photo of our Class Rep stuck to it~!\"", Line_WaitForInput);
+		   NULL, "\"I heard he even has one with a photo of our Class Rep stuck to it~!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //「え゛ーーーッッ？！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/girld99004", 256, TRUE);
 	OutputLine(NULL, "「え゛ーーーッッ？！」",
 		   NULL, "\"Whaaat!?\"", Line_Normal);
@@ -1690,6 +1695,7 @@ void main()
 
 
 	PlaySE( 4, "wa_006", 128, 64 );
+	ShakeScreen( 1, 50, 20, 3, 0, );
 //　ぐをおおぉおおおぉおぉおおぉおおぉおおおッ！！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ぐをおおぉおおおぉおぉおおぉおおぉおおおッ！！！！！",
@@ -1854,7 +1860,7 @@ void main()
 	OutputLine(NULL, "　魅音がッ？！",
 		   NULL, "Mion!?", Line_WaitForInput);
 	OutputLine(NULL, "　まさか…俺の作戦で鬼になったのか？！",
-		   NULL, " It couldn't be... She'd become 'it' because of my little strategy!?", GetGlobalFlag(GLinemodeSp));
+		   NULL, " It couldn't be... she'd become 'it' because of my little strategy!?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -1863,7 +1869,7 @@ void main()
 	OutputLine(NULL, "　執拗な魅音の報復戦の裏がようやくわかった。",
 		   NULL, "This confirmed that Mion was behind this relentless message war.", Line_WaitForInput);
 	OutputLine(NULL, "…しかし…だとするとまずいな…。",
-		   NULL, " ...Then... This wasn't good...", Line_Normal);
+		   NULL, " ...Then... this wasn't good...", Line_Normal);
 	ClearMessage();
 
 
@@ -1871,7 +1877,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s19/02/990200243", 256, TRUE);
 	OutputLine(NULL, "「魅ぃちゃんは、なんとか巻いたけど……沙都子ちゃんは……。」",
-		   NULL, "\"We finally got away from Mii-chan, but Satoko-chan... She's...\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"We finally got away from Mii-chan, but Satoko-chan... she's...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2102,6 +2108,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri3_niko_a1_", "0", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	
 
 //　梨花ちゃんはレナを取り逃がしたらしく、今やその矛先を俺に向けていた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2109,8 +2118,6 @@ void main()
 		   NULL, "It seemed that Rika-chan had let Rena escape, and now she was baring her fangs in my direction.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri3_niko_a1_", "0", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「えぅうぅ～……あぅあぅう～……。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2363,7 +2370,7 @@ void main()
 	OutputLine(NULL, "　だが今の俺はただのゾンビじゃない。",
 		   NULL, "Except I wasn't just a zombie.", Line_WaitForInput);
 	OutputLine(NULL, "闇の眷属を従えた吸血鬼なのだ！！",
-		   NULL, " I was a master of the night... A vampire!!", GetGlobalFlag(GLinemodeSp));
+		   NULL, " I was a master of the night... a vampire!!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2387,7 +2394,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05830", 256, TRUE);
 	OutputLine(NULL, "「みんな聞いてくれ！",
-		   NULL, "\"Everyone listen!", Line_WaitForInput);
+		   NULL, "\"Everyone, listen!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05840", 256, TRUE);
 	OutputLine(NULL, "　レナが大変なんだ！",
 		   NULL, " Rena's in big trouble!", Line_WaitForInput);
@@ -2430,17 +2437,12 @@ void main()
 	Wait( 200 );
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
-	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
-
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-
+	OutputLineAll(NULL, "", Line_WaitForInput);
+	
 //スペースコロニーだッ！！」/
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05880", 256, TRUE);
 	OutputLine(NULL, "小惑星だッ！！」",
-		   NULL, "Was a comet!!\"", Line_Continue);
+		   NULL, "was a comet!!\"", Line_Continue);
 
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
@@ -2494,7 +2496,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/girlc99005", 256, TRUE);
 	OutputLine(NULL, "「ち…地球軍って…？",
-		   NULL, "\"A... an Earth Federation...?", Line_WaitForInput);
+		   NULL, "\"A... An Earth Federation...?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 0, "s19/00/girlc99006", 256, TRUE);
 	OutputLine(NULL, "　私達、宇宙人と戦争でもしてるんですか？」",
 		   NULL, " Are we really at war with aliens?\"", Line_Normal);
@@ -2508,18 +2510,26 @@ void main()
 		   NULL, "\"If things go on like this, Earth is finished!!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05970", 256, TRUE);
 	OutputLine(NULL, "　しかし！レナなら、レナの放つ音速の『マッハレナパンチ』なら小惑星を全て迎撃することが出来る！！",
-		   NULL, " But don't despair!! If we have Rena's ultrasonic \"Mach-Rena-Punch\", it'll be possible to intercept all of the asteroids! ", GetGlobalFlag(GLinemodeSp));
+		   NULL, " But don't despair!! If we have Rena's ultrasonic \"Mach-Rena-Punch,\" it'll be possible to intercept all of the asteroids! ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05980", 256, TRUE);
 	OutputLine(NULL, "　そう、地球軍のトップエース、それが竜宮レナなのだぁッ！！」",
 		   NULL, "That's right, the Earth Federation's top ace... is Rena Ryuugu!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
+	
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "s19/00/girlc99007", 256, TRUE);
+	OutputLine(NULL, "　「す、すごい……！」",
+		   NULL, "\"A-Amazing...!\"", Line_WaitForInput);
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	
+
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/girla99005", 256, TRUE);
-	OutputLine(NULL, "　「やっぱり、上級生は私たちと違うんだ～」",
+	OutputLine(NULL, "　「やっぱり、上級生は私たちと違うんだ！」",
 		   NULL, "\"So the older kids really ARE different!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_WaitForInput);
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
@@ -2590,7 +2600,7 @@ void main()
 //　一通り納得すると、彼もまたレナの姿を求め駆け出して行った＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　一通り納得すると、彼もまたレナの姿を求め駆け出して行った。",
-		   NULL, "Satisfied with that, he also rushed off to look for Rena.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Satisfied with that, she also rushed off to look for Rena.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2960,7 +2970,7 @@ void main()
 
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 2, "m1", 1, FALSE, 0, 0, 300, TRUE );
+	DrawSceneWithMask("background/gr2", "m1", 0, 0, 1300 );
 
 //「…フ、…あとわずかのところで日光が刺し、悪のゾンビ軍団は灰塵と帰したか…＠ヒロインが生き残るのは……映画のお約束、だもんな…。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2973,7 +2983,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 4, "sprite/night/sa3_odoroki_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa3_odoroki_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
 
 //「何を気取ってるですのー！！＠　圭一さんがもたもたしてるからぁあぁあ！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -2987,7 +2997,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(3, 5, "sprite/night/ri3_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
+	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri3_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
 
 //「…おしおきしますです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -3015,7 +3025,7 @@ void main()
 
 	DisableWindow();
 //	DrawSceneWithMask( "black", "down", 0, 0, 300 );
-	ModDrawCharacterWithFiltering(3, 3, "sprite/night/me3_warai_a1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me3_warai_a1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
 
 //「じゃあ生き残ったで賞は、竜宮レナと園崎魅音。いぇ～い！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -3027,7 +3037,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 2, "sprite/night/re3b_bikkuri_b1_", "2", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re3b_bikkuri_b1_", "2", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
 
 //「あれ…？　魅ぃちゃん、ゾンビじゃなかったの…？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -3055,7 +3065,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(3, 3, "sprite/night/me3_tokui_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
+	ModDrawCharacter(3, 3, "sprite/normal/me3_tokui_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
 
 //「はいはい＠急いで着替えないとね～＠次の授業に遅れんなよ～！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -3070,7 +3080,11 @@ void main()
 		   NULL, " Don't be late for the next class~!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
+	
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/sa3_akuwarai_a1_", "2", "down", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/ri3_warai_a1_", "2", "down", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	
 
 //「離せ沙都子、梨花ちゃん！＠　ぎゃぁあぁあっぁああぁあ…ぁ…！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -3090,8 +3104,6 @@ void main()
 		   NULL, "Having had my fill of being terrified to my very core by club activities, I solemnly swore I would have Mion crying for mercy next time.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawSceneWithMask("background/gr2", "down", 0, 0, 1000 );
 
 //gosub *data_tati
 //mov %CAMP_MUGIC,3
@@ -3686,7 +3698,7 @@ void main()
 //　カツーーンと、木こりのようないい音が沢に響き渡った￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　カツーーンと、木こりのようないい音が沢に響き渡った。",
-		   NULL, "A solid 'thwack' rang through out Hinamizawa, as if the job was being done by a lumberjack.", Line_Normal);
+		   NULL, "A solid \"thwack\" rang through out Hinamizawa, as if the job was being done by a lumberjack.", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -3744,7 +3756,7 @@ void main()
 //　林間学校の時、蒔き割りをやりたくて立候補したが、ジャンケンに負けてできなかった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　林間学校の時、蒔き割りをやりたくて立候補したが、ジャンケンに負けてできなかった。",
-		   NULL, "During a school camping trip, I had wanted to split the wood, but I lost at rock paper scissors and wasn't able to do it.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "During a school camping trip, I had wanted to split the wood, but I lost at rock-paper-scissors and wasn't able to do it.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4274,7 +4286,7 @@ void main()
 //　…で、情けなくも俺は、怖がっている￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…で、情けなくも俺は、怖がっている。",
-		   NULL, "...and shamefully enough, I was scared.", Line_Normal);
+		   NULL, "...And shamefully enough, I was scared.", Line_Normal);
 	ClearMessage();
 
 
