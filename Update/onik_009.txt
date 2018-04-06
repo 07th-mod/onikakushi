@@ -2665,7 +2665,7 @@ void main()
 	DisableWindow();
 	DrawScene("background/je1", 1000 );
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/sa2a_odoroki_a1_", "2", "down", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 100, TRUE );
-	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/me2_ikari_a1_", "2", "down", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 0, 100, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/me2_ikari_a1_", "2", "down", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 0, 100, TRUE );
 
 //　瞬きするより早く、俺の顔面に魅音と沙都子の肘が埋め込まれる……ッ！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2713,10 +2713,10 @@ void main()
 
 //「こンのド変態～！！＠　調伏してさしあげますでございますッ！！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(2, 3, "s19/04/500400705", 256, TRUE);
+	ModPlayVoiceLS(3, 3, "s19/04/500400705", 256, TRUE);
 	OutputLine(NULL, "「こンのド変態〜！！！",
 		   NULL, "\"You sick pervert~!!!", Line_WaitForInput);
-	ModPlayVoiceLS(2, 3, "s19/04/500400706", 256, TRUE);
+	ModPlayVoiceLS(3, 3, "s19/04/500400706", 256, TRUE);
 	OutputLine(NULL, "　調伏してさしあげますでございますッ！！！！」",
 		   NULL, " I shall have you beaten into oblivion!!!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -5332,7 +5332,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>ギャラリー</color>", NULL, "<color=#f5e6d3>Gallery</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/yaji_mix6", 256, TRUE);
 	OutputLine(NULL, "「おぉおおぉおぉ！！！",
-		   NULL, "\"Whoooooo!!", Line_WaitForInput);
+		   NULL, "\"Whoooooo!!", Line_Continue);
 	Wait( 700 );
 	OutputLine(NULL, "　兄ちゃんいいぞぉ！！",
 		   NULL, " Cool, onii-chan!!", Line_Continue);
