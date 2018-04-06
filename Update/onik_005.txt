@@ -1504,7 +1504,7 @@ void main()
 		   NULL, " Seven!", Line_WaitForInput);
 		   
 	DisableWindow();
-	ModDrawCharacter(2, 4, "sprite/normal/sa1a_warai_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 100, TRUE );
+	ModDrawCharacter(2, 2, "sprite/normal/sa1a_warai_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 	
 	ModPlayVoiceLS(3, 4, "s19/04/990400134", 256, TRUE);
 	OutputLine(NULL, "　あがりでございます！！」",
@@ -3810,10 +3810,11 @@ void main()
 
 	DisableWindow();
 	ModDrawCharacter(1, 4, "sprite/normal/sa4_akuwarai_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
-	ModDrawCharacter(3, 3, "sprite/normal/me4_huteki_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
+	
+	ModDrawCharacter(3, 3, "sprite/normal/me4_huteki_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 100, TRUE );
 
 //「全部。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -4313,7 +4314,7 @@ void main()
 //　失礼しますと言ってがらりと入ってきたのが、スクール水着に猫耳首輪しっぽ付き＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　失礼しますと言ってがらりと入ってきたのが、スクール水着に猫耳首輪しっぽ付き。",
-		   NULL, "Though I said \"excuse me\" as I entered... the sight of a person entering with a school swimsuit, cat ears, a collar, and a tail...", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Though I said \"Excuse me\" as I entered... the sight of a person entering with a school swimsuit, cat ears, a collar, and a tail...", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4684,7 +4685,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_akuwarai_a1_", "1", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacter(3, 3, "sprite/normal/me1a_akuwarai_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「富竹のおじさまだってなかなか隅に置けないって噂ですけどぉ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
