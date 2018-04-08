@@ -141,7 +141,7 @@ void main()
 //・都内各区の住民基本台帳に富竹ジロウの同姓同名な＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・都内各区の住民基本台帳に富竹ジロウの同姓同名なし",
-		   NULL, "No individual matching the name 'Jirou Tomitake' in the residency records of any of the Tokyo wards.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "No individual matching the name \"Jirou Tomitake\" in the residency records of any of the Tokyo wards.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -151,7 +151,7 @@ void main()
 	OutputLine(NULL, "・歯型から都内歯科へ照合",
 		   NULL, "・Compare teeth to dental records", Line_WaitForInput);
 	OutputLine(NULL, "　＞　警視庁へ",
-		   NULL, " > send to metro police", GetGlobalFlag(GLinemodeSp));
+		   NULL, " > Send to metro police", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -161,7 +161,7 @@ void main()
 	OutputLine(NULL, "・顔写真の送付",
 		   NULL, "・Attach a photo", Line_WaitForInput);
 	OutputLine(NULL, "　＞　警視庁へ",
-		   NULL, " > send to metro police", GetGlobalFlag(GLinemodeSp));
+		   NULL, " > Send to metro police", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -169,7 +169,7 @@ void main()
 //・各雑誌社に富竹ジロウ問い合わ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "・各雑誌社に富竹ジロウ問い合わせ",
-		   NULL, "・Contact magazines regarding 'Jirou Tomitake'", Line_Normal);
+		   NULL, "・Contact magazines regarding \"Jirou Tomitake\"", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_021", 128, 64 );
