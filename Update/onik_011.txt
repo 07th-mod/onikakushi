@@ -2993,10 +2993,7 @@ void main()
 	OutputLine(NULL, "　それに驚いた鳥たちが慌てて羽ばたく。",
 		   NULL, "Sending frightened birds into the air.", Line_Normal);
 	ClearMessage();
-
-	DisableWindow();
-	DrawSceneWithMask("background/m_hi3", "left", 0, 0, 3000 );
-	ModDrawCharacter(2, 2, "portrait/normal/re1a_hig_okoru_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	
 
 //　大きく吸いこんだ息が、吐き出せない＠いや、息を吐き出す事すら許してくれない＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3042,6 +3039,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	DrawSceneWithMask("background/m_hi3", "left", 0, 0, 3000 );
 	ModDrawCharacter(2, 2, "portrait/normal/re1a_warai_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「ね？＠
