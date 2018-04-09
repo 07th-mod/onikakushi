@@ -113,7 +113,7 @@ void main()
 	ModPlayVoiceLS(3, 0, "s20/00/443200023", 128, TRUE);
 	OutputLine(NULL, "「内向状態のときは自信を喪失し非常に悲観的だ。",
 		   NULL, "\"Individuals in the introverted state suffer from low self-esteem and are quite pessimistic,", Line_Continue);
-	Wait ( 4200 );
+	Wait ( 3600 );
 	OutputLine(NULL, "だが自殺もせん。",
 		   NULL, " but rarely commit suicide.", Line_WaitForInput);
 
@@ -190,7 +190,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s20/00/443200029", 128, TRUE);
 	OutputLine(NULL, "「一般的に自殺はちゃんとした文化的な手法で行われる。",
-		   NULL, "\" Such people generally commit suicide by more 'civilized' means.", Line_Continue);
+		   NULL, "\"Such people generally commit suicide by more 'civilized' means.", Line_Continue);
 	Wait ( 4000 );
 	OutputLine(NULL, "道具を使用してな。",
 		   NULL, " They prepare.", Line_WaitForInput);
@@ -234,7 +234,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s20/00/443200032", 128, TRUE);
 	OutputLine(NULL, "　……それから、催眠作用を持つ薬を異常摂取した場合にも異常行為が報告されとるが、あまり一般的ではないのう。",
-		   NULL, "...Overdoses of drugs with a hypnotic effect are also reported to cause erratic behavior, but it's not common.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "...Overdoses of drugs with a hypnotic effect are also reported to cause erratic behavior, but it's not common.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -288,14 +288,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s20/00/443200036", 128, TRUE);
 	OutputLine(NULL, "「他には、……そうじゃな。",
-		   NULL, "\"Let's see... as another possibility", Line_Continue);
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_Continue); }
+		   NULL, "\"Let's see... as another possibility...", Line_Continue);
 	Wait ( 3200 );
-
 //　早い話が、脳障害によって精神がとんちんかんになる状態じゃな＠これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "　脳障害によって精神に異常を発生する状態じゃな。",
-		   NULL, " there's a condition where brain injury causes psychological problems.", Line_WaitForInput);
+		   NULL, " There's a condition where brain injury causes psychological problems.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 0, "s20/00/443200037", 128, TRUE);
 	OutputLine(NULL, "これは薬物中毒でも起こるが、脳の外傷や一部の病気なんかでも起こる。」",
 		   NULL, " Drugs can be to blame, but it can also be caused by physical trauma, and some diseases.\"", GetGlobalFlag(GLinemodeSp));
@@ -368,6 +365,7 @@ void main()
 	ClearMessage();
 
 //「.........なんてわけはありませんねぇ。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s20/11/440700032", 128, TRUE);
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「………なんてわけはありませんねぇ。」",
@@ -423,6 +421,7 @@ void main()
 
 
 //「いいお年を！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s20/11/440700034", 128, TRUE);
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「いいお年を！」",
