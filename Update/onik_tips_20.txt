@@ -27,7 +27,7 @@ void main()
 		   NULL, "I flopped the colorful collection of cup noodle bowls into the cart, muttering in irritation at being rushed by my parents.", Line_WaitForInput);
 //案の定、何でこれだけの種類を選んできたんだ、とお袋はあきれた声を上げた。
 	OutputLine(NULL, "案の定、何でこれだけの種類を選んできたんだ、とお袋はあきれた声を上げた。",
-		   NULL, "As expected, Mom gave a disbelieving look and asked why I had to get so many flavors.", Line_Normal);
+		   NULL, " As expected, Mom gave a disbelieving look and asked why I had to get so many flavors.", Line_Normal);
 	ClearMessage();
 
 //「最近のカップめんは凝ってて種類も多いんだよ＠どれも一通りは食ってみたいし。＠
@@ -355,27 +355,27 @@ void main()
 //　パタパタパタ＠ぺたぺたぺた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　パタパタパタ。",
-		   NULL, "tip-tap tip-tap tip-tap.", Line_WaitForInput);
+		   NULL, "Tip-tap tip-tap tip-tap.", Line_WaitForInput);
 	OutputLine(NULL, "ぺたぺたぺた。",
-		   NULL, " pit-pat pit-pat pit-pat.", GetGlobalFlag(GLinemodeSp));
+		   NULL, " Pit-pat pit-pat pit-pat.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //　パタパタ＠ぺたぺた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　パタパタ。",
-		   NULL, "tip-tap tip-tap.", Line_WaitForInput);
+		   NULL, "Tip-tap tip-tap.", Line_WaitForInput);
 	OutputLine(NULL, "ぺたぺた。",
-		   NULL, " pit-pat pit-pat.", GetGlobalFlag(GLinemodeSp));
+		   NULL, " Pit-pat pit-pat.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //　パタパタパタ＠ぺたぺたぺた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　パタパタパタ。",
-		   NULL, "tip-tap tip-tap.", Line_WaitForInput);
+		   NULL, "Tip-tap tip-tap.", Line_WaitForInput);
 	OutputLine(NULL, "ぺたぺたぺた。",
-		   NULL, " pit-pat pit-pat.", Line_Normal);
+		   NULL, " Pit-pat pit-pat.", Line_Normal);
 	ClearMessage();
 
 //　俺が走るのとまったく同じように、そのぺたぺたというまるで素足のような足音が、俺の後ろをつけていた￥
@@ -606,7 +606,7 @@ void main()
 //　ぺた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ぺた。",
-		   NULL, "pit-pat", Line_Normal);
+		   NULL, "Pit-pat", Line_Normal);
 	ClearMessage();
 
 //　前身の毛が逆立つ￥
@@ -661,7 +661,7 @@ void main()
 //　ぺた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ぺた。",
-		   NULL, "pit-pat", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Pit-pat", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -828,7 +828,7 @@ void main()
 //　自分の目の前の状況を、まるで人の口がリンゴをかじって汁を啜り、リンゴであることを知るように.........脳がリンゴを食べ始める＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　自分の目の前の状況を、まるで人の口がリンゴをかじって汁を啜り、リンゴであることを知るように………脳がリンゴを食べ始める。",
-		   NULL, "Just as a person's mouth might bite into an apple, slurp the juices, and finally discover that it was an apple... my mind began to process the scene before my eyes by \"eating the apple.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Just as a person's mouth might bite into an apple, slurp the juices, and finally discover that it was an apple... my mind began to process the scene before my eyes by 'eating the apple.'", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
