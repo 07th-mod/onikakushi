@@ -1945,7 +1945,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "left", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "left", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "m1", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
 
 //　す、と俺の頭を小さな手が撫でた＠
@@ -2197,7 +2197,7 @@ void main()
 		   NULL, "A small hand tugged on the back of my shirt.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "m1", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「...圭一が２日間もお休みしたから寂しかったのです。＠
@@ -2300,7 +2300,7 @@ void main()
 		   NULL, "...Waiiit a minute...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_kaii_a1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //　その光景を見て、レナが恍惚の表情でうっとりとしていた＠
@@ -2499,7 +2499,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_def_a1_", "2", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacter(3, 3, "sprite/normal/me1a_def_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「きりーっ、きょーつけー！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -2522,7 +2522,7 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	DisableWindow();
-	DrawScene("background/gk3", 3000 );
+	DrawScene("background/gk1", 3000 );
 
 	PlayBGM( 1, "msys01", 128, 0 );
 //　この学年もばらばらなクラスで先生がひとりというのは大変だった＠
@@ -3592,7 +3592,7 @@ void main()
 		   NULL, "It's really hard for her to lie.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "m1", 0, 0, 1000 );
+	DrawSceneWithMask("background/gk1", "m1", 0, 0, 1000 );
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_bikkuri_b1_", "2", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「圭一くん、ど、どっちでも茹でてマヨネーズかけるとおいしいじゃない＠　いじめちゃかわいそうだよ...。!w800魅ぃちゃんも！＠
@@ -3811,7 +3811,7 @@ void main()
 		   NULL, "When she acts like this, she actually starts to seem her age.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_kaii_b1_", "2", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「...は、!w800はぅ～...か、かぁいぃよぅ...。＠
@@ -3890,12 +3890,14 @@ void main()
 	DrawScene("black", 100 );
 
 	PlaySE( 4, "wa_005", 128, 64 );
+	ShakeScreen( 1, 20, 20, 5, 0, );
 	DrawBustshot(5, "scene/001a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
 
 
 	DrawScene("black", 100 );
 
 	PlaySE( 4, "wa_005", 128, 64 );
+	ShakeScreen( 1, 20, 20, 5, 0, );
 	DrawBustshot(5, "scene/001a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
 
 	PlaySE( 4, "wa_005", 128, 64 );
@@ -3908,6 +3910,7 @@ void main()
 	DrawBustshot(5, "scene/001b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
 
 	PlaySE( 4, "wa_005", 128, 64 );
+	ShakeScreen( 1, 20, 20, 5, 0, );
 	DrawBustshot(5, "scene/001b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
 
 
@@ -3928,6 +3931,7 @@ void main()
 		   NULL, "It was like a flash of lightning.", Line_Normal);
 	ClearMessage();
 
+	PlaySE( 4, "wa_003", 128, 64 );
 
 //「......今、!w400......一体!w400......何が......？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -4012,7 +4016,7 @@ void main()
 		   NULL, "From now on, I'll be careful when I'm within striking distance of Rena...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "down", 0, 0, 3000 );
+	DrawSceneWithMask("background/gk1", "down", 0, 0, 3000 );
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_kaii_b1_", "2", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「ほぅら沙都子ちゃん、やっつけちゃったよ～＠......あぁん、かぁいい～＠　お持ち帰りしたぃ～！！＠
@@ -4691,6 +4695,8 @@ void main()
 	DrawScene("black", 100 );
 	DrawBustshot(5, "background/furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 5, TRUE );
 	PlaySE( 4, "wa_005", 128, 64 );
+	ModPlayVoiceLS(3, 3, "", 256, TRUE);
+	ShakeScreen( 1, 20, 20, 5, 0, );
 
 
 	DrawScene("black", 100 );
