@@ -12,7 +12,7 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	DrawScene("background/ma_j3_01", 20000 );
+	DrawScene("background/hu_tenjyou", 20000 );
 
 	PlayBGM( 1, "msys06", 128, 0 );
 
@@ -1076,9 +1076,10 @@ void main()
 		   NULL, "\"...Kei-chan, you've gotten into baseball lately, haven't you?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s01/03/120300212", 256, TRUE);
 	OutputLine(NULL, "　監督、それ聞いたら喜ぶと思うなぁ。」",
-		   NULL, " Pretty sure the Manager will be happy to hear that.\"", Line_Normal);
-
+		   NULL, " Pretty sure the Manager will be happy to hear that.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 //「......だから監督って誰だよ。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s01/01/120100788", 256, TRUE);
 	OutputLine(NULL, "「……だから監督って誰だよ。」",
 		   NULL, " \"...So who is this Manager?\"", GetGlobalFlag(GLinemodeSp));
@@ -1222,7 +1223,7 @@ void main()
 //　そんな宿題も確かあった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そんな宿題も確かあった。",
-		   NULL, "I certainly did have that \"homework.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "I certainly did have that 'homework.'", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1383,7 +1384,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/ma_j3_01", "right", 0, 0, 300 );
+	DrawSceneWithMask("background/ma_j3", "right", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(3, 2, "portrait/normal/re1a_hig_def_a1_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 //print 1
 
@@ -1766,7 +1767,7 @@ void main()
 		   NULL, "\"...You're playing dumb, Keiichi-kun.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "s01/02/120200497", 256, TRUE);
 	OutputLine(NULL, "薄々は気付いてたくせにぃ☆」",
-		   NULL, " You should have realized it by now.?\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " You should have realized it by now.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1816,7 +1817,7 @@ void main()
 	PlayBGM( 2, "lsys25", 128, 0 );
 
 //「みんな始めは轢き逃げされたものだと思っていました＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>中年男</color>", NULL, "<color=#f5e6d3>Middle-Aged Man</color>", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s01/11/120700039", 256, TRUE);
 	OutputLine(NULL, "「みんな始めは轢き逃げされたものだと思っていました。",
 		   NULL, "\"Everyone thought at first that it was a hit and run.", GetGlobalFlag(GLinemodeSp));
@@ -1825,7 +1826,7 @@ void main()
 
 
 //　ですが、意識を確かめるために近付いた警官はすぐに異常に気付きました＠...喉がね、引き裂かれていたんですよ。＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>中年男</color>", NULL, "<color=#f5e6d3>Middle-Aged Man</color>", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s01/11/120700040", 256, TRUE);
 	OutputLine(NULL, "　ですが、意識を確かめるために近付いた警官はすぐに異常に気付きました。",
 		   NULL, "Except when the officer got closer to check if he was still alive, he soon noticed it wasn't a normal situation.", Line_WaitForInput);
@@ -1846,7 +1847,7 @@ void main()
 
 
 //「いいえ＠爪でした。￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>中年男</color>", NULL, "<color=#f5e6d3>Middle-Aged Man</color>", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s01/11/120700042", 256, TRUE);
 	OutputLine(NULL, "「いいえ。",
 		   NULL, "\"No.", Line_WaitForInput);
@@ -1910,7 +1911,7 @@ void main()
 
 
 //「薬物を疑いましたが、そういう類のものは検出できませんでした。￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>中年男</color>", NULL, "<color=#f5e6d3>Middle-Aged Man</color>", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s01/11/120700045", 256, TRUE);
 	OutputLine(NULL, "「薬物を疑いましたが、そういう類のものは検出できませんでした。」",
 		   NULL, "\"We thought drugs were to blame, but nothing of that nature was detected.\"", Line_Normal);
@@ -1938,7 +1939,7 @@ void main()
 	DisableWindow();
 	FadeFilm( 1000, TRUE );
 //	DrawScene( "bg_080", 1000 );
-	DrawScene("background/hu_tenjyou", 1000 );
+	DrawScene("background/ma_j3", 1000 );
 //print 1
 
 //「け、警察は......富竹さんの遺体からは...薬物は検出できなかったって言ったぞ？！＠
@@ -1948,9 +1949,6 @@ void main()
 		   NULL, "\"Th-The police told me... they didn't find any drugs... in Tomitake-san's body!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	ModDrawCharacter(1, 2, "portrait/normal/re1a_warai_a1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	ModDrawCharacter(3, 3, "portrait/normal/me2_warai_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 //	DrawBustshotWithFiltering( 3, "me_si_wa_a1_zoom", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
@@ -2429,8 +2427,7 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 200 );
-	DrawFilm( 2, 255, 153, 153, 255, 0, 1000, TRUE );
-	DrawScene("background/ma_j3_05", 200 );
+	DrawScene("background/aka1", 200 );
 
 //　...そのレナは俺の足元でうずくまり、魅音と同じように血溜まりを作っていた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2523,6 +2520,13 @@ void main()
 		   NULL, "I was the only person in the house.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	Negative( 0 , TRUE );
+	PlaySE( 4, "wa_025", 128, 64 );
+	DrawScene("background/ma_j3_05", 1500 );
+	FadeFilm( 1000 , TRUE );
+	DrawFilm( 2, 255, 153, 153, 255, 0, 100, TRUE );
+	
 //「え、!s150................../
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s01/01/120100801", 256, TRUE);
@@ -2733,7 +2737,7 @@ void main()
 //「.................................。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「……………………………。」",
-		   NULL, "\"...\"", Line_Normal);
+		   NULL, "...", Line_Normal);
 	ClearMessage();
 
 //冷静になれ＠
@@ -3171,7 +3175,7 @@ void main()
 //　全ての真相を知りたい......は、最低限の形で達せられるのだ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　全ての真相を知りたい……は、最低限の形で達せられるのだ。",
-		   NULL, "of wanting to know the truth... That would be fulfilled in its most basic form.", Line_Normal);
+		   NULL, "Of wanting to know the truth... That would be fulfilled in its most basic form.", Line_Normal);
 	ClearMessage();
 
 //　それはもうじきかなうだろう＠
@@ -3872,7 +3876,7 @@ void main()
 //　絶対に転がり落ちたりしないように...厳重に!w800......厳重に！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　絶対に転がり落ちたりしないように…厳重に",
-		   NULL, "So it absolutely would not slip out and fall to the floor... firmly..", Line_ContinueAfterTyping);
+		   NULL, "So it absolutely would not slip out and fall to the floor... firmly...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 800 );
@@ -3987,7 +3991,7 @@ void main()
 //　鬼隠しで消えるのか......￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鬼隠しで消えるのか……。",
-		   NULL, "or being demoned away...", Line_Normal);
+		   NULL, "Or being demoned away...", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
