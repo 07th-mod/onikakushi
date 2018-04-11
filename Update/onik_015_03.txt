@@ -74,9 +74,10 @@ void main()
 		   NULL, "One of the younger detectives was having a staring contest with the Mahjong magazine called \"Next Turn.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 11, "sprite/normal/oisi1_1_", "0", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 11, "sprite/normal/oisi1_1_", "1", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「五萬切ってもテンパイ崩れませんから。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 19, "s01/19/123100003", 256, TRUE);
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「五萬切ってもテンパイ崩れませんから。」",
@@ -96,7 +97,7 @@ void main()
 	DisableWindow();
 //	DrawSceneWithMask( "bg_112", "left", 0, 0, 1300 );
 //	DrawBustshot( 2, "oi_si_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
-	ModDrawCharacterWithFiltering(2, 11, "sprite/normal/oisi1_2_", "0", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_2_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //	DrawBustshot( 1, "kuma_def", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
@@ -121,7 +122,7 @@ void main()
 
 	DisableWindow();
 //	DrawBustshot( 3, "kuma_ikari", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
-	ModDrawCharacterWithFiltering(3, 19, "sprite/normal/kuma_komaru_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacter(3, 19, "sprite/normal/kuma_komaru_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 
 //「…納得いかないっすねぇ…＠わざわざ自分で当たり牌減らすなんて。＠
@@ -301,7 +302,7 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "その、",
-		   NULL, " well,", Line_Continue);
+		   NULL, " well", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1000 );
@@ -1303,7 +1304,7 @@ void main()
 //　カナカナカナカナカナ……￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　カナカナカナカナカナ……。",
-		   NULL, "kwee, kwee, kwee, kwee, kwee...", Line_Normal);
+		   NULL, "Kwee, kwee, kwee, kwee, kwee...", Line_Normal);
 	ClearMessage();
 
 //　ずっと聞こえていたはずだった＠…特に気にも留めず＠
@@ -1325,7 +1326,7 @@ void main()
 //　カナカナカナカナカナ……￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　カナカナカナカナカナ……。",
-		   NULL, "kwee, kwee, kwee, kwee, kwee...", Line_Normal);
+		   NULL, "Kwee, kwee, kwee, kwee, kwee...", Line_Normal);
 	ClearMessage();
 
 //　何か、伝えようとしている＠
