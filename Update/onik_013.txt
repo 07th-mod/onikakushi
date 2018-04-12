@@ -98,7 +98,7 @@ void main()
 	DrawScene("background/ma_j3_01", 200 );
 	PlaySE( 4, "wa_020", 128, 64 );
 	DrawScene("background/ma_j3", 800 );
-	PlaySE( 4, "wa_005", 128, 64 );
+	PlaySE( 4, "wa_002", 128, 64 );
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	Wait( 200 );
 	
@@ -1178,6 +1178,7 @@ void main()
 	ModPlayVoiceLS(3, 2, "s01/02/120200175", 256, TRUE);
 	OutputLine(NULL, "昨日のおはぎ、ちゃんと食べてくれた…？」",
 		   NULL, " Those mochi yesterday... did you eat them all...?\"", Line_Continue);
+	Wait( 2500 );
 	PlaySE( 4, "wa_009", 128, 64 );
 	Negative( 100 , TRUE )
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
@@ -1662,7 +1663,7 @@ void main()
 	Wait( 1000 );
 	PlaySE( 4, "wa_009", 128, 64 );
 	Wait( 1000 );
-	DrawSceneWithMask("scene/102", "aa", 0, 900, TRUE );
+	DrawSceneWithMask("scene/102", "aa", 0, 1500, TRUE );
 
 //　ガラスを力任せに１枚２枚。砕け散る破片をものともせず…＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1902,15 +1903,18 @@ void main()
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 1, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 500 );
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 0, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 300 );
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 1, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 500 );
 
 //　そしてレナは、他のガラスと同様に自分をバットで何度も殴打する＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1933,11 +1937,13 @@ void main()
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 1, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 400 );
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 0, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 500 );
 
 //　レナはどんな表情でこの行為を繰り返しているんだろう＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1975,19 +1981,23 @@ void main()
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 1, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 400 );
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 1, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 500 );
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 0, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 300 );
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
-	ShakeScreenSx( 1, 2, );
+	ShakeScreen( 1, 10, 10, 5, 0, );
+	Wait( 500 );
 
 //　何度も何度も＠叩き続ける＠レナの期待するような音は出ない＠周りのクラスメートたちも止めない＠次のガラスになりたくないから＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2026,12 +2036,13 @@ void main()
 	Wait( 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
+	Wait( 100 );
 	PlaySE( 4, "wa_030", 128, 64 );
 
 //setwindow 8,16,23,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 
 	DisableWindow();
-	DrawSceneWithMask("background/ryuuketu1", "aa", 0, 600, TRUE );
+	DrawSceneWithMask("background/ryuuketu1", "aa", 0, 100, TRUE );
 
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
