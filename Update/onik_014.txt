@@ -582,7 +582,6 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	PlaySE( 4, "wa_009", 128, 64 );
 	Negative( 100, TRUE );
 	PlayBGM( 2, "lsys25", 128, 0 );
 
@@ -656,13 +655,13 @@ void main()
 	DisableWindow();
 	DrawScene("black", 200 );
 	PlaySE( 4, "wa_003", 128, 64 );
+	ShakeScreen( 1, 50, 20, 5, 0, );
 	
 //　ドッパーン！！！/
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ドッパーン！！！",
 		   NULL, "Kesplash!!!", Line_ContinueAfterTyping);
 
-	ShakeScreenSx( 1, 3, );
 	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
@@ -2127,7 +2126,7 @@ void main()
 
 
 	PlaySE( 4, "wa_005", 125, 64 );
-	ShakeScreenSx( 1, 1, );
+	ShakeScreen( 1, 5, 5, 5, 0, );
 
 //「………くそッ！！＠　何笑ってんだよ、俺ッ！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2142,10 +2141,10 @@ void main()
 
 
 	PlaySE( 4, "wa_005", 125, 64 );
-	ShakeScreenSx( 1, 1, );
+	ShakeScreen( 1, 5, 5, 5, 0, );
 	Wait( 1000 );
 	PlaySE( 4, "wa_005", 125, 64 );
-	ShakeScreenSx( 1, 1, );
+	ShakeScreen( 1, 5, 5, 5, 0, );
 
 //　何度も何度も地面を殴りつける＠…その度にがつんがつんと伝わる振動が痛かった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2246,7 +2245,7 @@ void main()
 		   NULL, "\"...Stop being so sooooooft!!!!\"", Line_Continue);
 
 	PlaySE( 4, "wa_005", 125, 64 );
-	ShakeScreenSx( 1, 0, );
+	ShakeScreen( 1, 5, 5, 5, 0, );
 
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 
@@ -2269,7 +2268,7 @@ void main()
 
 
 	PlaySE( 4, "wa_005", 125, 64 );
-	ShakeScreenSx( 1, 1, );
+	ShakeScreen( 1, 5, 5, 5, 0, );
 
 //　殴る＠忘れろ＠/
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2279,7 +2278,7 @@ void main()
 		   NULL, " Forget.", Line_WaitForInput);
 
 	PlaySE( 4, "wa_005", 125, 64 );
-	ShakeScreenSx( 1, 1, );
+	ShakeScreen( 1, 5, 5, 5, 0, );
 
 //殴る＠甘えるな＠/
 	OutputLine(NULL, "殴る。",
@@ -2288,7 +2287,7 @@ void main()
 		   NULL, " Don't be soft.", Line_WaitForInput);
 
 	PlaySE( 4, "wa_005", 125, 64 );
-	ShakeScreenSx( 1, 1, );
+	ShakeScreen( 1, 5, 5, 5, 0, );
 
 //殴る＠敵を知れ＠/
 	OutputLine(NULL, "殴る。",
@@ -2298,7 +2297,7 @@ void main()
 
 
 	PlaySE( 4, "wa_005", 125, 64 );
-	ShakeScreenSx( 1, 1, );
+	ShakeScreen( 1, 5, 5, 5, 0, );
 
 //殴る＠殺されてたまるか＠
 	OutputLine(NULL, "殴る。",
@@ -3349,7 +3348,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 600 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_015", 128, 64 );
 
 //　俺は左手で目をごしごしとこすり、そのわずかな隙を補うため、右手では闇雲にバットを振り回した￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
