@@ -944,7 +944,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s20/11/440700354", 256, TRUE);
 	OutputLine(NULL, "「劇中で前原さんが言うように、オヤシロさまが竜宮さんや園崎さんに乗り移って悪さをしている…って考えると",
-		   NULL, "\"If, as Maebara-san said during the story, it was the case that Oyashiro-sama possessed Ryuugu-san and Sonozaki-san and committed those acts... ", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"If, as Maebara-san said during the story, it was the case that Oyashiro-sama possessed Ryuugu-san and Sonozaki-san and committed those acts... ", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "s20/11/440700355", 256, TRUE);
 	OutputLine(NULL, "……一番つじつまが合うんです。",
 		   NULL, "That would fit the evidence the most.", Line_WaitForInput);
@@ -1574,7 +1574,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 5, "s20/05/440500099", 256, TRUE);
 	OutputLine(NULL, "「……そういうことにしますのです☆」",
-		   NULL, "\"...We'll just go with that☆\"", Line_Normal);
+		   NULL, "\"...We'll just go with that.☆\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
