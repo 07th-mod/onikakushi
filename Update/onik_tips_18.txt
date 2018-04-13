@@ -16,7 +16,7 @@ void main()
 	DrawScene("black", 1000 );
 	PlayBGM( 1, "msys12", 128, 0 );
 	DrawScene("background/gk3", 1000 );
-	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_nande_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「最近、圭一くんの元気がないね＠機嫌が悪いのかな。＠
 	ClearMessage();
@@ -264,7 +264,7 @@ void main()
 		   NULL, " And then it was suddenly interrupted...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	ModDrawCharacter(3, 2, "sprite/normal/re1a_def_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
+	ModDrawCharacter(3, 2, "sprite/normal/re1a_warai_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
 	ModDrawCharacter(1, 3, "sprite/normal/me1b_warai_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 3000, TRUE );
 
@@ -272,7 +272,7 @@ void main()
 
 
 //　...哄笑だった￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>＆<color=#5ec69a>魅音</color>", NULL, "<color=#f0953d>Rena</color> & <color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s20/02/440200054", 256, TRUE);
 	ModPlayVoiceLS(4, 3, "s20/03/440300044", 256, TRUE);
 	OutputLine(NULL, "　…哄笑だった。",
