@@ -156,7 +156,7 @@ void main()
 		   NULL, "\"You see...", Line_Continue);
 	Wait (1400);
 	OutputLine(NULL, "レナはよく知らないだろうけど、",
-		   NULL, " you might not know this...", Line_WaitForInput);
+		   NULL, " You might not know this...", Line_WaitForInput);
 
 
 	PlaySE( 4, "wa_024", 128, 64 );
@@ -164,7 +164,7 @@ void main()
 //実はあいつ、オヤシロさまの使いなんだよ。＠
 	ModPlayVoiceLS(3, 3, "s20/03/440300039", 256, TRUE);
 	OutputLine(NULL, "実はあいつ、オヤシロさまの使いなんだよ。」",
-		   NULL, " but he's actually the messenger of Oyashiro-sama.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " But he's actually the messenger of Oyashiro-sama.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
