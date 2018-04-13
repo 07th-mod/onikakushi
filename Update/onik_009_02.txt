@@ -159,7 +159,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s01/01/120100002", 256, TRUE);
 	OutputLine(NULL, "「その………えぇと…、楽しかったです。」",
-		   NULL, "\"Well... umm... it was fun.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"Well... umm... It was fun.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -914,7 +914,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s01/01/120100014", 256, TRUE);
 	OutputLine(NULL, "「神社の神主って……今日のこの神社の神主ですか？」",
-		   NULL, "\"The shrine's Shinto priest... you mean he was from the shrine here?\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"The shrine's Shinto priest... You mean he was from the shrine here?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1014,10 +1014,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 8, "s01/08/120800042", 256, TRUE);
 	OutputLine(NULL, "「弟本人はまだ生きてるらしいね。",
-		   NULL, "\"The younger brother is still alive, it seems.", Line_WaitForInput);
+		   NULL, "\"The younger brother is still alive, it seems,", Line_WaitForInput);
 	ModPlayVoiceLS(3, 8, "s01/08/120800043", 256, TRUE);
 	OutputLine(NULL, "でもやはり……かなり気にしてね。近隣の町に引っ越してったらしいよ。」",
-		   NULL, " But it did bother him quite a bit. So he moved to the neighboring town.\"", Line_Normal);
+		   NULL, " but it did bother him quite a bit. So he moved to the neighboring town.\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -1118,7 +1118,7 @@ void main()
 
 
 	OutputLine(NULL, "それを偶然だと決め付けることの方がよっぽど冷静を欠いているように思えてくる…。",
-		   NULL, " dismissing all of them as coincidence would then defy logic.", Line_Normal);
+		   NULL, " Dismissing all of them as coincidence would then defy logic.", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -1133,14 +1133,14 @@ void main()
 	OutputLine(NULL, "　祟りなんか、信じない。",
 		   NULL, "I don't believe in curses.", Line_WaitForInput);
 	OutputLine(NULL, "…だけど……毎年、綿流しの日に何かが起こるという「意思」だけは確実に、",
-		   NULL, " But... every single year, on the day of the Watanagashi, somebody or something 'makes' it happen...", Line_ContinueAfterTyping);
+		   NULL, " But... Every single year, on the day of the Watanagashi, somebody or something 'makes' it happen...", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 300 );
 	SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……ある。",
-		   NULL, " without fail...", Line_Normal);
+		   NULL, " Without fail...", Line_Normal);
 	ClearMessage();
 
 
@@ -1259,7 +1259,7 @@ void main()
 		   NULL, "\"We aren't trying to avoid the question, Keiichi-kun.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 8, "s01/08/120800046", 256, TRUE);
 	OutputLine(NULL, "つまり……その翌年の綿流しってのはつまり…、」",
-		   NULL, " It's just... when you say 'the next year,' that's...\"", Line_Normal);
+		   NULL, " It's just... When you say 'the next year,' that's...\"", Line_Normal);
 	ClearMessage();
 
 
@@ -1324,7 +1324,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女性</color>", NULL, "<color=#f5e6d3>Woman</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 9, "s01/09/120900017", 256, TRUE);
 	OutputLine(NULL, "「あのね、去年の被害者の主婦は不信心者だったらしくてね。",
-		   NULL, "\"Well, the victim last year, the housewife... she was a non-believer.", Line_WaitForInput);
+		   NULL, "\"Well, the victim last year, the housewife... She was a non-believer.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 9, "s01/09/120900018", 256, TRUE);
 	OutputLine(NULL, "綿流しのお祭りに参加しなかったらしいの。」",
 		   NULL, " It turns out she didn't even attend the Watanagashi festival.\"", GetGlobalFlag(GLinemodeSp));
@@ -1535,7 +1535,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s01/01/120100023", 256, TRUE);
 	OutputLine(NULL, "「い、いえ、…そんな、",
-		   NULL, "\"N-No... it wasn't,", Line_Continue);
+		   NULL, "\"N-No... It wasn't,", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
@@ -2401,7 +2401,7 @@ void main()
 //　だが魅音が書いたのは顔面でなく、富竹さんの着ているシャツにだった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが魅音が書いたのは顔面でなく、富竹さんの着ているシャツにだった。",
-		   NULL, "But she didn't write on Tomitake-san's face... she wrote on the shirt he was wearing.", Line_Normal);
+		   NULL, "But she didn't write on Tomitake-san's face... She wrote on the shirt he was wearing.", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
