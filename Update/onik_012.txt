@@ -1038,7 +1038,7 @@ void main()
 		   NULL, "\"They believed it was caused by hallucinogens, given how he was clawing out his own throat", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "s01/11/120700207", 256, TRUE);
 	OutputLine(NULL, "……こういう症状をそれも急激に引き起こす薬物は…なかなかないらしいんです。",
-		   NULL, " ...but a drug that could cause that to happen so suddenly... is extremely hard to come by.", GetGlobalFlag(GLinemodeSp));
+		   NULL, " ...But a drug that could cause that to happen so suddenly... is extremely hard to come by.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1127,7 +1127,7 @@ void main()
 		   NULL, "\"Unfortunately, that's how it looks right now.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "s01/11/120700214", 256, TRUE);
 	OutputLine(NULL, "ですが、死因はともかく、死ぬ前に何人かの人間に囲まれて暴行を受けたことだけは間違いありません。",
-		   NULL, " But putting aside the cause of death... without a doubt, he was surrounded by a group of people and had taken a beating before he died. ", GetGlobalFlag(GLinemodeSp));
+		   NULL, " But putting aside the cause of death... Without a doubt, he was surrounded by a group of people and had taken a beating before he died. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s01/11/120700215", 256, TRUE);
 	OutputLine(NULL, "……祟りでなく、人間が事件に関わっているのは疑いようがありませんよ。」",
@@ -1474,7 +1474,7 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　と、こうなるらしいんですよ。」",
-		   NULL, " ...was apparently how things went.\"", Line_Normal);
+		   NULL, " ...Was apparently how things went.\"", Line_Normal);
 	ClearMessage();
 
 
@@ -1507,7 +1507,7 @@ void main()
 
 
 	OutputLine(NULL, "鬼ヶ淵に住む村人、",
-		   NULL, " all the vilagers of Onigafuchi -", Line_Continue);
+		   NULL, " All the vilagers of Onigafuchi -", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
@@ -3811,14 +3811,14 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s01/03/120300112", 256, TRUE);
 	OutputLine(NULL, "「渋いおじさまとご一緒だったみたいだけど、",
-		   NULL, "\"Seems you were with a rather austere-looking older guy,", Line_Continue);
+		   NULL, "\"Seems you were with a rather austere-looking older guy.", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 400 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……誰？」",
-		   NULL, " ...who was he?\"", Line_Normal);
+		   NULL, " ...Who was he?\"", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_002", 128, 64 );
@@ -3989,7 +3989,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s01/03/120300117", 256, TRUE);
 	OutputLine(NULL, "「ま、何を隠れてやろうとも、おじさんには全てお見通しってこと。",
-		   NULL, "\"Well, whatever you're trying to hide... this old man already sees through it all.", Line_WaitForInput);
+		   NULL, "\"Well, whatever you're trying to hide... This old man already sees through it all.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s01/03/120300118", 256, TRUE);
 	OutputLine(NULL, "…それだけを忘れないでくれればいいかなぁ。」",
 		   NULL, " Remember that.\"", GetGlobalFlag(GLinemodeSp));
@@ -4207,7 +4207,7 @@ void main()
 //　今にして思えば……大石さんが俺を尋ねてきたその最初から…話は全て筒抜けだったのかもしれない＠……魅音の言う通り…俺には何も隠し事などできはしないのだ…￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　今にして思えば……大石さんが俺を尋ねてきたその最初から…話は全て筒抜けだったのかもしれない。",
-		   NULL, "Thinking about it now... all of it could have been overheard... from the beginning when Ooishi-san met me.", Line_WaitForInput);
+		   NULL, "Thinking about it now... All of it could have been overheard... from the beginning when Ooishi-san met me.", Line_WaitForInput);
 	OutputLine(NULL, "……魅音の言う通り…俺には何も隠し事などできはしないのだ…。",
 		   NULL, " ...Just as Mion said... I couldn't hide anything...", Line_Normal);
 	ClearMessage();
@@ -4307,7 +4307,7 @@ void main()
 //　……それで悪い夢が覚めればと思ったが…なぜか布団を叩いたような手応えしかなく…虚しいくらい痛くない￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……それで悪い夢が覚めればと思ったが…なぜか布団を叩いたような手応えしかなく…虚しいくらい痛くない。",
-		   NULL, "...If only that would wake me from this nightmare... but for some reason it felt like I was punching a blanket... it was almost laughably painless.", Line_Normal);
+		   NULL, "...If only that would wake me from this nightmare... But for some reason it felt like I was punching a blanket... it was almost laughably painless.", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 1, "msys07", 128, 0 );
@@ -4367,7 +4367,7 @@ void main()
 //　それに…よくよく考えれば……魅音は俺がどこで昼飯を食ったかしか聞いてないぞ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それに…よくよく考えれば……魅音は俺がどこで昼飯を食ったかしか聞いてないぞ？",
-		   NULL, "Plus... come to think of it... she didn't ask me where I ate lunch, did she?", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Plus... come to think of it... She didn't ask me where I ate lunch, did she?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4382,7 +4382,7 @@ void main()
 //　たまたま俺と同席が雛見沢の人間じゃなかったから興味を覚えられただけで……別に…他意なんかないのかもしれない…＠そうだ、そうに違いない…￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　たまたま俺と同席が雛見沢の人間じゃなかったから興味を覚えられただけで……別に…他意なんかないのかもしれない…。",
-		   NULL, "They were just curious since I was together with someone not from Hinamizawa... it's not... as if they had any ulterior motives...", Line_WaitForInput);
+		   NULL, "They were just curious since I was together with someone not from Hinamizawa... It's not... as if they had any ulterior motives...", Line_WaitForInput);
 	OutputLine(NULL, "そうだ、そうに違いない…！",
 		   NULL, " That's it. That has to be it...!", Line_Normal);
 	ClearMessage();
@@ -4408,7 +4408,7 @@ void main()
 	OutputLine(NULL, "　それを俺が、いつものおっとりしたレナとのギャップに面食らってしまい……驚いてしまっただけなんだ…。",
 		   NULL, "That's when I was bewildered by the change in character from the usual mild-mannered Rena... and was just startled by it...", Line_WaitForInput);
 	OutputLine(NULL, "そう考えるのが一番自然だ…！",
-		   NULL, " that's the most natural way of thinking about it...!", Line_Normal);
+		   NULL, " That's the most natural way of thinking about it...!", Line_Normal);
 	ClearMessage();
 
 //　……頭の中がぐちゃぐちゃのスパゲッティになったような気分だ＠
@@ -5154,7 +5154,7 @@ void main()
 //　せっかくのレナの手作りに…何て事をッ？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　せっかくのレナの手作りに…何て事をッ？！",
-		   NULL, "Rena had gone out of her way to make it for me... how could I!?", Line_Normal);
+		   NULL, "Rena had gone out of her way to make it for me... How could I!?", Line_Normal);
 	ClearMessage();
 
 //　呆然と、凶行に及んだ俺の手を見、そして…口の中から取り出したそれが何だったのかを思い出す……￥
