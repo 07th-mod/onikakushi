@@ -164,7 +164,7 @@ void main()
 		   NULL, "So, I'm only able to be here because the protest succeeded.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "down", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "down", 0, 0, 1300 );
 	PlaySE( 4, "wa_020", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 1500 );
@@ -586,7 +586,7 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "left", 0, 0, 300 );
-	DrawSceneWithMask("background/gk3", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "left", 0, 0, 300 );
 
 //　魅音が教室のうしろにある生徒用のロッカーを漁っている＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -628,7 +628,7 @@ void main()
 	OutputLine(NULL, "ジジ抜きはどうッ？！」",
 		   NULL, "Like Old Bachelor!?\"", Line_Continue);
 
-	Wait( 200 );
+	Wait( 2000 );
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreenSx( 1, 2, );
 	OutputLineAll(NULL, "", Line_Normal);
@@ -971,7 +971,7 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("white", "right", 0, 0, 300 );
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 300 );
 	ModDrawCharacter(2, 3, "sprite/normal/me1b_huteki_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 //「くっくっく＠　圭ちゃんの手札を右から言うぜ＠　３、!d400４、!d400９、!d400Ｊ、!d400Ｑ。＠
@@ -1170,7 +1170,7 @@ void main()
 //	FadeBustshotWithFiltering( 5, "down", 0, FALSE, 0, 0, 300, TRUE );
 	DisableWindow();
 	ModDrawCharacter(3, 3, "sprite/normal/me1a_wink_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
-	DrawSceneWithMask("background/gk3", "down", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "down", 0, 0, 300 );
 
 //「ポイントは減点制ね＠着順がそのままマイナス点。トータルで一番少ない人が優勝！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1256,7 +1256,7 @@ void main()
 
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "m1", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "m1", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri1_warai_a1_", "1", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「…ファイト、!w400おーです。￥
@@ -1744,7 +1744,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "left", 0, 0, 300 );
 
 //「ワンチャンスだと＠　ルールを説明しろ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1923,7 +1923,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "left", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me1a_wink_a1_", "1", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「……ふぅん＠圭ちゃんは右のカードを疑ってる＠　じゃあ右にする＠　右？＠
@@ -2026,7 +2026,7 @@ void main()
 		   NULL, "So that meant the card on the right was... the joker!!!!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "m1", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "m1", 0, 0, 300 );
 
 
 //　そして、右のカードにまさに触れんとした瞬間、俺はぴた、と手を止めた￥
@@ -2097,7 +2097,7 @@ void main()
 
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "up", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "up", 0, 0, 1300 );
 	ModDrawCharacter(2, 3, "sprite/normal/me1a_akuwarai_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 //「へー…＠圭ちゃんはどうして右が「ジョーカーじゃない」って確信できるの？＠
@@ -2193,7 +2193,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "left", 0, 0, 300 );
 
 //「つまりさ＠…クローバーの７は＠…さっき俺が沙都子のスペードの７と合わせて捨てたカードなんだよ…ッ！」/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2300,7 +2300,7 @@ void main()
 	DrawBustshot(5, "background/furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 50, TRUE );
 	PlaySE( 4, "wa_007", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
-	DrawScene("background/gk3", 200 );
+	DrawScene("background/gk1", 200 );
 	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
@@ -2376,7 +2376,7 @@ void main()
 		   NULL, " comeback victory!!!!!!!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri1_warai_a1_", "1", "up", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //　梨花ちゃんがぽん、と俺の頭に手を乗せ、俺の逆転勝利を祝ってくれた＠
@@ -2459,7 +2459,7 @@ void main()
 		   NULL, " ...This is how it was...!?!?\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "m1", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "m1", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me1a_huteki_a1_", "1", "right", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「圭ちゃんならさ＠　ここまで読んでくれる、と思ってたよ＠………くっくっく！＠
@@ -2625,7 +2625,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_warai_b1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「魅ぃちゃんが後ろ手で細工した時、またやるんだ～って思ってどきどきしちゃった！＠
@@ -2719,7 +2719,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me1a_akuwarai_a1_", "1", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
 
 //「さぁて圭ちゃんに罰ゲームだねぇ…＠　今日は部活の初日だしねぇ＠ソフトに行こうかねぇ＠…いきな登校拒否になられちゃ困るし！＠
@@ -4000,7 +4000,6 @@ void main()
 		   NULL, " timber,", Line_ContinueAfterTyping);
 	PlaySE( 4, "wa_003", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
-	Wait( 200 );
 	OutputLine(NULL, "ベニヤ板。",
 		   NULL, " plywood.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4101,7 +4100,7 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("black", "down", 0, 0, 3000 );
 	PlaySE( 4, "wa_003", 128, 64 );
-	DrawSceneWithMask("background/mo_g2_01", "down", 0, 0, 50 );
+	DrawSceneWithMask("background/mo_g2_01", "down", 0, 0, 100 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
 
 //「さすがに…休憩……＠　こいつは…手ごわいぜ…！！＠
@@ -4432,7 +4431,7 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	PlaySE( 4, "wa_022", 128, 64 );
-	Negative( 50 , TRUE );
+	Negative( 100 , TRUE );
 //"雛見沢ダム・作業員リンチ死！　バラバラ殺人！！"!w5000@
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "“雛見沢ダム・作業員リンチ死！　バラバラ殺人！！”",
@@ -4446,7 +4445,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-	FadeFilm( 0 , TRUE );
+	FadeFilm( 300 , TRUE );
 //　…あった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…あった！",
