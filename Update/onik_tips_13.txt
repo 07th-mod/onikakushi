@@ -184,7 +184,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s20/00/443200008", 128, TRUE);
 	OutputLine(NULL, "「出んかった。",
-		   NULL, "\"Nothing.", Line_WaitForInput);
+		   NULL, "\"Nothing.", Line_Continue);
+	Wait( 1800 );
 	OutputLine(NULL, "仏は犯人を殴っとらん。",
 		   NULL, " The deceased didn't strike the assailants...", Line_WaitForInput);
 	ModPlayVoiceLS(3, 0, "s20/00/443200009", 128, TRUE);
