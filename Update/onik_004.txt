@@ -205,13 +205,15 @@ void main()
 	ModPlayVoiceLS(3, 3, "s19/03/990300224", 256, TRUE);
 	OutputLine(NULL, "　古いながらも全ての要素を詰め込んだ屋外乱戦の王様、",
 		   NULL, " The tried and true king of all outdoor melee events...", Line_Continue);
-
-	PlaySE( 4, "wa_007", 128, 64 );
-	ShakeScreen( 0, 50, 20, 3, 0, );
+	Wait( 3000 );
 
 //「鬼ごっこ」で行こう！＠
 	OutputLine(NULL, "「鬼ごっこ」で行こう！」",
-		   NULL, " Let's play tag!\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " Let's play tag!\"", Line_Continue);
+	Wait( 800 );
+	PlaySE( 4, "wa_007", 128, 64 );
+	ShakeScreen( 0, 50, 20, 3, 0, );	   
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4042,33 +4044,37 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei06550", 256, TRUE);
 	OutputLine(NULL, "「うら！",
-		   NULL, "\"Hooyah!", Line_WaitForInput);
+		   NULL, "\"Hooyah!", Line_Continue);
 
-
-	PlaySE( 4, "wa_019", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
+	PlaySE( 4, "wa_019", 128, 64 );
+	ShakeScreen( 1, 50, 20, 5, 0, );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 
 //　てめ＠/
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei06560", 256, TRUE);
 	OutputLine(NULL, "　てめ！",
-		   NULL, " You little...!", Line_WaitForInput);
+		   NULL, " You little...!", Line_Continue);
 
-	PlaySE( 4, "wa_019", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
+	PlaySE( 4, "wa_019", 128, 64 );
+	ShakeScreen( 1, 50, 20, 5, 0, );
+	OutputLineAll(NULL, "", Line_WaitForInput);
 
 //　畜生！！」/
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei06570", 256, TRUE);
 	OutputLine(NULL, "　畜生！！」",
 		   NULL, " Damn it!\"", Line_Continue);
 
-	PlaySE( 4, "wa_019", 128, 64 );
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 500 );
 	// (backup) SetValidityOfInput( TRUE );
+	PlaySE( 4, "wa_019", 128, 64 );
+	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
