@@ -156,6 +156,7 @@ void main()
 	Wait( 300 );
 	SetValidityOfInput( TRUE );
 
+	PlaySE( 4, "wa_005", 128, 64 );
 	OutputLine(NULL, "びし！",
 		   NULL, " *bwif*", Line_Normal);
 	ClearMessage();
@@ -186,6 +187,12 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
+	DisableWindow();
+	DrawBustshotWithFiltering(5, "black", "right", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 500, TRUE );
+	DrawScene("background/g2", 100 );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_tohoho_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 100, TRUE );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_kaii_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 0, 100, TRUE );
+	
 
 //　その様子を見て悶絶するレナに呆れる魅音￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -194,7 +201,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "up", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "up", 0, 0, 300 );
 
 	PlayBGM( 1, "msys01", 128, 0 );
 //　何もかもが全ていつものままだ＠
@@ -245,6 +252,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re1a_komaru_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	
 
 //「だめだよそんなの…！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -377,7 +387,7 @@ void main()
 //　面白半分にいい加減なことをしゃべるな、と言っているのだ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　面白半分にいい加減なことをしゃべるな、と言っているのだ。",
-		   NULL, "She was saying, 'Don't spout stupid shit you think is funny.'", GetGlobalFlag(GLinemodeSp));
+		   NULL, "She was saying, \"Don't spout stupid shit you think is funny.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -409,7 +419,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	DrawSceneWithMask("background/gk3", "up", 0, 0, 3000 );
+	DrawSceneWithMask("background/gk1", "up", 0, 0, 3000 );
 
 //　放課後、やはり部活の召集がかかった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -499,7 +509,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "left", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "left", 0, 0, 1300 );
 	ModDrawCharacter(2, 3, "sprite/normal/me1a_tokui_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 //「ルールはね、事件の犯人と凶器、あと犯行現場の３つを当てられた人が勝ち！＠
@@ -640,7 +650,7 @@ void main()
 		   NULL, "\"You'll get confused if you don't take notes.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "down", 0, 0, 300 );
+	DrawSceneWithMask("background/gk1", "down", 0, 0, 300 );
 
 //「あとはやって覚えるさ。…で魅音＠　今回の罰ゲームはなんだ？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -661,7 +671,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me1a_wink_a1_", "2", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「そうだねぇ…＠じゃ、昨日の疲れも多少あるだろうから今日はソフトに。「使いっぱしりの刑」はどう＠　みんなからお使いを頼まれてそれを買いに走るってわけ！＠
@@ -671,7 +681,7 @@ void main()
 		   NULL, "\"Let's see...", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s01/03/120300029", 256, TRUE);
 	OutputLine(NULL, "じゃ、昨日の疲れも多少あるだろうから今日はソフトに。「使いっぱしりの刑」はどう？",
-		   NULL, " We're all still a little tired from yesterday, so maybe we'll take it easy with a 'gofer' penalty?", Line_WaitForInput);
+		   NULL, " We're all still a little tired from yesterday, so maybe we'll take it easy with a gofer penalty?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s01/03/120300030", 256, TRUE);
 	OutputLine(NULL, "　みんなからお使いを頼まれてそれを買いに走るってわけ！」",
 		   NULL, " You'll be asked to rush out and buy stuff for everyone!\"", GetGlobalFlag(GLinemodeSp));
@@ -757,17 +767,21 @@ void main()
 //　真犯人と正しい凶器、犯行現場のカードはそれぞれ抜かれているから、手元にあるカードは全て「無実」のカードということになるわけだ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　真犯人と正しい凶器、犯行現場のカードはそれぞれ抜かれているから、手元にあるカードは全て「無実」のカードということになるわけだ。",
-		   NULL, "The real perpetrator, the correct weapon, and the scene of the murder have been taken out, so that means all the cards I have in my hand are \"innocent\" cards.", Line_Normal);
+		   NULL, "The real perpetrator, the correct weapon, and the scene of the murder have been taken out, so that means all the cards I have in my hand are 'innocent' cards.", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(2, 3, "sprite/normal/me1a_wink_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	ModDrawCharacter(2, 3, "sprite/normal/me1a_huteki_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 //「じゃ～一番は部長の私からいくよ＠　じゃあねぇ…!w200「魅音」!w300「ナイフ」!w300「書斎」！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s01/03/120300031", 256, TRUE);
 	OutputLine(NULL, "「じゃ〜一番は部長の私からいくよ？",
 		   NULL, "\"Then~ I'll go first since I'm the club president, I guess...", Line_WaitForInput);
+		   
+	DisableWindow();
+	ModDrawCharacter(2, 3, "sprite/normal/me1a_tokui_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	
 	ModPlayVoiceLS(3, 3, "s01/03/120300032", 256, TRUE);
 	OutputLine(NULL, "　じゃあねぇ…",
 		   NULL, " Well, then...", Line_Continue);
@@ -777,21 +791,21 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "「魅音」",
-		   NULL, " Mion,", Line_Continue);
+		   NULL, " 'Mion,'", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "「ナイフ」",
-		   NULL, " Knife,", Line_Continue);
+		   NULL, " 'Knife,'", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 200 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "「書斎」！」",
-		   NULL, " Study!\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " 'Study'!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -875,7 +889,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1b_warai_b1_", "2", "left", 7, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1a_def_a1_", "2", "left", 7, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「じゃあレナはねぇ……!w300「レナ」!w300「斧」!w300「ラウンジ」だよ！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -884,25 +898,25 @@ void main()
 		   NULL, "\"Then I'll go...", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 300 );
+	Wait( 500 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "「レナ」",
-		   NULL, " Rena,", Line_Continue);
+		   NULL, " 'Rena,'", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "「斧」",
-		   NULL, " Axe,", Line_Continue);
+		   NULL, " 'Axe,'", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "「ラウンジ」だよ！」",
-		   NULL, " Lounge!\"", Line_Normal);
+		   NULL, " 'Lounge'!\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
@@ -969,8 +983,8 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 3000 );
-	DrawScene("background/gk3", 1000 );
-	ModDrawCharacter(2, 3, "sprite/normal/me1a_wink_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawScene("background/gk1", 1000 );
+	ModDrawCharacter(2, 3, "sprite/normal/me1a_akuwarai_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「よっしゃ！　犯人確定！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -999,8 +1013,6 @@ void main()
 		   NULL, "Here I am spinning around in circles, and Mion just now raises her hand.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	ModDrawCharacter(2, 3, "sprite/normal/me1a_tokui_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「犯人は「梨花ちゃん」＠　凶器は「毒物」で犯行現場は「医務室」＠　どう？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1023,7 +1035,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(2, 3, "sprite/normal/me1b_tokui_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 3, "sprite/normal/me1b_wink_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「正解だねッ！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1133,11 +1145,11 @@ void main()
 	OutputLine(NULL, "　２人で仲良くお買い物。",
 		   NULL, "Going off buying something together as a couple.", Line_WaitForInput);
 	OutputLine(NULL, "で買うものが「明るい家族計画」だったりした日にゃ…ッ！！！",
-		   NULL, " What if we ended up having to buy the \"Happy Family planning guide\"...?!", Line_Normal);
+		   NULL, " What if we ended up having to buy the \"Happy family planning manual\"...?!", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri1_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「…圭一はこのゲーム、苦手そうな顔してますです。＠
@@ -1178,7 +1190,6 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "m1", 0, 0, 1300 );
 	DrawSceneWithMask("black", "down", 0, 0, 1300 );
 
 //　その後、何とかコツらしきものを掴むがどう戦っても数手遅れる＠
@@ -1240,7 +1251,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "down", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "down", 0, 0, 1300 );
 
 //「あ、ごめん、ちょっとトイレ行って来るな。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1687,7 +1698,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 22, "s01/22/121400007", 256, TRUE);
 	OutputLine(NULL, "「前原くーん。",
-		   NULL, "\"Maebara-kun~.", Line_WaitForInput);
+		   NULL, "\"Maebara-kun~", Line_WaitForInput);
 	ModPlayVoiceLS(3, 22, "s01/22/121400008", 256, TRUE);
 	OutputLine(NULL, "ちょっといいですか？」",
 		   NULL, " May I have a moment?\"", GetGlobalFlag(GLinemodeSp));
@@ -1833,7 +1844,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gr2", "left", 0, 0, 1300 );
+	DrawSceneWithMask("background/kuruma3_01", "left", 0, 0, 1300 );
 
 //　男はこちらの問いかけをあっさり無視すると、校門に停まっている車を指差し、とっとと歩き出す＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2368,6 +2379,7 @@ void main()
 	OutputLine(NULL, "「その写真の男性は昨晩、お亡くなりになりました。」",
 		   NULL, "\"The man in this picture is dead.\"", Line_Continue);
 
+	Negative( 800 , TRUE );
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 5000 );
 	// (backup) SetValidityOfInput( TRUE );
@@ -2450,6 +2462,9 @@ void main()
 	OutputLine(NULL, "　わかりたくもない。",
 		   NULL, "I didn't want to understand why.", Line_Normal);
 	ClearMessage();
+
+
+	FadeFilm( 800 , TRUE );
 
 
 //「………教えて下さい＠…一体、何があったんですか？＠
@@ -3169,7 +3184,7 @@ void main()
 		   NULL, " I don't care if they're unfounded.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "s01/11/120700072", 256, TRUE);
 	OutputLine(NULL, "……これ、私の電話番号です。不在でしたら出た者に伝言して下されば結構です。」",
-		   NULL, " ...Here. This is my number. If I'm not there, then just leave a message with whoever picks up.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " ...Here, this is my number. If I'm not there, then just leave a message with whoever picks up.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4128,7 +4143,7 @@ void main()
 
 	DisableWindow();
 	PlaySE( 4, "wa_020", 128, 64 );
-	DrawSceneWithMask("background/gk3", "left", 0, 0, 200 );
+	DrawSceneWithMask("background/gk1", "left", 0, 0, 200 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 
@@ -4163,7 +4178,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s01/02/120200038", 256, TRUE);
 	OutputLine(NULL, "「凶器はロープで、犯行現場は",
-		   NULL, "\"With the Rope, in the...", Line_Continue);
+		   NULL, "\"With the 'Rope,' in the...", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 2000 );
@@ -4177,7 +4192,7 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "………ラウンジ！！！」",
-		   NULL, " Lounge!!!\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " 'Lounge'!!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4394,7 +4409,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "down", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "down", 0, 0, 1300 );
 	PlayBGM( 1, "msys04", 128, 0 );
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_warai_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
@@ -4429,7 +4444,7 @@ void main()
 		   NULL, " Another stab in the dark?", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 500 );
+	Wait( 900 );
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "　……お。」",
@@ -4496,7 +4511,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk3", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/gk1", "right", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_wink_a1_", "2", "m1", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「ではゲームセット＠　トップは私、園崎魅音＠　ビリは前原圭一と竜宮レナ！！＠
@@ -4568,7 +4583,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s01/03/120300052", 256, TRUE);
 	OutputLine(NULL, "「はぁ？",
-		   NULL, "\"Huh?", Line_WaitForInput);
+		   NULL, "\"Huh?", Line_Continue);
+	Wait( 1000 );
 	OutputLine(NULL, "　薬屋なんかに用ないよ。",
 		   NULL, " I don't have any business at the drugstore.", Line_WaitForInput);
 
