@@ -86,7 +86,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s20/11/440700040", 128, TRUE);
 	OutputLine(NULL, "「事前運動にならない限り、政治活動は無制限ですからねぇ。",
-		   NULL, "\"As long as they have no prior consultation, there are no restrictions on their political activities.", Line_WaitForInput);
+		   NULL, "\"As long as they have no prior consultation, there are no restrictions on their political activities.", Line_Continue);
+	Wait( 4000 );
 	OutputLine(NULL, "…熊ちゃん、そんなんじゃ選対本部付きになった時、大変ですよぅ？",
 		   NULL, " Kuma-chan, the Second Investigation Division is going to be pretty tough for you. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -101,7 +102,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 19, "s20/19/443100005", 128, TRUE);
 	OutputLine(NULL, "「俺、知能犯課は無理っす。",
-		   NULL, "\"I'm not cut out to handle intellectual crime.", Line_WaitForInput);
+		   NULL, "\"I'm not cut out to handle intellectual crime.", Line_Continue);
+	Wait( 2000 );
 	OutputLine(NULL, "バカですから。えっへっへっへ…！」",
 		   NULL, " 'Cause I'm dumb. Heheheh...!\"", Line_Normal);
 	ClearMessage();
@@ -187,7 +189,7 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 
 	OutputLine(NULL, "……聞いてるかな？」",
-		   NULL, " Have you?\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " have you?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //「いいえ＠何も。＠
@@ -392,7 +394,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "s20/11/440700050", 128, TRUE);
 	OutputLine(NULL, "「ではではまた明日。",
-		   NULL, "\"Well, see you again tomorrow.", Line_WaitForInput);
+		   NULL, "\"Well, see you again tomorrow.", Line_Continue);
+	Wait( 1000 );
 	OutputLine(NULL, "よいお年を…！」",
 		   NULL, " Best wishes...!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -473,7 +476,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s20/00/442700014", 128, TRUE);
 	OutputLine(NULL, "「署長は退職時特別昇給を見直すかもってさ。」",
-		   NULL, "\"The chief said he may have to reconsider issuing your special retirement salary raise,.\"", Line_Normal);
+		   NULL, "\"The chief said he may have to reconsider issuing your special retirement salary raise.\"", Line_Normal);
 	ClearMessage();
 
 //　官公署の退職金は、退職時の月給を掛け算して算出する＠
