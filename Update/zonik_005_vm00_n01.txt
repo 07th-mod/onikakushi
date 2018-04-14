@@ -1,0 +1,24 @@
+void main()
+{
+}
+
+void dialog000()
+{
+//　浮かしてから弱弱中強？＠　しかもゲージ技まで持ってやがるッ！！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　浮かしてから弱弱中強？！",
+		   NULL, "Following the launcher with a jab, jab, strong, fierce combo!?", Line_WaitForInput);
+	OutputLine(NULL, "　しかもゲージ技まで持ってやがるッ！！！",
+		   NULL, " He's even using meter!", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 1000, TRUE );
+
+//「音からして…校長の空中強は多段ヒット技だな？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "s19/01/hr_kei07470", 256, TRUE);
+	OutputLine(NULL, "「音からして…校長の空中強は多段ヒット技だな？」",
+		   NULL, "\"From how it sounded... the principal's jumping fierce sounds like a multi-hit combo.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}

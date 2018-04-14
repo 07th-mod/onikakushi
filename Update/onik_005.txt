@@ -173,7 +173,7 @@ void main()
 
 //　思い出したのか、うっとりと顔を赤らめるレ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　思い出したのか、うっとりと顔を赤らめるレナ",
+	OutputLine(NULL, "　思い出したのか、うっとりと顔を赤らめるレナ。",
 		   NULL, "She must have just thought about it, because her face filled with delight.", Line_Normal);
 	ClearMessage();
 
@@ -1897,23 +1897,10 @@ void main()
 
 
 
-//　浮かしてから弱弱中強？＠　しかもゲージ技まで持ってやがるッ！！￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　浮かしてから弱弱中強？！",
-		   NULL, "Following the launcher with a jab, jab, strong, fierce combo!?", Line_WaitForInput);
-	OutputLine(NULL, "　しかもゲージ技まで持ってやがるッ！！！",
-		   NULL, " He's even using meter!", Line_Normal);
-	ClearMessage();
-
-	DisableWindow();
-	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 1000, TRUE );
-
-//「音からして…校長の空中強は多段ヒット技だな？＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "s19/01/hr_kei07470", 256, TRUE);
-	OutputLine(NULL, "「音からして…校長の空中強は多段ヒット技だな？」",
-		   NULL, "\"From how it sounded... the principal's jumping fierce sounds like a multi-hit combo.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_005_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_005_vm00_n01","dialog000");}
+	//VoiceMatchingEnd
 
 
 
@@ -2856,7 +2843,7 @@ void main()
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei07610", 256, TRUE);
 	OutputLine(NULL, "「魅音の負けだな。",
 		   NULL, "\"Mion's loss, right?", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "s19/01/hr_kei07610", 256, TRUE);
+	ModPlayVoiceLS(3, 1, "s19/01/hr_kei07620", 256, TRUE);
 	OutputLine(NULL, "引くぞ。",
 		   NULL, " I'll draw it out.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei07630", 256, TRUE);
