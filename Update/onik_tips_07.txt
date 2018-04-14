@@ -84,14 +84,14 @@ void main()
 //「レナですの＠　さっき廊下ですれ違いましてよ＠レナは日直だから、花壇にお水をやらないといけませんので。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "s20/04/440400011", 128, TRUE);
-	OutputLine(NULL, "「レナですの？",
-		   NULL, "\"Rena, you say?", Line_Continue);
+	OutputLine(NULL, "「レナさんですの？",
+		   NULL, "\"Rena-san, you say?", Line_Continue);
 	Wait (1000)
 	OutputLine(NULL, "　さっき廊下ですれ違いましてよ。",
 		   NULL, " I just passed her in the hallway.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 4, "s20/04/440400012", 128, TRUE);
-	OutputLine(NULL, "レナは日直だから、花壇にお水をやらないといけませんので。」",
-		   NULL, " Rena has class duties today, so she's off to water the flower bed.\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "レナさんは日直だから、花壇にお水をやらないといけませんので。」",
+		   NULL, " Rena-san has class duties today, so she's off to water the flower bed.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
@@ -174,8 +174,8 @@ void main()
 	ModPlayVoiceLS(3, 4, "s20/04/440400013", 128, TRUE);
 	OutputLine(NULL, "「まぁ確かに。",
 		   NULL, "\"Well...", Line_Continue);
-	OutputLine(NULL, "レナとしか呼んでませんから間違えるのも無理はないですわね。」",
-		   NULL, " I can understand you making that mistake since we only call her Rena.\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "レナさんとしか呼んでませんから間違えるのも無理はないですわね。」",
+		   NULL, " I can understand you making that mistake since we only call her Rena-san.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -261,11 +261,11 @@ void main()
 //「レナが言ったのですわ＠レナと呼んで欲しいって＠だからレナなのですわ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "s20/04/440400015", 128, TRUE);
-	OutputLine(NULL, "「レナが言ったのですわ。レナと呼んで欲しいって。",
-		   NULL, "\"Rena had told us that she wanted us to call her 'Rena.'", Line_WaitForInput);
+	OutputLine(NULL, "「レナさんが言ったのですわ。レナと呼んで欲しいって。",
+		   NULL, "\"Rena-san had told us that she wanted us to call her 'Rena.'", Line_WaitForInput);
 	ModPlayVoiceLS(3, 4, "s20/04/440400016", 128, TRUE);
-	OutputLine(NULL, "だからレナなのですわ。」",
-		   NULL, " So we call her Rena.\"", Line_Normal);
+	OutputLine(NULL, "だからレナさんなのですわ。」",
+		   NULL, " So we call her Rena-san.\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/gk3", "right", 0, 0, 300 );
