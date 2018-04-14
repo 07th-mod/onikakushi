@@ -212,7 +212,7 @@ void main()
 		   NULL, " Let's play tag!\"", Line_Continue);
 	Wait( 800 );
 	PlaySE( 4, "wa_007", 128, 64 );
-	ShakeScreen( 0, 50, 20, 3, 0, );	   
+	ShakeScreen( 0, 50, 20, 3, 0, );
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -651,10 +651,10 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(3, 4, "sprite/normal/sa3_odoroki_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
-//　セッ!d300…!d300…、＠
-	ModPlayVoiceLS(3, 4, "s19/04/990400085", 256, TRUE);
-	OutputLine(NULL, "　セッ",
-		   NULL, " Se...", Line_Continue);
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog000");}
+	//VoiceMatchingEnd
 
 	Wait( 300 );
 
@@ -720,10 +720,10 @@ void main()
 	OutputLine(NULL, "「じゃあ言ってごらんよ。",
 		   NULL, "\"Then go ahead and say it.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s19/03/990300238", 256, TRUE);
-	OutputLine(NULL, "「アレ」だよ「アレ」。",
+	OutputLine(NULL, "『アレ』だよ『アレ』。",
 		   NULL, " 'That,' you know? 'That.'", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "s19/03/990300239", 256, TRUE);
-	OutputLine(NULL, "「アレ」は英語で〜？！？！」",
+	OutputLine(NULL, "『アレ』は英語で〜？！？！」",
 		   NULL, " What does 'that' mean, exactly?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -788,7 +788,7 @@ void main()
 //「アレ」は英語で何と言う～？！？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s19/03/990300241", 256, TRUE);
-	OutputLine(NULL, "「アレ」は英語で何と言う〜？！？！」",
+	OutputLine(NULL, "『アレ』は英語で何と言う〜？！？！」",
 		   NULL, "What does 'that' mean!?!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -865,7 +865,7 @@ void main()
 
 //　そうだ。「アレ」は英語でザットだ＠……ハメられた！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　そうだ。「アレ」は英語でザットだ。",
+	OutputLine(NULL, "　そうだ。『アレ』は英語でザットだ。",
 		   NULL, "I see. Well it certainly is what 'that' means.", Line_WaitForInput);
 	OutputLine(NULL, "……ハメられた！！",
 		   NULL, " ...That could have been awkward.", GetGlobalFlag(GLinemodeSp));
@@ -2112,7 +2112,7 @@ void main()
 
 	DisableWindow();
 	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri3_niko_a1_", "0", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
-	
+
 
 //　梨花ちゃんはレナを取り逃がしたらしく、今やその矛先を俺に向けていた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2440,7 +2440,7 @@ void main()
 	PlaySE( 4, "wa_008", 128, 64 );
 	Wait( 200 );
 	OutputLineAll(NULL, "", Line_WaitForInput);
-	
+
 //スペースコロニーだッ！！」/
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05880", 256, TRUE);
 	OutputLine(NULL, "小惑星だッ！！」",
@@ -2519,13 +2519,13 @@ void main()
 		   NULL, "That's right, the Earth Federation's top ace... is Rena Ryuugu!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	
+
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/girlc99007", 256, TRUE);
 	OutputLine(NULL, "　「す、すごい……！」",
 		   NULL, "\"A-Amazing...!\"", Line_WaitForInput);
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	
+
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/girla99005", 256, TRUE);
@@ -2570,7 +2570,7 @@ void main()
 //「でも…連邦艦隊の拡散波動砲でも、彗星帝国には効かなかったんじゃ…。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "s19/00/girla99006", 256, TRUE);
-	OutputLine(NULL, "「でも…たとえレナさんでも、月を押し戻すことなんて出来るんでしょうか？＞」",
+	OutputLine(NULL, "「でも…たとえレナさんでも、月を押し戻すことなんて出来るんでしょうか？」",
 		   NULL, "\"But... Rena-san might be strong... but, can she really push back the moon..?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -3082,11 +3082,11 @@ void main()
 		   NULL, " Don't be late for the next class~!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	
+
 	DisableWindow();
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/sa3_akuwarai_a1_", "2", "down", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/ri3_warai_a1_", "2", "down", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
-	
+
 
 //「離せ沙都子、梨花ちゃん！＠　ぎゃぁあぁあっぁああぁあ…ぁ…！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
