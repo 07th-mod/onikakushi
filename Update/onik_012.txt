@@ -9,6 +9,7 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
+	PlayBGM( 2, "lsys22", 128, 0 );
 	DrawScene("white", 3000 );
 	DrawSceneWithMask("background/ma_j3", "m1", 0, 0, 3000 );
 
@@ -32,7 +33,8 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "left", 0, 0, 1300 );
-	DrawSceneWithMask("background/ma_s1", "left", 0, 0, 1300 );
+	FadeOutBGM( 2, 400, TRUE );
+	DrawSceneWithMask("background/ma_d1", "left", 0, 0, 1300 );
 
 //「どうしたの＠圭一＠……今朝は顔色悪いわよ＠　昨夜は何時に寝たの？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>圭一の母</color>", NULL, "<color=#f5e6d3>Keiichi's mom</color>", NULL, Line_ContinueAfterTyping); }
@@ -343,7 +345,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	DrawSceneWithMask("background/ma_d1", "m1", 0, 0, 1300 );
+	DrawSceneWithMask("background/ma_s1", "m1", 0, 0, 1300 );
 
 //　軽く横になったつもりだったが、目を覚ますともうお昼前だった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1242,7 +1244,7 @@ void main()
 		   NULL, "\"...This shop is always quite busy.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "s01/11/120700220", 256, TRUE);
 	OutputLine(NULL, "お料理よりもウェイトレスさんがねぇ〜。」",
-		   NULL, " It's more about the waitresses than the food, you see~\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " It's more about the waitresses than the food, you see~.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1663,8 +1665,8 @@ void main()
 	ClearMessage();
 
 //「婆さまが言うにはですね、「鬼の狩り」の時には絶対に邪魔をしてはいけない＠家に閉じこもって布団を被ってろ、って言うんです。＠
-	PlaySE(3, "s01/11/120700246", 256, 64)
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "s01/11/120700246", 256, TRUE);
 	OutputLine(NULL, "「婆さまが言うにはですね、「鬼の狩り」の時には絶対に邪魔をしてはいけない。",
 		   NULL, "\"My grandmother told me that you must never interfere with the 'demon's hunt.'", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "s01/11/120700247", 256, TRUE);
@@ -1749,7 +1751,7 @@ void main()
 //　犯人が村まるごとでなかったにせよ、数人の犯人の「狩り」を村人たちが「布団を被って見殺しにした」ことは十分に考えられる……？？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　犯人が村まるごとでなかったにせよ、数人の犯人の「狩り」を村人たちが「布団を被って見殺しにした」ことは十分に考えられる……？？？",
-		   NULL, "Even if it wasn't the whole village... it was conceivable that the villagers were \"hiding under the covers and leaving them to die\" when there's a group that was on their \"hunt,\" wasn't it...???", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Even if it wasn't the whole village... it was conceivable that the villagers were \"hiding under the covers and leaving them to die\" when there's a group that was on their 'hunt,' wasn't it...???", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2259,10 +2261,10 @@ void main()
 	OutputLine(NULL, "「実は調べてみたら、竜宮さんは引越しの少し前に、学校で謹慎処分を受けているんですよ。",
 		   NULL, "\"Actually, I looked into her. Before Ryuugu-san moved away to Hinamizawa, she was suspended from school.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "s01/11/120700281", 256, TRUE);
+	PlayBGM( 1, "msys16", 128, 0 );
 	OutputLine(NULL, "何でも、学校中のガラスを割って回ったんだとか。」",
 		   NULL, " It seems she went through her school building and broke all of the windows.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
 
 
 //「レ、レナが？＠　………学校中のガラスを割った？！？！＠
@@ -2576,7 +2578,7 @@ void main()
 		   NULL, "\"We should get going.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "s01/11/120700303", 256, TRUE);
 	OutputLine(NULL, "あ、前原さん、お昼の薬は飲みましたか？」",
-		   NULL, " Ah. Maebara-san, did you take your afternoon medicine?\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " Ah, Maebara-san, did you take your afternoon medicine?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2669,18 +2671,19 @@ void main()
 	ModPlayVoiceLS(3, 11, "s01/11/120700306", 256, TRUE);
 	OutputLine(NULL, "　長々とお話してしまって申し訳ありませんでした。」",
 		   NULL, " My apologies for the long conversation.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 //「……なんで俺に話すんですか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "s01/01/120100310", 256, TRUE);
 	OutputLine(NULL, "「……なんで俺に話すんですか？」",
-		   NULL, "\"...Why did you talk to me?\"", Line_WaitForInput);
+		   NULL, "\"...Why did you talk to me?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //　ぼそりと言い返した＠
 //（英語では削除＠
-
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ぼそりと言い返した。",
 		   NULL, " I blurted out the question.", Line_Normal);
 
@@ -2833,7 +2836,7 @@ void main()
 //　そんなバカな、と反論しようと思ったが、すっかり意気消沈した俺にそんな気力はなかった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そんなバカな、と反論しようと思ったが、すっかり意気消沈した俺にそんな気力はなかった。",
-		   NULL, "I wanted to reply with 'that's absurd!,' but in my downtrodden state I couldn't bring myself to say it.", Line_Normal);
+		   NULL, "I wanted to reply with \"that's absurd!,\" but in my downtrodden state I couldn't bring myself to say it.", Line_Normal);
 	ClearMessage();
 
 
@@ -3128,7 +3131,7 @@ void main()
 		   NULL, " ...It would probably be a good idea to change my sheets.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
+	PlayBGM( 1, "lsys17", 128, 0 );
 
 //　その時、階下の電話が鳴った＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3260,7 +3263,7 @@ void main()
 //　……ない、とそう言い切れない自分が悲しかった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……ない、とそう言い切れない自分が悲しかった。",
-		   NULL, "...The fact that I couldn't say 'no,' saddened me.", Line_Normal);
+		   NULL, "...The fact that I couldn't say \"no,\" saddened me.", Line_Normal);
 	ClearMessage();
 
 //「元気そうで安心したよ＠レナもすごく心配してたよ＠　沙都子はざまぁないですわ！って喜んでたな＠梨花ちゃんは病気でかわいそかわいそです、ってさ！＠
@@ -3571,7 +3574,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s01/03/120300107", 256, TRUE);
 	OutputLine(NULL, "「うんうん、元気元気。これなら明日は大丈夫そうだね〜。」",
-		   NULL, "\"Yep, yep, looking fine. Guess you'll be able to make it tomorrow~\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"Yep, yep, looking fine. Guess you'll be able to make it tomorrow~.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -4048,9 +4051,8 @@ void main()
 
 
 	DisableWindow();
-//	DrawSceneWithMask( "bg_021", "right", 0, 0, 1300 );
 	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 1300, TRUE );
-	FadeBustshotWithFiltering( 3, "right", 1, FALSE, 0, 0, 1300, TRUE );
+	FadeBustshotWithFiltering( 3, "right", 1, FALSE, 0, 0, 700, TRUE );
 
 
 //　二人はまるで何事もなかったかのように笑い合い、玄関を後にしようとした￥
@@ -4067,7 +4069,8 @@ void main()
 		   NULL, "I hadn't moved a muscle since I had dropped the package of mochi.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
+	DisableWindow();
+	DrawScene("background/ma_g3_02", 1200 );
 
 //　二人が扉を出、…その扉が…ゆっくりと閉じていく＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4081,13 +4084,18 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……俺はそれをじっと見ているしかない。",
 		   NULL, "...All I could do was stare.", Line_WaitForInput);
+		   
+	DisableWindow();
+	DrawScene("background/ma_g3_01", 1200 );
+	
 	OutputLine(NULL, "…まるで、扉が閉まりきるまで動いてはいけないかのように。",
 		   NULL, " ...As if I couldn't move until the door was completely closed.", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_027", 128, 64 );
 
-	DrawScene("background/ma_g3_02", 200 );
+	DrawScene("background/ma_g3_02", 400 );
+	Negative( 0 , TRUE );
 
 
 
@@ -4108,7 +4116,7 @@ void main()
 	ClearMessage();
 //	DisableWindow();
 //	DrawBustshotWithFiltering( 2, "me_si_him_a1", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-
+	FadeFilm( 600 , TRUE );
 //「じゃあね圭ちゃん。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "s01/03/120300120", 256, TRUE);
@@ -4224,7 +4232,7 @@ void main()
 //　…俺に"余計な話"はするな、と釘を刺しているのだ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…俺に“余計な話”はするな、と釘を刺しているのだ。",
-		   NULL, "They were warning me not to say anything \"unnecessary.\"", Line_Normal);
+		   NULL, "They were warning me not to say anything 'unnecessary.'", Line_Normal);
 	ClearMessage();
 
 
@@ -4633,7 +4641,7 @@ void main()
 		   NULL, "Itwasn'ttheirfaultitwasn'ttheirfaultitwasn'ttheirfault.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawScene("background/ma_s1", 1000 );
+	DrawScene("background/ma_g3_01", 1000 );
 
 //　ぼーっとした…寝起きのような鈍い感覚だったが、さっきまであった嫌な悪寒は薄れていた＠……もう大丈夫＠…もう怖くない＠…もう完全復活＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4738,7 +4746,7 @@ void main()
 //　新聞紙の包装を開くと、中にはこじんまりとした、それでいてずっしりとしたこし餡のおはぎが５つ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　新聞紙の包装を開くと、中にはこじんまりとした、それでいてずっしりとしたこし餡のおはぎが５つ。",
-		   NULL, "Opening up the newpaper wrapping, there were five plump red bean paste mochi fit snugly inside.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Opening up the newspaper wrapping, there were five plump red bean paste mochi fit snugly inside.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -5034,9 +5042,10 @@ void main()
 
 
 //「もぐもぐ。!s200………………!sdん、＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "s01/01/120100352", 256, TRUE);
 	OutputLine(NULL, "「もぐもぐ。",
-		   NULL, "*chew chew*", Line_ContinueAfterTyping);
+		   NULL, "\"*chew chew*", Line_ContinueAfterTyping);
 //!s200
 	SetSpeedOfMessage( TRUE, 0, );
 
@@ -5046,7 +5055,7 @@ void main()
 	SetSpeedOfMessage( FALSE, 0, );
 
 	OutputLine(NULL, "ん、」",
-		   NULL, " \"Hmm...\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " Hmm...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
