@@ -381,9 +381,7 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 500 );
-	DrawFilm( 2, 153, 153, 102, 255, 0, 0, FALSE );
-	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
-	DrawScene("background/kawa4", 3000 );
+	DrawScene("flashback/kawa4", 3000 );
 
 //「ダムの計画が決まったのは７～８年くらい前なんだ＠黒部に次ぐ巨大な計画だったと聞いてるね。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
@@ -510,8 +508,6 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 500 );
-	FadeFilm( 0 , TRUE );
-	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 0, TRUE );
 	DrawSceneWithMask("background/y_kawa3", "down", 0, 0, 1300 );
 	ModDrawCharacter(3, 8, "sprite/night/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
 
@@ -615,9 +611,7 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 500 );
-	DrawFilm( 2, 153, 153, 102, 255, 0, 0, FALSE );
-	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
-	DrawSceneWithMask("background/y_damu2", "up", 0, 0, 1300 );
+	DrawSceneWithMask("flashback/y_damu2", "up", 0, 0, 1300 );
 
 //　ダム工事の現場の人たちで喧嘩があり、被害者を殺してしまったという＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -717,8 +711,6 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 500 );
-	FadeFilm( 0 , TRUE );
-	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 0, TRUE );
 	DrawSceneWithMask("scene/103a", "down", 0, 0, 1300 );
 
 //	DrawBustshotWithFiltering( 1, "night/ta_si_wa_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
@@ -2824,7 +2816,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(2, 2, "sprite/night/re2a_hau_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 2, "sprite/night/re2a_kaii_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 	
 
 //「はぅ…！!w300　…………ぅ、うん＠　聞こえるくらい、大きな声を出すね！￥
