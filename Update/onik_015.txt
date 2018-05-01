@@ -4454,10 +4454,7 @@ void main()
 	DrawSceneWithMask("black", "down", 0, 0, 300 );
 
 //■回想
-	DisableWindow();
-	DrawFilm( 2, 153, 153, 102, 255, 0, 0, FALSE );
-	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
-	DrawScene("background/ma_j3_01", 1000 );
+	DrawScene("flashback/ma_j3_01", 1000 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 
@@ -4806,7 +4803,6 @@ void main()
 	SetValidityOfInput( FALSE );
 	SetValidityOfWindowDisablingWhenGraphicsControl( FALSE );
 //	FadeBustshotWithFiltering( 2, "right", 1, FALSE, 0, 0, 300, TRUE );
-	FadeFilm( 0, TRUE );
 	PlaySE( 4, "wa_008", 128, 64 );
 	WaitToFinishSEPlaying(4);
 	//SetValidityOfInput( FALSE );
@@ -4839,9 +4835,7 @@ void main()
 
 	SetValidityOfInput( FALSE );
 	PlaySE( 4, "wa_008", 128, 64 );
-	DrawFilm( 2, 153, 153, 102, 255, 0, 200, FALSE );
-	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 200, FALSE );
-	DrawScene("scene/102", 200);
+	DrawScene("flashback/scene102", 200);
 	WaitToFinishSEPlaying(4);
 	PlaySE( 4, "wa_009", 128, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
@@ -4877,8 +4871,7 @@ void main()
 //print 6
 	DisableWindow();
 	DrawSceneWithMask("black", "up", 0, 0, 1300 );
-	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1300, FALSE );
-	DrawSceneWithMask("background/ma_j3_01", "down", 0, 0, 1300 );
+	DrawSceneWithMask("flashback/ma_j3_01", "down", 0, 0, 1300 );
 
 	StopSE( 4 );
 
@@ -5618,8 +5611,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1300, FALSE );
-	DrawSceneWithMask("background/ma_j3", "up", 0, 0, 1300 );
+	DrawSceneWithMask("flashback/ma_j3", "up", 0, 0, 1300 );
 
 //「オヤシロさまが...か......。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -5743,8 +5735,7 @@ void main()
 		   NULL, "Long ago, Hinamizawa was feared and respected as the village of ogres.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
-	DrawScene("background/oni1", 1000 );
+	DrawScene("flashback/oni1", 1000 );
 
 //「ふもとの村人たちは鬼たちを崇めていました＠で、鬼ヶ淵は神聖な土地なので絶対に不可侵＠むやみに立ち入るとオヤシロさまの祟りがある、とされてきたんです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -5817,8 +5808,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot(1, "append/waku_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 1000, FALSE );
-	DrawScene("background/ma_j3_01", 1000 );
+	DrawScene("flashback/ma_j3_01", 1000 );
 
 //「つまり......オヤシロさまってのは、守り神ってよりも...監視者なんですね＠　この地を外界から隔離しようとする。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
