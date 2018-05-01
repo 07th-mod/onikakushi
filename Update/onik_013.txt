@@ -2366,7 +2366,7 @@ void main()
 
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
-	ModDrawCharacter(2, 2, "sprite/normal/re1a_nande_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	ModDrawCharacter(2, 2, "sprite/normal/re1a_nande_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/gr1", "up", 0, 0, 1300 );
 
 
@@ -2743,7 +2743,7 @@ void main()
 
 	DisableWindow();
 	PlaySE( 4, "wa_020", 128, 64 );
-	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/tie_1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1000, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/tie_1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1000, TRUE );
 
 //　俺の体調を尋ねると出席を取り、そしていつもの退屈な日常を再開した￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
