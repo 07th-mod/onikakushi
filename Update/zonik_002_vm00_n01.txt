@@ -1,0 +1,63 @@
+void main()
+{
+}
+
+void dialog000()
+{
+//「さぁねぇ＠昔、殺して埋めたバラバラ死体でも確認してるんじゃないすか？＠
+	OutputLine(NULL, "「さぁねぇ。",
+		   NULL, "\"Dunno.", Line_WaitForInput);
+	OutputLine(NULL, "昔、殺して埋めたバラバラ死体でも確認してるんじゃないすか？」",
+		   NULL, " Maybe she's checking on that dismembered corpse that was out here long ago.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+}
+
+void dialog001()
+{
+//「うん聞いて聞いて＠　あ、…あのね＠　あったの＠　ケンタくん人形ッ♪！！＠
+	OutputLine(NULL, "「うん聞いて聞いて！",
+		   NULL, "\"Oh, yes~ so listen!", Line_WaitForInput);
+	OutputLine(NULL, "　あ、…あのね！",
+		   NULL, " Ah, ...um, you see!", Line_WaitForInput);
+	OutputLine(NULL, "　あったの！",
+		   NULL, " There was...!", Line_WaitForInput);
+	OutputLine(NULL, "　ケンタくん人形ッ♪！！」",
+		   NULL, " A Colonel Sanders doll!♪\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「ケンタくん人形？＠　…ってあれか、ケンタくんフライドチキンの店の前に必ず置いてある…!d600あの等身大人形の？＠
+	OutputLine(NULL, "「ケンタくん人形？！",
+		   NULL, "\"A Colonel Sanders doll!?", Line_WaitForInput);
+	OutputLine(NULL, "　…ってあれか、ケンタくんフライドチキンの店の前に必ず置いてある…",
+		   NULL, " ...Oh, that thing. Those statues they always have out in front of that fried chicken place...", Line_ContinueAfterTyping);
+
+	Wait( 600 );
+
+	OutputLine(NULL, "あの等身大人形の？」",
+		   NULL, " That life-sized dummy?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「…そう！　ケンタくん＠　……はぅ……かぁいい……お持ち帰りしたいぃ…☆＠
+	OutputLine(NULL, "「…そう！　ケンタくん☆",
+		   NULL, "\"...Yes! Colonel Sanders.☆", Line_WaitForInput);
+	OutputLine(NULL, "　……はぅ……かぁいい……お持ち帰りしたいぃ…☆」",
+		   NULL, " ...Hao... kyute... I want to take it hooome...☆\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+}
+
+void dialog002()
+{
+//「圭一くんが手伝ってくれる☆!d300…ケンタくんをお持ち帰りできる……はぅ…。＠
+	OutputLine(NULL, "「圭一くんが手伝ってくれる☆",
+		   NULL, "\"Keiichi-kun is going to help.☆", Line_ContinueAfterTyping);
+
+	Wait( 300 );
+
+	OutputLine(NULL, "…ケンタくんをお持ち帰りできる……はぅ…。」",
+		   NULL, " ...I can take Colonel Sanders home... hao...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+}

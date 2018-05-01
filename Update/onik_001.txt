@@ -1019,10 +1019,10 @@ void main()
 		   NULL, " You were such a cute little tyke the last time I saw you!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-    //VoiceMatching
-    if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_001_vm0x_n01","dialog000");}
-    if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_001_vm00_n01","dialog000");}
-    //VoiceMatchingEnd
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_001_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_001_vm00_n01","dialog000");}
+	//VoiceMatchingEnd
 
 	DisableWindow();
 	ModDrawCharacter(1, 2, "sprite/normal/re1a_komaru_a1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
@@ -4546,10 +4546,10 @@ void main()
 		   NULL, " Maybe!\"", Line_Normal);
 	ClearMessage();
 
-    //VoiceMatching
-    if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_001_vm0x_n01","dialog000");}
-    if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_001_vm00_n01","dialog000");}
-    //VoiceMatchingEnd
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_001_vm0x_n01","dialog001");}
+	if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_001_vm00_n01","dialog001");}
+	//VoiceMatchingEnd
 
 
 
