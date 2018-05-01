@@ -1608,6 +1608,9 @@ void main()
 		   NULL, "With that said, I began taking off my clothes. Satoko began to blush just as I expected her to.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	ModDrawCharacter(3, 4, "sprite/normal/sa1b_yareyare_b2_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
 //「レ、レディーの前でお着替えなんて、躾がなってませんことよー！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "s01/04/120400064", 256, TRUE);
