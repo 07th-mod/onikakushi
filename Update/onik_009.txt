@@ -383,7 +383,7 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "right", 0, 0, 1300 );
-	DrawSceneWithMask("background/y_ie1", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/y_jt2", "right", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(3, 3, "sprite/night/me2_wink_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
 
 //「ハ～イ圭ちゃん＠　今日はお腹空かしてる＠　露店で済ますんだからね！＠
@@ -839,6 +839,10 @@ void main()
 	ModPlayVoiceLS(3, 4, "s19/04/500400679", 256, TRUE);
 	OutputLine(NULL, "　遅いですわ皆々様！！",
 		   NULL, " You're all very late!!", Line_WaitForInput);
+		   
+	DisableWindow();
+	ModDrawCharacter(1, 4, "sprite/normal/sa2b_yareyare_b1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	
 	ModPlayVoiceLS(3, 4, "s19/04/500400680", 256, TRUE);
 	OutputLine(NULL, "　レディーを待たせるとは圭一さんもなってないでございますわ〜！！！」",
 		   NULL, " It's unacceptable to keep a lady waiting, Keiichi-san~!!!\"", GetGlobalFlag(GLinemodeSp));
@@ -856,7 +860,8 @@ void main()
 		   NULL, " So, where is this lady I've kept waiting?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
+	DisableWindow();
+	ModDrawCharacter(1, 4, "sprite/normal/sa2b_akireru_b1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「ぬわんですってぇえぇええぇえッ！！！！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -1649,7 +1654,7 @@ void main()
 		   NULL, " ...Oh?", Line_WaitForInput);
 	
 	DisableWindow();
-	ModDrawCharacter(1, 2, "sprite/normal/re2b_komaru_b1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 2, "sprite/normal/re2b_komaru_b2_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //………あれ＠　圭一くんと梨花ちゃんは…なんでスタートしないんだろ？　しないんだろ？＠
 	ModPlayVoiceLS(3, 2, "s19/02/500200820", 256, TRUE);
@@ -3504,7 +3509,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "left", 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa2a_odoroki_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa2b_warai_b1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「子供のごっご遊びと侮るつもりなら好都合でございますわぁ！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
