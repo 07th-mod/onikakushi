@@ -22,3 +22,32 @@ void dialog000()
 		   NULL, "\"That's Jeet Kune Do, right?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
+
+void dialog001()
+{
+//　それはみんなランディーくん同様、町を歩けばどこかで見かけるようなものばかりだった＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それはみんなランディーくん同様、町を歩けばどこかで見かけるようなものばかりだった。",
+		   NULL, "They were all the same as Colonel Randy: stuff you'd see while walking around in town.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+}
+
+void dialog002()
+{
+//「…校長先生のエアリアル起動技です。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "s19/05/990500067", 256, TRUE);
+	OutputLine(NULL, "「…校長先生、超奥義発動です。」",
+		   NULL, "\"...The principal's special launcher move just started.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog003()
+{
+//「あははは～圭一くん、前屈みだぁぁ……かぁいいかぁいいッ！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "s19/02/990200368", 256, TRUE);
+	OutputLine(NULL, "「あははは〜圭一くん、…かぁいいかぁいいッ！！」",
+		   NULL, "\"Ahahaha~ Keiichi-kun is so... kyute kyute!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
