@@ -88,8 +88,9 @@ void dialog000()
 
 void dialog001()
 {
-//「レナもシカトすんなー！２人がホテル街へ消えたって回覧す＠
-	OutputLine(NULL, "「レナもシカトすんなー！２人がホテル街へ消えたって回覧す、",
-		   NULL, "\"Don't you ignore me too, Rena! I'll tell everyone that you two disappeared into the hotel district together!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "s19/03/990300072", 256, TRUE);
+	OutputLine(NULL, "「レナもシカトすんなー！２人がホテル街へ消えたって回覧板を」",
+		   NULL, "\"Don't you ignore me too, Rena! I'll put out a village-wide circular saying that you two disappeared into the hotel district together!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
