@@ -54,7 +54,7 @@ void dialog001()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s20/02/440200109", 256, TRUE);
 	OutputLine(NULL, "「うん。次のシナリオは今回のシナリオとはまた別の側面を紹介する物語…って言ってたよ。」",
-		   NULL, "\"Yeah. They said the next chapter will introduce another aspect of the story.\", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"Yeah. They said the next chapter will introduce another aspect of the story.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
