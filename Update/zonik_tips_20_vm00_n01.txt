@@ -24,9 +24,9 @@ void dialog001()
 {
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>圭一の父</color>", NULL, "<color=#f5e6d3>Keiichi's dad</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「圭一。",
- 		   NULL, "\"Keiichi.", Line_WaitForInput);
- 	OutputLine(NULL, "箱売りしてるのにしなさい。安いから。」",
- 		   NULL, " Buy them in the big case. It's cheaper.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"Keiichi.", Line_WaitForInput);
+	OutputLine(NULL, "箱売りしてるのにしなさい。安いから。」",
+		   NULL, " Buy them in the big case. It's cheaper.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
