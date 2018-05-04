@@ -1488,7 +1488,7 @@ void main()
 		   NULL, " So half of us think it was a curse, and half of us think it was people?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	if(GetGlobalFlag(GCensor) = 0){ModCallScriptSection("zomake_01_vm00_n01","dialog004");}
+	if(GetGlobalFlag(GCensor) == 0){ModCallScriptSection("zomake_01_vm00_n01","dialog004");}
 
 	if (GetGlobalFlag(GADVMode) == 0) { ClearMessage(); }
 	DisableWindow();
