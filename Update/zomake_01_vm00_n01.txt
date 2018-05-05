@@ -128,71 +128,7 @@ void dialog003()
 
 void dialog004()
 {
-	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 8, "sprite/normal/tomi1_def_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
-//「レナちゃん、参考まででいいんだけどさ＠
-//　β版までをプレイしてくれたテストプレイヤーさんたちの感想ではどんな感じなんだい？＠
-
-//;＜富竹
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "「レナちゃん、参考まででいいんだけどさ。",
-		   NULL, "\"Rena-chan, just for reference,", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
-
-
-	OutputLine(NULL, "　β版までをプレイしてくれたテストプレイヤーさんたちの感想ではどんな感じなんだい？」",
-		   NULL, "what did the test players who played the beta version think?\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-
-	DisableWindow();
-	FadeBustshotWithFiltering( 3, "left", 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_def_b1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
-
-//「えっとー＠うん＠人間派がとっても多かったの！＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "「えっとー。",
-		   NULL, "\"Hmmm.", Line_WaitForInput);
-	OutputLine(NULL, "うん。",
-		   NULL, " Yeah.", Line_WaitForInput);
-	OutputLine(NULL, "人間派がとっても多かったの！」",
-		   NULL, " There were a lot more players who believed in the 'people' explanation!\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-	DisableWindow();
-	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_wink_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
-
-//「ほらほら見たことか＠　冷静な百戦錬磨の同志諸兄はよく見てるよ！￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "「ほらほら見たことか！",
-		   NULL, "\"See, see, right there!", Line_WaitForInput);
-	OutputLine(NULL, "　冷静な百戦錬磨の同志諸兄はよく見てるよ！」",
-		   NULL, " Our veteran comrades are cool, collected, and very observant!\"", Line_Normal);
-	ClearMessage();
-	DisableWindow();
-	DrawSceneWithMask( "bg_161", "right", 0, 0, 300 );
-	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
-
-//「……でも、β版は途中までしかできてませんでしたです。＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "「……でも、β版は途中までしかできてませんでしたです。」",
-		   NULL, "\"...But the beta version only finished partway through the story.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-	DisableWindow();
-	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1a_warai_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
-
-//「そうね＠β版をプレイしてくれた方も、最後まで通して見てみたら、また意見が変わってるかもしれないね。￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "「そうね。",
-		   NULL, "\"That's right.", Line_WaitForInput);
-	OutputLine(NULL, "β版をプレイしてくれた方も、最後まで通して見てみたら、また意見が変わってるかもしれないね。」",
-		   NULL, " Even the people who played the beta might change their minds if they got through to the very end.\"", Line_Normal);
 }
 
 void dialog005()
