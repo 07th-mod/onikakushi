@@ -151,3 +151,16 @@ void dialog001()
 		   NULL, "\"Don't you ignore me too, Rena! I'll put out a village-wide circular saying how you two are madly in love!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
+
+void dialog002()
+{
+//「圭一さんのお弁当はきっと貧乏臭くパンの耳に決まってますわ～＠　さぁ恥ずかしがらずにお見せなさいな！ほらほら！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "s19/04/990400015", 256, TRUE);
+	OutputLine(NULL, "「圭一さんのお弁当はみみっちく日の丸弁当に決まってますわ〜！",
+		   NULL, "\"Keiichi-san's lunch box is most assuredly a plain, miserly rice and seaweed~!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "s19/04/990400016", 256, TRUE);
+	OutputLine(NULL, "　さぁ恥ずかしがらずにお見せなさいな！ほらほら！」",
+		   NULL, " Why don't you just show it to us? Come now!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
