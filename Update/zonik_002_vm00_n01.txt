@@ -71,3 +71,21 @@ void dialog002()
 		   NULL, " ...I can take Colonel Sanders home... hao...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
+
+void dialog003()
+{
+//「……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？」!w5000
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "s19/08/990800016", 256, TRUE);
+	OutputLine(NULL, "「……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？」",
+		   NULL, "\"...It was quite a disturbing incident... They still haven't found one of the arms.\"", Line_Continue);
+}
+
+void dialog004()
+{
+//"... …嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？"@\
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "“……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？”",
+		   NULL, "\"...It was quite a disturbing incident... They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+}
