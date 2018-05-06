@@ -237,3 +237,47 @@ void dialog011()
 		   NULL, " I really want to take Colonel Randy home soon~!\"", Line_Normal);
 	ClearMessage();
 }
+
+void dialog012()
+{
+//　富竹さんは「事件」と言い「腕が一本見つからない」と言っていた＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　富竹さんは「事件」と言い、それに続けて何かが「見つかっていない」と言っていた。",
+		   NULL, "Tomitake-san said that \"they still haven't found\" something in an 'incident.'", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　俺はてっきり…バラバラ殺人とかがあったのかと思っていたのだが…違うのだろうか＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　俺はてっきり…何か殺人事件があって、発見されていないものとかがあるのかと思っていたのだが…違うのだろうか。",
+		   NULL, "I thought... that some murder had occurred and there was something waiting to be found... but I guess I was wrong.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog013()
+{
+//　…本当に雛見沢でバラバラ殺人なんかあったんですか？、って＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…本当に雛見沢で殺人事件なんかあったんですか？、って。",
+		   NULL, "...To ask, \"Was there really a murder here in Hinamizawa?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+}
+
+void dialog014()
+{
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（……嫌な事件だったね。",
+		   NULL, "\"...It was quite a disturbing incident.", Line_WaitForInput);
+	OutputLine(NULL, "…まだ見つかってないんだろ？）",
+		   NULL, " ...They still haven't found it, have they?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　富竹さんの言葉通りなら、それは間違いなく殺人事件があったことを示唆していた。",
+		   NULL, "If it was just as Tomitake-san said, that undoubtedly pointed to the fact that there had been a murder.", Line_WaitForInput);
+	OutputLine(NULL, "　…そして、まだ見つかっていない『何か』がある。",
+		   NULL, "...And that there was still \"something\" to be found.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}

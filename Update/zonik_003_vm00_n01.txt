@@ -214,3 +214,71 @@ void dialog010()
 	OutputLine(NULL, "せっかく持ってきてくれたんだし。…明日借りるよ。",
 		   NULL, " You brought it after all... I'll have to borrow it tomorrow.", Line_Continue);
 }
+
+void dialog011()
+{
+//「なにしょんぼりしてるんだよ。明日にはランディーくんが掘り出せるんだぜ？！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "s19/01/hr_kei05060", 256, TRUE);
+	OutputLine(NULL, "「なにしょんぼりしてるんだよ。明日にはケンタくんが掘り出せるんだぜ？！」",
+		   NULL, "\"Why do you look so glum? Tomorrow we'll be digging out Colonel Sanders, right!?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/sunset/re1a_warai_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+//「そうだよね。…あははは＠　早くランディーくんをお持ち帰りしたい～！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "s19/02/990200226", 256, TRUE);
+	OutputLine(NULL, "「そうだよね。…あははは！",
+		   NULL, "\"You're right. ...Ahahaha!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "s19/02/990200227", 256, TRUE);
+	OutputLine(NULL, "　早くケンタくんをお持ち帰りしたい〜！」",
+		   NULL, " I really want to take Colonel Sanders home soon~!\"", Line_Normal);
+	ClearMessage();
+}
+
+void dialog012()
+{
+//　富竹さんは「事件」と言い「腕が一本見つからない」と言っていた＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　富竹さんは「事件」と言い「腕が一本見つからない」と言っていた。",
+		   NULL, "Tomitake-san said, \"one arm wasn't found\" in the 'incident.'", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　俺はてっきり…バラバラ殺人とかがあったのかと思っていたのだが…違うのだろうか＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　俺はてっきり…バラバラ殺人とかがあったのかと思っていたのだが…違うのだろうか。",
+		   NULL, "I thought... that a murder by dismemberment had occurred... but I guess I was wrong.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog013()
+{
+//　…本当に雛見沢でバラバラ殺人なんかあったんですか？、って＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…本当に雛見沢でバラバラ殺人なんかあったんですか？、って。",
+		   NULL, "...To ask, \"Was there really a dismemberment here in Hinamizawa?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+}
+
+void dialog014()
+{
+//（……嫌な事件だったね＠…腕が一本、まだ見つかってないんだろ？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（……嫌な事件だったね。",
+		   NULL, "\"...It was quite a disturbing incident.", Line_WaitForInput);
+	OutputLine(NULL, "…腕が一本、まだ見つかってないんだろ？）",
+		   NULL, " ...They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　富竹さんの言葉通りなら、それは間違いなくバラバラ殺人を示唆していた＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　富竹さんの言葉通りなら、それは間違いなくバラバラ殺人を示唆していた。",
+		   NULL, "If it was just as Tomitake-san said, then undoubtedly there would be mention of the murder.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}

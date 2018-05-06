@@ -3048,19 +3048,10 @@ void main()
 
 
 
-//　富竹さんは「事件」と言い「腕が一本見つからない」と言っていた＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　富竹さんは「事件」と言い「腕が一本見つからない」と言っていた。",
-		   NULL, "Tomitake-san said, \"one arm wasn't found\" in the 'incident.'", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-
-//　俺はてっきり…バラバラ殺人とかがあったのかと思っていたのだが…違うのだろうか＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　俺はてっきり…バラバラ殺人とかがあったのかと思っていたのだが…違うのだろうか。",
-		   NULL, "I thought... that a murder by dismemberment had occurred... but I guess I was wrong.", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_003_vm0x_n01","dialog012");}
+	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_003_vm00_n01","dialog012");}
+	//End
 
 
 
@@ -3471,11 +3462,10 @@ void main()
 
 
 
-//　…本当に雛見沢でバラバラ殺人なんかあったんですか？、って＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　…本当に雛見沢でバラバラ殺人なんかあったんですか？、って。",
-		   NULL, "...To ask, \"Was there really a dismemberment here in Hinamizawa?\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_003_vm0x_n01","dialog013");}
+	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_003_vm00_n01","dialog013");}
+	//End
 
 
 //　それが本音だった￥
@@ -4185,21 +4175,10 @@ void main()
 
 	PlayBGM( 1, "msys15", 128, 0 );
 
-//（……嫌な事件だったね＠…腕が一本、まだ見つかってないんだろ？＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "（……嫌な事件だったね。",
-		   NULL, "\"...It was quite a disturbing incident.", Line_WaitForInput);
-	OutputLine(NULL, "…腕が一本、まだ見つかってないんだろ？）",
-		   NULL, " ...They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-
-//　富竹さんの言葉通りなら、それは間違いなくバラバラ殺人を示唆していた＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　富竹さんの言葉通りなら、それは間違いなくバラバラ殺人を示唆していた。",
-		   NULL, "If it was just as Tomitake-san said, then undoubtedly there would be mention of the murder.", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_003_vm0x_n01","dialog014");}
+	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_003_vm00_n01","dialog014");}
+	//End
 
 
 
