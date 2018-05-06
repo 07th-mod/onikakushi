@@ -4,8 +4,6 @@ void main()
 
 void dialog000()
 {
-//　セッ!d300…!d300…、＠
-	ModPlayVoiceLS(3, 4, "s19/04/990400085", 256, TRUE);
 	OutputLine(NULL, "　セッ",
 		   NULL, " Se...", Line_Continue);
 }
@@ -224,8 +222,8 @@ void dialog005()
 	OutputLine(NULL, "「みんなが何を言ってるのかわかんないよ！",
 		   NULL, "\"What are you all saying!?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "s19/02/990200257", 256, TRUE);
-	OutputLine(NULL, "　レナはパンチで小惑星なんか破壊出来ないよぅー！」",
-		   NULL, " I can't destroy asteroids by punching them!\"", Line_Normal);
+	OutputLine(NULL, "　レナはロボットの操縦なんか出来ないよー！」",
+		   NULL, " I can't control a mech!\"", Line_Normal);
 	ClearMessage();
 }
 
@@ -425,4 +423,46 @@ void dialog019()
 	OutputLine(NULL, "　薄暗くなる山道を、人間大につつんだシートを運ぶ若い男女に剥き身の斧！",
 		   NULL, "And so Jack and Jill went down the hill, carrying a human-sized bag and an unsheathed axe!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog020()
+{
+//「知ってるもん…！＠　知ってるもん！！！…!d300…!d300セッ、」!d600
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "s19/04/990400087", 256, TRUE);
+	OutputLine(NULL, "「知ってるもん…！！",
+		   NULL, "\"I do know...!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "s19/04/990400088", 256, TRUE);
+	OutputLine(NULL, "知ってるもん！！",
+		   NULL, " I do know!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "s19/04/990400089", 256, TRUE);
+	OutputLine(NULL, "　知ってるもん！！！…",
+		   NULL, " I do know!!!...", Line_Continue);
+
+	Wait( 300 );
+
+	OutputLine(NULL, "…",
+		   NULL, " ...", Line_Continue);
+
+	Wait( 300 );
+
+	OutputLine(NULL, "セッ、」",
+		   NULL, "Se...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+}
+
+dialog021()
+{
+//"... 腕が一本、まだ見つかってないんだろ？"@
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "“…腕が一本、まだ見つかってないんだろ？”",
+		   NULL, "\"...They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　さっきのごろんと転がった腕がやけに不吉に思えたが、そこでふと気付き、俺はちょっと自分の情けなさに苦笑した￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　さっきのごろんと転がった腕がやけに不吉に思えたが、そこでふと気付き、俺はちょっと自分の情けなさに苦笑した。",
+		   NULL, "I laughed dryly at how pathetic I was for considering the arm flopping down and rolling to my feet to be such a bad omen.", Line_Normal);
+	ClearMessage();
 }

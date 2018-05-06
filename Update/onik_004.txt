@@ -797,29 +797,10 @@ void main()
 	DisableWindow();
 	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa3_hannbeso_a1_", "1", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
-//「知ってるもん…！＠　知ってるもん！！！…!d300…!d300セッ、」!d600
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 4, "s19/04/990400087", 256, TRUE);
-	OutputLine(NULL, "「知ってるもん…！！",
-		   NULL, "\"I do know...!!", Line_WaitForInput);
-	ModPlayVoiceLS(3, 4, "s19/04/990400088", 256, TRUE);
-	OutputLine(NULL, "知ってるもん！！",
-		   NULL, " I do know!!", Line_WaitForInput);
-	ModPlayVoiceLS(3, 4, "s19/04/990400089", 256, TRUE);
-	OutputLine(NULL, "　知ってるもん！！！…",
-		   NULL, " I do know!!!...", Line_Continue);
-
-	Wait( 300 );
-
-	OutputLine(NULL, "…",
-		   NULL, " ...", Line_Continue);
-
-	Wait( 300 );
-
-	OutputLine(NULL, "セッ、」",
-		   NULL, "Se...\"", GetGlobalFlag(GLinemodeSp));
-
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog020");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog020");}
+	//VoiceMatchingEnd
 
 
 	DisableWindow();
@@ -3988,18 +3969,10 @@ void main()
 	DisableWindow();
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 1000, TRUE );
 
-//"... 腕が一本、まだ見つかってないんだろ？"@
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "“…腕が一本、まだ見つかってないんだろ？”",
-		   NULL, "\"...They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
-
-
-//　さっきのごろんと転がった腕がやけに不吉に思えたが、そこでふと気付き、俺はちょっと自分の情けなさに苦笑した￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　さっきのごろんと転がった腕がやけに不吉に思えたが、そこでふと気付き、俺はちょっと自分の情けなさに苦笑した。",
-		   NULL, "I laughed dryly at how pathetic I was for considering the arm flopping down and rolling to my feet to be such a bad omen.", Line_Normal);
-	ClearMessage();
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_004_vm0x_n01","dialog021");}
+	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_004_vm00_n01","dialog021");}
+	//VoiceMatchingEnd
 
 
 //　胸くその悪くなる事件だってことはレナも魅音も知っていた＠
