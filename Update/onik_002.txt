@@ -29,6 +29,12 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
+//　今日はレナと魅音に雛見沢をいろいろと案内してもらう日だ￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……なのに出掛け間際にお袋め、帰りにお使いなんか頼みやがって……。",
+		   NULL, "...And to top it off, that pesky mom of mine pushing a return-journey errand on me just as I'm trying to leave the house...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
 
 //　今日はレナと魅音に雛見沢をいろいろと案内してもらう日だ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
