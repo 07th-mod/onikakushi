@@ -48,18 +48,10 @@ void main()
 	DisableWindow();
 	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_wink_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
-//「レナー＠　トイレじゃない＠　最近、お通じが来ないって言ってたなぁ。＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "s20/03/440300023", 128, TRUE);
-	OutputLine(NULL, "「レナー？",
-		   NULL, "\"Rena~?", Line_Continue);
-	Wait (400)
-	OutputLine(NULL, "　トイレじゃない？",
-		   NULL, " Didn't she go to the washroom?", Line_WaitForInput);
-	ModPlayVoiceLS(3, 3, "s20/03/440300024", 128, TRUE);
-	OutputLine(NULL, "　除きたいなら止めないけど、通報するからねぇ～」",
-		   NULL, " If you're planning to peep, I won't stop you. I'll call the cops, though~!\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_tips_07_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_tips_07_vm00_n01","dialog000");}
+	//VoiceMatchingEnd
 
 
 //　そんなことは一言も聞いてない￥

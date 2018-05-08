@@ -1,0 +1,82 @@
+void main()
+{
+}
+
+void dialog000()
+{
+//斧。!w2000
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "斧。",
+		   NULL, " was an axe.", Line_ContinueAfterTyping);
+}
+
+void dialog001()
+{
+//　...だがあの斧はなんだよッ？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…だがあの斧はなんだよッ？！",
+		   NULL, "But for that axe!?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　ごまかしも何もない！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ごまかしも何もない！！！",
+		   NULL, "There was no excuse for that!!!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　そのまんまの...斧だッ？！？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そのまんまの…斧だッ？！？！",
+		   NULL, "An axe... just like that!!??", Line_Normal);
+	ClearMessage();
+}
+
+void dialog002()
+{
+//「じゃあその斧は何だよッ？！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "s01/01/120100687", 256, TRUE);
+	OutputLine(NULL, "「じゃあその斧は何だよッ？！」",
+		   NULL, "\"Then what about that axe!?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog003()
+{
+//　...そして頭上で両手が組まれた時、そこには斧が握られていた＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…そして頭上で両手が組まれた時、そこには斧が握られていた。",
+		   NULL, "...Then as both of her hands met above her head... the axe that she held came into focus.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog004()
+{
+//　レナはそのまま、斧を振り上げたまま、厳かに口を開いた...＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　レナはそのまま、斧を振り上げたまま、厳かに口を開いた…。",
+		   NULL, "Rena stayed like that, with that axe raised above her head, and solemnly opened her mouth...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+}
+
+void dialog005()
+{
+//　レナは斧を大きく振り上げたまま......さらに一歩踏み込んでくる＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　レナは斧を大きく振り上げたまま……さらに一歩踏み込んでくる。",
+		   NULL, "Rena took one step forward... still holding the axe high above her head.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog006()
+{
+//　不釣合いな斧の重さに大きく振られ、まるで風に乗るかのように軽々と飛ばされる＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　不釣合いな斧の重さに大きく振られ、まるで風に乗るかのように軽々と飛ばされる。",
+		   NULL, "Thrown about by the unbalanced weight of the axe, she was sent backwards as if she had been carried off by the wind.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}

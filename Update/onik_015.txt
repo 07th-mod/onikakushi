@@ -1510,6 +1510,9 @@ void main()
 	ModPlayVoiceLS(3, 1, "s01/01/120100655", 256, TRUE);
 	OutputLine(NULL, "…魅音はないって言ったじゃないか！！！",
 		   NULL, " ...And you told me nothing happened!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps2/01/120100656", 256, TRUE);
+	OutputLine(NULL, "　バラバラ殺人があったのによ！！！",
+		   NULL, " When someone was dismembered and murdered!!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "s01/01/120100657", 256, TRUE);
 	OutputLine(NULL, "　嘘つき野郎ッ！！！」",
 		   NULL, " You lied to me!!!\"", GetGlobalFlag(GLinemodeSp));
@@ -2618,10 +2621,10 @@ void main()
 	ShakeScreen( 1, 50, 20, 3, 5);
 
 
-//斧。!w2000
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "鉈。",
-		   NULL, " was a hatchet.", Line_ContinueAfterTyping);
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_015_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_015_vm00_n01","dialog000");}
+	//VoiceMatchingEnd
 
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
@@ -2670,27 +2673,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-//　...だがあの斧はなんだよッ？＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　…だがあの鉈はなんだよッ？！",
-		   NULL, "But for that hatchet!?", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-
-//　ごまかしも何もない！！＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　ごまかしも何もない！！！",
-		   NULL, "There was no excuse for that!!!", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-
-//　そのまんまの...斧だッ？！？￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　そのまんまの…鉈だッ？！？！",
-		   NULL, "A hatchet... just like that!!??", Line_Normal);
-	ClearMessage();
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_015_vm0x_n01","dialog001");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_015_vm00_n01","dialog001");}
+	//VoiceMatchingEnd
 
 //「......圭一くん＠かくれんぼ、かな？!w800　かな？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -2909,12 +2895,10 @@ void main()
 
 
 
-//「じゃあその斧は何だよッ？！＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "s01/01/120100687", 256, TRUE);
-	OutputLine(NULL, "「じゃあその鉈は何だよッ？！」",
-		   NULL, "\"Then what about that hatchet!?\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_015_vm0x_n01","dialog002");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_015_vm00_n01","dialog002");}
+	//VoiceMatchingEnd
 
 
 
@@ -3963,11 +3947,10 @@ void main()
 	DrawFilm( 1, 255, 0, 0, 100, 0, 300, FALSE );
 
 
-//　...そして頭上で両手が組まれた時、そこには斧が握られていた＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　…そして頭上で両手が組まれた時、そこには鉈が握られていた。",
-		   NULL, "...Then as both of her hands met above her head... the hatchet that she held came into focus.", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_015_vm0x_n01","dialog003");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_015_vm00_n01","dialog003");}
+	//VoiceMatchingEnd
 
 
 
@@ -3996,11 +3979,10 @@ void main()
 
 
 
-//　レナはそのまま、斧を振り上げたまま、厳かに口を開いた...＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　レナはそのまま、鉈を振り上げたまま、厳かに口を開いた…。",
-		   NULL, "Rena stayed like that, with that hatchet raised above her head, and solemnly opened her mouth...", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_015_vm0x_n01","dialog004");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_015_vm00_n01","dialog004");}
+	//VoiceMatchingEnd
 
 
 //　それはまるで、二度と会うことのない友人に告げる別れのような......そんな残酷さが宿っていた...￥
@@ -6274,11 +6256,10 @@ void main()
 	PlayBGM( 2, "lsys25", 128, 0 );
 //print 2
 
-//　レナは斧を大きく振り上げたまま......さらに一歩踏み込んでくる＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　レナは鉈を大きく振り上げたまま……さらに一歩踏み込んでくる。",
-		   NULL, "Rena took one step forward... still holding the hatchet high above her head.", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_015_vm0x_n01","dialog005");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_015_vm00_n01","dialog005");}
+	//VoiceMatchingEnd
 
 
 
@@ -6427,11 +6408,10 @@ void main()
 
 
 
-//　不釣合いな斧の重さに大きく振られ、まるで風に乗るかのように軽々と飛ばされる＠
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　不釣合いな鉈の重さに大きく振られ、まるで風に乗るかのように軽々と飛ばされる。",
-		   NULL, "Thrown about by the unbalanced weight of the hatchet, she was sent backwards as if she had been carried off by the wind.", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_015_vm0x_n01","dialog006");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_015_vm00_n01","dialog006");}
+	//VoiceMatchingEnd
 
 
 
