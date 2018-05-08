@@ -2202,9 +2202,10 @@ void main()
 	ModPlayVoiceLS(3, 1, "s19/01/hr_kei33830", 256, TRUE);
 	OutputLine(NULL, "どこまで取っても一部の隙もない。",
 		   NULL, " Not a single element was overlooked.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "s19/01/hr_kei33830_01", 256, TRUE);
-	OutputLine(NULL, "ちびっ子！",
-		   NULL, " Loli!", Line_Continue);
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_009_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_009_vm00_n01","dialog000");}
+	//VoiceMatchingEnd
 
 	PlaySE( 4, "wa_010", 128, 64 );
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll(NULL, "", Line_WaitForInput); } else { OutputLineAll(NULL, "\n", Line_WaitForInput); }
@@ -2837,15 +2838,10 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(3, 3, "sprite/normal/me2_wink_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
-//「な、…なぁんだ…＠　てっきりおじさんは圭一のかぁいいオットセイかと～！！＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "s19/03/500300731", 256, TRUE);
-	OutputLine(NULL, "「な、…なぁんだ…！",
-		   NULL, "\"Oh... Ohhh...!", Line_WaitForInput);
-	ModPlayVoiceLS(3, 3, "s19/03/500300732", 256, TRUE);
-	OutputLine(NULL, "　てっきりおじさんは圭ちゃんの・・・　あははははっはぁ～！！」",
-		   NULL, " This old man thought you meant it was Keiichi's... Ahahaha.. haaa!!\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_009_vm0x_n01","dialog001");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_009_vm00_n01","dialog001");}
+	//VoiceMatchingEnd
 
 
 
@@ -3520,15 +3516,10 @@ void main()
 
 
 
-//「身包み剥いでッ！＠　ケツの毛までひん剥いてやるぜぇえぇえッ！！！！＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "s19/01/hr_kei34010", 256, TRUE);
-	OutputLine(NULL, "「身包み剥いでッ！！",
-		   NULL, "\"We'll leave you with nothing!", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "s19/01/hr_kei34020", 256, TRUE);
-	OutputLine(NULL, "　地獄の底に叩き落としてやるぜぇえぇえッ！！！！」",
-		   NULL, " And beat you into the depths of hell!!\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_009_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_009_vm00_n01","dialog000");}
+	//VoiceMatchingEnd
 
 
 

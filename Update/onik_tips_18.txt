@@ -33,26 +33,10 @@ void main()
 	DisableWindow();
 	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_wink_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
-//「さぁてどうしたんだろうね＠生理でも来てんじゃないのー？＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "s20/03/440300032", 256, TRUE);
-	OutputLine(NULL, "「さぁてどうしたんだろうね。",
-		   NULL, "\"I wonder.", Line_Continue);
-	Wait (2400);
-	OutputLine(NULL, "恋の病にでもかかってるんじゃないのー？」",
-		   NULL, " Maybe he's got a crush on someone?\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-	DisableWindow();
-	ModDrawCharacter(3, 2, "sprite/normal/re1a_hau_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
-
-//「みみ、魅ぃちゃんそれ下品...！＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "s20/02/440200043", 256, TRUE);
-	OutputLine(NULL, "「み、魅ぃちゃんそれ飛躍しすぎ…！」",
-		   NULL, "\"M-M-Mii-chan, that's a logic leap...!\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_tips_18_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_tips_18_vm00_n01","dialog000");}
+	//VoiceMatchingEnd
 
 
 	DisableWindow();

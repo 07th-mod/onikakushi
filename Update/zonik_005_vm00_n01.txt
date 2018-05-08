@@ -25,6 +25,35 @@ void dialog000()
 
 void dialog001()
 {
+//　それはみんなランディーくん同様、町を歩けばどこかで見かけるようなものばかりだった＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それはみんなケンタくん同様、町を歩けばどこかで見かけるようなものばかりだった。",
+		   NULL, "They were all the same as Colonel Sanders: stuff you'd see while walking around in town.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+}
+
+void dialog002()
+{
+//「…校長先生のエアリアル起動技です。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "s19/05/990500067", 256, TRUE);
+	OutputLine(NULL, "「…校長先生のエアリアル起動技です。」",
+		   NULL, "\"...That's the principal's aerial opener!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog003()
+{
+//「あははは～圭一くん、前屈みだぁぁ……かぁいいかぁいいッ！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "s19/02/990200368", 256, TRUE);
+	OutputLine(NULL, "「あははは〜圭一くん、前屈みだぁぁ……かぁいいかぁいいッ！！」",
+		   NULL, "\"Ahahaha~ Keiichi-kun is bending forward... kyute kyute!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog004()
+{
 //「圭一さんは気付きませんの？！＠　校長先生はハゲ頭を恥ずかしがってますの！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "s19/04/990400135", 256, TRUE);
@@ -36,7 +65,7 @@ void dialog001()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
 
-void dialog002()
+void dialog005()
 {
 //　第一感想。…胴回りがキツイ＠第二感想。胸だけは割りとラク…＠第三感想。股間が……………はぅ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -49,7 +78,7 @@ void dialog002()
 	ClearMessage();
 }
 
-void dialog003()
+void dialog006()
 {
 //「校!s75長ぉぉおおおおぉおおおッ！！！　!sd勝負!s70ぅううぅううッ！！！！！」!sd@
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
