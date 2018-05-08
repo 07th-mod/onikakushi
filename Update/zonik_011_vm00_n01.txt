@@ -1,0 +1,33 @@
+void main()
+{
+}
+
+void dialog000()
+{
+//「…家業手伝いは除くと書いてありますです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "s01/05/120500020", 256, TRUE);
+	OutputLine(NULL, "「…家業手伝いは除くと書いてありますです。」",
+		   NULL, "\"...There's a clause that states family businesses are excluded.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog001()
+{
+//「…いっぱいいっぱい慰みものにされましたですね＠かわいそかわいそです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "s01/05/120500024", 256, TRUE);
+	OutputLine(NULL, "「…いっぱいいっぱい慰みものにされましたですね。",
+		   NULL, "\"...She was used as a plaything for quite a while.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 5, "s01/05/120500025", 256, TRUE);
+	OutputLine(NULL, "かわいそかわいそです。」",
+		   NULL, " You poor thing.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog002()
+{
+	ModPlayVoiceLS(3, 11, "s01/11/120700160", 256, TRUE);
+	OutputLine(NULL, "覚醒剤の常習歴もあるトンチンカンでしてね。",
+		   NULL, " He was just a miscreant with a record of narcotics abuse.", Line_WaitForInput);
+}
