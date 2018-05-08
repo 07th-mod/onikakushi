@@ -22,3 +22,76 @@ void dialog000()
 		   NULL, "\"From how it sounded... the principal's jumping fierce sounds like a multi-hit combo.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
+
+void dialog001()
+{
+//「圭一さんは気付きませんの？！＠　校長先生はハゲ頭を恥ずかしがってますの！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "s19/04/990400135", 256, TRUE);
+	OutputLine(NULL, "「圭一さんは気付きませんの？！！",
+		   NULL, "\"Keiichi-san, do you not understand!?!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "s19/04/990400136", 256, TRUE);
+	OutputLine(NULL, "　校長先生はハゲ頭を恥ずかしがってますの！！」",
+		   NULL, " The principal is balding and ashamed of it!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog002()
+{
+//　第一感想。…胴回りがキツイ＠第二感想。胸だけは割りとラク…＠第三感想。股間が……………はぅ￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　第一感想。…胴回りがキツイ。",
+		   NULL, "My first thought... It's tight around the waist.", Line_WaitForInput);
+	OutputLine(NULL, "第二感想。胸だけは割りとラク…。",
+		   NULL, " Second thought. The chest area was pretty loose...", Line_WaitForInput);
+	OutputLine(NULL, "第三感想。股間が……………はぅ。",
+		   NULL, " Third thought. The crotch area was... hao.", Line_Normal);
+	ClearMessage();
+}
+
+void dialog003()
+{
+//「校!s75長ぉぉおおおおぉおおおッ！！！　!sd勝負!s70ぅううぅううッ！！！！！」!sd@
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "s19/01/hr_kei08060", 256, TRUE);
+	OutputLine(NULL, "「校",
+		   NULL, "\"Princi", Line_Continue);
+//!s75
+
+	SetSpeedOfMessage( TRUE, 32, );
+
+	OutputLine(NULL, "長ぉぉおおおおぉおおおッ！！！　",
+		   NULL, "paaaAaaAal!!!", Line_Continue);
+//!sd
+
+
+
+	OutputLine(NULL, "勝負",
+		   NULL, " I challenge you...", Line_Continue);
+//!s70
+
+	SetSpeedOfMessage( TRUE, 0, );
+
+	OutputLine(NULL, "ぅううぅううッ！！！！！」",
+		   NULL, " hurRrk!!!!!!\"", GetGlobalFlag(GLinemodeSp));
+//!sd
+
+	SetSpeedOfMessage( FALSE, 0, );
+
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	PlaySE( 4, "wa_010", 128, 64 );
+	Wait( 200 );
+	PlaySE( 4, "wa_010", 128, 64 );
+	Wait( 200 );
+	PlaySE( 4, "wa_010", 128, 64 );
+	Wait( 200 );
+
+//　きゅぴーんという音が３回した。３ゲージ技かッ？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　きゅぴーんという音が３回した。３ゲージ技かッ？！",
+		   NULL, "I heard what sounded like a \"zhazhing\" three times.  His 3-gauge super!?", Line_Normal);
+	ClearMessage();
+}
