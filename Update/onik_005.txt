@@ -410,7 +410,7 @@ void main()
 //「痛んで使えなくなったお布団とかどてらとかにね＠ご苦労さまって感謝して供養しながら沢に流すお祭りなの。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "s19/02/990200312", 256, TRUE);
-	OutputLine(NULL, "「痛んで使えなくなったお布団とかどてらとかにね。",
+	OutputLine(NULL, "「傷んで使えなくなったお布団とかどてらとかにね。",
 		   NULL, "\"Except we use cotton things, like old worn-out futons and padded cloaks.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "s19/02/990200313", 256, TRUE);
 	OutputLine(NULL, "ご苦労さまって感謝して供養しながら沢に流すお祭りなの。」",
@@ -2062,7 +2062,7 @@ void main()
 
 //　ゲームの回転が異様に早くなった＠ゲームがヒートアップしているのがわかる＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　ゲームの回転が異様に早くなった。",
+	OutputLine(NULL, "　ゲームの回転が異様に速くなった。",
 		   NULL, "The pace of the game became bizarrely quick.", Line_WaitForInput);
 	OutputLine(NULL, "ゲームがヒートアップしているのがわかる。",
 		   NULL, " I could tell the game had gotten more intense.", GetGlobalFlag(GLinemodeSp));
@@ -2395,7 +2395,7 @@ void main()
 
 //　不思議な期待感に胸が踊る＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　不思議な期待感に胸が踊る。",
+	OutputLine(NULL, "　不思議な期待感に胸が躍る。",
 		   NULL, "I was delighted by the mysterious sense of anticipation.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -2772,7 +2772,7 @@ void main()
 	OutputLine(NULL, "「…ひぇ？！",
 		   NULL, "\"...Eek!?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 4, "s19/04/990400147", 256, TRUE);
-	OutputLine(NULL, "　何でこんなにカード運が悪いでございますのー？！？！」",
+	OutputLine(NULL, "　何でこんなにカード運が悪いんでございますのー？！？！」",
 		   NULL, " How could my luck of the draw be so bad!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -2801,13 +2801,15 @@ void main()
 	ModPlayVoiceLS(3, 4, "s19/04/990400148", 256, TRUE);
 	OutputLine(NULL, "「ぅぅう！！",
 		   NULL, "\"Uuugh!!", Line_WaitForInput);
+
+	ModPlayVoiceLS(3, 4, "s19/04/990400149", 256, TRUE);
 	OutputLine(NULL, "　…はい、",
 		   NULL, " ...Fine,", Line_ContinueAfterTyping);
 
 	SetValidityOfInput( FALSE );
 	Wait( 400 );
 	SetValidityOfInput( TRUE );
-	ModPlayVoiceLS(3, 4, "s19/04/990400149", 256, TRUE);
+
 	OutputLine(NULL, "お兄ちゃん…。…くぅぅ！！」",
 		   NULL, " Onii-chan... ghhhk!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4204,7 +4206,7 @@ void main()
 
 //　そう言って肩紐に手をかけた俺の背後に音もなく梨花ちゃんだ立つ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　そう言って肩紐に手をかけた俺の背後に音もなく梨花ちゃんだ立つ。",
+	OutputLine(NULL, "　そう言って肩紐に手をかけた俺の背後に音もなく梨花ちゃんが立つ。",
 		   NULL, "While I was saying that, Mion placed her hands on my shoulders and Rika-chan slipped up behind me without a sound.", Line_Normal);
 	ClearMessage();
 
@@ -4337,7 +4339,7 @@ void main()
 
 //　人間は相手を見て「それは人間だ」と認識して始めて行動に移れるのだ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　人間は相手を見て「それは人間だ」と認識して始めて行動に移れるのだ。",
+	OutputLine(NULL, "　人間は相手を見て「それは人間だ」と認識して初めて行動に移れるのだ。",
 		   NULL, "When humans see others, they can only begin to act after confirming \"this is human.\"", Line_Normal);
 	ClearMessage();
 
