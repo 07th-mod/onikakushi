@@ -6,7 +6,7 @@ void dialog000()
 {
 //「さぁてどうしたんだろうね＠生理でも来てんじゃないのー？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "s20/03/440300032", 256, TRUE);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300032", 256, TRUE);
 	OutputLine(NULL, "「さぁてどうしたんだろうね。",
 		   NULL, "\"I wonder.", Line_Continue);
 	Wait (2400);
@@ -20,7 +20,7 @@ void dialog000()
 
 //「みみ、魅ぃちゃんそれ下品...！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "s20/02/440200043", 256, TRUE);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200043", 256, TRUE);
 	OutputLine(NULL, "「みみ、魅ぃちゃんそれ下品…！」",
 		   NULL, "\"M-M-Mii-chan, that's gross...!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

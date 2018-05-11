@@ -6,7 +6,7 @@ void dialog000()
 {
 //「…家業手伝いは除くと書いてありますです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "s01/05/120500020", 256, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s01/05/120500020", 256, TRUE);
 	OutputLine(NULL, "「…家事手伝いは除くと書いてありますです。」",
 		   NULL, "\"...There's a clause that states household chores are excluded.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -16,10 +16,10 @@ void dialog001()
 {
 //「…いっぱいいっぱい慰みものにされましたですね＠かわいそかわいそです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "s01/05/120500024", 256, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s01/05/120500024", 256, TRUE);
 	OutputLine(NULL, "「…いっぱいいっぱい甚振られましたですね。",
 		   NULL, "\"...Being picked on so much by Keiichi-kun.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 5, "s01/05/120500025", 256, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s01/05/120500025", 256, TRUE);
 	OutputLine(NULL, "かわいそかわいそです。」",
 		   NULL, " You poor thing.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -27,7 +27,7 @@ void dialog001()
 
 void dialog002()
 {
-	ModPlayVoiceLS(3, 11, "s01/11/120700160", 256, TRUE);
+	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700160", 256, TRUE);
 	OutputLine(NULL, "以前に、逮捕歴もあるやつでしてね。",
 		   NULL, " He already had a criminal record from before.", Line_WaitForInput);
 }

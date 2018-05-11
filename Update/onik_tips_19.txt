@@ -18,7 +18,7 @@ void main()
 //「よく映画などに登場しますが、簡単にいうとどのようなものでしょうか。＠
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Reporter</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44001", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44001", 256, TRUE);
 	OutputLine(NULL, "「よく映画などに登場しますが、簡単にいうとどのようなものでしょうか。」",
 		   NULL, "\"I see it in movies quite often, but what is it, exactly?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -27,7 +27,7 @@ void main()
 
 //「複数の人格を持つことによる逃避と考えられています。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/profa44001", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44001", 256, TRUE);
 	OutputLine(NULL, "「複数の人格を持つことによる逃避と考えられています。」",
 		   NULL, "\"Multiple personalities are thought to be escapism.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -36,14 +36,14 @@ void main()
 
 //「多重人格は逃避のひとつなのですか？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Reporter</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44002", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44002", 256, TRUE);
 	OutputLine(NULL, "「多重人格は逃避のひとつなのですか？」",
 		   NULL, "\"Multiple personality disorder is a form of escape?\"", Line_Normal);
 	ClearMessage();
 
 //「左様です＠そのメカニズムは完全には解明されていませんが、精神を守るために脳が行なう防御行動のひとつではないかと考えられています。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/profa44002", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44002", 256, TRUE);
 	OutputLine(NULL, "「左様です。",
 		   NULL, "\"Correct.", Line_Continue);
 	Wait (1000);
@@ -53,7 +53,7 @@ void main()
 
 //「例えば、貧乏な人がお金持ちになった自分を想像するという現実逃避ってありますよね＠　これも多重人格なわけですか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Reporter</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44003", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44003", 256, TRUE);
 	OutputLine(NULL, "「例えば、貧乏な人がお金持ちになった自分を想像するという現実逃避ってありますよね？",
 		   NULL, "\"Hypothetically, poor people imagining themselves as wealthy is a form of escapism, is it not?", Line_Continue);
 	Wait (3800);
@@ -65,7 +65,7 @@ void main()
 
 //「極論はできませんが、広義的にはそう解釈できます＠つまり誰にでもありえる現象なのです。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/profa44003", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44003", 256, TRUE);
 	OutputLine(NULL, "「極論はできませんが、広義的にはそう解釈できます。",
 		   NULL, "\"I wouldn't go that far, but broadly speaking, one could infer that.", Line_Continue);
 	Wait (3000);
@@ -75,7 +75,7 @@ void main()
 
 //「その現実逃避の見境がなくなると二重人格になるのですか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Reporter</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44004", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44004", 256, TRUE);
 	OutputLine(NULL, "「その現実逃避の見境がなくなると二重人格になるのですか？」",
 		   NULL, "\"Does a split personality occur when one cannot tell which is reality and which is the escape?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -84,20 +84,20 @@ void main()
 
 //「...ちょっと難しいですね＠...そう提唱する説もありますし、否定する説もあります＠諸説紛々です。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/profa44004", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44004", 256, TRUE);
 	OutputLine(NULL, "「…ちょっと難しいですね。",
 		   NULL, "\"...That's difficult to say.", Line_Continue);
 	Wait (2200);
 	OutputLine(NULL, "…そう提唱する説もありますし、否定する説もあります。",
 		   NULL, " There are some who agree with that, and some who disagree.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 0, "s20/00/profa44005", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44005", 256, TRUE);
 	OutputLine(NULL, "諸説紛々です。」",
 		   NULL, " There is no consensus.\"", Line_Normal);
 	ClearMessage();
 
 //「では精神医学の世界ではまだ、多重人格というのは未知の解明されていない現象なんですか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Reporter</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44005", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44005", 256, TRUE);
 	OutputLine(NULL, "「では精神医学の世界ではまだ、多重人格というのは未知の解明されていない現象なんですか？」",
 		   NULL, "\"Then is the occurrence of multiple personalities still an unknown phenomenon... something not fully comprehended in the psychiatric field?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -106,7 +106,7 @@ void main()
 
 //「残念ながらそうなります＠今後の研究が期待されます。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/profa44006", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44006", 256, TRUE);
 	OutputLine(NULL, "「残念ながらそうなります。",
 		   NULL, "\"Unfortunately, that is the current state of things.", Line_Continue);
 	Wait (1600);
@@ -116,7 +116,7 @@ void main()
 
 //「でもでも～、二重人格なんて何だかカッコイイですよね～＠　どういう人が二重人格になれるんですかぁ？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Reporter</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44006", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44006", 256, TRUE);
 	OutputLine(NULL, "「でもでも〜、二重人格なんて何だかカッコイイですよね〜！",
 		   NULL, "\"But, but~ It's sorta cool having a split personality~!", Line_Continue);
 	Wait (3000);
@@ -126,14 +126,14 @@ void main()
 
 //「なれるといいますか...、なりやすいといいますか...＠最近の研究では、遺伝と心因が複雑に絡み合い...＠中でも幼少期の虐待が大きく作用するのではないかと言われています。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/profa44007", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44007", 256, TRUE);
 	OutputLine(NULL, "「なれるといいますか…、なりやすいといいますか…。",
 		   NULL, "\"Recent studies find that those who develop it... or rather, those who are more susceptible to developing it,", Line_Continue);
 	Wait (1800);
 	OutputLine(NULL, "最近の研究では、遺伝と心因が複雑に絡み合い…。",
 		   NULL, " may be genetically predisposed or may have had abnormal mental development... ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/profa44008", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/profa44008", 256, TRUE);
 	OutputLine(NULL, "中でも幼少期の虐待が大きく作用するのではないかと言われています。」",
 		   NULL, "Some say that childhood abuse increases the chances.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -142,7 +142,7 @@ void main()
 
 //「そう言えば、このＡ君も幼児虐待を受けてるんですよね～。カワイソ～...。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Reporter</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44007", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44007", 256, TRUE);
 	OutputLine(NULL, "「そう言えば、このＡ君も幼児虐待を受けてるんですよね〜。カワイソ〜…。」",
 		   NULL, "\"Speaking of which, Person A here experienced abuse as a child, didn't he~ How sad~...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -150,10 +150,10 @@ void main()
 
 //「７つの人格を持つ青年Ａ＠ではＶＴＲの続きをどうぞ＠/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>リポーター</color>", NULL, "<color=#f5e6d3>Reporter</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44008", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44008", 256, TRUE);
 	OutputLine(NULL, "「７つの人格を持つ青年Ａ。",
 		   NULL, "\"Person A has seven different personalities.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44009", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44009", 256, TRUE);
 	OutputLine(NULL, "ではＶＴＲの続きをどうぞ。",
 		   NULL, " Let's watch a video of him...", Line_WaitForInput);
 
@@ -170,7 +170,7 @@ void main()
 	PlaySE( 4, "wa_029", 128, 64 );
 
 //...ですがその前にコマーシャル！！￥
-	ModPlayVoiceLS(3, 0, "s20/00/repoa44010", 256, TRUE);
+	ModPlayVoiceLS(3, 0, "ps3/s20/00/repoa44010", 256, TRUE);
 	OutputLine(NULL, "…ですがその前にコマーシャル！！」",
 		   NULL, " Right after these commercials!!\"", Line_Normal);
 	ClearMessage();
