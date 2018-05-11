@@ -31,3 +31,23 @@ void dialog002()
 	OutputLine(NULL, "覚醒剤の常習歴もあるトンチンカンでしてね。",
 		   NULL, " He was just a miscreant with a record of narcotics abuse.", Line_WaitForInput);
 }
+
+void dialog003()
+{
+//「圭ちゃんが喜びそうなＨ番組なんかやってたっけぇ？＠ // Mion doesn't say the "H" part in the audio.. makes Satoko's line seem really weird so I'm leaving this unchanged (maybe Sui had a different follow-up line?)
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s01/03/120300057", 256, TRUE);
+	OutputLine(NULL, "「圭ちゃんが喜びそうなＨ番組なんかやってたっけぇ？」",
+		   NULL, "\"Was one of those raunchy TV shows you love so much on last night?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog004()
+{
+//「勝手に決め付けるんじゃねえぇえぇ！！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s01/01/120100157", 256, TRUE);
+	OutputLine(NULL, "「勝手に決め付けるんじゃねえぇえぇ！！！」",
+		   NULL, "\"Don't jump to conclusions!!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
