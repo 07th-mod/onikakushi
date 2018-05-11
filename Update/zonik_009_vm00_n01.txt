@@ -34,3 +34,20 @@ void dialog002()
 		   NULL, " We won't even leave the hairs on your butt!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
+
+void dialog003()
+{
+//「…凡カレーに…緊張蚊取線香…オロ波ンＣぃッ！！！!w200　どうッ？！？！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s19/03/500300718", 256, TRUE);
+	OutputLine(NULL, "「…凡カレーに…緊張蚊取線香…オロ波ンＣぃッ！！！",
+		   NULL, "\"...Pleb Curry... Snake coil incense... and Oronamin C!!!", Line_Continue);
+
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 400 );
+	// (backup) SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "　どうッ？！？！」",
+		   NULL, " How about this!?!?\"", Line_Normal);
+	ClearMessage();
+}

@@ -1841,19 +1841,10 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(1, 3, "sprite/normal/me2_warai_a1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
-//「…凡カレーに…緊張蚊取線香…オロ波ンＣぃッ！！！!w200　どうッ？！？！￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "ps3/s19/03/500300718", 256, TRUE);
-	OutputLine(NULL, "「…凡カレーに…緊張蚊取線香…オロ波ンＣぃッ！！！",
-		   NULL, "\"...Pleb Curry... Snake coil incense... and Oronamin C!!!", Line_Continue);
-
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 400 );
-	// (backup) SetValidityOfInput( TRUE );
-
-	OutputLine(NULL, "　どうッ？！？！」",
-		   NULL, " How about this!?!?\"", Line_Normal);
-	ClearMessage();
+	//VoiceMatching
+	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_009_vm0x_n01","dialog003");}
+	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_009_vm00_n01","dialog003");}
+	//VoiceMatchingEnd
 
 
 //　し、渋い……渋過ぎるぜ魅音…＠
