@@ -13,7 +13,7 @@ void dialog000()
 	OutputLine(NULL, "　トイレじゃない？",
 		   NULL, " Didn't she go to the washroom?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300024", 128, TRUE);
-	OutputLine(NULL, "　除きたいなら止めないけど、通報するからねぇ～」",
+	OutputLine(NULL, "　除きたいなら止めないけど、通報するからねぇ〜」",
 		   NULL, " If you're planning to peep, I won't stop you. I'll call the cops, though~!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 }
