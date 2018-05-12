@@ -1,0 +1,16 @@
+void main()
+{
+}
+
+void dialog000()
+{
+//「３日間の謹慎が明けた後も復学しなかったようです＠その間に神経科に通院し、自律神経失調症と診断され、何週間かの間、投薬と医師によるカウンセリングを受けています。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700282", 256, TRUE);
+	OutputLine(NULL, "「３日間の謹慎が明けた後も復学しなかったようです。",
+		   NULL, "\"It seems that, after her three day suspension, she didn't return to school.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700283", 256, TRUE);
+	OutputLine(NULL, "その間に神経科に通院し、自律神経失調症と診断され、何週間かの間、投薬と医師によるカウンセリングを受けています。」",
+		   NULL, " She went to a neurologist and was diagnosed with dysautonomia. She was given weeks of counseling and medication.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+}
