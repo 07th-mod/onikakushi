@@ -143,7 +143,7 @@ void main()
 //「ちなみに、ハイテーで当たり牌出てもロンしちゃダメですよ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700519", 256, TRUE);
-	OutputLine(NULL, "「ちなみに、ハイテーで当たり牌出てもロンしちゃダメですよ。」",
+	OutputLine(NULL, "「ちなみに、ハイテーで当たり牌出してもロンしちゃダメですよ。」",
 		   NULL, "\"By the way, you can't call ron with your winning tile in that haitei.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -267,7 +267,7 @@ void main()
 
 //　…前原くんからこちらに電話をかけてくるのは始めて＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　…前原くんからこちらに電話をかけてくるのは始めて。",
+	OutputLine(NULL, "　…前原くんからこちらに電話をかけてくるのは初めて。",
 		   NULL, "...This was the first time Maebara-kun had phoned me.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -446,7 +446,7 @@ void main()
 
 //　同僚がすぐに事態を飲み込み、慌しく内線を回す￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　同僚がすぐに事態を飲み込み、慌しく内線を回す。",
+	OutputLine(NULL, "　同僚がすぐに事態を呑み込み、慌しく内線を回す。",
 		   NULL, "He understood quickly and hastily started on the internal lines.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
