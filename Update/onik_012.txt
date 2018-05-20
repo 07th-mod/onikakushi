@@ -11,7 +11,7 @@ void main()
 	DisableWindow();
 	PlayBGM( 2, "lsys22", 128, 0 );
 	DrawScene("white", 3000 );
-	DrawSceneWithMask("background/ma_j3", "m1", 0, 0, 3000 );
+	DrawSceneWithMask("background/ma_j3_01", "m1", 0, 0, 3000 );
 
 	PlayBGM( 1, "msys06", 128, 0 );
 //　倦怠感と頭痛＠
@@ -319,7 +319,8 @@ void main()
 		   NULL, "...I would have to pass by the entrance to get back to my room.", Line_Normal);
 	ClearMessage();
 
-
+	DisableWindow();
+	DrawScene("black", 800 );
 
 //　レナに会わせる顔がなく…俺はソファーの上の毛布に包まると目を閉じる＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -343,7 +344,7 @@ void main()
 	DisableWindow();
 	DrawScene("black", 3000 );
 	SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask("background/ma_s1", "m1", 0, 0, 1300 );
 
@@ -813,9 +814,6 @@ void main()
 	ClearMessage();
 
 
-	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/normal/oisi1_2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 1000, TRUE );
-
 //「前原さ～ん＠こんにちは。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700192", 256, TRUE);
@@ -837,7 +835,8 @@ void main()
 		   NULL, " He stepped out of his car, AC on full blast, and waved at me.", Line_Normal);
 	ClearMessage();
 
-
+	DisableWindow();
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 1000, TRUE );
 
 //「今日はどうしたんです＠　学校はお休みですか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -990,7 +989,7 @@ void main()
 		   NULL, "...Even now, in the brightness of the sunlight... the thought still creeped me out.", Line_Normal);
 	ClearMessage();
 
-	ShakeScreen( 1, 50, 20, 3, 0, );
+	ShakeScreen( 1, 30, 20, 3, 0, );
 
 //　町へ続くじゃり道が、ガクンと大きく揺れてから舗装道路になった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2294,8 +2293,8 @@ void main()
 	ClearMessage();
 
 	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_011_vm0x_n01","dialog000");}
-	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_011_vm00_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_012_vm0x_n01","dialog000");}
+	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_012_vm00_n01","dialog000");}
 	//VoiceMatchingEnd
 
 
@@ -2455,6 +2454,8 @@ void main()
 		   NULL, " They moved to Ibaraki just as Rena-san entered elementary school.\"", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 1000, TRUE );
 
 //　頭の中が真っ白な星でいっぱいになる…＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2492,8 +2493,8 @@ void main()
 		   NULL, " Shall we stop?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
-
+	DisableWindow();
+	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 300, TRUE );
 
 //　その一言にはっとする＠……まだ、ここで終わりにしてはいけない…￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3101,7 +3102,7 @@ void main()
 //■レナと魅音のお見舞い
 
 	DisableWindow();
-	DrawSceneWithMask("background/ma_j3", "m1", 0, 0, 3000 );
+	DrawSceneWithMask("background/ma_j3_01", "m1", 0, 0, 3000 );
 
 	PlayBGM( 1, "msys13", 128, 0 );
 //　横になってどのくらいたっただろう＠
@@ -3397,7 +3398,8 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("background/ma_g2", "left", 0, 0, 1300 );
 	PlayBGM( 1, "msys02", 128, 0 );
-	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me2_wink_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me2_wink_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, FALSE );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re2a_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
 
 //「どんなカンジ＠　ちゃんと薬飲んで寝てた～？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -3418,9 +3420,8 @@ void main()
 		   NULL, "\"I did just that.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re2a_komaru_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
+	ModDrawCharacter(1, 2, "sprite/normal/re2a_komaru_a1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「げ、元気そうで良かった。心配してたんだよ…。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -3904,8 +3905,6 @@ void main()
 		   NULL, "...My knees were shaking.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	ModDrawCharacter(3, 3, "sprite/normal/me2_hig_maji_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「………さぁてね＠…おじさんにわからないことはないからね。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -4046,8 +4045,7 @@ void main()
 
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 1300, TRUE );
-	FadeBustshotWithFiltering( 3, "right", 1, FALSE, 0, 0, 700, TRUE );
+	FadeAllBustshots( 1000, TRUE );
 
 
 //　二人はまるで何事もなかったかのように笑い合い、玄関を後にしようとした￥
@@ -4056,6 +4054,8 @@ void main()
 		   NULL, "As if nothing had happened, they both giggled at each other and started making their way out.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	DrawScene("black", 800 );
 	FadeOutBGM( 1, 1000, TRUE );
 
 //　俺はさっき、おはぎの包みを落とした格好のまま、指一本動かすこともできないでいる＠
@@ -4064,8 +4064,6 @@ void main()
 		   NULL, "I hadn't moved a muscle since I had dropped the package of mochi.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	DrawScene("background/ma_g3_02", 1200 );
 
 //　二人が扉を出、…その扉が…ゆっくりと閉じていく＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4079,19 +4077,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……俺はそれをじっと見ているしかない。",
 		   NULL, "...All I could do was stare.", Line_WaitForInput);
-
-	DisableWindow();
-	DrawScene("background/ma_g3_01", 1200 );
-
 	OutputLine(NULL, "…まるで、扉が閉まりきるまで動いてはいけないかのように。",
 		   NULL, " ...As if I couldn't move until the door was completely closed.", Line_Normal);
 	ClearMessage();
-
-	PlaySE( 4, "wa_027", 128, 64 );
-
-	DrawScene("background/ma_g3_02", 400 );
-	Negative( 0 , TRUE );
-
 
 
 //　その閉じかけた扉がぐいっ！と開けられ、俺の心臓がもう一度跳ね上がった＠
@@ -4100,7 +4088,9 @@ void main()
 		   NULL, "Just as the door was just about closed, it opened again slightly with a sudden creak, sending my heart racing once again.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
+	DisableWindow();
+	Negative( 0 , TRUE );
+	PlaySE( 4, "wa_027", 128, 64 );
 	DrawScene("scene/033d", 200 );
 
 
@@ -5111,7 +5101,7 @@ void main()
 
 
 	DisableWindow();
-	DrawSceneWithMask("background/ma_d1_01", "right", 0, 0, 300 );
+	DrawScene("black", 50 );
 
 
 //　壁に叩きつけられ、餡が飛び散る＠
@@ -5365,6 +5355,9 @@ void main()
 		   NULL, "I tossed the rest of the mochi against the wall.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	DrawScene("background/ma_d1_01", 500 );
+	
 //　飛び散った餡の描く幾何学的模様がどこか不吉なものを想像させる…＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　飛び散った餡の描く幾何学的模様がどこか不吉なものを想像させる…。",
@@ -5381,7 +5374,7 @@ void main()
 		   NULL, "After looking away, I dashed out to the hall and flew upstairs to my room, where I stayed under my covers until morning.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/ma_j3", "left", 0, 0, 1300 );
+	DrawSceneWithMask("background/ma_j3_01", "left", 0, 0, 1300 );
 
 //　そして自らの肩を抱き、恐怖と悔しさと怒りと悲しみでぐちゃぐちゃになりながら吠えた猛った…￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
