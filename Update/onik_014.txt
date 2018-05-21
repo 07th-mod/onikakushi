@@ -100,7 +100,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/ma_g3_01", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/ma_g3_01", "right", 0, 0, 300 );
 
 //「もう行くの＠　お弁当は＠　もうちょっと待ってくれないとできないわよ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>圭一の母</color>", NULL, "<color=#f5e6d3>Keiichi's mom</color>", NULL, Line_ContinueAfterTyping); }
@@ -2399,7 +2399,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_def_a1_", "0", "left", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「ほらほら圭ちゃん、ぼーっとしない＠　机を寄せて寄せて！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -2420,8 +2420,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 200, TRUE );
-	FadeBustshot( 3, FALSE, 0, 0, 0, 0, 200, TRUE );
+	FadeAllBustshots( 200, TRUE );
 
 //　そう、楽しい楽しい部活の時間なのだ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2454,7 +2453,6 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawSceneWithMask("background/gk1", "left", 0, 0, 1300 );
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1b_majime_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「……なんだよ圭ちゃん＠今日も直帰なわけぇ…？＠
