@@ -12,7 +12,7 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	DrawScene("background/hu_tenjyou", 20000 );
+	DrawScene("background/hu_tenjyou", 10000 );
 
 	PlayBGM( 1, "msys06", 128, 0 );
 
@@ -576,8 +576,9 @@ void main()
 //gosub *Ch_mi_si
 
 	DisableWindow();
+	DrawScene("black", 200 );
 	DrawScene("background/ma_g1", 200 );
-	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_def_a1_", "0", "left", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「み、............魅音......？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -640,8 +641,7 @@ void main()
 		   NULL, "Rena was descending the stairs behind me.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 200, TRUE );
-	ModDrawCharacter(3, 3, "sprite/normal/me2_warai_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(2, 3, "sprite/normal/me2_warai_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「レナ、圭ちゃん大丈夫そうだよ＠　ったく心配して損したー。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -680,7 +680,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(3, 3, "sprite/normal/me2_tohoho_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(2, 3, "sprite/normal/me2_tohoho_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「...うわ、何この下駄箱＠どーしちゃったの？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -715,7 +715,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(3, 3, "sprite/normal/me2_tokui_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(2, 3, "sprite/normal/me2_tokui_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「持ち慣れないもん振り回してるから、こーゆうことになるんだよ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -754,7 +754,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(3, 3, "sprite/normal/me2_wink_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(2, 3, "sprite/normal/me2_wink_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「さー、ほら圭ちゃん＠重病人なんだからちゃんと寝てないとだめだよ＠さーさー、お布団に戻った戻った！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1116,8 +1116,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>＆<color=#5ec69a>魅音</color>", NULL, "<color=#f0953d>Rena</color> & <color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200482", 256, TRUE);
 	ModPlayVoiceLS(2, 3, "ps3/s01/03/120300213", 256, TRUE);
-	OutputLine(NULL, "「あはははははははははははははははははははははははははははははははは…」",
-		   NULL, "\"Ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha...\"", Line_Normal);
+	OutputLine(NULL, "「「あはははははははははははははははははははははははははははははははは…」」",
+		   NULL, "\"\"Ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha...\"\"", Line_Normal);
 	ClearMessage();
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -1142,8 +1142,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>＆<color=#5ec69a>魅音</color>", NULL, "<color=#f0953d>Rena</color> & <color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200483", 256, TRUE);
 	ModPlayVoiceLS(2, 3, "ps3/s01/03/120300214", 256, TRUE);
-	OutputLine(NULL, "「あははははははははははははははははははははははは。」",
-		   NULL, "\"Ahahahahahahahahahahahahahahahahahahahaha.\"", Line_Normal);
+	OutputLine(NULL, "「「あははははははははははははははははははははははは。」」",
+		   NULL, "\"\"Ahahahahahahahahahahahahahahahahahahahaha.\"\"", Line_Normal);
 
 	SetSpeedOfMessage( FALSE, 0, );
 	ClearMessage();
@@ -1198,7 +1198,7 @@ void main()
 		   NULL, " About the penalty.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200486", 256, TRUE);
 	OutputLine(NULL, "罰ゲームなんだよ！」",
-		   NULL, " About the penalty!\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " About the penalty!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1207,7 +1207,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200487", 256, TRUE);
 	OutputLine(NULL, "「…忘れちゃったのかなぁ？",
-		   NULL, "\"...Did you really forget?", Line_WaitForInput);
+		   NULL, "...Did you really forget?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200488", 256, TRUE);
 	OutputLine(NULL, "……おはぎの宿題。",
 		   NULL, " ...The homework with the mochi?", Line_WaitForInput);
@@ -1267,8 +1267,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>＆<color=#5ec69a>魅音</color>", NULL, "<color=#f0953d>Rena</color> & <color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200491", 256, TRUE);
 	ModPlayVoiceLS(2, 3, "ps3/s01/03/120300218", 256, TRUE);
-	OutputLine(NULL, "「あははははははははははははははははははははははははははは。」",
-		   NULL, "\"Ahahahahahahahahahahahahahahahahahahahaha.\"", Line_Normal);
+	OutputLine(NULL, "「「あははははははははははははははははははははははははははは。」」",
+		   NULL, "\"\"Ahahahahahahahahahahahahahahahahahahahaha.\"\"", Line_Normal);
 
 	SetSpeedOfMessage( FALSE, 0, );
 	ClearMessage();
@@ -1340,8 +1340,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>＆<color=#5ec69a>魅音</color>", NULL, "<color=#f0953d>Rena</color> & <color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200492", 256, TRUE);
 	ModPlayVoiceLS(2, 3, "ps3/s01/03/120300219", 256, TRUE);
-	OutputLine(NULL, "「あははははははははははははははははははははははははははは。」",
-		   NULL, "\"Ahahahahahahahahahahahahahahahahahahahaha.\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "「「あははははははははははははははははははははははははははは。」」",
+		   NULL, "\"\"Ahahahahahahahahahahahahahahahahahahahaha.\"\"", GetGlobalFlag(GLinemodeSp));
 
 	SetSpeedOfMessage( FALSE, 0, );
 
@@ -1360,7 +1360,7 @@ void main()
 		   NULL, "It didn't take that long for me to realize I had been dragged into an abnormal situation.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 1000, TRUE );
+	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 1000, TRUE );
 
 //　......こいつらは...一体誰なんだ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1395,8 +1395,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-
-	DrawFilm( 2, 255, 153, 153, 255, 0, 200, TRUE );
+	DisableWindow();
+	DrawFilm( 2, 185, 5, 5, 155, 0, 200, TRUE );
 //print 80
 
 //　なぜと思う間もなく、後ろから羽交い絞めにされる！￥
@@ -1521,7 +1521,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshotWithFiltering(5, "black", "down", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
+	DrawBustshotWithFiltering(5, "black", "up", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
 	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 0, TRUE );
 	FadeBustshot( 3, FALSE, 0, 0, 0, 0, 0, TRUE );
 
@@ -1811,6 +1811,7 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "down", 0, 0, 1300 );
+	FadeFilm( 0 , TRUE );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 
@@ -1937,7 +1938,6 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	PlayBGM( 1, "msys16", 128, 0 );
 	DisableWindow();
-	FadeFilm( 1000, TRUE );
 //	DrawScene( "bg_080", 1000 );
 	DrawScene("background/ma_j3", 1000 );
 //print 1
@@ -1967,9 +1967,6 @@ void main()
 		   NULL, "The two of them laughed together with that sickening laughter.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
-	DisableWindow();
-	DrawScene("background/ma_j3", 1000 );
 
 //　笑うのは当然だ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
