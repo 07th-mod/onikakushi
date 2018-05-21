@@ -746,7 +746,7 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("black", "left", 0, 0, 300 );
-	DrawSceneWithMask("background/ma_j3", "left", 0, 0, 300 );
+	DrawSceneWithMask("background/ma_j3_01", "left", 0, 0, 300 );
 
 //　家中の戸締りを再確認した後、俺は二階の自分の部屋に戻りカーテンを引いた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1930,7 +1930,7 @@ void main()
 
 //■大石さんの電話
 
-	DrawSceneWithMask("background/ma_j3", "right", 0, 0, 1300 );
+	DrawSceneWithMask("background/ma_j3_01", "right", 0, 0, 1300 );
 
 //「お、お待たせしました。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1964,8 +1964,6 @@ void main()
 		   NULL, "...There was something about the brazen way he talked that rubbed me the wrong way.", Line_Normal);
 	ClearMessage();
 
-
-	DrawSceneWithMask("background/ma_j3_01", "right", 0, 0, 1300 );
 
 //　大石さんと最後に話したのは......一昨日か＠学校を休んだ日、病院の帰り道に大石さんと出会って...昼食を取りに街へ行って、話をして...＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4313,6 +4311,7 @@ void main()
 		   NULL, "That look... It informed me of Rena's response faster than she could open her mouth...", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	DrawSceneWithMask("scene/033a", "right", 0, 0, 300 );
 
 //「.........どうしてさっきから、...嘘をつくのかな？......かな。＠
@@ -4356,8 +4355,6 @@ void main()
 		   NULL, "\"...It's not a lie...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
-	DisableWindow();
 //	DrawBustshot( 2, "re_si_hii_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「嘘だよッ！！！！＠
@@ -4375,7 +4372,7 @@ void main()
 	OutputLine(NULL, "　レナの一喝に全身に電気が走りぬける…！！",
 		   NULL, "Rena's outburst sent a jolt surging through my body...!!", Line_Normal);
 	ClearMessage();
-	DisableWindow();
+	
 //	DrawBustshot( 2, "re_si_him_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //　チェーン越しに守られ、レナとの接点は扉の隙間のわずか１０数センチ＠
@@ -4667,12 +4664,12 @@ void main()
 	OutputLine(NULL, "　あまりに呆気ない回答だからこそ、……俺はその意味するところが理解できずにいたのだ。",
 		   NULL, "It was such a simple answer... That was why I wasn't able to comprehend it.", Line_Normal);
 	ClearMessage();
-//	DisableWindow();
-//	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-
+	
+	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 	PlaySE( 4, "wa_022", 128, 64 );
+	DrawScene("black", 200 );
 
 //「...豚骨ショウガ味。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -4681,8 +4678,8 @@ void main()
 		   NULL, "\"...Pork-bone & Ginger flavor.\"", Line_Normal);
 	ClearMessage();
 
-//	DisableWindow();
-//	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 400, TRUE );
+	DisableWindow();
+	DrawScene("background/ma_g3_02", 200 );
 
 	PlayBGM( 2, "lsys15", 128, 0 );
 //　頭の中の真っ白な空白が回復するまで、俺はどんな様子だったんだろう...＠
@@ -4754,7 +4751,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-//	DrawBustshot( 2, "re_si_hi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawScene("scene/033a", 300 );
 
 //「......なんでかなぁ＠　不思議だね＠だね？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -4994,10 +4991,9 @@ void main()
 	OutputLine(NULL, "……その下がった分、レナは入り込む。",
 		   NULL, " And as I withdrew... Rena advanced.", Line_Normal);
 	ClearMessage();
+	
 	DisableWindow();
-//	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 1000, TRUE );
-//	DrawBustshot( 2, "re_si_hi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
-
+	DrawScene("black", 300 );
 	StopSE( 4 );
 
 //「...............だから圭一くん＠............ここを開けて＠　レナと一緒にご飯食べよ＠　きっとおいしいから、...............ね...？￥
@@ -5016,7 +5012,9 @@ void main()
 		   NULL, " I'm sure it's going to be delicious, so... okay...?\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask("scene/033b", "right", 0, 0, 300 );
+	DisableWindow();
+	DrawScene("scene/033b", 200 );
+	ShakeScreen( 1, 20, 20, 5, 0, );
 
 
 //　レナの白すぎる細すぎる指が何本も、一本一本が生きているかのように、扉の隙間からするすると入り込み、チェーンをかちゃかちゃと言わせる...＠
@@ -5140,9 +5138,11 @@ void main()
 		   NULL, "No smoldering—it just exploded.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	DrawScene("background/ma_g3_02", 200 );
 	PlaySE( 4, "wa_005", 128, 64 );
 	PlayBGM( 1, "msys08", 128, 0 );
-	ShakeScreen( 0, 50, 20, 3, 0, );
+	ShakeScreen( 0, 30, 20, 3, 0, );
 
 //　扉に体当たりする＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -5165,8 +5165,8 @@ void main()
 	OutputLine(NULL, "　ここで躊躇してはならない…！！",
 		   NULL, "I couldn't hesitate here...!!", Line_Normal);
 	ClearMessage();
+	
 	DisableWindow();
-	DrawSceneWithMask("background/ma_g3_02", "right", 0, 0, 300 );
 	PlayBGM( 2, "lsys13", 128, 0 );
 	DrawScene("background/ma_g3_01", 200 );
 
@@ -7051,9 +7051,7 @@ void main()
 		   NULL, "Even in this torrential downpour... Rena was still apologizing...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 3000, TRUE );
-	FadeBustshotWithFiltering( 2, "left", 1, FALSE, 0, 0, 200, TRUE );
-	FadeFilm( 0, TRUE );
+	DrawScene("black", 3000 );
 
 
 //　俺の中のもうひとりの俺が、右腕を素早く振り、カーテンで外界を遮った＠
@@ -7082,7 +7080,8 @@ void main()
 		   NULL, " I'm sorry...", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-
+	DisableWindow();
+	DrawScene("background/ma_j3_01", 600 );
 
 //　許してやったら、それを許してくれるのかよ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -7200,8 +7199,6 @@ void main()
 	ClearMessage();
 
 //☆幕間
-	DisableWindow();
-	DrawScene("background/ma_j3_01", 1000 );
 //if %kaisou_mode = 1 goto *kaisou_mode
 
 //mov ?Tip[19],TIPS_NEW :mov ?GET_TIPS_BUF[%NEW_TIPS],TIPS_019:mov %TIPS_019,2:inc %NEW_TIPS
