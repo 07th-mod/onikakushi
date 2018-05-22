@@ -13,7 +13,7 @@ void main()
 	DisableWindow();
 	DrawScene("background/gk3", 1000 );
 	PlayBGM( 1, "msys02", 128, 0 );
-	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri1_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri1_def_a1_", "0", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「......レナがいないです＠圭一は知りませんですか？＠
 	ClearMessage();
@@ -46,7 +46,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_wink_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_wink_a1_", "1", "left", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_tips_07_vm0x_n01","dialog000");}
@@ -87,7 +87,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 3, "sprite/normal/me1a_akuwarai_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 3, "sprite/normal/me1a_akuwarai_a1_", "1", -240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「あーレナが日直かぁ＠そりゃお疲れ様なことで。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -443,7 +443,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_akuwarai_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_akuwarai_a1_", "1", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「アイアイサーですわー！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -454,7 +454,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「......報酬はスイス銀行に入れて欲しいのです。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
