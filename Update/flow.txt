@@ -1,0 +1,356 @@
+﻿
+void main()
+{
+	SetValidityOfSaving( FALSE );
+	CallSection("BrandLogo");
+	JumpSection("Title");
+}
+
+void BrandLogo()
+{
+	DrawScene("black", 0);
+
+	if(GetGlobalFlag(GFlag_FirstPlay) == 0)
+	{
+		LanguagePrompt();
+		Wait(500);
+	}
+
+	SetGlobalFlag(GFlag_FirstPlay, 1);
+
+	DrawBG( "07thlogo", 1000, TRUE );
+	Wait( 2000 );
+	DrawSceneWithMask( "mangagamer", "logomask", 0, 0, 1000 );
+
+	Wait( 2000 );
+
+	DrawSceneWithMask( "black", "logomask", 0, 0, 1000 );
+}
+
+void Title()
+{
+	SetValidityOfSaving( FALSE );
+
+	DrawScene("white", 1000);
+
+	PlayBGM( 2, "lsys11", 128, 0 );
+
+	DrawSpriteWithFiltering( 10, "Logo", "centerblind", 0, 0, 0, TRUE, TRUE, 0, 0, 10, 1500, TRUE );
+
+	Wait(1000);
+	MoveSprite( 10, 0, -100, 0, 0, 0, 5, 0, 1500, TRUE );
+
+	DrawSprite( 2, "white", NULL, 0, 0, 0, 0, 0, 0, FALSE, FALSE, 1, 0, 2, 0, TRUE );
+
+	DrawBG( "haikei", 0, TRUE );
+
+	FadeSprite( 2, 2000, TRUE );
+
+	StoreValueToLocalWork( LOCALWORK_NO_RESULT, 0 );
+
+	TitleScreen();
+
+	CallSection("ChapterPreview");
+
+	JumpSection("Title");
+}
+
+void SetDay()
+{
+	int chapter;
+	chapter = LoadValueFromLocalWork( ChapterNumber );
+
+	SetLocalFlag(LOnikakushiDay, chapter);
+
+	if(GetGlobalFlag(GOnikakushiDay) < chapter)
+		SetGlobalFlag(GOnikakushiDay, chapter);
+}
+
+void ViewTips()
+{
+	StoreValueToLocalWork( TipsMode , 2 );
+
+	CallSection("ViewTipsDisplay");
+}
+
+void ViewTipsDisplay()
+{
+	//uses local flag TipsMode to determine what happens
+	//0 - Leave, 1 - Show Extras Menu, 2 - Show Mid Chapter Screen, 3 - Show New Tips, 4 - Show All Tips (Local), 5 - Show All Tips (Global)
+
+	SetValidityOfSaving( TRUE );
+
+	DisableWindow();
+
+	if(LoadValueFromLocalWork( TipsMode ) < 3)
+		DrawScene("black", 0);
+
+	if(LoadValueFromLocalWork( TipsMode ) == 1)
+		ShowExtras();
+
+	if(LoadValueFromLocalWork( TipsMode ) == 2)
+		ShowChapterScreen();
+
+	if(LoadValueFromLocalWork( TipsMode ) > 2)
+	{
+		ShowTips(LoadValueFromLocalWork( TipsMode ) - 3);
+		CheckTipsAchievements();
+	}
+
+	if(LoadValueFromLocalWork( LOCALWORK_NO_RESULT ) > 0)
+		CallSection("ViewTipsDisplay");
+}
+
+void Game()
+{
+	SetValidityOfSaving( TRUE );
+
+	StoreValueToLocalWork( ChapterNumber, 0 );
+	CallSection( "SetDay" );
+
+	//DrawSceneWithMask( "black", "2", 0, 0, 1000 );
+
+	DrawScene("black", 1000);
+
+	SetValidityOfInterface( FALSE );
+
+	CallScript( "onik_op" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_01");
+
+	SetValidityOfInterface( TRUE );
+
+	CallSection("Day1");
+}
+
+void Day1()
+{
+	CallScript( "onik_000" );
+	CallScript( "onik_001" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_02");
+
+	StoreValueToLocalWork( ChapterNumber, 1 );
+	SavePoint("Ch.1 終わり", "End of Chapter 1");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day2");
+}
+
+void Day2()
+{
+	CallScript( "onik_002" );
+
+	StoreValueToLocalWork( ChapterNumber, 2 );
+	SavePoint("Ch.2 終わり", "End of Chapter 2");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day3");
+}
+
+void Day3()
+{
+	CallScript( "onik_003" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_03");
+
+	StoreValueToLocalWork( ChapterNumber, 3 );
+	SavePoint("Ch.3 終わり", "End of Chapter 3");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day4");
+}
+
+void Day4()
+{
+	CallScript( "onik_004" );
+
+	StoreValueToLocalWork( ChapterNumber, 4 );
+	SavePoint("Ch.4 終わり", "End of Chapter 4");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day5");
+}
+
+void Day5()
+{
+	CallScript( "onik_005" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_04");
+
+	StoreValueToLocalWork( ChapterNumber, 5 );
+	SavePoint("Ch.5 終わり", "End of Chapter 5");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day9");
+}
+
+void Day9()
+{
+	CallScript( "onik_009" );
+
+	StoreValueToLocalWork( ChapterNumber, 6 );
+
+	JumpSection("Day9_2");
+}
+
+void Day9_2()
+{
+	CallScript( "onik_009_02" );
+
+	StoreValueToLocalWork( ChapterNumber, 7 );
+	SavePoint("Ch.6 終わり", "End of Chapter 6");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day10");
+}
+
+void Day10()
+{
+	CallScript( "onik_010" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_05");
+
+	StoreValueToLocalWork( ChapterNumber, 8 );
+	SavePoint("Ch.7 終わり", "End of Chapter 7");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day11");
+}
+
+void Day11()
+{
+	CallScript( "onik_011" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_06");
+
+	StoreValueToLocalWork( ChapterNumber, 9 );
+	SavePoint("Ch.8 終わり", "End of Chapter 8");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day12");
+}
+
+void Day12()
+{
+	CallScript( "onik_012" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_07");
+
+	StoreValueToLocalWork( ChapterNumber, 10 );
+	SavePoint("Ch.9 終わり", "End of Chapter 9");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day13");
+}
+
+void Day13()
+{
+	CallScript( "onik_013" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_08");
+
+	StoreValueToLocalWork( ChapterNumber, 11 );
+	SavePoint("Ch.10 終わり", "End of Chapter 10");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day14");
+}
+
+void Day14()
+{
+	CallScript( "onik_014" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_09");
+
+	StoreValueToLocalWork( ChapterNumber, 12 );
+
+	JumpSection("Day14_2");
+}
+
+void Day14_2()
+{
+	CallScript( "onik_014_02" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_10");
+
+	StoreValueToLocalWork( ChapterNumber, 13 );
+	SavePoint("Ch.11 終わり", "End of Chapter 11");
+	CallSection( "SetDay" );
+	CallSection( "ViewTips" );
+
+	JumpSection("Day15");
+}
+
+void Day15()
+{
+	CallScript( "onik_015" );
+
+	StoreValueToLocalWork( ChapterNumber, 14 );
+
+	JumpSection("Day15_2");
+}
+
+void Day15_2()
+{
+	CallScript( "onik_015_02" );
+
+	GetAchievement("HIGURASHI_STORY_EP01_11");
+
+	StoreValueToLocalWork( ChapterNumber, 15 );
+
+	JumpSection("Day15_3");
+}
+
+void Day15_3()
+{
+	CallScript( "onik_015_03" );
+
+	SetGlobalFlag( GFlag_GameClear, TRUE );
+	GetAchievement("HIGURASHI_STORY_EP01_ENDING");
+
+	JumpSection("Title");
+}
+
+void ChapterPreview()
+{
+	PlayBGM( 2, "lsys13", 128, 0 );
+
+	DrawSceneWithMask( "black", "2", 0, 0, 1000 );
+
+	Wait(1000);
+
+	DrawScene("scenario_a", 1000);
+
+	DrawSceneWithMask( "scenario_b", "5", 0, 0, 1000 );
+
+	DrawSceneWithMask( "scenario_c", "5", 0, 0, 1000 );
+
+	//DrawScene("scenario_c", 500);
+
+	ShowChapterPreview();
+
+	if(LoadValueFromLocalWork( LOCALWORK_NO_RESULT ) == 1)
+	{
+		StopBGM( 2 );
+		PlaySE( 1, "wa_037", 128, 64 );
+
+		CallSection("Game");
+	}
+
+	FadeOutBGM( 2, 1000, FALSE );
+
+	DrawScene("black", 1000);
+	
+	CallSection("Title");
+}
