@@ -3247,7 +3247,7 @@ void main()
 		   NULL, "But... those unsettling words from Mion several days ago echoed back to me...", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("black", "down", 0, 0, 300 );
+	DrawSceneWithMask("black", "c", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me2_hig_maji_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //"... ......さぁてね。...おじさんにわからないことはないからね...。"
@@ -3261,8 +3261,8 @@ void main()
 
 	ClearMessage();
 	DisableWindow();
-	DrawSceneWithMask("background/ma2", "down", 0, 0, 1300 );
-	ModDrawCharacter(2, 2, "sprite/night/re2a_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 1000, TRUE );
+	ModDrawCharacter(2, 2, "sprite/night/re2a_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask("background/ma2", "c", 0, 0, 1300 );
 
 //「レ、...レナひとり...？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }

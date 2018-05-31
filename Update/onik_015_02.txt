@@ -577,8 +577,8 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 200 );
+	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/ma_g1", 200 );
-	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「み、............魅音......？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -823,8 +823,8 @@ void main()
 		   NULL, "During that innocent conversation, Mion said something as though it was perfectly ordinary.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me2_akuwarai_a1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/ma_j3", 1000 );
-	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me2_akuwarai_a1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「...レナ＠監督には電話した？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1384,8 +1384,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 2, "portrait/normal/re1a_hig_def_a1_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/ma_j3", "right", 0, 0, 300 );
-	ModDrawCharacterWithFiltering(3, 2, "portrait/normal/re1a_hig_def_a1_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 //print 1
 
 //　いつの間にかレナが俺の後ろにいた＠
@@ -2784,9 +2784,9 @@ void main()
 	SetValidityOfInput( TRUE );
 
 	PlayBGM( 2, "lsys25", 128, 0 );
+	ModDrawCharacterWithFiltering(1, 2, "sprite/flashback/re1a_hig_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/flashback/me2_hig_maji_a1_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("flashback/ma_j3_05", 3000 );
-	ModDrawCharacterWithFiltering(1, 2, "sprite/flashback/re1a_hig_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, FALSE );
-	ModDrawCharacterWithFiltering(3, 3, "sprite/flashback/me2_hig_maji_a1_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //　レナと魅音が襲ってきた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }

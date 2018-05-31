@@ -88,8 +88,8 @@ void main()
 
 
 	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 8, "sprite/night/tomi1_def_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/y_kawa3", "right", 0, 0, 1300 );
-	ModDrawCharacterWithFiltering(3, 8, "sprite/night/tomi1_def_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
 
 //「どうですか富竹さん、いい写真はいっぱい撮れましたか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -508,8 +508,8 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 500 );
+	ModDrawCharacter(3, 8, "sprite/night/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/y_kawa3", "down", 0, 0, 1300 );
-	ModDrawCharacter(3, 8, "sprite/night/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
 
 //「で、いろいろな不祥事や汚職が発覚してね＠ややこしいことになっている内に工事中止が決まったんだそうだよ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
@@ -1142,9 +1142,9 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModDrawCharacter(1, 9, "sprite/night/ta1_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	ModDrawCharacter(3, 8, "sprite/night/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/y_kawa3", 3000 );
-	ModDrawCharacter(1, 9, "sprite/night/ta1_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, FALSE );
-	ModDrawCharacter(3, 8, "sprite/night/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 	PlayBGM( 2, "lsys19", 128, 0 );
 	FadeOutBGM( 1, 1000, TRUE );
@@ -2188,8 +2188,8 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 3000 );
+	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri5_def_a1_", "0", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene("background/jd4_01", 1000 );
-	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri5_def_a1_", "0", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 
 //　結局今日の勝負は、俺の劇的な勝利の後、梨花ちゃんが挑むが、何しろもう標的がほとんど残っていない＠
@@ -2284,7 +2284,7 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("background/y_kawa3", "m1", 0, 0, 300 );
-	ModDrawCharacterWithFiltering(3, 3, "sprite/night/me2_tokui_a1_", "2", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 3, "sprite/night/me2_tokui_a1_", "2", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「じゃ～富竹さん、覚悟はいいかなぁ？　罰ゲーム！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }

@@ -27,7 +27,7 @@ void dialog001()
 	ClearMessage();
 	DisableWindow();
 	FadeAllBustshots( 400, TRUE );
-	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_warai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri1_warai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「…まだ第一話ですよ。ボクは次のお話が楽しみなのです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -52,8 +52,8 @@ void dialog001()
 
 
 	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_warai_a1_", "2", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/res5", "left", 0, 0, 300 );
-	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_warai_a1_", "2", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 // レナrvS20/02/440200109.「うん。kvS20/02/440200110.今回はレナをパートナーに選んだ物語だったけど、kvS20/02/440200111.他にも魅ぃちゃん、沙都子ちゃんをパートナーに選んだお話もあるみたいだね」
 
@@ -82,7 +82,7 @@ void dialog001()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/res5", "m1", 0, 0, 300 );
-	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_def_b1_", "0", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re1b_def_b1_", "0", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「今回の鬼隠し編では、雛見沢で近年起こった連続怪死事件が紹介されたでしょ＠
 //　次回のシナリオでは雛見沢の古い歴史なんかが紹介されるんですって。￥
