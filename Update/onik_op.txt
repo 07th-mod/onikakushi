@@ -528,11 +528,12 @@ void main()
 	PlaySE( 4, "wa_017", 128, 64 );
 	DrawBustshot(5, "logo", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, TRUE );
 	ShakeScreen( 0, 25, 10, 4, 0, );
+	FadeBG( 3000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
 
-//..lsp 10,"title\logo.bmp",0,140
 //print 1
 
-	Wait( 3000 );
+	Wait( 2000 );
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 
@@ -545,4 +546,5 @@ void main()
 
 
 	SetValidityOfInput( TRUE );
+	ModPlayMovie("mv01");
 }
