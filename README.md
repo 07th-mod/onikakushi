@@ -28,4 +28,5 @@ Usually, older contributors are welcome to join the repository and push their ow
 - Another Anon - For providing the watermark-less window
 - @Norgus - For helping us reach v2 with thousands of fixes
 - @IrlPM - For helping with the 1440p Sprites and a lot of new features
-- @idealpersona and drojf  - Making the Movie Support
+- @idealpersona and drojf  - For Making the Movie Support
+- @Inochi-PM - For making the whole new UI.
