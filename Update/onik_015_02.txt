@@ -47,7 +47,7 @@ void main()
 		   NULL, " ...When I did that... pain shot throughout my entire body.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot(2, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawBustshot(2, "alphaimage", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	MoveSprite( 2, 0, 0, 0, 25, 0, 0, 0, 0, TRUE );
 	ModDrawCharacter(2, 2, "sprite/normal/re1a_komaru_a2_", "0", 290, 135, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
@@ -528,7 +528,7 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "right", 0, 0, 200 );
-	DrawBustshot(2, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawBustshot(2, "alphaimage", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );
@@ -908,7 +908,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshot(3, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
+	DrawBustshot(3, "alphaimage", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
 	MoveSprite( 3, 0, 0, 0, 25, 0, 0, 0, 0, TRUE );
 	ModDrawCharacter(3, 3, "sprite/normal/me2_warai_a1_", "2", 290, 135, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
@@ -924,7 +924,7 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshot(1, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
+	DrawBustshot(1, "alphaimage", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
 	MoveSprite( 1, 0, 0, 0, -15, 0, 0, 0, 0, TRUE );
 	ModDrawCharacter(1, 2, "sprite/normal/re1b_warai_b1_", "2", -270, 110, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
@@ -1360,8 +1360,8 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("black", 1000 );
-	DrawBustshot(3, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
-	DrawBustshot(1, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
+	DrawBustshot(3, "alphaimage", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
+	DrawBustshot(1, "alphaimage", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
 
 //　......こいつらは...一体誰なんだ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
