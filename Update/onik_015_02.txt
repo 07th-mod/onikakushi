@@ -47,11 +47,9 @@ void main()
 		   NULL, " ...When I did that... pain shot throughout my entire body.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot(5, "background/hu_tenjyou", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, TRUE );
-	DrawBustshot(2, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawBustshot(2, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	MoveSprite( 2, 0, 0, 0, 25, 0, 0, 0, 0, TRUE );
-	ModDrawCharacter(2, 2, "sprite/normal/re1a_komaru_a2_", "0", 290, 135, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacter(2, 2, "sprite/normal/re1a_komaru_a2_", "0", 290, 135, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「......大丈夫かな＠　横になってた方がいいと思うよ...。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -530,6 +528,7 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "right", 0, 0, 200 );
+	DrawBustshot(2, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );
@@ -580,7 +579,6 @@ void main()
 	DisableWindow();
 	DrawScene("black", 200 );
 	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	MoveSprite( 2, 160, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawScene("background/ma_g1", 200 );
 
 //「み、............魅音......？！＠
@@ -910,15 +908,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshot(5, "background/hu_tenjyou", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, TRUE );
-	DrawBustshot(2, "background/hu_tenjyou", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawBustshot(3, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
-	DrawBustshot(1, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
-	MoveSprite( 3, 0, 0, 0, 25, 0, 0, 0, 0, FALSE );
-	MoveSprite( 1, 0, 0, 0, -15, 0, 0, 0, 0, TRUE );
-	ModDrawCharacter(1, 2, "sprite/normal/re1b_warai_b1_", "2", -270, 110, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
-	ModDrawCharacter(3, 3, "sprite/normal/me2_warai_a1_", "2", 290, 135, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
-	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 300, TRUE );
+	DrawBustshot(3, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
+	MoveSprite( 3, 0, 0, 0, 25, 0, 0, 0, 0, TRUE );
+	ModDrawCharacter(3, 3, "sprite/normal/me2_warai_a1_", "2", 290, 135, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「あははは、圭ちゃん知んないの＠　監督ってったら監督だよ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -932,7 +924,9 @@ void main()
 
 
 	DisableWindow();
-	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 300, TRUE );
+	DrawBustshot(1, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
+	MoveSprite( 1, 0, 0, 0, -15, 0, 0, 0, 0, TRUE );
+	ModDrawCharacter(1, 2, "sprite/normal/re1b_warai_b1_", "2", -270, 110, -600, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「映画の監督とか＠工事現場の監督とか。!w800!s200あははははははははははははははははは!sd。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -1365,12 +1359,9 @@ void main()
 		   NULL, "It didn't take that long for me to realize I had been dragged into an abnormal situation.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 1000, TRUE );
-	DrawBustshot(3, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
-	DrawBustshot(1, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
-	MoveSprite( 3, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
-	MoveSprite( 1, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
-	DrawScene("black", 0 );
+	DrawScene("black", 1000 );
+	DrawBustshot(3, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
+	DrawBustshot(1, "sprite/transparent", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
 
 //　......こいつらは...一体誰なんだ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
