@@ -1445,14 +1445,10 @@ void main()
 	DrawScene("background/jt1", 1000 );
 
 //　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す＠
-	if (GetGlobalFlag(GADVMode)) {
-		OutputLineAll("", NULL, Line_ContinueAfterTyping);
-		OutputLine(NULL, "　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す！",
-			   NULL, "<size=-2>It was a tough battle. Blocking with her full momentum and an elbow in the opening moves, Satoko appeared to have the upper hand. But the difference in our proficiency with chopsticks proved to be fatal and gave me the upper hand!", GetGlobalFlag(GLinemodeSp));
-	} else {
-		OutputLine(NULL, "　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す！",
-			   NULL, "It was a tough battle. Blocking with her full momentum and an elbow in the opening moves, Satoko appeared to have the upper hand. But the difference in our proficiency with chopsticks proved to be fatal and gave me the upper hand!", GetGlobalFlag(GLinemodeSp));
-	}
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-2>", Line_Continue); }
+	OutputLine(NULL, "　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す！",
+		   NULL, "It was a tough battle. Blocking with her full momentum and an elbow in the opening moves, Satoko appeared to have the upper hand. But the difference in our proficiency with chopsticks proved to be fatal and gave me the upper hand!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 

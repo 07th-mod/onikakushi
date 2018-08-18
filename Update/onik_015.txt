@@ -3880,14 +3880,10 @@ void main()
 	ModDrawCharacterWithFiltering(2, 2, "portrait/normal/re1a_hig_def_a1_", "0", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //　疲労困憊で息も絶え絶えの俺に比べ...レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった￥
-	if (GetGlobalFlag(GADVMode)) {
-		OutputLineAll("", NULL, Line_ContinueAfterTyping);
-		OutputLine(NULL, "　疲労困憊で息も絶え絶えの俺に比べ…レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった。",
-			   NULL, "<size=-2>Compared to me, out of breath and utterly exhausted... Rena was so cool and composed that she could have froze the air around her. She wasn't breathing hard at all, rather, I couldn't even sense if her heart was beating.", Line_Normal);
-	} else {
-		OutputLine(NULL, "　疲労困憊で息も絶え絶えの俺に比べ…レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった。",
-			   NULL, "Compared to me, out of breath and utterly exhausted... Rena was so cool and composed that she could have froze the air around her. She wasn't breathing hard at all, rather, I couldn't even sense if her heart was beating.", Line_Normal);
-	}
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-2>", Line_Continue); }
+	OutputLine(NULL, "　疲労困憊で息も絶え絶えの俺に比べ…レナは凍えるくらいに冷え込んでいて、息が乱れないどころか、心臓の鼓動さえ感じられなかった。",
+		   NULL, "Compared to me, out of breath and utterly exhausted... Rena was so cool and composed that she could have froze the air around her. She wasn't breathing hard at all, rather, I couldn't even sense if her heart was beating.", Line_Normal);
 	ClearMessage();
 	
 	DisableWindow();
