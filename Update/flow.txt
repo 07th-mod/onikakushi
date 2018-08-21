@@ -1,4 +1,4 @@
-﻿
+
 void main()
 {
 	SetValidityOfSaving( FALSE );
@@ -18,6 +18,8 @@ void BrandLogo()
 
 	SetGlobalFlag(GFlag_FirstPlay, 1);
 
+	ModCallScriptSection("&opening", "OpeningQuestion");
+
 	DrawBG( "07thlogo", 1000, TRUE );
 	Wait( 2000 );
 	DrawSceneWithMask( "mangagamer", "logomask", 0, 0, 1000 );
@@ -26,7 +28,7 @@ void BrandLogo()
 
 	DrawSceneWithMask( "black", "logomask", 0, 0, 1000 );
 
-	ModPlayMovie("mv01");
+	ModCallScriptSection("&opening", "OpeningLaunch");
 }
 
 void Title()

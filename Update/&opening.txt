@@ -1,0 +1,44 @@
+void main()
+{
+}
+
+void OpeningQuestion()
+{
+	if (GetGlobalFlag(GVideoOpening) == 0) {
+		OutputLine(NULL, "オープニング動画は多少のネタバレ要素を含んでいますが、再生を有効にしますか？",
+			   NULL, "Video opening might contain minor spoilers. Do you want to enable it anyway?", Line_Normal);
+
+		char Item[2];
+
+		if (GetGlobalFlag(GLanguage) == 1) {
+			Item[0] = "Yes";
+			Item[1] = "No";
+		} else {
+			Item[0] = "はい";
+			Item[1] = "いいえ";
+		}
+
+		Select( 2, Item );
+
+		if (LoadValueFromLocalWork(SelectResult) == 0) {
+			SetGlobalFlag(GVideoOpening, 2);
+		} else {
+			SetGlobalFlag(GVideoOpening, 1);
+		}
+	}
+}
+
+void OpeningLaunch()
+{
+	if (GetGlobalFlag(GVideoOpening) >= 3) {
+		ModPlayMovie("mv01");
+	}
+}
+
+void OpeningStory()
+{
+	if (GetGlobalFlag(GVideoOpening) >= 2) {
+		SetGlobalFlag(GVideoOpening, 3);
+		ModPlayMovie("mv01");
+	}
+}
