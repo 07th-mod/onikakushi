@@ -1,0 +1,25 @@
+#include	"Include\bss.h"
+#include	"Include\WorksAndFlags.h"
+void main()
+{
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	FadeOutBGM( 1, 300, FALSE );
+	FadeOutBGM( 2, 300, FALSE );
+	PlaySE( 0, "wa_040", 128, 64 );
+	DisableWindow();
+	PlayBGM( 0, "lsys13", 128, 0 );
+	DrawSceneWithMask("black", "2", 1, 0, 1200 );
+	Wait( 1500 );
+	DrawScene("scenario/scenario_a", 1200 );
+	DrawBustshot(5, "scenario/scenario_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, FALSE );
+	Wait( 200 );
+	DrawBustshot(6, "scenario/title_oni", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 15, 0, FALSE );
+	DrawBustshot(7, "scenario/logo", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawBustshot(8, "scenario/stripes", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, TRUE );
+	FadeBustshotWithFiltering( 5, "5", 1, FALSE, 0, 0, 1000, TRUE );
+	Wait( 200 );
+	DrawBustshotWithFiltering(9, "scenario/desc_oni", "5", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 20, 1000, TRUE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+}
