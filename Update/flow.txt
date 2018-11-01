@@ -340,12 +340,11 @@ void ChapterPreview()
 	Wait( 1500 );
 
 	DrawScene("scenario/background", 1200 );
-	DrawBustshot(5, "scenario/background", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, FALSE );
-	Wait( 200 );
-
-	DrawBustshot(6, "scenario/title", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 15, 0, FALSE );
-	DrawBustshot(7, "scenario/logo", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawBustshot(5, "scenario/background", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, TRUE );
+	DrawBustshot(6, "scenario/title", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 15, 0, TRUE );
+	DrawBustshot(7, "scenario/logo", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	DrawBustshot(8, "scenario/stripes", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, TRUE );
+	Wait( 100 );
 	FadeBustshotWithFiltering(5, "5", 1, FALSE, 0, 0, 1000, TRUE );
 	Wait( 200 );
 
@@ -359,8 +358,8 @@ void ChapterPreview()
 	if (LoadValueFromLocalWork( LOCALWORK_NO_RESULT ) == 1) {
 		StopBGM( 2 );
 		PlaySE( 1, "wa_037", 128, 64 );
-
-		DrawBustshotWithFiltering( 10, "scenario/shortcuts", "5", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 20, 1000, TRUE );
+		FadeBustshot( 9, FALSE, 0, 0, 0, 0, 1000, TRUE );
+		DrawBustshot(9, "scenario/shortcuts", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 1000, TRUE );
 		Wait(10000);
 
 		DrawScene( "black", 1000 );
