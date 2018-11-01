@@ -328,26 +328,42 @@ void Day15_3()
 
 void ChapterPreview()
 {
-	PlayBGM( 2, "lsys13", 128, 0 );
+	SetValidityOfInput( FALSE );
 
-	DrawSceneWithMask( "black", "2", 0, 0, 1000 );
+	Wait( 200 );
+	FadeOutBGM( 1, 300, FALSE );
+	FadeOutBGM( 2, 300, FALSE );
+	DisableWindow();
 
-	Wait(1000);
+	PlayBGM( 0, "lsys13", 128, 0 );
+	DrawSceneWithMask("black", "2", 1, 0, 1200 );
+	Wait( 1500 );
 
-	DrawScene("scenario_a", 1000);
+	DrawScene("scenario/background", 1200 );
+	DrawBustshot(5, "scenario/background", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, FALSE );
+	Wait( 200 );
 
-	DrawSceneWithMask( "scenario_b", "5", 0, 0, 1000 );
+	DrawBustshot(6, "scenario/title", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 15, 0, FALSE );
+	DrawBustshot(7, "scenario/logo", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawBustshot(8, "scenario/stripes", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, TRUE );
+	FadeBustshotWithFiltering(5, "5", 1, FALSE, 0, 0, 1000, TRUE );
+	Wait( 200 );
 
-	DrawSceneWithMask( "scenario_c", "5", 0, 0, 1000 );
+	DrawBustshotWithFiltering(9, "scenario/description", "5", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 20, 1000, TRUE );
+	Wait( 200 );
 
-	//DrawScene("scenario_c", 500);
+	SetValidityOfInput( TRUE );
 
 	ShowChapterPreview();
 
-	if(LoadValueFromLocalWork( LOCALWORK_NO_RESULT ) == 1)
-	{
+	if (LoadValueFromLocalWork( LOCALWORK_NO_RESULT ) == 1) {
 		StopBGM( 2 );
 		PlaySE( 1, "wa_037", 128, 64 );
+
+		DrawBustshotWithFiltering( 10, "scenario/shortcuts", "5", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 20, 1000, TRUE );
+		Wait(10000);
+
+		DrawScene( "black", 1000 );
 
 		CallSection("Game");
 	}
@@ -355,6 +371,6 @@ void ChapterPreview()
 	FadeOutBGM( 2, 1000, FALSE );
 
 	DrawScene("black", 1000);
-	
+
 	CallSection("Title");
 }
