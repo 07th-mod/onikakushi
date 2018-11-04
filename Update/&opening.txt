@@ -11,11 +11,11 @@ void OpeningQuestion()
 		char Item[2];
 
 		if (GetGlobalFlag(GLanguage) == 1) {
-			Item[0] = "Yes";
-			Item[1] = "No";
+			Item[0] = "Enable opening";
+			Item[1] = "Disable opening";
 		} else {
-			Item[0] = "はい";
-			Item[1] = "いいえ";
+			Item[0] = "動画再生を有効化";
+			Item[1] = "動画再生を無効化";
 		}
 
 		Select( 2, Item );
