@@ -1,0 +1,169 @@
+﻿void main()
+{
+
+//■回覧板
+//*Sub_Tips_008
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	PlayBGM( 1, "msys12", 128, 0 );
+	DrawScene( "bg_077", 1000 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+//　例年になく早い梅雨明けを迎え、早くも夏の訪れを感じる今日この頃、皆さんにおかれましてはますますご清祥のこととお喜び申し上げます＠
+	OutputLine(NULL, "　例年になく早い梅雨明けを迎え、早くも夏の訪れを感じる今日この頃、皆さんにおかれましてはますますご清祥のこととお喜び申し上げます。",
+		   NULL, "We're greeting the end of the rainy season sooner than in prior years. On this day, when it feels like summer will soon arrive, I'm pleased that everyone is in good health.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　いよいよ今年も「綿流し」のシーズンがやってまいりました＠
+	OutputLine(NULL, "　いよいよ今年も「綿流し」のシーズンがやってまいりました。",
+		   NULL, "The season for the Watanagashi is finally upon us.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　町会の皆さんで協力して、楽しいお祭りにしていきたいと思います＠
+	OutputLine(NULL, "　町会の皆さんで協力して、楽しいお祭りにしていきたいと思います。",
+		   NULL, "I believe the assistance of the town council will make this a wonderful festival.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　つきましては、皆さんのご協力をよろしくお願いいたします￥
+	OutputLine(NULL, "　つきましては、皆さんのご協力をよろしくお願いいたします。",
+		   NULL, "I also wish to ask for the assistance of everyone in regards to a few things...", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 3, "wa_021", 128, 64 );
+
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+//（１） バザー品募集中＠
+	OutputLine(NULL, "（１）バザー品募集中！",
+		   NULL, "1. Collecting bazaar goods!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+//　毎年好評の雛見沢大バザーへの出品をお待ちしています＠
+	OutputLine(NULL, "　毎年好評の雛見沢大バザーへの出品をお待ちしています。",
+		   NULL, "We look forward to a well-received Hinamizawa grand bazaar exhibition.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　お中元の余り物や着れなくなってしまった古着などを大々募集中です＠
+	OutputLine(NULL, "　お中元の余り物や着れなくなってしまった古着などを大々募集中です！",
+		   NULL, "Holding a massive collection of excess goods and used clothing.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　なま物はご遠慮ください＠
+	OutputLine(NULL, "　なま物はご遠慮ください。",
+		   NULL, "No raw goods, please.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　担当：牧野　Ｔｅｌ（Ｘ）ＸＸＸ￥
+	OutputLine(NULL, "　担当：牧野　Ｔｅｌ（Ｘ）ＸＸＸＸ",
+		   NULL, "Management: Makino - Tel (X) XXXX", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 3, "wa_021", 128, 64 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//（２） ちびっ子祭り太鼓募集中＠
+	OutputLine(NULL, "（２）ちびっ子祭り太鼓募集中！",
+		   NULL, "2. Recruiting Li'l Festival Drum Dancers!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　丁寧な指導と実績で定評のあるちびっ子祭り太鼓サークル「蕉風会」が飛び入り参加を募集しています＠
+	OutputLine(NULL, "　丁寧な指導と実績で定評のあるちびっ子祭り太鼓サークル「蕉風会」が飛び入り参加を募集しています。",
+		   NULL, "The renowned \"Li'l Festival Drum Dancers\" group known for its careful choreography, The Shoufu Society, is taking last minute participants.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　小学生から中学生の目立ちたがり屋さんを待ってます＠
+	OutputLine(NULL, "　小学生から中学生の目立ちたがり屋さんを待ってます！",
+		   NULL, "We're looking for any showboat elementary and middle schoolers!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　担当：公由　Ｔｅｌ（Ｘ）ＸＸＸ￥
+	OutputLine(NULL, "　担当：公由　Ｔｅｌ（Ｘ）ＸＸＸＸ",
+		   NULL, "Management: Kimiyoshi - Tel (X) XXXX", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 3, "wa_021", 128, 64 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+//（３） 義援金募集中！＠
+	OutputLine(NULL, "（３）義援金募集中！！",
+		   NULL, "3. Taking donations!!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+//　一口千円からの義援金を募集しています＠
+	OutputLine(NULL, "　一口千円からの義援金を募集しています。",
+		   NULL, "We are accepting donations in multiples of 1,000 yen.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　一口につき模擬店券シートを１枚進呈しています＠
+	OutputLine(NULL, "　一口につき模擬店券シートを１枚進呈しています！",
+		   NULL, "For every 1,000 yen donation, you'll be awarded with a refreshment stand ticket!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　担当：園崎　Ｔｅｌ（Ｘ）ＸＸＸ￥
+	OutputLine(NULL, "　担当：園崎　Ｔｅｌ（Ｘ）ＸＸＸＸ",
+		   NULL, "Management: Sonozaki - Tel (X) XXXX", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 3, "wa_021", 128, 64 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　お祭りの楽しいアイデアも随時募集しています＠
+	OutputLine(NULL, "　お祭りの楽しいアイデアも随時募集しています。",
+		   NULL, "We are always taking suggestions for ways to improve the festival at all times.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　おもしろいアイデアがありましたら村長宅　公由（Ｘ）ＸＸＸＸまでどうぞ＠
+	OutputLine(NULL, "　おもしろいアイデアがありましたら村長宅　公由（Ｘ）ＸＸＸＸまでどうぞ！",
+		   NULL, "If you have an interesting idea, call Kimiyoshi at (X) XXXX!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+
+
+//（キリトリ線の下に模擬店券が２００円分付いている。￥
+	OutputLine(NULL, "（キリトリ線の下に模擬店券が２００円分付いている。）",
+		   NULL, "(There is a 200 yen refreshment stand ticket attached below the cut line.)", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+}

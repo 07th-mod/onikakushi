@@ -1,0 +1,102 @@
+﻿void main()
+{
+
+
+//*Sub_Tips_012
+//■無線記録
+
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	DrawScene( "bg_252", 1000 );
+	PlayBGM( 1, "msys13", 128, 0 );
+
+//「興宮ＳＴより、３号どうぞ＠３号どうぞ。＠
+	OutputLine(NULL, "「興宮ＳＴより、３号どうぞ。",
+		   NULL, "\"This is Okinomiya Station, calling Unit 3.", Line_WaitForInput);
+	OutputLine(NULL, "３号どうぞ。」",
+		   NULL, " Unit 3 please respond.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「３号です＠感度良好ー。￥
+	OutputLine(NULL, "「３号です。",
+		   NULL, "\"This is Unit 3,", Line_WaitForInput);
+	OutputLine(NULL, "感度良好ー。」",
+		   NULL, " loud and clear.\"", Line_Normal);
+	ClearMessage();
+
+//「応援が向かいました＠別命あるまで維持で願いします＠どうぞー。＠
+	OutputLine(NULL, "「応援が向かいました。",
+		   NULL, "\"Back-up is heading your way.", Line_WaitForInput);
+	OutputLine(NULL, "別命あるまで維持で願いします。",
+		   NULL, " Hold position until further instructions.", Line_WaitForInput);
+	OutputLine(NULL, "どうぞー。」",
+		   NULL, " Over.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「はいー、３号了解。￥
+	OutputLine(NULL, "「はいー、３号了解。」",
+		   NULL, "\"Roger, Unit 3 acknowledged.\"", Line_Normal);
+	ClearMessage();
+
+//「それから回転灯は付けないでお願いします＠静か静かで願います。＠
+	OutputLine(NULL, "「それから回転灯は付けないでお願いします。",
+		   NULL, "\"Requesting no headlights.", Line_WaitForInput);
+	OutputLine(NULL, "静か静かで願います。」",
+		   NULL, " Requesting radio silence.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「ＳＴー、今、先生が到着しました＠運びたいそうですがどうしますか＠どうぞ。￥
+	OutputLine(NULL, "「ＳＴー、今、先生が到着しました。",
+		   NULL, "\"Station, the doctor has arrived.", Line_WaitForInput);
+	OutputLine(NULL, "運びたいそうですがどうしますか。",
+		   NULL, " They want to carry it away. What's the order?", Line_WaitForInput);
+	OutputLine(NULL, "どうぞ。」",
+		   NULL, " Over.\"", Line_Normal);
+	ClearMessage();
+
+//「了解しました＠先生に任せてください。＠
+	OutputLine(NULL, "「了解しました。",
+		   NULL, "\"Acknowledged.", Line_WaitForInput);
+	OutputLine(NULL, "先生に任せてください。」",
+		   NULL, " Leave it to the doctor.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「はいー＠了解です＠......あ、応援も到着しました＠先に写真取らせた方がいいんじゃないですか＠...ガイ者、もームダだと思いますしー。￥
+	OutputLine(NULL, "「はいー。",
+		   NULL, "\"Affirmative.", Line_WaitForInput);
+	OutputLine(NULL, "了解です。",
+		   NULL, " Understood.", Line_WaitForInput);
+	OutputLine(NULL, "……あ、応援も到着しました。",
+		   NULL, " ...Ah, back-up has arrived.", Line_WaitForInput);
+	OutputLine(NULL, "先に写真取らせた方がいいんじゃないですか？",
+		   NULL, " Shouldn't we let them take a photo first?", Line_WaitForInput);
+	OutputLine(NULL, "…ガイ者、もームダだと思いますしー。」",
+		   NULL, " ...I think the vic is done for.\"", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+}

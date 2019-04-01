@@ -1,0 +1,546 @@
+﻿void main()
+{
+
+
+//*Sub_Tips_001
+//■うちって学年混在？
+
+
+//gosub *tip_s
+//gosub *data_tati
+
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	DrawSceneWithMask( "bg_108", "left", 0, 0, 1300 );
+
+	PlayBGM( 1, "msys01", 128, 0 );
+
+//「......レナってさ、俺と同い年だったよな？＠
+	OutputLine(NULL, "「……レナってさ、俺と同い年だったよな？」",
+		   NULL, "\"... So, Rena, we're the same age?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "re_se_de_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「うん＠そうだよ＠　干支もおんなじだよね。＠
+	OutputLine(NULL, "「うん。",
+		   NULL, "\"Yes.", Line_WaitForInput);
+	OutputLine(NULL, "そうだよ？",
+		   NULL, " That's right.", Line_WaitForInput);
+	OutputLine(NULL, "　干支もおんなじだよね。」",
+		   NULL, " We're the same zodiac animal, too.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　おいおい、年が同じで干支が違ったらおかしいだろうが...￥
+	OutputLine(NULL, "　おいおい、年が同じで干支が違ったらおかしいだろうが…。",
+		   NULL, "Hey, now, it would be weird if we were the same age but not the same zodiac animal.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 3, "me_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「そんなことないよ＠誕生日の違いがあれば、年齢が同じでも干支が違うこともありえるって！＠
+	OutputLine(NULL, "「そんなことないよ。",
+		   NULL, "\"That's not true.", Line_WaitForInput);
+	OutputLine(NULL, "誕生日の違いがあれば、年齢が同じでも干支が違うこともありえるって！」",
+		   NULL, " If your birthday isn't the same then you can have different animals even if you're the same age!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「あれ＠　あ、そーか＠魅音、頭いいじゃねぇか！￥
+	OutputLine(NULL, "「あれ？",
+		   NULL, "\"Huh?", Line_WaitForInput);
+	OutputLine(NULL, "　あ、そーか。",
+		   NULL, " Oh, I see~", Line_WaitForInput);
+	OutputLine(NULL, "魅音、頭いいじゃねぇか！」",
+		   NULL, " Mion, you're pretty smart!\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBustshot( 1, "re_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「あははははは＠ところで圭一くんは何月生まれなのかな＠　レナは７月なんだよ！＠
+	OutputLine(NULL, "「あははははは。",
+		   NULL, "\"Ahahahahaha.", Line_WaitForInput);
+	OutputLine(NULL, "ところで圭一くんは何月生まれなのかな？",
+		   NULL, " What month were you born, by the way, Keiichi-kun?", Line_WaitForInput);
+	OutputLine(NULL, "　レナは７月なんだよ！」",
+		   NULL, " I'm July!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　レナがえっへんと胸を張る＠
+	OutputLine(NULL, "　レナがえっへんと胸を張る。",
+		   NULL, "Rena smirked and puffed up with pride.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　...おいおい、そりゃどういう意味だよ＠
+	OutputLine(NULL, "　…おいおい、そりゃどういう意味だよ。",
+		   NULL, "... hey, now, what's the meaning of this?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　まさか、俺よりちょっとでも誕生日が早かったら威張ろうってつもりじゃないだろうな...￥
+	OutputLine(NULL, "　まさか、俺よりちょっとでも誕生日が早かったら威張ろうってつもりじゃないだろうな…。",
+		   NULL, "She's not planning to be all high and mighty if her birthday is a wee bit sooner than mine, is she...", Line_Normal);
+	ClearMessage();
+
+//「...ふ＠　だが諦めろ＠俺に誕生日で挑もうったって無駄なことだ！＠　......何ならひと月差ごとに１００円の賭けをしてもいいぜー！＠
+	OutputLine(NULL, "「…ふ！",
+		   NULL, "\"...heh!", Line_WaitForInput);
+	OutputLine(NULL, "　だが諦めろ。",
+		   NULL, " Don't even.", Line_WaitForInput);
+	OutputLine(NULL, "俺に誕生日で挑もうったって無駄なことだ！！",
+		   NULL, " It's impossible to challenge me by birthday!!", Line_WaitForInput);
+	OutputLine(NULL, "　……何ならひと月差ごとに１００円の賭けをしてもいいぜー！」",
+		   NULL, " ... I wouldn't even mind you if you bet a dollar per month!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "re_se_na_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「え＠　え？＠　なんでだろ＠　なんでだろ？！￥
+	OutputLine(NULL, "「え？",
+		   NULL, "\"Huh?", Line_WaitForInput);
+	OutputLine(NULL, "　え？！",
+		   NULL, " Huh!?", Line_WaitForInput);
+	OutputLine(NULL, "　なんでだろ？",
+		   NULL, " Why?", Line_WaitForInput);
+	OutputLine(NULL, "　なんでだろ？！」",
+		   NULL, " Why!?\"", Line_Normal);
+	ClearMessage();
+
+//　突然、賭けにされて狼狽するレナ＠
+	OutputLine(NULL, "　突然、賭けにされて狼狽するレナ。",
+		   NULL, "Rena panicked at suddenly being challenged to a wager.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　...うろたえ具合から今月の小遣いは残り少ないと断定する＠
+	OutputLine(NULL, "　…うろたえ具合から今月の小遣いは残り少ないと断定する。",
+		   NULL, "... Given how panicked she is, I am certain she doesn't have much allowance left this month.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　しかし...、たかだか誕生日程度でこうもうろたえてくれると、楽しくて仕方がないぞ￥
+	OutputLine(NULL, "　しかし…、たかだか誕生日程度でこうもうろたえてくれると、楽しくて仕方がないぞ。",
+		   NULL, "It's just... Sending her into a panic about something as simple as a birthday is so fun, I can't help myself.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot( 3, "me_se_wi_b2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「ってことは圭ちゃん、ひょっとして４月生まれ？＠
+	OutputLine(NULL, "「ってことは圭ちゃん、ひょっとして４月生まれ？」",
+		   NULL, "\"So that means you were born in April, Kei-chan?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「そーゆうこったな＠　残念だなレナ＠　俺、もーとっくにレナより年上なんだよ。＠
+	OutputLine(NULL, "「そーゆうこったな！",
+		   NULL, "\"Right on!", Line_WaitForInput);
+	OutputLine(NULL, "　残念だなレナ！",
+		   NULL, " Too bad, Rena!", Line_WaitForInput);
+	OutputLine(NULL, "　俺、もーとっくにレナより年上なんだよ。」",
+		   NULL, " I'm already far older than Rena.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "re_se_wa_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「へぇー＠　そうなんだ＠　じゃあ魅ぃちゃんと同い年なんだね！＠
+	OutputLine(NULL, "「へぇー！",
+		   NULL, "\"Oh!", Line_WaitForInput);
+	OutputLine(NULL, "　そうなんだ！",
+		   NULL, " I see!", Line_WaitForInput);
+	OutputLine(NULL, "　じゃあ魅ぃちゃんと同い年なんだね！」",
+		   NULL, " Then you're the same age as Mii-chan!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "me_se_to_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「まぁ、ほんの何ヶ月かはね～＠　すぐにまた差を開いてあげるけどさ！￥
+	OutputLine(NULL, "「まぁ、ほんの何ヶ月かはね〜！",
+		   NULL, "\"Well, it's just a few months~", Line_WaitForInput);
+	OutputLine(NULL, "　すぐにまた差を開いてあげるけどさ！」",
+		   NULL, " That gap will open up again soon enough~!\"", Line_Normal);
+	ClearMessage();
+
+//　魅音が鼻でヘヘンと笑う＠
+	OutputLine(NULL, "　魅音が鼻でヘヘンと笑う。",
+		   NULL, "Mion snickered through her nose.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　...おいおい、威張ることじゃねーぞ...＠って俺のことか（苦笑￥
+	OutputLine(NULL, "　…おいおい、威張ることじゃねーぞ…。",
+		   NULL, "... Hey, now, that's not something to get all high and mighty about.", Line_WaitForInput);
+	OutputLine(NULL, "って俺のことか（苦笑）",
+		   NULL, " As if I'm one to talk (heh).", Line_Normal);
+	ClearMessage();
+
+//「......そう言えば...、魅音って上級生なんだよなぁ。＠
+	OutputLine(NULL, "「……そう言えば…、魅音って上級生なんだよなぁ。」",
+		   NULL, "\"... Now that you mention it... You're in a higher grade, right Mion?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "me_se_wi_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「下級生の方が萌えるってんなら、今日から下級生ってことでもいいけどー？＠
+	OutputLine(NULL, "「下級生の方が萌えるってんなら、今日から下級生ってことでもいいけどー？」",
+		   NULL, "\"If you're into underclassmen, then I can be an underclassman from now on!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "re_se_ha_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「魅ぃちゃん、よくわかんないこと言ってる......。＠
+	OutputLine(NULL, "「魅ぃちゃん、よくわかんないこと言ってる……。」",
+		   NULL, "\"Mii-chan, you're not making any sense to me...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　レナの赤面具合を見れば、ばっちり理解できてることがわかるんだけどな...￥
+	OutputLine(NULL, "　レナの赤面具合を見れば、ばっちり理解できてることがわかるんだけどな…。",
+		   NULL, "Just by seeing Rena's blushing face, you could tell she knew exactly what she meant by it, though...", Line_Normal);
+	ClearMessage();
+
+//「んで、沙都子と梨花ちゃんが下級生と＠......どころか学校が違うくらいの下級生だよな？＠
+	OutputLine(NULL, "「んで、沙都子と梨花ちゃんが下級生と。",
+		   NULL, "\"Then Satoko and Rika-chan are underclassmen.", Line_WaitForInput);
+	OutputLine(NULL, "……どころか学校が違うくらいの下級生だよな？」",
+		   NULL, " ... Their grade is so different that they should be in a different school, shouldn't they?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「け......圭一くんは、ちょっと好みの年齢が低すぎると思うな...＠思うな......。＠
+	OutputLine(NULL, "「け……圭一くんは、ちょっと好みの年齢が低すぎると思うな…。",
+		   NULL, "\"Ke... Keiichi-kun, your tastes are a bit too young, I think...", Line_WaitForInput);
+	OutputLine(NULL, "思うな……。」",
+		   NULL, " I think...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　レナこそよくわかんないこと言ってるぞ...＠
+	OutputLine(NULL, "　レナこそよくわかんないこと言ってるぞ…。",
+		   NULL, "You're not making any sense yourself, Rena...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　とりあえず、頭部を鷲掴みにして、ぐしゃぐしゃと乱暴に撫でる＠
+	OutputLine(NULL, "　とりあえず、頭部を鷲掴みにして、ぐしゃぐしゃと乱暴に撫でる。",
+		   NULL, "I'll just grab onto her head and scruff it up a bit.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "re_se_na_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「はぅ～～～！！　やーめーてーー......！￥
+	OutputLine(NULL, "「はぅ〜〜〜！！　やーめーてーー……！」",
+		   NULL, "\"Hao~~~!! S~t~o~p~ i~t~~...!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "black", "left", 0, 0, 1300 );
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+	DrawSceneWithMask( "bg_110", "left", 0, 0, 1300 );
+	PlayBGM( 1, "msys02", 128, 0 );
+
+//「前から思ってたんだけどさ＠なんでこの学校って、クラスが学年混在なんだ？＠
+	OutputLine(NULL, "「前から思ってたんだけどさ。",
+		   NULL, "\"I wondered about it before, yeah.", Line_WaitForInput);
+	OutputLine(NULL, "なんでこの学校って、クラスが学年混在なんだ？」",
+		   NULL, " I was wondering why this school has different school years all mixed up.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "me_se_de_a2", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「教室の数が足りないからだよ＠仕方ないじゃん＠　営林署の建物を間借りしてんだからさー。＠
+	OutputLine(NULL, "「教室の数が足りないからだよ。",
+		   NULL, "\"There aren't enough classrooms.", Line_WaitForInput);
+	OutputLine(NULL, "仕方ないじゃん？",
+		   NULL, " Can't help it.", Line_WaitForInput);
+	OutputLine(NULL, "　営林署の建物を間借りしてんだからさー。」",
+		   NULL, " This building is being rented from the forestry services, after all~.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　...そう言えばそうだよな＠うちの学校って前々から変だと思ってた￥
+	OutputLine(NULL, "　…そう言えばそうだよな。",
+		   NULL, "... When she says it like that, it makes sense.", Line_WaitForInput);
+	OutputLine(NULL, "うちの学校って前々から変だと思ってた。",
+		   NULL, " I've thought our school was strange for a while now.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "bg_028", "up", 0, 0, 1300 );
+
+//　校庭は砂利だし、学校とは無関係な部屋はあるし、変な建設重機みたいのは止まってるし￥
+	OutputLine(NULL, "　校庭は砂利だし、学校とは無関係な部屋はあるし、変な建設重機みたいのは止まってるし。",
+		   NULL, "The school yard is gravel, there are rooms that aren't for classes, and there's some strange sort of construction machinery parked here.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene( "bg_110", 400 );
+
+//「何で借りてるんだよ＠本当の学校はどうしちゃったんだよ？＠
+	OutputLine(NULL, "「何で借りてるんだよ。",
+		   NULL, "\"Why is it being borrowed?", Line_WaitForInput);
+	OutputLine(NULL, "本当の学校はどうしちゃったんだよ？」",
+		   NULL, " What happened to the real school?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DrawBustshot( 1, "me_se_wi_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「戦前からずーっと立ってたらしいからねぇ...＠老朽化でね＠廃校ってわけよ。＠
+	OutputLine(NULL, "「戦前からずーっと立ってたらしいからねぇ…。",
+		   NULL, "\"There was one here forever from before the war...", Line_WaitForInput);
+	OutputLine(NULL, "老朽化でね。",
+		   NULL, " It got dilapidated.", Line_WaitForInput);
+	OutputLine(NULL, "廃校ってわけよ。」",
+		   NULL, " They closed it down.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　それは...さぞや趣のある渋い校舎だったんだろうな￥
+	OutputLine(NULL, "　それは…さぞや趣のある渋い校舎だったんだろうな。",
+		   NULL, "It probably was a grand old school house.", Line_Normal);
+	ClearMessage();
+
+//「まーそれで、生徒は町の学校に通うことになったんだけどさ、遠いでしょ？＠
+	OutputLine(NULL, "「まーそれで、生徒は町の学校に通うことになったんだけどさ、遠いでしょ？」",
+		   NULL, "\"Well, because of that, the students would have to attend the school in the city.  That's pretty far, though, you know?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 3, "re_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「どこの学校だったの？＠
+	OutputLine(NULL, "「どこの学校だったの？」",
+		   NULL, "\"Which school would that be?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "me_se_wa_a2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「興宮の駅前通りを抜けて病院に曲がって、小児科の向かいに学校あるのわかる？＠
+	OutputLine(NULL, "「興宮の駅前通りを抜けて病院に曲がって、小児科の向かいに学校あるのわかる？」",
+		   NULL, "\"Did you know there's a school if you pass by the Okinomiya train station, turn at the hospital, and head towards the pediatrics department?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "re_se_bi_b1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「え、えーーーーーッ？！？＠　と、遠いよぅ...！＠
+	OutputLine(NULL, "「え、えーーーーーッ？！？！",
+		   NULL, "\"W-Whaaaa!?!?", Line_WaitForInput);
+	OutputLine(NULL, "　と、遠いよぅ…！」",
+		   NULL, " S-So far...!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　地理的なものはさっぱりだが、レナの驚きようからかなり遠いことがわかる￥
+	OutputLine(NULL, "　地理的なものはさっぱりだが、レナの驚きようからかなり遠いことがわかる。",
+		   NULL, "I couldn't tell where that was by the location, but I understood it was pretty far from Rena's reaction.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot( 1, "me_se_wi_a2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「まぁ、そんなわけでさ＠
+//　興宮の学校に通いたくない連中は、こうして営林署の建物を間借りした仮校舎に通ってるってわけさ。＠
+	OutputLine(NULL, "「まぁ、そんなわけでさ。",
+		   NULL, "\"Well, that's why.", Line_WaitForInput);
+	OutputLine(NULL, "　興宮の学校に通いたくない連中は、こうして営林署の建物を間借りした仮校舎に通ってるってわけさ。」",
+		   NULL, " The guys that didn't want to commute to Okinomiya rented out the building from the forestry services, and are attending this pseudo school house here.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "re_se_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「雛見沢の子供の半分くらいかな＠　朝早くに自転車で通ってる子たちも結構いるよ。￥
+	OutputLine(NULL, "「雛見沢の子供の半分くらいかな？",
+		   NULL, "\"About half the children in Hinamizawa go here.", Line_WaitForInput);
+	OutputLine(NULL, "　朝早くに自転車で通ってる子たちも結構いるよ。」",
+		   NULL, " There are quite a lot of kids that come here on bike.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot( 1, "me_se_de_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「まぁ、こんなハチャメチャな学校に通ってたら、進学校とかはちょっと無理だろうからねぇ。＠
+	OutputLine(NULL, "「まぁ、こんなハチャメチャな学校に通ってたら、進学校とかはちょっと無理だろうからねぇ。」",
+		   NULL, "\"Well, since they're attending this really messed-up school it might be pretty hard for them to get into higher education.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "re_se_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「そんなことないよ魅ぃちゃん＠ちゃんと頑張ればどこでだってお勉強はできるよ。＠
+	OutputLine(NULL, "「そんなことないよ魅ぃちゃん。",
+		   NULL, "\"That's not true, Mii-chan.", Line_WaitForInput);
+	OutputLine(NULL, "ちゃんと頑張ればどこでだってお勉強はできるよ。」",
+		   NULL, " If you study properly, you can go anywhere you want.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「お、そうだぞそうだぞ＠　レナとは意見が一致したな！＠
+	OutputLine(NULL, "「お、そうだぞそうだぞ！",
+		   NULL, "\"Yeah, that's right that's right!", Line_WaitForInput);
+	OutputLine(NULL, "　レナとは意見が一致したな！」",
+		   NULL, " I totally agree with Rena on this one!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "re_se_wa_b1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「うん、そうだね＠そうだね＠　がんばろ！＠
+	OutputLine(NULL, "「うん、そうだね。",
+		   NULL, "\"Yes, that's right.", Line_WaitForInput);
+	OutputLine(NULL, "そうだね！",
+		   NULL, " That's right!", Line_WaitForInput);
+	OutputLine(NULL, "　がんばろ！」",
+		   NULL, " Let's try our best!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "me_se_to_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「せーぜー頑張って下さいな＠おじさんはささやかに応援しとりますわ。￥
+	OutputLine(NULL, "「せーぜー頑張って下さいな。",
+		   NULL, "\"All of you, try your best.", Line_WaitForInput);
+	OutputLine(NULL, "おじさんはささやかに応援しとりますわ。」",
+		   NULL, " This old man will be rooting for you.\"", Line_Normal);
+	ClearMessage();
+
+//「俺たちがじゃないぞ、魅音がだぞ＠　お前、受験生だろ？＠　こんな成績じゃお先真っ暗だぞ？！＠
+	OutputLine(NULL, "「俺たちがじゃないぞ、魅音がだぞ！",
+		   NULL, "\"Not just us! You, too!", Line_WaitForInput);
+	OutputLine(NULL, "　お前、受験生だろ？！",
+		   NULL, " You should be preparing for exams, shouldn't you!?", Line_WaitForInput);
+	OutputLine(NULL, "　こんな成績じゃお先真っ暗だぞ？！」",
+		   NULL, " Your future is bleak with grades like this!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "me_se_wi_a2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「いーもんいーもん＠路頭に迷ったら永久就職して圭ちゃんに食わせてもらうから☆＠
+	OutputLine(NULL, "「いーもんいーもん。",
+		   NULL, "\"Fine, just fine.", Line_WaitForInput);
+	OutputLine(NULL, "路頭に迷ったら永久就職して圭ちゃんに食わせてもらうから☆」",
+		   NULL, " If I get stuck, then I'll just mooch off Kei-chan as he works forever.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "re_se_ha_b1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「え、え、永久就職って何だろ？＠　何だろ？！￥
+	OutputLine(NULL, "「え、え、永久就職って何だろ？！",
+		   NULL, "\"Wh-wh-what do you mean by work forever!?", Line_WaitForInput);
+	OutputLine(NULL, "　何だろ？！」",
+		   NULL, " What do you mean!?\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "bg_109", "right", 0, 0, 300 );
+
+//「こら＠　そこ、うるさいですよ＠　自習は静かに！￥
+	OutputLine(NULL, "「こら！",
+		   NULL, "\"Hey!", Line_WaitForInput);
+	OutputLine(NULL, "　そこ、うるさいですよ！",
+		   NULL, " You're too loud!", Line_WaitForInput);
+	OutputLine(NULL, "　自習は静かに！」",
+		   NULL, " Be quiet during self study!\"", Line_Normal);
+	ClearMessage();
+
+//　３人そろってばっさりと先生に怒られる＠
+	OutputLine(NULL, "　３人そろってばっさりと先生に怒られる。",
+		   NULL, "The teacher yelled at all three of us.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　いやまったく申し訳ない...￥
+	OutputLine(NULL, "　いやまったく申し訳ない…。",
+		   NULL, "It was completely our fault...", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot( 3, "sa_se_aw_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
+
+//　それを見て沙都子がケタケタと笑う＠
+	OutputLine(NULL, "　それを見て沙都子がケタケタと笑う。",
+		   NULL, "Satoko saw it and chortled haughtily.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　それに俺はあかんべー、と舌を出して応えてやる＠
+	OutputLine(NULL, "　それに俺はあかんべー、と舌を出して応えてやる。",
+		   NULL, "I stuck out my tongue at her in response.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　......確かに魅音の言うとおりだな＠この学校は進学とは無縁だ＠
+	OutputLine(NULL, "　……確かに魅音の言うとおりだな。",
+		   NULL, "... It is just as Mion says.", Line_WaitForInput);
+	OutputLine(NULL, "この学校は進学とは無縁だ。",
+		   NULL, " This school has nothing to do with higher education.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　その代り、どこの学校にもない貴重なものがたくさんあるのだろうけど￥
+	OutputLine(NULL, "　その代り、どこの学校にもない貴重なものがたくさんあるのだろうけど。",
+		   NULL, "But it makes up for that by having lots of valuable things other schools don't.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+//gosub *tip_e
+//return
+
+
+}

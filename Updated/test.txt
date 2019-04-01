@@ -1,0 +1,19 @@
+﻿void main()
+{
+	DrawSceneWithMask( "bg_093", "m1", 0, 0, 300 );
+	DrawBustshotWithFiltering( 3, "me_se_wi_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+	OutputLine("Mion", "「おっはよ〜！",
+		   "Mion", "\"Good morning~!", Line_WaitForInput);
+	OutputLine("Mion", "　圭ちゃん、昨日はお疲れ様〜！」",
+		   "Mion", "\n Nice job yesterday, Kei-chan!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	ClearMessage();
+
+	OutputLine("Mion is a good girl", "「おっはよ〜！",
+		   "Mion is a good girl", "\"Good morning~!", Line_WaitForInput);
+	OutputLine("Mion", "　圭ちゃん、昨日はお疲れ様〜！」",
+		   "Mion", " Nice job yesterday, Kei-chan!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+}

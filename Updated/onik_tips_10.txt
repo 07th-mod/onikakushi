@@ -1,0 +1,69 @@
+﻿void main()
+{
+
+//■古手神社の神主の病死
+
+//*Sub_Tips_010
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	DrawScene( "bg_181", 1000 );
+	PlayBGM( 1, "msys07", 128, 0 );
+
+//　昭和５６年６月ＸＸ日夕刊よ＠
+	OutputLine(NULL, "　昭和５６年６月ＸＸ日夕刊より",
+		   NULL, "From the June 1981 edition", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　ＸＸ日午後１０時頃、鹿骨市雛見沢村Ｘ丁目、古手神社神主のＸＸＸＸさんが不調を訴え病院で手当てを受け一時は回復したが、深夜に容態が急変、死亡した￥
+	OutputLine(NULL, "　ＸＸ日午後１０時頃、鹿骨市雛見沢村Ｘ丁目、古手神社神主のＸＸＸＸさんが不調を訴え病院で手当てを受け一時は回復したが、深夜に容態が急変、死亡した。",
+		   NULL, "On the afternoon of XX around 10PM in the X district of Hinamizawa village in Shishibone prefecture, the shinto priest of the Furude shrine passed away after an existing condition he was recovering from suddenly worsened.", Line_Normal);
+	ClearMessage();
+
+
+//　関係者の話では、当日開催されていた祭りの準備等で相当の心労があったと言う＠
+	OutputLine(NULL, "　関係者の話では、当日開催されていた祭りの準備等で相当の心労があったと言う。",
+		   NULL, "Parties close to the deceased said he was suffering from anxiety issues concerning the festival, which was to be held that day.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　また、ＸＸＸＸさんの死亡直後、妻のＸＸＸＸさんが遺書を残し行方不明になった＠
+	OutputLine(NULL, "　また、ＸＸＸＸさんの死亡直後、妻のＸＸＸＸさんが遺書を残し行方不明になった。",
+		   NULL, "Also, after XXXX's death, his wife XXXX went missing, leaving behind a farewell note.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　警察と青年団で捜索を続けているが、遺書で自殺をほのめかした鬼ヶ淵沼は地元では底なし沼として知られており難航している￥
+	OutputLine(NULL, "　警察と青年団で捜索を続けているが、遺書で自殺をほのめかした鬼ヶ淵沼は地元では底なし沼として知られており難航している。",
+		   NULL, "The police and local youth association continued the search. However, given the presence of the farewell message and the fact that the Onigafuchi marsh is said to be bottomless, they have run into difficulties.", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+
+//gosub *tip_e
+//return
+
+
+
+}
+
+
+
+
+
+

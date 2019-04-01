@@ -1,0 +1,513 @@
+﻿void main()
+{
+
+//■レナってどういう名前だよ？
+
+//*Sub_Tips_007
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "bg_108", 1000 );
+	PlayBGM( 1, "msys02", 128, 0 );
+	DrawBustshotWithFiltering( 3, "ri_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「......レナがいないです＠圭一は知りませんですか？＠
+	OutputLine(NULL, "「……レナがいないです。",
+		   NULL, "\"...Rena's not here.", Line_WaitForInput);
+	OutputLine(NULL, "圭一は知りませんですか？」",
+		   NULL, " Do you know where she is, Keiichi?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「あれ＠　たった今までそこにいたのにな＠...おい魅音＠レナはどこ行ったんだ？＠
+	OutputLine(NULL, "「あれ？",
+		   NULL, "\"Huh?", Line_WaitForInput);
+	OutputLine(NULL, "　たった今までそこにいたのにな。",
+		   NULL, " She was just there, actually...", Line_WaitForInput);
+	OutputLine(NULL, "…おい魅音。",
+		   NULL, " Hey, Mion.", Line_WaitForInput);
+	OutputLine(NULL, "レナはどこ行ったんだ？」",
+		   NULL, " Where did Rena go?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "me_se_wi_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「レナー＠　トイレじゃない＠　最近、お通じが来ないって言ってたなぁ。＠
+	OutputLine(NULL, "「レナー？",
+		   NULL, "\"Rena~?", Line_WaitForInput);
+	OutputLine(NULL, "　トイレじゃない？",
+		   NULL, " Didn't she go to the bathroom?", Line_WaitForInput);
+	OutputLine(NULL, "　最近、お通じが来ないって言ってたなぁ。」",
+		   NULL, " She did say that she's been having bowel troubles lately.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　そんなことは一言も聞いてない￥
+	OutputLine(NULL, "　そんなことは一言も聞いてない！",
+		   NULL, "I hadn't heard anything about that!", Line_Normal);
+	ClearMessage();
+
+//「......沙都子＠レナを知りませんですか？＠
+	OutputLine(NULL, "「……沙都子。",
+		   NULL, "\"...Satoko,", Line_WaitForInput);
+	OutputLine(NULL, "レナを知りませんですか？」",
+		   NULL, " do you know where Rena went?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "sa_se_aw_a1", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+
+//「レナですの＠　さっき廊下ですれ違いましてよ＠レナは日直だから、花壇にお水をやらないといけませんので。＠
+	OutputLine(NULL, "「レナですの？",
+		   NULL, "\"Rena, you say?", Line_WaitForInput);
+	OutputLine(NULL, "　さっき廊下ですれ違いましてよ。",
+		   NULL, " I just passed her in the hallway.", Line_WaitForInput);
+	OutputLine(NULL, "レナは日直だから、花壇にお水をやらないといけませんので。」",
+		   NULL, " Rena has class duties today, so she's off to water the flower bed.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "me_se_aw_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「あーレナが日直かぁ＠そりゃお疲れ様なことで。￥
+	OutputLine(NULL, "「あーレナが日直かぁ。",
+		   NULL, "\"Ah~ It was Rena's turn for class duty.", Line_WaitForInput);
+	OutputLine(NULL, "そりゃお疲れ様なことで。」",
+		   NULL, " That's very much appreciated.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "bg_110", "right", 0, 0, 300 );
+
+//　...レナレナレナ＠
+	OutputLine(NULL, "　…レナレナレナ。",
+		   NULL, "...Rena, Rena, Rena.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　...とレナの名が乱発され、ふと疑問に思った＠
+	OutputLine(NULL, "　…とレナの名が乱発され、ふと疑問に思った。",
+		   NULL, "...Upon hearing it repeated, a thought came to mind.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　人の名前にこんなこと言っちゃ失礼だが、......変わった名前だよな＠外人さんみたいな名前だ￥
+	OutputLine(NULL, "　人の名前にこんなこと言っちゃ失礼だが、……変わった名前だよな。",
+		   NULL, "It's rude to say this about someone's name... but it was a weird name.", Line_WaitForInput);
+	OutputLine(NULL, "外人さんみたいな名前だ。",
+		   NULL, " It was like some foreigner's name.", Line_Normal);
+	ClearMessage();
+
+//「レナってどういう名前なんだろうな＠...レナって漢字だとどうなるんだ？＠
+	OutputLine(NULL, "「レナってどういう名前なんだろうな。",
+		   NULL, "\"What kind of name is Rena, I wonder...", Line_WaitForInput);
+	OutputLine(NULL, "…レナって漢字だとどうなるんだ？」",
+		   NULL, " What kind of kanji does her name use?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "ri_se_de_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「......レナはあだ名なのです＠ちゃんとした名前がありますですよ。＠
+	OutputLine(NULL, "「……レナはあだ名なのです。",
+		   NULL, "\"...Rena is her nickname.", Line_WaitForInput);
+	OutputLine(NULL, "ちゃんとした名前がありますですよ。」",
+		   NULL, " She has a proper name as well.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「え、そうなのか？＠　俺はてっきり竜宮レナってのが本名だと思ってたよ。＠
+	OutputLine(NULL, "「え、そうなのか？！",
+		   NULL, "\"What, really!?", Line_WaitForInput);
+	OutputLine(NULL, "　俺はてっきり竜宮レナってのが本名だと思ってたよ。」",
+		   NULL, " I was sure that Rena Ryuugu was her full name.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 3, "sa_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「まぁ確かに＠レナとしか呼んでませんから間違えるのも無理はないですわね。＠
+	OutputLine(NULL, "「まぁ確かに。",
+		   NULL, "\"Well...", Line_WaitForInput);
+	OutputLine(NULL, "レナとしか呼んでませんから間違えるのも無理はないですわね。」",
+		   NULL, " I can understand you making that mistake since we only call her Rena.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　しかも、習字の名前も「レナ」になってるしな＠学校では本名同然のようだ￥
+	OutputLine(NULL, "　しかも、習字の名前も「レナ」になってるしな。",
+		   NULL, "She even signs her name as \"Rena.\"", Line_WaitForInput);
+	OutputLine(NULL, "学校では本名同然のようだ。",
+		   NULL, " It's like it's her real name in school.", Line_Normal);
+	ClearMessage();
+
+//「本当の名前は何て言うんだろうな＠...レナが戻ってきたら聞いてみるかな！＠
+	OutputLine(NULL, "「本当の名前は何て言うんだろうな。",
+		   NULL, "\"I wonder what her real name is...", Line_WaitForInput);
+	OutputLine(NULL, "…レナが戻ってきたら聞いてみるかな！」",
+		   NULL, " Let's ask her when she comes back!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　沙都子と梨花ちゃんが顔を向かい合わせる￥
+	OutputLine(NULL, "　沙都子と梨花ちゃんが顔を向かい合わせる。",
+		   NULL, "Satoko and Rika-chan looked at each other.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot( 1, "ri_se_ni_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「......聞かなくてもいいですよ＠ボクたちが教えてあげますです。＠
+	OutputLine(NULL, "「……聞かなくてもいいですよ。",
+		   NULL, "\"...You don't need to ask her.", Line_WaitForInput);
+	OutputLine(NULL, "ボクたちが教えてあげますです。」",
+		   NULL, " We'll tell you what it is.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "sa_se_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「お礼の礼に、奈良の奈＠...竜宮礼奈が本名ですのよ！＠
+	OutputLine(NULL, "「お礼の礼に、奈良の奈。",
+		   NULL, "\"It's the 'rei' from 'orei' and the 'na' from 'nara.'", Line_WaitForInput);
+	OutputLine(NULL, "…竜宮礼奈が本名ですのよ！」",
+		   NULL, " Her real name is Reina Ryuugu!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「礼奈か＠.........ふーん＠それでレイナじゃなくてレナって読むのか＠　面白い読み方だよな。＠
+	OutputLine(NULL, "「礼奈か。",
+		   NULL, "\"Reina, is it?", Line_WaitForInput);
+	OutputLine(NULL, "………ふーん。",
+		   NULL, " ...Hmm.", Line_WaitForInput);
+	OutputLine(NULL, "それでレイナじゃなくてレナって読むのか？",
+		   NULL, " So it's read out as Rena instead of Reina?", Line_WaitForInput);
+	OutputLine(NULL, "　面白い読み方だよな。」",
+		   NULL, " That's a pretty interesting reading.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「......いいえ、違いますです。レイナで正しいのです。＠
+	OutputLine(NULL, "「……いいえ、違いますです。レイナで正しいのです。」",
+		   NULL, "\"...No, that's not it. 'Reina' is the correct way.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "sa_se_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「レナが言ったのですわ＠レナと呼んで欲しいって＠だからレナなのですわ。￥
+	OutputLine(NULL, "「レナが言ったのですわ。",
+		   NULL, "\"Rena had told us", Line_WaitForInput);
+	OutputLine(NULL, "レナと呼んで欲しいって。",
+		   NULL, " that she wanted us to call her 'Rena.'", Line_WaitForInput);
+	OutputLine(NULL, "だからレナなのですわ。」",
+		   NULL, " So we call her Rena.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "bg_109", "right", 0, 0, 300 );
+	DrawBustshotWithFiltering( 1, "me_se_wi_b2", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「圭ちゃん＠...レナはレナだよ＠　礼奈って呼ぶのは他人だけ＠そこんとこ、わかってるよね？＠
+	OutputLine(NULL, "「圭ちゃん。",
+		   NULL, "\"Kei-chan...", Line_WaitForInput);
+	OutputLine(NULL, "…レナはレナだよ？",
+		   NULL, " Rena is Rena, you know?", Line_WaitForInput);
+	OutputLine(NULL, "　礼奈って呼ぶのは他人だけ。",
+		   NULL, " Only strangers call her Reina.", Line_WaitForInput);
+	OutputLine(NULL, "そこんとこ、わかってるよね？」",
+		   NULL, " You get where this is going?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　魅音の言いたいことはわかる＠
+	OutputLine(NULL, "　魅音の言いたいことはわかる。",
+		   NULL, "I understood what Mion was saying.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　本名が何だって、俺たちの間の通り名が全てに決まってる＠
+	OutputLine(NULL, "　本名が何だって、俺たちの間の通り名が全てに決まってる！",
+		   NULL, "It didn't matter what her real name was, only what names we used between us!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　竜宮レナはレナだ。それ以外の誰でもないさ￥
+	OutputLine(NULL, "　竜宮レナはレナだ。それ以外の誰でもないさ。",
+		   NULL, "Rena Ryuugu is Rena.  She's nobody other than that.", Line_Normal);
+	ClearMessage();
+
+//「思ったんだけどさ、自己申請すれば俺も今日からあだ名で呼ばれるのか？＠
+	OutputLine(NULL, "「思ったんだけどさ、自己申請すれば俺も今日からあだ名で呼ばれるのか？」",
+		   NULL, "\"So I was thinking, if I had a nickname, would you call me by that?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+	DrawBustshot( 1, "me_se_de_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「面白けりゃね＠何て呼ばれたいわけ？＠
+	OutputLine(NULL, "「面白けりゃね。",
+		   NULL, "\"If it's good.", Line_WaitForInput);
+	OutputLine(NULL, "何て呼ばれたいわけ？」",
+		   NULL, " So what do you want to be called?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+	PlaySE( 3, "wa_029", 128, 64 );
+
+//「越後屋。￥
+	OutputLine(NULL, "「越後屋。」",
+		   NULL, "\"Con man.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+	PlaySE( 3, "wa_020", 128, 64 );
+	DrawSceneWithMask( "bg_108", "right", 0, 0, 200 );
+
+//　やがてレナが教室に戻ってきた＠
+	OutputLine(NULL, "　やがてレナが教室に戻ってきた。",
+		   NULL, "Rena then came back into the classroom.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　入り口で後輩が、レナを探している人がいたことを教えている￥
+	OutputLine(NULL, "　入り口で後輩が、レナを探している人がいたことを教えている。",
+		   NULL, "One of the juniors near the door told Rena people were looking for her.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot( 2, "re_se_na_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+//「あれあれ＠　誰かレナの事を探してたかな＠　かな？＠
+	OutputLine(NULL, "「あれあれ？",
+		   NULL, "\"What's this now?", Line_WaitForInput);
+	OutputLine(NULL, "　誰かレナの事を探してたかな？",
+		   NULL, " Who is looking for me, I wonder?", Line_WaitForInput);
+	OutputLine(NULL, "　かな？」",
+		   NULL, " I wonder?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　それを見てにんまりと笑う俺と魅音￥
+	OutputLine(NULL, "　それを見てにんまりと笑う俺と魅音。",
+		   NULL, "Seeing that, both Mion and I sneered.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "bg_110", "left", 0, 0, 300 );
+	PlayBGM( 1, "msys03", 128, 0 );
+
+//「お代官様、竜宮めがまんまと現れましたぞ！！＠
+	OutputLine(NULL, "「お代官様、竜宮めがまんまと現れましたぞ！！」",
+		   NULL, "\"Bailiff, Ryuugu doth show herself!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 3, "me_se_to_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「越後屋、主も悪よのぅ＠...ふぉっふぉっふぉ！！！＠
+	OutputLine(NULL, "「越後屋、主も悪よのぅ。",
+		   NULL, "\"Con man, you're quite sinister...", Line_WaitForInput);
+	OutputLine(NULL, "…ふぉっふぉっふぉ！！！」",
+		   NULL, " Hwah hwah hwah!!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+	DrawSceneWithMask( "bg_108", "right", 0, 0, 300 );
+	DrawBustshotWithFiltering( 2, "re_se_bi_b1", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+
+//「なな、何かな何かな？＠　圭一くんと魅ぃちゃんが悪代官だよ＠　越後屋だよ？！￥
+	OutputLine(NULL, "「なな、何かな何かな？！",
+		   NULL, "\"Wh-What is this, what is this!?", Line_WaitForInput);
+	OutputLine(NULL, "　圭一くんと魅ぃちゃんが悪代官だよ？",
+		   NULL, " Keiichi-kun and Mii-chan are evil bailiffs?", Line_WaitForInput);
+	OutputLine(NULL, "　越後屋だよ？！」",
+		   NULL, " A con man!?\"", Line_Normal);
+	ClearMessage();
+
+//「おのれ竜宮レナの助＠　ここで会ったが百年目でおじゃる＠いざ覚悟～！！＠
+	OutputLine(NULL, "「おのれ竜宮レナの助！",
+		   NULL, "\"Damn you, Renanosuke Ryuugu!", Line_WaitForInput);
+	OutputLine(NULL, "　ここで会ったが百年目でおじゃる。",
+		   NULL, " Today doth be when thou meetest thy maker.", Line_WaitForInput);
+	OutputLine(NULL, "いざ覚悟〜！！」",
+		   NULL, " Have at thee~!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 2, "re_se_na_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+//「わ＠　わ＠　助さん角さん、こらしめてやりなさーい！！＠
+	OutputLine(NULL, "「わ！",
+		   NULL, "\"Wah!", Line_WaitForInput);
+	OutputLine(NULL, "　わ！",
+		   NULL, " Wah!", Line_WaitForInput);
+	OutputLine(NULL, "　助さん角さん、こらしめてやりなさーい！！」",
+		   NULL, " Suke-san, Kaku-san, show them what-for!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 3, "sa_se_aw_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「アイアイサーですわー！！！＠
+	OutputLine(NULL, "「アイアイサーですわー！！！」",
+		   NULL, "\"Aye aye, sir!!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "ri_se_de_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「......報酬はスイス銀行に入れて欲しいのです。￥
+	OutputLine(NULL, "「……報酬はスイス銀行に入れて欲しいのです。」",
+		   NULL, "\"...I expect my fee to be paid to my Swiss bank account.\"", Line_Normal);
+	ClearMessage();
+
+//　こうなっては仕方ない！　あとは５人入り乱れての大乱闘...！！！/
+	OutputLine(NULL, "　こうなっては仕方ない！　あとは５人入り乱れての大乱闘…！！！",
+		   NULL, "Since it's come to this, we have no choice! We'll just have a grand battle with five people...!", Line_ContinueAfterTyping);
+
+	PlaySE( 3, "wa_008", 128, 64 );
+	Wait( 200 );
+	PlaySE( 3, "wa_008", 128, 64 );
+	Wait( 200 );
+	PlaySE( 3, "wa_005", 128, 64 );
+	ShakeScreen( 1, 50, 20, 2, 0, );
+	PlaySE( 3, "wa_008", 128, 64 );
+	Wait( 200 );
+	PlaySE( 3, "wa_005", 128, 64 );
+	ShakeScreen( 0, 50, 20, 2, 0, );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
+	ClearMessage();
+
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
+	DisableWindow();
+	PlaySE( 3, "wa_008", 128, 64 );
+	Wait( 200 );
+	PlaySE( 3, "wa_008", 128, 64 );
+	DrawScene( "black", 100 );
+	DrawBustshot( 5, "Furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
+
+	PlaySE( 3, "wa_005", 128, 64 );
+	DrawScene( "black", 50 );
+	DrawBustshot( 5, "Furiker_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
+
+	PlaySE( 3, "wa_005", 128, 64 );
+	DrawScene( "black", 100 );
+	DrawSceneWithMask( "bg_108", "down", 0, 0, 1300 );
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
+//!sd
+
+//※レナのフリッカーが２発炸裂！
+//　印籠のタイミングでレナの必殺パンチが炸裂する＠
+	OutputLine(NULL, "　印籠のタイミングでレナの必殺パンチが炸裂する。",
+		   NULL, "Rena's fierce punches exploded in the proper timing to take out the seal.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　結局、悪は滅びる俺と魅音...￥
+	OutputLine(NULL, "　結局、悪は滅びる俺と魅音…。",
+		   NULL, "The evil that was Mion and myself was vanquished in the end...", Line_Normal);
+	ClearMessage();
+
+//「...レナにはぜひ世直しの旅に出てもらいたいもんだ＠...永田町なんかどうだ？＠
+	OutputLine(NULL, "「…レナにはぜひ世直しの旅に出てもらいたいもんだ。",
+		   NULL, "\"...I do hope that Rena does go on a journey to make the world a better place.", Line_WaitForInput);
+	OutputLine(NULL, "…永田町なんかどうだ？」",
+		   NULL, " How about heading to Nagata-chou?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「......ダメだよ＠旅先でかぁいいものをチョロまかすから。」/
+	OutputLine(NULL, "「……ダメだよ。",
+		   NULL, "\"...", Line_WaitForInput);
+	OutputLine(NULL, "旅先でかぁいいものをチョロまかすから。」",
+		   NULL, "My destination is decided by where the kyute stuff gathers.\"", Line_ContinueAfterTyping);
+
+	PlaySE( 3, "wa_002", 128, 64 );
+	Wait( 200 );
+	PlaySE( 3, "wa_002", 128, 64 );
+	Wait( 200 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
+	ClearMessage();
+
+	PlaySE( 3, "wa_001", 128, 64 );
+
+//　振鈴が休み時間の終わりを告げる￥
+	OutputLine(NULL, "　振鈴が休み時間の終わりを告げる。",
+		   NULL, "The toll of the bell signaled that break time was over.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "bg_110", "up", 0, 0, 300 );
+	DrawBustshotWithFiltering( 3, "re_se_wa_b1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「ほらほら、圭一くんも魅ぃちゃんも＠先生来るよ！＠
+	OutputLine(NULL, "「ほらほら、圭一くんも魅ぃちゃんも。",
+		   NULL, "\"Come on, come on Keiichi-kun, Mii-chan.", Line_WaitForInput);
+	OutputLine(NULL, "先生来るよ！」",
+		   NULL, " The teacher's coming!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　レナに手を借りて起き上がる＠
+	OutputLine(NULL, "　レナに手を借りて起き上がる。",
+		   NULL, "I took Rena's hand and stood up.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　ちょうど先生が教室に入ってきたところだった￥
+	OutputLine(NULL, "　ちょうど先生が教室に入ってきたところだった。",
+		   NULL, "It was just as the teacher had entered the classroom.", Line_Normal);
+	ClearMessage();
+
+//　......あと１時間か＠やれやれ＠......もうひと踏ん張りするかな￥
+	OutputLine(NULL, "　……あと１時間か。",
+		   NULL, "...Just one more hour.", Line_WaitForInput);
+	OutputLine(NULL, "やれやれ。",
+		   NULL, " Man oh man.", Line_WaitForInput);
+	OutputLine(NULL, "……もうひと踏ん張りするかな！",
+		   NULL, " ...Got to buckle down for one more!", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+
+}

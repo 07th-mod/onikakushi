@@ -1,0 +1,352 @@
+﻿void main()
+{
+
+//■自殺を誘発するクスリは？
+
+//*Sub_Tips_016
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	DrawScene( "bg_111", 400 );
+	PlayBGM( 1, "msys12", 128, 0 );
+	DrawBustshot( 2, "oi_si_de_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+
+//「単刀直入に...自殺させる薬ってないんですか？＠
+	OutputLine(NULL, "「単刀直入に…自殺させる薬ってないんですか？」",
+		   NULL, "\"Let's cut to the chase... is there a drug that causes someone to kill themselves?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「直接的にはない。￥
+	OutputLine(NULL, "「直接的にはない。」",
+		   NULL, "\"Not directly, no.\"", Line_Normal);
+	ClearMessage();
+
+//「遠回しですねぇ＠...では間接的にはあるってことですか？＠
+	OutputLine(NULL, "「遠回しですねぇ。",
+		   NULL, "\"That's quite a roundabout response.", Line_WaitForInput);
+	OutputLine(NULL, "…では間接的にはあるってことですか？」",
+		   NULL, " You're saying there's one that does it indirectly?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「自殺したくなる精神状態を誘発することはできる、!w1000っちゅうことだ。＠
+	OutputLine(NULL, "「自殺したくなる精神状態を誘発することはできる、",
+		   NULL, "\"Something that puts you into a suicidal mental state,", Line_ContinueAfterTyping);
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "っちゅうことだ。」",
+		   NULL, " like that...?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 2, "oi_si_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+//「...難しい言い方になりましたねぇ＠何ですかその、自殺したくなる精神状態ってのは。＠
+	OutputLine(NULL, "「…難しい言い方になりましたねぇ。",
+		   NULL, "\"...That's hard to say.", Line_WaitForInput);
+	OutputLine(NULL, "何ですかその、自殺したくなる精神状態ってのは。」",
+		   NULL, " What would 'a suicidal mental state' be?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//「例えば重度の躁鬱病患者だが＠一般に鬱状態から躁状態に転じる時にもっとも自殺が多いと言われちょる。￥
+	OutputLine(NULL, "「例えば重度の躁鬱病患者だが、",
+		   NULL, "\"Like a person with a serious bipolar disorder.", Line_WaitForInput);
+	OutputLine(NULL, "一般に鬱状態から躁状態に転じる時にもっとも自殺が多いと言われちょる。」",
+		   NULL, " It's believed that people are most likely to attempt suicide when swinging from depression to mania.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "black", "down", 0, 0, 1300 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　躁鬱（そううつ）病というのは鬱（うつ）病とは異なる＠
+	OutputLine(NULL, "　躁鬱（そううつ）病というのは鬱（うつ）病とは異なる。",
+		   NULL, "Clinical depression and bipolar disorder are different.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　鬱病は鬱状態という非常にネガティブな精神状態のみを引き起こすが＠躁鬱病は、このネガティブな鬱状態と交互に、非常にアクティブな躁状態を引き起こす￥
+	OutputLine(NULL, "　鬱病は鬱状態という非常にネガティブな精神状態のみを引き起こすが、",
+		   NULL, "Clinical depression indicates a prolonged state of depression,", Line_WaitForInput);
+	OutputLine(NULL, "躁鬱病は、このネガティブな鬱状態と交互に、非常にアクティブな躁状態を引き起こす。",
+		   NULL, " whereas bipolar disorder is characterized by a passive depressed state accompanied by a very active manic state.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawScene( "bg_113", 400 );
+
+//「鬱状態の患者は自信を喪失し非常に悲観的だ＠だが自殺もせん＠自殺をする気力すらないからだ＠...躁の状態もまた自殺をせん＠
+//　今度は逆に、非常に自信過剰で行動的なので、自らを順風満帆と思う＠だから自殺などせんのだ。＠
+	OutputLine(NULL, "「鬱状態の患者は自信を喪失し非常に悲観的だ。",
+		   NULL, "\"Individuals with clinical depression suffer from low self-esteem and are quite pessimistic,", Line_WaitForInput);
+	OutputLine(NULL, "だが自殺もせん。",
+		   NULL, " but rarely commit suicide.", Line_WaitForInput);
+	OutputLine(NULL, "自殺をする気力すらないからだ。",
+		   NULL, " They do not have the willpower to commit suicide.", Line_WaitForInput);
+	OutputLine(NULL, "…躁の状態もまた自殺をせん。",
+		   NULL, " Nor does mania on its own lead to suicide.", Line_WaitForInput);
+	OutputLine(NULL, "　今度は逆に、非常に自信過剰で行動的なので、自らを順風満帆と思う。",
+		   NULL, " That has an opposite effect, filling the person with confidence and making them feel as though they're walking on air.", Line_WaitForInput);
+	OutputLine(NULL, "だから自殺などせんのだ。」",
+		   NULL, " Thus, they do not commit suicide.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「...面白いですねぇ＠どっちの状態でも自殺をしないのに、状態が入れ替わる時に自殺するんですか。￥
+	OutputLine(NULL, "「…面白いですねぇ。",
+		   NULL, "\"...That's interesting.", Line_WaitForInput);
+	OutputLine(NULL, "どっちの状態でも自殺をしないのに、状態が入れ替わる時に自殺するんですか。」",
+		   NULL, " Neither state causes suicide, but when the condition changes, they might do so?\"", Line_Normal);
+	ClearMessage();
+
+//「鬱状態には自殺願望はあるが、自殺という大仕事をげる気力すらもない＠だが躁状態が始まると徐々に気力が充実し、体の自由が利くようになってくる。＠
+	OutputLine(NULL, "「鬱状態には自殺願望はあるが、自殺という大仕事を遂げる気力すらもない。",
+		   NULL, "\"There is a desire to commit suicide when in a state of depression, but they do not have the willpower to commit such a formidable act.", Line_WaitForInput);
+	OutputLine(NULL, "だが躁状態が始まると徐々に気力が充実し、体の自由が利くようになってくる。」",
+		   NULL, " But when they enter mania, they gain a burst of willpower and their body moves as they desire.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+//「なぁるほど＠　つまり自殺する気力が回復するわけですね。＠
+	OutputLine(NULL, "「なぁるほど！",
+		   NULL, "\"I see!", Line_WaitForInput);
+	OutputLine(NULL, "　つまり自殺する気力が回復するわけですね。」",
+		   NULL, " So it means they gain the willpower to commit suicide.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「そういうことじゃの＠だからこの時期に変な気を起こさんように、向精神薬をたっぷりと処方するわけじゃな。￥
+	OutputLine(NULL, "「そういうことじゃの。",
+		   NULL, "\"That's how it goes.", Line_WaitForInput);
+	OutputLine(NULL, "だからこの時期に変な気を起こさんように、向精神薬をたっぷりと処方するわけじゃな。」",
+		   NULL, " That's why patients are given sedatives during that time to keep them from acting on their impulses.\"", Line_Normal);
+	ClearMessage();
+
+//「...では富竹氏はこの躁鬱病患者だったんですかねぇ？＠
+	OutputLine(NULL, "「…では富竹氏はこの躁鬱病患者だったんですかねぇ？」",
+		   NULL, "\"...Then was Tomitake bipolar?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「躁鬱病患者の自殺はちゃんとした文化的な自殺だ＠飛び降りとか首吊りとか＠ヤクの禁断症状のような自虐行動とはまったく違うぞい！＠
+	OutputLine(NULL, "「躁鬱病患者の自殺はちゃんとした文化的な自殺だ。",
+		   NULL, "\"People who suffer from bipolar disorder generally commit suicide by more 'civilized' means.", Line_WaitForInput);
+	OutputLine(NULL, "飛び降りとか首吊りとか。",
+		   NULL, " Like, say hanging, or jumping off a building.", Line_WaitForInput);
+	OutputLine(NULL, "ヤクの禁断症状のような自虐行動とはまったく違うぞい！」",
+		   NULL, " Self-harm as though going through withdrawal is completely different!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「富竹氏の自殺は文化的じゃないですよねぇ＠
+	OutputLine(NULL, "「富竹氏の自殺は文化的じゃないですよねぇ。",
+		   NULL, "\"Tomitake's death wasn't civilized...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　......ではやっぱり薬物中毒と考えるのが自然ですか＠最初に言った、自殺したくなる精神状態を起こす薬ってのを教えてください。￥
+	OutputLine(NULL, "　……ではやっぱり薬物中毒と考えるのが自然ですか。",
+		   NULL, "So one would think it was caused by some foreign substance.", Line_WaitForInput);
+	OutputLine(NULL, "最初に言った、自殺したくなる精神状態を起こす薬ってのを教えてください。」",
+		   NULL, " As I said from the start: tell me of a drug that causes someone to commit suicide.\"", Line_Normal);
+	ClearMessage();
+
+
+//「メトアンフェタミン中毒は躁鬱病に近い症状を起こすと報告されとる＠覚醒剤のことだ＠
+	OutputLine(NULL, "「メトアンフェタミン中毒は躁鬱病に近い症状を起こすと報告されとる。",
+		   NULL, "\"There are reports that methamphetamine overdoses produce a condition that resembles bipolar disorder.", Line_WaitForInput);
+	OutputLine(NULL, "覚醒剤のことだ。",
+		   NULL, " It's a stimulant.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　......それからバルビツール酸誘導体中毒にも異常行為が報告されとるがあまり一般的ではないのう＠こっちは睡眠薬のことだ。＠
+	OutputLine(NULL, "　……それからバルビツール酸誘導体中毒にも異常行為が報告されとるがあまり一般的ではないのう。",
+		   NULL, "...Barbiturate overdoses are also reported to cause erratic behavior.", Line_WaitForInput);
+	OutputLine(NULL, "こっちは睡眠薬のことだ。」",
+		   NULL, " That's a sleep aid.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「覚醒剤反応、出なかったんですよねぇ＠...他の可能性は？￥
+	OutputLine(NULL, "「覚醒剤反応、出なかったんですよねぇ。",
+		   NULL, "\"There were no signs of stimulants.", Line_WaitForInput);
+	OutputLine(NULL, "…他の可能性は？」",
+		   NULL, " Are there any other possibilities?\"", Line_Normal);
+	ClearMessage();
+
+
+//「あとは病気しか考えられん＠
+	OutputLine(NULL, "「あとは病気しか考えられん。",
+		   NULL, "\"All I can think of is that it's some sort of illness.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　バセドー病等の甲状腺異常を引き起こす病気にしばしば躁鬱病に似た症状が報告されとる＠だがバセドー病は特徴的な症状が多い＠仏は違うの。＠
+	OutputLine(NULL, "　バセドー病等の甲状腺異常を引き起こす病気にしばしば躁鬱病に似た症状が報告されとる。",
+		   NULL, "Something like Graves' disease, which affects the thyroid, and is known to cause symptoms that resemble bipolar disorder.", Line_WaitForInput);
+	OutputLine(NULL, "だがバセドー病は特徴的な症状が多い。",
+		   NULL, " But Graves' disease has many characteristic symptoms of its own.", Line_WaitForInput);
+	OutputLine(NULL, "仏は違うの。」",
+		   NULL, " The deceased exhibited none of them.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「もっと突発的に発生するものはありませんかねぇ＠今回のケースと合うような、突発性で自殺したくなるようなヤツです。￥
+	OutputLine(NULL, "「もっと突発的に発生するものはありませんかねぇ。",
+		   NULL, "\"I wonder, is there something that could happen more spontaneously?", Line_WaitForInput);
+	OutputLine(NULL, "今回のケースと合うような、突発性で自殺したくなるようなヤツです。」",
+		   NULL, " Something that fits this case and would cause someone to want to commit suicide all of a sudden.\"", Line_Normal);
+	ClearMessage();
+
+
+//「急性器質性精神病、っちゅうのを知っとるかの＠
+	OutputLine(NULL, "「急性器質性精神病、っちゅうのを知っとるかの？",
+		   NULL, "\"Are you familiar with organic mental disorders?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　早い話が、脳障害によって精神がとんちんかんになる状態じゃな＠これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。＠
+	OutputLine(NULL, "　早い話が、脳障害によって精神がとんちんかんになる状態じゃな。",
+		   NULL, "In short, it's a condition where the brain is out of whack due to physical injury or illness.", Line_WaitForInput);
+	OutputLine(NULL, "これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。」",
+		   NULL, " It can be caused by drugs, but it can also be caused by physical trauma, encephalitis, a stroke, or even tumors.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「つまり、薬によらなくても異常な精神状態に陥る可能性があると。＠
+	OutputLine(NULL, "「つまり、薬によらなくても異常な精神状態に陥る可能性があると。」",
+		   NULL, "\"Basically, even without a drug, one can succumb to an irregular mental state.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「仏は犯人に囲まれて命に危険が迫っとったんじゃろ＠
+	OutputLine(NULL, "「仏は犯人に囲まれて命に危険が迫っとったんじゃろ？",
+		   NULL, "\"The deceased was surrounded after being chased, and his life was in danger, right?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　極度の緊張が続いて、それに分泌異常が重なって、さらに打ち所が悪くて脳に障害が起こり自虐行動に走った...可能性もあるかもしれんの。￥
+	OutputLine(NULL, "　極度の緊張が続いて、それに分泌異常が重なって、さらに打ち所が悪くて脳に障害が起こり自虐行動に走った…可能性もあるかもしれんの。」",
+		   NULL, "All that stress could have messed with his brain chemistry, he could have hit his head, and those factors combined might have caused him to mutilate himself. It's a possibility.\"", Line_Normal);
+	ClearMessage();
+
+
+//「...............もうちょっと省略して言ってくれませんかねぇ...。￥
+	OutputLine(NULL, "「……………もうちょっと省略して言ってくれませんかねぇ…。」",
+		   NULL, "\"...Could you explain it to me in simpler terms...?\"", Line_Normal);
+	ClearMessage();
+
+
+//「かっかっか＠　つまり、乱闘中に豆腐の角に頭ぶつけて、それでとんちんかんになったんじゃないかと言っとるんだ。＠
+	OutputLine(NULL, "「かっかっか！",
+		   NULL, "\"Bwah ha ha!", Line_WaitForInput);
+	OutputLine(NULL, "　つまり、乱闘中に豆腐の角に頭ぶつけて、それでとんちんかんになったんじゃないかと言っとるんだ。」",
+		   NULL, " Basically, he knocked his noggin in the brawl and that made him go haywire.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「なっはっはっはっはっはっは！！＠　じゃあホシには殺意はなかったってことですかねぇ＠ちょいと小銭を巻き上げようと殴ったら、たまたま殴り所が悪かったと！￥
+	OutputLine(NULL, "「なっはっはっはっはっはっは！！！",
+		   NULL, "\"Nahahahahahahah!!!", Line_WaitForInput);
+	OutputLine(NULL, "　じゃあホシには殺意はなかったってことですかねぇ。",
+		   NULL, " Then his lady didn't have any intent to kill.", Line_WaitForInput);
+	OutputLine(NULL, "ちょいと小銭を巻き上げようと殴ったら、たまたま殴り所が悪かったと！」",
+		   NULL, " Just smacked him in a bad place when he nicked some change!\"", Line_Normal);
+	ClearMessage();
+
+//　でっぷりした中年が二人してげらげらと下品に笑い合う￥
+	OutputLine(NULL, "　でっぷりした中年が二人してげらげらと下品に笑い合う。",
+		   NULL, "The two plump men laughed hoarsely.", Line_Normal);
+	ClearMessage();
+
+//「.........なんてわけはありませんねぇ。＠
+	OutputLine(NULL, "「………なんてわけはありませんねぇ。」",
+		   NULL, "\"...But of course, it's not like that.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「こほん＠...いかにも。￥
+	OutputLine(NULL, "「こほん。",
+		   NULL, "\"Ahem.", Line_WaitForInput);
+	OutputLine(NULL, "…いかにも。」",
+		   NULL, " Undoubtedly...\"", Line_Normal);
+	ClearMessage();
+
+//「薬物の常用にせよ、精神的なものにせよ、仏の身元がカギを握っとるぞい＠そっちはどうなっとるんじゃ？＠
+	OutputLine(NULL, "「薬物の常用にせよ、精神的なものにせよ、仏の身元がカギを握っとるぞい。",
+		   NULL, "\"If it was habitual drug use, if it was something mental, the deceased's body holds the key.", Line_WaitForInput);
+	OutputLine(NULL, "そっちはどうなっとるんじゃ？」",
+		   NULL, " How are things on your end?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「ありゃぁこんな時間＠　そろそろ戻らないと熊ちゃん、怒っちゃいますねぇ。＠
+	OutputLine(NULL, "「ありゃぁこんな時間！",
+		   NULL, "\"Oh my goodness, look at the time!", Line_WaitForInput);
+	OutputLine(NULL, "　そろそろ戻らないと熊ちゃん、怒っちゃいますねぇ。」",
+		   NULL, " I need to get back soon or Kuma-chan will get angry with me.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「おう＠　頑張れよ＠　いいお年をの！＠
+	OutputLine(NULL, "「おう！",
+		   NULL, "\"Yeah!", Line_WaitForInput);
+	OutputLine(NULL, "　頑張れよ！",
+		   NULL, " Good luck!", Line_WaitForInput);
+	OutputLine(NULL, "　いいお年をの！」",
+		   NULL, " Best wishes!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「いいお年を！￥
+	OutputLine(NULL, "「いいお年を！」",
+		   NULL, "\"Best wishes!\"", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+
+}

@@ -1,0 +1,238 @@
+﻿void main()
+{
+
+
+//■元気ないね。
+
+//*Sub_Tips_018
+
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	PlayBGM( 1, "msys12", 128, 0 );
+	DrawScene( "bg_108", 1000 );
+	DrawBustshotWithFiltering( 3, "re_se_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「最近、圭一くんの元気がないね＠機嫌が悪いのかな。＠
+	OutputLine(NULL, "「最近、圭一くんの元気がないね。",
+		   NULL, "\"Keiichi-kun's been feeling down lately.", Line_WaitForInput);
+	OutputLine(NULL, "機嫌が悪いのかな。」",
+		   NULL, " Maybe he's in a bad mood.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "me_se_wi_a1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「さぁてどうしたんだろうね＠生理でも来てんじゃないのー？＠
+	OutputLine(NULL, "「さぁてどうしたんだろうね。",
+		   NULL, "\"I wonder.", Line_WaitForInput);
+	OutputLine(NULL, "生理でも来てんじゃないのー？」",
+		   NULL, " Maybe he's on his period.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "re_se_ha_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「みみ、魅ぃちゃんそれ下品...！＠
+	OutputLine(NULL, "「みみ、魅ぃちゃんそれ下品…！」",
+		   NULL, "\"M-M-Mii-chan, that's gross...!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 1, "me_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「うっひゃっひゃっひゃっひゃ！！￥
+	OutputLine(NULL, "「うっひゃっひゃっひゃっひゃ！！」",
+		   NULL, "\"Uhyak hyak hyak hyak!!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot( 5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 400, TRUE );
+
+//「......どう思う？＠
+	OutputLine(NULL, "「……どう思う？」",
+		   NULL, "\"...What do you think?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「さーね。＠
+	OutputLine(NULL, "「さーね。」",
+		   NULL, "\"Don't know.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「.........。＠
+	OutputLine(NULL, "「………。」",
+		   NULL, "\"...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「圭ちゃん、ひょっとして...＠.........かな？＠
+	OutputLine(NULL, "「圭ちゃん、ひょっとして…。",
+		   NULL, "\"Could be that Kei-chan...", Line_WaitForInput);
+	OutputLine(NULL, "………かな？」",
+		   NULL, " Maybe...?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「......わかんない。￥
+	OutputLine(NULL, "「……わかんない。」",
+		   NULL, "\"...I don't know.\"", Line_Normal);
+	ClearMessage();
+
+//「あの日、圭ちゃんと車で話してたの、中年のでっぷりした男だったんでしょ？＠
+	OutputLine(NULL, "「あの日、圭ちゃんと車で話してたの、中年のでっぷりした男だったんでしょ？」",
+		   NULL, "\"That day, Kei-chan was in that car talking to some tubby middle-aged guy, right?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「うん＠間違いない。＠
+	OutputLine(NULL, "「うん。",
+		   NULL, "\"Yeah.", Line_WaitForInput);
+	OutputLine(NULL, "間違いない。」",
+		   NULL, " No mistake.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「大石のヤツ、圭ちゃんに何を吹き込んでるのかなぁ...。＠
+	OutputLine(NULL, "「大石のヤツ、圭ちゃんに何を吹き込んでるのかなぁ…。」",
+		   NULL, "\"That Ooishi, he probably fed him something fishy...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「真剣そうだったよ＠圭一くんは顔面蒼白だった。￥
+	OutputLine(NULL, "「真剣そうだったよ。",
+		   NULL, "\"He was so serious.", Line_WaitForInput);
+	OutputLine(NULL, "圭一くんは顔面蒼白だった。」",
+		   NULL, " Keiichi-kun's face was so pale.\"", Line_Normal);
+	ClearMessage();
+
+//「.........あのねぇ＠レナはよく知らないだろうけど＠/
+	OutputLine(NULL, "「………あのねぇ、",
+		   NULL, "\"You see...", Line_WaitForInput);
+	OutputLine(NULL, "レナはよく知らないだろうけど、",
+		   NULL, " You might not know this...", Line_WaitForInput);
+
+
+	PlaySE( 3, "wa_024", 128, 64 );
+
+//実はあいつ、オヤシロさまの使いなんだよ。＠
+	OutputLine(NULL, "実はあいつ、オヤシロさまの使いなんだよ。」",
+		   NULL, " But he's actually the messenger of Oyashiro-sama.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「え＠　何の話？＠
+	OutputLine(NULL, "「え？",
+		   NULL, "\"Huh?", Line_WaitForInput);
+	OutputLine(NULL, "　何の話？」",
+		   NULL, " What do you mean?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「あいつが現れるとね、...必ず鬼隠しが起こるの＠......本当だよ。＠
+	OutputLine(NULL, "「あいつが現れるとね、…必ず鬼隠しが起こるの。",
+		   NULL, "\"Whenever he shows up... someone is demoned away.", Line_WaitForInput);
+	OutputLine(NULL, "……本当だよ。」",
+		   NULL, " No lie...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「............あれ＠　そうなの？￥
+	OutputLine(NULL, "「…………あれ？",
+		   NULL, "\"...Oh?", Line_WaitForInput);
+	OutputLine(NULL, "　そうなの？」",
+		   NULL, " Is that so?\"", Line_Normal);
+	ClearMessage();
+
+//「......一昨年、梨花ちゃんのお母さんが入水したでしょ＠　その直前に大石が尋問してたんだよ。＠
+	OutputLine(NULL, "「……一昨年、梨花ちゃんのお母さんが入水したでしょ？",
+		   NULL, "\"...The year before last, when Rika-chan's mom drowned, right?", Line_WaitForInput);
+	OutputLine(NULL, "　その直前に大石が尋問してたんだよ。」",
+		   NULL, " Right before that, she was visited by Ooishi.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「.........そう言えば、悟史くんが転校する前にもいたね。＠
+	OutputLine(NULL, "「………そう言えば、悟史くんが転校する前にもいたね。」",
+		   NULL, "\"...Now that you mention it, it happened before Satoshi-kun transferred out.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「転校～＠　あはははははは、レナはいいヤツだよなぁ。￥
+	OutputLine(NULL, "「転校〜？",
+		   NULL, "\"Transferred~?", Line_WaitForInput);
+	OutputLine(NULL, "　あはははははは、レナはいいヤツだよなぁ。」",
+		   NULL, " Ahahahahahaha, you're so sweet, Rena.\"", Line_Normal);
+	ClearMessage();
+
+//「で、今度は圭一くんの前に現れたんだ＠......じゃあ圭一くんも鬼隠しになっちゃう？＠
+	OutputLine(NULL, "「で、今度は圭一くんの前に現れたんだ。",
+		   NULL, "\"So this time he's appeared before Keiichi-kun...", Line_WaitForInput);
+	OutputLine(NULL, "……じゃあ圭一くんも鬼隠しになっちゃう？」",
+		   NULL, " So Keiichi-kun is going to be demoned away too?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//「........................。＠
+	OutputLine(NULL, "「……………………。」",
+		   NULL, "\"...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「........................。￥
+	OutputLine(NULL, "「……………………。」",
+		   NULL, "\"...\"", Line_Normal);
+	ClearMessage();
+
+//　沈黙の空白がじんわりと続く＠そしてふと途切れた￥
+	OutputLine(NULL, "　沈黙の空白がじんわりと続く。",
+		   NULL, "An empty silence hung in the air.", Line_WaitForInput);
+	OutputLine(NULL, "そしてふと途切れた。",
+		   NULL, " And then it was suddenly interrupted...", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshot( 3, "re_se_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
+	DrawBustshot( 1, "me_se_wa_b1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, TRUE );
+	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 3000, TRUE );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　...哄笑だった￥
+	OutputLine(NULL, "　…哄笑だった。",
+		   NULL, "By loud laughter...", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+}

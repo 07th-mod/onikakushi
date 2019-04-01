@@ -1,0 +1,790 @@
+﻿void main()
+{
+//■セブンスマートにて
+
+//*Sub_Tips_020
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	DrawScene( "bg_222", 1000 );
+	PlayBGM( 1, "msys01", 128, 0 );
+
+//　セブンスマートは市内にある、酒類食料品の安売量販店だ￥
+	OutputLine(NULL, "　セブンスマートは市内にある、酒類食料品の安売量販店だ。",
+		   NULL, "The Seventh Mart was a bargain supermarket with food and alcohol.", Line_Normal);
+	ClearMessage();
+
+//「なぁに、圭一＠こんなにたくさん＠　全部違う種類にすることはないでしょ？！＠
+	OutputLine(NULL, "「なぁに、圭一。",
+		   NULL, "\"What's this, Keiichi?", Line_WaitForInput);
+	OutputLine(NULL, "こんなにたくさん！",
+		   NULL, " So many!", Line_WaitForInput);
+	OutputLine(NULL, "　全部違う種類にすることはないでしょ？！」",
+		   NULL, " There's no reason to get all the different kinds, is there!?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　色とりどりのカップめんをどっさりとカートに載せたんだ￥
+	OutputLine(NULL, "　色とりどりのカップめんをどっさりとカートに載せたんだ。",
+		   NULL, "I flopped all the different colored cup noodle bowls into the cart.", Line_Normal);
+	ClearMessage();
+
+//「最近のカップめんは凝ってて種類も多いんだよ＠どれも一通りは食ってみたいし。＠
+	OutputLine(NULL, "「最近のカップめんは凝ってて種類も多いんだよ。",
+		   NULL, "\"Cup noodles have gotten so elaborate recently, and there are a bunch of different types.", Line_WaitForInput);
+	OutputLine(NULL, "どれも一通りは食ってみたいし。」",
+		   NULL, " I want to try each of them at least once.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　半ばわがままだとはわかっていたが、一応はと思っての挑戦だった＠
+	OutputLine(NULL, "　半ばわがままだとはわかっていたが、一応はと思っての挑戦だった。",
+		   NULL, "I knew it was pretty selfish of me, but I thought I'd at least give it a try.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「圭一＠箱売りしてるのにしなさい。安いから。＠
+	OutputLine(NULL, "「圭一。",
+		   NULL, "\"Keiichi.", Line_WaitForInput);
+	OutputLine(NULL, "箱売りしてるのにしなさい。安いから。」",
+		   NULL, " Buy them in the big case. It's cheaper.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　親父が渋る￥
+	OutputLine(NULL, "　親父が渋る。",
+		   NULL, "Dad faltered.", Line_Normal);
+	ClearMessage();
+
+//　まぁこういう展開は読めていた＠
+	OutputLine(NULL, "　まぁこういう展開は読めていた。",
+		   NULL, "Well, I had a feeling it'd end up like this.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　親父が出てきたらどうしようもない￥
+	OutputLine(NULL, "　親父が出てきたらどうしようもない。",
+		   NULL, "Dad knew there was no point in him butting in.", Line_Normal);
+	ClearMessage();
+
+//「それじゃ１種類しか食えないよ＠　飽きちゃうって！＠
+	OutputLine(NULL, "「それじゃ１種類しか食えないよ！",
+		   NULL, "\"Then I'd only get to eat one kind!", Line_WaitForInput);
+	OutputLine(NULL, "　飽きちゃうって！」",
+		   NULL, " I'd get bored with it!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　形式だけの抵抗だ＠
+	OutputLine(NULL, "　形式だけの抵抗だ。",
+		   NULL, "I was resisting as a formality.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　心の中では早々に諦め、どのラーメンの箱を買うか迷っていた￥
+	OutputLine(NULL, "　心の中では早々に諦め、どのラーメンの箱を買うか迷っていた。",
+		   NULL, "I had already given up inside and wasn't sure which case of noodles to get.", Line_Normal);
+	ClearMessage();
+
+//「決められないならお母さんが決めちゃうわよ。＠
+	OutputLine(NULL, "「決められないならお母さんが決めちゃうわよ。」",
+		   NULL, "\"If you can't pick, then Mommy will pick for you.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　そう急かされても困る...＠
+	OutputLine(NULL, "　そう急かされても困る…！",
+		   NULL, "You don't have to rush me...!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　手早く目当てのラーメンの箱を探しに行く￥
+	OutputLine(NULL, "　手早く目当てのラーメンの箱を探しに行く。",
+		   NULL, "I quickly search the cases of noodles for what I want.", Line_Normal);
+	ClearMessage();
+
+//「豚骨ショウガ味、デカカップ＠　ねぇ圭一、もう少し普通のにしない？＠
+	OutputLine(NULL, "「豚骨ショウガ味、デカカップ？",
+		   NULL, "\"Pork -bone & Ginger, large cup?", Line_WaitForInput);
+	OutputLine(NULL, "　ねぇ圭一、もう少し普通のにしない？」",
+		   NULL, " Hey, Keiichi, can't you get a more normal one?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　お袋に選ばせると醤油味だと塩味だの、手堅いチョイスに固まる傾向がある￥
+	OutputLine(NULL, "　お袋に選ばせると醤油味だと塩味だの、手堅いチョイスに固まる傾向がある。",
+		   NULL, "If I let Mom pick, she'd err on the side of safety and get soy sauce or salt flavored.", Line_Normal);
+	ClearMessage();
+
+//「豚骨はうまいんだよ＠　大盛りだけど大味ってわけじゃないし...！！＠
+	OutputLine(NULL, "「豚骨はうまいんだよ！",
+		   NULL, "\"Pork-bone is good!", Line_WaitForInput);
+	OutputLine(NULL, "　大盛りだけど大味ってわけじゃないし…！！」",
+		   NULL, " I don't want a big bowl of tasteless stuff...!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　回想の中の俺が、自らの選択したラーメンの正当性を主張している＠
+	OutputLine(NULL, "　回想の中の俺が、自らの選択したラーメンの正当性を主張している。",
+		   NULL, "I remembered insisting that the noodles I picked were the right kind.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+	PlaySE( 3, "wa_023", 128, 64 );
+	SetValidityOfWindowDisablingWhenGraphicsControl( FALSE );
+	DrawFilm( 2, 153, 153, 153, 255, 0, 3000, TRUE );
+////print 42
+
+//　この、すでにラミネートでパッキングされてしまった、終わってしまった時間の世界で振り返るなんてことができるわけがない...￥
+	OutputLine(NULL, "　この、すでにラミネートでパッキングされてしまった、終わってしまった時間の世界で振り返るなんてことができるわけがない…。",
+		   NULL, "In this frozen memory in time, this encapsulated world, I didn't have the power to look around my surroundings.", Line_Normal);
+	ClearMessage();
+
+//　だから...俺にできるのは、この時間の俺の視覚と聴覚、気配をさらに鋭敏にすることだけだ￥
+	OutputLine(NULL, "　だから…俺にできるのは、この時間の俺の視覚と聴覚、気配をさらに鋭敏にすることだけだ。",
+		   NULL, "So... I did what I could and reached out with my hearing and vision, sharpening my senses to find the presence I overlooked.", Line_Normal);
+	ClearMessage();
+
+//どんなに視界内を探しても......レナは見つけられない＠
+	OutputLine(NULL, "　どんなに視界内を探しても……レナは見つけられない。",
+		   NULL, "No matter how much I search through my field of vision... I couldn't see Rena.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　時間を遡らせて探す＠
+	OutputLine(NULL, "　時間を遡らせて探す。",
+		   NULL, "I rewound the situation, searching.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　だがもちろん見つけられない￥
+	OutputLine(NULL, "　だがもちろん見つけられない。",
+		   NULL, "But of course, I couldn't find her.", Line_Normal);
+	ClearMessage();
+	SetValidityOfWindowDisablingWhenGraphicsControl( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+
+	FadeFilm( 0, TRUE );
+
+//　では...俺の視界外、死角から俺を伺っていた...￥
+	OutputLine(NULL, "　では…俺の視界外、死角から俺を伺っていた…？",
+		   NULL, "Then... was she spying at me from my blind spot...?", Line_Normal);
+	ClearMessage();
+
+//　聴覚や気配を遡り、探りなおす￥
+	OutputLine(NULL, "　聴覚や気配を遡り、探りなおす。",
+		   NULL, "I go through the sound and presences again, looking.", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 1, "msys07", 128, 0 );
+
+//　他の買い物客の気配＠
+	OutputLine(NULL, "　他の買い物客の気配。",
+		   NULL, "I could sense the other customers.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　どれも雑多で...好き勝手に動いている＠
+	OutputLine(NULL, "　どれも雑多で…好き勝手に動いている。",
+		   NULL, "They were all mixed about... moving as they please.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　じっと伺うものもいなければ、俺の背後を付回す気配もない￥
+	OutputLine(NULL, "　じっと伺うものもいなければ、俺の背後を付回す気配もない。",
+		   NULL, "There was nobody looking over this way and no one trying to get behind me.", Line_Normal);
+	ClearMessage();
+
+//　ない＠ないはず＠多分ない＠
+	OutputLine(NULL, "　ない。",
+		   NULL, "Not here.", Line_WaitForInput);
+	OutputLine(NULL, "ないはず。",
+		   NULL, " Couldn't be here.", Line_WaitForInput);
+	OutputLine(NULL, "多分ない。",
+		   NULL, " Probably wasn't here.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　いくら無警戒な当時の俺でも...ぴったり後ろを付けられれば絶対に気付くはず＠
+	OutputLine(NULL, "　いくら無警戒な当時の俺でも…ぴったり後ろを付けられれば絶対に気付くはず。",
+		   NULL, "I would definitely notice if someone was right behind me... even when I wasn't on my guard.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　多分という曖昧な表現を使いながら、絶対という矛盾した形容詞を使ってしまうことに苦笑する...￥
+	OutputLine(NULL, "　多分という曖昧な表現を使いながら、絶対という矛盾した形容詞を使ってしまうことに苦笑する…。",
+		   NULL, "I smiled wryly at the thought of using a vague word like \"probably\" right before contradicting it with \"definitely.\"", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+	PlaySE( 3, "wa_025", 128, 64 );
+
+//　その時、ぞくりとして時間の再生を止めた￥
+	OutputLine(NULL, "　その時、ぞくりとして時間の再生を止めた。",
+		   NULL, "Then, I paused my mental replay as a chill ran down my spine.", Line_Normal);
+	ClearMessage();
+
+//　.........確かに後ろに影の気配があった￥
+	OutputLine(NULL, "　………確かに後ろに影の気配があった。",
+		   NULL, "...There was definitely a presence like a shadow behind me.", Line_Normal);
+	ClearMessage();
+
+//　それは...例えようもない恐怖だった＠
+	OutputLine(NULL, "　それは…例えようもない恐怖だった。",
+		   NULL, "That was... a terror unlike any other.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　本当の俺の後ろに現れた気配なら、振り返って確かめることもできる＠
+	OutputLine(NULL, "　本当の俺の後ろに現れた気配なら、振り返って確かめることもできる。",
+		   NULL, "If a presence really had manifested behind me, I would definitely have turned around to check for it.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　だが、すでに終わってしまった時間の世界にいる俺には振り向くことはできない...￥
+	OutputLine(NULL, "　だが、すでに終わってしまった時間の世界にいる俺には振り向くことはできない…。",
+		   NULL, "But the world had moved on, and there was no way for me to turn around...", Line_Normal);
+	ClearMessage();
+
+//　そんな恐ろしい影を背負いながら...俺は嬉々として店内を走り回り、カップめんの箱探しをしていた...￥
+	OutputLine(NULL, "　そんな恐ろしい影を背負いながら…俺は嬉々として店内を走り回り、カップめんの箱探しをしていた…？",
+		   NULL, "While carrying that frightening shadow on my back, I was gleefully running around the store searching for a case of noodles...?", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 1, "msys16", 128, 0 );
+
+//　お袋への悪態をつきながら、インスタントのコーナーを駆け回る俺...＠
+	OutputLine(NULL, "　お袋への悪態をつきながら、インスタントのコーナーを駆け回る俺…。",
+		   NULL, "Running through the instant noodle section, bad-mouthing my mom...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　だが...その背後には常に気配がぴったりと。影のように付きまとっていたのだ＠
+	OutputLine(NULL, "　だが…その背後には常に気配がぴったりと。影のように付きまとっていたのだ。",
+		   NULL, "But... There was that presence constantly at my back. Sticking to me like a shadow.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　それを......確かめようもない、今になって自覚することが......これほど恐ろしく、おぞましいものなのか......￥
+	OutputLine(NULL, "　それを……確かめようもない、今になって自覚することが……これほど恐ろしく、おぞましいものなのか……。",
+		   NULL, "No way to see what it was. Realizing it now after the fact was horrifying and repulsive...", Line_Normal);
+	ClearMessage();
+
+//　終わった時間の世界を......俺が嬉々として走り抜けている￥
+	OutputLine(NULL, "　終わった時間の世界を……俺が嬉々として走り抜けている。",
+		   NULL, "In that moment of time, I was running around gleefully...", Line_Normal);
+	ClearMessage();
+
+//　ダンボールを抱えて＠
+	OutputLine(NULL, "　ダンボールを抱えて。",
+		   NULL, "Carrying that cardboard box.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　パタパタと＠
+	OutputLine(NULL, "　パタパタと。",
+		   NULL, "Tip-tap.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　......だが、その足音はよく聞きなおすと......ぺたぺたという、俺の足音以外の何かを確かに含んでいた￥
+	OutputLine(NULL, "　……だが、その足音はよく聞きなおすと……ぺたぺたという、俺の足音以外の何かを確かに含んでいた。",
+		   NULL, "...But listening to that moment again... I could hear footsteps other than mine going pit-pat with every step.", Line_Normal);
+	ClearMessage();
+
+//　パタパタパタ＠ぺたぺたぺた＠
+	OutputLine(NULL, "　パタパタパタ。",
+		   NULL, "tip-tap tip-tap tip-tap.", Line_WaitForInput);
+	OutputLine(NULL, "ぺたぺたぺた。",
+		   NULL, " pit-pat pit-pat pit-pat.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　パタパタ＠ぺたぺた＠
+	OutputLine(NULL, "　パタパタ。",
+		   NULL, "tip-tap tip-tap.", Line_WaitForInput);
+	OutputLine(NULL, "ぺたぺた。",
+		   NULL, " pit-pat pit-pat.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　パタパタパタ＠ぺたぺたぺた￥
+	OutputLine(NULL, "　パタパタパタ。",
+		   NULL, "tip-tap tip-tap.", Line_WaitForInput);
+	OutputLine(NULL, "ぺたぺたぺた。",
+		   NULL, " pit-pat pit-pat.", Line_Normal);
+	ClearMessage();
+
+//　俺が走るのとまったく同じように、そのぺたぺたというまるで素足のような足音が、俺の後ろをつけていた￥
+	OutputLine(NULL, "　俺が走るのとまったく同じように、そのぺたぺたというまるで素足のような足音が、俺の後ろをつけていた。",
+		   NULL, "While I was running, the sound of those barefoot footsteps going pit-pat were right behind mine.", Line_Normal);
+	ClearMessage();
+
+//　終わった時間の世界を......俺が嬉々として走り抜けている＠
+	OutputLine(NULL, "　終わった時間の世界を……俺が嬉々として走り抜けている。",
+		   NULL, "Me running around gleefully... In that closed-off moment in time.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　だがそれは......聞こえていないから＠
+	OutputLine(NULL, "　だがそれは……聞こえていないから。",
+		   NULL, "But I... didn't hear it.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　いや。聞こえていたからこうして思い出せる￥
+	OutputLine(NULL, "　いや。聞こえていたからこうして思い出せる。",
+		   NULL, "No. I heard it. That's why I remembered it.", Line_Normal);
+	ClearMessage();
+
+//　...聞こえていたが気にしなかった＠
+	OutputLine(NULL, "　…聞こえていたが気にしなかった。",
+		   NULL, "...I didn't think I had heard anything.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　だから振り返らなかった＠
+	OutputLine(NULL, "　だから振り返らなかった。",
+		   NULL, "That's why I didn't turn around.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　だから、俺は振り返られない...！！￥
+	OutputLine(NULL, "　だから、俺は振り返られない…！！！",
+		   NULL, "That is why... I didn't turn around...!!!", Line_Normal);
+	ClearMessage();
+
+
+//　終わった時間の世界を、俺はぺたぺたと付ける足音にずっと追われている＠
+	OutputLine(NULL, "　終わった時間の世界を、俺はぺたぺたと付ける足音にずっと追われている。",
+		   NULL, "In that moment, the pit-pat of those footsteps were following me the entire time.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　もっと早く走って逃げることもできない＠
+	OutputLine(NULL, "　もっと早く走って逃げることもできない。",
+		   NULL, "I couldn't run faster and escape.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　終わった時間の俺は、すでに決められた速度でしか走れない＠
+	OutputLine(NULL, "　終わった時間の俺は、すでに決められた速度でしか走れない。",
+		   NULL, "I couldn't run any faster than I had ran at that time.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　振り返ることもできない￥
+	OutputLine(NULL, "　振り返ることもできない。",
+		   NULL, "I couldn't turn around.", Line_Normal);
+	ClearMessage();
+
+//　終わった時間の俺は、一度も後ろなんか振り返らなかったから＠
+	OutputLine(NULL, "　終わった時間の俺は、一度も後ろなんか振り返らなかったから。",
+		   NULL, "I hadn't turned around before. Not once.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　そして、両親の元にたどり着き、会話を始めるのだ＠影のような気配を背負ったまま￥
+	OutputLine(NULL, "　そして、両親の元にたどり着き、会話を始めるのだ。",
+		   NULL, "Then I returned to my parents and started talking.", Line_WaitForInput);
+	OutputLine(NULL, "影のような気配を背負ったまま。",
+		   NULL, " The shadow-like presence was right at my back.", Line_Normal);
+	ClearMessage();
+
+//　俺が動かないから、影も動かない＠だから音がしない＠それだけのこと＠
+	OutputLine(NULL, "　俺が動かないから、影も動かない。",
+		   NULL, "Since I didn't move, the shadow didn't move.", Line_WaitForInput);
+	OutputLine(NULL, "だから音がしない。",
+		   NULL, " That is why it made no sound.", Line_WaitForInput);
+	OutputLine(NULL, "それだけのこと。",
+		   NULL, " That was all.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　その時、俺は一歩も歩かずに両親と会話をしていたはずだった＠
+	OutputLine(NULL, "　その時、俺は一歩も歩かずに両親と会話をしていたはずだった。",
+		   NULL, "At that time, I hadn't taken a single step while talking with my parents.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　立ち尽くしたままだった＠間違いなく＠
+	OutputLine(NULL, "　立ち尽くしたままだった。",
+		   NULL, "I was just standing there.", Line_WaitForInput);
+	OutputLine(NULL, "間違いなく。",
+		   NULL, " This was undeniable.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　なのに、/
+	OutputLine(NULL, "　なのに、",
+		   NULL, "And yet...", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+//ぺた＠...と音がした￥
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "……ぺた。",
+		   NULL, " I heard it...", Line_WaitForInput);
+	OutputLine(NULL, "…と音がした。",
+		   NULL, " A pit-pat...", Line_Normal);
+	ClearMessage();
+
+//　そんなはずはない＠
+	OutputLine(NULL, "　そんなはずはない。",
+		   NULL, "That shouldn't be.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　俺が３歩駆けたら、３歩追う＠それがルールのはずだろ...￥
+	OutputLine(NULL, "　俺が３歩駆けたら、３歩追う。",
+		   NULL, "If I took three steps, it followed three steps.", Line_WaitForInput);
+	OutputLine(NULL, "それがルールのはずだろ…？",
+		   NULL, " Wasn't that the rule...?", Line_Normal);
+	ClearMessage();
+
+
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+//　もうそれ以上は音はしなかった＠
+	OutputLine(NULL, "　もうそれ以上は音はしなかった。",
+		   NULL, "There was no sound other than that.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　その時、世界中が停電になった＠...突然の真っ暗だった￥
+	OutputLine(NULL, "　その時、世界中が停電になった。",
+		   NULL, "At that time, the entire world had gone dark...", Line_WaitForInput);
+	OutputLine(NULL, "…突然の真っ暗だった。",
+		   NULL, " A sudden darkness.", Line_Normal);
+	ClearMessage();
+
+//　もう回想の旅は終わりだ＠
+	OutputLine(NULL, "　もう回想の旅は終わりだ。",
+		   NULL, "It was the end of my reflective journey.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　今日はもう眠い＠
+	OutputLine(NULL, "　今日はもう眠い。",
+		   NULL, "I was tired.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　やめにしたい＠
+	OutputLine(NULL, "　やめにしたい。",
+		   NULL, "I wanted to end it.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　誰か明かりを付けてくれ￥
+	OutputLine(NULL, "　誰か明かりを付けてくれ。",
+		   NULL, "Someone turn on the light.", Line_Normal);
+	ClearMessage();
+
+//　だが体は動かない＠
+	OutputLine(NULL, "　だが体は動かない。",
+		   NULL, "Except my body couldn't move.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　...終わった時間の世界に...縫い止められたように￥
+	OutputLine(NULL, "　…終わった時間の世界に…縫い止められたように。",
+		   NULL, "...As if I was sewn into... that moment in time.", Line_Normal);
+	ClearMessage();
+
+//　ぺた￥
+	OutputLine(NULL, "　ぺた。",
+		   NULL, "pit-pat", Line_Normal);
+	ClearMessage();
+
+//　前身の毛が逆立つ￥
+	OutputLine(NULL, "　前身の毛が逆立つ。",
+		   NULL, "My past self's hair stood on end.", Line_Normal);
+	ClearMessage();
+
+//　こんなバカな...？＠
+	OutputLine(NULL, "　こんなバカな…？！",
+		   NULL, "That's impossible...!?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　さっきからルール違反ばかりだ！＠
+	OutputLine(NULL, "　さっきからルール違反ばかりだ！！",
+		   NULL, "Now that's just breaking the rules!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　俺は歩いてない＠
+	OutputLine(NULL, "　俺は歩いてない！",
+		   NULL, "I haven't moved!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　だからお前も歩いちゃだめなんだ！＠
+	OutputLine(NULL, "　だからお前も歩いちゃだめなんだ！！",
+		   NULL, "So you shouldn't be moving, either!!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　俺は動けない＠　だからお前も動けないんだぞ！＠　ルールを守れッ！！￥
+	OutputLine(NULL, "　俺は動けない！",
+		   NULL, "I couldn't move!", Line_WaitForInput);
+	OutputLine(NULL, "　だからお前も動けないんだぞ！！",
+		   NULL, " So you shouldn't be able to move either!!", Line_WaitForInput);
+	OutputLine(NULL, "　ルールを守れッ！！！",
+		   NULL, " Follow the rules!!!", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 3, "wa_026", 128, 64 );
+
+//　ぺた＠
+	OutputLine(NULL, "　ぺた。",
+		   NULL, "pit-pat", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　なのにもう一回、その音が暗闇に響き渡った￥
+	OutputLine(NULL, "　なのにもう一回、その音が暗闇に響き渡った。",
+		   NULL, "Yet that sound echoed in the darkness once again.", Line_Normal);
+	ClearMessage();
+
+//　後頭部の髪の毛がチリチリとざわめく＠
+	OutputLine(NULL, "　後頭部の髪の毛がチリチリとざわめく。",
+		   NULL, "The hair on the back of my neck pricked up on end.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　髪の毛が触れるか触れないか、というくらいすぐ後ろに、......来ているのだ￥
+	OutputLine(NULL, "　髪の毛が触れるか触れないか、というくらいすぐ後ろに、……来ているのだ。",
+		   NULL, "It was so close... that it was hard to tell whether it was touching the hair or not.", Line_Normal);
+	ClearMessage();
+
+//　後ろの気配が動けるように、どうして俺は動けないんだ？！？￥
+	OutputLine(NULL, "　後ろの気配が動けるように、どうして俺は動けないんだ？！？！",
+		   NULL, "Why couldn't I move... like how the presence was moving behind me!?!?", Line_Normal);
+	ClearMessage();
+
+//　...すぐに気付いた＠
+	OutputLine(NULL, "　…すぐに気付いた。",
+		   NULL, "...I quickly realized.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　俺は動けるのだ＠
+	OutputLine(NULL, "　俺は動けるのだ。",
+		   NULL, "I could move.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　......怖くて振り返れないだけなのだ￥
+	OutputLine(NULL, "　……怖くて振り返れないだけなのだ。",
+		   NULL, "...It's just that I was scared and didn't want to.", Line_Normal);
+	ClearMessage();
+
+//　振り向けるのは今しかない＠
+	OutputLine(NULL, "　振り向けるのは今しかない。",
+		   NULL, "But now was the only time I could turn around.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　終わった時間の世界では絶対に許されぬ行為...＠だが......今、振り返らなければ......！￥
+	OutputLine(NULL, "　終わった時間の世界では絶対に許されぬ行為…。",
+		   NULL, "It was something unforgivable in this moment in time...", Line_WaitForInput);
+	OutputLine(NULL, "だが……今、振り返らなければ……！！",
+		   NULL, " But... I needed to turn around immediately...!!", Line_Normal);
+	ClearMessage();
+
+//　体中の全細胞が、許されざる行為を止めようと、毛穴という毛穴に針を突き立てたような痛みを訴え始める...＠
+	OutputLine(NULL, "　体中の全細胞が、許されざる行為を止めようと、毛穴という毛穴に針を突き立てたような痛みを訴え始める…。",
+		   NULL, "As if my entire being was trying to force me to stop, it began to administer a pain like a needle being stuck into my every pore...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　振り向いてやる＠
+	OutputLine(NULL, "　振り向いてやる！",
+		   NULL, "I'll turn around!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　振り向いてやる＠
+	OutputLine(NULL, "　振り向いてやる！",
+		   NULL, "I'll turn around!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　怖くなんかないぞ！＠
+	OutputLine(NULL, "　怖くなんかないぞ！！",
+		   NULL, "I'm not scared at all!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　振り向いてやる＠
+	OutputLine(NULL, "　振り向いてやる！",
+		   NULL, "I'll turn around!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　振り向いてやる＠
+	OutputLine(NULL, "　振り向いてやる！",
+		   NULL, "I'll turn around!", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　怖くなんかないぞ！！！￥
+	OutputLine(NULL, "　怖くなんかないぞ！！！！",
+		   NULL, "I'm not scared at all!!", Line_Normal);
+	ClearMessage();
+
+//　声に出せぬ、胸の中での雄叫びだった＠
+	OutputLine(NULL, "　声に出せぬ、胸の中での雄叫びだった。",
+		   NULL, "A scream I was unable to vocalize.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　ぉおぉおぉおおおおおぉおぉおおぉ！！！￥
+	OutputLine(NULL, "　ぉおぉおぉおおおおおぉおぉおおぉ！！！！",
+		   NULL, "RoOoOoOOOOOOoOoOOh!!!!!", Line_Normal);
+	ClearMessage();
+
+//　後ろを振り向いた￥
+	OutputLine(NULL, "　後ろを振り向いた。",
+		   NULL, "I turned around!", Line_Normal);
+	ClearMessage();
+
+//　......そこには、.........始めそれの意味はわからなかった￥
+	OutputLine(NULL, "　……そこには、………始めそれの意味はわからなかった。",
+		   NULL, "...At first... I couldn't understand the meaning of it.", Line_Normal);
+	ClearMessage();
+
+//「.........え、..................え？＠
+	OutputLine(NULL, "「………え、………………え？」",
+		   NULL, "\"...Wha... what?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　これって...............え＠
+	OutputLine(NULL, "　これって……………え？",
+		   NULL, "What... is this?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　自分の目の前の状況を、まるで人の口がリンゴをかじって汁を啜り、リンゴであることを知るように.........脳がリンゴを食べ始める＠
+	OutputLine(NULL, "　自分の目の前の状況を、まるで人の口がリンゴをかじって汁を啜り、リンゴであることを知るように………脳がリンゴを食べ始める。",
+		   NULL, "The situation in front of my eyes... it was like a mouth biting an apple and slurping the juice, the way you would do with an apple... my mind was being eaten.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　しゃりしゃりと咀嚼し始める...＠
+	OutputLine(NULL, "　しゃりしゃりと咀嚼し始める…。",
+		   NULL, "It began to munch down...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　汁を啜り.........リンゴであることを知る￥
+	OutputLine(NULL, "　汁を啜り………リンゴであることを知る。",
+		   NULL, "Slurping the juices... because it was like an apple.", Line_Normal);
+	ClearMessage();
+
+//　つまり......俺の目の前のそれは＠
+	OutputLine(NULL, "　つまり……俺の目の前のそれは、",
+		   NULL, "Meaning... what was in front of me was...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+	PlaySE( 3, "wa_025", 128, 64 );
+
+//locate 0,5
+
+	SetDrawingPointOfMessage( 0, 5 );
+
+//ぎゃああああぁあぁあぁああああぁあぁああぁああぁあああぁあぁぁぁ.........!w2000
+	OutputLine(NULL, "ぎゃああああぁあぁあぁああああぁあぁああぁああぁあああぁあぁぁぁ………",
+		   NULL, "GwAAAAaAaAaAAAAAaAaAAaAAaAAAAaAah...", Line_ContinueAfterTyping);
+
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
+	ClearMessage();
+
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
+	DrawScene( "white", 1000 );
+
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
+//gosub *tip_e
+
+//return
+
+
+}

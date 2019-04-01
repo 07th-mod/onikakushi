@@ -1,0 +1,149 @@
+﻿void main()
+{
+
+
+//■二重人格？？？
+
+//*Sub_Tips_019
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+	DisableWindow();
+	DrawScene( "bg_223", 400 );
+	PlayBGM( 1, "msys09", 128, 0 );
+
+
+//「よく映画などに登場しますが、簡単にいうとどのようなものでしょうか。＠
+	OutputLine(NULL, "「よく映画などに登場しますが、簡単にいうとどのようなものでしょうか。」",
+		   NULL, "\"I see it in movies quite often, but what is it, exactly?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「複数の人格を持つことによる逃避と考えられています。＠
+	OutputLine(NULL, "「複数の人格を持つことによる逃避と考えられています。」",
+		   NULL, "\"Multiple personalities are thought to be escapism.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「多重人格は逃避のひとつなのですか？￥
+	OutputLine(NULL, "「多重人格は逃避のひとつなのですか？」",
+		   NULL, "\"Multiple personality disorder is a form of escape?\"", Line_Normal);
+	ClearMessage();
+
+//「左様です＠そのメカニズムは完全には解明されていませんが、精神を守るために脳が行なう防御行動のひとつではないかと考えられています。￥
+	OutputLine(NULL, "「左様です。",
+		   NULL, "\"Correct.", Line_WaitForInput);
+	OutputLine(NULL, "そのメカニズムは完全には解明されていませんが、精神を守るために脳が行なう防御行動のひとつではないかと考えられています。」",
+		   NULL, " The exact mechanism is not fully understood, but it's believed to be a type of defense for the brain to retain mental stability.\"", Line_Normal);
+	ClearMessage();
+
+//「例えば、貧乏な人がお金持ちになった自分を想像するという現実逃避ってありますよね＠　これも多重人格なわけですか？＠
+	OutputLine(NULL, "「例えば、貧乏な人がお金持ちになった自分を想像するという現実逃避ってありますよね？",
+		   NULL, "\"Hypothetically, poor people imagining themselves as wealthy is a form of escapism, is it not?", Line_WaitForInput);
+	OutputLine(NULL, "　これも多重人格なわけですか？」",
+		   NULL, " Is this also a form of multiple personality disorder?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「極論はできませんが、広義的にはそう解釈できます＠つまり誰にでもありえる現象なのです。￥
+	OutputLine(NULL, "「極論はできませんが、広義的にはそう解釈できます。",
+		   NULL, "\"I wouldn't go that far, but broadly speaking, one could infer that.", Line_WaitForInput);
+	OutputLine(NULL, "つまり誰にでもありえる現象なのです。」",
+		   NULL, " It's something that occurs in us all.\"", Line_Normal);
+	ClearMessage();
+
+//「その現実逃避の見境がなくなると二重人格になるのですか？＠
+	OutputLine(NULL, "「その現実逃避の見境がなくなると二重人格になるのですか？」",
+		   NULL, "\"Does a split personality occur when one cannot tell which is reality and which is the escape?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「...ちょっと難しいですね＠...そう提唱する説もありますし、否定する説もあります＠諸説紛々です。￥
+	OutputLine(NULL, "「…ちょっと難しいですね。",
+		   NULL, "\"...That's difficult to say.", Line_WaitForInput);
+	OutputLine(NULL, "…そう提唱する説もありますし、否定する説もあります。",
+		   NULL, " There are some who agree with that, and some who disagree.", Line_WaitForInput);
+	OutputLine(NULL, "諸説紛々です。」",
+		   NULL, " There is no consensus.\"", Line_Normal);
+	ClearMessage();
+
+//「では精神医学の世界ではまだ、多重人格というのは未知の解明されていない現象なんですか？＠
+	OutputLine(NULL, "「では精神医学の世界ではまだ、多重人格というのは未知の解明されていない現象なんですか？」",
+		   NULL, "\"Then is the occurrence of multiple personalities still an unknown phenomenon... something not fully comprehended in the psychiatric field?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「残念ながらそうなります＠今後の研究が期待されます。￥
+	OutputLine(NULL, "「残念ながらそうなります。",
+		   NULL, "\"Unfortunately, that is the current state of things.", Line_WaitForInput);
+	OutputLine(NULL, "今後の研究が期待されます。」",
+		   NULL, " We can only put our hope in future research.\"", Line_Normal);
+	ClearMessage();
+
+//「でもでも～、二重人格なんて何だかカッコイイですよね～＠　どういう人が二重人格になれるんですかぁ？￥
+	OutputLine(NULL, "「でもでも〜、二重人格なんて何だかカッコイイですよね〜！",
+		   NULL, "\"But, but~ It's sorta cool having a split personality~!", Line_WaitForInput);
+	OutputLine(NULL, "　どういう人が二重人格になれるんですかぁ？」",
+		   NULL, " What kind of people get split personalities?\"", Line_Normal);
+	ClearMessage();
+
+//「なれるといいますか...、なりやすいといいますか...＠最近の研究では、遺伝と心因が複雑に絡み合い...＠中でも幼少期の虐待が大きく作用するのではないかと言われています。＠
+	OutputLine(NULL, "「なれるといいますか…、なりやすいといいますか…。",
+		   NULL, "\"Recent studies find that those who develop it... or rather, those who are more susceptible to developing it,", Line_WaitForInput);
+	OutputLine(NULL, "最近の研究では、遺伝と心因が複雑に絡み合い…。",
+		   NULL, " may be genetically predisposed or may have had abnormal mental development...", Line_WaitForInput);
+	OutputLine(NULL, "中でも幼少期の虐待が大きく作用するのではないかと言われています。」",
+		   NULL, " Some say that childhood abuse increases the chances.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「そう言えば、このＡ君も幼児虐待を受けてるんですよね～。カワイソ～...。＠
+	OutputLine(NULL, "「そう言えば、このＡ君も幼児虐待を受けてるんですよね〜。カワイソ〜…。」",
+		   NULL, "\"Speaking of which, Person A here experienced abuse as a child, didn't he~ How sad~...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//「７つの人格を持つ青年Ａ＠ではＶＴＲの続きをどうぞ＠/
+	OutputLine(NULL, "「７つの人格を持つ青年Ａ。",
+		   NULL, "\"Person A has seven different personalities.", Line_WaitForInput);
+	OutputLine(NULL, "ではＶＴＲの続きをどうぞ。",
+		   NULL, " Let's watch a video of him...", Line_WaitForInput);
+
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+	PlaySE( 3, "wa_011", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 400 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 3, "wa_010", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 400 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 3, "wa_029", 128, 64 );
+
+//...ですがその前にコマーシャル！！￥
+	OutputLine(NULL, "…ですがその前にコマーシャル！！」",
+		   NULL, " Right after these commercials!!\"", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+}

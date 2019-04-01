@@ -1,0 +1,395 @@
+﻿void main()
+{
+
+
+//■犯人は４人以上？
+
+//*Sub_Tips_013
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, TRUE );
+	FadeOutBGM( 1, 1000, TRUE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	DrawScene( "bg_111", 400 );
+	PlayBGM( 2, "lsys12", 128, 0 );
+
+//「自分で喉を掻き破った出血性ショック死＠
+	OutputLine(NULL, "「自分で喉を掻き破った出血性ショック死。",
+		   NULL, "\"Hypovolemic shock induced by clawing out their own throat.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　爪の間に肉や皮がびっしり詰まっとった＠他人の爪じゃない＠間違いなく本人の爪じゃわい＠傷の形も一致する。￥
+	OutputLine(NULL, "　爪の間に肉や皮がびっしり詰まっとった。",
+		   NULL, "Tissue is packed under the nails.", Line_WaitForInput);
+	OutputLine(NULL, "他人の爪じゃない。",
+		   NULL, " Not someone else's nails.", Line_WaitForInput);
+	OutputLine(NULL, "間違いなく本人の爪じゃわい。",
+		   NULL, " It's undoubtedly by the individual's own nails.", Line_WaitForInput);
+	OutputLine(NULL, "傷の形も一致する。」",
+		   NULL, " The shape of the scars also matches.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshotWithFiltering( 3, "oi_si_de_a1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「えぇえぇ＠直接死因が自殺ってのはわかってますよ。＠
+	OutputLine(NULL, "「えぇえぇ。",
+		   NULL, "\"Yeaaaah...", Line_WaitForInput);
+	OutputLine(NULL, "直接死因が自殺ってのはわかってますよ。」",
+		   NULL, " I know the immediate cause of death was suicide.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「わかっとるわい＠人為的にこういう症状が起こせんかと言っとるんだろう？＠
+	OutputLine(NULL, "「わかっとるわい。",
+		   NULL, "\"I get it.", Line_WaitForInput);
+	OutputLine(NULL, "人為的にこういう症状が起こせんかと言っとるんだろう？」",
+		   NULL, " You're saying the cause of death is unnatural, right?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "oi_si_wa_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。￥
+	OutputLine(NULL, "「背中が痒くて掻きすぎて、血が出ちゃうのとはちょっと訳がちがいますからねぇ。」",
+		   NULL, "\"It's kind of like when your back itches and you scratch a little too hard and draw blood.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawBustshotWithFiltering( 5, "black", "down", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
+
+//　富竹氏の指には爪が剥がれたものもある＠
+	OutputLine(NULL, "　富竹氏の指には爪が剥がれたものもある。",
+		   NULL, "Some of Tomitake's fingernails had been pulled out.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　爪自体は割りと簡単に剥がれる＠
+	OutputLine(NULL, "　爪自体は割りと簡単に剥がれる。",
+		   NULL, "It's actually quite simple to pull out one's own nails.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　だがとても痛い＠
+	OutputLine(NULL, "　だがとても痛い。",
+		   NULL, "But it really hurts.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　だから普通は剥がれるような無茶はしない＠
+	OutputLine(NULL, "　だから普通は剥がれるような無茶はしない。",
+		   NULL, "Under normal circumstances, the pain would prevent you from completely pulling them out.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　そして、富竹氏の遺体に残る数々のアザ＠
+	OutputLine(NULL, "　そして、富竹氏の遺体に残る数々のアザ。",
+		   NULL, "Also, there were a lot of bruises on Tomitake's body.", Line_Normal);
+	ClearMessage();
+//長文のため＠を￥にチェンジ
+
+//　...形状その他から素手の暴行によるもの、それも複数人に囲まれてであることは明白だ￥
+	OutputLine(NULL, "　…形状その他から素手の暴行によるもの、それも複数人に囲まれてであることは明白だ。",
+		   NULL, "...It's clear from the shape of them that he was assaulted first by someone—or a group of people.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshotWithFiltering( 5, "up", 0, FALSE, 0, 0, 1300, TRUE );
+
+//「分泌物から見て、仏は極度の興奮状態にあったのは間違いないのう。＠
+	OutputLine(NULL, "「分泌物から見て、仏は極度の興奮状態にあったのは間違いないのう。」",
+		   NULL, "\"According to the toxicology report, the deceased was in an extreme state of hysteria right before death.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DisableWindow();
+	DrawBustshot( 3, "oi_si_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「では乱闘になって、興奮のあまり自分の喉を引っ掻きだしたってことですか＠　襲った連中、さぞや度肝を抜かれたでしょうなぁ。＠
+	OutputLine(NULL, "「では乱闘になって、興奮のあまり自分の喉を引っ掻きだしたってことですか？",
+		   NULL, "\"Then he fought back and clawed out his own throat because of how hysterical he had become?", Line_WaitForInput);
+	OutputLine(NULL, "　襲った連中、さぞや度肝を抜かれたでしょうなぁ。」",
+		   NULL, " The guys attacking him certainly would have been surprised by that.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　確かに異常な環境で異常に興奮した人間は、健常者には考えられない行動を取ることはありえる＠
+	OutputLine(NULL, "　確かに異常な環境で異常に興奮した人間は、健常者には考えられない行動を取ることはありえる。",
+		   NULL, "It is possible that, in such an abnormal environment, a person could perform acts that a sane individual couldn't possibly imagine.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　無論、極めて稀有なケースだが￥
+	OutputLine(NULL, "　無論、極めて稀有なケースだが。",
+		   NULL, "Of course, those are very rare cases.", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "bg_112", "left", 0, 0, 300 );
+
+//「実はな、大石くん＠仏が武器にしたらしい角材な＠砂粒とかガードレールの塗装片とかそんなのしか出んかったぞい。＠
+	OutputLine(NULL, "「実はな、大石くん。",
+		   NULL, "\"Actually, Ooishi-kun,", Line_WaitForInput);
+	OutputLine(NULL, "仏が武器にしたらしい角材な。",
+		   NULL, " that wood plank the deceased used as a weapon?", Line_WaitForInput);
+	OutputLine(NULL, "砂粒とかガードレールの塗装片とかそんなのしか出んかったぞい。」",
+		   NULL, " They only found sand and the paint from the guardrail on it.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「ホシの服の繊維とか、皮膚片とかは？＠
+	OutputLine(NULL, "「ホシの服の繊維とか、皮膚片とかは？」",
+		   NULL, "\"What about cloth fibers or skin?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「出んかった＠仏は犯人を殴っとらん＠...あるいは殴った角材を、ホシが持ち去ったのかも知れんの。＠
+	OutputLine(NULL, "「出んかった。",
+		   NULL, "\"Nothing.", Line_WaitForInput);
+	OutputLine(NULL, "仏は犯人を殴っとらん。",
+		   NULL, " The deceased didn't strike the assailants...", Line_WaitForInput);
+	OutputLine(NULL, "…あるいは殴った角材を、ホシが持ち去ったのかも知れんの。」",
+		   NULL, " Or it could be they took the plank he was fighting back with.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「なら、わざわざ角材なんて置いてきませんよ＠全部持ってっちゃいます。＠
+	OutputLine(NULL, "「なら、わざわざ角材なんて置いてきませんよ。",
+		   NULL, "\"In that case, they wouldn't have gone out of their way to replace it with another.", Line_WaitForInput);
+	OutputLine(NULL, "全部持ってっちゃいます。」",
+		   NULL, " They'd take them all.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「かっかっかっか＠　それもそうじゃのう。￥
+	OutputLine(NULL, "「かっかっかっか！",
+		   NULL, "\"Har har har har!", Line_WaitForInput);
+	OutputLine(NULL, "　それもそうじゃのう。」",
+		   NULL, " That's true.\"", Line_Normal);
+	ClearMessage();
+
+//「富竹氏は結構、体格もいいし肌も焼けてるし＠...スポーツマンですよねぇ。＠
+	OutputLine(NULL, "「富竹氏は結構、体格もいいし肌も焼けてるし。",
+		   NULL, "\"Tomitake's pretty built and tanned...", Line_WaitForInput);
+	OutputLine(NULL, "…スポーツマンですよねぇ。」",
+		   NULL, " He was quite athletic.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「ん＠　そうだな＠よく運動しとるようだの。￥
+	OutputLine(NULL, "「ん？",
+		   NULL, "\"Hm?", Line_WaitForInput);
+	OutputLine(NULL, "　そうだな。",
+		   NULL, " That's right.", Line_WaitForInput);
+	OutputLine(NULL, "よく運動しとるようだの。」",
+		   NULL, " He was pretty active.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBG( "black", 1000, TRUE );
+	DrawFilm( 2, 119, 119, 119, 255, 0, 1000, TRUE );
+	DrawBustshot( 2, "tm_si_de_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+
+//　...生前に何のスポーツを嗜んでいたか想像はつかないが、身体能力は高い方だと思う＠
+	OutputLine(NULL, "　…生前に何のスポーツを嗜んでいたか想像はつかないが、身体能力は高い方だと思う。",
+		   NULL, "...I can't imagine what kind of sports he did when he was alive, but I think his physical strength would be on the higher side.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　つまり、乱闘では決してひけを取らないはずなのだ＠
+	OutputLine(NULL, "　つまり、乱闘では決してひけを取らないはずなのだ。",
+		   NULL, "Meaning, he would be difficult to overpower in a brawl.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　これだけ体格のいい男が、身に危険が迫って、死に物狂いで武器を振り回して＠
+	OutputLine(NULL, "　これだけ体格のいい男が、身に危険が迫って、死に物狂いで武器を振り回して。",
+		   NULL, "If a man with such a physique sensed he was in danger and swung the plank around quickly...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　それが犯人にかすりもしないなんて、ちょっと普通では考えられない＠
+	OutputLine(NULL, "　それが犯人にかすりもしないなんて、ちょっと普通では考えられない。",
+		   NULL, "It's just unthinkable that it wouldn't even nick the perpetrator.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　しかも相手は素手＠
+	OutputLine(NULL, "　しかも相手は素手。",
+		   NULL, "And his opponent was unarmed.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　こっちは角材なんだから、１回くらいは殴れたと思うのだが...￥
+	OutputLine(NULL, "　こっちは角材なんだから、１回くらいは殴れたと思うのだが…。",
+		   NULL, "This guy had a wooden plank, so you'd think he'd hit him at least once...", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 1000, TRUE );
+	FadeFilm( 1000, TRUE );
+	DrawScene( "bg_113", 1000 );
+
+
+
+//「こんだけ体格のいい相手を取り囲んで襲おうとしたら＠...何人くらいいりますかねぇ。＠
+	OutputLine(NULL, "「こんだけ体格のいい相手を取り囲んで襲おうとしたら、",
+		   NULL, "\"To surround and take down someone of his physique...", Line_WaitForInput);
+	OutputLine(NULL, "…何人くらいいりますかねぇ。」",
+		   NULL, " I wonder how many people it would take.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「あほぅ＠それは大石くんの方が得意だろうが＠悪タレ時代を思い出さんかい！￥
+	OutputLine(NULL, "「あほぅ。",
+		   NULL, "\"Ya dimwit...", Line_WaitForInput);
+	OutputLine(NULL, "それは大石くんの方が得意だろうが。",
+		   NULL, " You should know better than anyone.", Line_WaitForInput);
+	OutputLine(NULL, "悪タレ時代を思い出さんかい！」",
+		   NULL, " Have you forgotten your 'Bad Cop' days?\"", Line_Normal);
+	ClearMessage();
+
+//　私が彼と喧嘩するなら何人ほしい＠
+	OutputLine(NULL, "　私が彼と喧嘩するなら何人ほしい？",
+		   NULL, "If I was to take down this guy, how many would I need?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　群が時に大型獣を倒すように、多人数で襲うのは狩りの鉄則だ＠
+	OutputLine(NULL, "　群が時に大型獣を倒すように、多人数で襲うのは狩りの鉄則だ。",
+		   NULL, "When a group wants to take down big prey it's fundamental to attack with numbers.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　......４人くらいはほしい＠
+	OutputLine(NULL, "　……４人くらいはほしい。",
+		   NULL, "...I'd guess about four.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　多少の体格差があってもこれだけいればなんとかなる＠
+	OutputLine(NULL, "　多少の体格差があってもこれだけいればなんとかなる。",
+		   NULL, "Even if there was a gap in their strength, they'd manage.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//「だとすると、結構犯人は多人数だの＠
+	OutputLine(NULL, "「だとすると、結構犯人は多人数だの。",
+		   NULL, "\"Then there were quite a few perpetrators.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　祭りで泥酔した４人以上のグループが怪しいとなるかの？￥
+	OutputLine(NULL, "　祭りで泥酔した４人以上のグループが怪しいとなるかの？」",
+		   NULL, "So any drunk-and-disorderly groups of more than four are suspicious?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　.........４人以上のグループ＠
+	OutputLine(NULL, "　………４人以上のグループ。",
+		   NULL, "...A group of four or more.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　しかし...それだけの人数がいれば、遺体をもっと目に付きにくいところに隠せなかっただろうか＠
+	OutputLine(NULL, "　しかし…それだけの人数がいれば、遺体をもっと目に付きにくいところに隠せなかっただろうか？",
+		   NULL, "Just... if they had that many, then couldn't they have hidden the body in a less obvious location?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　あるいは...瀕死の状態で監禁されていたのをなんとか抜け出してきたのか...＠
+	OutputLine(NULL, "　あるいは…瀕死の状態で監禁されていたのをなんとか抜け出してきたのか…。",
+		   NULL, "Or... did he somehow break away from that fatal predicament...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　だとしたら自殺する理由がわからない＠
+	OutputLine(NULL, "　だとしたら自殺する理由がわからない。",
+		   NULL, "Then there would be no reason to commit suicide.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　それ以上に、あの異常な死に方の理由がわからない......＠謎だらけだ￥
+	OutputLine(NULL, "　それ以上に、あの異常な死に方の理由がわからない……。",
+		   NULL, "Moreover, I still can't comprehend the irregular way he died...", Line_WaitForInput);
+	OutputLine(NULL, "謎だらけだ。",
+		   NULL, " It's full of mysteries.", Line_Normal);
+	ClearMessage();
+
+//「こっちもそこは重視しとる＠徹底的に調べるつもりだが...あまり期待できんな＠何しろ、過去にこんな例はないんだからな。＠
+	OutputLine(NULL, "「こっちもそこは重視しとる。",
+		   NULL, "\"That's under serious consideration on my end, too.", Line_WaitForInput);
+	OutputLine(NULL, "徹底的に調べるつもりだが…あまり期待できんな。",
+		   NULL, " I'll be examining it as thoroughly as possible, but don't get your hopes up.", Line_WaitForInput);
+	OutputLine(NULL, "何しろ、過去にこんな例はないんだからな。」",
+		   NULL, " After all, we've never encountered a death like this before.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「期待はしませんよ＠ですが結果を楽しみにしてます。￥
+	OutputLine(NULL, "「期待はしませんよ。",
+		   NULL, "\"I'm not hoping for much.", Line_WaitForInput);
+	OutputLine(NULL, "ですが結果を楽しみにしてます。」",
+		   NULL, " But I am looking forward to the results.\"", Line_Normal);
+	ClearMessage();
+
+//「大石さん～＠　課長が呼んでるっすー！＠
+	OutputLine(NULL, "「大石さん〜！",
+		   NULL, "\"Ooishi-san~!", Line_WaitForInput);
+	OutputLine(NULL, "　課長が呼んでるっすー！」",
+		   NULL, " The chief is calling you!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「すみません、ではまた来年お会いしましょう。＠
+	OutputLine(NULL, "「すみません、ではまた来年お会いしましょう。」",
+		   NULL, "\"Thanks. See ya 'round.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//「おう＠いいお年をの！￥
+	OutputLine(NULL, "「おう。",
+		   NULL, "\"Yeah.", Line_WaitForInput);
+	OutputLine(NULL, "いいお年をの！」",
+		   NULL, " Best wishes!\"", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+//gosub *tip_e
+//return
+
+
+}

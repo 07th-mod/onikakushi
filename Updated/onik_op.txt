@@ -1,0 +1,723 @@
+﻿void main()
+{
+//*Opening
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
+
+	//Comment this out to actually be allowed to skip or advance manually in the opening
+	SetValidityOfInput( FALSE );
+
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 3000 );
+	DrawScene( "si_onikakusi", 1000 );
+	Wait( 15000 );
+	DrawScene( "black", 3000 );
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 1000 );
+	PlaySE( 3, "wa_017", 128, 64 );
+	DrawScene( "tyuui", 100 );
+
+
+	DrawScene( "black", 4000 );
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 1000 );
+	PlaySE( 3, "wa_017", 128, 64 );
+	DrawScene( "tyuui2", 100 );
+
+
+	DrawScene( "black", 4000 );
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 1000 );
+	PlaySE( 3, "wa_017", 128, 64 );
+	Wait( 350 );
+	DrawScene( "black", 50 );
+	PlaySE( 3, "wa_030", 128, 64 );
+	Wait( 3000 );
+
+	PlayBGM( 2, "lsys11", 128, 0 );
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
+//locate 0,5
+//!s50
+
+	SetSpeedOfMessage( TRUE, 100, );
+	SetDrawingPointOfMessage( 0, 5 );
+
+//　どうせ引き裂かれるなら、!w2000
+	OutputLine(NULL, "どうせ引き裂かれるなら、",
+		   NULL, "If I was going to be ripped apart anyways,", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+	Wait( 2000 );
+//　身を引き裂かされる方がはるかにマシだと思った。!w4000
+	OutputLine(NULL, "身を引き裂かされる方がはるかにマシだと思った。",
+		   NULL, "having my body ripped apart would've been far better.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+	ClearMessage();
+
+//locate 0,4
+
+	SetDrawingPointOfMessage( 0, 4 );
+
+//　信じてた。!w2000
+	OutputLine(NULL, "信じてた。",
+		   NULL, "I trusted her.", Line_ContinueAfterTyping);
+
+	Wait( 2000 );
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　......いや、信じてる。!w2000
+	OutputLine(NULL, "…いや、信じてる。",
+		   NULL, "...No, I still trust her.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　今この瞬間だって、信じてる。!w2000
+	OutputLine(NULL, "今この瞬間だって、信じてる。",
+		   NULL, "Even in this very moment, I trust her.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+	ClearMessage();
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+//locate 0,3
+
+	SetDrawingPointOfMessage( 0, 3 );
+
+//　でも......薄々は気付いてる。!w2000
+	OutputLine(NULL, "でも…薄々は気付いてる。",
+		   NULL, "But... I'm starting to realize.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　信じたいのは、認めたくないだけだからだ。/
+	OutputLine(NULL, "信じたいのは、認めたくないだけだからだ。",
+		   NULL, "I only wanted to trust her because I refused to accept the truth.", Line_ContinueAfterTyping);
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　自分に言い聞かせるような、
+	OutputLine(NULL, "自分に言い聞かせるような、",
+		   NULL, "It was as if I was trying to convince myself,", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+//　そんな涙声が...もうたまらなく馬鹿馬鹿しくて......。
+	OutputLine(NULL, "そんな涙声が…もうたまらなく馬鹿馬鹿しくて…。",
+		   NULL, "in such a silly... sobbing voice...", Line_ContinueAfterTyping);
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　さらなる涙が...顔をもっとぐしゃぐしゃにする...。!w3000
+	OutputLine(NULL, "さらなる涙が…顔をもっとぐしゃぐしゃにする…。",
+		   NULL, "And those tears... those tears making a mess of my face...", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+//locate 0,6
+
+	SetDrawingPointOfMessage( 0, 6 );
+//　機械的に繰り返されていたそれはようやく収まり、とても静かになった。!w4000
+	OutputLine(NULL, "機械的に繰り返されていたそれはようやく収まり、とても静かになった。",
+		   NULL, "That mechanical, repetitious sound finally stilled, and everything fell silent.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask( "bg_204", "c", 0, 0, 1300 );
+//locate 0,4
+
+	SetDrawingPointOfMessage( 0, 4 );
+//　ひぐらしの声だけが...いやに騒がしい。!w2000
+	OutputLine(NULL, "ひぐらしの声だけが…いやに騒がしい。",
+		   NULL, "Only the cry of the cicadas remained, annoyingly loud.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　なのに、!w1500
+	OutputLine(NULL, "なのに、",
+		   NULL, "And yet...", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 1500 );
+
+
+//　...彼女のそれはまだ聞こえる気がする。!w2000
+	OutputLine(NULL, "…彼女のそれはまだ聞こえる気がする。",
+		   NULL, "...I felt as if I could still hear her voice.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　...聞こえるはずはない。!w2000
+	OutputLine(NULL, "…聞こえるはずはない。",
+		   NULL, "...But that's not possible.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　彼女はもう、言うのをやめているのだから。!w4000
+	OutputLine(NULL, "彼女はもう、言うのをやめているのだから。",
+		   NULL, "She is no longer speaking.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+//locate 0,5
+
+	SetDrawingPointOfMessage( 0, 5 );
+//　泣いているのは俺だけだった。!w2000
+	OutputLine(NULL, "泣いているのは俺だけだった。",
+		   NULL, "The only one crying is me.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　彼女は泣きもしなかった。!w4000
+	OutputLine(NULL, "彼女は泣きもしなかった。",
+		   NULL, "She never cried.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+//locate 0,2
+
+	SetDrawingPointOfMessage( 0, 2 );
+//　彼女がそれを繰り返し口にしていた時も、表情どころか感情もなかった。!w2000
+	OutputLine(NULL, "彼女がそれを繰り返し口にしていた時も、表情どころか感情もなかった。",
+		   NULL, "Even when she repeated those words over and over, she never expressed any emotion, because there were none to show.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　彼女に、俺のために流す涙がないのなら、!w1000俺にだって。!w2000
+	OutputLine(NULL, "彼女に、俺のために流す涙がないのなら、",
+		   NULL, "If she had no tears to shed for me,", Line_ContinueAfterTyping);
+
+	Wait( 1000 );
+
+	OutputLine(NULL, "俺にだって。",
+		   NULL, " then I...", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　...彼女らのために流す涙はいらないはずなのだ。!w4000
+	OutputLine(NULL, "…彼女らのために流す涙はいらないはずなのだ。",
+		   NULL, "shouldn't need to shed any for her.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　それなのに......痛み、目を潤ませてしまうのは......どうして？!w2000
+	OutputLine(NULL, "それなのに…痛み、目を潤ませてしまうのは…どうして？",
+		   NULL, "Then why... this pain, my eyes getting moist... why was this happening?", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　それでも引き裂かれてないと、......信じていたいから。!w4000
+	OutputLine(NULL, "それでも引き裂かれてないと、…信じていたいから。",
+		   NULL, "I still wanted to believe... I hadn't been split apart.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+//locate 0,6
+
+	SetDrawingPointOfMessage( 0, 6 );
+//　もう充分だろ？!w2000
+	OutputLine(NULL, "もう充分だろ？",
+		   NULL, "That's enough, right?", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　内なる、もうひとりの自分がやさしく語りかける...。!w4000
+	OutputLine(NULL, "内なる、もうひとりの自分がやさしく語りかける…。",
+		   NULL, "Inside me, an inner voice whispered gently...", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+//locate 0,4
+
+	SetDrawingPointOfMessage( 0, 4 );
+//　俺はもう充分に心を痛めたさ。!w2000
+	OutputLine(NULL, "俺はもう充分に心を痛めたさ。",
+		   NULL, "My spirit had suffered enough...", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　...そして何度も、その痛む心を捨てるべきかどうか迷ったんだ。!w2000
+	OutputLine(NULL, "…そして何度も、その痛む心を捨てるべきかどうか迷ったんだ。",
+		   NULL, "...and countless times I'd wavered over whether I should just throw the battered thing away.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　だけど俺は...頑なに、捨てることを拒んだんじゃないか。!w4000
+	OutputLine(NULL, "だけど俺は…頑なに、捨てることを拒んだんじゃないか。",
+		   NULL, "Except... I've stubbornly refused to do that, haven't I?", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+//locate 0,2
+
+	SetDrawingPointOfMessage( 0, 2 );
+//　捨てれば...もっと心が楽になれる...。!w2000
+	OutputLine(NULL, "捨てれば…もっと心が楽になれる…。",
+		   NULL, "I'd feel better if I just threw it away.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　それを知りながらも、俺は信じることを選んだんじゃないか。!w2000
+	OutputLine(NULL, "それを知りながらも、俺は信じることを選んだんじゃないか。",
+		   NULL, "Even knowing that, I chose to believe, didn't I?", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　その辛かった苦労は、きっと俺にしかわからないし、俺にしかねぎらえない。!w4000
+	OutputLine(NULL, "その辛かった苦労は、きっと俺にしかわからないし、俺にしかねぎらえない。",
+		   NULL, "Only I can understand that painful struggle, and appreciate it.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+
+//locate 0,5
+
+	SetDrawingPointOfMessage( 0, 5 );
+//　なぁ俺。!w2000
+	OutputLine(NULL, "なぁ俺。",
+		   NULL, "Hey, me?", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　...俺は充分に頑張った。!w2000
+	OutputLine(NULL, "…俺は充分に頑張った。",
+		   NULL, "...I've tried more than enough.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　......俺がそれを認めてやる。!w2000
+	OutputLine(NULL, "…俺がそれを認めてやる。",
+		   NULL, "...I'll acknowledge that much.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　だから。!w2000
+	OutputLine(NULL, "だから。",
+		   NULL, "So...", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　......もう楽になってもいいんじゃないか......？!w4000
+	OutputLine(NULL, "…もう楽になってもいいんじゃないか…？",
+		   NULL, "...Isn't it all right to just take the easy way out?", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+//locate 0,6
+
+	SetDrawingPointOfMessage( 0, 6 );
+
+//　それに.........捨てるんじゃない。!w2000
+	OutputLine(NULL, "それに…捨てるんじゃない。",
+		   NULL, "Besides... I'm not throwing it away.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　彼女と一緒に、置いていくんだ。!w2000
+	OutputLine(NULL, "彼女と一緒に、置いていくんだ。",
+		   NULL, "I'm leaving it behind, with her.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//locate 0,11
+
+	SetDrawingPointOfMessage( 0, 11 );
+//　...花を手向けるように。!w4000
+	OutputLine(NULL, "…花を手向けるように。",
+		   NULL, "...Like flowers by a grave.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+	ClearMessage();
+
+//locate 0,3
+
+	SetDrawingPointOfMessage( 0, 3 );
+//　さぁ。!w2000
+	OutputLine(NULL, "さぁ。",
+		   NULL, "Now then.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　......心を落ち着けて...。!w2000
+	OutputLine(NULL, "…心を落ち着けて…。",
+		   NULL, "...Calm your nerves.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　もう右腕が痺れているだろうけど。!w2000
+	OutputLine(NULL, "もう右腕が痺れているだろうけど。",
+		   NULL, "Even though you can't feel your right arm.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+//　......頑張って振り上げよう。!w2000
+	OutputLine(NULL, "…頑張って振り上げよう。",
+		   NULL, "...Just lift it up.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　ひとつ振る度に忘れるんだ。!w4000
+	OutputLine(NULL, "ひとつ振る度に忘れるんだ。",
+		   NULL, "And with every swing, forget a little more.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+
+//locate 0,4
+
+	SetDrawingPointOfMessage( 0, 4 );
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+
+//　親切が、うれしかった。!w2000
+	OutputLine(NULL, "親切が、うれしかった。",
+		   NULL, "That kindness made me happy.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+
+//　愛らしい笑顔がうれしかった。!w2000
+	OutputLine(NULL, "愛らしい笑顔がうれしかった。",
+		   NULL, "That adorable smile brought me joy.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+
+//　頭を撫でるのが、好きだった。!w2000
+	OutputLine(NULL, "頭を撫でるのが、好きだった。",
+		   NULL, "I liked petting your head.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+
+//　そんな君がはにかむのが、好きだった。!w2000
+	OutputLine(NULL, "そんな君がはにかむのが、好きだった。",
+		   NULL, "I loved how demure you were.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+	PlaySE( 3, "wa_017", 128, 64 );
+	Wait( 300 );
+	PlaySE( 3, "wa_030", 128, 64 );
+
+	ClearMessage();
+
+
+//locate 0,2
+
+	SetDrawingPointOfMessage( 0, 2 );
+
+//　これで最後だから。!w2000
+	OutputLine(NULL, "これで最後だから。",
+		   NULL, "...Because this will be the last time.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　これを振り下ろせば忘れてしまうのだから。!w2000
+	OutputLine(NULL, "これを振り下ろせば忘れてしまうのだから。",
+		   NULL, "Because when I swing this down, I'll forget.", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　君に贈る、...............俺からの、!w2000
+	OutputLine(NULL, "君に贈る、…俺からの、",
+		   NULL, "This is... my...", Line_ContinueAfterTyping);
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　最初で最後の!w1000花束。!w4000
+	OutputLine(NULL, "最初で最後の",
+		   NULL, "First and last...", Line_ContinueAfterTyping);
+
+
+	Wait( 1000 );
+
+
+	OutputLine(NULL, "花束。",
+		   NULL, " bouquet for you.", Line_ContinueAfterTyping);
+
+
+	Wait( 4000 );
+
+
+	ClearMessage();
+	DisableWindow();
+	DrawScene( "black", 3000 );
+	FadeFilm( 1000, TRUE );
+//print 1
+//locate 0,5
+
+	SetDrawingPointOfMessage( 0, 5 );
+
+//　ひょっとすると、...俺は君の事が、!w2000
+	OutputLine(NULL, "ひょっとすると、…俺は君の事が、",
+		   NULL, "Perhaps... I really did...", Line_ContinueAfterTyping);
+
+
+	Wait( 2000 );
+
+
+	OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping);
+
+
+//　!s150.......................................!s50好きだった。!w3000
+
+	SetSpeedOfMessage( TRUE, 10, );
+
+	OutputLine(NULL, "…………………………………",
+		   NULL, "...", Line_ContinueAfterTyping);
+
+	SetSpeedOfMessage( TRUE, 100, );
+
+	OutputLine(NULL, "好きだった。",
+		   NULL, "...love you.", Line_ContinueAfterTyping);
+
+	SetSpeedOfMessage( FALSE, 0, );
+
+
+	Wait( 3000 );
+
+
+	PlaySE( 3, "wa_015", 128, 64 );
+	Wait( 800 );
+
+	ClearMessage();
+	DisableWindow();
+
+//bg $862,0
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
+
+	PlaySE( 3, "wa_017", 128, 64 );
+	DrawBG( "aka1", 25, TRUE );
+	DrawBustshot( 5, "logo", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 0, TRUE );
+
+
+//..lsp 10,"title\logo.bmp",0,140
+//print 1
+
+	Wait( 3000 );
+
+//setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
+
+	FadeBG( 3000, TRUE );
+	DrawScene( "black", 1000 );
+//csp -1
+//print 2
+
+//return
+
+
+	SetValidityOfInput( TRUE );
+}

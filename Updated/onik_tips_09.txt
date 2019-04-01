@@ -1,0 +1,84 @@
+﻿void main()
+{
+
+//■ダム推進派の夫婦の転落事故
+
+//*Sub_Tips_009
+//gosub *tip_s
+	EnableJumpingOfReturnIcon();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+
+	DisableWindow();
+	DrawScene( "black", 1000 );
+
+	DrawScene( "bg_181", 1000 );
+	PlayBGM( 1, "msys15", 128, 0 );
+
+//　昭和５５年６月ＸＸ日夕刊よ＠
+	OutputLine(NULL, "　昭和５５年６月ＸＸ日夕刊より",
+		   NULL, "From the June 1980 edition.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　ＸＸ日午後２時頃、鹿骨市雛見沢村Ｘ丁目、会社員ＸＸＸさんと妻ＸＸＸＸさんが＠
+//　県立白川自然公園内の展望台から２７ｍ下の渓流へ転落、行方不明になった＠
+	OutputLine(NULL, "　ＸＸ日午後２時頃、鹿骨市雛見沢村Ｘ丁目、会社員ＸＸＸさんと妻ＸＸＸＸさんが、",
+		   NULL, "On the afternoon of XX at 2PM, office employee XXXX and his wife XXXX of Hinamizawa village in Shishibone prefecture", Line_WaitForInput);
+	OutputLine(NULL, "　県立白川自然公園内の展望台から２７ｍ下の渓流へ転落、行方不明になった。",
+		   NULL, " disappeared after falling 27 meters from the observatory platform in Shirakawa prefecture.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　警察と消防で下流を捜索し、同日夜７時頃、ＸＸＸさんの遺体を発見した＠
+	OutputLine(NULL, "　警察と消防で下流を捜索し、同日夜７時頃、ＸＸＸさんの遺体を発見した。",
+		   NULL, "Police and firefighters searched downstream and discovered the body of XXXX at around 7PM that evening.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　妻のＸＸＸＸさんは依然見つかっていない＠
+	OutputLine(NULL, "　妻のＸＸＸＸさんは依然見つかっていない。",
+		   NULL, "His wife, XXXXX has yet to be found.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+
+
+//　渓流は先日の台風３号の影響で増水しており、捜索は難航している￥
+	OutputLine(NULL, "　渓流は先日の台風３号の影響で増水しており、捜索は難航している。",
+		   NULL, "The search has run into difficulties due to the effects of Typhoon 3 from the previous day.", Line_Normal);
+	ClearMessage();
+
+//　ＸＸさん夫妻は展望台で柵にもたれかかっていた所、柵が壊れ転落した模様＠
+	OutputLine(NULL, "　ＸＸさん夫妻は展望台で柵にもたれかかっていた所、柵が壊れ転落した模様。",
+		   NULL, "It appeared a railing at the observatory that the XXs leaned on had broken, causing him to fall.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+
+//　柵は老朽化しており、警察は公園内の設備管理が適正だったか関係者から事情を聞いている￥
+	OutputLine(NULL, "　柵は老朽化しており、警察は公園内の設備管理が適正だったか関係者から事情を聞いている。",
+		   NULL, "The grounds keeping staff was questioned by the police in regards to facility deterioration, and if park maintenance was performed properly.", Line_Normal);
+	ClearMessage();
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, TRUE );
+//gosub *tip_e
+//return
+
+
+
+
+
+}
+
+
+
+
