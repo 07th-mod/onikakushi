@@ -76,17 +76,17 @@ void main()
 	ModADVModeSettingLoad(
 		"<size=+4>{0}\n</size>", //NameFormat
 		-170, //WindowPosX
-		-275, //WindowPosY
+		-300, //WindowPosY
 		1150, //WindowSizeX
 		250, //WindowSizeY
 		60, //WindowMarginLeft
 		30, //WindowMarginTop
 		50, //WindowMarginRight
 		30, //WindowMarginBottom
-		3, //FontID
+		1, //FontID
 		0, //CharSpacing
 		8, //LineSpacing
-		30 //FontSize
+		28 //FontSize
 	);
 
 	ModNVLModeSettingLoad(
@@ -99,7 +99,7 @@ void main()
 		30, //WindowMarginTop
 		50, //WindowMarginRight
 		30, //WindowMarginBottom
-		3, //FontID
+		1, //FontID
 		0, //CharSpacing
 		8, //LineSpacing
 		34 //FontSize
@@ -115,7 +115,7 @@ void main()
 		30, //WindowMarginTop
 		50, //WindowMarginRight
 		30, //WindowMarginBottom
-		3, //FontID
+		1, //FontID
 		0, //CharSpacing
 		8, //LineSpacing
 		34 //FontSize
@@ -124,6 +124,7 @@ void main()
 	SetScreenAspect("0.5625");
 	SetGUIPosition(170, 0);
 	ModSetConfigFontSize(15);
+	ModSetMainFontOutlineWidth(8);
 
 	CallScript( "flow" );
 }
