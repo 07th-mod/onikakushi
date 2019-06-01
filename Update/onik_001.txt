@@ -47,14 +47,14 @@ void main()
 //　お隣さんの家だってずーっと向こうだ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　お隣さんの家だってずーっと向こうだ。",
-		   NULL, "The neighboring house was far away on the other side,", GetGlobalFlag(GLinemodeSp));
+		   NULL, "The neighboring house was far away on the other side.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　だからきっとこの風景と朝の空気は俺だけのひとり占め＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だからきっとこの風景と朝の空気は俺だけのひとり占め。",
-		   NULL, "so I was probably the only one enjoying that view and that air.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "So I was probably the only one enjoying that view and that air.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -1087,7 +1087,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "ps3/s19/03/990300016", 256, TRUE);
 	OutputLine(NULL, "「でさ！探しといてくれたぁ？",
-		   NULL, "\"So yeah! Did you look for iiit?", Line_WaitForInput);
+		   NULL, "\"So yeah! Did you look for it?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "ps3/s19/03/990300017", 256, TRUE);
 	OutputLine(NULL, "　……頼んどいたヤツ！」",
 		   NULL, " ...That thing I asked for?\"", GetGlobalFlag(GLinemodeSp));
