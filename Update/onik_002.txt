@@ -208,7 +208,7 @@ void main()
 	Wait( 500 );
 
 	OutputLine(NULL, "取る！」",
-		   NULL, " \nI'll take responsibility.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " I'll take responsibility.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -222,7 +222,7 @@ void main()
 	Wait( 300 );
 
 	OutputLine(NULL, "……せ、せ…責任って…？！　何だろ！　何だろ！」",
-		   NULL, " ...R-Re... responsibility...!?  For what!? For what!?\"", Line_Normal);
+		   NULL, " ...R-Re... responsibility...!? For what!? For what!?\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawBustshotWithFiltering(5, "black", "right", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
@@ -477,7 +477,7 @@ void main()
 		   NULL, "\"So that means...", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01340", 256, TRUE);
 	OutputLine(NULL, "　知らない顔が歩いてれば、それは自動的に新しく引っ越してきた前原さん、てことになるわけか。」",
-		   NULL, "So that means when an unfamiliar face walks by, they automatically assume it's that Maebara fella who just moved here?\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " So that means when an unfamiliar face walks by, they automatically assume it's that Maebara fella who just moved here?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -1117,7 +1117,7 @@ void main()
 //　そ、そうか、魅音の秘策とはつまり、人海戦術のことだったのか…￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そ、そうか、魅音の秘策とはつまり、人海戦術のことだったのか…！",
-		   NULL, "I-I see... this was her secret plan... to power in numbers...!", Line_Normal);
+		   NULL, "I-I see... this was her secret plan... the power in numbers...!", Line_Normal);
 	ClearMessage();
 
 //　感謝するぜ魅音＠
@@ -1213,7 +1213,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01500", 256, TRUE);
 	OutputLine(NULL, "「くぅ〜…やっぱり梨花ちゃんはいい子だなぁ…！！",
-		   NULL, "\"Wow~...Rika-chan is such a good girl...!!", Line_WaitForInput);
+		   NULL, "\"Wow~... Rika-chan is such a good girl...!!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01510", 256, TRUE);
 	OutputLine(NULL, "　座りなそこ！",
 		   NULL, " Have a seat!", Line_WaitForInput);
@@ -1781,7 +1781,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400043", 256, TRUE);
 	OutputLine(NULL, "「ほほほ…では。",
-		   NULL, "\"Hohoho...Well then.", Line_WaitForInput);
+		   NULL, "\"Hohoho... Well then.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400044", 256, TRUE);
 	OutputLine(NULL, "ごらんあそばせ。」",
 		   NULL, " Allow me to show you.\"", GetGlobalFlag(GLinemodeSp));
@@ -1890,13 +1890,13 @@ void main()
 //..Stick! Satoko also gets the reward of a bunny shaped apple.
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　すちゃ、",
-		   NULL, "Swish,", Line_Normal);
+		   NULL, "Swish,", Line_WaitForInput);
 	Wait( 200 );
 	OutputLine(NULL, "さく！",
-		   NULL, " stab!", Line_Normal);
+		   NULL, " stab!", Line_WaitForInput);
 	Wait( 100 );
 	OutputLine(NULL, "　びし！",
-		   NULL, " Push!", Line_Normal);
+		   NULL, " Push!", Line_WaitForInput);
 	Wait( 100 );
 	OutputLine(NULL, "　沙都子にもリンゴのうさぎさんが進呈される。",
 		   NULL, " Satoko was also presented with apple rabbits.", Line_Normal);
@@ -2002,7 +2002,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01630", 256, TRUE);
 	OutputLine(NULL, "「はあッ？！」",
-		   NULL, " \"Whaa!?\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "\"Whaa!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -2309,7 +2309,7 @@ void main()
 //　ぐはぁッ？！　俺は瞬時に、口に十数個のりんごを詰め込まれ卒倒する￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ぐはぁッ？！　俺は瞬時に、口に十数個のりんごを詰め込まれ卒倒する。",
-		   NULL, "Huwarkh!?  Instantly, dozens of the apples were shoved into my mouth, knocking me over.", Line_Normal);
+		   NULL, "Huwarkh!? Instantly, dozens of the apples were shoved into my mouth, knocking me over.", Line_Normal);
 	ClearMessage();
 
 //「はは、ははい、!d300ぁ、!d300あ～んしてぇえぇ…けけけ圭一くん!w500!s100……けけけけけ…☆!sd＠
