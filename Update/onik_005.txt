@@ -6,13 +6,13 @@ void main()
 
 //*day5
 
-	FadeOutBGM( 0, 1000, FALSE );
-	FadeOutBGM( 1, 1000, FALSE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 0, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 
 	DisableWindow();
 	DrawScene("white", 400 );
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys01", 128, 0 ); }
 	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_wink_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawScene("background/gk1", 3000 );
 
@@ -20,6 +20,9 @@ void main()
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "ps3/s19/03/990300259", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_01", 128, 0 ); }
 	OutputLine(NULL, "「あははは！　どうだった圭ちゃん！」",
 		   NULL, "\"Ahahaha! How was it, Kei-chan?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -116,6 +119,12 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_005_vm0x_n01","dialog001");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_005_vm00_n01","dialog001");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog001
+//　それはみんなランディーくん同様、町を歩けばどこかで見かけるようなものばかりだった＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それはみんなケンタくん同様、町を歩けばどこかで見かけるようなものばかりだった。",
+		   NULL, "They were all the same as Colonel Sanders: stuff you'd see while walking around in town.", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog001
 	//VoiceMatchingEnd
 
 //　ケーキ屋さんの店頭のペロちゃん人形＠
@@ -278,15 +287,21 @@ void main()
 //時間経過
 	DisableWindow();
 	DrawSceneWithMask("black", "up", 0, 0, 3000 );
-	PlaySE( 4, "wa_020", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_020", 128, 64 ); }
 	DrawSceneWithMask("background/gk1", "left", 0, 0, 200 );
-	PlayBGM( 1, "msys02", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys02", 128, 0 ); }
 	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri1_def_a1_", "0", "right", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
 
 
 //「…お待たせしましたです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 5, "ps3/s19/05/990500041", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Boyoon", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Dageki", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Door", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_04", 128, 0 ); }
 	OutputLine(NULL, "「…お待たせしましたです。」",
 		   NULL, "\"...My apologies for keeping you waiting.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -602,7 +617,7 @@ void main()
 	ModPlayVoiceLS(3, 3, "ps3/s19/03/990300270", 256, TRUE);
 	OutputLine(NULL, "　綿流祭四凶爆闘！！」",
 		   NULL, " The Watanagashi Four-Demon Fire Fight!\"", Line_Continue);
-	PlaySE( 4, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_007", 128, 64 ); }
 	ShakeScreen( 0, 50, 20, 3, 0, );
 	OutputLineAll(NULL, "", Line_Normal);
 
@@ -613,6 +628,7 @@ void main()
 //「セ、センスねぇーッ！＠　なんだよそのネーミングは！＠」
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei07310", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
 	OutputLine(NULL, "「セ、センスねぇーッ！！",
 		   NULL, "\"Th-That sounds awful!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei07320", 256, TRUE);
@@ -1408,9 +1424,13 @@ void main()
 	DrawSceneWithMask("black", "right", 0, 0, 300 );
 	DrawSceneWithMask("background/gk3", "right", 0, 0, 300 );
 
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys04", 128, 0 ); }
 //　まずは軽快な滑り出し＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_02", 128, 0 ); }
 	OutputLine(NULL, "　まずは軽快な滑り出し。",
 		   NULL, "I had a decent starting hand.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1448,7 +1468,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_010", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_010", 128, 64 ); }
 
 //…俺は違う＠
 	OutputLine(NULL, "…俺は違う！",
@@ -1459,6 +1479,7 @@ void main()
 
 //　獲物を狙うサメの心持ちでじっと牙を伏せる￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Kyupirn", 256, 64); }
 	OutputLine(NULL, "　獲物を狙うサメの心持ちでじっと牙を伏せる。",
 		   NULL, "I was like a shark stalking its prey, just waiting for the right time to strike.", Line_Normal);
 	ClearMessage();
@@ -1676,10 +1697,11 @@ void main()
 	DisableWindow();
 	FadeAllBustshots( 400, TRUE );
 
-	PlaySE( 4, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_029", 128, 64 ); }
 //"校長先生の頭をなでる"
 	if (GetGlobalFlag(GADVMode) == 0) { ClearMessage(); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Boyoon", 256, 64); }
 	OutputLine(NULL, "“校長先生の頭をなでる”",
 		   NULL, "\"Pet the principal on the head.\"", Line_Normal);
 	ClearMessage();
@@ -1705,6 +1727,16 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_005_vm0x_n01","dialog004");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_005_vm00_n01","dialog004");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog004
+//「圭一さんは気付きませんの？！＠　校長先生はハゲ頭を恥ずかしがってますの！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400135", 256, TRUE);
+	OutputLine(NULL, "「圭一さんは気付きませんの？！！",
+		   NULL, "\"Keiichi-san, do you not understand!?!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400136", 256, TRUE);
+	OutputLine(NULL, "　校長先生はハゲ頭を恥ずかしがってますの！！」",
+		   NULL, " The principal is balding and ashamed of it!!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog004
 	//VoiceMatchingEnd
 
 
@@ -1844,9 +1876,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ど",
 		   NULL, "Ker", Line_ContinueAfterTyping);
-	PlaySE( 4, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 5, 0, );
 //っがぁあぁあぁんッ！！＠　教室を揺るがす轟音！＠
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Daidageki", 256, 64); }
 	OutputLine(NULL, "っがぁあぁあぁんッ！！！",
 		   NULL, " Poooow!", Line_WaitForInput);
 	OutputLine(NULL, "　教室を揺るがす轟音！！",
@@ -1861,34 +1894,46 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_005_vm0x_n01","dialog002");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_005_vm00_n01","dialog002");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog002
+//「…校長先生のエアリアル起動技です。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s19/05/990500067", 256, TRUE);
+	OutputLine(NULL, "「…校長先生のエアリアル起動技です。」",
+		   NULL, "\"...That's the principal's aerial opener!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog002
 	//VoiceMatchingEnd
 
 
 
-	PlaySE( 4, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_005", 128, 64 ); }
 	Wait( 200 );
-	PlaySE( 4, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_005", 128, 64 ); }
 	Wait( 200 );
-	PlaySE( 4, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_006", 128, 64 ); }
 	Wait( 1000 );
 
 //　ずどがががッ！！！/
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Dageki", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Dageki", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Daidageki", 256, 64); }
 	OutputLine(NULL, "　ずどがががッ！！！",
 		   NULL, "Boof pow whap!!", Line_ContinueAfterTyping);
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 4, "wa_011", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_011", 128, 64 ); }
 	Wait( 200 );
 
 //　きゅぴーん！
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Kira", 256, 64); }
 	OutputLine(NULL, "　きゅぴーん！",
 		   NULL, "Zazhing!", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_007", 128, 64 ); }
 
 //　ばっかぁあぁあぁんッ！！＠
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
 	OutputLine(NULL, "　ばっかぁあぁあぁんッ！！！",
 		   NULL, " KaboOoOom!!!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1898,6 +1943,24 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_005_vm0x_n01","dialog000");}
 	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_005_vm00_n01","dialog000");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog000
+//　浮かしてから弱弱中強？＠　しかもゲージ技まで持ってやがるッ！！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　浮かしてから弱弱中強？！",
+		   NULL, "Following the launcher with a jab, jab, strong, fierce combo!?", Line_WaitForInput);
+	OutputLine(NULL, "　しかもゲージ技まで持ってやがるッ！！！",
+		   NULL, " He's even using meter!", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 1000, TRUE );
+
+//「音からして…校長の空中強は多段ヒット技だな？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei07470", 256, TRUE);
+	OutputLine(NULL, "「音からして…校長の空中強は多段ヒット技だな？」",
+		   NULL, "\"From how it sounded... the principal's jumping fierce sounds like a multi-hit combo.\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog000
 	//VoiceMatchingEnd
 
 
@@ -1962,9 +2025,10 @@ void main()
 	SetSpeedOfMessage( FALSE, 0, );
 //!sd?
 
-	PlaySE( 4, "wa_002", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_002", 128, 64 ); }
 //　そう言って倒れこむ魅音￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Down", 256, 64); }
 	OutputLine(NULL, "　そう言って倒れこむ魅音。",
 		   NULL, "Mion said before collapsing.", Line_Normal);
 	ClearMessage();
@@ -2183,10 +2247,11 @@ void main()
 	DisableWindow();
 	DrawScene("black", 400 );
 
-	PlaySE( 4, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_029", 128, 64 ); }
 //"メイドさん口調でしゃべる"
 	if (GetGlobalFlag(GADVMode) == 0) { ClearMessage(); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Boyoon", 256, 64); }
 	OutputLine(NULL, "“メイドさん口調でしゃべる”",
 		   NULL, "\"Speak like a maid.\"", Line_Normal);
 	ClearMessage();
@@ -2411,9 +2476,10 @@ void main()
 	DisableWindow();
 	DrawScene("black", 400 );
 
-	PlaySE( 4, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_029", 128, 64 ); }
 //"上下１枚ずつ脱衣。"
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Boyoon", 256, 64); }
 	OutputLine(NULL, "“上下１枚ずつ脱衣。”",
 		   NULL, "\"Remove one item of clothing from the top and bottom halves of your body.\"", Line_Normal);
 	ClearMessage();
@@ -2717,10 +2783,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n\n", Line_ContinueAfterTyping); }
 
 
-	PlaySE( 4, "wa_010", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_010", 128, 64 ); }
 //「ぉ……俺は勝ぁああぁあぁあつッッ！！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei07570", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Kyupirn", 256, 64); }
 	OutputLine(NULL, "「ぉ……俺は勝ぁああぁあぁあつッッ！！！！」",
 		   NULL, "\"I... I WIIIIN!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -2732,7 +2799,7 @@ void main()
 	ClearMessage();
 
 
-	PlaySE( 4, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_007", 128, 64 ); }
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DisableWindow();
 	DrawScene("white", 50 );
@@ -2747,6 +2814,7 @@ void main()
 //!sd
 //　すでに神の領域に達した俺の前に…一体何の障害があるというのだ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
 	OutputLine(NULL, "　すでに神の領域に達した俺の前に…一体何の障害があるというのだ？！",
 		   NULL, "I, who had already entered the domain of godhood... What would dare stand in my way!?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -3333,7 +3401,7 @@ void main()
 	OutputLine(NULL, "「有りだったよな。",
 		   NULL, "\"That was good.", Line_WaitForInput);
 
-	PlaySE( 4, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_007", 128, 64 ); }
 //……革命返しだぁああぁあぁああッ！！！！！＠
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei07790", 256, TRUE);
 	OutputLine(NULL, "……革命返しだぁああぁあぁああッ！！！！！」",
@@ -3347,6 +3415,7 @@ void main()
 //「んなッ？＠　そんな馬鹿なことがあるわけ……ッ？！？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400154", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
 	OutputLine(NULL, "「んなッ？！",
 		   NULL, "\"Wuuuh!?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400155", 256, TRUE);
@@ -3527,7 +3596,7 @@ void main()
 	OutputLine(NULL, "　梨花ちゃんが涙目で泣き真似をした時、レナの両耳から",
 		   NULL, "As Rika-chan mimicked a cat, teary-eyed, rings of smoke", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_016", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_016", 128, 64 ); }
 
 //ぽん！と音がして輪っか状の煙があがる＠
 	OutputLine(NULL, "ぽん！と音がして輪っか状の煙があがる。",
@@ -3539,6 +3608,7 @@ void main()
 //「……梨花ちゃん…お持ち帰りお持ち帰り…＠　…ちょ…ちょっとだけだよ☆…ヘ、ヘンなことはしないんだよ…しないんだよ……☆＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200362", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Pou", 256, 64); }
 	OutputLine(NULL, "「……梨花ちゃん…お持ち帰りお持ち帰り…☆",
 		   NULL, "\"...Rika-chan... Must take home... Taking her home...☆", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200363", 256, TRUE);
@@ -3767,7 +3837,7 @@ void main()
 	OutputLine(NULL, "　圭一さんの罰ゲーム！！！",
 		   NULL, " Keiichi-san's penalty!", Line_Continue);
 
-	PlaySE( 4, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_007", 128, 64 ); }
 
 //…これですわ！！＠
 	OutputLine(NULL, "…これですわ！！」",
@@ -3778,6 +3848,7 @@ void main()
 
 //　みんなが一斉にそれを覗き込み、文面と俺の顔を交互に見比べる＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
 	OutputLine(NULL, "　みんなが一斉にそれを覗き込み、文面と俺の顔を交互に見比べる。",
 		   NULL, "Everybody peeked at it in unison, gazes flicking between the text and my face.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3794,14 +3865,15 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(1, 4, "sprite/normal/sa4_akuwarai_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
-	FadeOutBGM( 1, 1000, TRUE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 
 	ModDrawCharacter(3, 3, "sprite/normal/me4_huteki_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 100, TRUE );
 
 //「全部。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "ps3/s19/03/990300317", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
 	OutputLine(NULL, "「全部。」",
 		   NULL, "\"All.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3818,10 +3890,11 @@ void main()
 	DisableWindow();
 	DrawScene("black", 200 );
 
-	PlaySE( 4, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_029", 128, 64 ); }
 
 //"今まで出た罰ゲーム全部"
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Boyoon", 256, 64); }
 	OutputLine(NULL, "“今まで出た罰ゲーム全部”",
 		   NULL, "\"Every penalty up until now.\"", Line_Normal);
 	ClearMessage();
@@ -3850,12 +3923,14 @@ void main()
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 0, TRUE );
 	DrawBG("background/gk1", 0, TRUE );
 	FadeBustshotWithFiltering( 5, "down", 0, FALSE, 0, 0, 3000, TRUE );
-	PlayBGM( 1, "msys03", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys03", 128, 0 ); }
 	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa4_akuwarai_a1_", "1", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「圭一さん、言葉遣いが弟属性になっていませんでしてよ？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400159", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_06", 128, 0 ); }
 	OutputLine(NULL, "「圭一さん、言葉遣いが弟属性になっていませんでしてよ？！」",
 		   NULL, "\"Keiichi-san, should you not be speaking like a little brother!?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4106,6 +4181,16 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_005_vm0x_n01","dialog005");}
 	if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_005_vm00_n01","dialog005");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog005
+//　第一感想。…胴回りがキツイ＠第二感想。胸だけは割りとラク…＠第三感想。股間が……………はぅ￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　第一感想。…胴回りがキツイ。",
+		   NULL, "My first thought... It's tight around the waist.", Line_WaitForInput);
+	OutputLine(NULL, "第二感想。胸だけは割りとラク…。",
+		   NULL, " Second thought. The chest area was pretty loose...", Line_WaitForInput);
+	OutputLine(NULL, "第三感想。股間が……………はぅ。",
+		   NULL, " Third thought. The crotch area was... hau.", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog005
 	//VoiceMatchingEnd
 
 	DisableWindow();
@@ -4115,6 +4200,13 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_005_vm0x_n01","dialog003");}
 	if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_005_vm00_n01","dialog003");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog003
+//「あははは～圭一くん、前屈みだぁぁ……かぁいいかぁいいッ！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200368", 256, TRUE);
+	OutputLine(NULL, "「あははは〜圭一くん、前屈みだぁぁ……かぁいいかぁいいッ！！」",
+		   NULL, "\"Ahahaha~ Keiichi-kun is bending forward... kyute kyute!!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog003
 	//VoiceMatchingEnd
 
 
@@ -4231,16 +4323,20 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "down", 0, 0, 3000 );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys12", 128, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_020", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_020", 128, 64 ); }
 	DrawSceneWithMask("background/g3", "right", 0, 0, 200 );
 
 //「ぅ押忍ッ！！　失礼します！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei08050", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 0, "ps3/Semi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Door", 256, 64); }
 	OutputLine(NULL, "「ぅ押忍ッ！！　失礼します！！」",
 		   NULL, "\"Sir!! Excuse me!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4363,12 +4459,58 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_005_vm0x_n01","dialog006");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_005_vm00_n01","dialog006");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog006
+//「校!s75長ぉぉおおおおぉおおおッ！！！　!sd勝負!s70ぅううぅううッ！！！！！」!sd@
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei08060", 256, TRUE);
+	OutputLine(NULL, "「校",
+		   NULL, "\"Princi", Line_Continue);
+//!s75
+
+	SetSpeedOfMessage( TRUE, 32, );
+
+	OutputLine(NULL, "長ぉぉおおおおぉおおおッ！！！　",
+		   NULL, "paaaAaaAal!!!", Line_Continue);
+//!sd
+
+
+
+	OutputLine(NULL, "勝負",
+		   NULL, " I challenge you...", Line_Continue);
+//!s70
+
+	SetSpeedOfMessage( TRUE, 0, );
+
+	OutputLine(NULL, "ぅううぅううッ！！！！！」",
+		   NULL, " hurRrk!!!!!!\"", GetGlobalFlag(GLinemodeSp));
+//!sd
+
+	SetSpeedOfMessage( FALSE, 0, );
+
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_010", 128, 64 ); }
+	Wait( 200 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_010", 128, 64 ); }
+	Wait( 200 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_010", 128, 64 ); }
+	Wait( 200 );
+
+//　きゅぴーんという音が３回した。３ゲージ技かッ？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Kyupirn", 256, 64); }
+	OutputLine(NULL, "　きゅぴーんという音が３回した。３ゲージ技かッ？！",
+		   NULL, "I heard what sounded like a \"zhazhing\" three times.  His 3-gauge super!?", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_005_vm00_n01.txt|dialog006
 	//VoiceMatchingEnd
 
-	FadeOutBGM( 1, 1000, TRUE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 //　校長は一言俺に言った＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
 	OutputLine(NULL, "　校長は一言俺に言った。",
 		   NULL, "The principal said one thing to me.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4395,7 +4537,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ご",
 		   NULL, "Bo", Line_ContinueAfterTyping);
-	PlaySE( 4, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 7, 0, );
 
 //おぉおぉおおおぉおん……ッ！！/
@@ -4412,15 +4554,16 @@ void main()
 
 //　黄昏の雛見沢に轟音が響き渡るのだった……￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Daidageki", 256, 64); }
 	OutputLine(NULL, "　黄昏の雛見沢に轟音が響き渡るのだった……。",
 		   NULL, "That tremor resounded throughout the Hinamizawan twilight...", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 1, 1000, TRUE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 
 //mov %CAMP_MUGIC,3
-	PlayBGM( 0, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 0, "lsys12", 128, 0 ); }
 	DisableWindow();
 	SetValidityOfInput( FALSE );
 //	Wait( 1000 );
@@ -4434,12 +4577,23 @@ void main()
 	SetValidityOfInput( TRUE );
 
 //■魅音と下校。
-	FadeOutBGM( 0, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 0, 1000, TRUE ); }
 	DrawScene("background/m_hi4", 400 );
-	PlayBGM( 2, "lsys11", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 2, "lsys11", 128, 0 ); }
 
 //　レナは梨花ちゃんの頭を好きなだけなでなでできる権利を獲得したので、ほくほくしながら梨花ちゃんたちと下校した＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 1, "ps3/Higurasi", 128, 0 ); }
 	OutputLine(NULL, "　レナは梨花ちゃんの頭を好きなだけなでなでできる権利を獲得したので、ほくほくしながら梨花ちゃんたちと下校した。",
 		   NULL, "Rena was given permission to caress Rika-chan's head as much as she wanted, so they headed home together, very pleased.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4519,13 +4673,19 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 1, "msys05", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys05", 128, 0 ); }
 	ModDrawCharacterWithFiltering(1, 8, "sprite/normal/tomi1_def_", "0", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/m_hi3", "left", 0, 0, 300 );
 
 //「おや、また会ったね。圭一くん。＠
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 1, "ps3/Higurasi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Down", 256, 64); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 8, "ps3/s19/08/990800030", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_07", 128, 0 ); }
 	OutputLine(NULL, "「おや、また会ったね。圭一くん。」",
 		   NULL, "\"Oh, we meet again, Keiichi-kun.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

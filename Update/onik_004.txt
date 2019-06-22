@@ -14,18 +14,21 @@ void main()
 //gosub *ch_ri_Ta
 //******************************************************************
 
-	FadeOutBGM( 0, 1000, FALSE );
-	FadeOutBGM( 1, 1000, FALSE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 0, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 
 	DisableWindow();
 	DrawScene("white", 400 );
-	PlayBGM( 1, "msys02", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys02", 128, 0 ); }
 	DrawSceneWithMask("background/gr1", "up", 0, 0, 1300 );
 
 //　この学校は、学校として機能しているのか本当に怪しい￥
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_05", 128, 0 ); }
 	OutputLine(NULL, "　この学校は、学校として機能しているのか本当に怪しい。",
 		   NULL, "The function of this school as an educational facility is very questionable.", Line_Normal);
 	ClearMessage();
@@ -211,7 +214,7 @@ void main()
 	OutputLine(NULL, "「鬼ごっこ」で行こう！」",
 		   NULL, " Let's play tag!\"", Line_Continue);
 	Wait( 800 );
-	PlaySE( 4, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_007", 128, 64 ); }
 	ShakeScreen( 0, 50, 20, 3, 0, );
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -220,6 +223,7 @@ void main()
 
 //　しかし、すごい前振りの割りにはなんとも可愛らしいお遊戯が出てきたものだ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
 	OutputLine(NULL, "　しかし、すごい前振りの割りにはなんとも可愛らしいお遊戯が出てきたものだ。",
 		   NULL, "It was quite the adorable choice to make after playing it up so much.", Line_Normal);
 	ClearMessage();
@@ -329,9 +333,10 @@ void main()
 //「…上等だぜ。鬼ごっこ＠乗ってやらぁあぁああぁ！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05560", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Kyupirn", 256, 64); }
 	OutputLine(NULL, "「…上等だぜ。鬼ごっこ、",
 		   NULL, "\"...Fine. Tag,", Line_WaitForInput);
-	PlaySE( 4, "wa_010", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_010", 128, 64 ); }
 	Wait( 300 );
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05570", 256, TRUE);
 	OutputLine(NULL, "乗ってやらぁあぁああぁ！！！」",
@@ -527,11 +532,15 @@ void main()
 	SetValidityOfInput( TRUE );
 	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me3_wink_a1_", "1", "m1", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/gr1", "down", 0, 0, 1300 );
-	PlayBGM( 1, "msys03", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys03", 128, 0 ); }
 
 //「「６」は英語で？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "ps3/s19/03/990300229", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_02", 128, 0 ); }
 	OutputLine(NULL, "「「６」は英語で？！」",
 		   NULL, "\"What does the Japanese word 「roku」 mean?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -650,6 +659,9 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog000");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog000");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog000
+	OutputLine(NULL, "　セッ",
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog000
 	//VoiceMatchingEnd
 
 	Wait( 300 );
@@ -796,6 +808,29 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog020");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog020");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog020
+//「知ってるもん…！＠　知ってるもん！！！…!d300…!d300セッ、」!d600
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400087", 256, TRUE);
+	OutputLine(NULL, "「知ってるもん…！！",
+		   NULL, "\"I do know...!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps2/04/990400088", 256, TRUE);
+	OutputLine(NULL, "知ってるもん！！",
+		   NULL, " I do know!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400089", 256, TRUE);
+	OutputLine(NULL, "　知ってるもん！！！…",
+		   NULL, " I do know!!!...", Line_Continue);
+
+	Wait( 300 );
+
+	OutputLine(NULL, "…",
+		   NULL, " ...", Line_Continue);
+
+	Wait( 300 );
+
+	OutputLine(NULL, "セッ、」",
+		   NULL, "Se...\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog020
 	//VoiceMatchingEnd
 
 
@@ -1002,12 +1037,14 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys04", 128, 0 ); }
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me3_warai_a1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「よーーいどんッ！！！！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 3, "ps3/s19/03/990300242", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_02", 128, 0 ); }
 	OutputLine(NULL, "「よーーいどんッ！！！！」",
 		   NULL, "\"Ready... go!!!!\"", Line_Normal);
 	ClearMessage();
@@ -1609,6 +1646,64 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_004_vm0x_n01","dialog001");}
 	if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_004_vm00_n01","dialog001");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog001
+//「趣味はお風呂覗きなんだってー。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girlb99003", 256, TRUE);
+	OutputLine(NULL, "「趣味はお風呂覗きなんだってー。」",
+		   NULL, "\"They say he enjoys peeping into bathrooms.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　はぁああぁッ？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　はぁああぁッ？！",
+		   NULL, "HaouUuh!?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「夜な夜な下着を盗んで回ってるって本当なのぅ？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girlc99004", 256, TRUE);
+	OutputLine(NULL, "「夜な夜な下着を盗んで回ってるって本当なのぅ？」",
+		   NULL, "\"Is it true that he's going around every night stealing panties?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　誰がぁぁああぁあッ？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　誰がぁぁああぁあッ？！",
+		   NULL, "Who were they talking about!?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「ぱんつをかぶったり匂いを嗅いだりするんだって。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girld99003", 256, TRUE);
+	OutputLine(NULL, "「ぱんつをかぶったり匂いを嗅いだりするんだって。」",
+		   NULL, "\"I heard he wears panties on his head and smells them and stuff.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//　なわきゃねえだらぁああぁあぁ！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　なわきゃねえだらぁああぁあぁ！！",
+		   NULL, "No way I would do thaaat!!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「魅音委員長も被害にあったって言ってたよー！」!w800
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girle99003", 256, TRUE);
+	OutputLine(NULL, "「魅音委員長も被害にあったって言ってたよー！」",
+		   NULL, "\"I heard that Class Representative Mion was a victim too~!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog001
 	//VoiceMatchingEnd
 
 //「え゛ーーーッッ？！￥
@@ -1619,10 +1714,11 @@ void main()
 	ClearMessage();
 
 
-	PlaySE( 4, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 //　ぐをおおぉおおおぉおぉおおぉおおぉおおおッ！！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Daidageki", 256, 64); }
 	OutputLine(NULL, "　ぐをおおぉおおおぉおぉおおぉおおぉおおおッ！！！！！",
 		   NULL, "GaaaaaaaAAaaRRRrrrrggh!!!!!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1696,6 +1792,19 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 4){ModCallScriptSection("zonik_004_vm0x_n01","dialog002");}
 	if(GetGlobalFlag(GCensor) <= 3){ModCallScriptSection("zonik_004_vm00_n01","dialog002");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog002
+//「聞いたー＠　転校生の前原さんてＨな人なんだってー＠　きゃはははは！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girle99004", 256, TRUE);
+	OutputLine(NULL, "「聞いたー？",
+		   NULL, "\"Did you hear?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girle99005", 256, TRUE);
+	OutputLine(NULL, "　転校生の前原さんてＨな人なんだってー！",
+		   NULL, " I heard that the new transfer student Maebara-san is a really perverted person!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girle99006", 256, TRUE);
+	OutputLine(NULL, "　きゃはははは！！」",
+		   NULL, " Kyahahahaha!!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog002
 	//VoiceMatchingEnd
 
 
@@ -2143,7 +2252,7 @@ void main()
 	OutputLine(NULL, "滑って転倒。",
 		   NULL, " slipping as I landed.", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_002", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_002", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", Line_Normal);
 
@@ -2151,6 +2260,7 @@ void main()
 
 //　沙都子と梨花に飛びかかられ馬乗りされると、全身を存分に……くすぐられた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Down", 256, 64); }
 	OutputLine(NULL, "　沙都子と梨花に飛びかかられ馬乗りされると、全身を存分に……くすぐられた。",
 		   NULL, "Satoko and Rika jumped on top of me and, after straddling me... they tickled me, all over my body.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2342,6 +2452,105 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_004_vm0x_n01","dialog003");}
 	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_004_vm00_n01","dialog003");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog003
+//「あぁ！　ジャンボ機なんか目じゃないぞ＠　レナんちに墜落したのはなんと……/
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05860", 256, TRUE);
+	OutputLine(NULL, "「あぁ！　ジャンボ機なんか目じゃないぞ！",
+		   NULL, "\"Yeah! It's not even in the same league as jumbo jets!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05870", 256, TRUE);
+	OutputLine(NULL, "　レナんちに墜落したのはなんと……",
+		   NULL, " What fell on Rena's house...", Line_Continue);
+
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_008", 128, 64 ); }
+	Wait( 200 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_008", 128, 64 ); }
+	Wait( 200 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_008", 128, 64 ); }
+	Wait( 200 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
+//スペースコロニーだッ！！」/
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05880", 256, TRUE);
+	OutputLine(NULL, "スペースコロニーだッ！！」",
+		   NULL, "Was a space colony!!\"", Line_Continue);
+
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_007", 128, 64 ); }
+	ShakeScreen( 1, 50, 20, 3, 0, );
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+
+//「ス、スペースコロニーですってぇえぇッ？！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400106", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
+	OutputLine(NULL, "「ス、スペースコロニーですってぇえぇッ？！」",
+		   NULL, "\"A-A space colonyyyyy!?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「あぁ、ものすごい大惨事だぞ＠　半径数百キロは壊滅だ＠　だがこれは悲劇の序章にしか過ぎない！＠　なんとこれこそは…ジオン広告社が引き起こした独立戦争の幕開けだったのだッ！！」/
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05890", 256, TRUE);
+	OutputLine(NULL, "「あぁ、ものすごい大惨事だぞ！",
+		   NULL, "\"Yeah, it's a really big disaster!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05900", 256, TRUE);
+	OutputLine(NULL, "　半径数百キロは壊滅だ！",
+		   NULL, " Everything in a 100 kilometer radius was obliterated!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05910", 256, TRUE);
+	OutputLine(NULL, "　だがこれは悲劇の序章にしか過ぎない！！",
+		   NULL, " But that's only the prelude to this tragic tale!!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05920", 256, TRUE);
+	OutputLine(NULL, "　なんとこれこそは…ジオン広告社が引き起こした独立戦争の幕開けだったのだッ！！」",
+		   NULL, " This is the beginning... the start of a war for independence by the Propagandapality of Zeon!!\"", Line_Continue);
+
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_007", 128, 64 ); }
+	ShakeScreen( 0, 50, 20, 3, 0, );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　あまりの規模の大きさに下級生たちは目を丸く見開き、唖然としている…＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　あまりの規模の大きさに下級生たちは目を丸く見開き、唖然としている…。",
+		   NULL, "The lower grades were dumbfounded, their eyes like saucers at the grand turn of events...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//「そ…それでどうなるの…＠　地球連邦は負けちゃうの？￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girlc99005", 256, TRUE);
+	OutputLine(NULL, "「そ…それでどうなるの…？",
+		   NULL, "\"Wh... What will happen...?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girlc99006", 256, TRUE);
+	OutputLine(NULL, "　地球連邦は負けちゃうの？」",
+		   NULL, " Will the Terran Federation lose?\"", Line_Normal);
+	ClearMessage();
+
+
+//「このままでは負けるッ！＠　赤い彗星に勝てるのはヤツしかいない！＠　それが竜宮レナなのだぁッ！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05960", 256, TRUE);
+	OutputLine(NULL, "「このままでは負けるッ！！",
+		   NULL, "\"If things go on like this, they will!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05970", 256, TRUE);
+	OutputLine(NULL, "　赤い彗星に勝てるのはヤツしかいない！！",
+		   NULL, " Only one person can defeat the Red Comet!!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05980", 256, TRUE);
+	OutputLine(NULL, "　それが竜宮レナなのだぁッ！！」",
+		   NULL, " That person is Rena Ryuugu!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　下級生たちが唾をごくりと飲みこむ…！",
+		   NULL, "The lower grade students all gulped...!", Line_WaitForInput);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog003
 	//VoiceMatchingEnd
 
 
@@ -2381,6 +2590,29 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_004_vm0x_n01","dialog004");}
 	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_004_vm00_n01","dialog004");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog004
+//「でも…連邦艦隊の拡散波動砲でも、彗星帝国には効かなかったんじゃ…。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女子</color>", NULL, "<color=#f5e6d3>Girl</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 0, "ps3/s19/00/girla99006", 256, TRUE);
+	OutputLine(NULL, "「でも…連邦艦隊の拡散波動砲でも、彗星帝国には効かなかったんじゃ…。」",
+		   NULL, "\"But... I thought even the Terran Federation's Impulse Wave Diffusal Cannon... didn't work on the Comet Empire...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+//「惜しいな。それは白い方の彗星だぞ＠効かなかったのは弱点を知らなかったからだ＠もちろんレナは白色彗星の弱点だって熟知してる！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06000", 256, TRUE);
+	OutputLine(NULL, "「惜しいな。それは白い方の彗星だぞ。",
+		   NULL, "\"You're close. That's the white variety of those comets.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06010", 256, TRUE);
+	OutputLine(NULL, "効かなかったのは弱点を知らなかったからだ。",
+		   NULL, " The reason it didn't work was because they didn't know the weak point.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06020", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Finish", 256, 64); }
+	OutputLine(NULL, "もちろんレナは白色彗星の弱点だって熟知してる！」",
+		   NULL, " Of course, Rena knows their weak point all too well!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog004
 	//VoiceMatchingEnd
 
 
@@ -2531,6 +2763,16 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_004_vm0x_n01","dialog005");}
 	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_004_vm00_n01","dialog005");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog005
+//「みんなが何を言ってるのかわかんないよ＠　レナはロボットの操縦なんか出来ないよー！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200256", 256, TRUE);
+	OutputLine(NULL, "「みんなが何を言ってるのかわかんないよ！",
+		   NULL, "\"What are you all saying!?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200257", 256, TRUE);
+	OutputLine(NULL, "　レナはロボットの操縦なんか出来ないよー！」",
+		   NULL, " I can't control a mech!\"", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog005
 	//VoiceMatchingEnd
 
 
@@ -2717,13 +2959,14 @@ void main()
 		   NULL, "The second my sense of reason chimed in, the beast inside me died instantly.", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 4, "wa_001", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_001", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 1500 );
 	SetValidityOfInput( TRUE );
 
 //　そこでチャイム！！　ゲームセットだ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Chaimu", 256, 64); }
 	OutputLine(NULL, "　そこでチャイム！！　ゲームセットだ。",
 		   NULL, "There was the bell! Game over.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2731,12 +2974,14 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys01", 128, 0 ); }
 	ModDrawCharacter(2, 2, "sprite/night/re3b_warai_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「きゃ～～～！＠　やったやった！＠　生き残ったよ＠　わぁいわ～～い☆！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200263", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_01", 128, 0 ); }
 	OutputLine(NULL, "「きゃ〜〜〜！！",
 		   NULL, "\"Yaaay~~!!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200264", 256, TRUE);
@@ -2899,9 +3144,9 @@ void main()
 
 //gosub *data_tati
 //mov %CAMP_MUGIC,3
-	PlayBGM( 0, "lsys12", 128, 0 );
-	FadeOutBGM( 1, 1000, TRUE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 0, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 	DisableWindow();
 	SetValidityOfInput( FALSE );
 //	Wait( 3000 );
@@ -2916,12 +3161,12 @@ void main()
 
 //■自宅
 
-	FadeOutBGM( 0, 1000, TRUE );
-	FadeOutBGM( 1, 1000, TRUE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 0, 1000, TRUE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DisableWindow();
-	PlaySE( 4, "wa_001", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_001", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -2941,9 +3186,13 @@ void main()
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 
 //!sd
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys01", 128, 0 ); }
 //　帰宅後、俺はさっそく身支度を整えることにした＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Chaimu", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_01", 128, 0 ); }
 	OutputLine(NULL, "　帰宅後、俺はさっそく身支度を整えることにした。",
 		   NULL, "After arriving home, I quickly made preparations to head out once again.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2953,6 +3202,12 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog006");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog006");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog006
+//　レナと例の宝の山のケンタくん人形を発掘する約束だ￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　レナと例の宝の山のケンタくん人形を発掘する約束だ。",
+		   NULL, "I had agreed to meet with Rena to dig Colonel Sanders out of that mountain of treasure from before.", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog006
 	//VoiceMatchingEnd
 
 
@@ -3000,6 +3255,15 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog007");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog007");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog007
+//　不法投棄のダンプがまたゴミを捨てていって、今度こそ完全に埋って救出不能＠なんてことになれば……間違いなくレナは町のフライドチキン屋のケンタくん人形を狙うだろう￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　不法投棄のダンプがまたゴミを捨てていって、今度こそ完全に埋って救出不能、",
+		   NULL, "If they come to dump again illegally, he'll be buried completely and it'll be impossible to dig him out, ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "なんてことになれば……間違いなくレナは町のフライドチキン屋のケンタくん人形を狙うだろう。",
+		   NULL, "and if that happens... Rena will undoubtedly go after the Colonel Sanders in front of the fried chicken place in town.", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog007
 	//VoiceMatchingEnd
 
 
@@ -3031,14 +3295,19 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys05", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys05", 128, 0 ); }
 	DisableWindow();
 	DrawSceneWithMask("black", "right", 0, 0, 1300 );
 	DrawSceneWithMask("background/mo1", "right", 0, 0, 1300 );
-	PlayBGM( 2, "lsys19", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 2, "lsys19", 128, 0 ); }
 
 //　ダム現場への近道の林道を抜けて行くと、ぬーっとした人影に出くわした￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 1, "ps3/Kawa", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_07", 128, 0 ); }
 	OutputLine(NULL, "　ダム現場への近道の林道を抜けて行くと、ぬーっとした人影に出くわした。",
 		   NULL, "Cutting through the woods as a shortcut to the dam site, I ran into someone.", Line_Normal);
 	ClearMessage();
@@ -3124,6 +3393,19 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog008");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog008");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog008
+//「あ、あれは一体何だったんだい？＠　彼女が剥き身の斧を持って歩いてるんだよ？＠　それもにやにやと笑いながら！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s19/08/990800023", 256, TRUE);
+	OutputLine(NULL, "「あ、あれは一体何だったんだい？！",
+		   NULL, "\"Wh-What was that all about!?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s19/08/990800024", 256, TRUE);
+	OutputLine(NULL, "　彼女が剥き身の斧を持って歩いてるんだよ？！",
+		   NULL, " She was walking around with a bared axe!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 8, "ps3/s19/08/990800025", 256, TRUE);
+	OutputLine(NULL, "　それもにやにやと笑いながら！！」",
+		   NULL, " And she was laughing with a huge smile across her face!!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog008
 	//VoiceMatchingEnd
 
 
@@ -3164,6 +3446,12 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog009");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog009");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog009
+//　確かに年頃の女の子が剥き身の斧を持って徘徊しているのはヤバい＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　確かに年頃の女の子が剥き身の斧を持って徘徊しているのはヤバい。",
+		   NULL, "Well, it certainly would be quite the spectacle for a girl of her age to be roaming around with a axe.", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog009
 	//VoiceMatchingEnd
 
 
@@ -3295,7 +3583,7 @@ void main()
 //gosub *Ch_re_si
 
 
-	PlayBGM( 2, "lsys19", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 2, "lsys19", 128, 0 ); }
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DisableWindow();
@@ -3316,7 +3604,7 @@ void main()
 	Wait( 1000 );
 
 
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 
 	DrawScene("background/mo_g2", 1000 );
 	Wait( 1000 );
@@ -3327,8 +3615,11 @@ void main()
 
 
 //「圭一く～ん＠　待ってたよ。今日もがんばろ！＠
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_01", 128, 0 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200268", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 1, 1000, FALSE ); }
 	OutputLine(NULL, "「圭一く〜ん！",
 		   NULL, "\"Keiichi-kun~!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200269", 256, TRUE);
@@ -3349,6 +3640,23 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog010");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog010");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog010
+//　斧をぶんぶん振りまわしながらはしゃぐのは確かにヤバい￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　斧をぶんぶん振りまわしながらはしゃぐのは確かにヤバい。",
+		   NULL, "Somebody gallivanting about while waving a axe around certainly would seem dangerous.", Line_Normal);
+	ClearMessage();
+
+
+//「斧は鞘とかをかぶせて持って来い＠剥き身はさすがにまずいだろ！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06290", 256, TRUE);
+	OutputLine(NULL, "「斧は鞘とかをかぶせて持って来い。",
+		   NULL, "\"You should put a cover on that axe when you have it in public.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06300", 256, TRUE);
+	OutputLine(NULL, "剥き身はさすがにまずいだろ！」",
+		   NULL, " It's not good to carry it around out in the open like that!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog010
 	//VoiceMatchingEnd
 
 
@@ -3383,6 +3691,12 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog011");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog011");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog011
+//　この雛見沢で斧を持って徘徊しても不審に思われない唯一の人物だな…￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この雛見沢で斧を持って徘徊しても不審に思われない唯一の人物だな…。",
+		   NULL, "She's probably the only person who could carry a axe around Hinamizawa and not be considered suspicious...", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog011
 	//VoiceMatchingEnd
 
 
@@ -3422,6 +3736,26 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog012");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog012");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog012
+//　レナから斧を受け取り、不安定な斜面を降りて行く￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　レナから斧を受け取り、不安定な斜面を降りて行く。",
+		   NULL, "I took the axe from Rena and made my way up the unstable slope.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re2a_warai_a1_", "2", "up", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
+	DrawSceneWithMask("background/mo_g2", "right", 0, 0, 1300 );
+
+//「待っててね、ケンタくん＠…今、圭一くんが助け出してくれるからね…☆＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200272", 256, TRUE);
+	OutputLine(NULL, "「待っててね、ケンタくん。",
+		   NULL, "\"Just wait, Colonel Sanders.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200273", 256, TRUE);
+	OutputLine(NULL, "…今、圭一くんが助け出してくれるからね…☆」",
+		   NULL, " Keiichi-kun will save you...☆\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog012
 	//VoiceMatchingEnd
 
 
@@ -3438,16 +3772,18 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlaySE( 4, "wa_008", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_008", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
 	DrawScene("white", 400 );
 	DrawScene("background/mo_g1", 400 );
 
-	PlaySE( 4, "wa_019", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_019", 128, 64 ); }
 //　カツーーンと、木こりのようないい音が沢に響き渡った￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Furu", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Waru", 256, 64); }
 	OutputLine(NULL, "　カツーーンと、木こりのようないい音が沢に響き渡った。",
 		   NULL, "A solid \"thwack\" rang through out Hinamizawa, as if the job was being done by a lumberjack.", Line_Normal);
 	ClearMessage();
@@ -3499,6 +3835,12 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog013");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog013");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog013
+//俺は今まで斧を使った事なんかない＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　第一、俺は今まで斧を使った事なんかない。",
+		   NULL, "First of all, I'd never used a axe before.", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog013
 	//VoiceMatchingEnd
 
 
@@ -3534,6 +3876,35 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog014");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog014");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog014
+//「大丈夫＠　もう一息＠今夜レナが寝るときにはケンタくんにお休みのキスができるようになってるさ。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06410", 256, TRUE);
+	OutputLine(NULL, "「大丈夫！",
+		   NULL, "\"I'm fine!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06420", 256, TRUE);
+	OutputLine(NULL, "　もう一息。",
+		   NULL, " I'm almost there.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06430", 256, TRUE);
+	OutputLine(NULL, "今夜レナが寝るときにはケンタくんにお休みのキスができるようになってるさ。」",
+		   NULL, " I'll make sure Rena can give Colonel Sanders a good-night kiss tonight.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re2b_hau_b1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+//「…うん＠……ありがとぅ＠……ケンタくん……お休みのキス……はぅ……。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200277", 256, TRUE);
+	OutputLine(NULL, "「…うん。",
+		   NULL, "\"...Yeah.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200278", 256, TRUE);
+	OutputLine(NULL, "……ありがとぅ。",
+		   NULL, " ...Thanks.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200279", 256, TRUE);
+	OutputLine(NULL, "……ケンタくん……お休みのキス……はぅ……。」",
+		   NULL, " ...Giving Colonel Sanders... a good night kiss... hau...\"", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog014
 	//VoiceMatchingEnd
 
 
@@ -3719,17 +4090,26 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog015");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog015");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog015
+//　軽く苦笑すると俺は斧を握り、再び現場に下りていった￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　軽く苦笑すると俺は斧を握り、再び現場に下りていった。",
+		   NULL, "With a bit of a wry smile on my face, I grabbed the handle of the axe and headed back to worksite.", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog015
 	//VoiceMatchingEnd
 
 	DisableWindow();
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 200, TRUE );
 	DrawBustshotWithFiltering(5, "black", "up", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 3000, TRUE );
 	DrawBG("background/mo_g1", 0, TRUE );
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys11", 128, 0 ); }
 	FadeBustshotWithFiltering( 5, "up", 0, FALSE, 0, 0, 3000, TRUE );
 
 //　日が傾きだし、少しずつ空気が冷えてくる＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 0, "ps3/Higurasi", 128, 0 ); }
 	OutputLine(NULL, "　日が傾きだし、少しずつ空気が冷えてくる。",
 		   NULL, "The air grew colder as the sun slowly set.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3760,17 +4140,20 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys11", 128, 0 ); }
 //「うら＠/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06550", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 0, "ps3/Higurasi", 128, 0 ); }
 	OutputLine(NULL, "「うら！",
 		   NULL, "\"Hooyah!", Line_Continue);
 
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_019", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_019", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
@@ -3782,7 +4165,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_019", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_019", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
@@ -3794,7 +4177,7 @@ void main()
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 500 );
 	// (backup) SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_019", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_019", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 
@@ -3805,6 +4188,19 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog016");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog016");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog016
+//　今日一日、何度もそうしてきたように、斧を振る＠叩く＠木片が砕け散る￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Waru", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Waru", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Waru", 256, 64); }
+	OutputLine(NULL, "　今日一日、何度もそうしてきたように、斧を振る。",
+		   NULL, "I had swung the axe countless times today, just like this.", Line_WaitForInput);
+	OutputLine(NULL, "叩く。",
+		   NULL, " Contact.", Line_WaitForInput);
+	OutputLine(NULL, "木片が砕け散る。",
+		   NULL, " Shards of wood splintered.", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog016
 	//VoiceMatchingEnd
 
 
@@ -3840,17 +4236,29 @@ void main()
 	DisableWindow();
 	DrawScene("black", 400 );
 
-	PlaySE( 4, "wa_008", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_008", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_018", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_018", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
 
 //　最後の一撃が梁を叩き折った＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Furu", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Tatakiwaru", 256, 64); }
 	OutputLine(NULL, "　最後の一撃が梁を叩き折った。",
 		   NULL, "With one last swing, the beam cracked apart.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3860,6 +4268,12 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog017");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog017");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog017
+//　斧にかけた重さが、梁を割っただけでなく、その下の人形の肩を打ち砕く＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　斧にかけた重さが、梁を割っただけでなく、その下の人形の肩を打ち砕く。",
+		   NULL, "The weight I put behind the axe not only split through the beam, but smashed the statue's shoulder as well.", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog017
 	//VoiceMatchingEnd
 
 
@@ -3970,6 +4384,19 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_004_vm0x_n01","dialog021");}
 	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_004_vm00_n01","dialog021");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog021
+//"... 腕が一本、まだ見つかってないんだろ？"@
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "“…腕が一本、まだ見つかってないんだろ？”",
+		   NULL, "\"...They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　さっきのごろんと転がった腕がやけに不吉に思えたが、そこでふと気付き、俺はちょっと自分の情けなさに苦笑した￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　さっきのごろんと転がった腕がやけに不吉に思えたが、そこでふと気付き、俺はちょっと自分の情けなさに苦笑した。",
+		   NULL, "I laughed dryly at how pathetic I was for considering the arm flopping down and rolling to my feet to be such a bad omen.", Line_Normal);
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog021
 	//VoiceMatchingEnd
 
 
@@ -4057,6 +4484,22 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog018");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog018");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog018
+//　ツイてたなケンタくん。次のご主人様がいい人で￥
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ツイてたなケンタくん。次のご主人様がいい人で。",
+		   NULL, "You're pretty lucky, Colonel Sanders. Your new master is a pretty decent person.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(2, 2, "sprite/normal/re2b_warai_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+//「…わぁあ…ケンタくんだ…やっぱ、かぁいいよぅ！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200298", 256, TRUE);
+	OutputLine(NULL, "「…わぁあ…ケンタくんだ…やっぱ、かぁいいよぅ！！」",
+		   NULL, "\"...Waa... Colonel Sanders... He really is kyute!\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog018
 	//VoiceMatchingEnd
 
 
@@ -4145,11 +4588,18 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/mo1", "left", 0, 0, 1300 );
-	PlayBGM( 2, "lsys19", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 2, "lsys19", 128, 0 ); }
 
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog019");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_004_vm00_n01","dialog019");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog019
+//　薄暗くなる山道を、人間大につつんだシートを運ぶ若い男女に剥き身の斧＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 1, "ps3/Kawa", 128, 0 ); }
+	OutputLine(NULL, "　薄暗くなる山道を、人間大につつんだシートを運ぶ若い男女に剥き身の斧！",
+		   NULL, "And so Jack and Jill went down the hill, carrying a human-sized bag and an unsheathed axe!", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_004_vm00_n01.txt|dialog019
 	//VoiceMatchingEnd
 
 

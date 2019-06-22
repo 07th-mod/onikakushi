@@ -13,17 +13,19 @@ void main()
 //gosub *Ch_Ri_Si
 //******************************************************************
 
-	FadeOutBGM( 0, 1000, FALSE );
-	FadeOutBGM( 1, 1000, FALSE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 0, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 
 	DrawScene("white", 3000 );
-	PlayBGM( 2, "lsys22", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 2, "lsys22", 128, 0 ); }
 	DrawSceneWithMask("background/m_hi1", "m1", 0, 0, 1300 );
 
 //　休日の朝をのんびり過ごしていたら、すっかり遅れてしまった＠
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 1, "ps3/Suzume_lp", 128, 0 ); }
 	OutputLine(NULL, "　休日の朝をのんびり過ごしていたら、すっかり遅れてしまった。",
 		   NULL, "I took it a little too easy on the morning of my day off. I was totally late.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -42,7 +44,7 @@ void main()
 		   NULL, "Today was the day Rena and Mion were going to show me around Hinamizawa.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys01", 128, 0 ); }
 	DisableWindow();
 	ModDrawCharacter(1, 3, "sprite/normal/me2_def_a1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	ModDrawCharacter(3, 2, "sprite/normal/re2a_def_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
@@ -50,6 +52,8 @@ void main()
 
 //　待ち合わせ場所ではすでにレナと魅音が待っていた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_01", 128, 0 ); }
 	OutputLine(NULL, "　待ち合わせ場所ではすでにレナと魅音が待っていた。",
 		   NULL, "Rena and Mion were already waiting at the meeting place.", Line_Normal);
 	ClearMessage();
@@ -345,14 +349,17 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("white", "right", 0, 0, 1300 );
-	FadeOutBGM( 1, 1000, TRUE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 
 	DrawSceneWithMask("background/m_hi5", "right", 0, 0, 1300 );
-	PlayBGM( 1, "msys02", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys02", 128, 0 ); }
 
 //　適当ににぎやかさを楽しんだ後、俺たちはのんびりとお散歩を開始した＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_04", 128, 0 ); }
 	OutputLine(NULL, "　適当に賑やかさを楽しんだ後、俺たちはのんびりとお散歩を開始した。",
 		   NULL, "Having finished with the pleasantries, we began our leisurely stroll.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -693,12 +700,13 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawBustshotWithFiltering(5, "black", "left", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 1300, TRUE );
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 	DrawSceneWithMask("background/m_hi3", "left", 0, 0, 1300 );
 
 //「これじゃあさ、俺のための案内ってより、俺のお披露目みたいだな…。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01410", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 1, 1000, FALSE ); }
 	OutputLine(NULL, "「これじゃあさ、俺のための案内ってより、俺のお披露目みたいだな…。」",
 		   NULL, "\"This feels more like you guys are showing me off rather than showing me around.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -954,13 +962,16 @@ void main()
 //■古手神社でお弁当
 	DisableWindow();
 	DrawSceneWithMask("black", "up", 0, 0, 1300 );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys12", 128, 0 ); }
 	DrawSceneWithMask("background/jok1", "up", 0, 0, 3000 );
 	DrawSceneWithMask("black", "up", 0, 0, 1300 );
 	DrawSceneWithMask("background/ji1", "up", 0, 0, 3000 );
 
 //　石造りの階段を登りきると、そこは想像した通りの感じの神社だった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 0, "ps3/Semi", 128, 0 ); }
 	OutputLine(NULL, "　石造りの階段を登りきると、そこは想像した通りの感じの神社だった。",
 		   NULL, "Cresting the top of a stone stairway, a shrine drawn straight out of my imagination appeared before us.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1088,11 +1099,13 @@ void main()
 	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri2_def_a1_", "0", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa2a_def_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/jt2", "right", 0, 0, 300 );
-	PlayBGM( 1, "msysSa", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msysSa", 128, 0 ); }
 
 
 //　梨花ちゃんと沙都子だった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_05", 128, 0 ); }
 	OutputLine(NULL, "　梨花ちゃんと沙都子だった。",
 		   NULL, "It was Rika-chan and Satoko.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1306,7 +1319,7 @@ void main()
 		   NULL, "Both Satoko and I leapt at the boxes, having it out with each other.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys02", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys02", 128, 0 ); }
 	DisableWindow();
 	DrawSceneWithMask("black", "right", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me2_wink_a1_", "1", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
@@ -1410,7 +1423,7 @@ void main()
 	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400038", 256, TRUE);
 	OutputLine(NULL, "「そのハンバーグは渡しませんわぁぁあ！！」",
 		   NULL, "\"I will not allow you to have this hamburger!!\"", Line_Continue);
-	PlaySE( 4, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_005", 128, 64 ); }
 	ShakeScreen( 0, 100, 20, 4, 0, );
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 
@@ -1421,6 +1434,7 @@ void main()
 //「げはッ！！!d400　肘は反則だろ沙都子！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01550", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Dageki", 256, 64); }
 	OutputLine(NULL, "「げはッ！！",
 		   NULL, "\"Hurk!!", Line_Continue);
 
@@ -1525,6 +1539,21 @@ void main()
 
 //　激しい戦いもようやく落ち付き＠ようやくみんなにも会話をするゆとりが生まれたようだった。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Nageru", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/addse13", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Tatakiwaru", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Down", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Down", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Pou", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Pou", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_01", 128, 0 ); }
 	OutputLine(NULL, "　激しい戦いもようやく落ち着き、",
 		   NULL, "The intense battle calmed,", Line_WaitForInput);
 	OutputLine(NULL, "ようやくみんなにも会話をするゆとりが生まれたようだった。",
@@ -1532,7 +1561,7 @@ void main()
 
 	ClearMessage();
 
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys01", 128, 0 ); }
 
 //　水筒からお茶をもらい、軽く一息をつく￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1665,7 +1694,7 @@ void main()
 	OutputLine(NULL, "　意味不明な発声のあと、レナの頭から",
 		   NULL, "After Rena uttered an unintelligible noise...", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_029", 128, 64 ); }
 
 //ぽん！と音がして煙の輪っかが登った＠
 	OutputLine(NULL, "ぽん！と音がして煙の輪っかが登った。",
@@ -1679,6 +1708,7 @@ void main()
 //「はぅ～！＠…り、…りり…梨花ちゃん、お、お持ち帰り…じゃなくて＠　ありがと～！！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200111", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Pou", 256, 64); }
 	OutputLine(NULL, "「はぅ〜！！",
 		   NULL, "\"Hau~!!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200112", 256, TRUE);
@@ -1725,7 +1755,7 @@ void main()
 	OutputLine(NULL, "　りんごのうさぎさんにさく！と楊枝を刺すと、びし！と梨花ちゃんに差し出した。",
 		   NULL, "Two apple rabbits! After sticking toothpicks into them, she thrust them toward Rika-chan.", GetGlobalFlag(GLinemodeSp));
 
-	FadeOutBGM( 1, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 	
 	DisableWindow();
@@ -1733,17 +1763,21 @@ void main()
 
 //　梨花ちゃんがそれを受け取ると急激に場のムードがおかしな方向に転がり始める￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
 	OutputLine(NULL, "　梨花ちゃんがそれを受け取ると急激に場のムードがおかしな方向に転がり始める。",
 		   NULL, "After Rika-chan accepted them, the mood suddenly shifted in a bizzare way.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa2a_akuwarai_a1_", "1", "m1", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/jt2", "right", 0, 0, 300 );
-	PlayBGM( 1, "msys03", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys03", 128, 0 ); }
 
 //「…なんだよ沙都子＠その挑戦的な目は。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01590", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_02", 128, 0 ); }
 	OutputLine(NULL, "「…なんだよ沙都子。",
 		   NULL, "\"...What is it, Satoko?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01600", 256, TRUE);
@@ -1803,13 +1837,14 @@ void main()
 	OutputLine(NULL, "「あ、…あのね！",
 		   NULL, "\"Uh... Um, hey!", Line_WaitForInput);
 	ModPlayVoiceLS(3, 4, "ps3/s19/04/990400046", 256, TRUE);
-	PlaySE( 4, "wa_029", 64, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_029", 64, 64 ); }
 	OutputLine(NULL, "　………レナお姉ちゃんのお弁当、沙都子もおいしかったよ…。」",
 		   NULL, " ...So, Rena-oneechan's lunch? Satoko thought it was yummy, too...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //　沙都子は上目遣いに舌っ足らずな口調ではにかんで見せた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Boyoon", 256, 64); }
 	OutputLine(NULL, "　沙都子は上目遣いに舌っ足らずな口調ではにかんで見せた。",
 		   NULL, "Satoko looked up at her poutily while talking cutesy.", Line_Normal);
 	ClearMessage();
@@ -2202,10 +2237,13 @@ void main()
 		   NULL, " the finisher.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys12", 128, 0 ); }
 //「レナの、…匂いがしたから。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei01680", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 0, "ps3/Semi", 128, 0 ); }
 	OutputLine(NULL, "「レナの、…匂いがしたから。」",
 		   NULL, "\"It had... your smell.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2213,10 +2251,11 @@ void main()
 
 	DisableWindow();
 	Negative( 100, TRUE );
-	PlaySE( 4, "wa_011", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_011", 128, 64 ); }
 
 //　場がシン、とする￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Kyupirn", 256, 64); }
 	OutputLine(NULL, "　場がシン、とする。",
 		   NULL, "Silence enveloped the area.", Line_Normal);
 	ClearMessage();
@@ -2276,12 +2315,15 @@ void main()
 
 	ModDrawCharacter(2, 2, "sprite/normal/re2a_kaii_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 	FadeFilm( 0, FALSE );
-	PlayBGM( 1, "msys03", 128, 0 );
-	PlaySE( 4, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_006", 128, 64 ); }
 //　ど/
 	ShakeScreen( 1, 50, 20, 2, 0, );
 //しゃぁあぁッ！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Daidageki", 256, 64); }
 	OutputLine(NULL, "　どしゃぁあぁッ！！！",
 		   NULL, "Bwoooosh!!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -2459,10 +2501,12 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("background/jt2", "m1", 0, 0, 1000 );
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re2b_komaru_b1_", "0", "m1", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
-	FadeOutBGM( 1, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
 
 //　…その時、ふっとレナが気付き、奇声をやめた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
 	OutputLine(NULL, "　…その時、ふっとレナが気付き、奇声をやめた。",
 		   NULL, "...At that time, Rena stopped her squealing as she suddenly realized something.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2486,7 +2530,7 @@ void main()
 
 
 
-	PlayBGM( 1, "msysRi", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msysRi", 128, 0 ); }
 //　見ると、梨花ちゃんはりんごのうさぎさんから楊枝を抜き、両手で作ったお椀に乗せ、途方に暮れている様子だった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　見ると、梨花ちゃんはりんごのうさぎさんから楊枝を抜き、両手で作ったお椀に乗せ、途方に暮れている様子だった。",
@@ -2509,12 +2553,13 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(3, 2, "sprite/normal/re2b_kaii_b1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 	Wait( 300 );
-	PlaySE( 4, "wa_030", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlaySE( 4, "wa_030", 128, 64 ); }
 	DrawSceneWithMask("background/ryuuketu1", "aa", 0, 0, 300 );
 	DrawScene("black", 300 );
 
 //　ぷッ！!w1000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Thisikuki", 256, 64); }
 	OutputLine(NULL, "　ぷッ！",
 		   NULL, "Pwee!", Line_Normal);
 
@@ -2533,7 +2578,7 @@ void main()
 		   NULL, "...That was the sound of blood spurting from Rena's nose.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys03", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys03", 128, 0 ); }
 
 //「……か、!d200…かか…かぁいいよぅ～!d200…!d200…!d200今夜こそ……絶対!d200…お持ち帰りぃ………☆＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -2543,6 +2588,8 @@ void main()
 
 	Wait( 200 );
 
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_02", 128, 0 ); }
 	OutputLine(NULL, "…かか…かぁいいよぅ〜",
 		   NULL, " Kyky... Kyuute~", Line_Continue);
 
@@ -2680,9 +2727,18 @@ void main()
 //■レナと宝探しへ・夕方（これはもう主人公編？？）
 
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys11", 128, 0 ); }
 //　騒ぎに騒いだ一日だった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 0, "ps3/Semi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Kyupirn", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 1, "ps3/Higurasi", 128, 0 ); }
 	OutputLine(NULL, "　騒ぎに騒いだ一日だった。",
 		   NULL, "It was a fun-filled, crazy day.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2816,7 +2872,7 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlayBGM( 2, "lsys19", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 2, "lsys19", 128, 0 ); }
 	DrawScene("background/mo1_01", 1000 );
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
@@ -2832,7 +2888,7 @@ void main()
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 //!sd
 
-	PlayBGM( 1, "msys05", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys05", 128, 0 ); }
 //　…細い道と斜面を越えると一気に視界が開けた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…細い道と斜面を越えると一気に視界が開けた。",
@@ -2852,7 +2908,7 @@ void main()
 //	DrawScene( "sunset/bg_004", 1000 );
 //	Wait( 1000 );
 
-	FadeOutBGM( 2, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
 
 	DrawScene("background/mo_g3_01", 1000 );
 	Wait( 1000 );
@@ -2862,6 +2918,8 @@ void main()
 
 //　沢を臨む斜面に粗大ゴミの山がぶちまけられていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_07", 128, 0 ); }
 	OutputLine(NULL, "　沢を臨む斜面に粗大ゴミの山がぶちまけられていた。",
 		   NULL, "A large heap of garbage spread out off towards the swamp.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3035,7 +3093,7 @@ void main()
 		   NULL, "Without the lively Rena around, the surrounding area quickly fell into silence...", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys11", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 2, "lsys11", 128, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -3057,6 +3115,11 @@ void main()
 
 //　その時、突然、砂利を踏む音と人の気配がし、俺は驚いて振りかえった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 1, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
 	OutputLine(NULL, "　その時、突然、砂利を踏む音と人の気配がし、俺は驚いて振りかえった。",
 		   NULL, "Just then, the sudden noise of scattering pebbles alerted me to somebody's presence. Startled, I turned around.", Line_Normal);
 	ClearMessage();
@@ -3289,6 +3352,18 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_002_vm0x_n01","dialog000");}
 	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_002_vm00_n01","dialog000");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog000
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlaySE(3, "ps3/Higurasi", 256, 64); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_06", 128, 0 ); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei02310", 256, TRUE);
+	OutputLine(NULL, "「さぁねぇ。",
+		   NULL, "\"Dunno.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei02320", 256, TRUE);
+	OutputLine(NULL, "昔、殺して埋めたバラバラ死体でも確認してるんじゃないすか？」",
+		   NULL, " Maybe she's checking on that dismembered corpse that was out here long ago.\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog000
 	//VoiceMatchingEnd
 
 
@@ -3307,13 +3382,21 @@ void main()
 		   NULL, "Uh-oh, I responded like I would if I were talking with Rena and the others.", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 1, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
 	DisableWindow();
 	ModDrawCharacter(1, 8, "sprite/sunset/tomi1_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_002_vm0x_n01","dialog003");}
 	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_002_vm00_n01","dialog003");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog003
+//「……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？」!w5000
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "ps3/s19/08/990800016", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	OutputLine(NULL, "「……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？」",
+//END_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog003
 	//VoiceMatchingEnd
 
 	// (backup) SetValidityOfInput( FALSE );
@@ -3396,12 +3479,15 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("background/m_hi5_01", "right", 0, 0, 1300 );
-	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 1, "msys05", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 2, 1000, TRUE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys05", 128, 0 ); }
 	
 //「どうだった＠　掘り出し物は見つかったか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei02330", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 1, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 2, "ps3/HM01_07", 128, 0 ); }
 	OutputLine(NULL, "「どうだった？",
 		   NULL, "\"How was it?", Line_WaitForInput);
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei02340", 256, TRUE);
@@ -3416,6 +3502,48 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_002_vm0x_n01","dialog001");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_002_vm00_n01","dialog001");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog001
+//「うん聞いて聞いて＠　あ、…あのね＠　あったの＠　ランディーくん人形ッ♪！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200154", 256, TRUE);
+	OutputLine(NULL, "「うん聞いて聞いて！",
+		   NULL, "\"Oh, yes~ So listen!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200155", 256, TRUE);
+	OutputLine(NULL, "　あ、…あのね！",
+		   NULL, " Ah ...um, you see!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200156", 256, TRUE);
+	OutputLine(NULL, "　あったの！",
+		   NULL, " There was...!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200157", 256, TRUE);
+	OutputLine(NULL, "　ケンタくん人形ッ♪！！」",
+		   NULL, " A Colonel Sanders doll!♪\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+//「ランディーくん人形？＠　…ってあれか、ランディーくんフライドチキンの店の前に必ず置いてある…!d600あの等身大人形の？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei02350", 256, TRUE);
+	OutputLine(NULL, "「ケンタくん人形？！",
+		   NULL, "\"A Colonel Sanders doll!?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei02360", 256, TRUE);
+	OutputLine(NULL, "　…ってあれか、ケンタくんフライドチキンの店の前に必ず置いてある…",
+		   NULL, " ...Oh, that thing. Those statues they always have out in front of that fried chicken place...", Line_Continue);
+
+	Wait( 600 );
+	OutputLine(NULL, "あの等身大人形の？」",
+		   NULL, " That life-sized dummy?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+//「…そう！　ランディーくん＠　……はぅ……かぁいい……お持ち帰りしたいぃ…☆＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200158", 256, TRUE);
+	OutputLine(NULL, "「…そう！　ケンタくん☆",
+			   NULL, "\"...Yes! Colonel Sanders.☆", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200159", 256, TRUE);
+	OutputLine(NULL, "　……はぅ……かぁいい……お持ち帰りしたいぃ…☆」",
+		   NULL, " ...Hau... kyute... I want to take it hooome...☆\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog001
 	//VoiceMatchingEnd
 
 
@@ -3491,6 +3619,16 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_002_vm0x_n01","dialog002");}
 	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_002_vm00_n01","dialog002");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog002
+//「圭一くんが手伝ってくれる☆!d300…ランディーくんをお持ち帰りできる……はぅ…。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200164", 256, TRUE);
+	OutputLine(NULL, "「圭一くんが手伝ってくれる☆",
+		   NULL, "\"Keiichi-kun is going to help.☆", Line_Continue);
+	Wait( 1500 );
+	OutputLine(NULL, "…ケンタくんをお持ち帰りできる……はぅ…。」",
+		   NULL, " ...I can take Colonel Sanders home... hau...\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog002
 	//VoiceMatchingEnd
 
 
@@ -3543,7 +3681,7 @@ void main()
 		   NULL, " an accident or something.\"", GetGlobalFlag(GLinemodeSp));
 
 
-	FadeOutBGM( 1, 1000, TRUE );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { FadeOutBGM( 1, 1000, TRUE ); }
 	DisableWindow();
 	ModDrawCharacter(3, 2, "sprite/sunset/re2a_def_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
@@ -3552,6 +3690,8 @@ void main()
 //「知らない。」!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200167", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
 	OutputLine(NULL, "「知らない。」",
 		   NULL, "\"I don't know.\"", Line_Normal);
 
@@ -3585,13 +3725,16 @@ void main()
 		   NULL, " Rena quickly lightened her expression.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { PlayBGM( 1, "msys11", 128, 0 ); }
 	DisableWindow();
 	ModDrawCharacter(3, 2, "sprite/sunset/re2a_warai_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「実はね、去年までよそに住んでたの。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200168", 256, TRUE);
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 2, 1000, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { FadeOutBGM( 0, 500, FALSE ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { PlayBGM( 0, "ps3/Higurasi", 128, 0 ); }
 	OutputLine(NULL, "「実はね、去年までよそに住んでたの。」",
 		   NULL, "\"Actually, I didn't live here until a year ago.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3645,6 +3788,12 @@ void main()
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_002_vm0x_n01","dialog004");}
 	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_002_vm00_n01","dialog004");}
+//BEGIN_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog004
+//"... …嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？"@\
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "“……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？”",
+		   NULL, "\"...It was quite a disturbing incident... They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
+//END_MERGED_SUBSCRIPT|zonik_002_vm00_n01.txt|dialog004
 	//VoiceMatchingEnd
 
 
