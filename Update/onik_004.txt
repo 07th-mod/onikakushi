@@ -20,7 +20,7 @@ void main()
 
 	DisableWindow();
 	DrawScene("white", 400 );
-	PlayBGM( 1, "msys02", 128, 0 );
+	PlayBGM( 1, "msys02", 56, 0 );
 	DrawSceneWithMask("background/gr1", "up", 0, 0, 1300 );
 
 //　この学校は、学校として機能しているのか本当に怪しい￥
@@ -211,7 +211,7 @@ void main()
 	OutputLine(NULL, "「鬼ごっこ」で行こう！」",
 		   NULL, " Let's play tag!\"", Line_Continue);
 	Wait( 800 );
-	PlaySE( 4, "wa_007", 128, 64 );
+	PlaySE( 4, "wa_007", 56, 64 );
 	ShakeScreen( 0, 50, 20, 3, 0, );
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -331,7 +331,7 @@ void main()
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05560", 256, TRUE);
 	OutputLine(NULL, "「…上等だぜ。鬼ごっこ、",
 		   NULL, "\"...Fine. Tag,", Line_WaitForInput);
-	PlaySE( 4, "wa_010", 128, 64 );
+	PlaySE( 4, "wa_010", 56, 64 );
 	Wait( 300 );
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei05570", 256, TRUE);
 	OutputLine(NULL, "乗ってやらぁあぁああぁ！！！」",
@@ -527,7 +527,7 @@ void main()
 	SetValidityOfInput( TRUE );
 	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me3_wink_a1_", "1", "m1", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/gr1", "down", 0, 0, 1300 );
-	PlayBGM( 1, "msys03", 128, 0 );
+	PlayBGM( 1, "msys03", 56, 0 );
 
 //「「６」は英語で？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1002,7 +1002,7 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys04", 128, 0 );
+	PlayBGM( 1, "msys04", 56, 0 );
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me3_warai_a1_", "2", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「よーーいどんッ！！！！￥
@@ -1619,7 +1619,7 @@ void main()
 	ClearMessage();
 
 
-	PlaySE( 4, "wa_006", 128, 64 );
+	PlaySE( 4, "wa_006", 56, 64 );
 	ShakeScreen( 1, 50, 20, 3, 0, );
 //　ぐをおおぉおおおぉおぉおおぉおおぉおおおッ！！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2143,7 +2143,7 @@ void main()
 	OutputLine(NULL, "滑って転倒。",
 		   NULL, " slipping as I landed.", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_002", 128, 64 );
+	PlaySE( 4, "wa_002", 56, 64 );
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", Line_Normal);
 
@@ -2717,7 +2717,7 @@ void main()
 		   NULL, "The second my sense of reason chimed in, the beast inside me died instantly.", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 4, "wa_001", 128, 64 );
+	PlaySE( 4, "wa_001", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 1500 );
 	SetValidityOfInput( TRUE );
@@ -2731,7 +2731,7 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys01", 128, 0 );
+	PlayBGM( 1, "msys01", 56, 0 );
 	ModDrawCharacter(2, 2, "sprite/night/re3b_warai_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「きゃ～～～！＠　やったやった！＠　生き残ったよ＠　わぁいわ～～い☆！！＠
@@ -2899,7 +2899,7 @@ void main()
 
 //gosub *data_tati
 //mov %CAMP_MUGIC,3
-	PlayBGM( 0, "lsys12", 128, 0 );
+	PlayBGM( 0, "lsys12", 56, 0 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
@@ -2921,7 +2921,7 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DisableWindow();
-	PlaySE( 4, "wa_001", 128, 64 );
+	PlaySE( 4, "wa_001", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -2941,7 +2941,7 @@ void main()
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 
 //!sd
-	PlayBGM( 1, "msys01", 128, 0 );
+	PlayBGM( 1, "msys01", 56, 0 );
 //　帰宅後、俺はさっそく身支度を整えることにした＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　帰宅後、俺はさっそく身支度を整えることにした。",
@@ -3031,11 +3031,11 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys05", 128, 0 );
+	PlayBGM( 1, "msys05", 56, 0 );
 	DisableWindow();
 	DrawSceneWithMask("black", "right", 0, 0, 1300 );
 	DrawSceneWithMask("background/mo1", "right", 0, 0, 1300 );
-	PlayBGM( 2, "lsys19", 128, 0 );
+	PlayBGM( 2, "lsys19", 56, 0 );
 
 //　ダム現場への近道の林道を抜けて行くと、ぬーっとした人影に出くわした￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3295,7 +3295,7 @@ void main()
 //gosub *Ch_re_si
 
 
-	PlayBGM( 2, "lsys19", 128, 0 );
+	PlayBGM( 2, "lsys19", 56, 0 );
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DisableWindow();
@@ -3438,14 +3438,14 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
 	DrawScene("white", 400 );
 	DrawScene("background/mo_g1", 400 );
 
-	PlaySE( 4, "wa_019", 128, 64 );
+	PlaySE( 4, "wa_019", 56, 64 );
 //　カツーーンと、木こりのようないい音が沢に響き渡った￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　カツーーンと、木こりのようないい音が沢に響き渡った。",
@@ -3725,7 +3725,7 @@ void main()
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 200, TRUE );
 	DrawBustshotWithFiltering(5, "black", "up", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 3000, TRUE );
 	DrawBG("background/mo_g1", 0, TRUE );
-	PlayBGM( 1, "msys11", 128, 0 );
+	PlayBGM( 1, "msys11", 56, 0 );
 	FadeBustshotWithFiltering( 5, "up", 0, FALSE, 0, 0, 3000, TRUE );
 
 //　日が傾きだし、少しずつ空気が冷えてくる＠
@@ -3760,7 +3760,7 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	PlayBGM( 1, "msys11", 56, 0 );
 //「うら＠/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06550", 256, TRUE);
@@ -3770,7 +3770,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_019", 128, 64 );
+	PlaySE( 4, "wa_019", 56, 64 );
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
@@ -3782,7 +3782,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_019", 128, 64 );
+	PlaySE( 4, "wa_019", 56, 64 );
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
@@ -3794,7 +3794,7 @@ void main()
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 500 );
 	// (backup) SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_019", 128, 64 );
+	PlaySE( 4, "wa_019", 56, 64 );
 	ShakeScreen( 1, 50, 20, 5, 0, );
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 
@@ -3840,11 +3840,11 @@ void main()
 	DisableWindow();
 	DrawScene("black", 400 );
 
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 4, "wa_018", 128, 64 );
+	PlaySE( 4, "wa_018", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
@@ -4145,7 +4145,7 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/mo1", "left", 0, 0, 1300 );
-	PlayBGM( 2, "lsys19", 128, 0 );
+	PlayBGM( 2, "lsys19", 56, 0 );
 
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_004_vm0x_n01","dialog019");}

@@ -31,7 +31,7 @@ void main()
 //gosub *data_tati
 
 	DisableWindow();
-	PlayBGM( 1, "msys01", 128, 0 );
+	PlayBGM( 1, "msys01", 56, 0 );
 	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1a_warai_a1_", "2", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene("background/res1", 1000 );
 
@@ -178,13 +178,13 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	PlaySE( 4, "wa_013", 56, 64 );
 	DrawScene("white", 10 );
 	DrawScene("background/res5", 50 );
 ////setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_1_", "0", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 //!sd
-	PlayBGM( 1, "msys02", 128, 0 );
+	PlayBGM( 1, "msys02", 56, 0 );
 //「いやいやいやいや、遅れてすみませんねぇ。＠
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -371,7 +371,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 1, "msys01", 128, 0 );
+	PlayBGM( 1, "msys01", 56, 0 );
 	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_2_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/res5", "right", 0, 0, 300 );
 
@@ -1235,7 +1235,7 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlayBGM( 1, "msys04", 128, 0 );
+	PlayBGM( 1, "msys04", 56, 0 );
 	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_2_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawScene("background/res1", 1000 );
 
@@ -1271,7 +1271,7 @@ void main()
 	FadeBustshotWithFiltering( 1, "right", 7, FALSE, 0, 0, 200, TRUE );
 	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me1a_warai_a1_", "1", "left", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
-	PlaySE( 4, "wa_010", 128, 64 );
+	PlaySE( 4, "wa_010", 56, 64 );
 //「私も人間犯人説＠　もちろん、祟りというファンタジーは嫌いじゃないよ＠　だけど今回の事件に限っては、祟りの線は薄いねー。￥
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1329,7 +1329,7 @@ void main()
 	OutputLine(NULL, "「えぇ！",
 		   NULL, "\"Yeah!", Line_WaitForInput);
 
-	PlaySE( 4, "wa_010", 128, 64 );
+	PlaySE( 4, "wa_010", 56, 64 );
 //　祟り派ですわよ＠　レナさんや魅音さんのことを悪魔みたいに言う人の方がよっぽど祟りにあうべきですの！！＠
 
 	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400156", 256, TRUE);
@@ -1555,7 +1555,7 @@ void main()
 
 	if (GetGlobalFlag(GADVMode) == 0) { ClearMessage(); }
 	DisableWindow();
-	PlayBGM( 1, "msys02", 128, 0 );
+	PlayBGM( 1, "msys02", 56, 0 );
 	DrawSceneWithMask("background/res1", "m1", 0, 0, 300 );
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_wink_a1_", "1", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
@@ -1631,7 +1631,7 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlayBGM( 2, "lsys17", 128, 0 );
+	PlayBGM( 2, "lsys17", 56, 0 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -1793,7 +1793,7 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("background/res5", "left", 0, 0, 300 );
 
-	PlayBGM( 1, "msys03", 128, 0 );
+	PlayBGM( 1, "msys03", 56, 0 );
 //「どっちなんてもんじゃねーよ！＠　村の怪しげなヤツらに狙われて、さらにオヤシロさまとかいう怪しいのに祟られて！！＠　人間も祟りも全部！！＠　これはイジメだーー！！！！＠
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1829,7 +1829,7 @@ void main()
 	DisableWindow();
 	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 3000, TRUE );
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 0, TRUE );
-	PlayBGM( 1, "msys02", 128, 0 );
+	PlayBGM( 1, "msys02", 56, 0 );
 	ModDrawCharacter(3, 8, "sprite/normal/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, TRUE );
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 1000, TRUE );
 
@@ -1904,11 +1904,11 @@ void main()
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 //	DisableWindow();
 //	DrawSceneWithMask( "s_jump_back", "4", 0, 0, 1000 );
-//	PlaySE( 4, "wa_041", 128, 64 );
+//	PlaySE( 4, "wa_041", 56, 64 );
 //..bg ":c;BMP\Efe\Omake_Renapan.bmp",18,1500,":c;BMP\Efe\5.bmp"
 //	Wait( 10000 );
 //DrawScene( "Omake_Haikei", 1000 );
-//	PlaySE( 4, "wa_036", 128, 64 );
+//	PlaySE( 4, "wa_036", 56, 64 );
 //	DrawSceneWithMask( "Ex_wata", "5", 0, 0, 1000 );
 //..bg ":c;BMP\Efe\Omake_Watanagasi.bmp",18,1500,":c;BMP\Efe\5.bmp"
 //	Wait( 10000 );

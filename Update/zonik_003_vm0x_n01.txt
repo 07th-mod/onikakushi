@@ -136,7 +136,7 @@ void dialog009()
 	ClearMessage();
 	DisableWindow();
 
-	PlaySE( 4, "wa_027", 128, 64 );
+	PlaySE( 4, "wa_027", 56, 64 );
 
 	//draw big CG
 	SetValidityOfInterface(FALSE);
@@ -164,7 +164,7 @@ void dialog009()
 	//adjust character size and reset big CG layer and add shaking
 	ModDrawCharacter(2, 2, "sprite/sunset/re1b_bikkuri_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene("background/mo_g1_01", 300 );
-	PlaySE( 4, "wa_003", 128, 64 );
+	PlaySE( 4, "wa_003", 56, 64 );
 	StartShakingOfAllObjects( 1, 50, 10, 4, 20, TRUE);
 	SetValidityOfInterface(TRUE);
 	SetValidityOfSaving(TRUE);
@@ -187,7 +187,7 @@ void dialog009()
 		   NULL, "Rena dropped the hatchet she was holding onto the grass after being startled by my voice.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	PlayBGM( 1, "msys11", 56, 0 );
 	DisableWindow();
 	ModDrawCharacter(2, 2, "sprite/sunset/re1a_komaru_a2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 

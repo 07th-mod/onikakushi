@@ -27,8 +27,8 @@ void main()
 	Wait( 7000 );
 	DrawScene("black", 1000 );
 
-	PlayBGM( 1, "msys13", 128, 0 );
-	PlayBGM( 2, "lsys19", 128, 0 );
+	PlayBGM( 1, "msys13", 56, 0 );
+	PlayBGM( 2, "lsys19", 56, 0 );
 
 //　沢の流れをぼんやりと見詰めていた俺は、いつのまにかレナとはぐれていた￥
 	ClearMessage();
@@ -429,7 +429,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 5, "down", 0, FALSE, 0, 0, 1300, TRUE );
-	PlayBGM( 2, "lsys19", 128, 0 );
+	PlayBGM( 2, "lsys19", 56, 0 );
 
 //「ダムの完成に伴って生まれるダム湖はかなりの面積になったらしいね＠この雛見沢からずーっと上流の谷河内（やごうち）辺りまでが全部沈むことになったらしい。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
@@ -584,7 +584,7 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys15", 128, 0 );
+	PlayBGM( 1, "msys15", 56, 0 );
 //「……ちょうど４年前の今頃だったかなぁ＠あれも確か綿流しの日だったね。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 8, "ps3/s01/08/120800023", 256, TRUE);
@@ -838,7 +838,7 @@ void main()
 	OutputLine(NULL, "………誰かが死ぬんだよ。」",
 		   NULL, " ...Somebody dies.\"", Line_ContinueAfterTyping);
 	Negative( 400 , TRUE );
-	PlaySE( 4, "wa_025", 128, 64 );
+	PlaySE( 4, "wa_025", 56, 64 );
 	Wait( 600 );
 	FadeFilm( 400 , TRUE );
 	OutputLineAll(NULL, "", Line_WaitForInput);
@@ -846,7 +846,7 @@ void main()
 
 
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	PlayBGM( 1, "msys07", 56, 0 );
 
 //「バラバラ殺人の翌年の綿流しの日＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
@@ -1146,7 +1146,7 @@ void main()
 	ModDrawCharacter(3, 8, "sprite/night/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/y_kawa3", 3000 );
 
-	PlayBGM( 2, "lsys19", 128, 0 );
+	PlayBGM( 2, "lsys19", 56, 0 );
 	FadeOutBGM( 1, 1000, TRUE );
 
 //「で＠　その翌年の綿流しの晩にもまた人が死ぬわけですよね…＠　今度は誰です？＠
@@ -1248,7 +1248,7 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(1, 9, "sprite/night/ta1_akuwarai_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
-	PlaySE( 4, "wa_026", 128, 64 );
+	PlaySE( 4, "wa_026", 56, 64 );
 
 //「今日よ。」!w1500@
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女性</color>", NULL, "<color=#f5e6d3>Woman</color>", NULL, Line_ContinueAfterTyping); }
@@ -1281,7 +1281,7 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 2, "lsys19", 128, 0 );
+	PlayBGM( 2, "lsys19", 56, 0 );
 
 //「みんな口にしないけど……今夜また何か起こるんじゃないかって思ってる。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女性</color>", NULL, "<color=#f5e6d3>Woman</color>", NULL, Line_ContinueAfterTyping); }
@@ -1490,8 +1490,8 @@ void main()
 	ModDrawCharacter(1, 9, "sprite/night/ta1_def_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 100, TRUE );
 
 	FadeBustshotWithFiltering( 5, "down", 0, FALSE, 0, 0, 1300, TRUE );
-	PlayBGM( 2, "lsys19", 128, 0 );
-	PlayBGM( 1, "msys13", 128, 0 );
+	PlayBGM( 2, "lsys19", 56, 0 );
+	PlayBGM( 1, "msys13", 56, 0 );
 
 //「…やっぱり刺激が強過ぎたかしら？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女性</color>", NULL, "<color=#f5e6d3>Woman</color>", NULL, Line_ContinueAfterTyping); }
@@ -2080,7 +2080,7 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("background/y_kawa3", "left", 0, 0, 1300 );
-	PlayBGM( 1, "msys02", 128, 0 );
+	PlayBGM( 1, "msys02", 56, 0 );
 	StopBGM( 2 );
 
 
@@ -2591,7 +2591,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 1, "msys13", 128, 0 );
+	PlayBGM( 1, "msys13", 56, 0 );
 	ModDrawCharacterWithFiltering(1, 3, "sprite/night/me2_akuwarai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 //「お連れ様がお待ちみたいじゃ～ん＠　そろそろお時間かなぁ＠　ん～？＠

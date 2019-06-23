@@ -11,14 +11,14 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	PlayBGM( 1, "msys02", 128, 0 );
+	PlayBGM( 1, "msys02", 56, 0 );
 	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri1_def_a1_", "0", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/gk3", 1000 );
 
 //「......レナがいないです＠圭一は知りませんですか？＠
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500004", 128, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500004", 256, TRUE);
 	OutputLine(NULL, "「……レナがいないです。",
 		   NULL, "\"...Rena's not here.", Line_Continue);
 	Wait( 1500 );
@@ -30,16 +30,16 @@ void main()
 
 //「あれ＠　たった今までそこにいたのにな＠...おい魅音＠レナはどこ行ったんだ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100026", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100026", 256, TRUE);
 	OutputLine(NULL, "「あれ？",
 		   NULL, "\"Huh?", Line_Continue);
 	Wait( 800 );
 	OutputLine(NULL, "　たった今までそこにいたのにな。",
 		   NULL, " She was just there, actually...", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100027", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100027", 256, TRUE);
 	OutputLine(NULL, "…おい魅音。",
 		   NULL, " Hey, Mion.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100028", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100028", 256, TRUE);
 	OutputLine(NULL, "レナはどこ行ったんだ？」",
 		   NULL, " Where did Rena go?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -62,7 +62,7 @@ void main()
 
 //「......沙都子＠レナを知りませんですか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500005", 128, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500005", 256, TRUE);
 	OutputLine(NULL, "「……沙都子。",
 		   NULL, "\"...Satoko,", Line_Continue);
 	Wait (1000)
@@ -75,13 +75,13 @@ void main()
 
 //「レナですの＠　さっき廊下ですれ違いましてよ＠レナは日直だから、花壇にお水をやらないといけませんので。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400011", 128, TRUE);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400011", 256, TRUE);
 	OutputLine(NULL, "「レナさんですの？",
 		   NULL, "\"Rena-san, you say?", Line_Continue);
 	Wait (1000)
 	OutputLine(NULL, "　さっき廊下ですれ違いましてよ。",
 		   NULL, " I just passed her in the hallway.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400012", 128, TRUE);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400012", 256, TRUE);
 	OutputLine(NULL, "レナさんは日直だから、花壇にお水をやらないといけませんので。」",
 		   NULL, " Rena-san has class duties today, so she's off to water the flower bed.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -91,7 +91,7 @@ void main()
 
 //「あーレナが日直かぁ＠そりゃお疲れ様なことで。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300025", 128, TRUE);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300025", 256, TRUE);
 	OutputLine(NULL, "「あーレナが日直かぁ。",
 		   NULL, "\"Ah~ It was Rena's turn for class duty.", Line_Continue);
 	Wait (1400)
@@ -126,7 +126,7 @@ void main()
 
 //「レナってどういう名前なんだろうな＠...レナって漢字だとどうなるんだ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100029", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100029", 256, TRUE);
 	OutputLine(NULL, "「レナってどういう名前なんだろうな。",
 		   NULL, "\"What kind of name is Rena, I wonder...", Line_Continue);
 	Wait( 2500 );
@@ -140,7 +140,7 @@ void main()
 
 //「......レナはあだ名なのです＠ちゃんとした名前がありますですよ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500006", 128, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500006", 256, TRUE);
 	OutputLine(NULL, "「……レナはあだ名なのです。",
 		   NULL, "\"...Rena is her nickname.", Line_Continue);
 	Wait (1200)
@@ -150,7 +150,7 @@ void main()
 
 //「え、そうなのか？＠　俺はてっきり竜宮レナってのが本名だと思ってたよ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100030", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100030", 256, TRUE);
 	OutputLine(NULL, "「え、そうなのか？！",
 		   NULL, "\"What, really!?", Line_Continue);
 	Wait (1000)
@@ -163,7 +163,7 @@ void main()
 
 //「まぁ確かに＠レナとしか呼んでませんから間違えるのも無理はないですわね。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400013", 128, TRUE);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400013", 256, TRUE);
 	OutputLine(NULL, "「まぁ確かに。",
 		   NULL, "\"Well...", Line_Continue);
 	OutputLine(NULL, "レナさんとしか呼んでませんから間違えるのも無理はないですわね。」",
@@ -181,7 +181,7 @@ void main()
 
 //「本当の名前は何て言うんだろうな＠...レナが戻ってきたら聞いてみるかな！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100031", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100031", 256, TRUE);
 	OutputLine(NULL, "「本当の名前は何て言うんだろうな。",
 		   NULL, "\"I wonder what her real name is...", Line_Continue);
 	Wait (2000)
@@ -199,7 +199,7 @@ void main()
 
 //「......聞かなくてもいいですよ＠ボクたちが教えてあげますです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500007", 128, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500007", 256, TRUE);
 	OutputLine(NULL, "「……聞かなくてもいいですよ。",
 		   NULL, "\"...You don't need to ask her.", Line_Continue);
 	Wait (1500)
@@ -213,7 +213,7 @@ void main()
 
 //「お礼の礼に、奈良の奈＠...竜宮礼奈が本名ですのよ！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400014", 128, TRUE);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400014", 256, TRUE);
 	OutputLine(NULL, "「お礼の礼に、奈良の奈。",
 		   NULL, "\"It's the 'rei' from 'orei' and the 'na' from 'nara.'", Line_Continue);
 	Wait (1300)
@@ -223,16 +223,16 @@ void main()
 
 //「礼奈か＠.........ふーん＠それでレイナじゃなくてレナって読むのか＠　面白い読み方だよな。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100032", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100032", 256, TRUE);
 	OutputLine(NULL, "「礼奈か。",
 		   NULL, "\"Reina, is it?", Line_Continue);
 	Wait( 1000 );
 	OutputLine(NULL, "………ふーん。",
 		   NULL, " ...Hmm.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100033", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100033", 256, TRUE);
 	OutputLine(NULL, "それでレイナじゃなくてレナって読むのか？",
 		   NULL, " So it's read out as Rena instead of Reina?", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100034", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100034", 256, TRUE);
 	OutputLine(NULL, "　面白い読み方だよな。」",
 		   NULL, " That's a pretty interesting reading.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -241,7 +241,7 @@ void main()
 
 //「......いいえ、違いますです。レイナで正しいのです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500008", 128, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500008", 256, TRUE);
 	OutputLine(NULL, "「……いいえ、違いますです。レイナで正しいのです。」",
 		   NULL, "\"...No, that's not it. 'Reina' is the correct way.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -252,10 +252,10 @@ void main()
 
 //「レナが言ったのですわ＠レナと呼んで欲しいって＠だからレナなのですわ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400015", 128, TRUE);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400015", 256, TRUE);
 	OutputLine(NULL, "「レナさんが言ったのですわ。レナと呼んで欲しいって。",
 		   NULL, "\"Rena-san had told us that she wanted us to call her 'Rena.'", Line_WaitForInput);
-	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400016", 128, TRUE);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400016", 256, TRUE);
 	OutputLine(NULL, "だからレナさんなのですわ。」",
 		   NULL, " So we call her Rena-san.\"", Line_Normal);
 	ClearMessage();
@@ -265,16 +265,16 @@ void main()
 
 //「圭ちゃん＠...レナはレナだよ＠　礼奈って呼ぶのは他人だけ＠そこんとこ、わかってるよね？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300026", 128, TRUE);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300026", 256, TRUE);
 	OutputLine(NULL, "「圭ちゃん。",
 		   NULL, "\"Kei-chan...", Line_Continue);
 	Wait (1000)
 	OutputLine(NULL, "…レナはレナだよ？",
 		   NULL, " Rena is Rena, you know?", Line_WaitForInput);
-	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300027", 128, TRUE);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300027", 256, TRUE);
 	OutputLine(NULL, "　礼奈って呼ぶのは他人だけ。",
 		   NULL, " Only strangers call her Reina.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300028", 128, TRUE);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300028", 256, TRUE);
 	OutputLine(NULL, "そこんとこ、わかってるよね？」",
 		   NULL, " You get where this is going?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -304,7 +304,7 @@ void main()
 
 //「思ったんだけどさ、自己申請すれば俺も今日からあだ名で呼ばれるのか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100035", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100035", 256, TRUE);
 	OutputLine(NULL, "「思ったんだけどさ、自己申請すれば俺も今日からあだ名で呼ばれるのか？」",
 		   NULL, "\"So I was thinking, if I had a nickname, would you call me by that?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -315,7 +315,7 @@ void main()
 
 //「面白けりゃね＠何て呼ばれたいわけ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300029", 128, TRUE);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300029", 256, TRUE);
 	OutputLine(NULL, "「面白けりゃね。",
 		   NULL, "\"If it's good.", Line_Continue);
 	Wait (1200)
@@ -323,11 +323,11 @@ void main()
 		   NULL, " So what do you want to be called?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 4, "wa_029", 128, 64 );
+	PlaySE( 4, "wa_029", 56, 64 );
 	Wait( 200 );
 //「越後屋。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100036", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100036", 256, TRUE);
 	OutputLine(NULL, "「越後屋。」",
 		   NULL, "\"Con man.\"", Line_Normal);
 	ClearMessage();
@@ -335,7 +335,7 @@ void main()
 	DrawScene("black", 1000 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 4, "wa_020", 128, 64 );
+	PlaySE( 4, "wa_020", 56, 64 );
 	DrawSceneWithMask("background/gk3", "right", 0, 0, 200 );
 
 //　やがてレナが教室に戻ってきた＠
@@ -356,13 +356,13 @@ void main()
 
 //「あれあれ＠　誰かレナの事を探してたかな＠　かな？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200034", 128, TRUE);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200034", 256, TRUE);
 	OutputLine(NULL, "「あれあれ？",
 		   NULL, "\"What's this now?", Line_Continue);
 	Wait (1000)
 	OutputLine(NULL, "　誰かレナの事を探してたかな？",
 		   NULL, " Who is looking for me, I wonder?", Line_WaitForInput);
-	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200035", 128, TRUE);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200035", 256, TRUE);
 	OutputLine(NULL, "　かな？」",
 		   NULL, " I wonder?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -374,11 +374,11 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/gk1", "left", 0, 0, 300 );
-	PlayBGM( 1, "msys03", 128, 0 );
+	PlayBGM( 1, "msys03", 56, 0 );
 
 //「お代官様、竜宮めがまんまと現れましたぞ！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100037", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100037", 256, TRUE);
 	OutputLine(NULL, "「お代官様、竜宮めがまんまと現れましたぞ！！」",
 		   NULL, "\"Bailiff, Ryuugu doth show herself!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -389,7 +389,7 @@ void main()
 
 //「越後屋、主も悪よのぅ＠...ふぉっふぉっふぉ！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300030", 128, TRUE);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300030", 256, TRUE);
 	OutputLine(NULL, "「越後屋、主も悪よのぅ。",
 		   NULL, "\"Con man, you're quite sinister...", Line_Continue);
 	Wait (2800)
@@ -403,26 +403,26 @@ void main()
 
 //「なな、何かな何かな？＠　圭一くんと魅ぃちゃんが悪代官だよ＠　越後屋だよ？！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200036", 128, TRUE);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200036", 256, TRUE);
 	OutputLine(NULL, "「なな、何かな何かな？！",
 		   NULL, "\"Wh-What is this, what is this!?", Line_Continue);
 	Wait (2000)
 	OutputLine(NULL, "　圭一くんと魅ぃちゃんが悪代官だよ？",
 		   NULL, " Keiichi-kun and Mii-chan are an evil bailiff and...?", Line_WaitForInput);
-	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200037", 128, TRUE);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200037", 256, TRUE);
 	OutputLine(NULL, "　越後屋だよ？！」",
 		   NULL, " a con man!?\"", Line_Normal);
 	ClearMessage();
 
 //「おのれ竜宮レナの助＠　ここで会ったが百年目でおじゃる＠いざ覚悟～！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100038", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100038", 256, TRUE);
 	OutputLine(NULL, "「おのれ竜宮レナの助！",
 		   NULL, "\"Damn you, Renanosuke Ryuugu!", Line_Continue);
 	Wait (2000)
 	OutputLine(NULL, "　ここで会ったが百年目でおじゃる。",
 		   NULL, " Today doth be when thou meetest thy maker.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100039", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100039", 256, TRUE);
 	OutputLine(NULL, "いざ覚悟〜！！」",
 		   NULL, " Have at thee~!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -432,12 +432,12 @@ void main()
 
 //「わ＠　わ＠　助さん角さん、こらしめてやりなさーい！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200038", 128, TRUE);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200038", 256, TRUE);
 	OutputLine(NULL, "「わ！",
 		   NULL, "\"Wah!", Line_Continue);
 	OutputLine(NULL, "　わ！",
 		   NULL, " Wah!", Line_WaitForInput);
-	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200039", 128, TRUE);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200039", 256, TRUE);
 	OutputLine(NULL, "　助さん角さん、こらしめてやりなさーい！！」",
 		   NULL, " Suke-san, Kaku-san, show them what-for!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -448,7 +448,7 @@ void main()
 
 //「アイアイサーですわー！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400017", 128, TRUE);
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400017", 256, TRUE);
 	OutputLine(NULL, "「アイアイサーですわー！！！」",
 		   NULL, "\"Aye aye, sir!!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -459,7 +459,7 @@ void main()
 
 //「......報酬はスイス銀行に入れて欲しいのです。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500009", 128, TRUE);
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500009", 256, TRUE);
 	OutputLine(NULL, "「……報酬はスイス銀行に入れて欲しいのです。」",
 		   NULL, "\"...I expect my fee to be paid to my Swiss bank account.\"", Line_Normal);
 	ClearMessage();
@@ -469,15 +469,15 @@ void main()
 	OutputLine(NULL, "　こうなっては仕方ない！　あとは５人入り乱れての大乱闘…！！！",
 		   NULL, "Since it's come to this, we have no choice! We'll just have a grand battle with five people...!", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	Wait( 200 );
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	Wait( 200 );
-	PlaySE( 4, "wa_005", 128, 64 );
+	PlaySE( 4, "wa_005", 56, 64 );
 	ShakeScreen( 1, 50, 20, 2, 0, );
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	Wait( 200 );
-	PlaySE( 4, "wa_005", 128, 64 );
+	PlaySE( 4, "wa_005", 56, 64 );
 	ShakeScreen( 0, 50, 20, 2, 0, );
 	OutputLineAll(NULL, "", Line_Normal);
 
@@ -485,17 +485,17 @@ void main()
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
 	DisableWindow();
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	Wait( 200 );
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	DrawScene("black", 100 );
 	DrawBustshot(5, "background/furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
 
-	PlaySE( 4, "wa_005", 128, 64 );
+	PlaySE( 4, "wa_005", 56, 64 );
 	DrawScene("black", 50 );
 	DrawBustshot(5, "background/furiker_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
 
-	PlaySE( 4, "wa_005", 128, 64 );
+	PlaySE( 4, "wa_005", 56, 64 );
 	DrawScene("black", 100 );
 	DrawSceneWithMask("background/gk3", "down", 0, 0, 1300 );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
@@ -517,7 +517,7 @@ void main()
 
 //「...レナにはぜひ世直しの旅に出てもらいたいもんだ＠...永田町なんかどうだ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100040", 128, TRUE);
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100040", 256, TRUE);
 	OutputLine(NULL, "「…レナにはぜひ世直しの旅に出てもらいたいもんだ。",
 		   NULL, "\"...I do hope that Rena does go on a journey to make the world a better place.", Line_Continue);
 	Wait (2600)
@@ -527,22 +527,22 @@ void main()
 
 //「......ダメだよ＠旅先でかぁいいものをチョロまかすから。」/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300031", 128, TRUE);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300031", 256, TRUE);
 	OutputLine(NULL, "「……ダメだよ。",
 		   NULL, "\"...Spare me.", Line_Continue);
 	Wait( 800 );
 	OutputLine(NULL, "旅先でかぁいいものをチョロまかすから。」",
 		   NULL, "I'll get kyute stuff for you on my travels.\"", Line_ContinueAfterTyping);
 
-	PlaySE( 4, "wa_002", 128, 64 );
+	PlaySE( 4, "wa_002", 56, 64 );
 	Wait( 200 );
-	PlaySE( 4, "wa_002", 128, 64 );
+	PlaySE( 4, "wa_002", 56, 64 );
 	Wait( 200 );
 	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 
-	PlaySE( 4, "wa_001", 128, 64 );
+	PlaySE( 4, "wa_001", 56, 64 );
 
 //　振鈴が休み時間の終わりを告げる￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -556,7 +556,7 @@ void main()
 
 //「ほらほら、圭一くんも魅ぃちゃんも＠先生来るよ！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200040", 128, TRUE);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200040", 256, TRUE);
 	OutputLine(NULL, "「ほらほら、圭一くんも魅ぃちゃんも。",
 		   NULL, "\"Come on, come on Keiichi-kun, Mii-chan.", Line_Continue);
 	OutputLine(NULL, "先生来るよ！」",

@@ -37,7 +37,7 @@ void Title()
 
 	DrawScene("white", 1000);
 
-	PlayBGM( 2, "lsys11", 128, 0 );
+	PlayBGM( 2, "lsys11", 56, 0 );
 
 	DrawSpriteWithFiltering( 10, "Logo", "centerblind", 0, 0, 0, TRUE, TRUE, 0, 0, 10, 1500, TRUE );
 
@@ -335,7 +335,7 @@ void ChapterPreview()
 	FadeOutBGM( 2, 300, FALSE );
 	DisableWindow();
 
-	PlayBGM( 0, "lsys13", 128, 0 );
+	PlayBGM( 0, "lsys13", 56, 0 );
 	DrawSceneWithMask("black", "2", 1, 0, 1200 );
 	Wait( 1500 );
 
@@ -357,7 +357,7 @@ void ChapterPreview()
 
 	if (LoadValueFromLocalWork( LOCALWORK_NO_RESULT ) == 1) {
 		StopBGM( 0 );
-		PlaySE( 1, "wa_037", 128, 64 );
+		PlaySE( 1, "wa_037", 56, 64 );
 		FadeBustshot( 9, FALSE, 0, 0, 0, 0, 1000, TRUE );
 		DrawBustshot(9, "scenario/shortcuts", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 1000, TRUE );
 		Wait(10000);

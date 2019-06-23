@@ -12,7 +12,7 @@ void main()
 	DisableWindow();
 	DrawScene("black", 1000 );
 	DrawScene("background/tennai1", 1000 );
-	PlayBGM( 1, "msys01", 128, 0 );
+	PlayBGM( 1, "msys01", 56, 0 );
 
 //　セブンスマートは市内にある、酒類食料品の安売量販店だ￥
 	ClearMessage();
@@ -127,7 +127,7 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 4, "wa_023", 128, 64 );
+	PlaySE( 4, "wa_023", 56, 64 );
 	SetValidityOfWindowDisablingWhenGraphicsControl( FALSE );
 	DrawFilm( 2, 153, 153, 153, 255, 0, 3000, TRUE );
 ////print 42
@@ -181,7 +181,7 @@ void main()
 		   NULL, "I go through the sound and presences again, looking.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	PlayBGM( 1, "msys07", 56, 0 );
 
 //　他の買い物客の気配＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -231,7 +231,7 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 4, "wa_025", 128, 64 );
+	PlaySE( 4, "wa_025", 56, 64 );
 
 //　その時、ぞくりとして時間の再生を止めた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -272,7 +272,7 @@ void main()
 		   NULL, "While carrying that frightening shadow on my back, I was gleefully running around the store searching for a case of noodles...?", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys16", 128, 0 );
+	PlayBGM( 1, "msys16", 56, 0 );
 
 //　お袋への悪態をつきながら、インスタントのコーナーを駆け回る俺...＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -626,7 +626,7 @@ void main()
 		   NULL, " Follow the rules!!!", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 4, "wa_026", 128, 64 );
+	PlaySE( 4, "wa_026", 56, 64 );
 
 //　ぺた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -824,7 +824,7 @@ void main()
 
 
 
-	PlaySE( 4, "wa_025", 128, 64 );
+	PlaySE( 4, "wa_025", 56, 64 );
 
 //locate 0,5
 

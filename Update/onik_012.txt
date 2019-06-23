@@ -9,11 +9,11 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 
 	DisableWindow();
-	PlayBGM( 2, "lsys22", 128, 0 );
+	PlayBGM( 2, "lsys22", 56, 0 );
 	DrawScene("white", 3000 );
 	DrawSceneWithMask("background/ma_j3_01", "m1", 0, 0, 3000 );
 
-	PlayBGM( 1, "msys06", 128, 0 );
+	PlayBGM( 1, "msys06", 56, 0 );
 //　倦怠感と頭痛＠
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -187,7 +187,7 @@ void main()
 		   NULL, "If I took some medicine and got a good day of rest... I might be able to greet everyone with a smile tomorrow.", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 4, "wa_028", 128, 64 );
+	PlaySE( 4, "wa_028", 56, 64 );
 //　ピンポーン…！!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ピンポーン…！",
@@ -446,7 +446,7 @@ void main()
 	DisableWindow();
 	DrawScene("black", 3000 );
 	DrawSceneWithMask("background/m_hi4", "left", 0, 0, 1300 );
-	PlayBGM( 2, "lsys22", 128, 0 );
+	PlayBGM( 2, "lsys22", 56, 0 );
 
 //　本来なら絶対にこんなところにいるはずもない、平日の日中＠…ただ歩いているだけでもやましさを感じる、変な気分だった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -760,7 +760,7 @@ void main()
 	DrawSceneWithMask("black", "left", 0, 0, 3000 );
 	DrawSceneWithMask("background/m_hi4", "left", 0, 0, 3000 );
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	PlayBGM( 1, "msys12", 56, 0 );
 //　表を歩いたせいか、さっきまでなかった食欲が急に戻ってきた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　表を歩いたせいか、さっきまでなかった食欲が急に戻ってきた。",
@@ -951,7 +951,7 @@ void main()
 		   NULL, "It was almost as if the bright sunlight outside was a lie.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys20", 128, 0 );
+	PlayBGM( 2, "lsys20", 56, 0 );
 
 //「昨夜は遅くまですみませんでしたね＠ご家族に怒られませんでしたか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1167,7 +1167,7 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawSceneWithMask("background/res1", "left", 0, 0, 1300 );
 
-	PlayBGM( 1, "msys01", 128, 0 );
+	PlayBGM( 1, "msys01", 56, 0 );
 //　賑わっているが、この時間にいるのは大人の人ばかりだ。平日の日中に子供がいるわけがない＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　賑わっているが、この時間にいるのは大人の人ばかりだ。平日の日中に子供がいるわけがない。",
@@ -1340,7 +1340,7 @@ void main()
 
 
 
-	PlayBGM( 1, "msys09", 128, 0 );
+	PlayBGM( 1, "msys09", 56, 0 );
 //「何でもですね、大昔は雛見沢は「鬼ヶ淵」って呼ばれてたんだそうです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700226", 256, TRUE);
@@ -1599,7 +1599,7 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys15", 128, 0 );
+	PlayBGM( 1, "msys15", 56, 0 );
 	ModDrawCharacter(3, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「でもですね＠…他の昔話にも結構あるらしいんですよ＠鬼ヶ淵の鬼たちが総出で獲物を捕まえに来る、というのは。＠
@@ -1814,7 +1814,7 @@ void main()
 
 
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	PlayBGM( 1, "msys07", 56, 0 );
 //「………去年、悟史くんが失踪した頃から私は不審に感じていたんです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700256", 256, TRUE);
@@ -2146,7 +2146,7 @@ void main()
 	ModDrawCharacter(3, 11, "sprite/normal/oisi1_3_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/res5", 400 );
 
-	PlaySE( 4, "wa_023", 128, 64 );
+	PlaySE( 4, "wa_023", 56, 64 );
 //「被害者たちはなぜか、あなたのお友達グループに全てつながるのです。」!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700275", 256, TRUE);
@@ -2260,7 +2260,7 @@ void main()
 	OutputLine(NULL, "「実は調べてみたら、竜宮さんは引越しの少し前に、学校で謹慎処分を受けているんですよ。",
 		   NULL, "\"Actually, I looked into her. Before Ryuugu-san moved away to Hinamizawa, she was suspended from school.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700281", 256, TRUE);
-	PlayBGM( 1, "msys16", 128, 0 );
+	PlayBGM( 1, "msys16", 56, 0 );
 	OutputLine(NULL, "何でも、学校中のガラスを割って回ったんだとか。」",
 		   NULL, " It seems she went through her school building and broke all of the windows.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2364,7 +2364,7 @@ void main()
 		   NULL, "\"She mentioned...", Line_WaitForInput);
 
 
-	PlaySE( 4, "wa_026", 128, 64 );
+	PlaySE( 4, "wa_026", 56, 64 );
 //オヤシロさまって単語が。」!w5000@
 	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700288", 256, TRUE);
 	OutputLine(NULL, "オヤシロさまって単語が。」",
@@ -2442,7 +2442,7 @@ void main()
 
 
 
-	PlaySE( 4, "wa_022", 128, 64 );
+	PlaySE( 4, "wa_022", 56, 64 );
 
 //「住民票でわかったんですが、竜宮一家は元は雛見沢の住人です＠レナさんがちょうど小学校に上がるときに茨城へ引っ越されたんです。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2596,7 +2596,7 @@ void main()
 	DrawSceneWithMask("background/mati2", "left", 0, 0, 1300 );
 	DrawSceneWithMask("background/kuruma1", "left", 0, 0, 1300 );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
-	PlayBGM( 2, "lsys20", 128, 0 );
+	PlayBGM( 2, "lsys20", 56, 0 );
 
 //!sd
 //　車に乗り込み、再び雛見沢への悪路を戻る￥
@@ -2605,7 +2605,7 @@ void main()
 		   NULL, "We got in the car and returned to Hinamizawa via the rough road.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys06", 128, 0 );
+	PlayBGM( 1, "msys06", 56, 0 );
 //　…自転車ではあまり気にならなかったが、車だとこんなにも揺れるのだろうか…＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…自転車ではあまり気にならなかったが、車だとこんなにも揺れるのだろうか…？",
@@ -2908,7 +2908,7 @@ void main()
 		   NULL, " ...I was surprised so little time had passed since we ate.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	PlayBGM( 1, "msys12", 56, 0 );
 
 //　車の外は暑かった＠セミの喧騒も耳に痛い￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3104,7 +3104,7 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("background/ma_j3_01", "m1", 0, 0, 3000 );
 
-	PlayBGM( 1, "msys13", 128, 0 );
+	PlayBGM( 1, "msys13", 56, 0 );
 //　横になってどのくらいたっただろう＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　横になってどのくらいたっただろう。",
@@ -3127,7 +3127,7 @@ void main()
 		   NULL, " ...It would probably be a good idea to change my sheets.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 1, "lsys17", 128, 0 );
+	PlayBGM( 1, "lsys17", 56, 0 );
 
 //　その時、階下の電話が鳴った＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3154,7 +3154,7 @@ void main()
 	DrawSceneWithMask("black", "up", 0, 0, 1300 );
 	DrawSceneWithMask("background/ma_s1", "up", 0, 0, 1300 );
 
-	PlayBGM( 1, "msys01", 128, 0 );
+	PlayBGM( 1, "msys01", 56, 0 );
 //「もしもし前原ですけど。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 1, "ps3/s01/01/120100319", 256, TRUE);
@@ -3380,7 +3380,7 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("black", "right", 0, 0, 3000 );
 
-	PlaySE( 4, "wa_028", 128, 64 );
+	PlaySE( 4, "wa_028", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -3396,7 +3396,7 @@ void main()
 //gosub *Ch_mi_si
 
 	DisableWindow();
-	PlayBGM( 1, "msys02", 128, 0 );
+	PlayBGM( 1, "msys02", 56, 0 );
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me2_wink_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re2a_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/ma_g2", "left", 0, 0, 1300 );
@@ -3654,7 +3654,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	PlayBGM( 1, "msys07", 56, 0 );
 
 //　……これまでに見た事のない、…薄気味悪い顔だったからだ￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3817,7 +3817,7 @@ void main()
 		   NULL, " ...Who was he?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 4, "wa_002", 128, 64 );
+	PlaySE( 4, "wa_002", 56, 64 );
 
 //　どさり＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3841,7 +3841,7 @@ void main()
 		   NULL, "I could tell the blood had drained from my face, making me go pale.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys15", 128, 0 );
+	PlayBGM( 1, "msys15", 56, 0 );
 
 //「…へぇ＠圭一くん、それ誰＠　…ひょっとしてこの間の人かな＠　………かな？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -4015,7 +4015,7 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 2, "lsys13", 128, 0 );
+	PlayBGM( 2, "lsys13", 56, 0 );
 //　魅音は小首を優雅に傾げるような仕草をしながらも、決して俺の目をその眼差しから解放しようとはしなかった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音は小首を優雅に傾げるような仕草をしながらも、決して俺の目をその眼差しから解放しようとはしなかった。",
@@ -4090,7 +4090,7 @@ void main()
 
 	DisableWindow();
 	Negative( 0 , TRUE );
-	PlaySE( 4, "wa_027", 128, 64 );
+	PlaySE( 4, "wa_027", 56, 64 );
 	DrawScene("scene/033d", 200 );
 
 
@@ -4163,7 +4163,7 @@ void main()
 	DisableWindow();
 	DrawBustshot(5, "black", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 1000, TRUE );
 
-	PlayBGM( 1, "msys15", 128, 0 );
+	PlayBGM( 1, "msys15", 56, 0 );
 //　魅音たちは…俺が大石さんと話していたことを知っている…？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音たちは…俺が大石さんと話していたことを知っている…？！",
@@ -4295,7 +4295,7 @@ void main()
 		   NULL, "...If only that would wake me from this nightmare... But for some reason it felt like I was punching a blanket... it was almost laughably painless.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	PlayBGM( 1, "msys07", 56, 0 );
 //　冷静になれ前原圭一…＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　冷静になれ前原圭一…！",
@@ -4491,7 +4491,7 @@ void main()
 	OutputLine(NULL, "…仲間さ！！",
 		   NULL, " ...They're my friends!", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "lsys15", 128, 0 );
+	PlayBGM( 0, "lsys15", 56, 0 );
 ////dwaveplayloop 12
 
 //　…だが…富竹さんや大石さんに、知らなくてもいい雛見沢の秘密を……オヤシロさまの祟りの話を聞かされた頃から……おかしくなり始めた￥
@@ -5080,7 +5080,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 
-	PlaySE( 4, "wa_022", 128, 64 );
+	PlaySE( 4, "wa_022", 56, 64 );
 //…なんだ？!w4000
 	OutputLine(NULL, "…なんだ？",
 		   NULL, " ...What was this?", Line_ContinueAfterTyping);
@@ -5091,7 +5091,7 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 
 //　それが何かを頭が理解する前に、俺は食べかけのおはぎごと、それを力いっぱい投げ付けた！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -5118,7 +5118,7 @@ void main()
 		   NULL, "Then, after sticking for a moment, it slid down to the floor.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	PlayBGM( 1, "msys07", 56, 0 );
 
 //　…呆然とする俺自身＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -5255,7 +5255,7 @@ void main()
 		   NULL, "But a voice inside me already knew... and let me know by chattering my molars together.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys13", 128, 0 );
+	PlayBGM( 1, "msys13", 56, 0 );
 //　…湧き上がってくる恐怖を打ち消せない…＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…湧き上がってくる恐怖を打ち消せない…。",
@@ -5322,7 +5322,7 @@ void main()
 		   NULL, "Before I could think of the correct word, my hands were already on the move.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	Wait( 100 );
 
 //　どしゃッ＠/
@@ -5331,14 +5331,14 @@ void main()
 		   NULL, "*Splat*", Line_WaitForInput);
 
 
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	Wait( 100 );
 //　びたッ！＠/
 	OutputLine(NULL, "　びたッ！！",
 		   NULL, " *Plop*", Line_WaitForInput);
 
 
-	PlaySE( 4, "wa_008", 128, 64 );
+	PlaySE( 4, "wa_008", 56, 64 );
 	Wait( 100 );
 
 //　べしゃッ！！＠
@@ -5357,7 +5357,7 @@ void main()
 
 	DisableWindow();
 	DrawScene("background/ma_d1_01", 500 );
-	
+
 //　飛び散った餡の描く幾何学的模様がどこか不吉なものを想像させる…＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　飛び散った餡の描く幾何学的模様がどこか不吉なものを想像させる…。",
