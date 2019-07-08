@@ -3105,8 +3105,8 @@ void main()
 	OutputLine(NULL, "　もし逆の立場になったら、貴様の顔面にねっちりと！",
 		   NULL, "If our roles are ever reversed... I'm going to go all out!", Line_WaitForInput);
 	OutputLine(NULL, "　タワシじゃ落ちないくらいラクガキしてやるからなぁ…！！！",
-		   NULL, " All over your face so you won't be able to take it off, even with a scouring pad...!!!", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+		   NULL, " All over your face so you won't be able to take it off, even with a scouring pad...!!!", Line_Normal);
+	ClearMessage();
 
 
 
