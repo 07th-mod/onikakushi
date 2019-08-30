@@ -2129,8 +2129,8 @@ void main()
 //「鳴いた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 5, "ps3/s19/05/990500080", 256, TRUE);
-	OutputLine(NULL, "「鳴いた」",
-		NULL, " \"...Mew.\"", Line_Normal);
+	OutputLine(NULL, "鳴いた」",
+		NULL, " \"...Meep.\"", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_016", 56, 64 );
@@ -2212,7 +2212,7 @@ void main()
 //みぃ！/
 	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei33830_04", 256, TRUE);
 	OutputLine(NULL, "みぃ！",
-		   NULL, " Mew!", Line_Continue);
+		   NULL, " Meep!", Line_Continue);
 	PlaySE( 4, "wa_016", 56, 64 );
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll(NULL, "", Line_WaitForInput); } else { OutputLineAll(NULL, "\n", Line_WaitForInput); }
 
