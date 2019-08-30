@@ -2116,7 +2116,7 @@ void main()
 
 //「……みぃ。」…と一言、!w800「鳴いた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "「……みぃ。」…と一言、",
+	OutputLine(NULL, "……みぃ。」…と一言、",
 		   NULL, "She made just a single sound--", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -2129,7 +2129,7 @@ void main()
 //「鳴いた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 5, "ps3/s19/05/990500080", 256, TRUE);
-	OutputLine(NULL, "鳴いた」",
+	OutputLine(NULL, "「鳴いた」",
 		NULL, " \"...Meep.\"", Line_Normal);
 	ClearMessage();
 
