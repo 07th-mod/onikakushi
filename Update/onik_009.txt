@@ -2115,8 +2115,9 @@ void main()
 	ModDrawCharacterWithFiltering(3, 5, "sprite/normal/ri5_komaru_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「……みぃ。」…と一言、!w800「鳴いた￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "……みぃ。」…と一言、",
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, NULL, NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GLanguage) == 0) { ModPlayVoiceLS(3, 5, "ps3/s19/05/990500080", 256, TRUE); }
+	OutputLine(NULL, "「……みぃ。」",
 		   NULL, "She made just a single sound--", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -2127,10 +2128,10 @@ void main()
 
 
 //「鳴いた￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 5, "ps3/s19/05/990500080", 256, TRUE);
-	OutputLine(NULL, "「鳴いた」",
-		NULL, " \"...Meep.\"", Line_Normal);
+	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GLanguage) == 1) { ModPlayVoiceLS(3, 5, "ps3/s19/05/990500080", 256, TRUE); }
+	OutputLine(NULL, "…と一言、「鳴いた」",
+		NULL, " \"...Mew.\"", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_016", 56, 64 );
