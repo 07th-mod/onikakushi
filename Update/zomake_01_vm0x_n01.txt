@@ -27,6 +27,7 @@ void dialog001()
 	ClearMessage();
 	DisableWindow();
 	FadeAllBustshots( 400, TRUE );
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri1_warai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「…まだ第一話ですよ。ボクは次のお話が楽しみなのです。＠
@@ -38,6 +39,7 @@ void dialog001()
 
 
 	DisableWindow();
+	ModSetLayerFilter(3, 256, "none");
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1a_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「次の話はどんなのになるわけ＠　レナは聞いてるー？＠
@@ -52,6 +54,7 @@ void dialog001()
 
 
 	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_warai_a1_", "2", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/res5", "left", 0, 0, 300 );
 

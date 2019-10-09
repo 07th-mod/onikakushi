@@ -422,6 +422,7 @@ void main()
 
 
 	PlayBGM( 1, "msysRe", 56, 0 );
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re1a_def_a1_", "0", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //　朝の爽やかさをそのままにした快活な挨拶が響いてきた＠
@@ -927,6 +928,7 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("black", "left", 0, 0, 1300 );
 	PlayBGM( 1, "msys02", 56, 0 );
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacterWithFiltering(1, 2, "sprite/normal/re1a_def_a1_", "0", "c", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/ie1", "left", 0, 0, 3000 );
 
@@ -946,6 +948,7 @@ void main()
 		   NULL, " Noticing us, she waved.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
+	ModSetLayerFilter(3, 256, "none");
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me1b_def_a1_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
 
 //「お、来た来た。遅いよ２人とも～！＠

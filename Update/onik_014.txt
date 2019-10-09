@@ -1547,6 +1547,7 @@ void main()
 	PlaySE( 4, "wa_020", 56, 64 );
 	FadeOutBGM( 2, 400, TRUE );
 	PlayBGM( 1, "msysSa", 56, 0 );
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri1_def_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 1300, TRUE );
 
 //「…おはようございますです。＠
@@ -1558,6 +1559,7 @@ void main()
 
 
 	DisableWindow();
+	ModSetLayerFilter(3, 256, "none");
 	ModDrawCharacterWithFiltering(3, 4, "sprite/normal/sa1a_akuwarai_a1_", "1", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 1300, TRUE );
 
 //「あらあらあら、今朝はお早いですわね圭一さん。＠
@@ -1709,6 +1711,7 @@ void main()
 		   NULL, "Just as I breathed a sigh of relief, Rika-chan stopped suddenly and turned back towards me.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri1_def_a1_", "0", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 //「…圭一は野球を始めますですか？＠
