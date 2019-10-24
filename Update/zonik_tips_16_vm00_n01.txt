@@ -202,6 +202,7 @@ void dialog001()
 //　早い話が、脳障害によって精神がとんちんかんになる状態じゃな＠これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。＠
 	OutputLine(NULL, "　早い話が、脳障害によって精神がとんちんかんになる状態じゃな。",
 		   NULL, " In short, it's a condition where the brain is out of whack due to physical injury or illness.", Line_WaitForInput);
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "ps3/s20/00/443200037", 256, TRUE);
 	OutputLine(NULL, "これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。」",
 		   NULL, " It can be caused by drugs, but it can also be caused by physical trauma, encephalitis, a stroke, or even tumors.\"", GetGlobalFlag(GLinemodeSp));
