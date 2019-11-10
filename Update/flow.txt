@@ -358,11 +358,6 @@ void ChapterPreview()
 	if (LoadValueFromLocalWork( LOCALWORK_NO_RESULT ) == 1) {
 		StopBGM( 0 );
 		PlaySE( 1, "wa_037", 56, 64 );
-		FadeBustshot( 9, FALSE, 0, 0, 0, 0, 1000, TRUE );
-		DrawBustshot(9, "scenario/shortcuts", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 1000, TRUE );
-		Wait(10000);
-
-		DrawScene( "black", 1000 );
 
 		CallSection("Game");
 	}
