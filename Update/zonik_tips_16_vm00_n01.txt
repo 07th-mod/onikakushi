@@ -35,7 +35,7 @@ void dialog001()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "ps3/s20/00/443200025", 256, TRUE);
 	OutputLine(NULL, "…躁の状態もまた自殺をせん。",
-		   NULL, " Nor does mania on its own lead to suicide.", Line_WaitForInput);
+		   NULL, "Nor does mania on its own lead to suicide.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 0, "ps3/s20/00/443200026", 256, TRUE);
 	OutputLine(NULL, "　今度は逆に、非常に自信過剰で行動的なので、自らを順風満帆と思う。",
 		   NULL, " That has an opposite effect, filling the person with confidence and making them feel as though they're walking on air.", Line_Continue);
@@ -201,11 +201,12 @@ void dialog001()
 	Wait ( 3200 );
 //　早い話が、脳障害によって精神がとんちんかんになる状態じゃな＠これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。＠
 	OutputLine(NULL, "　早い話が、脳障害によって精神がとんちんかんになる状態じゃな。",
-		   NULL, " In short, it's a condition where the brain is out of whack due to physical injury or illness.", Line_WaitForInput);
+		   NULL, " In short, it's a condition where the brain is out of whack due to physical injury or illness.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Forensic Investigator</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 0, "ps3/s20/00/443200037", 256, TRUE);
 	OutputLine(NULL, "これは薬物中毒でも起こるが、脳の外傷や脳炎、脳卒中、脳腫瘍なんかでも起こる。」",
-		   NULL, " It can be caused by drugs, but it can also be caused by physical trauma, encephalitis, a stroke, or even tumors.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "It can be caused by drugs, but it can also be caused by physical trauma, encephalitis, a stroke, or even tumors.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
 
