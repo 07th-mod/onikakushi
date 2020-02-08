@@ -1,0 +1,34 @@
+void main()
+{
+	DrawScene("background/gk1", 1000 );
+
+//r今日の授業はこれで終了だ。
+	OutputLine(NULL, "今日の授業はこれで終了だ。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rさて…このあとどうしようかな。
+	OutputLine(NULL, "さて…このあとどうしようかな。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshotWithFiltering( 6, "2choices", "left", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 250, TRUE );
+	char OniChoice1[2];
+
+	if (GetGlobalFlag(GLanguage) == 1) {
+		OniChoice1[0] = "";
+		OniChoice1[1] = "";
+	} else {
+		OniChoice1[0] = "レナと宝探しだ。";
+		OniChoice1[1] = "…帰ってゴロ寝しよ。";
+	}
+
+	Select( 2, OniChoice1 );
+	DisableWindow();
+	FadeBustshot( 6, FALSE, 0, 0, 0, 0, 200, TRUE );
+	if (LoadValueFromLocalWork( SelectResult ) == 0) {
+		SetGlobalFlag(GConsoleChoice, 0);
+	} else {
+		SetGlobalFlag(GConsoleChoice, 1);
+	}
+}

@@ -1,0 +1,320 @@
+void main()
+{
+	DrawScene("black", 1000 );
+
+	DrawScene("background/ma_s1", 1000 );
+
+	PlayBGM(2, "hm01_01", 128, 0);
+
+//r学校から帰った俺に、おふくろが声をかけた。
+	OutputLine(NULL, "学校から帰った俺に、おふくろが声をかけた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一の母rvS19/00/662700001.「圭一、ちょっとお使い、頼まれてくれるかしら？」
+	PlaySE(4, "ps3/s19/00/662700001", 256, 64);
+	OutputLine(NULL, "「圭一、ちょっとお使い、頼まれてくれるかしら？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06220.「お使い……？」
+	PlaySE(4, "ps3/s19/01/hr_kei06220", 256, 64);
+	OutputLine(NULL, "「お使い……？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一の母rvS19/00/662700002.「カップラーメンの買い置きが切れちゃったのよ。kvS19/00/662700003.ないと困るでしょ」
+	PlaySE(4, "ps3/s19/00/662700002", 256, 64);
+	OutputLine(NULL, "「カップラーメンの買い置きが切れちゃったのよ。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/00/662700003", 256, 64);
+	OutputLine(NULL, "ないと困るでしょ」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06230.「はいはい……」
+	PlaySE(4, "ps3/s19/01/hr_kei06230", 256, 64);
+	OutputLine(NULL, "「はいはい……」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rカップラーメンは、俺の生命線といっても過言ではない。お袋が留守で冷蔵庫にも何もない場合、ラーメンの買い置きがないことは即ち死を意味する。
+	OutputLine(NULL, "カップラーメンは、俺の生命線といっても過言ではない。お袋が留守で冷蔵庫にも何もない場合、ラーメンの買い置きがないことは即ち死を意味する。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r……というのは大げさだが、俺にとってはそれくらい、重要なアイテムなのだ。
+	OutputLine(NULL, "……というのは大げさだが、俺にとってはそれくらい、重要なアイテムなのだ。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一の母rvS19/00/662700004.「好きなの選んでいいけど、箱ごとまとめ買いしてきてね。kvS19/00/662700005.あ、それと、ついでに缶詰も。kvS19/00/662700006.あ、それと……」
+	PlaySE(4, "ps3/s19/00/662700004", 256, 64);
+	OutputLine(NULL, "「好きなの選んでいいけど、箱ごとまとめ買いしてきてね。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/00/662700005", 256, 64);
+	OutputLine(NULL, "あ、それと、ついでに缶詰も。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/00/662700006", 256, 64);
+	OutputLine(NULL, "あ、それと……」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06240.「行ってきまーす」
+	PlaySE(4, "ps3/s19/01/hr_kei06240", 256, 64);
+	OutputLine(NULL, "「行ってきまーす」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺は慌てて家を出た。このままじゃ次から次へと買うものを思い出されて、しまいには大荷物を背負わされるハメになるに違いない。……ちなみに、俺の自転車にはそれだけの積載量などあるわけがなかった。
+	OutputLine(NULL, "俺は慌てて家を出た。このままじゃ次から次へと買うものを思い出されて、しまいには大荷物を背負わされるハメになるに違いない。……ちなみに、俺の自転車にはそれだけの積載量などあるわけがなかった。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一の母rvS19/00/662700007.「車に気をつけるのよ～！」
+	PlaySE(4, "ps3/s19/00/662700007", 256, 64);
+	OutputLine(NULL, "「車に気をつけるのよ～！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06250.「はいよー！」
+	PlaySE(4, "ps3/s19/01/hr_kei06250", 256, 64);
+	OutputLine(NULL, "「はいよー！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rお袋の声が、閉まりかけたドアの向こうから聞こえてくる。
+	OutputLine(NULL, "お袋の声が、閉まりかけたドアの向こうから聞こえてくる。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawScene("background/ma1", 1000 );
+
+//r俺はガレージの隅に止めてある自転車の鍵を外し、ちょっと硬めのペダルの踏み応えを確かめる。……たまにはサイクリングも悪くはないよな。天気もいいし。
+	OutputLine(NULL, "俺はガレージの隅に止めてある自転車の鍵を外し、ちょっと硬めのペダルの踏み応えを確かめる。……たまにはサイクリングも悪くはないよな。天気もいいし。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rよし、出発！　俺は颯爽とペダルを漕ぎ出した。
+	OutputLine(NULL, "よし、出発！　俺は颯爽とペダルを漕ぎ出した。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawScene("black", 1000 );
+
+	DrawScene("background/hi4", 1000 );
+
+//r強烈な日差しが治まり、涼しくなり始めた空気の中、自転車は町へのなだらかな坂道を滑り降りて行く。
+	OutputLine(NULL, "強烈な日差しが治まり、涼しくなり始めた空気の中、自転車は町へのなだらかな坂道を滑り降りて行く。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//村人rvS19/00/villaA66006.「やぁー、どうもー！」
+	PlaySE(4, "ps3/s19/00/villaa66006", 256, 64);
+	OutputLine(NULL, "「やぁー、どうもー！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r坂の途中で、誰かが俺に声をかけた。
+	OutputLine(NULL, "坂の途中で、誰かが俺に声をかけた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rえっ……？！　今、俺に声をかけた……？　あれ、誰だっけ？
+	OutputLine(NULL, "えっ……？！　今、俺に声をかけた……？　あれ、誰だっけ？",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r思い出せないまま、自転車はスピードに乗って坂を走り降りてしまう。
+	OutputLine(NULL, "思い出せないまま、自転車はスピードに乗って坂を走り降りてしまう。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r服装や雰囲気からして、雛見沢の住人には違いないようだが……。
+	OutputLine(NULL, "服装や雰囲気からして、雛見沢の住人には違いないようだが……。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawScene("background/m_hi6", 1000 );
+
+//r坂を降りきると、上り坂にさしかかった。一気に加速して急な坂道へ挑む。
+	OutputLine(NULL, "坂を降りきると、上り坂にさしかかった。一気に加速して急な坂道へ挑む。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rはぁ……はぁ……。なかなかにしんどい……。
+	OutputLine(NULL, "はぁ……はぁ……。なかなかにしんどい……。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r汗を垂らしながら立ち漕ぎで自転車を繰る俺には、前方を軽やかな足取りで歩いていくおばさんがひどく優雅に見える。
+	OutputLine(NULL, "汗を垂らしながら立ち漕ぎで自転車を繰る俺には、前方を軽やかな足取りで歩いていくおばさんがひどく優雅に見える。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rおばさんに負けて、たまるかよーっ！　渾身の力でペダルを踏み続ける。
+	OutputLine(NULL, "おばさんに負けて、たまるかよーっ！　渾身の力でペダルを踏み続ける。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//村人rvS19/00/villaB66005.「がんばれ、がんばれー！」
+	PlaySE(4, "ps3/s19/00/villab66005", 256, 64);
+	OutputLine(NULL, "「がんばれ、がんばれー！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rすれ違いに、思いがけずおばさんから声をかけられた。
+	OutputLine(NULL, "すれ違いに、思いがけずおばさんから声をかけられた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06260.「どっ、どうもっ！」
+	PlaySE(4, "ps3/s19/01/hr_kei06260", 256, 64);
+	OutputLine(NULL, "「どっ、どうもっ！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r思わず威勢のいい挨拶を返してしまう。
+	OutputLine(NULL, "思わず威勢のいい挨拶を返してしまう。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r歩きのおばさんと、俺の漕ぐ自転車のスピードがほぼ同じになって横に並ぶ。
+	OutputLine(NULL, "歩きのおばさんと、俺の漕ぐ自転車のスピードがほぼ同じになって横に並ぶ。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rおばさんは微笑ましげにゆったりと歩いていて、一方の俺は必死の形相でハンドルを握り、ペダルを踏みつけている。
+	OutputLine(NULL, "おばさんは微笑ましげにゆったりと歩いていて、一方の俺は必死の形相でハンドルを握り、ペダルを踏みつけている。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r返答するのに苦しい状況だが、やはり声援は嬉しい。
+	OutputLine(NULL, "返答するのに苦しい状況だが、やはり声援は嬉しい。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawScene("background/m_y4_01", 1000 );
+
+//r俺が坂を上りきった瞬間、
+	OutputLine(NULL, "俺が坂を上りきった瞬間、",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//村人rvS19/00/villaB66006.「おめでと～！」
+	PlaySE(4, "ps3/s19/00/villab66006", 256, 64);
+	OutputLine(NULL, "「おめでと～！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r振り返ると、おばさんは手を振っていた。……あの人、誰だっけ？
+	OutputLine(NULL, "振り返ると、おばさんは手を振っていた。……あの人、誰だっけ？",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06270.「どーもー！」
+	PlaySE(4, "ps3/s19/01/hr_kei06270", 256, 64);
+	OutputLine(NULL, "「どーもー！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r誰だか思い出せないまま、俺は手を振り返した。たぶん、この辺りの農家のおばさんには違いないが……。
+	OutputLine(NULL, "誰だか思い出せないまま、俺は手を振り返した。たぶん、この辺りの農家のおばさんには違いないが……。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺の記憶力が追いつかないのか、雛見沢の住人が人の顔を覚えるのが異様に早いのか、とにかく今日は見知らぬ人に挨拶されてばかりだ。
+	OutputLine(NULL, "俺の記憶力が追いつかないのか、雛見沢の住人が人の顔を覚えるのが異様に早いのか、とにかく今日は見知らぬ人に挨拶されてばかりだ。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r……だが、それは全く悪くない。むしろ俺は、いい気分だった。
+	OutputLine(NULL, "……だが、それは全く悪くない。むしろ俺は、いい気分だった。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r都会では味わうことのなかったフレンドリーな雰囲気に、俺の心はすっかり満たされている。
+	OutputLine(NULL, "都会では味わうことのなかったフレンドリーな雰囲気に、俺の心はすっかり満たされている。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r雛見沢って、いい村だよな……。何より村の人たちがあったかい。
+	OutputLine(NULL, "雛見沢って、いい村だよな……。何より村の人たちがあったかい。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rs255.デバッグ用選択肢r＜鬼Ａ＞あり、なしでテキスト相違。e
+	OutputLine(NULL, "s255.デバッグ用選択肢r＜鬼Ａ＞あり、なしでテキスト相違。e",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r……ふと、この村で起きたという、過去の事件のことを思い出した。
+	OutputLine(NULL, "……ふと、この村で起きたという、過去の事件のことを思い出した。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rダム建設現場で起きた、凄惨な殺人事件……。
+	OutputLine(NULL, "ダム建設現場で起きた、凄惨な殺人事件……。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rこんなにのどかな村で、本当に悲惨な事件など起こったのだろうか？
+	OutputLine(NULL, "こんなにのどかな村で、本当に悲惨な事件など起こったのだろうか？",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r……信じられない。
+	OutputLine(NULL, "……信じられない。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06280.「まぁ。昔は昔、今は今、だよな……」
+	PlaySE(4, "ps3/s19/01/hr_kei06280", 256, 64);
+	OutputLine(NULL, "「まぁ。昔は昔、今は今、だよな……」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺は自分に言い聞かせるように言うと、興宮の町へと自転車をひた走らせた。
+	OutputLine(NULL, "俺は自分に言い聞かせるように言うと、興宮の町へと自転車をひた走らせた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺はその心地よさをひとしきりかみ締めると、興宮の町へと自転車をひた走らせた。
+	OutputLine(NULL, "俺はその心地よさをひとしきりかみ締めると、興宮の町へと自転車をひた走らせた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawScene("black", 1000 );
+
+	DrawScene("background/mati2", 1000 );
+
+//rセブンスマートが見えてきた。
+	OutputLine(NULL, "セブンスマートが見えてきた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rさて、とりあえず何から探そうかな。
+	OutputLine(NULL, "さて、とりあえず何から探そうかな。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshotWithFiltering( 6, "2choices", "left", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 250, TRUE );
+	char OniChoice2[2];
+
+	if (GetGlobalFlag(GLanguage) == 1) {
+		OniChoice2[0] = "";
+		OniChoice2[1] = "";
+	} else {
+		OniChoice2[0] = " まずはラーメン。";
+		OniChoice2[1] = "…缶詰かな？";
+	}
+
+	Select( 2, OniChoice2 );
+	DisableWindow();
+	FadeBustshot( 6, FALSE, 0, 0, 0, 0, 200, TRUE );
+	if (LoadValueFromLocalWork( SelectResult ) == 0) {
+		SetGlobalFlag(GConsoleChoice, 0);
+	} else {
+		SetGlobalFlag(GConsoleChoice, 1);
+	}
+}

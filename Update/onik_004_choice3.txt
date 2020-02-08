@@ -1,0 +1,603 @@
+void main()
+{
+	DrawScene("black", 1000 );
+
+	DrawScene("background/tennai1", 1000 );
+
+	PlayBGM(2, "hm01_04", 128, 0);
+
+//rセブンスマートは市内にある、酒類食料品の安売量販店だ。ちょっと遠いが、まとめ買いをするなら商店街の店よりも安く、品目も多い。
+	OutputLine(NULL, "セブンスマートは市内にある、酒類食料品の安売量販店だ。ちょっと遠いが、まとめ買いをするなら商店街の店よりも安く、品目も多い。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r店内には所狭しと商品が並べられ、それらを物色する人で賑わっている。幸い、ラーメンコーナーにはそんなに人気はなかった。
+	OutputLine(NULL, "店内には所狭しと商品が並べられ、それらを物色する人で賑わっている。幸い、ラーメンコーナーにはそんなに人気はなかった。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺は誰に邪魔されることなく、入念に陳列棚をたしかめる。棚には、小躍りしたくなるほど様々な種類のカップめんが並んでいた。
+	OutputLine(NULL, "俺は誰に邪魔されることなく、入念に陳列棚をたしかめる。棚には、小躍りしたくなるほど様々な種類のカップめんが並んでいた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r北海道バター風味の純情味噌味、讃岐うどん太郎、喜多方しょうゆ味……。バラエティ豊かに、色とりどりのカップめんをどっさりとカートに載せたいところだが、まとめ買いするよう言われている。
+	OutputLine(NULL, "北海道バター風味の純情味噌味、讃岐うどん太郎、喜多方しょうゆ味……。バラエティ豊かに、色とりどりのカップめんをどっさりとカートに載せたいところだが、まとめ買いするよう言われている。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r自転車で来ている以上、選べるのはダンボールに入った一種類だけ。ここでのカップめんセレクトは、必然的に切実さが増す。陳列棚の隅々までを凝視した結果、俺は一つのカップめんに決めた。
+	OutputLine(NULL, "自転車で来ている以上、選べるのはダンボールに入った一種類だけ。ここでのカップめんセレクトは、必然的に切実さが増す。陳列棚の隅々までを凝視した結果、俺は一つのカップめんに決めた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06580.「仕方ない、これにするか……」
+	PlaySE(4, "ps3/s19/01/hr_kei06580", 256, 64);
+	OutputLine(NULL, "「仕方ない、これにするか……」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rそう言いながら選び出したのは……特大カップ豚骨ショウガ味！
+	OutputLine(NULL, "そう言いながら選び出したのは……特大カップ豚骨ショウガ味！",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r豚骨はうまい！　そして大盛りだが大味ではない！　一種類しか選べないという時点で、初めから実は、他の味などという選択肢はなかったのだ！
+	OutputLine(NULL, "豚骨はうまい！　そして大盛りだが大味ではない！　一種類しか選べないという時点で、初めから実は、他の味などという選択肢はなかったのだ！",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rそのダンボールを抱えてレジに向かおうとして、俺は足を止めた。
+	OutputLine(NULL, "そのダンボールを抱えてレジに向かおうとして、俺は足を止めた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r…………！？
+	OutputLine(NULL, "…………！？",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rざわざわと、胸騒ぎ。背後に、気配を感じる。
+	OutputLine(NULL, "ざわざわと、胸騒ぎ。背後に、気配を感じる。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r奇妙な不安が湧き起こって、思わず振り返ると、そこに立っていたのは――。
+	OutputLine(NULL, "奇妙な不安が湧き起こって、思わず振り返ると、そこに立っていたのは——。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/re2b_warai_b1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+	DrawBustshot( 3, "sprite/normal/me2_tokui_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//レナrvS19/02/660200081.「圭一く～ん♪」
+	PlaySE(4, "ps3/s19/02/660200081", 256, 64);
+	OutputLine(NULL, "「圭一く～ん♪」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//魅音rvS19/03/660300079.「やっと気づいたよ～。kvS19/03/660300080.鈍感だなぁ、圭ちゃんは！」
+	PlaySE(4, "ps3/s19/03/660300079", 256, 64);
+	OutputLine(NULL, "「やっと気づいたよ～。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300080", 256, 64);
+	OutputLine(NULL, "鈍感だなぁ、圭ちゃんは！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06590.「……なんだ、魅音とレナかよ」
+	PlaySE(4, "ps3/s19/01/hr_kei06590", 256, 64);
+	OutputLine(NULL, "「……なんだ、魅音とレナかよ」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺は密かに安堵した。自覚以上の不安を感じていたようだ……。一体、何にビビッていたのだろう！？
+	OutputLine(NULL, "俺は密かに安堵した。自覚以上の不安を感じていたようだ……。一体、何にビビッていたのだろう！？",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/re2a_def_a1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//レナrvS19/02/660200082.「驚いたかな？kvS19/02/660200083.　いつ気づいてくれるかなって思ってたんだけどな！」
+	PlaySE(4, "ps3/s19/02/660200082", 256, 64);
+	OutputLine(NULL, "「驚いたかな？",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/02/660200083", 256, 64);
+	OutputLine(NULL, "　いつ気づいてくれるかなって思ってたんだけどな！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06600.「そんな内気なことしてないで声くらいかけろよ、まったく」
+	PlaySE(4, "ps3/s19/01/hr_kei06600", 256, 64);
+	OutputLine(NULL, "「そんな内気なことしてないで声くらいかけろよ、まったく」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/re2a_warai_a1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+	DrawBustshot( 3, "sprite/normal/me2_warai_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//rレナと魅音は顔を見合わせてニヤニヤと笑う。
+	OutputLine(NULL, "レナと魅音は顔を見合わせてニヤニヤと笑う。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rどうやらこの二人、ずっと前から俺を尾けていたらしい。なんてたちの悪い……。どうせなら、ちゃんと驚かしてくれよ！
+	OutputLine(NULL, "どうやらこの二人、ずっと前から俺を尾けていたらしい。なんてたちの悪い……。どうせなら、ちゃんと驚かしてくれよ！",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/re2b_nande_b1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//レナrvS19/02/660200084.「……あ、圭一くん、カップめんは体にあんまり良くないと思うな」
+	PlaySE(4, "ps3/s19/02/660200084", 256, 64);
+	OutputLine(NULL, "「……あ、圭一くん、カップめんは体にあんまり良くないと思うな」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06610.「大きなお世話だ」
+	PlaySE(4, "ps3/s19/01/hr_kei06610", 256, 64);
+	OutputLine(NULL, "「大きなお世話だ」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/me2_akuwarai_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//魅音rvS19/03/660300081.「しかも、いいの？kvS19/03/660300082.　トンコツショウガ味って、書いてあるよ？」
+	PlaySE(4, "ps3/s19/03/660300081", 256, 64);
+	OutputLine(NULL, "「しかも、いいの？",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300082", 256, 64);
+	OutputLine(NULL, "　トンコツショウガ味って、書いてあるよ？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺のカップめんセレクトに間違いは無い！　言うんだ！　レナに言い聞かせてやれ！
+	OutputLine(NULL, "俺のカップめんセレクトに間違いは無い！　言うんだ！　レナに言い聞かせてやれ！",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺は息をすーっと吸い込むと、一気に胸の内に秘めた熱い思いをぶちまける！
+	OutputLine(NULL, "俺は息をすーっと吸い込むと、一気に胸の内に秘めた熱い思いをぶちまける！",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06620.「特大カップ豚骨ショウガ味を見損なうんじゃないっ！」
+	PlaySE(4, "ps3/s19/01/hr_kei06620", 256, 64);
+	OutputLine(NULL, "「特大カップ豚骨ショウガ味を見損なうんじゃないっ！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06630.「このボリューム、この潔いカップの形！　豚骨の濃厚な旨みはもはやカップめんの粋を脱し、舌の肥えたラーメン職人たちをも満足させるに違いない重厚さ！」
+	PlaySE(4, "ps3/s19/01/hr_kei06630", 256, 64);
+	OutputLine(NULL, "「このボリューム、この潔いカップの形！　豚骨の濃厚な旨みはもはやカップめんの粋を脱し、舌の肥えたラーメン職人たちをも満足させるに違いない重厚さ！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06640.「大盛りだが決して大味ではないのに、この人生を達観したかのようなこの価格！　びっくりロープライス！　これを置いて他に、どんなカップラーメンを食べろというのだ？！」
+	PlaySE(4, "ps3/s19/01/hr_kei06640", 256, 64);
+	OutputLine(NULL, "「大盛りだが決して大味ではないのに、この人生を達観したかのようなこの価格！　びっくりロープライス！　これを置いて他に、どんなカップラーメンを食べろというのだ？！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/me2_yowaki_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+	DrawBustshot( 5, "sprite/normal/re2b_komaru_b2_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//レナ＆魅音ro75.vS19/02/HR_REN00000|S19/03/HR_MIO00000.「…………？」
+	PlaySE(4, "ps3/s19/02/hr_ren00000", 256, 64);
+	PlaySE(5, "ps3/s19/03/hr_mio00000", 256, 64);
+	OutputLine(NULL, "「…………？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r二人はぽかーんと俺を見つめている。奇怪なものを見る目つきに、いたたまれない気持ちになる。
+	OutputLine(NULL, "二人はぽかーんと俺を見つめている。奇怪なものを見る目つきに、いたたまれない気持ちになる。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06650.「と、とにかく、これがおいしいんだよ」
+	PlaySE(4, "ps3/s19/01/hr_kei06650", 256, 64);
+	OutputLine(NULL, "「と、とにかく、これがおいしいんだよ」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r二人を放置して、俺はレジへと急ぐ。
+	OutputLine(NULL, "二人を放置して、俺はレジへと急ぐ。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/re2b_hau_b1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//レナrvS19/02/660200085.「はっ、はぅ……。kvS19/02/660200086.圭一くん、他の食べ物は買わなくていいのかな？　かな？」
+	PlaySE(4, "ps3/s19/02/660200085", 256, 64);
+	OutputLine(NULL, "「はっ、はぅ……。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/02/660200086", 256, 64);
+	OutputLine(NULL, "圭一くん、他の食べ物は買わなくていいのかな？　かな？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06660.「大きなお世話だよ……！」
+	PlaySE(4, "ps3/s19/01/hr_kei06660", 256, 64);
+	OutputLine(NULL, "「大きなお世話だよ……！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rそう言いかけて、俺は缶詰も頼まれていたことを思い出した。ナイス、レナ！
+	OutputLine(NULL, "そう言いかけて、俺は缶詰も頼まれていたことを思い出した。ナイス、レナ！",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06670.「二人ともお使いか？」
+	PlaySE(4, "ps3/s19/01/hr_kei06670", 256, 64);
+	OutputLine(NULL, "「二人ともお使いか？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/me2_def_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//魅音rvS19/03/660300084.「私は付き添い。kvS19/03/660300085.ついでに、なんか面白い新作のお菓子ないかな～、ってね」
+	PlaySE(4, "ps3/s19/03/660300084", 256, 64);
+	OutputLine(NULL, "「私は付き添い。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300085", 256, 64);
+	OutputLine(NULL, "ついでに、なんか面白い新作のお菓子ないかな～、ってね」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rなるほど、さすがは駄菓子クイーン。
+	OutputLine(NULL, "なるほど、さすがは駄菓子クイーン。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/me2_odoroki_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//魅音rvS19/03/660300086.「むっ？kvS19/03/660300087.　勝手に変な称号付けないでよ～！」
+	PlaySE(4, "ps3/s19/03/660300086", 256, 64);
+	OutputLine(NULL, "「むっ？",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300087", 256, 64);
+	OutputLine(NULL, "　勝手に変な称号付けないでよ～！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06680.「いいじゃないか。kvS19/01/HR_KEI06690.だいたい……、？」
+	PlaySE(4, "ps3/s19/01/hr_kei06680", 256, 64);
+	OutputLine(NULL, "「いいじゃないか。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/01/hr_kei06690", 256, 64);
+	OutputLine(NULL, "だいたい……、？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	FadeBustshot(3, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+	FadeBustshot(5, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+	DrawBustshot( 4, "sprite/normal/na2_kanashii_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 19, 200, TRUE );
+
+//rそこで俺は、きょとんと魅音を見て立ち止まっている女の子と目が合った。それに気づいた魅音も、顔を振り向けてその子を見る。
+	OutputLine(NULL, "そこで俺は、きょとんと魅音を見て立ち止まっている女の子と目が合った。それに気づいた魅音も、顔を振り向けてその子を見る。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 4, "sprite/normal/na2_yorokobi_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 19, 200, TRUE );
+
+//女の子rvS19/36/662900001.「あ、やっぱり魅音ちゃんだ。kvS19/36/662900002.こんにちは～」
+	PlaySE(4, "ps3/s19/36/662900001", 256, 64);
+	OutputLine(NULL, "「あ、やっぱり魅音ちゃんだ。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/36/662900002", 256, 64);
+	OutputLine(NULL, "こんにちは～」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	FadeBustshot(4, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+	DrawBustshot( 5, "sprite/normal/na2_yorokobi_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+	DrawBustshot( 3, "sprite/normal/me2_warai_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//魅音rvS19/03/660300088.「……あれ～？kvS19/03/660300089.　夏美ちゃんじゃない、久しぶりー！」
+	PlaySE(4, "ps3/s19/03/660300088", 256, 64);
+	OutputLine(NULL, "「……あれ～？",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300089", 256, 64);
+	OutputLine(NULL, "　夏美ちゃんじゃない、久しぶりー！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/me2_def_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//魅音rvS19/03/660300090.「どうしたの、戻ってきたの？」
+	PlaySE(4, "ps3/s19/03/660300090", 256, 64);
+	OutputLine(NULL, "「どうしたの、戻ってきたの？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/na2_def_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//夏美rvS19/36/662900003.「ううん。kvS19/36/662900004.今日はそーりつ記念日だから、久々に里帰りしたいっておばーちゃんが、ね。kvS19/36/662900005.今日の夜帰る予定なの」
+	PlaySE(4, "ps3/s19/36/662900003", 256, 64);
+	OutputLine(NULL, "「ううん。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/36/662900004", 256, 64);
+	OutputLine(NULL, "今日はそーりつ記念日だから、久々に里帰りしたいっておばーちゃんが、ね。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/36/662900005", 256, 64);
+	OutputLine(NULL, "今日の夜帰る予定なの」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/me2_wink_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//魅音rvS19/03/660300091.「そうなんだ～。kvS19/03/660300092.まぁ、土日だとここに来る高速道路、結構混むしね！kvS19/03/660300093.　あ――」
+	PlaySE(4, "ps3/s19/03/660300091", 256, 64);
+	OutputLine(NULL, "「そうなんだ～。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300092", 256, 64);
+	OutputLine(NULL, "まぁ、土日だとここに来る高速道路、結構混むしね！",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300093", 256, 64);
+	OutputLine(NULL, "　あ——」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	FadeBustshot(3, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+	FadeBustshot(5, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+	DrawBustshot( 5, "sprite/normal/na2_def_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+	DrawBustshot( 4, "sprite/normal/me2_wink_a1_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 19, 200, TRUE );
+
+	DrawBustshot( 3, "sprite/normal/re2b_nande_b1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//rそこで魅音は、俺とレナがきょとん、と二人の顔を見比べていることに気がついた。
+	OutputLine(NULL, "そこで魅音は、俺とレナがきょとん、と二人の顔を見比べていることに気がついた。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 4, "sprite/normal/me2_def_a1_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 19, 200, TRUE );
+
+//魅音rvS19/03/660300094.「ごめんごめん、紹介が遅れたね！kvS19/03/660300095.　この子はbきみよしなつみ.<公由夏美>ちゃん。kvS19/03/660300096.村長さんの親戚で、去年まで興宮に住んでいたんだよ」
+	PlaySE(4, "ps3/s19/03/660300094", 256, 64);
+	OutputLine(NULL, "「ごめんごめん、紹介が遅れたね！",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300095", 256, 64);
+	OutputLine(NULL, "　この子は公由夏美(きみよしなつみ)ちゃん。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300096", 256, 64);
+	OutputLine(NULL, "村長さんの親戚で、去年まで興宮に住んでいたんだよ」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/re2b_def_b1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//レナrvS19/02/660200087.「……そうなの？kvS19/02/660200088.　じゃ、レナと入れ違いだったんだね」
+	PlaySE(4, "ps3/s19/02/660200087", 256, 64);
+	OutputLine(NULL, "「……そうなの？",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/02/660200088", 256, 64);
+	OutputLine(NULL, "　じゃ、レナと入れ違いだったんだね」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/na2_tanoshii_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//夏美rvS19/36/662900006.「こんにちはー。kvS19/36/662900007.でも私は興宮の学校だったから、魅音ちゃんしか知らないんだけどね」
+	PlaySE(4, "ps3/s19/36/662900006", 256, 64);
+	OutputLine(NULL, "「こんにちはー。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/36/662900007", 256, 64);
+	OutputLine(NULL, "でも私は興宮の学校だったから、魅音ちゃんしか知らないんだけどね」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06700.「おう。こっちこそよろしくなー」
+	PlaySE(4, "ps3/s19/01/hr_kei06700", 256, 64);
+	OutputLine(NULL, "「おう。こっちこそよろしくなー」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r俺たちは気さくに話しながら、お互いに自己紹介しあう。学年は……俺やレナと同じかな。
+	OutputLine(NULL, "俺たちは気さくに話しながら、お互いに自己紹介しあう。学年は……俺やレナと同じかな。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/na2_yorokobi_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//夏美rvS19/36/662900008.「じゃ、またね。kvS19/36/662900009.もう行かなくっちゃ」
+	PlaySE(4, "ps3/s19/36/662900008", 256, 64);
+	OutputLine(NULL, "「じゃ、またね。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/36/662900009", 256, 64);
+	OutputLine(NULL, "もう行かなくっちゃ」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 4, "sprite/normal/me2_wink_a1_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 19, 200, TRUE );
+
+//魅音rvS19/03/660300097.「うん、それじゃ！kvS19/03/660300098.　お祭りには帰ってくるの？」
+	PlaySE(4, "ps3/s19/03/660300097", 256, 64);
+	OutputLine(NULL, "「うん、それじゃ！",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300098", 256, 64);
+	OutputLine(NULL, "　お祭りには帰ってくるの？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/na2_def_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//夏美rvS19/36/662900010.「たぶんね。kvS19/36/662900011.おばーちゃん、すごく楽しみにしてるみたいだから」
+	PlaySE(4, "ps3/s19/36/662900010", 256, 64);
+	OutputLine(NULL, "「たぶんね。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/36/662900011", 256, 64);
+	OutputLine(NULL, "おばーちゃん、すごく楽しみにしてるみたいだから」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	FadeBustshot(5, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+//rそう言って夏美ちゃんは、明るくにこにこと手を振りながら店を出ていった。
+	OutputLine(NULL, "そう言って夏美ちゃんは、明るくにこにこと手を振りながら店を出ていった。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 4, "sprite/normal/me2_def_a1_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 19, 200, TRUE );
+
+//魅音rvS19/03/660300099.「あ、私、新発売のお菓子チェックしてくるね～」
+	PlaySE(4, "ps3/s19/03/660300099", 256, 64);
+	OutputLine(NULL, "「あ、私、新発売のお菓子チェックしてくるね～」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	FadeBustshot(4, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+//rお菓子売り場へふらりと歩いていく魅音。
+	OutputLine(NULL, "お菓子売り場へふらりと歩いていく魅音。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06710.「レナは、なに買いにきたんだ？」
+	PlaySE(4, "ps3/s19/01/hr_kei06710", 256, 64);
+	OutputLine(NULL, "「レナは、なに買いにきたんだ？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/re2b_warai_b1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//レナrvS19/02/660200089.「台所用洗剤と床クリーナーとお風呂のせっけんと洗濯石鹸と、お水のペットボトル。kvS19/02/660200090.あとみりんとお醤油とか……」
+	PlaySE(4, "ps3/s19/02/660200089", 256, 64);
+	OutputLine(NULL, "「台所用洗剤と床クリーナーとお風呂のせっけんと洗濯石鹸と、お水のペットボトル。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/02/660200090", 256, 64);
+	OutputLine(NULL, "あとみりんとお醤油とか……」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rおいおい、買いすぎじゃないのか……？　一人でそんなに持って帰るつもりなのか？！
+	OutputLine(NULL, "おいおい、買いすぎじゃないのか……？　一人でそんなに持って帰るつもりなのか？！",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rそうこうしているうちに、魅音がこれまたかごいっぱいのお菓子を抱えてレジへ並んでゆく。……さすが、雛見沢住民の物欲をがっちりつかんで放さない、恐るべき量販店・セブンスマート！
+	OutputLine(NULL, "そうこうしているうちに、魅音がこれまたかごいっぱいのお菓子を抱えてレジへ並んでゆく。……さすが、雛見沢住民の物欲をがっちりつかんで放さない、恐るべき量販店・セブンスマート！",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r無事にレジを通過し、俺たちは買い物を終了した。
+	OutputLine(NULL, "無事にレジを通過し、俺たちは買い物を終了した。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	FadeBustshot(3, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+	DrawScene("black", 1000 );
+
+	DrawScene("background/mati2", 1000 );
+
+	DrawBustshot( 4, "sprite/normal/re2b_komaru_b2_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 19, 200, TRUE );
+
+//レナrvS19/02/660200091.「うぅ～ん。kvS19/02/660200092.買いすぎちゃったかな？　かな？」
+	PlaySE(4, "ps3/s19/02/660200091", 256, 64);
+	OutputLine(NULL, "「うぅ～ん。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/02/660200092", 256, 64);
+	OutputLine(NULL, "買いすぎちゃったかな？　かな？」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r案の定、レナの大荷物は自転車のかごに乗り切る量ではなかった。
+	OutputLine(NULL, "案の定、レナの大荷物は自転車のかごに乗り切る量ではなかった。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06720.「……ったく。kvS19/01/HR_KEI06730.半分持ってやるよ、俺のかごに入れていーぞ。kvS19/01/HR_KEI06740.家まで運んでやるよ」
+	PlaySE(4, "ps3/s19/01/hr_kei06720", 256, 64);
+	OutputLine(NULL, "「……ったく。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/01/hr_kei06730", 256, 64);
+	OutputLine(NULL, "半分持ってやるよ、俺のかごに入れていーぞ。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/01/hr_kei06740", 256, 64);
+	OutputLine(NULL, "家まで運んでやるよ」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 4, "sprite/normal/re2b_hau_b1_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 19, 200, TRUE );
+
+//レナrvS19/02/660200093.「はぅ～。kvS19/02/660200094.圭一くん、ありがとう～！」
+	PlaySE(4, "ps3/s19/02/660200093", 256, 64);
+	OutputLine(NULL, "「はぅ～。",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/02/660200094", 256, 64);
+	OutputLine(NULL, "圭一くん、ありがとう～！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rレナがぽわーっと赤くなる。
+	OutputLine(NULL, "レナがぽわーっと赤くなる。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	FadeBustshot(4, FALSE, 0, 0, 0, 0, 200, TRUE);
+
+	DrawBustshot( 3, "sprite/normal/re2b_hau_b1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+	DrawBustshot( 5, "sprite/normal/me2_wink_a1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//魅音rvS19/03/660300100.「圭ちゃん、私のも入れて～～！」
+	PlaySE(4, "ps3/s19/03/660300100", 256, 64);
+	OutputLine(NULL, "「圭ちゃん、私のも入れて～～！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//圭一rvS19/01/HR_KEI06750.「もう載らないよ！kvS19/01/HR_KEI06760.　菓子なら俺が今、ここで食ってやる！」
+	PlaySE(4, "ps3/s19/01/hr_kei06750", 256, 64);
+	OutputLine(NULL, "「もう載らないよ！",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/01/hr_kei06760", 256, 64);
+	OutputLine(NULL, "　菓子なら俺が今、ここで食ってやる！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/me2_tohoho_a1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//魅音rvS19/03/660300101.「む～！kvS19/03/660300102.　圭ちゃんに食べられるくらいなら、意地でも持って帰るよ！」
+	PlaySE(4, "ps3/s19/03/660300101", 256, 64);
+	OutputLine(NULL, "「む～！",
+			NULL, "", Line_WaitForInput); 
+	PlaySE(4, "ps3/s19/03/660300102", 256, 64);
+	OutputLine(NULL, "　圭ちゃんに食べられるくらいなら、意地でも持って帰るよ！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 3, "sprite/normal/re2b_warai_b1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//r自転車のかごに、ぎゅうぎゅうにお菓子をつめる魅音を見ながら、俺とレナは顔を見合わせて笑いあう。
+	OutputLine(NULL, "自転車のかごに、ぎゅうぎゅうにお菓子をつめる魅音を見ながら、俺とレナは顔を見合わせて笑いあう。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+	DrawBustshot( 5, "sprite/normal/me2_warai_a1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 18, 200, TRUE );
+
+//魅音rvS19/03/660300103.「ほら、載った！」
+	PlaySE(4, "ps3/s19/03/660300103", 256, 64);
+	OutputLine(NULL, "「ほら、載った！」",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//r不安定ながらもなんとかかごにうずたかく積まれたお菓子の山に、俺たちは歓声をあげる。
+	OutputLine(NULL, "不安定ながらもなんとかかごにうずたかく積まれたお菓子の山に、俺たちは歓声をあげる。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+
+//rこうして俺は、レナの家までかごいっぱいの荷物を運んでやったのだった。
+	OutputLine(NULL, "こうして俺は、レナの家までかごいっぱいの荷物を運んでやったのだった。",
+			NULL, "", Line_Normal); 
+	ClearMessage();
+}
