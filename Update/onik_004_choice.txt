@@ -3,13 +3,16 @@ void main()
 	DrawScene("background/gk1", 1000 );
 
 //r今日の授業はこれで終了だ。
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "今日の授業はこれで終了だ。",
-			NULL, "", Line_Normal); 
+			NULL, "", Line_Normal);
 	ClearMessage();
 
 //rさて…このあとどうしようかな。
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "さて…このあとどうしようかな。",
-			NULL, "", Line_Normal); 
+			NULL, "", Line_Normal);
 	ClearMessage();
 
 	DrawBustshotWithFiltering( 6, "2choices", "left", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 25, 250, TRUE );
