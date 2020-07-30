@@ -242,9 +242,9 @@ void main()
 //「ＸＸが死体（右腕）を沼に捨てに行くと言っていたらしいのです＠実際、沼の近くにＸＸの乗用車が乗り捨ててあったのですが、その後の足取りはまったくわかりません。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「ＸＸが死体（右腕）を沼に捨てに行くと言っていたらしいのです。",
-		   NULL, "\"It appears that XX had said he was going to throw the body (right arm) into the marsh.", Line_WaitForInput);
+		   NULL, "\"It appears that XX had said he was going to throw the body (right arm) into the swamp.", Line_WaitForInput);
 	OutputLine(NULL, "実際、沼の近くにＸＸの乗用車が乗り捨ててあったのですが、その後の足取りはまったくわかりません。」",
-		   NULL, " XX's car was discovered abandoned near the marsh, but there were no clues to his whereabouts.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " XX's car was discovered abandoned near the swamp, but there were no clues to his whereabouts.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -270,15 +270,15 @@ void main()
 		   NULL, " Since he has no car, one would expect him to have a limited area to which he could have escaped to. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "署内では、死体を捨てる時に誤って自分も沼に溺れてしまったのではないかと囁かれています…。」",
-		   NULL, "But within the station there were rumors going around that he had accidentally slipped and drowned in the marsh when he went to throw away the body.\"", Line_Normal);
+		   NULL, "But within the station there were rumors going around that he had accidentally slipped and drowned in the swamp when he went to throw away the body.\"", Line_Normal);
 	ClearMessage();
 
 //　この沼、地元では底なし沼と恐れられ＠その名を鬼ヶ淵と言い、沼の底の底は地獄の鬼の国につながっているのだという＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　この沼、地元では底なし沼と恐れられ、",
-		   NULL, "To the locals, that marsh is believed to be bottomless.", Line_WaitForInput);
+		   NULL, "To the locals, that swamp is believed to be bottomless.", Line_WaitForInput);
 	OutputLine(NULL, "その名を鬼ヶ淵と言い、沼の底の底は地獄の鬼の国につながっているのだという。",
-		   NULL, " It's known as Onigafuchi, the Ogre's Abyss, and it's said that the bottom of the marsh is connected to the hellish world of demons.", GetGlobalFlag(GLinemodeSp));
+		   NULL, " It's known as Onigafuchi, the Demonic Abyss, and it's said that the bottom of the swamp is connected to the hellish world of demons.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -288,7 +288,7 @@ void main()
 	OutputLine(NULL, "　まさに地獄の鬼とも言える残虐非道のＸＸ。",
 		   NULL, "The atrocious demon from hell that was XX.", Line_WaitForInput);
 	OutputLine(NULL, "まさか沼から元の地獄へ帰ったのでは…？",
-		   NULL, " Could it be that he had returned to hell through the marsh...?", Line_Normal);
+		   NULL, " Could it be that he had returned to hell through the swamp...?", Line_Normal);
 	ClearMessage();
 
 	PlaySE( 4, "wa_029", 56, 64 );
