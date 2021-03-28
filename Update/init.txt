@@ -3,8 +3,8 @@ void main()
 	// Max Number for Global Flags hotkey
 	SetGlobalFlag(GCensorMaxNum , 5);
 	SetGlobalFlag(GEffectExtendMaxNum , 0);
-	SetGlobalFlag(GAltBGMflowMaxNum , 0);
-	SetGlobalFlag(GAltSEflowMaxNum , 0);
+	SetGlobalFlag(GAltBGMflowMaxNum , 1);
+	SetGlobalFlag(GAltSEflowMaxNum , 1);
 
 	// restore default ADV-MODE setting
 	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 0) {
@@ -129,6 +129,53 @@ void main()
 	ModAddArtset("Console", "ゲーム機", "CG");
 	ModAddArtset("Remake", "リメーク", "CGAlt:CG");
 	ModAddArtset("Original", "オリジナル", "OGBackgrounds:OGSprites:CG");
+
+	// GAltBGM controls which of these are selected
+	ModAddBGMset("New BGM", "Placeholder", "BGM");
+	ModAddBGMset("Original BGM", "Placeholder", "OGBGM:BGM");
+	ModAddBGMset("Italo BGM", "Placeholder", "ItaloBGM:OGBGM:BGM");
+
+	// GAltSE controls which of these are selected
+	ModAddSEset("New SE", "Placeholder", "SE");
+	ModAddSEset("Original SE", "Placeholder", "OGSE:SE");
+
+	// Audio presets the user can select, consisting of a combination of the BGM and SE flags
+	ModAddAudioset(
+		"New BGM/SE",
+		"Use the new BGM/SE introduced by MangaGamer in the April 2019 update, played with the Console timings.",
+		"JP: New BGM/SE",
+		"JP: Use the new BGM/SE introduced by MangaGamer in the April 2019 update, played with the Console timings.",
+		0, // GAltBGM
+		0, // GAltBGMFlow
+		0, // GAltSE
+		0  // GAltSEFlow
+	);
+
+	ModAddAudioset(
+		"Original BGM/SE",
+		"Use the original BGM/SE from the Japanese version of the game, with the original game's timings. This option was previously known as 'BGM/SE fix'.
+
+		Note that this not only changes which audio files are played, but also when BGM starts to play/stops playing, in certain cases.",
+		"JP: Original BGM/SE",
+		"JP: Use the original BGM/SE from the Japanese version of the game, with the original game's timings. This option was previously known as 'BGM/SE fix'.
+
+		Note that this not only changes which audio files are played, but also when BGM starts to play/stops playing, in certain cases.",
+		1, // GAltBGM
+		1, // GAltBGMFlow
+		1, // GAltSE
+		1  // GAltSEFlow
+	);
+
+	ModAddAudioset(
+		"OST Remake",
+		"Handmade remakes of several music tracks from the original release (pre-2019), using the Console timings",
+		"JP: OST Remake",
+		"JP: Handmade remakes of several music tracks from the original release (pre-2019), using the Console timings",
+		2, // GAltBGM
+		0, // GAltBGMFlow
+		0, // GAltSE
+		0  // GAltSEFlow
+	);
 
 	CallScript( "flow" );
 }
