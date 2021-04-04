@@ -133,7 +133,6 @@ void main()
 	// GAltBGM controls which of these are selected
 	ModAddBGMset("New BGM", "Placeholder", "BGM");
 	ModAddBGMset("Original BGM", "Placeholder", "OGBGM:BGM");
-	ModAddBGMset("Italo BGM", "Placeholder", "ItaloBGM:OGBGM:BGM");
 
 	// GAltSE controls which of these are selected
 	ModAddSEset("New SE", "Placeholder", "SE");
@@ -164,17 +163,6 @@ void main()
 		1, // GAltBGMFlow
 		1, // GAltSE
 		1  // GAltSEFlow
-	);
-
-	ModAddAudioset(
-		"OST Remake",
-		"Handmade remakes of several music tracks from the original release (pre-2019), using the Console timings",
-		"JP: OST Remake",
-		"JP: Handmade remakes of several music tracks from the original release (pre-2019), using the Console timings",
-		2, // GAltBGM
-		0, // GAltBGMFlow
-		0, // GAltSE
-		0  // GAltSEFlow
 	);
 
 	CallScript( "flow" );
