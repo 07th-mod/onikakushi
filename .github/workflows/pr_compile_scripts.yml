@@ -1,0 +1,51 @@
+name: Generate Compiled Scripts Pull Request
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  windows_build:
+    name: Windows Build
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      # Setup python (Windows VM is Python 3.7 by default, we need at least Python 3.8)
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Run Release Script
+        id: run_release
+        env:
+          EXTRACT_KEY: ${{ secrets.EXTRACT_KEY }}
+        run: |
+          curl -OJ https://raw.githubusercontent.com/07th-mod/higurashi_release/master/deploy_higurashi/deploy_higurashi.py
+          python deploy_higurashi.py ${{ github.event.repository.name }}
+          rm deploy_higurashi.py
+
+      # Publish a release
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/') # only publish tagged commits
+        with:
+          files: |
+            output/*.zip
+          draft: true
+          name: ${{ steps.run_release.outputs.release_name }} # This output is set in the 'deploy_higurashi.py' script above
+          body: |
+            > [PUT INSTALL REQUIREMENTS HERE]. We recommend using [our installer](https://github.com/07th-mod/python-patcher/releases/latest).
+
+            [PUT GENERAL DESCRIPTION HERE]
+
+            # Changelog
+
+            - [PUT CHANGELOG ITEMS HERE]
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
