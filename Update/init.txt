@@ -132,18 +132,18 @@ void main()
 
 	// GAltBGM controls which of these are selected
 	ModAddBGMset("New BGM", "Placeholder", "BGM");
-	ModAddBGMset("Original BGM", "Placeholder", "OGBGM:BGM");
+	ModAddBGMset("GIN's BGM", "Placeholder", "OGBGM:BGM");
 
 	// GAltSE controls which of these are selected
 	ModAddSEset("New SE", "Placeholder", "SE");
-	ModAddSEset("Original SE", "Placeholder", "OGSE:SE");
+	ModAddSEset("GIN's SE", "Placeholder", "OGSE:SE");
 
 	// Audio presets the user can select, consisting of a combination of the BGM and SE flags
 	ModAddAudioset(
 		"New BGM/SE",
-		"Use the new BGM/SE introduced by MangaGamer in the April 2019 update, played with the Console timings.",
+		"Use the new Background Music (BGM) and Sound Effects (SE) introduced by MangaGamer in the April 2019 update, played with the Console timings.",
 		"JP: New BGM/SE",
-		"JP: Use the new BGM/SE introduced by MangaGamer in the April 2019 update, played with the Console timings.",
+		"JP: Use the new Background Music (BGM) and Sound Effects (SE) introduced by MangaGamer in the April 2019 update, played with the Console timings.",
 		0, // GAltBGM
 		0, // GAltBGMFlow
 		0, // GAltSE
@@ -151,14 +151,18 @@ void main()
 	);
 
 	ModAddAudioset(
-		"Original BGM/SE",
-		"Use the original BGM/SE from the Japanese version of the game, with the original game's timings. This option was previously known as 'BGM/SE fix'.
+		"GIN's BGM/SE",
+		"This option uses GIN's Background Music (BGM) and Sound Effects (SE), which bring the BGM/SE closer (but definitely NOT identical to) the original Japanese release and/or Pre April Update.
 
-		Note that this not only changes which audio files are played, but also when BGM starts to play/stops playing, in certain cases.",
-		"JP: Original BGM/SE",
-		"JP: Use the original BGM/SE from the Japanese version of the game, with the original game's timings. This option was previously known as 'BGM/SE fix'.
+		Please click on the 'Open BGM/SE FAQ' button to view the 07th-mod wiki for more details.
 
-		Note that this not only changes which audio files are played, but also when BGM starts to play/stops playing, in certain cases.",
+		This option was previously known as 'Original BGM/SE' or 'BGM/SE fix'.",
+		"JP: GIN's BGM/SE",
+		"JP: This option uses GIN's Background Music (BGM) and Sound Effects (SE), which bring the BGM/SE closer (but definitely NOT identical to) the original Japanese release and/or Pre April Update.
+
+		Please click on the 'Open BGM/SE FAQ' button to view the 07th-mod wiki for more details.
+
+		This option was previously known as 'Original BGM/SE' or 'BGM/SE fix'.",
 		1, // GAltBGM
 		1, // GAltBGMFlow
 		1, // GAltSE
