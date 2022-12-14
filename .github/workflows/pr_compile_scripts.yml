@@ -24,7 +24,7 @@ jobs:
       - name: Run Release Script
         id: run_release
         env:
-          EXTRACT_KEY: ${{ secrets.EXTRACT_KEY }}
+          HIGURASHI_BASE_EXTRACT_KEY: ${{ secrets.HIGURASHI_BASE_EXTRACT_KEY }}
         run: |
           curl -OJ https://raw.githubusercontent.com/07th-mod/higurashi_release/master/deploy_higurashi/deploy_higurashi.py
           python deploy_higurashi.py ${{ github.event.repository.name }}
