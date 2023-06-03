@@ -2963,7 +2963,12 @@ void main()
 	PlaySE( 4, "wa_027", 56, 64 );
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200139a", 256, TRUE);
 
-//	DrawBustshot( 2, "re_se_hii_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+//  Replace CG with angry Rena sprite (originally re_se_hii_a1) if CGs are disabled (like the original Ryukishi game).
+//  For now, the LIES text and negative effect is still overlaid on the sprite to make this easier to implement.
+	if (GetGlobalFlag(GHideCG) == 1)
+	{
+		ModDrawCharacter(2, 2, "portrait/re1a_hig_okoru_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	}
 
 	DrawBG("scene/002b", 0, FALSE);
 	DrawBustshot(1, "text/oni_usoda", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 1, 0, FALSE );
@@ -2996,6 +3001,13 @@ void main()
 	OutputLine(NULL, "　それに驚いた鳥たちが慌てて羽ばたく。",
 		   NULL, "Sending frightened birds into the air.", Line_Normal);
 	ClearMessage();
+
+//  Reset Rena's sprite back to normal
+	if (GetGlobalFlag(GHideCG) == 1)
+	{
+		DisableWindow();
+		ModDrawCharacter(2, 2, "portrait/re1a_hig_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	}
 
 
 //　大きく吸いこんだ息が、吐き出せない＠いや、息を吐き出す事すら許してくれない＠
