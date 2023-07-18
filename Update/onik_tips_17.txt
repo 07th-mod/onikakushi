@@ -457,10 +457,21 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_tips_17_vm0x_n01","dialog000");}
-	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_tips_17_vm00_n01","dialog000");}
-	//VoiceMatchingEnd
+//「婆さまがどうしても生まれの北海道に帰りたいって泣くんですよ...＠最後のご奉公なんです＠退職金は、まぁススキノで楽しむことにします＠なっはっはっは！！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "org/ooishi0900", 256, TRUE);
+	OutputLine(NULL, "「婆さまがどうしても生まれの北海道に帰りたいって泣くんですよ…。",
+		   NULL, "\"Mother pines to return to her birthplace...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "org/ooishi0901", 256, TRUE);
+	OutputLine(NULL, "最後のご奉公なんです。",
+		   NULL, " It's the least I can do.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "org/ooishi0902", 256, TRUE);
+	OutputLine(NULL, "退職金は、まぁススキノで楽しむことにします。",
+		   NULL, " And the pension, well, it'll let me enjoy myself in Susukino.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "org/ooishi0903", 256, TRUE);
+	OutputLine(NULL, "なっはっはっは！！」",
+		   NULL, " Nahahahah!!\"", Line_Normal);
+	ClearMessage();
 
 //「署長は退職時特別昇給を見直すかもってさ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>高杉</color>", NULL, "<color=#f5e6d3>Takasugi</color>", NULL, Line_ContinueAfterTyping); }

@@ -4,19 +4,4 @@ void main()
 
 void dialog000()
 {
-//「婆さまがどうしても生まれの北海道に帰りたいって泣くんですよ...＠最後のご奉公なんです＠退職金は、まぁススキノで楽しむことにします＠なっはっはっは！！￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700053", 256, TRUE);
-	OutputLine(NULL, "「婆さまがどうしても生まれの北海道に帰りたいって泣くんですよ…。",
-		   NULL, "\"Mother pines to return to her birthplace...", Line_Continue);
-	Wait (4200);
-	OutputLine(NULL, "最後のご奉公なんです。",
-		   NULL, " It's the least I can do.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700054", 256, TRUE);
-	OutputLine(NULL, "退職金は、まぁ歓楽街で楽しむことにします。",
-		   NULL, " And the severance? Well, I'll enjoy it at the entertainment district.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700055", 256, TRUE);
-	OutputLine(NULL, "なっはっはっは！！」",
-		   NULL, " Nahahahah!!\"", Line_Normal);
-	ClearMessage();
 }

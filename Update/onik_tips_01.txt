@@ -121,10 +121,21 @@ void main()
 		   NULL, "She's not planning to be all high and mighty if her birthday is a wee bit sooner than mine, is she...", Line_Normal);
 	ClearMessage();
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_tips_01_vm0x_n01","dialog000");}
-	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_tips_01_vm00_n01","dialog000");}
-	//VoiceMatchingEnd
+//「...ふ＠　だが諦めろ＠俺に誕生日で挑もうったって無駄なことだ！＠　......何ならひと月差ごとに１００円の賭けをしてもいいぜー！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "org/keiichi0900", 256, TRUE);
+	OutputLine(NULL, "「…ふ！",
+		   NULL, "\"...Heh!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "org/keiichi0901", 256, TRUE);
+	OutputLine(NULL, "　だが諦めろ。",
+		   NULL, " Don't even.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "org/keiichi0902", 256, TRUE);
+	OutputLine(NULL, "俺に誕生日で挑もうったって無駄なことだ！！",
+		   NULL, " It's impossible to challenge me by birthday!!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "org/keiichi0903", 256, TRUE);
+	OutputLine(NULL, "　……何ならひと月差ごとに１００円の賭けをしてもいいぜー！」",
+		   NULL, " ... I wouldn't even mind you if you bet a dollar per month!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	DisableWindow();
@@ -147,10 +158,18 @@ void main()
 		   NULL, " Why!?\"", Line_Normal);
 	ClearMessage();
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_tips_01_vm0x_n01","dialog001");}
-	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_tips_01_vm00_n01","dialog001");}
-	//VoiceMatchingEnd
+//　突然、賭けにされて狼狽するレナ＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　突然、賭けにされて狼狽するレナ。",
+		   NULL, "Rena panicked at suddenly being challenged to a wager.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+//　...うろたえ具合から今月の小遣いは残り少ないと断定する＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…うろたえ具合から今月の小遣いは残り少ないと断定する。",
+		   NULL, "... Given how panicked she is, I am certain she doesn't have much allowance left this month.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　しかし...、たかだか誕生日程度でこうもうろたえてくれると、楽しくて仕方がないぞ￥

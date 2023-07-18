@@ -1461,7 +1461,7 @@ void main()
 
 //「あぁぁー！　最後のミートボールぅうぅううぅ！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 4, "ps2/04/990400040", 540, TRUE);
+	ModPlayVoiceLS(3, 4, "org/satoko0002", 256, TRUE);
 	OutputLine(NULL, "「あぁぁー！　最後のミートボールぅうぅううぅ！！！」",
 		   NULL, "\"Aaah! The last meatbaaaaaaaaall!!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3292,10 +3292,14 @@ void main()
 		   NULL, "That's what I wanted to know.", Line_Normal);
 	ClearMessage();
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_002_vm0x_n01","dialog000");}
-	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_002_vm00_n01","dialog000");}
-	//VoiceMatchingEnd
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "org/keiichi0007", 256, TRUE);
+	OutputLine(NULL, "「さぁねぇ。",
+		   NULL, "\"Dunno.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "org/keiichi0008", 256, TRUE);
+	OutputLine(NULL, "昔、殺して埋めたバラバラ死体でも確認してるんじゃないすか？」",
+		   NULL, " Maybe she's checking on that dismembered corpse that was out here long ago.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
@@ -3318,10 +3322,11 @@ void main()
 	ModSetLayerFilter(1, 256, "sunset");
 	ModDrawCharacter(1, 8, "sprite/tomi1_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_002_vm0x_n01","dialog003");}
-	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_002_vm00_n01","dialog003");}
-	//VoiceMatchingEnd
+//「……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？」!w5000
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 8, "org/tomitake0000", 256, TRUE);
+	OutputLine(NULL, "「……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？」",
+		   NULL, "\"...It was quite a disturbing incident... They still haven't found one of the arms.\"", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 5000 );
@@ -3421,10 +3426,46 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(3, 2, "sprite/re2a_warai_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_002_vm0x_n01","dialog001");}
-	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_002_vm00_n01","dialog001");}
-	//VoiceMatchingEnd
+//「うん聞いて聞いて＠　あ、…あのね＠　あったの＠　ランディーくん人形ッ♪！！＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "org/rena0000", 256, TRUE);
+	OutputLine(NULL, "「うん聞いて聞いて！",
+		   NULL, "\"Oh, yes~ So listen!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "org/rena0001", 256, TRUE);
+	OutputLine(NULL, "　あ、…あのね！",
+		   NULL, " Ah ...um, you see!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "org/rena0002", 256, TRUE);
+	OutputLine(NULL, "　あったの！",
+		   NULL, " There was...!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "org/rena0003", 256, TRUE);
+	OutputLine(NULL, "　ケンタくん人形ッ♪！！」",
+		   NULL, " A Colonel Sanders doll!♪\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+//「ランディーくん人形？＠　…ってあれか、ランディーくんフライドチキンの店の前に必ず置いてある…!d600あの等身大人形の？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "org/keiichi0009", 256, TRUE);
+	OutputLine(NULL, "「ケンタくん人形？！",
+		   NULL, "\"A Colonel Sanders doll!?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "org/keiichi0010", 256, TRUE);
+	OutputLine(NULL, "　…ってあれか、ケンタくんフライドチキンの店の前に必ず置いてある…",
+		   NULL, " ...Oh, that thing. Those statues they always have out in front of that fried chicken place...", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "org/keiichi0011", 256, TRUE);
+	OutputLine(NULL, "あの等身大人形の？」",
+		   NULL, " That life-sized dummy?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+//「…そう！　ランディーくん＠　……はぅ……かぁいい……お持ち帰りしたいぃ…☆＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "org/rena0004", 256, TRUE);
+	OutputLine(NULL, "「…そう！　ケンタくん☆",
+			   NULL, "\"...Yes! Colonel Sanders.☆", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "org/rena0005", 256, TRUE);
+	OutputLine(NULL, "　……はぅ……かぁいい……お持ち帰りしたいぃ…☆」",
+		   NULL, " ...Hau... kyute... I want to take it hooome...☆\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
@@ -3497,10 +3538,15 @@ void main()
 		   NULL, "Birds heading home to roost proclaimed that nightfall would soon be upon us.", Line_Normal);
 	ClearMessage();
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_002_vm0x_n01","dialog002");}
-	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_002_vm00_n01","dialog002");}
-	//VoiceMatchingEnd
+//「圭一くんが手伝ってくれる☆!d300…ランディーくんをお持ち帰りできる……はぅ…。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "org/rena0006", 256, TRUE);
+	OutputLine(NULL, "「圭一くんが手伝ってくれる☆",
+		   NULL, "\"Keiichi-kun is going to help.☆", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "org/rena0007", 256, TRUE);
+	OutputLine(NULL, "…ケンタくんをお持ち帰りできる……はぅ…。」",
+		   NULL, " ...I can take Colonel Sanders home... hau...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 
@@ -3652,10 +3698,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 5){ModCallScriptSection("zonik_002_vm0x_n01","dialog004");}
-	if(GetGlobalFlag(GCensor) <= 4){ModCallScriptSection("zonik_002_vm00_n01","dialog004");}
-	//VoiceMatchingEnd
+//"... …嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？"@\
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "“……嫌な事件だったね。…腕が一本、まだ見つかってないんだろ？”",
+		   NULL, "\"...It was quite a disturbing incident... They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 //　富竹さんの言った事がそのままなら＠

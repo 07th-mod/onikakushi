@@ -95,10 +95,25 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 3){ModCallScriptSection("zonik_tips_02_vm0x_n01","dialog000");}
-	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("zonik_tips_02_vm00_n01","dialog000");}
-	//VoiceMatchingEnd
+//「俺から見りゃ、スカートの沙都子の方が涼しそうだよ＠この時期のズボンの股座がどれだけ蒸すか、女のお前にゃわかるまい！￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "org/keiichi0904", 256, TRUE);
+	OutputLine(NULL, "「俺から見りゃ、スカートの沙都子の方が涼しそうだよ。",
+		   NULL, "\"From how I see things, the skirt you're wearing looks like it would be much cooler.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 1, "org/keiichi0905", 256, TRUE);
+	OutputLine(NULL, "この時期のズボンがどれだけ暑いか、女のお前にゃわかるまい！」",
+		   NULL, " A girl like you wouldn't understand just how hot it is wearing jeans in this season!\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
+	ModDrawCharacter(1, 2, "sprite/re1b_hau_b1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+
+//「......む、...蒸すんだ.........、はぅ......。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "org/rena0900", 256, TRUE);
+	OutputLine(NULL, "「……あ、…暑いって………、はぅ……。」",
+		   NULL, "\"...It... it gets hot... Hau...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 //　またこの娘は、いかがわしい想像をたくましくさせてるな...￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }

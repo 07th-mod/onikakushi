@@ -3770,13 +3770,13 @@ void main()
 
 //「前原さん＠最初の事件、ご存知ですよね＠　バラバラ殺人。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700144", 256, TRUE);
+	ModPlayVoiceLS(3, 11, "org/ooishi0000", 256, TRUE);
 	OutputLine(NULL, "「前原さん。",
 		   NULL, "\"Maebara-san.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 11, "ps3/s01/11/120700145", 256, TRUE);
+	ModPlayVoiceLS(3, 11, "org/ooishi0001", 256, TRUE);
 	OutputLine(NULL, "最初の事件、ご存知ですよね？",
 		   NULL, " Do you know the first incident?", Line_WaitForInput);
-	ModPlayVoiceLS(3, 11, "ps2/11/120700146", 540, TRUE);
+	ModPlayVoiceLS(3, 11, "org/ooishi0002", 256, TRUE);
 	OutputLine(NULL, "　バラバラ殺人。」",
 		   NULL, " The murder by dismemberment.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

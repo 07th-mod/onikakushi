@@ -226,23 +226,10 @@ void dialog005()
 
 void dialog006()
 {
-//　レナと例の宝の山のケンタくん人形を発掘する約束だ￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　レナと例の宝の山のケンタくん人形を発掘する約束だ。",
-		   NULL, "I had agreed to meet with Rena to dig Colonel Sanders out of that mountain of treasure from before.", Line_Normal);
-	ClearMessage();
 }
 
 void dialog007()
 {
-//　不法投棄のダンプがまたゴミを捨てていって、今度こそ完全に埋って救出不能＠なんてことになれば……間違いなくレナは町のフライドチキン屋のケンタくん人形を狙うだろう￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　不法投棄のダンプがまたゴミを捨てていって、今度こそ完全に埋って救出不能、",
-		   NULL, "If they come to dump again illegally, he'll be buried completely and it'll be impossible to dig him out, ", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "なんてことになれば……間違いなくレナは町のフライドチキン屋のケンタくん人形を狙うだろう。",
-		   NULL, "and if that happens... Rena will undoubtedly go after the Colonel Sanders in front of the fried chicken place in town.", Line_Normal);
-	ClearMessage();
 }
 
 void dialog008()
@@ -301,26 +288,6 @@ void dialog011()
 
 void dialog012()
 {
-//　レナから斧を受け取り、不安定な斜面を降りて行く￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　レナから斧を受け取り、不安定な斜面を降りて行く。",
-		   NULL, "I took the axe from Rena and made my way up the unstable slope.", Line_Normal);
-	ClearMessage();
-
-	DisableWindow();
-	ModSetLayerFilter(3, 256, "none");
-	ModDrawCharacterWithFiltering(3, 2, "sprite/re2a_warai_a1_", "2", "up", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
-	DrawSceneWithMask("background/mo_g2", "right", 0, 0, 1300 );
-
-//「待っててね、ケンタくん＠…今、圭一くんが助け出してくれるからね…☆＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200272", 256, TRUE);
-	OutputLine(NULL, "「待っててね、ケンタくん。",
-		   NULL, "\"Just wait, Colonel Sanders.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200273", 256, TRUE);
-	OutputLine(NULL, "…今、圭一くんが助け出してくれるからね…☆」",
-		   NULL, " Keiichi-kun will save you...☆\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
 
 void dialog013()
@@ -334,35 +301,6 @@ void dialog013()
 
 void dialog014()
 {
-//「大丈夫＠　もう一息＠今夜レナが寝るときにはケンタくんにお休みのキスができるようになってるさ。＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06410", 256, TRUE);
-	OutputLine(NULL, "「大丈夫！",
-		   NULL, "\"I'm fine!", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06420", 256, TRUE);
-	OutputLine(NULL, "　もう一息。",
-		   NULL, " I'm almost there.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s19/01/hr_kei06430", 256, TRUE);
-	OutputLine(NULL, "今夜レナが寝るときにはケンタくんにお休みのキスができるようになってるさ。」",
-		   NULL, " I'll make sure Rena can give Colonel Sanders a good-night kiss tonight.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-	DisableWindow();
-	ModSetLayerFilter(2, 256, "none");
-	ModDrawCharacter(2, 2, "sprite/re2b_hau_b1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
-
-//「…うん＠……ありがとぅ＠……ケンタくん……お休みのキス……はぅ……。￥
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200277", 256, TRUE);
-	OutputLine(NULL, "「…うん。",
-		   NULL, "\"...Yeah.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200278", 256, TRUE);
-	OutputLine(NULL, "……ありがとぅ。",
-		   NULL, " ...Thanks.", Line_WaitForInput);
-	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200279", 256, TRUE);
-	OutputLine(NULL, "……ケンタくん……お休みのキス……はぅ……。」",
-		   NULL, " ...Giving Colonel Sanders... a good night kiss... hau...\"", Line_Normal);
-	ClearMessage();
 }
 
 void dialog015()
@@ -398,21 +336,6 @@ void dialog017()
 
 void dialog018()
 {
-//　ツイてたなケンタくん。次のご主人様がいい人で￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　ツイてたなケンタくん。次のご主人様がいい人で。",
-		   NULL, "You're pretty lucky, Colonel Sanders. Your new master is a pretty decent person.", Line_Normal);
-	ClearMessage();
-
-	DisableWindow();
-	ModDrawCharacter(2, 2, "sprite/re2b_warai_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
-
-//「…わぁあ…ケンタくんだ…やっぱ、かぁいいよぅ！！＠
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 2, "ps3/s19/02/990200298", 256, TRUE);
-	OutputLine(NULL, "「…わぁあ…ケンタくんだ…やっぱ、かぁいいよぅ！！」",
-		   NULL, "\"...Waa... Colonel Sanders... He really is kyute!\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 }
 
 void dialog019()
@@ -452,16 +375,4 @@ void dialog020()
 
 void dialog021()
 {
-//"... 腕が一本、まだ見つかってないんだろ？"@
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "“…腕が一本、まだ見つかってないんだろ？”",
-		   NULL, "\"...They still haven't found one of the arms.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
-
-
-//　さっきのごろんと転がった腕がやけに不吉に思えたが、そこでふと気付き、俺はちょっと自分の情けなさに苦笑した￥
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　さっきのごろんと転がった腕がやけに不吉に思えたが、そこでふと気付き、俺はちょっと自分の情けなさに苦笑した。",
-		   NULL, "I laughed dryly at how pathetic I was for considering the arm flopping down and rolling to my feet to be such a bad omen.", Line_Normal);
-	ClearMessage();
 }

@@ -116,10 +116,11 @@ void main()
 	DisableWindow();
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 0, TRUE );
 
-	//VoiceMatching
-	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_005_vm0x_n01","dialog001");}
-	if(GetGlobalFlag(GCensor) <= 1){ModCallScriptSection("zonik_005_vm00_n01","dialog001");}
-	//VoiceMatchingEnd
+//　それはみんなランディーくん同様、町を歩けばどこかで見かけるようなものばかりだった＠
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それはみんなケンタくん同様、町を歩けばどこかで見かけるようなものばかりだった。",
+		   NULL, "They were all the same as Colonel Sanders: stuff you'd see while walking around in town.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 //　ケーキ屋さんの店頭のペロちゃん人形＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }

@@ -1506,16 +1506,16 @@ void main()
 
 //「魅音に直に、ダム現場で事件がなかったかって聞いたよな＠...魅音はないって言ったじゃないか！！＠　バラバラ殺人があったのによ！！＠　嘘つき野郎ッ！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(3, 1, "ps3/s01/01/120100654", 256, TRUE);
+	ModPlayVoiceLS(3, 1, "org/keiichi0029", 256, TRUE);
 	OutputLine(NULL, "「魅音に直に、ダム現場で事件がなかったかって聞いたよな。",
 		   NULL, "\"Mion, I asked you directly if something happened at the dam, didn't I?", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s01/01/120100655", 256, TRUE);
+	ModPlayVoiceLS(3, 1, "org/keiichi0030", 256, TRUE);
 	OutputLine(NULL, "…魅音はないって言ったじゃないか！！！",
 		   NULL, " ...And you told me nothing happened!!", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps2/01/120100656", 540, TRUE);
+	ModPlayVoiceLS(3, 1, "org/keiichi0031", 256, TRUE);
 	OutputLine(NULL, "　バラバラ殺人があったのによ！！！",
 		   NULL, " When someone was dismembered and murdered!!", Line_WaitForInput);
-	ModPlayVoiceLS(3, 1, "ps3/s01/01/120100657", 256, TRUE);
+	ModPlayVoiceLS(3, 1, "org/keiichi0032", 256, TRUE);
 	OutputLine(NULL, "　嘘つき野郎ッ！！！」",
 		   NULL, " You lied to me!!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
