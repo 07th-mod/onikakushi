@@ -1707,7 +1707,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(3, 4, "sprite/sa1a_akuwarai_a1_", "1", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(3, 4, "sprite/sa1a_akuwarai_a1_", "1", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE ); //ERROR_EXISTING: Priority 10 on layer 3 used here. Conflict is 59 lines away (line 1769)
 
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("zonik_005_vm0x_n01","dialog004");}
@@ -1766,7 +1766,7 @@ void main()
 
 	DisableWindow();
 	ModSetLayerFilter(2, 256, "none");
-	ModDrawCharacter(2, 2, "sprite/re1a_nande_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	ModDrawCharacter(2, 2, "sprite/re1a_nande_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 21, 400, TRUE ); //ERROR: Priority 10 already in use 59 lines ago (line 1710). Existing Layer: 3 Conflicting Layer: 2 Suggested Priority: 21
 
 //「戦後の日本の教育の乱れを憂いて教育者に転向したんだって…。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }

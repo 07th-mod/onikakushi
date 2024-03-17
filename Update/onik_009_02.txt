@@ -1245,7 +1245,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(3, 8, "sprite/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(3, 8, "sprite/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE ); //ERROR_EXISTING: Priority 20 on layer 3 used here. Conflict is 819 lines away (line 2067)
 
 //「別にはぐらかしたつもりはないんだよ圭一くん＠つまり……その翌年の綿流しってのはつまり…、￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
@@ -2064,7 +2064,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(1, 9, "sprite/ta1_warai_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	ModDrawCharacter(1, 9, "sprite/ta1_warai_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 200, TRUE ); //ERROR: Priority 20 already in use 819 lines ago (line 1248). Existing Layer: 3 Conflicting Layer: 1 Suggested Priority: 26
 
 //「じゃあね、おやすみなさい圭一くん＠…ジロウさんもね。また後ほど。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女性</color>", NULL, "<color=#f5e6d3>Woman</color>", NULL, Line_ContinueAfterTyping); }
