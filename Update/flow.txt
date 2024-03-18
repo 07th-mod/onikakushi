@@ -24,6 +24,7 @@ void BrandLogo()
 	ModCallScriptSection("&opening", "OpeningQuestion");
 
 	DrawBG( "07thlogo", 1000, TRUE );
+	ModPlayVoiceLS(3, 0, "switch/s00/07th", 256, TRUE);
 	Wait( 2000 );
 	DrawSceneWithMask( "mangagamer", "logomask", 0, 0, 1000 );
 	Wait( 2000 );
@@ -41,6 +42,7 @@ void Title()
 	DrawScene("white", 1000);
 
 	PlayBGM( 2, "lsys11", 56, 0 );
+	ModPlayVoiceLS(3, 0, "switch/s00/title_call", 256, TRUE);
 
 	DrawSpriteWithFiltering( 10, "Logo", "centerblind", 0, 0, 0, TRUE, TRUE, 0, 0, 10, 1500, TRUE );
 
