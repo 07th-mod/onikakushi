@@ -899,7 +899,7 @@ void main()
 		   NULL, "\"Well, it's nothing important...", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "ps3/s01/03/120300151", 256, TRUE);
 	OutputLine(NULL, "…お疲れのようなら後にするけど？」",
-		   NULL, " If you're tired, I can ask again later?\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, " If you're tired, I can ask again later.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -3551,10 +3551,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200385", 256, TRUE);
 	OutputLine(NULL, "「悟史くんが“転校”しちゃった時ね、本当に後悔したんだよ。",
-		   NULL, "\"I really regretted it when Satoshi-kun 'transferred' out.", Line_WaitForInput);
+		   NULL, "\"I really regretted it when Satoshi-kun 'transferred out.'", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200386", 256, TRUE);
 	OutputLine(NULL, "レナが相談に乗ってあげれば…悟史くんは転校せずに済んだかもしれないって。",
-		   NULL, " I thought that if I had listened... he may not have 'transferred' out.", Line_WaitForInput);
+		   NULL, " I thought that if I had listened... he may not have 'transferred out.'", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200387", 256, TRUE);
 	OutputLine(NULL, "すごく後悔した。」",
 		   NULL, " I really regretted that.\"", Line_Normal);
@@ -3602,7 +3602,7 @@ void main()
 	Wait( 2000 );
 //　もう人が"転校"するところは見たくないの。!s200あははははははははははははは!sd。￥
 	OutputLine(NULL, "　もう人が“転校”するところは見たくないの。",
-		   NULL, "I don't want to see anyone 'transfer' out again.", Line_ContinueAfterTyping);
+		   NULL, " I don't want to see anyone 'transfer out' again.", Line_ContinueAfterTyping);
 //!s200
 
 	SetSpeedOfMessage( TRUE, 0, );
@@ -4383,7 +4383,7 @@ void main()
 		   NULL, " I'm probably the only one who you can confide in...", Line_WaitForInput);
 	ModPlayVoiceLS(3, 2, "ps3/s01/02/120200431", 256, TRUE);
 	OutputLine(NULL, "……圭一くんを“転校”なんかさせないから。",
-		   NULL, " I won't let you 'transfer' out...", Line_Continue);
+		   NULL, " I won't let you 'transfer out'...", Line_Continue);
 
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 1000 );
@@ -6749,7 +6749,7 @@ void main()
 //　レナだけが怖いから、それ以外は怖くないと...そう思い込もうとしてきた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　レナだけが怖いから、それ以外は怖くないと…そう思い込もうとしてきた。",
-		   NULL, "I made the assumption that I didn't need fear anything else...", GetGlobalFlag(GLinemodeSp));
+		   NULL, "I made the assumption that I didn't need to fear anything else...", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 

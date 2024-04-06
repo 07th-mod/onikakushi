@@ -19,7 +19,7 @@ void main()
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　これほどはっきりと意識が戻る目覚め方をしたのは初めてだった。",
-		   NULL, "This was the first time I'd ever woke with such clarity.", Line_Normal);
+		   NULL, "This was the first time I'd ever woken with such clarity.", Line_Normal);
 	ClearMessage();
 
 //　仕掛けた目覚ましがなる直前の５時５９分＠…自身の体内時計の正確さに驚く＠
@@ -1095,7 +1095,7 @@ void main()
 //　敵は複数、村ぐるみ＠…祟りを妄信する村人たちは俺を助けない￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　敵は複数、村ぐるみ。",
-		   NULL, "The enemy were numerous: the whole village.", Line_WaitForInput);
+		   NULL, "The enemies were numerous: the whole village.", Line_WaitForInput);
 	OutputLine(NULL, "…祟りを妄信する村人たちは俺を助けない。",
 		   NULL, " ...The villagers with their unwavering faith in the curse would do nothing to help me.", Line_Normal);
 	ClearMessage();
@@ -2063,8 +2063,8 @@ void main()
 	OutputLine(NULL, "「じゃあまぁ、頑張って県大会を目指してちょうだいよ。",
 		   NULL, "\"Well then, hope you make it to regionals, at least.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "ps3/s01/03/120300136", 256, TRUE);
-	OutputLine(NULL, "おじさん、応援してるわ。」",
-		   NULL, " This old man will cheer you on.\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "おじさん、応援してるわ。",
+		   NULL, " This old man will cheer you on., GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //	DisableWindow();

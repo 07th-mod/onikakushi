@@ -256,7 +256,7 @@ void main()
 //　前原くんの声色から、すぐに異常事態を察する￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　前原くんの声色から、すぐに異常事態を察する。",
-		   NULL, "From the tone Maebara-kun's voice, I already knew he was in a predicament.", Line_Normal);
+		   NULL, "From the tone of Maebara-kun's voice, I already knew he was in a predicament.", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 2, "lsys15", 56, 0 );
@@ -1490,8 +1490,8 @@ void main()
 
 //　痕跡に血液反応が出なかったことから、犯行以前に破壊したものと推定。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　痕跡に血液反応が出なかったことから、犯行以前に破壊したものと推定。",
-		   NULL, " Having no traces of blood, it is believed the destruction occurred before the murders.", Line_ContinueAfterTyping);
+	OutputLine(NULL, "痕跡に血液反応が出なかったことから、犯行以前に破壊したものと推定。",
+		   NULL, "Having no traces of blood, it is believed the destruction occurred before the murders.", Line_ContinueAfterTyping);
 
 
 	FadeOutBGM( 2, 10, TRUE );
