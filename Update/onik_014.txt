@@ -2064,7 +2064,7 @@ void main()
 		   NULL, "\"Well then, hope you make it to regionals, at least.", Line_WaitForInput);
 	ModPlayVoiceLS(3, 3, "ps3/s01/03/120300136", 256, TRUE);
 	OutputLine(NULL, "おじさん、応援してるわ。",
-		   NULL, " This old man will cheer you on., GetGlobalFlag(GLinemodeSp));
+		   NULL, " This old man will cheer you on.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //	DisableWindow();
