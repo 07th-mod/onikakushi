@@ -51,10 +51,12 @@ void main()
 //　どうせ引き裂かれるなら、!w2000
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0000_0", 256, TRUE);
 	OutputLine(NULL, "どうせ引き裂かれるなら、",
 		   NULL, "If I was going to be ripped apart anyways,", Line_WaitForInput);
 
 //　身を引き裂かされる方がはるかにマシだと思った。!w4000
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0000_1", 256, TRUE);
 	OutputLine(NULL, "身を引き裂かされる方がはるかにマシだと思った。",
 		   NULL, " having my body ripped apart would've been far better.", Line_Normal);
 	ClearMessage();
@@ -66,6 +68,7 @@ void main()
 
 //　信じてた。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0010_0", 256, TRUE);
 	OutputLine(NULL, "信じてた。",
 		   NULL, "I trusted her.", GetGlobalFlag(GLinemodeSp));
 
@@ -77,6 +80,7 @@ void main()
 
 //　......いや、信じてる。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0010_1", 256, TRUE);
 	OutputLine(NULL, "…いや、信じてる。",
 		   NULL, "...No, I still trust her.", GetGlobalFlag(GLinemodeSp));
 
@@ -88,6 +92,7 @@ void main()
 
 //　今この瞬間だって、信じてる。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0020", 256, TRUE);
 	OutputLine(NULL, "今この瞬間だって、信じてる。",
 		   NULL, "Even in this very moment, I trust her.", Line_Normal);
 	ClearMessage();
@@ -101,6 +106,7 @@ void main()
 
 //　でも......薄々は気付いてる。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0030_0", 256, TRUE);
 	OutputLine(NULL, "でも…薄々は気付いてる。",
 		   NULL, "But... I'm starting to realize.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -108,6 +114,7 @@ void main()
 
 //　信じたいのは、認めたくないだけだからだ。/
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0030_1", 256, TRUE);
 	OutputLine(NULL, "信じたいのは、認めたくないだけだからだ。",
 		   NULL, "I only wanted to trust her because I refused to accept the truth.", GetGlobalFlag(GLinemodeSp));
 
@@ -119,11 +126,13 @@ void main()
 
 //　自分に言い聞かせるような、
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0040_0", 256, TRUE);
 	OutputLine(NULL, "自分に言い聞かせるような、",
 		   NULL, "It was as if I was trying to convince myself,", Line_WaitForInput);
 
 
 //　そんな涙声が...もうたまらなく馬鹿馬鹿しくて......。
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0040_1", 256, TRUE);
 	OutputLine(NULL, "そんな涙声が…もうたまらなく馬鹿馬鹿しくて…。",
 		   NULL, " in such a silly... sobbing voice...", GetGlobalFlag(GLinemodeSp));
 
@@ -135,6 +144,7 @@ void main()
 
 //　さらなる涙が...顔をもっとぐしゃぐしゃにする...。!w3000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0050", 256, TRUE);
 	OutputLine(NULL, "さらなる涙が…顔をもっとぐしゃぐしゃにする…。",
 		   NULL, "And those tears... those tears making a mess of my face...", Line_Normal);
 	ClearMessage();
@@ -143,6 +153,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 6 ); }
 //　機械的に繰り返されていたそれはようやく収まり、とても静かになった。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0060", 256, TRUE);
 	OutputLine(NULL, "機械的に繰り返されていたそれはようやく収まり、とても静かになった。",
 		   NULL, "That mechanical, repetitious sound finally stilled, and everything fell silent.", Line_Normal);
 	ClearMessage();
@@ -153,6 +164,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 //　ひぐらしの声だけが...いやに騒がしい。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0070", 256, TRUE);
 	OutputLine(NULL, "ひぐらしの声だけが…いやに騒がしい。",
 		   NULL, "Only the cry of the cicadas remained, annoyingly loud.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -160,6 +172,7 @@ void main()
 
 //　なのに、!w1500
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0080_0", 256, TRUE);
 	OutputLine(NULL, "なのに、",
 		   NULL, "And yet...", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -167,6 +180,7 @@ void main()
 
 //　...彼女のそれはまだ聞こえる気がする。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0080_1", 256, TRUE);
 	OutputLine(NULL, "…彼女のそれはまだ聞こえる気がする。",
 		   NULL, "...I felt as if I could still hear her voice.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -174,6 +188,7 @@ void main()
 
 //　...聞こえるはずはない。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0090_0", 256, TRUE);
 	OutputLine(NULL, "…聞こえるはずはない。",
 		   NULL, "...But that's not possible.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -181,8 +196,9 @@ void main()
 
 //　彼女はもう、言うのをやめているのだから。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0090_1", 256, TRUE);
 	OutputLine(NULL, "彼女はもう、言うのをやめているのだから。",
-		   NULL, "She is no longer speaking.", Line_Normal);
+		   NULL, "Because she already stopped speaking.", Line_Normal);
 	ClearMessage();
 
 //locate 0,5
@@ -190,6 +206,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 //　泣いているのは俺だけだった。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0100", 256, TRUE);
 	OutputLine(NULL, "泣いているのは俺だけだった。",
 		   NULL, "The only one crying is me.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -197,6 +214,7 @@ void main()
 
 //　彼女は泣きもしなかった。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0101", 256, TRUE);
 	OutputLine(NULL, "彼女は泣きもしなかった。",
 		   NULL, "She never cried.", Line_Normal);
 	ClearMessage();
@@ -206,20 +224,24 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 //　彼女がそれを繰り返し口にしていた時も、表情どころか感情もなかった。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0102", 256, TRUE);
 	OutputLine(NULL, "彼女がそれを繰り返し口にしていた時も、表情どころか感情もなかった。",
 		   NULL, "Even when she repeated those words over and over, she never expressed any emotion, because there were none to show.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 //　彼女に、俺のために流す涙がないのなら、!w1000俺にだって。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0110_0", 256, TRUE);
 	OutputLine(NULL, "彼女に、俺のために流す涙がないのなら、",
-		   NULL, "If she had no tears to shed for me,", Line_ContinueAfterTyping);
+		   NULL, "If she had no tears to shed for me,", Line_WaitForInput);
 
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0110_1", 256, TRUE);
 	OutputLine(NULL, "俺にだって。",
 		   NULL, " then I...", Line_WaitForInput);
 
 
 //　...彼女らのために流す涙はいらないはずなのだ。!w4000
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0111", 256, TRUE);
 	OutputLine(NULL, "…彼女らのために流す涙はいらないはずなのだ。",
 		   NULL, " shouldn't need to shed any for her.", Line_Normal);
 	ClearMessage();
@@ -227,6 +249,7 @@ void main()
 
 //　それなのに......痛み、目を潤ませてしまうのは......どうして？!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0120", 256, TRUE);
 	OutputLine(NULL, "それなのに…痛み、目を潤ませてしまうのは…どうして？",
 		   NULL, "Then why... this pain, my eyes getting moist... why was this happening?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -234,6 +257,7 @@ void main()
 
 //　それでも引き裂かれてないと、......信じていたいから。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0130", 256, TRUE);
 	OutputLine(NULL, "それでも引き裂かれてないと、…信じていたいから。",
 		   NULL, "I still wanted to believe... I hadn't been split apart.", Line_Normal);
 	ClearMessage();
@@ -243,6 +267,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 6 ); }
 //　もう充分だろ？!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0140", 256, TRUE);
 	OutputLine(NULL, "もう充分だろ？",
 		   NULL, "That's enough, right?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -250,6 +275,7 @@ void main()
 
 //　内なる、もうひとりの自分がやさしく語りかける...。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0141", 256, TRUE);
 	OutputLine(NULL, "内なる、もうひとりの自分がやさしく語りかける…。",
 		   NULL, "Inside me, an inner voice whispered gently...", Line_Normal);
 	ClearMessage();
@@ -259,6 +285,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 //　俺はもう充分に心を痛めたさ。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0150", 256, TRUE);
 	OutputLine(NULL, "俺はもう充分に心を痛めたさ。",
 		   NULL, "My spirit had suffered enough...", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -266,6 +293,7 @@ void main()
 
 //　...そして何度も、その痛む心を捨てるべきかどうか迷ったんだ。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0160", 256, TRUE);
 	OutputLine(NULL, "…そして何度も、その痛む心を捨てるべきかどうか迷ったんだ。",
 		   NULL, "...and countless times I'd wavered over whether I should just throw the battered thing away.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -273,6 +301,7 @@ void main()
 
 //　だけど俺は...頑なに、捨てることを拒んだんじゃないか。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0170", 256, TRUE);
 	OutputLine(NULL, "だけど俺は…頑なに、捨てることを拒んだんじゃないか。",
 		   NULL, "Except... I've stubbornly refused to do that, haven't I?", Line_Normal);
 	ClearMessage();
@@ -282,6 +311,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 2 ); }
 //　捨てれば...もっと心が楽になれる...。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0180", 256, TRUE);
 	OutputLine(NULL, "捨てれば…もっと心が楽になれる…。",
 		   NULL, "I'd feel better if I just threw it away.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -289,6 +319,7 @@ void main()
 
 //　それを知りながらも、俺は信じることを選んだんじゃないか。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0190", 256, TRUE);
 	OutputLine(NULL, "それを知りながらも、俺は信じることを選んだんじゃないか。",
 		   NULL, "Even knowing that, I chose to believe, didn't I?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -296,6 +327,7 @@ void main()
 
 //　その辛かった苦労は、きっと俺にしかわからないし、俺にしかねぎらえない。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0200", 256, TRUE);
 	OutputLine(NULL, "その辛かった苦労は、きっと俺にしかわからないし、俺にしかねぎらえない。",
 		   NULL, "Only I can understand that painful struggle, and appreciate it.", Line_Normal);
 	ClearMessage();
@@ -306,6 +338,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 5 ); }
 //　なぁ俺。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0210", 256, TRUE);
 	OutputLine(NULL, "なぁ俺。",
 		   NULL, "Hey, me?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -313,6 +346,7 @@ void main()
 
 //　...俺は充分に頑張った。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0211", 256, TRUE);
 	OutputLine(NULL, "…俺は充分に頑張った。",
 		   NULL, "...I've tried more than enough.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -320,6 +354,7 @@ void main()
 
 //　......俺がそれを認めてやる。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0212", 256, TRUE);
 	OutputLine(NULL, "…俺がそれを認めてやる。",
 		   NULL, "...I'll acknowledge that much.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -327,6 +362,7 @@ void main()
 
 //　だから。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0220", 256, TRUE);
 	OutputLine(NULL, "だから。",
 		   NULL, "So...", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -334,6 +370,7 @@ void main()
 
 //　......もう楽になってもいいんじゃないか......？!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0221", 256, TRUE);
 	OutputLine(NULL, "…もう楽になってもいいんじゃないか…？",
 		   NULL, "...Isn't it all right to just take the easy way out?", Line_Normal);
 	ClearMessage();
@@ -344,6 +381,7 @@ void main()
 
 //　それに.........捨てるんじゃない。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0230", 256, TRUE);
 	OutputLine(NULL, "それに…捨てるんじゃない。",
 		   NULL, "Besides... I'm not throwing it away.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -351,6 +389,7 @@ void main()
 
 //　彼女と一緒に、置いていくんだ。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0231", 256, TRUE);
 	OutputLine(NULL, "彼女と一緒に、置いていくんだ。",
 		   NULL, "I'm leaving it behind, with her.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -361,6 +400,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 11 ); }
 //　...花を手向けるように。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0232", 256, TRUE);
 	OutputLine(NULL, "…花を手向けるように。",
 		   NULL, "...Like flowers by a grave.", Line_Normal);
 	ClearMessage();
@@ -370,6 +410,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 3 ); }
 //　さぁ。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0240_0", 256, TRUE);
 	OutputLine(NULL, "さぁ。",
 		   NULL, "Now then.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -377,6 +418,7 @@ void main()
 
 //　......心を落ち着けて...。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0240_1", 256, TRUE);
 	OutputLine(NULL, "…心を落ち着けて…。",
 		   NULL, "...Calm your nerves.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -384,6 +426,7 @@ void main()
 
 //　もう右腕が痺れているだろうけど。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0241", 256, TRUE);
 	OutputLine(NULL, "もう右腕が痺れているだろうけど。",
 		   NULL, "Even though you can't feel your right arm.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -391,6 +434,7 @@ void main()
 
 //　......頑張って振り上げよう。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0242", 256, TRUE);
 	OutputLine(NULL, "…頑張って振り上げよう。",
 		   NULL, "...Just lift it up.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -398,6 +442,7 @@ void main()
 
 //　ひとつ振る度に忘れるんだ。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0243", 256, TRUE);
 	OutputLine(NULL, "ひとつ振る度に忘れるんだ。",
 		   NULL, "And with every swing, forget a little more.", Line_Normal);
 	ClearMessage();
@@ -412,6 +457,7 @@ void main()
 
 //　親切が、うれしかった。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0250", 256, TRUE);
 	OutputLine(NULL, "親切が、うれしかった。",
 		   NULL, "That kindness made me happy.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -423,6 +469,7 @@ void main()
 
 //　愛らしい笑顔がうれしかった。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0260", 256, TRUE);
 	OutputLine(NULL, "愛らしい笑顔がうれしかった。",
 		   NULL, "That adorable smile brought me joy.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -434,6 +481,7 @@ void main()
 
 //　頭を撫でるのが、好きだった。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0270", 256, TRUE);
 	OutputLine(NULL, "頭を撫でるのが、好きだった。",
 		   NULL, "I liked petting your head.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -445,6 +493,7 @@ void main()
 
 //　そんな君がはにかむのが、好きだった。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0280", 256, TRUE);
 	OutputLine(NULL, "そんな君がはにかむのが、好きだった。",
 		   NULL, "I loved how demure you were.", Line_Normal);
 	ClearMessage();
@@ -464,6 +513,7 @@ void main()
 
 //　これで最後だから。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0290", 256, TRUE);
 	OutputLine(NULL, "これで最後だから。",
 		   NULL, "...Because this will be the last time.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -471,6 +521,7 @@ void main()
 
 //　これを振り下ろせば忘れてしまうのだから。!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0291", 256, TRUE);
 	OutputLine(NULL, "これを振り下ろせば忘れてしまうのだから。",
 		   NULL, "Because when I swing this down, I'll forget.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -478,6 +529,7 @@ void main()
 
 //　君に贈る、...............俺からの、!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0300_0", 256, TRUE);
 	OutputLine(NULL, "君に贈る、…俺からの、",
 		   NULL, "This is... my...", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -485,12 +537,9 @@ void main()
 
 //　最初で最後の!w1000花束。!w4000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "最初で最後の",
-		   NULL, "First and last...", Line_WaitForInput);
-
-
-	OutputLine(NULL, "花束。",
-		   NULL, " bouquet for you.", Line_Normal);
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0300_1", 256, TRUE);
+	OutputLine(NULL, "最初で最後の花束。",
+		   NULL, "First and last bouquet for you.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
 	DrawScene("black", 3000 );
@@ -502,6 +551,7 @@ void main()
 
 //　ひょっとすると、...俺は君の事が、!w2000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0310", 256, TRUE);
 	OutputLine(NULL, "ひょっとすると、…俺は君の事が、",
 		   NULL, "Perhaps... I really did...", Line_WaitForInput);
 
@@ -514,6 +564,7 @@ void main()
 
 	SetSpeedOfMessage( FALSE, 0, );
 
+	ModPlayVoiceLS(3, 1, "switch/s19/01/okei_0311", 256, TRUE);
 	OutputLine(NULL, "好きだった。",
 		   NULL, "...love you.", Line_Normal);
 	ClearMessage();
