@@ -7,7 +7,8 @@ on:
 jobs:
   dll_build:
     name: Build DLL
-    runs-on: ubuntu-latest
+    # Need to use windows to build a .exe (might be able to switch to linux executable/linux later, but leave as windows for now)
+    runs-on: windows-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
@@ -18,6 +19,7 @@ jobs:
       # Note: This uses the mono bundled with Ubuntu to build the project
       - name: Compile project
         run: msbuild /p:Configuration=Release
+        run: msbuild /p:Configuration=ScriptCompiler
 
       - name: Save Git Hash
         run: >-
@@ -28,6 +30,9 @@ jobs:
         with:
           name: higurashi-dll
           path: |
+            ./bin/ScriptCompiler/System.Core.dll
+            ./bin/ScriptCompiler/Antlr3.Runtime.dll
+            ./bin/ScriptCompiler/HigurashiScriptCompiler.exe
             ./bin/Release/Assembly-CSharp.dll
             ./bin/Release/Assembly-CSharp.version.txt
           if-no-files-found: error
@@ -59,8 +64,6 @@ jobs:
 
       - name: Run Release Script
         id: run_release
-        env:
-          HIGURASHI_BASE_EXTRACT_KEY: ${{ secrets.HIGURASHI_BASE_EXTRACT_KEY }}
         run: |
           curl -OJ https://raw.githubusercontent.com/07th-mod/higurashi_release/master/deploy_higurashi/deploy_higurashi.py
           python deploy_higurashi.py ${{ github.event.repository.name }}
