@@ -17,8 +17,10 @@ jobs:
           ref: oni-mod
 
       # Note: This uses the mono bundled with Ubuntu to build the project
-      - name: Compile project
+      - name: Compile DLL
         run: msbuild /p:Configuration=Release
+
+      - name: Compile standalone Higurashi Script Compiler
         run: msbuild /p:Configuration=ScriptCompiler
 
       - name: Save Git Hash
