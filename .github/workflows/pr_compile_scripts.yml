@@ -6,63 +6,50 @@ on:
 
 jobs:
   dll_build:
-    name: Build DLL
-    # Need to use windows to build a .exe (might be able to switch to linux executable/linux later, but leave as windows for now)
-    runs-on: windows-latest
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-        with:
-          repository: 07th-mod/higurashi-assembly
-          ref: oni-mod
-
-      # Note: This uses the mono bundled with Ubuntu to build the project
-      - name: Compile DLL
-        run: msbuild /p:Configuration=Release
-
-      - name: Compile standalone Higurashi Script Compiler
-        run: msbuild /p:Configuration=ScriptCompiler
-
-      - name: Save Git Hash
-        run: >-
-          git show --pretty="format:Commit: %H %d%nDate: %cs%n%n%B" --no-patch > ./bin/Release/Assembly-CSharp.version.txt
-
-      - name: Upload DLL as Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: higurashi-dll
-          path: |
-            ./bin/ScriptCompiler/System.Core.dll
-            ./bin/ScriptCompiler/Antlr3.Runtime.dll
-            ./bin/ScriptCompiler/HigurashiScriptCompiler.exe
-            ./bin/Release/Assembly-CSharp.dll
-            ./bin/Release/Assembly-CSharp.version.txt
-          if-no-files-found: error
-
-  windows_build:
-    name: Windows Build
-    needs: dll_build
-    runs-on: windows-latest
+    name: Build DLL and Standalone Compiler
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     strategy:
       matrix:
         python-version: [3.8]
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
+      - name: Force git to use CRLF (on ubuntu runner, will checkout as LF otherwise)
+        run: git config --global core.autocrlf true # Forces LF on the server to convert to CRLF locally
 
-      # Download Windows artifacts
-      - name: Download DLL
-        uses: actions/download-artifact@v3
-        with:
-          name: higurashi-dll
+      - name: Checkout the script repository
+        uses: actions/checkout@v4
 
-      # Setup python (Windows VM is Python 3.7 by default, we need at least Python 3.8)
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+      - name: Checkout the higurashi-assembly (DLL) repository
+        uses: actions/checkout@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          repository: 07th-mod/higurashi-assembly
+          ref: oni-mod
+          path: ./dll/
+
+      # Note: This uses the mono bundled with Ubuntu to build the project
+      - name: Compile DLL
+        run: msbuild /p:Configuration=Release
+        working-directory: ./dll/
+
+      - name: Compile standalone Higurashi Script Compiler
+        run: msbuild /p:Configuration=ScriptCompiler
+        working-directory: ./dll/
+
+      - name: Save Git Hash
+        run: >-
+          git show --pretty="format:Commit: %H %d%nDate: %cs%n%n%B" --no-patch > ./bin/Release/Assembly-CSharp.version.txt
+        working-directory: ./dll/
+
+      - name: Move bin/ folder out of dll/ folder
+        run: mv ./dll/bin/ .
+
+      # At this point the following important files should exist in the './bin/' folder
+      # ./bin/ScriptCompiler/System.Core.dll
+      # ./bin/ScriptCompiler/Antlr3.Runtime.dll
+      # ./bin/ScriptCompiler/HigurashiScriptCompiler.exe
+      # ./bin/Release/Assembly-CSharp.dll
+      # ./bin/Release/Assembly-CSharp.version.txt
 
       - name: Run Release Script
         id: run_release
