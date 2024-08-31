@@ -4109,8 +4109,9 @@ void main()
 	OutputLine(NULL, "　扉の隙間から片目だけを覗かせて、再び魅音の鷹の目が俺を貫いた。",
 		   NULL, "A single eye peered in through that narrow slit, and Mion's hawkish gaze peered at me once again.", Line_Normal);
 	ClearMessage();
-//	DisableWindow();
-//	DrawBustshotWithFiltering( 2, "me_si_him_a1", "left", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisableWindow();
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(2, 3, "sprite/me2_hig_maji_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );}
+	if (GetGlobalFlag(GHideCG)) {DrawScene("background/ma_g2", 200 );}
 	FadeFilm( 600 , TRUE );
 //「じゃあね圭ちゃん。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }

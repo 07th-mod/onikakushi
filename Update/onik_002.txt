@@ -1404,7 +1404,7 @@ void main()
 		   NULL, "It didn't change how much there was, but the implication behind it was different.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-//	DrawBustshot( 2, "sa_si_aw_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(2, 4, "sprite/sa2a_akuwarai_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );}
 	DrawScene("scene/101", 1000 );
 
 
@@ -1433,8 +1433,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-//	DisableWindow();
-//	DrawBustshot( 2, "sa_si_bi_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(2, 4, "sprite/sa2a_odoroki_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );}
 
 //「襟首を掴むのも反則でございますー！！！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -1444,7 +1444,6 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-//	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 200, TRUE );
 	DrawScene("background/jt1", 1000 );
 
 //　激しい戦いは、豊富な運動量と肘によるブロックで序盤、沙都子が優位に立つかに見えたが、箸さばきの致命的な差が形勢を一気にひっくり返す＠

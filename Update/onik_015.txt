@@ -2542,7 +2542,6 @@ void main()
 		   NULL, "I could tell that the fear that I had beaten back once was now waiting for another opening to come at me...", Line_Normal);
 	ClearMessage();
 
-//	DrawBustshot( 2, "re_se_wa_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 
 //　一体...誰だ...＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2558,7 +2557,8 @@ void main()
 		   NULL, "I peeked out from behind the tree at the person following me.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-//	FadeBustshotWithFiltering( 5, "left", 0, FALSE, 0, 0, 1300, TRUE );
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(2, 2, "sprite/re1a_warai_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );}
+	if (GetGlobalFlag(GHideCG)) {DrawSceneWithMask("background/m_hi4", "left", 0, 0, 1300 );}
 
 
 	//set big CG
@@ -2586,8 +2586,8 @@ void main()
 	OutputLine(NULL, "　…レナの…様子が違ったからだ。",
 		   NULL, "This wasn't the same Rena that I knew...", Line_Normal);
 	ClearMessage();
-//	DisableWindow();
-//	DrawBustshot( 2, "re_se_hi_b1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(2, 2, "sprite/re1b_def_b1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );}
 
 
 

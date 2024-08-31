@@ -3125,8 +3125,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	if (GetGlobalFlag(GHideCG)) {DrawSceneWithMask("background/gk3", "m1", 0, 0, 1300 );}
 
-//	DrawSceneWithMask( "bg_108", "m1", 0, 0, 1300 );
 	DrawSceneWithMask("scene/008", "m1", 0, 0, 1300 );
 
 
@@ -3186,7 +3186,8 @@ void main()
 		   NULL, "As the fruit of my efforts(?), I can now reach over and take sides from anybody's lunch.", Line_Normal);
 	ClearMessage();
 
-//	DrawBustshot( 3, "sa_se_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );	DrawBustshot( 3, "sa_se_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(3, 4, "sprite/sa1a_def_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );}
 
 //「あらあら、圭一さんのお弁当は今日は大奮発ではございませんことぉ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -3245,9 +3246,9 @@ void main()
 
 
 
-//	DisableWindow();
-//	FadeBustshotWithFiltering( 3, "m1", 1, FALSE, 0, 0, 300, TRUE );
-//	DrawBustshot( 2, "ri_se_ni_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {FadeBustshotWithFiltering( 3, "m1", 1, FALSE, 0, 0, 200, TRUE );}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(2, 5, "sprite/ri1_niko_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );}
 
 //「...昨夜のお夕食の煮物を少し取っておきましたですよ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -3305,9 +3306,9 @@ void main()
 		   NULL, "That's not easy to do.", Line_Normal);
 	ClearMessage();
 
-//	DisableWindow();
-//	DrawSceneWithMask( "bg_108", "left", 0, 0, 300 );
-//	DrawBustshot( 3, "me_se_de_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {DrawSceneWithMask("background/gk1", "left", 0, 0, 300 );}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(3, 3, "sprite/me1a_def_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );}
 
 //「梨花ちゃんって何気にそーゆうの得意なんだよなぁ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -3317,8 +3318,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-//	DisableWindow();
-//	DrawBustshotWithFiltering( 1, "re_se_wa_b1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacterWithFiltering(1, 2, "sprite/re1b_warai_b1_", "2", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );}
 
 //「お裁縫とかお洗濯とかも上手なの＠すごいよね＠すごいよね！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -3334,9 +3335,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-//	DisableWindow();
-//	FadeBustshot( 3, FALSE, 0, 0, 0, 0, 200, TRUE );
-//	DrawBustshot( 3, "sa_se_aw_a1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {FadeBustshot( 3, FALSE, 0, 0, 0, 0, 200, TRUE );}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(3, 4, "sprite/sa1a_akuwarai_a1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );}
 
 //「梨花はいろいろとすごいんですのよ＠をーっほっほっほ！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -3358,9 +3359,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-//	DisableWindow();
-//	FadeBustshot( 1, FALSE, 0, 0, 0, 0, 1000, TRUE );
-//	DrawBustshot( 1, "ri_se_de_a1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 400, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {FadeBustshot( 1, FALSE, 0, 0, 0, 0, 400, TRUE );}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(1, 5, "sprite/ri1_def_a1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 400, TRUE );}
 
 //「...ボクより、レナの方がお料理は上手です。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -3369,10 +3370,9 @@ void main()
 		   NULL, "\"...Rena's actually better at cooking than I am.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-
-//	DisableWindow();
-//	DrawSceneWithMask( "bg_108", "m1", 0, 0, 300 );
-//	DrawBustshotWithFiltering( 2, "re_se_bi_a1", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {DrawSceneWithMask("background/gk1", "m1", 0, 0, 300 );}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacterWithFiltering(2, 2, "sprite/re1a_bikkuri_a1_", "2", "m1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );}
 
 
 //「......え、!w800あ、!w800...その......ね☆＠
@@ -3424,9 +3424,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　みんなもレナの弁当箱には進んで箸を伸ばす。",
 		   NULL, "Everyone else pulled from Rena's lunch box constantly.", Line_Normal);
-//	ClearMessage();
-//	DisableWindow();
-//	DrawBustshot( 2, "re_se_ha_a1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ClearMessage();
+
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(2, 2, "sprite/re1a_hau_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );}
 
 //「これ、前に評判良かったからいっぱい作ってみたの＠...おいしいかな？!d800...かな？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -3863,6 +3864,7 @@ void main()
 	PlaySE( 4, "wa_005", 56, 64 );
 	ShakeScreen( 1, 20, 20, 5, 0, );
 	DrawBustshot(5, "scene/001a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DrawBustshot(5, "background/furiker_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );}
 
 
 	DrawScene("black", 100 );
@@ -3870,22 +3872,24 @@ void main()
 	PlaySE( 4, "wa_005", 56, 64 );
 	ShakeScreen( 1, 20, 20, 5, 0, );
 	DrawBustshot(5, "scene/001a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DrawBustshot(5, "background/furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );}
 
 	PlaySE( 4, "wa_005", 56, 64 );
 	DrawBustshot(5, "scene/001a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DrawBustshot(5, "background/furiker_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );}
 
 	PlaySE( 4, "wa_005", 56, 64 );
 	DrawBustshot(5, "scene/001b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DrawBustshot(5, "background/furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );}
 
 	PlaySE( 4, "wa_005", 56, 64 );
 	DrawBustshot(5, "scene/001b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
+	if (GetGlobalFlag(GHideCG)) {DrawBustshot(5, "background/furiker_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );}
 
 	PlaySE( 4, "wa_005", 56, 64 );
 	ShakeScreen( 1, 20, 20, 5, 0, );
 	DrawBustshot(5, "scene/001b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );
-
-
-//	DrawScene( "black", 100 );
+	if (GetGlobalFlag(GHideCG)) {DrawBustshot(5, "background/furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 50, TRUE );}
 
 
 //　すぱぱーん！＠
