@@ -1,0 +1,175 @@
+void main()
+{
+}
+
+void dialog000()
+{
+// レナrvS20/02/440200106.「あははは！kvS20/02/440200107.　今回の『鬼隠し』は、全体の謎に挑む人たちが最初に通るお話。kvS20/02/440200108.だから実質上のプロローグの位置づけなんだって」
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200106", 256, TRUE);
+	OutputLine(NULL, "「あははは！",
+		   NULL, "\"Ahaha!", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200107", 256, TRUE);
+	OutputLine(NULL, "今回の「鬼隠し」は、全体の謎に挑む人たちが最初に通るお話。",
+		   NULL, " This ~Onikakushi~ chapter is the first story that readers challenging the mystery of the entire series get to experience.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200108", 256, TRUE);
+	OutputLine(NULL, "だから実質上のプロローグの位置づけなんだって。」",
+		   NULL, " So it's actually supposed to be somewhat of a prologue.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog001()
+{
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300250", 256, TRUE);
+	OutputLine(NULL, "　この最悪のバッドエンドを回避するために、プレイヤーさんが物語を模索していくのがこの作品の醍ご味だし」",
+		   NULL, "The player digging through the story in order to avoid a bad ending is the point of these types of games after all.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	FadeAllBustshots( 400, TRUE );
+	ModSetLayerFilter(2, 256, "none");
+	ModDrawCharacterWithFiltering(2, 5, "sprite/ri1_warai_a1_", "1", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+
+//「…まだ第一話ですよ。ボクは次のお話が楽しみなのです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500083", 256, TRUE);
+	OutputLine(NULL, "「…まだ第一話ですよ。ボクは次のお話が楽しみなのです。」",
+		   NULL, "\"...It's still just the first chapter. I'm looking forward to the next one.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModSetLayerFilter(3, 256, "none");
+	ModDrawCharacterWithFiltering(3, 3, "sprite/me1a_def_a1_", "0", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
+
+//「次の話はどんなのになるわけ＠　レナは聞いてるー？＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300251", 256, TRUE);
+	OutputLine(NULL, "「これから、どんな話が待ち受けてるんだろう？",
+		   NULL, "\"Just what kind of plot awaits us from here on?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 3, "ps3/s20/03/440300252", 256, TRUE);
+	OutputLine(NULL, "　レナは聞いてるー？」",
+		   NULL, " Rena, do you know?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
+	ModDrawCharacterWithFiltering(1, 2, "sprite/re1a_warai_a1_", "2", "right", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawSceneWithMask("background/res5", "left", 0, 0, 300 );
+
+// レナrvS20/02/440200109.「うん。kvS20/02/440200110.今回はレナをパートナーに選んだ物語だったけど、kvS20/02/440200111.他にも魅ぃちゃん、沙都子ちゃんをパートナーに選んだお話もあるみたいだね」
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200109", 256, TRUE);
+	OutputLine(NULL, "「うん。",
+		   NULL, "\"Yeah.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200110", 256, TRUE);
+	OutputLine(NULL, "今回はレナをパートナーに選んだ物語だったけど、",
+		   NULL, " This episode has Rena as your closest friend,", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200111", 256, TRUE);
+	OutputLine(NULL, "他にも魅ぃちゃん、沙都子ちゃんをパートナーに選んだお話もあるみたいだね。」",
+		   NULL, " but it seems like there are stories featuring Mii-chan and Satoko-chan, too.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	ModDrawCharacter(3, 4, "sprite/sa1a_akireru_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, TRUE );
+
+// 沙都子rvS20/04/440400131.「他のシナリオにはどんな展開があるんですの？」
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400131", 256, TRUE);
+	OutputLine(NULL, "「他のシナリオにはどんな展開があるんですの？」",
+		   NULL, "\"What kind of plot developments can we expect from the other scenarios?\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	DrawSceneWithMask("background/res5", "m1", 0, 0, 300 );
+	ModDrawCharacterWithFiltering(3, 2, "sprite/re1b_def_b1_", "0", "right", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 20, 200, TRUE );
+
+//「今回の鬼隠し編では、雛見沢で近年起こった連続怪死事件が紹介されたでしょ＠
+//　次回のシナリオでは雛見沢の古い歴史なんかが紹介されるんですって。￥
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200115", 256, TRUE);
+	OutputLine(NULL, "「今回の「鬼隠」では、雛見沢で近年起こった連続怪死事件が紹介されたでしょ？",
+		   NULL, "\"In this chapter, they introduced the string of mysterious deaths that were happening in Hinamizawa recently, right?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 2, "ps3/s20/02/440200116", 256, TRUE);
+	OutputLine(NULL, "　たとえば魅ぃちゃんのシナリオでは雛見沢の古い歴史なんかが紹介されるんだって」",
+		   NULL, " The next chapter will introduce some of the history of Hinamizawa.\"", Line_Normal);
+	ClearMessage();
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 3, "sprite/me1b_def_a1_", "0", "left", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+}
+
+void dialog002()
+{
+//「………きっと立ち絵がないので登場できないのです。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500088", 256, TRUE);
+	OutputLine(NULL, "「………きっと喋るワード数が多すぎて居残りなのです。」",
+		   NULL, "\"...He probably had too many lines in his script, and had to stay behind recording.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 11, "sprite/oisi1_2_", "0", "left", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+// 大石rvS20/11/440700336.「そりゃ古手さん、仕方がありませんよ。kvS20/11/440700337.前原さんの台詞だけで普通のアドベンチャーゲームなら全員分の量がありますからね～。kvS20/11/440700338.んっふっふっふ！」
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700336", 256, TRUE);
+	OutputLine(NULL, "「そりゃ古手さん、仕方がありませんよ。",
+		   NULL, "\"Well, you can hardly blame him.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700337", 256, TRUE);
+	OutputLine(NULL, "前原さんの台詞だけで普通のアドベンチャーゲームなら全員分の量がありますからね〜。",
+		   NULL, "　Maebara-san has enough lines to cover a full cast in a normal novel game, you see~", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700338", 256, TRUE);
+	OutputLine(NULL, "んっふっふっふ！」",
+		   NULL, " hehehehe!\"", Line_Normal);
+}
+
+void dialog003()
+{
+//「なるほど＠虐げられた某家の人たちが先祖の恨みを晴らすために…ってな感じですか＠　うーん………私はそれにも反対ですねぇ。＠
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700351", 256, TRUE);
+	OutputLine(NULL, "「なるほど。",
+		   NULL, "\"I see.", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700352", 256, TRUE);
+	OutputLine(NULL, "過去に酷い扱いを受けた某家の人たちが先祖の恨みを晴らすために…ってな感じですか？",
+		   NULL, " A member of some repressed family looking to air out an old grudge of their ancestors... something like that?", Line_WaitForInput);
+	ModPlayVoiceLS(3, 11, "ps3/s20/11/440700353", 256, TRUE);
+	OutputLine(NULL, "　うーん………私はそれにも反対ですねぇ。」",
+		   NULL, " Hmmm... I don't like that.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
+
+void dialog005()
+{
+//「……立ち絵を描いてもらえたら圭一も来れますですよ。＠
+// Leaving this part on the old translation, because I can't think of a way to translate the Sui line that actually makes sense, and the character art gag stands alone okay
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 5, "ps3/s20/05/440500101", 256, TRUE);
+	OutputLine(NULL, "「……収録の残り台詞数でボクたちの誰か一人でも抜いたら、圭一も参加できるのですよ。」",
+		   NULL, "\"...You can come if you get some character art for yourself.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "right", 1, FALSE, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/sa1a_akireru_a1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+
+//「梨花、それは内緒ですわ…。￥
+// Also keeping the original translation here.
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(3, 4, "ps3/s20/04/440400159", 256, TRUE);
+	OutputLine(NULL, "「梨花、あの量でそれは不可能ですわ…。」",
+		   NULL, "\"Rika, that's a secret...\"", Line_Normal);
+}
+
+void dialog006()
+{
+	ModPlayVoiceLS(3, 1, "ps3/s20/01/440100201", 256, TRUE);
+	OutputLine(NULL, "　これはなにかの嫌がらせかーー！！！！」",
+		   NULL, " Everybody's just picking on me!!!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+}
